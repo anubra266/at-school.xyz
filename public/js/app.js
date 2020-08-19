@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"3f3d292285df58f76348","1":"66c26cb88e88079195e6","2":"21774fffddf5c1eee90b","4":"ca5a732021c43707108d","5":"c33e40776cd02a06a3f8"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"6a8836104e89c90fd633","3":"9263c98896f11873db1a","4":"a03b352b162232643c55","5":"c33e40776cd02a06a3f8","6":"97e4e08dda0a46dbe37c"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31248,42 +31248,50 @@ var map = {
 	"./About": [
 		"./resources/js/Pages/About/index.js",
 		0,
-		2
+		1,
+		4
 	],
 	"./About/": [
 		"./resources/js/Pages/About/index.js",
 		0,
-		2
+		1,
+		4
 	],
 	"./About/index": [
 		"./resources/js/Pages/About/index.js",
 		0,
-		2
+		1,
+		4
 	],
 	"./About/index.js": [
 		"./resources/js/Pages/About/index.js",
 		0,
-		2
+		1,
+		4
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
-		1
+		1,
+		3
 	],
 	"./Contact/": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
-		1
+		1,
+		3
 	],
 	"./Contact/index": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
-		1
+		1,
+		3
 	],
 	"./Contact/index.js": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
-		1
+		1,
+		3
 	],
 	"./Error": [
 		"./resources/js/Pages/Error/index.js",
@@ -31304,22 +31312,46 @@ var map = {
 	"./Home": [
 		"./resources/js/Pages/Home/index.js",
 		0,
-		4
+		1,
+		2
 	],
 	"./Home/": [
 		"./resources/js/Pages/Home/index.js",
 		0,
-		4
+		1,
+		2
 	],
 	"./Home/index": [
 		"./resources/js/Pages/Home/index.js",
 		0,
-		4
+		1,
+		2
 	],
 	"./Home/index.js": [
 		"./resources/js/Pages/Home/index.js",
 		0,
-		4
+		1,
+		2
+	],
+	"./Landing": [
+		"./resources/js/Pages/Landing/index.js",
+		0,
+		6
+	],
+	"./Landing/": [
+		"./resources/js/Pages/Landing/index.js",
+		0,
+		6
+	],
+	"./Landing/index": [
+		"./resources/js/Pages/Landing/index.js",
+		0,
+		6
+	],
+	"./Landing/index.js": [
+		"./resources/js/Pages/Landing/index.js",
+		0,
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -31392,8 +31424,8 @@ Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])( /*#__PURE__*/react__WE
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/InertiaApp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/InertiaApp/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/at-school/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/at-school/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
