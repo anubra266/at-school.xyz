@@ -11,7 +11,7 @@ This is my Inertia boilerplate for future projects with React. So it is Inertia-
 ## How do I set this up
 
 ```
-git clone https://github.com/anubra266/Inertia-App.git myappname
+git clone https://github.com/anubra266/at-school.xyz.git myappname
 
 composer install
 
