@@ -3,7 +3,7 @@ import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import { Helmet } from "react-helmet";
 import Navbar from "@/Shared/Navbar";
-import FlashMessages from "@/Helpers/FlashMessages";
+import FlashMessages from "@/Shared/FlashMessages";
 function Contact() {
     const pageLoader = useRef(null);
     const { errors } = usePage();

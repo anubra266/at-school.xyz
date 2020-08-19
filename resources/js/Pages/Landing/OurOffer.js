@@ -28,7 +28,7 @@ function OurOffer() {
                         data-aos-delay="100"
                     >
                         <img
-                            src={require("@/assets/images/undraw_youtube_tutorial.svg")}
+                            src={require("@/assets/landing/images/undraw_youtube_tutorial.svg")}
                             alt="Learning Materials"
                             className="img-fluid"
                         />
@@ -75,7 +75,7 @@ function OurOffer() {
                         data-aos-delay="100"
                     >
                         <img
-                            src={require("@/assets/images/undraw_teaching.svg")}
+                            src={require("@/assets/landing/images/undraw_teaching.svg")}
                             alt="Assessments"
                             className="img-fluid"
                         />
@@ -124,7 +124,7 @@ function OurOffer() {
                         data-aos-delay="100"
                     >
                         <img
-                            src={require("@/assets/images/undraw_teacher.svg")}
+                            src={require("@/assets/landing/images/undraw_teacher.svg")}
                             alt="Easy Education"
                             className="img-fluid"
                         />

@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Landing');
-})->name('landing');
+Route::get('/', 'PublicController@landing')->name('landing');
+
+Route::get('/login', 'PublicController@login')->name('login');
+
+Route::get('/register', 'PublicController@register')->name('register');
+
+Route::get('/forgotPassword', 'PublicController@forgotPassword')->name('forgotPassword');
+
+
 Route::get('/home', function () {
     return Inertia::render('Home', [
         'users' => ''
@@ -44,5 +50,23 @@ Route::put('/submit', function (Request $request) {
 })->name('submit');
 
 // Auth::routes();
+
+//login routes
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+Route::post('register', 'Auth\RegisterController@register');
+
+// Password Reset Routes...
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+
+// Email Verification Routes...
+Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
+Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 // Route::get('/home', 'HomeController@index')->name('home');

@@ -6,7 +6,7 @@ function Intro() {
             <div
                 className="slide-1"
                 style={{
-                    backgroundImage: `url(${require("@/assets/images/hero_1.jpg")})`
+                    backgroundImage: `url(${require("@/assets/landing/images/hero_1.jpg")})`
                 }}
                 data-stellar-background-ratio="0.5"
             >

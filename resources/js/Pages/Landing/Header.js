@@ -45,10 +45,10 @@ function Header() {
                             <ul className="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
                                 <li className="cta">
                                     <a
-                                        href="#contact-section"
+                                        href={route('register')}
                                         className="nav-link"
                                     >
-                                        <span>Contact Us</span>
+                                        <span>Signup</span>
                                     </a>
                                 </li>
                             </ul>

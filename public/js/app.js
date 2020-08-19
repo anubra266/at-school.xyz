@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"0d6b9dac9bc09b38e674","3":"a91b6d8a51949d8aefb6","4":"bc74bb9eb77572cb72c0","5":"bfc624a9dca10f9e50d9","6":"deb316fc105d49aca2f1","7":"b60d3a954211dde67c92","8":"6aaccd13ca4045a4182b","9":"c17775a7818c75d1e807","10":"93fc6bc4cc444be9d14a","11":"90393c60e6788d30b512"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"6a8836104e89c90fd633","3":"60e810b4790ff9cb6c57","4":"a03b352b162232643c55","5":"070fc868633e8d9d4910","6":"deb316fc105d49aca2f1","8":"141eb0562c33040e0ee2","9":"3a3ffbb59e45bba62307","10":"340660bd9e67a334358c","11":"1fc51c85fa5bf3c1c5d5","12":"3d33c492746544c15cdc","13":"9fbf80512b056f635e85","14":"0fc515517daed474ed64","15":"992d69f1624591892ad6","16":"c6125cb848efd0062a8e","17":"39fea8939cc6adb3d5b2"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31249,49 +31249,69 @@ var map = {
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		5
+		4
 	],
 	"./About/": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		5
+		4
 	],
 	"./About/index": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		5
+		4
 	],
 	"./About/index.js": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		5
+		4
+	],
+	"./Auth/Layout": [
+		"./resources/js/Pages/Auth/Layout.js",
+		0,
+		17,
+		16
+	],
+	"./Auth/Layout.js": [
+		"./resources/js/Pages/Auth/Layout.js",
+		0,
+		17,
+		16
+	],
+	"./Auth/Login": [
+		"./resources/js/Pages/Auth/Login.js",
+		15
+	],
+	"./Auth/Login.js": [
+		"./resources/js/Pages/Auth/Login.js",
+		15
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		4
+		3
 	],
 	"./Contact/": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		4
+		3
 	],
 	"./Contact/index": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		4
+		3
 	],
 	"./Contact/index.js": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		4
+		3
 	],
 	"./Error": [
 		"./resources/js/Pages/Error/index.js",
@@ -31313,85 +31333,103 @@ var map = {
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		3
+		2
 	],
 	"./Home/": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		3
+		2
 	],
 	"./Home/index": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		3
+		2
 	],
 	"./Home/index.js": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		3
+		2
 	],
 	"./Landing": [
 		"./resources/js/Pages/Landing/index.js",
-		0,
-		2
+		5
 	],
 	"./Landing/": [
 		"./resources/js/Pages/Landing/index.js",
-		0,
-		2
+		5
 	],
 	"./Landing/Footer": [
 		"./resources/js/Pages/Landing/Footer.js",
-		10
+		11
 	],
 	"./Landing/Footer.js": [
 		"./resources/js/Pages/Landing/Footer.js",
-		10
+		11
+	],
+	"./Landing/Head": [
+		"./resources/js/Pages/Landing/Head.js",
+		0,
+		12
+	],
+	"./Landing/Head.js": [
+		"./resources/js/Pages/Landing/Head.js",
+		0,
+		12
 	],
 	"./Landing/Header": [
 		"./resources/js/Pages/Landing/Header.js",
-		11
+		13
 	],
 	"./Landing/Header.js": [
 		"./resources/js/Pages/Landing/Header.js",
-		11
+		13
 	],
 	"./Landing/Intro": [
 		"./resources/js/Pages/Landing/Intro.js",
-		9
+		10
 	],
 	"./Landing/Intro.js": [
 		"./resources/js/Pages/Landing/Intro.js",
-		9
+		10
+	],
+	"./Landing/Landing": [
+		"./resources/js/Pages/Landing/Landing.js",
+		0,
+		17,
+		14
+	],
+	"./Landing/Landing.js": [
+		"./resources/js/Pages/Landing/Landing.js",
+		0,
+		17,
+		14
 	],
 	"./Landing/OurOffer": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		7
+		8
 	],
 	"./Landing/OurOffer.js": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		7
+		8
 	],
 	"./Landing/WhyUs": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		8
+		9
 	],
 	"./Landing/WhyUs.js": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		8
+		9
 	],
 	"./Landing/index": [
 		"./resources/js/Pages/Landing/index.js",
-		0,
-		2
+		5
 	],
 	"./Landing/index.js": [
 		"./resources/js/Pages/Landing/index.js",
-		0,
-		2
+		5
 	]
 };
 function webpackAsyncContext(req) {

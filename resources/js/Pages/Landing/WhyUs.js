@@ -6,13 +6,13 @@ function WhyUs() {
             <div className="future-blobs">
                 <div className="blob_2">
                     <img
-                        src={require("@/assets/images/blob_2.svg")}
+                        src={require("@/assets/landing/images/blob_2.svg")}
                         alt="at-School"
                     />
                 </div>
                 <div className="blob_1">
                     <img
-                        src={require("@/assets/images/blob_1.svg")}
+                        src={require("@/assets/landing/images/blob_1.svg")}
                         alt="at-School"
                     />
                 </div>
@@ -93,7 +93,7 @@ function WhyUs() {
                         data-aos-delay="200"
                     >
                         <img
-                            src={require("@/assets/images/person_transparent.png")}
+                            src={require("@/assets/landing/images/person_transparent.png")}
                             alt="at-School reports"
                             className="img-fluid"
                         />
