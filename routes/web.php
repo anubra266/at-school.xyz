@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return Inertia::render('Landing');
+})->name('landing');
+Route::get('/home', function () {
     return Inertia::render('Home', [
         'users' => ''
     ]);

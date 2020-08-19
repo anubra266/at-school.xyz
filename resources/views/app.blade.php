@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--include assets required for Inertia app here -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
 
     <!-- End assets call-->
