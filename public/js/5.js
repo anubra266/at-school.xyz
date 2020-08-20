@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Helpers_CatchError__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Helpers/CatchError */ "./resources/js/Helpers/CatchError.js");
 
 var Landing = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(17), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ./Landing */ "./resources/js/Pages/Landing/Landing.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(22), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ./Landing */ "./resources/js/Pages/Landing/Landing.js"));
 });
 
 

@@ -15,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//?Index route
 Route::get('/', 'PublicController@landing')->name('landing');
 
-Route::get('/login', 'PublicController@login')->name('login');
+//?login routes
+Route::get('login', 'PublicController@login')->name('login.form');
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/register', 'PublicController@register')->name('register');
+// Registration Routes...
+Route::get('register', 'PublicController@register')->name('register.form');
+Route::post('register', 'Auth\RegisterController@register')->name('register');
 
-Route::get('/forgotPassword', 'PublicController@forgotPassword')->name('forgotPassword');
+Route::get('password/reset', 'PublicController@forgotPassword')->name('password.request');
 
 
 Route::get('/home', function () {
@@ -51,15 +57,11 @@ Route::put('/submit', function (Request $request) {
 
 // Auth::routes();
 
-//login routes
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// Registration Routes...
-Route::post('register', 'Auth\RegisterController@register');
+
 
 // Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');

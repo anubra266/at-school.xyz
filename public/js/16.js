@@ -39,39 +39,6 @@ exports.push([module.i, "/*[ FONT SIZE ]\r\n////////////////////////////////////
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/Layout.js":
-/*!*******************************************!*\
-  !*** ./resources/js/Pages/Auth/Layout.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/auth/css/util.css */ "./resources/js/assets/auth/css/util.css");
-/* harmony import */ var _assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets/auth/css/main.css */ "./resources/js/assets/auth/css/main.css");
-/* harmony import */ var _assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-function Layout(_ref) {
-  var children = _ref.children,
-      title = _ref.title;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
-    title: title
-  }), children);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
 /***/ "./resources/js/assets/auth/css/main.css":
 /*!***********************************************!*\
   !*** ./resources/js/assets/auth/css/main.css ***!

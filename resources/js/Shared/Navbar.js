@@ -3,7 +3,7 @@ import LoadingBar from "react-top-loading-bar";
 import { useBattery, useEffectOnce } from "react-use";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
-import { loadPage } from "@/Helpers/PageLoad";
+import { loadPage } from "@/Helpers/PageLoad"; 
 import routes from "./Routes";
 function Navbar({ pageLoader }) {
     //* load battery State

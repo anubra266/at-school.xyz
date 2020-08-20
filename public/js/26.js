@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[7],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[26],{
 
 /***/ "./resources/js/Helpers/CatchError.js":
 /*!********************************************!*\
@@ -116,10 +116,21 @@ var CatchError = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/ForgotPassword.js":
-/*!***************************************************!*\
-  !*** ./resources/js/Pages/Auth/ForgotPassword.js ***!
-  \***************************************************/
+/***/ "./resources/js/Pages/Auth/Layout.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Auth/Layout.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/at-school/resources/js/Pages/Auth/Layout.js: JSX attributes must only be assigned a non-empty expression (31:36)\n\n\u001b[0m \u001b[90m 29 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mspan\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"navbar-brand mb-0 login100-form-title text-white\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 | \u001b[39m                            \u001b[33m<\u001b[39m\u001b[33mimg\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 | \u001b[39m                                src\u001b[33m=\u001b[39m{}\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 | \u001b[39m                                width\u001b[33m=\u001b[39m\u001b[32m\"30\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m                                height\u001b[33m=\u001b[39m\u001b[32m\"30\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m                                className\u001b[33m=\u001b[39m\u001b[32m\"d-inline-block align-top\"\u001b[39m\u001b[0m\n    at Object._raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:764:17)\n    at Object.raiseWithData (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:757:17)\n    at Object.raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:751:17)\n    at Object.jsxParseAttributeValue (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4507:16)\n    at Object.jsxParseAttribute (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4555:44)\n    at Object.jsxParseOpeningElementAfterName (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4575:28)\n    at Object.jsxParseOpeningElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4568:17)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4600:33)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4616:32)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4616:32)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4616:32)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4616:32)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4616:32)\n    at Object.jsxParseElement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4674:17)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4681:19)\n    at Object.parseExprSubscripts (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Object.parseUpdate (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9769:21)\n    at Object.parseMaybeUnary (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9758:17)\n    at Object.parseExprOps (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9628:23)\n    at Object.parseMaybeConditional (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Object.parseMaybeAssign (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9565:21)\n    at Object.parseParenAndDistinguishExpression (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10418:28)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10122:21)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4686:20)\n    at Object.parseExprSubscripts (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Object.parseUpdate (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9769:21)\n    at Object.parseMaybeUnary (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9758:17)\n    at Object.parseExprOps (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9628:23)\n    at Object.parseMaybeConditional (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Object.parseMaybeAssign (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9565:21)\n    at Object.parseExpression (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9517:23)\n    at Object.parseReturnStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11700:28)\n    at Object.parseStatementContent (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11379:21)\n    at Object.parseStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11331:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11913:25)\n    at Object.parseBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11899:10)");
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Auth/template.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Pages/Auth/template.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -136,21 +147,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ForgotPassword() {
+function Login() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Helpers_CatchError__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "at-school Login"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "login100-form validate-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "login100-form-title p-b-37"
-  }, "Reset Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrap-input100 m-b-20",
     "data-validate": "Enter email"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "input100",
     type: "email",
     name: "email",
-    placeholder: "Account email",
+    placeholder: "email",
+    required: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "focus-input100"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrap-input100 m-b-25",
+    "data-validate": "Enter password"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "input100",
+    type: "password",
+    name: "password",
+    placeholder: "password",
+    minLength: "6",
     required: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "focus-input100"
@@ -159,14 +182,14 @@ function ForgotPassword() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "login100-form-btn"
-  }, "Reset Password")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Sign In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-between mt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: "txt2 hov1",
-    href: route("login.form")
-  }, "Sign In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    href: route("password.request")
+  }, "Forgot Password?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 text-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: "txt2 hov1",
@@ -174,125 +197,7 @@ function ForgotPassword() {
   }, "Sign Up"))))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (ForgotPassword);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Layout.js":
-/*!*******************************************!*\
-  !*** ./resources/js/Pages/Auth/Layout.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _Shared_Loading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Shared/Loading */ "./resources/js/Shared/Loading.js");
-/* harmony import */ var _assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets/auth/css/util.css */ "./resources/js/assets/auth/css/util.css");
-/* harmony import */ var _assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_auth_css_util_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/assets/auth/css/main.css */ "./resources/js/assets/auth/css/main.css");
-/* harmony import */ var _assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_auth_css_main_css__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-var Assets = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ./Assets */ "./resources/js/Pages/Auth/Assets.js"));
-});
-
-function Layout(_ref) {
-  var children = _ref.children,
-      title = _ref.title;
-  var pageLoader = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); //* Start page Load on Navigator Change
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
-    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Loading__WEBPACK_IMPORTED_MODULE_2__["default"], null)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Assets, {
-    pageLoader: pageLoader
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-login100",
-    style: {
-      backgroundImage: "url(".concat(__webpack_require__(/*! @/assets/auth/images/bg-01.jpg */ "./resources/js/assets/auth/images/bg-01.jpg"), ")")
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
-    title: title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "navbar fixed-top text-light",
-    style: {
-      backgroundColor: "#9e0a9e31"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "navbar-brand mb-0 login100-form-title text-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: __webpack_require__(/*! @/assets/general/images/at-school.png */ "./resources/js/assets/general/images/at-school.png"),
-    width: "30",
-    height: "30",
-    className: "d-inline-block align-top",
-    alt: "",
-    loading: "lazy"
-  }), "at-school")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30"
-  }, children))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
-/***/ "./resources/js/Shared/Loading.js":
-/*!****************************************!*\
-  !*** ./resources/js/Shared/Loading.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Loading = function Loading() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "preloader"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "status"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "spinner"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "double-bounce1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "double-bounce2"
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Loading);
-
-/***/ }),
-
-/***/ "./resources/js/assets/auth/images/bg-01.jpg":
-/*!***************************************************!*\
-  !*** ./resources/js/assets/auth/images/bg-01.jpg ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/bg-01.jpg?9ecd694a097fd59efe471c43ae4c17e9";
-
-/***/ }),
-
-/***/ "./resources/js/assets/general/images/at-school.png":
-/*!**********************************************************!*\
-  !*** ./resources/js/assets/general/images/at-school.png ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/at-school.png?15f72add27c183615e4bd0bdba2f72a4";
+/* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ })
 

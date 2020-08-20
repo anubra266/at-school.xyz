@@ -2,15 +2,16 @@ import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
 import CatchError from "@/Helpers/CatchError";
+
 import Layout from "./Layout";
 
-function Login() {
+function ForgotPassword() {
     return (
         <CatchError>
             <Layout title="at-school Login">
                 <form className="login100-form validate-form">
                     <span className="login100-form-title p-b-37">
-                        Sign In
+                        Reset Password
                     </span>
 
                     <div
@@ -21,22 +22,7 @@ function Login() {
                             className="input100"
                             type="email"
                             name="email"
-                            placeholder="email"
-                            required
-                        />
-                        <span className="focus-input100"></span>
-                    </div>
-
-                    <div
-                        className="wrap-input100 m-b-25"
-                        data-validate="Enter password"
-                    >
-                        <input
-                            className="input100"
-                            type="password"
-                            name="password"
-                            placeholder="password"
-                            minLength={"6"}
+                            placeholder="Account email"
                             required
                         />
                         <span className="focus-input100"></span>
@@ -44,7 +30,7 @@ function Login() {
 
                     <div className="container-login100-form-btn">
                         <button type="submit" className="login100-form-btn">
-                            Sign In
+                            Reset Password
                         </button>
                     </div>
 
@@ -52,9 +38,9 @@ function Login() {
                         <div className="col-6">
                             <InertiaLink
                                 className="txt2 hov1"
-                                href={route("password.request")}
+                                href={route("login.form")}
                             >
-                                Forgot Password?
+                                Sign In
                             </InertiaLink>
                         </div>
                         <div className="col-6 text-right">
@@ -72,4 +58,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default ForgotPassword;

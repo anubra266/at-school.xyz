@@ -2,6 +2,7 @@ import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
 import CatchError from "@/Helpers/CatchError";
+
 import Layout from "./Layout";
 
 function Login() {

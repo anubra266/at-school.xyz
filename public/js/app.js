@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"6a8836104e89c90fd633","3":"60e810b4790ff9cb6c57","4":"a03b352b162232643c55","5":"070fc868633e8d9d4910","6":"deb316fc105d49aca2f1","8":"141eb0562c33040e0ee2","9":"3a3ffbb59e45bba62307","10":"340660bd9e67a334358c","11":"1fc51c85fa5bf3c1c5d5","12":"3d33c492746544c15cdc","13":"9fbf80512b056f635e85","14":"0fc515517daed474ed64","15":"992d69f1624591892ad6","16":"c6125cb848efd0062a8e","17":"39fea8939cc6adb3d5b2"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"6a8836104e89c90fd633","3":"60e810b4790ff9cb6c57","4":"a03b352b162232643c55","5":"d51f324cd471912165cd","6":"deb316fc105d49aca2f1","7":"04b7cfa0e4c7d9757d70","8":"141eb0562c33040e0ee2","9":"3a3ffbb59e45bba62307","10":"340660bd9e67a334358c","11":"1fc51c85fa5bf3c1c5d5","12":"3d33c492746544c15cdc","13":"9fbf80512b056f635e85","14":"8025f70fa5e8367a4429","15":"2da29451e7918550a7b5","16":"baf2ee8ab3305b396972","18":"d50e2b873dbacc084b27","19":"aca874fc115befe7eb27","20":"6581913e49852f4040f1","21":"2aa9e264389682f39c43","22":"7e820551528a32504814","23":"96c5e85b0afeebd01e63"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31269,25 +31269,89 @@ var map = {
 		1,
 		4
 	],
+	"./Auth/Assets": [
+		"./resources/js/Pages/Auth/Assets.js",
+		22,
+		1,
+		16,
+		15
+	],
+	"./Auth/Assets.js": [
+		"./resources/js/Pages/Auth/Assets.js",
+		22,
+		1,
+		16,
+		15
+	],
+	"./Auth/ForgotPassword": [
+		"./resources/js/Pages/Auth/ForgotPassword.js",
+		0,
+		22,
+		16,
+		7
+	],
+	"./Auth/ForgotPassword.js": [
+		"./resources/js/Pages/Auth/ForgotPassword.js",
+		0,
+		22,
+		16,
+		7
+	],
 	"./Auth/Layout": [
 		"./resources/js/Pages/Auth/Layout.js",
 		0,
-		17,
-		16
+		22,
+		16,
+		23
 	],
 	"./Auth/Layout.js": [
 		"./resources/js/Pages/Auth/Layout.js",
 		0,
-		17,
-		16
+		22,
+		16,
+		23
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login.js",
-		15
+		0,
+		22,
+		16,
+		19
 	],
 	"./Auth/Login.js": [
 		"./resources/js/Pages/Auth/Login.js",
-		15
+		0,
+		22,
+		16,
+		19
+	],
+	"./Auth/Register": [
+		"./resources/js/Pages/Auth/Register.js",
+		0,
+		22,
+		16,
+		20
+	],
+	"./Auth/Register.js": [
+		"./resources/js/Pages/Auth/Register.js",
+		0,
+		22,
+		16,
+		20
+	],
+	"./Auth/template": [
+		"./resources/js/Pages/Auth/template.js",
+		0,
+		22,
+		16,
+		21
+	],
+	"./Auth/template.js": [
+		"./resources/js/Pages/Auth/template.js",
+		0,
+		22,
+		16,
+		21
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact/index.js",
@@ -31398,13 +31462,13 @@ var map = {
 	"./Landing/Landing": [
 		"./resources/js/Pages/Landing/Landing.js",
 		0,
-		17,
+		22,
 		14
 	],
 	"./Landing/Landing.js": [
 		"./resources/js/Pages/Landing/Landing.js",
 		0,
-		17,
+		22,
 		14
 	],
 	"./Landing/OurOffer": [

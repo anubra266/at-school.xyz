@@ -2,15 +2,16 @@ import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
 import CatchError from "@/Helpers/CatchError";
+
 import Layout from "./Layout";
 
-function Login() {
+function Register() {
     return (
         <CatchError>
-            <Layout title="at-school Login">
+            <Layout title="at-school Register">
                 <form className="login100-form validate-form">
                     <span className="login100-form-title p-b-37">
-                        Sign In
+                        Sign Up
                     </span>
 
                     <div
@@ -44,7 +45,7 @@ function Login() {
 
                     <div className="container-login100-form-btn">
                         <button type="submit" className="login100-form-btn">
-                            Sign In
+                            Sign Up
                         </button>
                     </div>
 
@@ -60,9 +61,9 @@ function Login() {
                         <div className="col-6 text-right">
                             <InertiaLink
                                 className="txt2 hov1"
-                                href={route("register.form")}
+                                href={route("login.form")}
                             >
-                                Sign Up
+                                Sign In
                             </InertiaLink>
                         </div>
                     </div>
@@ -72,4 +73,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
