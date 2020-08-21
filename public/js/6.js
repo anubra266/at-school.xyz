@@ -1,34 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
-/***/ "./resources/js/Pages/Error/index.js":
-/*!*******************************************!*\
-  !*** ./resources/js/Pages/Error/index.js ***!
-  \*******************************************/
+/***/ "./resources/js/Pages/Auth/Register/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Auth/Register/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ErrorPage; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function ErrorPage(_ref) {
-  var status = _ref.status;
-  var title = {
-    503: "503: Service Unavailable",
-    500: "500: Server Error",
-    404: "404: Page Not Found",
-    403: "403: Forbidden"
-  }[status];
-  var description = {
-    503: "Sorry, we are doing some maintenance. Please check back soon.",
-    500: "Whoops, something went wrong on our servers.",
-    404: "Sorry, the page you are looking for could not be found.",
-    403: "Sorry, you are forbidden from accessing this page."
-  }[status];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, description));
-}
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/at-school/resources/js/Pages/Auth/Register/index.js: Identifier 'setChecking' has already been declared (17:17)\n\n\u001b[0m \u001b[90m 15 | \u001b[39m\u001b[36mfunction\u001b[39m \u001b[33mRegister\u001b[39m() {\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m    \u001b[36mconst\u001b[39m [checking\u001b[33m,\u001b[39m setChecking] \u001b[33m=\u001b[39m useState(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 | \u001b[39m    \u001b[36mconst\u001b[39m [page\u001b[33m,\u001b[39m setChecking] \u001b[33m=\u001b[39m useState(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m    \u001b[36mconst\u001b[39m [data\u001b[33m,\u001b[39m setData] \u001b[33m=\u001b[39m useState({\u001b[0m\n\u001b[0m \u001b[90m 19 | \u001b[39m        first_name\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m        middle_name\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n    at Object._raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:766:17)\n    at Object.raiseWithData (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:759:17)\n    at Object.raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:753:17)\n    at ScopeHandler.checkRedeclarationInScope (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4873:12)\n    at ScopeHandler.declareName (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4839:12)\n    at Object.checkLVal (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9422:22)\n    at Object.checkLVal (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9448:18)\n    at Object.parseVarId (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12118:10)\n    at Object.parseVar (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12093:12)\n    at Object.parseVarStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11905:10)\n    at Object.parseStatementContent (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11497:21)\n    at Object.parseStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11430:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12012:25)\n    at Object.parseBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11998:10)\n    at Object.parseBlock (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11982:10)\n    at Object.parseFunctionBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10962:24)\n    at Object.parseFunctionBodyAndFinish (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10945:10)\n    at /var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12152:12\n    at Object.withTopicForbiddingContext (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11271:14)\n    at Object.parseFunction (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12151:10)\n    at Object.parseFunctionStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11778:17)\n    at Object.parseStatementContent (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11468:21)\n    at Object.parseStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11430:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12012:25)\n    at Object.parseBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11998:10)\n    at Object.parseTopLevel (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11361:10)\n    at Object.parse (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:13044:10)\n    at parse (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:13097:38)\n    at parser (/var/www/html/at-school/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/var/www/html/at-school/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/var/www/html/at-school/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/var/www/html/at-school/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)");
 
 /***/ })
 

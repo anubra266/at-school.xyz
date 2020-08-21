@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import { Helmet } from "react-helmet";
-import Navbar from "@/Shared/Navbar";
 import FlashMessages from "@/Shared/FlashMessages";
+import Navbar from "@/Shared/Navbar";
 function Contact() {
     const pageLoader = useRef(null);
     const { errors } = usePage();

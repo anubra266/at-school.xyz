@@ -1,13 +1,11 @@
 import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
-import CatchError from "@/Helpers/CatchError";
 
-import Layout from "./Layout";
+import Layout from "@/Pages/Auth/Layout";
 
 function Login() {
     return (
-        <CatchError>
             <Layout title="at-school Login">
                 <form className="login100-form validate-form">
                     <span className="login100-form-title p-b-37">
@@ -16,7 +14,6 @@ function Login() {
 
                     <div
                         className="wrap-input100 m-b-20"
-                        data-validate="Enter email"
                     >
                         <input
                             className="input100"
@@ -30,7 +27,6 @@ function Login() {
 
                     <div
                         className="wrap-input100 m-b-25"
-                        data-validate="Enter password"
                     >
                         <input
                             className="input100"
@@ -69,7 +65,6 @@ function Login() {
                     </div>
                 </form>
             </Layout>
-        </CatchError>
     );
 }
 

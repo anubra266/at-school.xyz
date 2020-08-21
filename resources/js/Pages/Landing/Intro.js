@@ -1,4 +1,6 @@
 import React from "react";
+import { InertiaLink } from "@inertiajs/inertia-react";
+import Login from "./Login";
 
 function Intro() {
     return (
@@ -27,12 +29,12 @@ function Intro() {
                                         knowledge. Anywhere and anytime.
                                     </p>
                                     <p data-aos="fade-up" data-aos-delay="300">
-                                        <a
-                                            href="#"
+                                        <InertiaLink
                                             className="btn prpbut py-3 px-5 btn-pill"
+                                            href={route("register")}
                                         >
                                             Sign Up
-                                        </a>
+                                        </InertiaLink>
                                     </p>
                                 </div>
 
@@ -41,36 +43,7 @@ function Intro() {
                                     data-aos="fade-up"
                                     data-aos-delay="500"
                                 >
-                                    <form
-                                        action=""
-                                        method="post"
-                                        className="form-box"
-                                    >
-                                        <h3 className="h4 text-black mb-4">
-                                            Login
-                                        </h3>
-                                        <div className="form-group">
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                placeholder="Email Addresss"
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <input
-                                                type="password"
-                                                className="form-control"
-                                                placeholder="Password"
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <input
-                                                type="submit"
-                                                className="btn prpbut btn-pill"
-                                                value="Login"
-                                            />
-                                        </div>
-                                    </form>
+                                    <Login />
                                 </div>
                             </div>
                         </div>

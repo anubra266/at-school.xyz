@@ -428,10 +428,11 @@ h5,
 .site-logo {
     position: relative;
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
 }
 .site-logo a {
     color: #fff;
+    font-size: 1.3rem !important;
 }
 
 .site-navbar {

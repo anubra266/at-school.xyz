@@ -8,7 +8,17 @@ function Header() {
             <div className="container-fluid">
                 <div className="d-flex align-items-center">
                     <div className="site-logo mr-auto w-25">
-                        <a href="index.html">at-School</a>
+                        <a href="#">
+                            <img
+                                src={require("@/assets/general/images/at-school.png")}
+                                width="30"
+                                height="30"
+                                className="d-inline-block align-top"
+                                alt=""
+                                loading="lazy"
+                            />
+                            at-School
+                        </a>
                     </div>
 
                     <div className="mx-auto text-center">
@@ -45,7 +55,7 @@ function Header() {
                             <ul className="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
                                 <li className="cta">
                                     <a
-                                        href={route('register')}
+                                        href={route("register")}
                                         className="nav-link"
                                     >
                                         <span>Signup</span>

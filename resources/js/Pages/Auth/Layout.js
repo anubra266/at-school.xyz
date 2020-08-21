@@ -1,12 +1,14 @@
 import React, { Suspense, useRef } from "react";
+import { InertiaLink } from "@inertiajs/inertia-react";
 import { Helmet } from "react-helmet";
+import FlashMessages from "@/Shared/FlashMessages";
+import "antd/dist/antd.css";
 
 import Loading from "@/Shared/Loading";
 
 import "@/assets/auth/css/util.css";
 import "@/assets/auth/css/main.css";
-
-const Assets = React.lazy(() => import("./Assets"));
+const Assets = React.lazy(() => import("@/Pages/Auth/Assets"));
 
 function Layout({ children, title }) {
     const pageLoader = useRef(null);
@@ -15,17 +17,11 @@ function Layout({ children, title }) {
     return (
         <Suspense fallback={<Loading />}>
             <Assets pageLoader={pageLoader}>
-                <div
-                    className="container-login100"
-                    style={{
-                        backgroundImage: `url(${require("@/assets/auth/images/bg-01.jpg")})`
-                    }}
+                <nav
+                    className="navbar sticky-top text-light"
+                    style={{ backgroundColor: "#bd59d4" }}
                 >
-                    <Helmet title={title} />
-                    <nav
-                        className="navbar fixed-top text-light"
-                        style={{ backgroundColor: "#9e0a9e31" }}
-                    >
+                    <InertiaLink href={route("landing")}>
                         <span className="navbar-brand mb-0 login100-form-title text-white">
                             <img
                                 src={require("@/assets/general/images/at-school.png")}
@@ -37,8 +33,17 @@ function Layout({ children, title }) {
                             />
                             at-school
                         </span>
-                    </nav>
+                    </InertiaLink>
+                </nav>
+                <div
+                    className="container-login100"
+                    style={{
+                        backgroundImage: `url(${require("@/assets/auth/images/bg-01.jpg")})`
+                    }}
+                >
+                    <Helmet title={title} />
                     <div className="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+                        <FlashMessages />
                         {children}
                     </div>
                 </div>

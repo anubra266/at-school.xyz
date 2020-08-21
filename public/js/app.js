@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"6a4017525b4d60819614","2":"6a8836104e89c90fd633","3":"60e810b4790ff9cb6c57","4":"a03b352b162232643c55","5":"d51f324cd471912165cd","6":"deb316fc105d49aca2f1","7":"04b7cfa0e4c7d9757d70","8":"141eb0562c33040e0ee2","9":"3a3ffbb59e45bba62307","10":"340660bd9e67a334358c","11":"1fc51c85fa5bf3c1c5d5","12":"3d33c492746544c15cdc","13":"9fbf80512b056f635e85","14":"8025f70fa5e8367a4429","15":"2da29451e7918550a7b5","16":"baf2ee8ab3305b396972","18":"d50e2b873dbacc084b27","19":"aca874fc115befe7eb27","20":"6581913e49852f4040f1","21":"2aa9e264389682f39c43","22":"7e820551528a32504814","23":"96c5e85b0afeebd01e63"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"06b0d096fd0377849b44","2":"4edd443b738ed55f6add","3":"bd053ec1fc50d5bbd120","4":"5a84f7af316172b3e441","5":"1d06a778a7c24688253d","7":"c89e91243fd555b83ae8","8":"d20468789f9e1b84a068","9":"5be436f15a535c41a7ab","10":"7248a99d76b84980e69f","11":"a4dd2465e0dcbf53aabc","12":"df081e01006adbf05311","13":"be627da4cc2e28c6ccab","15":"0b7ffaf29cc6323165ae","16":"6563be3b61a1d56011ea","17":"eae31e6d11ef8371bf20","18":"bb27e37eb448776d8772","20":"7501b18a418e0a3845d2","21":"a0ee544aba548cb134b8","22":"8048cb8a69f6f4d7849a","23":"b8aa025c6fd1fb2551db","24":"1e5b3b87a2d4f9075c2c","25":"7d69e346dcbd00cd1525","26":"04266dae4c1cbd8c1222","27":"2ec7f3462226b88a3986","28":"15c43cc31fa402135f01","29":"6678b26661349bde4a6c","30":"318ab8ca3a4a7b71d7e5","32":"6f48bf12d4d48cc84ba1","34":"4bf5646c5ca7c83190b7","35":"0c30e492c6a341005229","41":"f4f7274250c8b3bab7eb","42":"fd465b03fed1d593f515","43":"e1d0401179b87632fe91","45":"3762ba8c8b92b62f62de"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31237,6 +31237,122 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./resources/js/Helpers/CatchError.js":
+/*!********************************************!*\
+  !*** ./resources/js/Helpers/CatchError.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CatchError; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var CatchError = /*#__PURE__*/function (_React$Component) {
+  _inherits(CatchError, _React$Component);
+
+  var _super = _createSuper(CatchError);
+
+  function CatchError(props) {
+    var _this;
+
+    _classCallCheck(this, CatchError);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      error: null,
+      errorInfo: null
+    };
+    return _this;
+  }
+
+  _createClass(CatchError, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, errorInfo) {
+      // Catch errors in any components below and re-render with error message
+      this.setState({
+        error: error,
+        errorInfo: errorInfo
+      }); // You can also log error messages to an error reporting service here
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.state.errorInfo) {
+        // Error path
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            background: "white",
+            position: "fixed",
+            height: "100%",
+            width: "100%"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "container-fluid"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "row justify-content-md-center mt-3"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col-9"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "row"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+          style: {
+            color: "red"
+          }
+        }, "Failed to compile"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "row"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+          className: "pt-2 pl-3 pb-2 alert alert-danger"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
+          className: "text-danger"
+        }, this.state.error && this.state.error.toString()), this.state.errorInfo.componentStack), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+          className: "text-muted text-sm"
+        }, "This error occurred during the build time and cannot be dismissed. -", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "https://github.com/anubra266"
+        }, "anubra266", " "), "Error Analyzer")))))));
+      } // Normally, just render children
+
+
+      return this.props.children;
+    }
+  }]);
+
+  return CatchError;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages lazy recursive ^\\.\\/.*$":
 /*!***********************************************************!*\
   !*** ./resources/js/Pages lazy ^\.\/.*$ namespace object ***!
@@ -31249,251 +31365,399 @@ var map = {
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		4
+		12
 	],
 	"./About/": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		4
+		12
 	],
 	"./About/index": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		4
+		12
 	],
 	"./About/index.js": [
 		"./resources/js/Pages/About/index.js",
 		0,
 		1,
-		4
+		12
 	],
 	"./Auth/Assets": [
 		"./resources/js/Pages/Auth/Assets.js",
-		22,
+		4,
 		1,
-		16,
-		15
+		11,
+		41
 	],
 	"./Auth/Assets.js": [
 		"./resources/js/Pages/Auth/Assets.js",
-		22,
+		4,
 		1,
-		16,
-		15
+		11,
+		41
 	],
 	"./Auth/ForgotPassword": [
-		"./resources/js/Pages/Auth/ForgotPassword.js",
+		"./resources/js/Pages/Auth/ForgotPassword/index.js",
 		0,
-		22,
-		16,
-		7
+		4,
+		2,
+		11,
+		10
 	],
-	"./Auth/ForgotPassword.js": [
-		"./resources/js/Pages/Auth/ForgotPassword.js",
+	"./Auth/ForgotPassword/": [
+		"./resources/js/Pages/Auth/ForgotPassword/index.js",
 		0,
-		22,
-		16,
-		7
+		4,
+		2,
+		11,
+		10
+	],
+	"./Auth/ForgotPassword/index": [
+		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		0,
+		4,
+		2,
+		11,
+		10
+	],
+	"./Auth/ForgotPassword/index.js": [
+		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		0,
+		4,
+		2,
+		11,
+		10
 	],
 	"./Auth/Layout": [
 		"./resources/js/Pages/Auth/Layout.js",
 		0,
-		22,
-		16,
-		23
+		4,
+		2,
+		11,
+		43
 	],
 	"./Auth/Layout.js": [
 		"./resources/js/Pages/Auth/Layout.js",
 		0,
-		22,
-		16,
-		23
+		4,
+		2,
+		11,
+		43
 	],
 	"./Auth/Login": [
-		"./resources/js/Pages/Auth/Login.js",
+		"./resources/js/Pages/Auth/Login/index.js",
 		0,
-		22,
-		16,
-		19
+		4,
+		2,
+		11,
+		7
 	],
-	"./Auth/Login.js": [
-		"./resources/js/Pages/Auth/Login.js",
+	"./Auth/Login/": [
+		"./resources/js/Pages/Auth/Login/index.js",
 		0,
-		22,
-		16,
-		19
+		4,
+		2,
+		11,
+		7
+	],
+	"./Auth/Login/index": [
+		"./resources/js/Pages/Auth/Login/index.js",
+		0,
+		4,
+		2,
+		11,
+		7
+	],
+	"./Auth/Login/index.js": [
+		"./resources/js/Pages/Auth/Login/index.js",
+		0,
+		4,
+		2,
+		11,
+		7
 	],
 	"./Auth/Register": [
-		"./resources/js/Pages/Auth/Register.js",
+		"./resources/js/Pages/Auth/Register/index.js",
 		0,
-		22,
-		16,
+		4,
+		5,
+		2,
+		8,
+		13,
+		3,
+		11,
+		27
+	],
+	"./Auth/Register/": [
+		"./resources/js/Pages/Auth/Register/index.js",
+		0,
+		4,
+		5,
+		2,
+		8,
+		13,
+		3,
+		11,
+		27
+	],
+	"./Auth/Register/AcademicInfo": [
+		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		5,
+		18
+	],
+	"./Auth/Register/AcademicInfo.js": [
+		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		5,
+		18
+	],
+	"./Auth/Register/BasicInfo": [
+		"./resources/js/Pages/Auth/Register/BasicInfo.js",
+		4,
+		3,
+		42
+	],
+	"./Auth/Register/BasicInfo.js": [
+		"./resources/js/Pages/Auth/Register/BasicInfo.js",
+		4,
+		3,
+		42
+	],
+	"./Auth/Register/FormFooter": [
+		"./resources/js/Pages/Auth/Register/FormFooter.js",
+		28
+	],
+	"./Auth/Register/FormFooter.js": [
+		"./resources/js/Pages/Auth/Register/FormFooter.js",
+		28
+	],
+	"./Auth/Register/PasswordInfo": [
+		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		5,
+		8,
+		21
+	],
+	"./Auth/Register/PasswordInfo.js": [
+		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		5,
+		8,
+		21
+	],
+	"./Auth/Register/PersonalInfo": [
+		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		5,
 		20
 	],
-	"./Auth/Register.js": [
-		"./resources/js/Pages/Auth/Register.js",
-		0,
-		22,
-		16,
+	"./Auth/Register/PersonalInfo.js": [
+		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		5,
 		20
+	],
+	"./Auth/Register/ProfileImageInfo": [
+		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		5,
+		13,
+		22
+	],
+	"./Auth/Register/ProfileImageInfo.js": [
+		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		5,
+		13,
+		22
+	],
+	"./Auth/Register/index": [
+		"./resources/js/Pages/Auth/Register/index.js",
+		0,
+		4,
+		5,
+		2,
+		8,
+		13,
+		3,
+		11,
+		27
+	],
+	"./Auth/Register/index.js": [
+		"./resources/js/Pages/Auth/Register/index.js",
+		0,
+		4,
+		5,
+		2,
+		8,
+		13,
+		3,
+		11,
+		27
 	],
 	"./Auth/template": [
 		"./resources/js/Pages/Auth/template.js",
 		0,
-		22,
-		16,
-		21
+		4,
+		2,
+		11,
+		35
 	],
 	"./Auth/template.js": [
 		"./resources/js/Pages/Auth/template.js",
 		0,
-		22,
-		16,
-		21
+		4,
+		2,
+		11,
+		35
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		3
+		9
 	],
 	"./Contact/": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		3
+		9
 	],
 	"./Contact/index": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		3
+		9
 	],
 	"./Contact/index.js": [
 		"./resources/js/Pages/Contact/index.js",
 		0,
 		1,
-		3
+		9
 	],
 	"./Error": [
 		"./resources/js/Pages/Error/index.js",
-		6
+		16
 	],
 	"./Error/": [
 		"./resources/js/Pages/Error/index.js",
-		6
+		16
 	],
 	"./Error/index": [
 		"./resources/js/Pages/Error/index.js",
-		6
+		16
 	],
 	"./Error/index.js": [
 		"./resources/js/Pages/Error/index.js",
-		6
+		16
 	],
 	"./Home": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		2
+		23
 	],
 	"./Home/": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		2
+		23
 	],
 	"./Home/index": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		2
+		23
 	],
 	"./Home/index.js": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
-		2
+		23
 	],
 	"./Landing": [
 		"./resources/js/Pages/Landing/index.js",
-		5
+		15
 	],
 	"./Landing/": [
 		"./resources/js/Pages/Landing/index.js",
-		5
+		15
 	],
 	"./Landing/Footer": [
 		"./resources/js/Pages/Landing/Footer.js",
-		11
+		32
 	],
 	"./Landing/Footer.js": [
 		"./resources/js/Pages/Landing/Footer.js",
-		11
+		32
 	],
 	"./Landing/Head": [
 		"./resources/js/Pages/Landing/Head.js",
 		0,
-		12
+		45
 	],
 	"./Landing/Head.js": [
 		"./resources/js/Pages/Landing/Head.js",
 		0,
-		12
+		45
 	],
 	"./Landing/Header": [
 		"./resources/js/Pages/Landing/Header.js",
-		13
+		29
 	],
 	"./Landing/Header.js": [
 		"./resources/js/Pages/Landing/Header.js",
-		13
+		29
 	],
 	"./Landing/Intro": [
 		"./resources/js/Pages/Landing/Intro.js",
-		10
+		24
 	],
 	"./Landing/Intro.js": [
 		"./resources/js/Pages/Landing/Intro.js",
-		10
+		24
 	],
 	"./Landing/Landing": [
 		"./resources/js/Pages/Landing/Landing.js",
 		0,
-		22,
-		14
+		4,
+		1,
+		17
 	],
 	"./Landing/Landing.js": [
 		"./resources/js/Pages/Landing/Landing.js",
 		0,
-		22,
-		14
+		4,
+		1,
+		17
+	],
+	"./Landing/Login": [
+		"./resources/js/Pages/Landing/Login.js",
+		30
+	],
+	"./Landing/Login.js": [
+		"./resources/js/Pages/Landing/Login.js",
+		30
 	],
 	"./Landing/OurOffer": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		8
+		25
 	],
 	"./Landing/OurOffer.js": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		8
+		25
 	],
 	"./Landing/WhyUs": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		9
+		26
 	],
 	"./Landing/WhyUs.js": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		9
+		26
 	],
 	"./Landing/index": [
 		"./resources/js/Pages/Landing/index.js",
-		5
+		15
 	],
 	"./Landing/index.js": [
 		"./resources/js/Pages/Landing/index.js",
-		5
+		15
 	]
 };
 function webpackAsyncContext(req) {
@@ -31533,18 +31797,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Helpers_CatchError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Helpers/CatchError */ "./resources/js/Helpers/CatchError.js");
 
 
 
-var app = document.getElementById('app');
-Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__["InertiaApp"], {
+
+var app = document.getElementById("app");
+Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Helpers_CatchError__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__["InertiaApp"], {
   initialPage: JSON.parse(app.dataset.page),
   resolveComponent: function resolveComponent(name) {
     return __webpack_require__("./resources/js/Pages lazy recursive ^\\.\\/.*$")("./".concat(name)).then(function (module) {
       return module["default"];
     });
   }
-}), app);
+}))), app);
 
 /***/ }),
 

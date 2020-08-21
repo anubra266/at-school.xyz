@@ -7,18 +7,15 @@ import "@/assets/auth/css/util.css";
 import "@/assets/auth/css/main.css";
 
 function Assets({ children, pageLoader }) {
+
     loadPage(pageLoader);
     useEffectOnce(() => {
         //*complete pageLoader loading
-        pageLoader && pageLoader.current.complete();
+        pageLoader && pageLoader.current.complete(); 
     });
     return (
         <React.Fragment>
-            <LoadingBar
-                color="purple"
-                ref={pageLoader}
-                waitingTime={1000}
-            />
+            <LoadingBar color="white" ref={pageLoader} waitingTime={1000} />
             {children}
         </React.Fragment>
     );

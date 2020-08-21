@@ -15,14 +15,14 @@ export default () => {
             <div className="col-12">
                 {flash.success && visible && (
                     <div
-                        class="alert alert-danger alert-dismissible fade show"
+                        className="alert alert-danger alert-dismissible fade show"
                         role="alert"
                     >
                         {flash.success}
                         <button
                             onClick={() => setVisible(false)}
                             type="button"
-                            class="close"
+                            className="close"
                             aria-label="Close"
                         >
                             <span aria-hidden="true">&times;</span>
@@ -31,14 +31,13 @@ export default () => {
                 )}
                 {(flash.error || numOfErrors > 0) && visible && (
                     <div
-                        class="alert alert-danger alert-dismissible fade show"
+                        className="alert alert-danger alert-dismissible fade show"
                         role="alert"
                     >
                         {flash.error && flash.error}
                         {numOfErrors === 1 && (
                             <span>
-                                There's an <strong>{numOfErrors} error</strong>{" "}
-                                in the form.
+                                There's an <strong>error</strong> in the form.
                             </span>
                         )}
                         {numOfErrors > 1 && (
@@ -50,7 +49,7 @@ export default () => {
                         <button
                             onClick={() => setVisible(false)}
                             type="button"
-                            class="close"
+                            className="close"
                             aria-label="Close"
                         >
                             <span aria-hidden="true">&times;</span>

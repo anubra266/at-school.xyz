@@ -12,10 +12,11 @@
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
         "axios": "^0.19",
+        "babel-cli": "^6.26.0",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
-        "jquery": "^3.2",
-        "laravel-mix": "^5.0.1",
+        "jquery": "^3.5.1",
+        "laravel-mix": "^5.0.5",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "react": "^16.2.0",
@@ -30,6 +31,9 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.1.9",
         "@inertiajs/inertia-react": "^0.1.6",
+        "antd": "^4.5.4",
+        "react-avatar-edit": "^0.8.3",
+        "react-phone-input-2": "^2.13.7",
         "react-top-loading-bar": "^2.0.0",
         "reactstrap": "^8.5.1"
     }

@@ -1,9 +1,11 @@
 .prpbut {
     background: #7971ea !important;
     border-color: #7971ea !important;
-    color: white;
+    color: white !important;
 }
-
+.milabel{
+    color: purple;
+}
 /* Preloader */
 
 #preloader {

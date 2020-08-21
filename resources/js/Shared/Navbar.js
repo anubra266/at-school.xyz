@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import LoadingBar from "react-top-loading-bar";
 import { useBattery, useEffectOnce } from "react-use";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
-import { loadPage } from "@/Helpers/PageLoad"; 
+import { loadPage } from "@/Helpers/PageLoad";
 import routes from "./Routes";
 function Navbar({ pageLoader }) {
     //* load battery State
@@ -49,6 +49,13 @@ function Navbar({ pageLoader }) {
                             </li>
                         );
                     })}
+                    <InertiaLink
+                        className="nav-link"
+                        href={route("logout")}
+                        method="POST"
+                    >
+                        Logout
+                    </InertiaLink>
                 </ul>
                 <span className="text-info navbar-text">
                     {(batteryState.level * 100).toFixed(0)}%{" "}
