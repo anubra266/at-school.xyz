@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
 
@@ -33,8 +34,31 @@ class AppServiceProvider extends ServiceProvider
         Inertia::version(function () {
             return md5_file(public_path('mix-manifest.json'));
         });
-        
+
         Inertia::share([
+            //* Send user Information to all frontend views
+            'auth' => function () {
+                return [
+                    'user' => Auth::user() ? [
+                        'id' => Auth::user()->id,
+                        'first_name' => Auth::user()->first_name,
+                        'middle_name' => Auth::user()->middle_name,
+                        'last_name' => Auth::user()->last_name,
+                        'gender' => Auth::user()->gender,
+                        'email' => Auth::user()->email,
+                        'telephone' => Auth::user()->telephone,
+                        'date_of_birth' => Auth::user()->date_of_birth,
+                        'school' => Auth::user()->school,
+                        'school_town' => Auth::user()->school_town,
+                        'profile_image' => Auth::user()->profile_image,
+                        'initial_role' => Auth::user()->initial_role,
+                        // 'account' => [
+                        //     'id' => Auth::user()->account->id,
+                        //     'name' => Auth::user()->account->name,
+                        // ],
+                    ] : null,
+                ];
+            },
             //* Make errors available to react
             'errors' => function () {
                 return Session::get('errors')
