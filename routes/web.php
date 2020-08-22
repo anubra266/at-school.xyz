@@ -22,16 +22,14 @@ Route::get('/', 'PublicController@landing')->name('landing');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', function () {
-        return Inertia::render('Home');
-    })->name('home');
-    Route::get('/about', function () {
-        return Inertia::render('About');
-    })->name('about');
-    Route::get('/contact', function () {
-        return Inertia::render('Contact');
-    })->name('contact');
+    //? Only Users with finished registration
+    Route::group(['middleware' => 'freg'], function () {
+        Route::get('home', 'PrivateController@home')->name('home');
+    });
+    Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish');
 });
+
+
 
 // ?Password Reset Routes...
 // Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
