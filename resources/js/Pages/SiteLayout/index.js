@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Layout } from "antd";
+import Layout from "antd/lib/layout";
 import { Helmet } from "react-helmet";
 
 import Navbar from "./Navbar";
@@ -22,11 +22,12 @@ function index({ title, children }) {
             break;
 
         default:
+            require("antd/dist/antd.dark.css");
             break;
     }
     return (
         <React.Fragment>
-            <Helmet title={`${title} at-School`} />
+            <Helmet title={`${title} - at-School`} />
             <Layout style={{ minHeight: "100vh" }}>
                 <Sidebar />
                 <Layout className="site-layout">

@@ -1,12 +1,24 @@
 import React, { useState } from "react";
-import { useEffectOnce } from "react-use";
+import useEffectOnce from "react-use/lib/useEffectOnce";
 import LoadingBar from "react-top-loading-bar";
-import { Layout, Menu, PageHeader, Dropdown, Button, Tag, Drawer } from "antd";
-import { EllipsisOutlined, MenuOutlined } from "@ant-design/icons";
+import Layout from "antd/lib/layout";
+import Menu from "antd/lib/menu";
+import PageHeader from "antd/lib/page-header";
+import Dropdown from "antd/lib/dropdown";
+import Button from "antd/lib/button";
+import Tag from "antd/lib/tag";
+import Drawer from "antd/lib/drawer";
+
+import EllipsisOutlined from "@ant-design/icons/EllipsisOutlined";
+import MenuOutlined from "@ant-design/icons/MenuOutlined";
 import { loadPage } from "@/Helpers/PageLoad";
 
 const { Header } = Layout;
 function Navbar({ pageLoader }) {
+    // TODO Notification Drawer
+    // TODO Logout
+    // TODO Share auth data from backend
+
     loadPage(pageLoader);
     useEffectOnce(() => {
         //*complete pageLoader loading
@@ -37,7 +49,9 @@ function Navbar({ pageLoader }) {
                             <button
                                 onClick={showDrawer}
                                 className="navbar-toggler"
-                                style={{ color: "white" }}
+                                style={{
+                                    color: "white"
+                                }}
                                 type="button"
                             >
                                 <MenuOutlined />

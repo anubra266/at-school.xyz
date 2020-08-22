@@ -1,7 +1,7 @@
 // noprotect
 import React, { useState } from "react";
 import Avatar from "react-avatar-edit";
-import { notification } from "antd";
+import notification from "antd/lib/notification"
 function ProfileimageInfo({ data, handleChange, errors }) {
     const [src, setSrc] = useState("");
     const onCrop = preview => {

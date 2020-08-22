@@ -1,5 +1,5 @@
 import React from "react";
-import { Radio } from "antd";
+import Radio from "antd/lib/radio";
 
 export default function PersonalInfo({ data, handleChange, errors }) {
     return (

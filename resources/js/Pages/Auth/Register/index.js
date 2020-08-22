@@ -11,7 +11,6 @@ import PasswordInfo from "@/Pages/Auth/Register/PasswordInfo";
 import ProfileImageInfo from "@/Pages/Auth/Register/ProfileImageInfo";
 
 import FormFooter from "@/Pages/Auth/Register/FormFooter";
-import { Button } from "antd";
 function Register() {
     const [checking, setChecking] = useState(false);
     const [page, setPage] = useState(0);

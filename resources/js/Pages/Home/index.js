@@ -1,11 +1,14 @@
 import React from "react";
-import LoginLayout from "@/Pages/SiteLayout";
-import { Layout, PageHeader, Button } from "antd";
+import Layout from "antd/lib/layout";
+import PageHeader from "antd/lib/page-header";
+import Button from "antd/lib/button";
+import SiteLayout from "@/Pages/SiteLayout";
+
 const { Content } = Layout;
 
 export default () => {
     return (
-        <LoginLayout title="Home">
+        <SiteLayout title="Home">
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
@@ -23,6 +26,6 @@ export default () => {
                     ></PageHeader>
                 </div>
             </Content>
-        </LoginLayout>
+        </SiteLayout>
     );
 };

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { Layout, Menu } from "antd";
-import {
-    PoweroffOutlined,
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
-    TeamOutlined,
-    UserOutlined
-} from "@ant-design/icons";
+
+import Layout from "antd/lib/layout";
+import Menu from "antd/lib/menu";
+
+import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
+import DesktopOutlined from "@ant-design/icons/DesktopOutlined";
+import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
+import TeamOutlined from "@ant-design/icons/TeamOutlined";
+import UserOutlined from "@ant-design/icons/UserOutlined";
+
 import { InertiaLink } from "@inertiajs/inertia-react";
 //  TODO Dynamic JSON Routing
-
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 function Sidebar() {
@@ -54,7 +54,9 @@ function Sidebar() {
                         <Menu.Item key="8">Team 2</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="1" icon={<PoweroffOutlined />}>
-                        <InertiaLink href={route('logout')} method="POST">Logout</InertiaLink>
+                        <InertiaLink href={route("logout")} method="POST">
+                            Logout
+                        </InertiaLink>
                     </Menu.Item>
                 </Menu>
             </Sider>

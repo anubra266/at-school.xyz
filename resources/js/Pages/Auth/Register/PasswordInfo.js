@@ -1,6 +1,8 @@
 import React from "react";
-import { Input, Space } from "antd";
-import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import Input from "antd/lib/input";
+import Space from "antd/lib/space";
+import EyeInvisibleOutlined from "@ant-design/icons/EyeInvisibleOutlined";
+import EyeTwoTone from "@ant-design/icons/EyeInvisibleOutlined";
 
 function PasswordInfo({ data, handleChange, errors }) {
     return (

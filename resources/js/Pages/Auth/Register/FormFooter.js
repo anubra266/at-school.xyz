@@ -1,7 +1,8 @@
 import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import LoadingButton from "@/Shared/LoadingButton";
-import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
+import DoubleLeftOutlined from "@ant-design/icons/DoubleLeftOutlined";
+import DoubleRightOutlined from "@ant-design/icons/DoubleRightOutlined";
 function FormFooter({ page, setPage, lastPage, checking }) {
     return (
         <React.Fragment>
