@@ -297,8 +297,6 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Input ]*/
-.react-tel-input /* ? holds form control and flag*/ {
-}
 .react-tel-input .form-control /*? same as input100 */ {
     font-family: SourceSansPro-Bold !important;
     font-size: 16px !important;
@@ -451,7 +449,20 @@ iframe {
     -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
     -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
 }
-
+.login100-form-btn:disabled,
+.login100-form-btn[disabled] {
+    border: none;
+    background-color: #cccccc;
+    color: #666666;
+    box-shadow: none;
+    cursor: not-allowed !important;
+}
+.login100-form-btn[disabled]:hover {
+    box-shadow: none;
+}
+.atlogin {
+    min-width: 120px;
+}
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 

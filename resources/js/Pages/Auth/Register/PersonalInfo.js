@@ -51,6 +51,9 @@ export default function PersonalInfo({ data, handleChange, errors }) {
                 />
                 <span className="focus-input100"></span>
             </div>
+            {errors.gender && (
+                <div className="text-danger">{errors.gender[0]}</div>
+            )}
             <label>Gender</label>
             <div className="wrap-input100 m-b-20">
                 <Radio.Group

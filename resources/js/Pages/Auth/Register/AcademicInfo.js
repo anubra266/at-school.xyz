@@ -37,14 +37,15 @@ function AcademicInfo({ data, handleChange, errors }) {
                 <span className="focus-input100"></span>
             </div>
 
-            {errors.last_name && (
-                <div className="text-danger">{errors.last_name[0]}</div>
+            {errors.initial_role && (
+                <div className="text-danger">{errors.initial_role[0]}</div>
             )}
             <div className="wrap-input100 m-b-20">
                 <Select
                     required
                     name="initial_role"
-                    defaultValue="Select your classification"
+                    placeholder="Select your classification"
+                    value={data.initial_role}
                     className="input100Select"
                     onChange={value => {
                         handleChange({

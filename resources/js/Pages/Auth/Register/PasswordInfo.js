@@ -14,6 +14,7 @@ function PasswordInfo({ data, handleChange, errors }) {
                     required
                     name="password"
                     onChange={handleChange}
+                    value={data.password}
                 />
                 <span className="focus-input100"></span>
             </div>
@@ -29,6 +30,7 @@ function PasswordInfo({ data, handleChange, errors }) {
                     required
                     name="password_confirmation"
                     onChange={handleChange}
+                    value={data.password_confirmation}
                 />
                 <span className="focus-input100"></span>
             </div>

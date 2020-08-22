@@ -19,7 +19,10 @@ function Layout({ children, title }) {
             <Assets pageLoader={pageLoader}>
                 <nav
                     className="navbar sticky-top text-light"
-                    style={{ backgroundColor: "#bd59d4" }}
+                    style={{
+                        backgroundColor: "#bd59d4",
+                        boxShadow: "1px 1px 15px black"
+                    }}
                 >
                     <InertiaLink href={route("landing")}>
                         <span className="navbar-brand mb-0 login100-form-title text-white">

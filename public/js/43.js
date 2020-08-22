@@ -46,7 +46,8 @@ function Layout(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar sticky-top text-light",
     style: {
-      backgroundColor: "#bd59d4"
+      backgroundColor: "#bd59d4",
+      boxShadow: "5px 5px 5px bd59d4"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     href: route("landing")

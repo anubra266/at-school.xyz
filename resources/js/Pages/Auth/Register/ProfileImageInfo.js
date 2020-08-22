@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import Avatar from "react-avatar-edit";
 import { notification } from "antd";
 function ProfileimageInfo({ data, handleChange, errors }) {
+    const [src, setSrc] = useState("");
     const onCrop = preview => {
+        setSrc(preview);
         handleChange({
             target: { name: "profile_image", value: preview }
         });
@@ -23,10 +25,12 @@ function ProfileimageInfo({ data, handleChange, errors }) {
     };
     return (
         <React.Fragment>
-            {errors.profile_image && (
-                <div className="text-danger">{errors.profile_image[0]}</div>
-            )}
-
+            <div className="text-center">
+                {errors.profile_image && (
+                    <div className="text-danger">{errors.profile_image[0]}</div>
+                )}
+                <h4 className="milabel ">Profile Picture</h4>
+            </div>
             <div className="row justify-content-center mb-4">
                 <Avatar
                     width={200}
@@ -35,6 +39,7 @@ function ProfileimageInfo({ data, handleChange, errors }) {
                     onBeforeFileLoad={onBeforeFileLoad}
                     mimeTypes={"image/jpeg"}
                     backgroundColor={"white"}
+                    src={src}
                 />
             </div>
         </React.Fragment>

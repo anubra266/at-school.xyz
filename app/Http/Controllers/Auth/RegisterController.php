@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Traits\UploadProfile;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -23,7 +24,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-
+    use UploadProfile;
     /**
      * Where to redirect users after registration.
      *
@@ -49,11 +50,20 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        dd($data);
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
-            //'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            //'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'middle_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'gender' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'telephone' => ['required', 'string', 'max:15'],
+            'date_of_birth' => ['required', 'date'],
+            'school' => ['required', 'string'],
+            'school_town' => ['required', 'string', 'max:20'],
+            'initial_role' => ['required', 'string', 'max:20'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'profile_image' => ['required', 'string']
+
         ]);
     }
 
@@ -66,9 +76,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'middle_name' => $data['middle_name'],
+            'last_name' => $data['last_name'],
+            'gender' => $data['gender'],
             'email' => $data['email'],
+            'telephone' => $data['telephone'],
+            'date_of_birth' => $data['date_of_birth'],
+            'school' => $data['school'],
+            'school_town' => $data['school_town'],
+            'initial_role' => $data['initial_role'],
             'password' => Hash::make($data['password']),
+            'profile_image' => $this->storeProfile($data['profile_image'])
         ]);
     }
 }

@@ -11,7 +11,7 @@ import PasswordInfo from "@/Pages/Auth/Register/PasswordInfo";
 import ProfileImageInfo from "@/Pages/Auth/Register/ProfileImageInfo";
 
 import FormFooter from "@/Pages/Auth/Register/FormFooter";
-
+import { Button } from "antd";
 function Register() {
     const [checking, setChecking] = useState(false);
     const [page, setPage] = useState(0);
@@ -27,7 +27,7 @@ function Register() {
 
         school: "",
         school_town: "",
-        initial_role: "",
+        initial_role: "Select your Classification",
 
         password: "",
         password_confirmation: "",
@@ -46,12 +46,17 @@ function Register() {
     const handleSubmit = e => {
         e.preventDefault();
         setChecking(true);
+        data.initial_role === "Select your Classification"
+            ? (data.initial_role = "")
+            : "";
         Inertia.post(route("register"), data).then(() => {
             setChecking(false);
         });
     };
     const { errors } = usePage();
+    var lastPage = 4;
     var formprops = { data, handleChange, errors };
+    var footerprops = { page, setPage, lastPage, checking };
     return (
         <Layout title="at-school Register">
             <form
@@ -59,17 +64,18 @@ function Register() {
                 onSubmit={handleSubmit}
             >
                 <span className="login100-form-title p-b-37">Sign Up</span>
-                {1 == 2 && (
-                    <React.Fragment>
-                        <PersonalInfo {...formprops} />
-                        <BasicInfo {...formprops} />
-                        <AcademicInfo {...formprops} />
-                        <PasswordInfo {...formprops} />
-                        <ProfileImageInfo {...formprops} />
-                    </React.Fragment>
-                )}
 
-                <FormFooter checking={checking} />
+                {page === 0 && <PersonalInfo {...formprops} />}
+
+                {page === 1 && <BasicInfo {...formprops} />}
+
+                {page === 2 && <AcademicInfo {...formprops} />}
+
+                {page === 3 && <PasswordInfo {...formprops} />}
+
+                {page === 4 && <ProfileImageInfo {...formprops} />}
+
+                <FormFooter {...footerprops} />
             </form>
         </Layout>
     );

@@ -1,23 +1,45 @@
 import React from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import LoadingButton from "@/Shared/LoadingButton";
-
-function FormFooter({ checking }) {
+import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
+function FormFooter({ page, setPage, lastPage, checking }) {
     return (
         <React.Fragment>
-            <div className="container-login100-form-btn">
-                <LoadingButton
-                    type="submit"
-                    className="login100-form-btn"
-                    loading={checking}
-                >
-                    Sign Up
-                </LoadingButton>
+            <div className="row justify-content-between">
+                <div className="col-6">
+                    <button
+                        disabled={page === 0}
+                        type="button"
+                        className="login100-form-btn atlogin"
+                        onClick={() => {
+                            setPage(page > -1 && page - 1);
+                        }}
+                    >
+                        <DoubleLeftOutlined /> Prev
+                    </button>
+                </div>
+                <div className="col-6">
+                    {page === lastPage ? (
+                        <LoadingButton
+                            type="submit"
+                            className="login100-form-btn atlogin"
+                            loading={checking}
+                        >
+                            Sign Up
+                        </LoadingButton>
+                    ) : (
+                        <button
+                            type="button"
+                            className="login100-form-btn atlogin"
+                            onClick={() => {
+                                setPage(page < lastPage && page + 1);
+                            }}
+                        >
+                            Next <DoubleRightOutlined />
+                        </button>
+                    )}
+                </div>
             </div>
-
-
-
-
             <div className="row justify-content-between mt-4">
                 <div className="col-6">
                     <InertiaLink
