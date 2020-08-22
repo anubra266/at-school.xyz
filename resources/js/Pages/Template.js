@@ -1,6 +1,6 @@
 import React from "react";
-import LoginLayout from "@/Pages/SiteLayout";
-import { Layout, PageHeader, Button } from "antd";
+import LoginLayout from "@/Pages/LoginLayout";
+import { Layout, PageHeader, Button, Descriptions } from "antd";
 const { Content } = Layout;
 
 export default () => {

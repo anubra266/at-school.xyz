@@ -58,7 +58,7 @@ function Register() {
     var formprops = { data, handleChange, errors };
     var footerprops = { page, setPage, lastPage, checking };
     return (
-        <Layout title="at-school Register">
+        <Layout title="Register at-school">
             <form
                 className="login100-form validate-form"
                 onSubmit={handleSubmit}

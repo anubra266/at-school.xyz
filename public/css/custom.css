@@ -1,9 +1,17 @@
+.site-page-header-ghost-wrapper {
+    padding: 24px;
+}
+
+.ant-layout-header .ant-page-header-heading-title,
+.ant-layout-header .ant-page-header-heading-sub-title {
+    color: white !important;
+}
 .prpbut {
     background: #7971ea !important;
     border-color: #7971ea !important;
     color: white !important;
 }
-.milabel{
+.milabel {
     color: purple;
 }
 /* Preloader */
@@ -76,4 +84,3 @@
         transform: scale(1);
     }
 }
-

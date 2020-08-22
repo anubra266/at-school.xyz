@@ -44,6 +44,21 @@
     @inertia
     <!-- --- -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/landing/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/landing/jquery-ui.js"></script>
+    <script src="js/landing/popper.min.js"></script>
+    <script src="js/landing/bootstrap.min.js"></script>
+    <script src="js/landing/owl.carousel.min.js"></script>
+    <script src="js/landing/jquery.stellar.min.js"></script>
+    <script src="js/landing/jquery.countdown.min.js"></script>
+    <script src="js/landing/bootstrap-datepicker.min.js"></script>
+    <script src="js/landing/jquery.easing.1.3.js"></script>
+    <script src="js/landing/aos.js"></script>
+    <script src="js/landing/jquery.fancybox.min.js"></script>
+    <script src="js/landing/jquery.sticky.js"></script>
+
+
+    <script src="js/landing/main.js"></script>
 </body>
 
 </html>

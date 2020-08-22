@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"06b0d096fd0377849b44","2":"2bd033bbef26bea6286c","3":"c0d0243a507efc0fa017","5":"0e0688300d7a9f957102","6":"16bb0aae1a5559daf25e","8":"9b2ca70ea3424b15648d","9":"64c3670aa7715fe60174","10":"c3836787c9d4ae6c6fc4","11":"f385cb2d19b4d59a1f12","12":"df081e01006adbf05311","13":"d7e179ed023c7a2a6c2b","14":"e1d08b220f8030059c42","15":"e1f1cd192beced613592","16":"91ed275a65edd2cef141","17":"fe688d3d4782fa9be934","18":"cf4c0471ce9dd6fd5b51","20":"733478970cda61b55c36","21":"9adea6555d9d2fdb3783","22":"417dad1a84b248917d0d","23":"cbc4a8cc73d7d95e6c50","24":"1e5b3b87a2d4f9075c2c","25":"7d69e346dcbd00cd1525","26":"04266dae4c1cbd8c1222","28":"1a17930e2d807f1c30fa","29":"ecd5095df4782f21b3b8","30":"df901b520ac877901f56","31":"a0e7772961ee34f07d86","32":"4f5fd65e596849b2a7c6","33":"d88ccd2908b77067c276","34":"9094aba1926888edbd5a","35":"266dd1ccb675128407b8","36":"a5ed4aaeee7a80cc3a42","37":"3559a1db64e46f2b5932","38":"b43deee044129f6fad0a","40":"a29a0e64d694d63e4561"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"bf97d9f0963208141713","2":"2bd033bbef26bea6286c","3":"c0d0243a507efc0fa017","4":"8c59faddba341d7301de","5":"0e0688300d7a9f957102","6":"1c78a48782a1a280c75c","7":"f2392baa5b32d03a1f01","8":"9b2ca70ea3424b15648d","9":"ed6444a5026a1a31e552","11":"f385cb2d19b4d59a1f12","12":"26423e2309ad636b9982","13":"45e29a5113c5cfc4fe8e","14":"e1d08b220f8030059c42","15":"e1f1cd192beced613592","16":"91ed275a65edd2cef141","17":"fe688d3d4782fa9be934","18":"cf4c0471ce9dd6fd5b51","20":"733478970cda61b55c36","21":"9adea6555d9d2fdb3783","22":"c1123a5ce0be2cd6e702","23":"cbc4a8cc73d7d95e6c50","24":"1e5b3b87a2d4f9075c2c","25":"7d69e346dcbd00cd1525","26":"04266dae4c1cbd8c1222","27":"6e82dbe06a65f0ae638b","28":"1a17930e2d807f1c30fa","29":"ecd5095df4782f21b3b8","30":"0ba6c8373351ac68c362","31":"a0e7772961ee34f07d86","32":"4f5fd65e596849b2a7c6","33":"d173289df7cf1d0d988a","34":"c94992d141089d0db477","35":"f6247cbb9bd2ed89f04a","36":"a5ed4aaeee7a80cc3a42","37":"3559a1db64e46f2b5932","38":"b43deee044129f6fad0a","39":"e4d14b6ff41cd7aff096","40":"a29a0e64d694d63e4561","41":"991ee6917e7f3fc339f1","42":"e1c173e36cfebae71702","44":"9388121ed7ecca671993","45":"e7a013151aab9f0421db"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31363,30 +31363,39 @@ var CatchError = /*#__PURE__*/function (_React$Component) {
 var map = {
 	"./About": [
 		"./resources/js/Pages/About/index.js",
+		9,
 		0,
 		1,
-		12
+		13,
+		42
 	],
 	"./About/": [
 		"./resources/js/Pages/About/index.js",
+		9,
 		0,
 		1,
-		12
+		13,
+		42
 	],
 	"./About/index": [
 		"./resources/js/Pages/About/index.js",
+		9,
 		0,
 		1,
-		12
+		13,
+		42
 	],
 	"./About/index.js": [
 		"./resources/js/Pages/About/index.js",
+		9,
 		0,
 		1,
-		12
+		13,
+		42
 	],
 	"./Auth/Assets": [
 		"./resources/js/Pages/Auth/Assets.js",
+		9,
 		3,
 		1,
 		22,
@@ -31394,6 +31403,7 @@ var map = {
 	],
 	"./Auth/Assets.js": [
 		"./resources/js/Pages/Auth/Assets.js",
+		9,
 		3,
 		1,
 		22,
@@ -31401,6 +31411,7 @@ var map = {
 	],
 	"./Auth/ForgotPassword": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31409,6 +31420,7 @@ var map = {
 	],
 	"./Auth/ForgotPassword/": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31417,6 +31429,7 @@ var map = {
 	],
 	"./Auth/ForgotPassword/index": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31425,6 +31438,7 @@ var map = {
 	],
 	"./Auth/ForgotPassword/index.js": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31433,6 +31447,7 @@ var map = {
 	],
 	"./Auth/Layout": [
 		"./resources/js/Pages/Auth/Layout.js",
+		9,
 		0,
 		3,
 		30,
@@ -31441,6 +31456,7 @@ var map = {
 	],
 	"./Auth/Layout.js": [
 		"./resources/js/Pages/Auth/Layout.js",
+		9,
 		0,
 		3,
 		30,
@@ -31449,6 +31465,7 @@ var map = {
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31457,6 +31474,7 @@ var map = {
 	],
 	"./Auth/Login/": [
 		"./resources/js/Pages/Auth/Login/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31465,6 +31483,7 @@ var map = {
 	],
 	"./Auth/Login/index": [
 		"./resources/js/Pages/Auth/Login/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31473,6 +31492,7 @@ var map = {
 	],
 	"./Auth/Login/index.js": [
 		"./resources/js/Pages/Auth/Login/index.js",
+		9,
 		0,
 		3,
 		30,
@@ -31481,12 +31501,13 @@ var map = {
 	],
 	"./Auth/Register": [
 		"./resources/js/Pages/Auth/Register/index.js",
+		9,
 		0,
-		3,
 		2,
 		21,
-		30,
+		3,
 		20,
+		30,
 		5,
 		18,
 		22,
@@ -31494,12 +31515,13 @@ var map = {
 	],
 	"./Auth/Register/": [
 		"./resources/js/Pages/Auth/Register/index.js",
+		9,
 		0,
-		3,
 		2,
 		21,
-		30,
+		3,
 		20,
+		30,
 		5,
 		18,
 		22,
@@ -31507,42 +31529,49 @@ var map = {
 	],
 	"./Auth/Register/AcademicInfo": [
 		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		9,
 		2,
 		21,
 		8
 	],
 	"./Auth/Register/AcademicInfo.js": [
 		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		9,
 		2,
 		21,
 		8
 	],
 	"./Auth/Register/BasicInfo": [
 		"./resources/js/Pages/Auth/Register/BasicInfo.js",
+		9,
 		3,
 		18,
 		36
 	],
 	"./Auth/Register/BasicInfo.js": [
 		"./resources/js/Pages/Auth/Register/BasicInfo.js",
+		9,
 		3,
 		18,
 		36
 	],
 	"./Auth/Register/FormFooter": [
 		"./resources/js/Pages/Auth/Register/FormFooter.js",
+		9,
 		2,
 		20,
 		40
 	],
 	"./Auth/Register/FormFooter.js": [
 		"./resources/js/Pages/Auth/Register/FormFooter.js",
+		9,
 		2,
 		20,
 		40
 	],
 	"./Auth/Register/PasswordInfo": [
 		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		9,
 		2,
 		21,
 		20,
@@ -31550,6 +31579,7 @@ var map = {
 	],
 	"./Auth/Register/PasswordInfo.js": [
 		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		9,
 		2,
 		21,
 		20,
@@ -31557,18 +31587,21 @@ var map = {
 	],
 	"./Auth/Register/PersonalInfo": [
 		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		9,
 		2,
 		21,
 		17
 	],
 	"./Auth/Register/PersonalInfo.js": [
 		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		9,
 		2,
 		21,
 		17
 	],
 	"./Auth/Register/ProfileImageInfo": [
 		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		9,
 		2,
 		21,
 		5,
@@ -31576,6 +31609,7 @@ var map = {
 	],
 	"./Auth/Register/ProfileImageInfo.js": [
 		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		9,
 		2,
 		21,
 		5,
@@ -31583,12 +31617,13 @@ var map = {
 	],
 	"./Auth/Register/index": [
 		"./resources/js/Pages/Auth/Register/index.js",
+		9,
 		0,
-		3,
 		2,
 		21,
-		30,
+		3,
 		20,
+		30,
 		5,
 		18,
 		22,
@@ -31596,12 +31631,13 @@ var map = {
 	],
 	"./Auth/Register/index.js": [
 		"./resources/js/Pages/Auth/Register/index.js",
+		9,
 		0,
-		3,
 		2,
 		21,
-		30,
+		3,
 		20,
+		30,
 		5,
 		18,
 		22,
@@ -31609,6 +31645,7 @@ var map = {
 	],
 	"./Auth/template": [
 		"./resources/js/Pages/Auth/template.js",
+		9,
 		0,
 		3,
 		30,
@@ -31617,6 +31654,7 @@ var map = {
 	],
 	"./Auth/template.js": [
 		"./resources/js/Pages/Auth/template.js",
+		9,
 		0,
 		3,
 		30,
@@ -31625,112 +31663,167 @@ var map = {
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact/index.js",
+		9,
 		0,
 		1,
-		10
+		13,
+		44
 	],
 	"./Contact/": [
 		"./resources/js/Pages/Contact/index.js",
+		9,
 		0,
 		1,
-		10
+		13,
+		44
 	],
 	"./Contact/index": [
 		"./resources/js/Pages/Contact/index.js",
+		9,
 		0,
 		1,
-		10
+		13,
+		44
 	],
 	"./Contact/index.js": [
 		"./resources/js/Pages/Contact/index.js",
+		9,
 		0,
 		1,
-		10
+		13,
+		44
 	],
 	"./Error": [
 		"./resources/js/Pages/Error/index.js",
+		9,
 		15
 	],
 	"./Error/": [
 		"./resources/js/Pages/Error/index.js",
+		9,
 		15
 	],
 	"./Error/index": [
 		"./resources/js/Pages/Error/index.js",
+		9,
 		15
 	],
 	"./Error/index.js": [
 		"./resources/js/Pages/Error/index.js",
+		9,
 		15
 	],
 	"./Home": [
 		"./resources/js/Pages/Home/index.js",
+		9,
 		0,
+		2,
+		21,
+		3,
+		20,
 		1,
-		13
+		30,
+		27,
+		7,
+		12
 	],
 	"./Home/": [
 		"./resources/js/Pages/Home/index.js",
+		9,
 		0,
+		2,
+		21,
+		3,
+		20,
 		1,
-		13
+		30,
+		27,
+		7,
+		12
 	],
 	"./Home/index": [
 		"./resources/js/Pages/Home/index.js",
+		9,
 		0,
+		2,
+		21,
+		3,
+		20,
 		1,
-		13
+		30,
+		27,
+		7,
+		12
 	],
 	"./Home/index.js": [
 		"./resources/js/Pages/Home/index.js",
+		9,
 		0,
+		2,
+		21,
+		3,
+		20,
 		1,
-		13
+		30,
+		27,
+		7,
+		12
 	],
 	"./Landing": [
 		"./resources/js/Pages/Landing/index.js",
+		9,
 		14
 	],
 	"./Landing/": [
 		"./resources/js/Pages/Landing/index.js",
+		9,
 		14
 	],
 	"./Landing/Footer": [
 		"./resources/js/Pages/Landing/Footer.js",
+		9,
 		31
 	],
 	"./Landing/Footer.js": [
 		"./resources/js/Pages/Landing/Footer.js",
+		9,
 		31
 	],
 	"./Landing/Head": [
 		"./resources/js/Pages/Landing/Head.js",
+		9,
 		0,
 		32
 	],
 	"./Landing/Head.js": [
 		"./resources/js/Pages/Landing/Head.js",
+		9,
 		0,
 		32
 	],
 	"./Landing/Header": [
 		"./resources/js/Pages/Landing/Header.js",
+		9,
 		28
 	],
 	"./Landing/Header.js": [
 		"./resources/js/Pages/Landing/Header.js",
+		9,
 		28
 	],
 	"./Landing/Intro": [
 		"./resources/js/Pages/Landing/Intro.js",
+		9,
 		24
 	],
 	"./Landing/Intro.js": [
 		"./resources/js/Pages/Landing/Intro.js",
+		9,
 		24
 	],
 	"./Landing/Landing": [
 		"./resources/js/Pages/Landing/Landing.js",
+		9,
 		0,
 		3,
 		1,
@@ -31738,6 +31831,7 @@ var map = {
 	],
 	"./Landing/Landing.js": [
 		"./resources/js/Pages/Landing/Landing.js",
+		9,
 		0,
 		3,
 		1,
@@ -31745,35 +31839,155 @@ var map = {
 	],
 	"./Landing/Login": [
 		"./resources/js/Pages/Landing/Login.js",
+		9,
 		29
 	],
 	"./Landing/Login.js": [
 		"./resources/js/Pages/Landing/Login.js",
+		9,
 		29
 	],
 	"./Landing/OurOffer": [
 		"./resources/js/Pages/Landing/OurOffer.js",
+		9,
 		25
 	],
 	"./Landing/OurOffer.js": [
 		"./resources/js/Pages/Landing/OurOffer.js",
+		9,
 		25
 	],
 	"./Landing/WhyUs": [
 		"./resources/js/Pages/Landing/WhyUs.js",
+		9,
 		26
 	],
 	"./Landing/WhyUs.js": [
 		"./resources/js/Pages/Landing/WhyUs.js",
+		9,
 		26
 	],
 	"./Landing/index": [
 		"./resources/js/Pages/Landing/index.js",
+		9,
 		14
 	],
 	"./Landing/index.js": [
 		"./resources/js/Pages/Landing/index.js",
+		9,
 		14
+	],
+	"./SiteLayout": [
+		"./resources/js/Pages/SiteLayout/index.js",
+		9,
+		0,
+		2,
+		21,
+		3,
+		20,
+		1,
+		30,
+		27,
+		7
+	],
+	"./SiteLayout/": [
+		"./resources/js/Pages/SiteLayout/index.js",
+		9,
+		0,
+		2,
+		21,
+		3,
+		20,
+		1,
+		30,
+		27,
+		7
+	],
+	"./SiteLayout/Navbar": [
+		"./resources/js/Pages/SiteLayout/Navbar.js",
+		9,
+		2,
+		21,
+		20,
+		1,
+		4
+	],
+	"./SiteLayout/Navbar.js": [
+		"./resources/js/Pages/SiteLayout/Navbar.js",
+		9,
+		2,
+		21,
+		20,
+		1,
+		4
+	],
+	"./SiteLayout/Sidebar": [
+		"./resources/js/Pages/SiteLayout/Sidebar.js",
+		9,
+		2,
+		21,
+		20,
+		39
+	],
+	"./SiteLayout/Sidebar.js": [
+		"./resources/js/Pages/SiteLayout/Sidebar.js",
+		9,
+		2,
+		21,
+		20,
+		39
+	],
+	"./SiteLayout/SiteFooter": [
+		"./resources/js/Pages/SiteLayout/SiteFooter.js",
+		9,
+		2,
+		21,
+		20,
+		45
+	],
+	"./SiteLayout/SiteFooter.js": [
+		"./resources/js/Pages/SiteLayout/SiteFooter.js",
+		9,
+		2,
+		21,
+		20,
+		45
+	],
+	"./SiteLayout/index": [
+		"./resources/js/Pages/SiteLayout/index.js",
+		9,
+		0,
+		2,
+		21,
+		3,
+		20,
+		1,
+		30,
+		27,
+		7
+	],
+	"./SiteLayout/index.js": [
+		"./resources/js/Pages/SiteLayout/index.js",
+		9,
+		0,
+		2,
+		21,
+		3,
+		20,
+		1,
+		30,
+		27,
+		7
+	],
+	"./Template": [
+		"./resources/js/Pages/Template.js",
+		7,
+		41
+	],
+	"./Template.js": [
+		"./resources/js/Pages/Template.js",
+		7,
+		41
 	]
 };
 function webpackAsyncContext(req) {
@@ -31786,8 +32000,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		return __webpack_require__(id);
+	return Promise.all(ids.slice(2).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__.t(id, ids[1])
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {

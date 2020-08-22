@@ -953,7 +953,7 @@ function Register() {
     checking: checking
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "at-school Register"
+    title: "Register at-school"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "login100-form validate-form",
     onSubmit: handleSubmit
