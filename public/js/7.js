@@ -599,12 +599,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/index.js");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navbar */ "./resources/js/Pages/SiteLayout/Navbar.js");
-/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Sidebar */ "./resources/js/Pages/SiteLayout/Sidebar.js");
-/* harmony import */ var _SiteFooter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SiteFooter */ "./resources/js/Pages/SiteLayout/SiteFooter.js");
-
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar */ "./resources/js/Pages/SiteLayout/Navbar.js");
+/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Sidebar */ "./resources/js/Pages/SiteLayout/Sidebar.js");
+/* harmony import */ var _SiteFooter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SiteFooter */ "./resources/js/Pages/SiteLayout/SiteFooter.js");
 
 
 
@@ -616,10 +613,26 @@ function index(_ref) {
   var title = _ref.title,
       children = _ref.children;
   var pageLoader = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-  var darkmode = false;
+  var mode = "dark";
 
-  if (darkmode) {
-    __webpack_require__(/*! antd/dist/antd.dark.css */ "./node_modules/antd/dist/antd.dark.css");
+  switch (mode) {
+    case "light":
+      __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
+
+      break;
+
+    case "dark":
+      __webpack_require__(/*! antd/dist/antd.dark.css */ "./node_modules/antd/dist/antd.dark.css");
+
+      break;
+
+    case "compact":
+      __webpack_require__(/*! antd/dist/antd.compact.css */ "./node_modules/antd/dist/antd.compact.css");
+
+      break;
+
+    default:
+      break;
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__["Helmet"], {
@@ -628,11 +641,11 @@ function index(_ref) {
     style: {
       minHeight: "100vh"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], {
     className: "site-layout"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
     pageLoader: pageLoader
-  }), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SiteFooter__WEBPACK_IMPORTED_MODULE_6__["default"], null))));
+  }), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SiteFooter__WEBPACK_IMPORTED_MODULE_5__["default"], null))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
