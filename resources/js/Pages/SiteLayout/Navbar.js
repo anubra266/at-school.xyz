@@ -12,13 +12,11 @@ import Drawer from "antd/lib/drawer";
 import EllipsisOutlined from "@ant-design/icons/EllipsisOutlined";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
 import { loadPage } from "@/Helpers/PageLoad";
-
+import { usePage } from "@inertiajs/inertia-react";
 const { Header } = Layout;
 function Navbar({ pageLoader }) {
-    // TODO Notification Drawer
     // TODO Logout
-    // TODO Share auth data from backend
-
+    const { auth } = usePage();
     loadPage(pageLoader);
     useEffectOnce(() => {
         //*complete pageLoader loading
@@ -42,7 +40,7 @@ function Navbar({ pageLoader }) {
                 <PageHeader
                     title="at-School"
                     className="site-page-header"
-                    subTitle="This is a subtitle"
+                    subTitle={`${auth.user.first_name} ${auth.user.last_name}`}
                     tags={<Tag color="blue">Running</Tag>}
                     extra={[
                         <React.Fragment key={1}>

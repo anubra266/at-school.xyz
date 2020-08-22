@@ -60,6 +60,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons/MenuOutlined */ "./node_modules/@ant-design/icons/MenuOutlined.js");
 /* harmony import */ var _ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _Helpers_PageLoad__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/Helpers/PageLoad */ "./resources/js/Helpers/PageLoad.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_13__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -85,13 +87,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Header;
 
 function Navbar(_ref) {
   var pageLoader = _ref.pageLoader;
-  // TODO Notification Drawer
+
   // TODO Logout
-  // TODO Share auth data from backend
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_13__["usePage"])(),
+      auth = _usePage.auth;
+
   Object(_Helpers_PageLoad__WEBPACK_IMPORTED_MODULE_12__["loadPage"])(pageLoader);
   react_use_lib_useEffectOnce__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     //*complete pageLoader loading
@@ -123,7 +128,7 @@ function Navbar(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_5___default.a, {
     title: "at-School",
     className: "site-page-header",
-    subTitle: "This is a subtitle",
+    subTitle: "".concat(auth.user.first_name, " ").concat(auth.user.last_name),
     tags: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_tag__WEBPACK_IMPORTED_MODULE_8___default.a, {
       color: "blue"
     }, "Running"),
