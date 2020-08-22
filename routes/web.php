@@ -25,8 +25,8 @@ Route::group(['middleware' => 'auth'], function () {
     //? Only Users with finished registration
     Route::group(['middleware' => 'freg'], function () {
         Route::get('home', 'PrivateController@home')->name('home');
+        Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish');
     });
-    Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish');
 });
 
 

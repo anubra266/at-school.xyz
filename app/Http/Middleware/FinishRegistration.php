@@ -16,6 +16,7 @@ class FinishRegistration
      */
     public function handle($request, Closure $next)
     {
+        $isNotRegisterRoute =  !($request->route()->uri === 'register/finish');
         //* get user
         $user = $request->user();
         //* get user roles
@@ -23,8 +24,9 @@ class FinishRegistration
         //* If user has roles, then registration was finished
         if (count($user_roles) > 0) {
             return $next($request);
-        } else {
+        } else if ($isNotRegisterRoute) {
             return redirect()->route('register.finish');
         }
+        return $next($request);
     }
 }
