@@ -6,9 +6,9 @@ import SiteLayout from "@/Pages/SiteLayout";
 
 const { Content } = Layout;
 
-export default () => {
+const Template = () => {
     return (
-        <SiteLayout title="Home">
+        <SiteLayout title="Template">
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
@@ -29,3 +29,4 @@ export default () => {
         </SiteLayout>
     );
 };
+export default Template;

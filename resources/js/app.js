@@ -2,7 +2,6 @@ import { InertiaApp } from "@inertiajs/inertia-react";
 import React from "react";
 import { render } from "react-dom";
 import CatchError from "@/Helpers/CatchError";
-
 const app = document.getElementById("app");
 
 render(

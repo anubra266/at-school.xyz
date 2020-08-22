@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[60],{
 
-/***/ "./resources/js/Pages/Home/index.js":
-/*!******************************************!*\
-  !*** ./resources/js/Pages/Home/index.js ***!
-  \******************************************/
+/***/ "./resources/js/Pages/Template.js":
+/*!****************************************!*\
+  !*** ./resources/js/Pages/Template.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -24,9 +24,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content;
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+
+var Template = function Template() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: "Home"
+    title: "Template"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
     style: {
       margin: "0 16px"
@@ -49,7 +50,9 @@ var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content;
       type: "primary"
     }, "Primary")]
   }))));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Template);
 
 /***/ })
 
