@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import {
+    PoweroffOutlined,
     DesktopOutlined,
     PieChartOutlined,
     FileOutlined,
     TeamOutlined,
     UserOutlined
 } from "@ant-design/icons";
+import { InertiaLink } from "@inertiajs/inertia-react";
+//  TODO Dynamic JSON Routing
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -16,7 +19,7 @@ function Sidebar() {
         setCollapsed(collapsed);
     };
     const handleClick = e => {
-        console.log("click ", e.key,e.keyPath);
+        console.log("click ", e.key, e.keyPath);
     };
     return (
         <React.Fragment>
@@ -50,6 +53,9 @@ function Sidebar() {
                         <Menu.Item key="6">Team 1</Menu.Item>
                         <Menu.Item key="8">Team 2</Menu.Item>
                     </SubMenu>
+                    <Menu.Item key="1" icon={<PoweroffOutlined />}>
+                        <InertiaLink href={route('logout')} method="POST">Logout</InertiaLink>
+                    </Menu.Item>
                 </Menu>
             </Sider>
         </React.Fragment>
