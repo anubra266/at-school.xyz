@@ -23,12 +23,17 @@ Auth::routes();
 
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {
+
     Route::get('home', 'PrivateController@home')->name('home');
 
-    Route::get('organization', 'OrganizationController@index')->name('organization.index');
-    Route::post('organization', 'OrganizationController@store')->name('organization.create');
-    Route::patch('organization/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
-    Route::patch('organization', 'OrganizationController@update')->name('organization.edit');
+    Route::group(['prefix' => 'organization', 'middleware' => []], function () {
+        Route::get('/', 'OrganizationController@index')->name('organization.index');
+        Route::post('/', 'OrganizationController@store')->name('organization.create');
+        Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
+        Route::patch('/', 'OrganizationController@update')->name('organization.edit');
+    });
+
+
 });
 
 

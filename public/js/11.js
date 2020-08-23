@@ -173,16 +173,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./resources/js/Pages/Dashboard/organization/Header.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/drawer */ "./node_modules/antd/lib/drawer/index.js");
-/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Pages/Dashboard/DashboardLayout */ "./resources/js/Pages/Dashboard/DashboardLayout.js");
-/* harmony import */ var _OrganizationForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./OrganizationForm */ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js");
-/* harmony import */ var _OrganizationsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./OrganizationsList */ "./resources/js/Pages/Dashboard/organization/OrganizationsList.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./resources/js/Pages/Dashboard/organization/Header.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/drawer */ "./node_modules/antd/lib/drawer/index.js");
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Dashboard/DashboardLayout */ "./resources/js/Pages/Dashboard/DashboardLayout.js");
+/* harmony import */ var _OrganizationForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./OrganizationForm */ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js");
+/* harmony import */ var _OrganizationsList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./OrganizationsList */ "./resources/js/Pages/Dashboard/organization/OrganizationsList.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -204,10 +202,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-var Organization = function Organization() {
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["usePage"])(),
-      organizations = _usePage.organizations;
+var Organization = function Organization(_ref) {
+  var organizations = _ref.organizations;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -243,24 +239,24 @@ var Organization = function Organization() {
     onFinish: onFinish,
     OrgForm: OrgForm
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Organizations"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default.a.Content, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Content, {
     style: {
       margin: "0 16px"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     showDrawer: showDrawer
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationsList__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationsList__WEBPACK_IMPORTED_MODULE_7__["default"], {
     organizations: organizations,
     showDrawer: showDrawer
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4___default.a, {
     title: "Create New Organization",
     placement: "right",
     closable: false,
     onClose: onClose,
     visible: visible
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationForm__WEBPACK_IMPORTED_MODULE_7__["default"], formProps))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationForm__WEBPACK_IMPORTED_MODULE_6__["default"], formProps))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Organization);

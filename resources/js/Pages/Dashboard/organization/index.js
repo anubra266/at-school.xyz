@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
-import { usePage } from "@inertiajs/inertia-react";
 import Header from "./Header";
 import Layout from "antd/lib/layout";
 import Drawer from "antd/lib/drawer";
@@ -8,8 +7,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import OrganizationForm from "./OrganizationForm";
 import OrganizationsList from "./OrganizationsList";
 
-const Organization = () => {
-    const { organizations } = usePage();
+const Organization = ({ organizations }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const OrgForm = useRef(null);

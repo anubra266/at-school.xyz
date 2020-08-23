@@ -1,42 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var ArrowLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 000 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z" } }] }, "name": "arrow-left", "theme": "outlined" };
-exports.default = ArrowLeftOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var ArrowRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" } }] }, "name": "arrow-right", "theme": "outlined" };
-exports.default = ArrowRightOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DownOutlined.js":
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DownOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -45,15 +11,15 @@ exports.default = ArrowRightOutlined;
 
 // This icon file is generated automatically.
 Object.defineProperty(exports, "__esModule", { value: true });
-var DownOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z" } }] }, "name": "down", "theme": "outlined" };
-exports.default = DownOutlined;
+var BankOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M894 462c30.9 0 43.8-39.7 18.7-58L530.8 126.2a31.81 31.81 0 00-37.6 0L111.3 404c-25.1 18.2-12.2 58 18.8 58H192v374h-72c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-52c0-4.4-3.6-8-8-8h-72V462h62zM512 196.7l271.1 197.2H240.9L512 196.7zM264 462h117v374H264V462zm189 0h117v374H453V462zm307 374H642V462h118v374z" } }] }, "name": "bank", "theme": "outlined" };
+exports.default = BankOutlined;
 
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/EllipsisOutlined.js":
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js":
 /*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/EllipsisOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -62,63 +28,15 @@ exports.default = DownOutlined;
 
 // This icon file is generated automatically.
 Object.defineProperty(exports, "__esModule", { value: true });
-var EllipsisOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z" } }] }, "name": "ellipsis", "theme": "outlined" };
-exports.default = EllipsisOutlined;
+var PieChartOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 00-282.8 117.1 398.19 398.19 0 00-85.7 127.1A397.61 397.61 0 0072 552a398.46 398.46 0 00117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 00472 952a398.46 398.46 0 00282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 00872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 01470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 00589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 01166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z" } }] }, "name": "pie-chart", "theme": "outlined" };
+exports.default = PieChartOutlined;
 
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/ArrowLeftOutlined.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/ArrowLeftOutlined.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _ArrowLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/ArrowLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _ArrowLeftOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/ArrowRightOutlined.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/ArrowRightOutlined.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _ArrowRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/ArrowRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _ArrowRightOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DownOutlined.js":
+/***/ "./node_modules/@ant-design/icons/BankOutlined.js":
 /*!********************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DownOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/BankOutlined.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -130,19 +48,19 @@ exports.default = EllipsisOutlined;
   });
   exports.default = void 0;
   
-  var _DownOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DownOutlined */ "./node_modules/@ant-design/icons/lib/icons/DownOutlined.js"));
+  var _BankOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/BankOutlined */ "./node_modules/@ant-design/icons/lib/icons/BankOutlined.js"));
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _DownOutlined;
+  var _default = _BankOutlined;
   exports.default = _default;
   module.exports = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/EllipsisOutlined.js":
+/***/ "./node_modules/@ant-design/icons/PieChartOutlined.js":
 /*!************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/EllipsisOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/PieChartOutlined.js ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -154,103 +72,19 @@ exports.default = EllipsisOutlined;
   });
   exports.default = void 0;
   
-  var _EllipsisOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/EllipsisOutlined */ "./node_modules/@ant-design/icons/lib/icons/EllipsisOutlined.js"));
+  var _PieChartOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/PieChartOutlined */ "./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js"));
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _EllipsisOutlined;
+  var _default = _PieChartOutlined;
   exports.default = _default;
   module.exports = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _ArrowLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/ArrowLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var ArrowLeftOutlined = function ArrowLeftOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _ArrowLeftOutlined.default
-  }));
-};
-
-ArrowLeftOutlined.displayName = 'ArrowLeftOutlined';
-
-var _default = React.forwardRef(ArrowLeftOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _ArrowRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/ArrowRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var ArrowRightOutlined = function ArrowRightOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _ArrowRightOutlined.default
-  }));
-};
-
-ArrowRightOutlined.displayName = 'ArrowRightOutlined';
-
-var _default = React.forwardRef(ArrowRightOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DownOutlined.js":
+/***/ "./node_modules/@ant-design/icons/lib/icons/BankOutlined.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DownOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/lib/icons/BankOutlined.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -269,30 +103,30 @@ exports.default = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _DownOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DownOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DownOutlined.js"));
+var _BankOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/BankOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js"));
 
 var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-var DownOutlined = function DownOutlined(props, ref) {
+var BankOutlined = function BankOutlined(props, ref) {
   return React.createElement(_AntdIcon.default, Object.assign({}, props, {
     ref: ref,
-    icon: _DownOutlined.default
+    icon: _BankOutlined.default
   }));
 };
 
-DownOutlined.displayName = 'DownOutlined';
+BankOutlined.displayName = 'BankOutlined';
 
-var _default = React.forwardRef(DownOutlined);
+var _default = React.forwardRef(BankOutlined);
 
 exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/lib/icons/EllipsisOutlined.js":
+/***/ "./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js":
 /*!**********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/EllipsisOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -311,277 +145,246 @@ exports.default = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _EllipsisOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/EllipsisOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/EllipsisOutlined.js"));
+var _PieChartOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/PieChartOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js"));
 
 var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-var EllipsisOutlined = function EllipsisOutlined(props, ref) {
+var PieChartOutlined = function PieChartOutlined(props, ref) {
   return React.createElement(_AntdIcon.default, Object.assign({}, props, {
     ref: ref,
-    icon: _EllipsisOutlined.default
+    icon: _PieChartOutlined.default
   }));
 };
 
-EllipsisOutlined.displayName = 'EllipsisOutlined';
+PieChartOutlined.displayName = 'PieChartOutlined';
 
-var _default = React.forwardRef(EllipsisOutlined);
+var _default = React.forwardRef(PieChartOutlined);
 
 exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/rc-dropdown/es/Dropdown.js":
-/*!*************************************************!*\
-  !*** ./node_modules/rc-dropdown/es/Dropdown.js ***!
-  \*************************************************/
+/***/ "./resources/js/Pages/Dashboard/DashboardLayout.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/DashboardLayout.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var rc_trigger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rc-trigger */ "./node_modules/rc-trigger/es/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _placements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./placements */ "./node_modules/rc-dropdown/es/placements.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Pages/SiteLayout */ "./resources/js/Pages/SiteLayout/index.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ "./resources/js/Pages/Dashboard/routes.js");
 
 
 
 
 
+var DashboardLayout = function DashboardLayout(_ref) {
+  var title = _ref.title,
+      children = _ref.children;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    routes: _routes__WEBPACK_IMPORTED_MODULE_4__["default"],
+    title: title
+  }, children);
+};
 
-
-
-function Dropdown(props, ref) {
-  var _props$arrow = props.arrow,
-      arrow = _props$arrow === void 0 ? false : _props$arrow,
-      _props$prefixCls = props.prefixCls,
-      prefixCls = _props$prefixCls === void 0 ? 'rc-dropdown' : _props$prefixCls,
-      transitionName = props.transitionName,
-      animation = props.animation,
-      align = props.align,
-      _props$placement = props.placement,
-      placement = _props$placement === void 0 ? 'bottomLeft' : _props$placement,
-      _props$placements = props.placements,
-      placements = _props$placements === void 0 ? _placements__WEBPACK_IMPORTED_MODULE_6__["default"] : _props$placements,
-      getPopupContainer = props.getPopupContainer,
-      showAction = props.showAction,
-      hideAction = props.hideAction,
-      overlayClassName = props.overlayClassName,
-      overlayStyle = props.overlayStyle,
-      visible = props.visible,
-      _props$trigger = props.trigger,
-      trigger = _props$trigger === void 0 ? ['hover'] : _props$trigger,
-      otherProps = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["arrow", "prefixCls", "transitionName", "animation", "align", "placement", "placements", "getPopupContainer", "showAction", "hideAction", "overlayClassName", "overlayStyle", "visible", "trigger"]);
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_3__["useState"](),
-      _React$useState2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
-      triggerVisible = _React$useState2[0],
-      setTriggerVisible = _React$useState2[1];
-
-  var mergedVisible = 'visible' in props ? visible : triggerVisible;
-  var triggerRef = react__WEBPACK_IMPORTED_MODULE_3__["useRef"](null);
-  react__WEBPACK_IMPORTED_MODULE_3__["useImperativeHandle"](ref, function () {
-    return triggerRef.current;
-  });
-
-  var getOverlayElement = function getOverlayElement() {
-    var overlay = props.overlay;
-    var overlayElement;
-
-    if (typeof overlay === 'function') {
-      overlayElement = overlay();
-    } else {
-      overlayElement = overlay;
-    }
-
-    return overlayElement;
-  };
-
-  var onClick = function onClick(e) {
-    var onOverlayClick = props.onOverlayClick;
-    var overlayProps = getOverlayElement().props;
-    setTriggerVisible(false);
-
-    if (onOverlayClick) {
-      onOverlayClick(e);
-    }
-
-    if (overlayProps.onClick) {
-      overlayProps.onClick(e);
-    }
-  };
-
-  var onVisibleChange = function onVisibleChange(visible) {
-    var onVisibleChange = props.onVisibleChange;
-    setTriggerVisible(visible);
-
-    if (typeof onVisibleChange === 'function') {
-      onVisibleChange(visible);
-    }
-  };
-
-  var getMenuElement = function getMenuElement() {
-    var overlayElement = getOverlayElement();
-    var extraOverlayProps = {
-      prefixCls: "".concat(prefixCls, "-menu"),
-      onClick: onClick
-    };
-
-    if (typeof overlayElement.type === 'string') {
-      delete extraOverlayProps.prefixCls;
-    }
-
-    return react__WEBPACK_IMPORTED_MODULE_3__["createElement"](react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null, arrow && react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", {
-      className: "".concat(prefixCls, "-arrow")
-    }), react__WEBPACK_IMPORTED_MODULE_3__["cloneElement"](overlayElement, extraOverlayProps));
-  };
-
-  var getMenuElementOrLambda = function getMenuElementOrLambda() {
-    var overlay = props.overlay;
-
-    if (typeof overlay === 'function') {
-      return getMenuElement;
-    }
-
-    return getMenuElement();
-  };
-
-  var getMinOverlayWidthMatchTrigger = function getMinOverlayWidthMatchTrigger() {
-    var minOverlayWidthMatchTrigger = props.minOverlayWidthMatchTrigger,
-        alignPoint = props.alignPoint;
-
-    if ('minOverlayWidthMatchTrigger' in props) {
-      return minOverlayWidthMatchTrigger;
-    }
-
-    return !alignPoint;
-  };
-
-  var getOpenClassName = function getOpenClassName() {
-    var openClassName = props.openClassName;
-
-    if (openClassName !== undefined) {
-      return openClassName;
-    }
-
-    return "".concat(prefixCls, "-open");
-  };
-
-  var renderChildren = function renderChildren() {
-    var children = props.children;
-    var childrenProps = children.props ? children.props : {};
-    var childClassName = classnames__WEBPACK_IMPORTED_MODULE_5___default()(childrenProps.className, getOpenClassName());
-    return triggerVisible && children ? react__WEBPACK_IMPORTED_MODULE_3__["cloneElement"](children, {
-      className: childClassName
-    }) : children;
-  };
-
-  var triggerHideAction = hideAction;
-
-  if (!triggerHideAction && trigger.indexOf('contextMenu') !== -1) {
-    triggerHideAction = ['click'];
-  }
-
-  return react__WEBPACK_IMPORTED_MODULE_3__["createElement"](rc_trigger__WEBPACK_IMPORTED_MODULE_4__["default"], Object.assign({}, otherProps, {
-    prefixCls: prefixCls,
-    ref: triggerRef,
-    popupClassName: classnames__WEBPACK_IMPORTED_MODULE_5___default()(overlayClassName, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, "".concat(prefixCls, "-show-arrow"), arrow)),
-    popupStyle: overlayStyle,
-    builtinPlacements: placements,
-    action: trigger,
-    showAction: showAction,
-    hideAction: triggerHideAction || [],
-    popupPlacement: placement,
-    popupAlign: align,
-    popupTransitionName: transitionName,
-    popupAnimation: animation,
-    popupVisible: mergedVisible,
-    stretch: getMinOverlayWidthMatchTrigger() ? 'minWidth' : '',
-    popup: getMenuElementOrLambda(),
-    onPopupVisibleChange: onVisibleChange,
-    getPopupContainer: getPopupContainer
-  }), renderChildren());
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"](Dropdown));
+/* harmony default export */ __webpack_exports__["default"] = (DashboardLayout);
 
 /***/ }),
 
-/***/ "./node_modules/rc-dropdown/es/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/rc-dropdown/es/index.js ***!
-  \**********************************************/
+/***/ "./resources/js/Pages/Dashboard/organization/Header.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/organization/Header.js ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/rc-dropdown/es/Dropdown.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/page-header */ "./node_modules/antd/lib/page-header/index.js");
+/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_2__);
 
-/* harmony default export */ __webpack_exports__["default"] = (_Dropdown__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+var Header = function Header(_ref) {
+  var showDrawer = _ref.showDrawer;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "site-page-header-ghost-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    ghost: false,
+    onBack: function onBack() {
+      return window.history.back();
+    },
+    title: "Organizations",
+    subTitle: "Organizations you created",
+    extra: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      key: "title-export"
+    }, "Export List"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      onClick: showDrawer,
+      key: "title-create",
+      type: "primary"
+    }, "Create")]
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
-/***/ "./node_modules/rc-dropdown/es/placements.js":
-/*!***************************************************!*\
-  !*** ./node_modules/rc-dropdown/es/placements.js ***!
-  \***************************************************/
+/***/ "./resources/js/Pages/Dashboard/organization/index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/organization/index.js ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var autoAdjustOverflow = {
-  adjustX: 1,
-  adjustY: 1
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./resources/js/Pages/Dashboard/organization/Header.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/drawer */ "./node_modules/antd/lib/drawer/index.js");
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Dashboard/DashboardLayout */ "./resources/js/Pages/Dashboard/DashboardLayout.js");
+/* harmony import */ var _OrganizationForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./OrganizationForm */ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js");
+/* harmony import */ var _OrganizationsList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./OrganizationsList */ "./resources/js/Pages/Dashboard/organization/OrganizationsList.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+var Organization = function Organization(_ref) {
+  var organizations = _ref.organizations;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      visible = _useState2[0],
+      setVisible = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      loading = _useState4[0],
+      setLoading = _useState4[1];
+
+  var OrgForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var showDrawer = function showDrawer() {
+    setVisible(true);
+  };
+
+  var onClose = function onClose() {
+    setVisible(false);
+  };
+
+  var onFinish = function onFinish(data) {
+    setLoading(true);
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].post(route("organization.create"), data).then(function (res) {
+      setLoading(false);
+      OrgForm.current.resetFields();
+      setVisible(false);
+    });
+  };
+
+  var formProps = {
+    loading: loading,
+    onFinish: onFinish,
+    OrgForm: OrgForm
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    title: "Organizations"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Content, {
+    style: {
+      margin: "0 16px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    showDrawer: showDrawer
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationsList__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    organizations: organizations,
+    showDrawer: showDrawer
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    title: "Create New Organization",
+    placement: "right",
+    closable: false,
+    onClose: onClose,
+    visible: visible
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationForm__WEBPACK_IMPORTED_MODULE_6__["default"], formProps))));
 };
-var targetOffset = [0, 0];
-var placements = {
-  topLeft: {
-    points: ['bl', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  topCenter: {
-    points: ['bc', 'tc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  topRight: {
-    points: ['br', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  bottomLeft: {
-    points: ['tl', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  bottomCenter: {
-    points: ['tc', 'bc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  bottomRight: {
-    points: ['tr', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (placements);
+
+/* harmony default export */ __webpack_exports__["default"] = (Organization);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Dashboard/routes.js":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/routes.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/icons/PieChartOutlined */ "./node_modules/@ant-design/icons/PieChartOutlined.js");
+/* harmony import */ var _ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ant-design/icons/BankOutlined */ "./node_modules/@ant-design/icons/BankOutlined.js");
+/* harmony import */ var _ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  name: "Dashboard",
+  route: "home",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1___default.a, null)
+}, {
+  name: "Organizations",
+  route: "organization",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+}, {
+  name: "has Keys",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null),
+  items: [{
+    name: "Key1",
+    route: "home",
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+  }, {
+    name: "Key2",
+    route: "home",
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+  }]
+}]);
 
 /***/ })
 

@@ -4,6 +4,7 @@ import { returnRoute } from "@/Helpers/PresentRoute";
 
 import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
+import message from "antd/lib/message";
 import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
 import DesktopOutlined from "@ant-design/icons/DesktopOutlined";
 import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
@@ -80,9 +81,15 @@ function Sidebar({ routes }) {
                             </Menu.Item>
                         );
                     })}
-                    <Menu.Item key="logout" icon={<PoweroffOutlined />}>
+                    <Menu.Item
+                        key="logout"
+                        icon={<PoweroffOutlined />}
+                        onClick={() => {
+                            message.loading("Logging you out...");
+                        }}
+                    >
                         <InertiaLink href={route("logout")} method="POST">
-                            Logout
+                            <span>Logout</span>
                         </InertiaLink>
                     </Menu.Item>
                 </Menu>
