@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('organization', 'OrganizationController@index')->name('organization.index');
     Route::post('organization', 'OrganizationController@store')->name('organization.create');
+    Route::patch('organization/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
+    Route::patch('organization', 'OrganizationController@update')->name('organization.edit');
 });
 
 

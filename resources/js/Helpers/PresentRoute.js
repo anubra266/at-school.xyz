@@ -13,7 +13,7 @@ export function returnRoute(routes) {
         return proutes;
     }, []);
     var presentmenu;
-    var dpresentroute = presentRoute[0].split("-")[1];
+    var dpresentroute = presentRoute[0] && presentRoute[0].split("-")[1];
     routes.forEach(route => {
         route.items &&
             route.items.forEach(item => {

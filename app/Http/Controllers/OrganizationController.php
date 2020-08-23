@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\OrganizationRequest;
+use App\Organization;
 use App\Services\OrganizationService;
 use Inertia\Inertia;
 
@@ -14,14 +15,26 @@ class OrganizationController extends Controller
         $this->organizationService = $organizationService;
     }
 
-    public function store(OrganizationRequest $request)
-    {
-        $organization = $this->organizationService->store($request);
-        return redirect()->back()->with('success', $organization['name'] . " Organization saved successfully");
-    }
 
     public function index()
     {
-        return Inertia::render('Dashboard/organization');
+        $organizations = $this->organizationService->index();
+        return Inertia::render('Dashboard/organization/', ['organizations' => $organizations]);
+    }
+    public function store(OrganizationRequest $request)
+    {
+        $this->organizationService->store($request);
+        return redirect()->back()->with('success', " Organization saved successfully");
+    }
+    public function update(OrganizationRequest $request)
+    {
+        $this->organizationService->update($request);
+        return redirect()->back()->with('success', " Organization updated successfully");
+    }
+
+    public function ChangeCode(Organization $organization)
+    {
+        $this->organizationService->ChangeCode($organization);
+        return redirect()->back()->with('success', " Organization code generated successfully");
     }
 }

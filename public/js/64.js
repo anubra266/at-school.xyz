@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[64],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11,354 +11,45 @@
 
 // This icon file is generated automatically.
 Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M272.9 512l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L186.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H532c6.7 0 10.4-7.7 6.3-12.9L272.9 512zm304 0l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L490.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H836c6.7 0 10.4-7.7 6.3-12.9L576.9 512z" } }] }, "name": "double-left", "theme": "outlined" };
-exports.default = DoubleLeftOutlined;
+var BankOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M894 462c30.9 0 43.8-39.7 18.7-58L530.8 126.2a31.81 31.81 0 00-37.6 0L111.3 404c-25.1 18.2-12.2 58 18.8 58H192v374h-72c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-52c0-4.4-3.6-8-8-8h-72V462h62zM512 196.7l271.1 197.2H240.9L512 196.7zM264 462h117v374H264V462zm189 0h117v374H453V462zm307 374H642V462h118v374z" } }] }, "name": "bank", "theme": "outlined" };
+exports.default = BankOutlined;
 
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M533.2 492.3L277.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H188c-6.7 0-10.4 7.7-6.3 12.9L447.1 512 181.7 851.1A7.98 7.98 0 00188 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5zm304 0L581.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H492c-6.7 0-10.4 7.7-6.3 12.9L751.1 512 485.7 851.1A7.98 7.98 0 00492 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5z" } }] }, "name": "double-right", "theme": "outlined" };
-exports.default = DoubleRightOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleLeftOutlined.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleLeftOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleRightOutlined.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleRightOutlined.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleRightOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleLeftOutlined = function DoubleLeftOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleLeftOutlined.default
-  }));
-};
-
-DoubleLeftOutlined.displayName = 'DoubleLeftOutlined';
-
-var _default = React.forwardRef(DoubleLeftOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleRightOutlined = function DoubleRightOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleRightOutlined.default
-  }));
-};
-
-DoubleRightOutlined.displayName = 'DoubleRightOutlined';
-
-var _default = React.forwardRef(DoubleRightOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/select/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/select/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _rcSelect = _interopRequireWildcard(__webpack_require__(/*! rc-select */ "./node_modules/rc-select/es/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _iconUtil = _interopRequireDefault(__webpack_require__(/*! ./utils/iconUtil */ "./node_modules/antd/lib/select/utils/iconUtil.js"));
-
-var _SizeContext = _interopRequireDefault(__webpack_require__(/*! ../config-provider/SizeContext */ "./node_modules/antd/lib/config-provider/SizeContext.js"));
-
-// TODO: 4.0 - codemod should help to change `filterOption` to support node props.
-// We still use class here since `forwardRef` not support generic in typescript
-var Select = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(Select, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(Select);
-
-  function Select() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, Select);
-    _this = _super.apply(this, arguments);
-    _this.selectRef = /*#__PURE__*/React.createRef();
-
-    _this.focus = function () {
-      if (_this.selectRef.current) {
-        _this.selectRef.current.focus();
-      }
-    };
-
-    _this.blur = function () {
-      if (_this.selectRef.current) {
-        _this.selectRef.current.blur();
-      }
-    };
-
-    _this.getMode = function () {
-      var mode = _this.props.mode;
-
-      if (mode === 'combobox') {
-        return undefined;
-      }
-
-      if (mode === Select.SECRET_COMBOBOX_MODE_DO_NOT_USE) {
-        return 'combobox';
-      }
-
-      return mode;
-    };
-
-    _this.renderSelect = function (_ref) {
-      var getContextPopupContainer = _ref.getPopupContainer,
-          getPrefixCls = _ref.getPrefixCls,
-          renderEmpty = _ref.renderEmpty,
-          direction = _ref.direction,
-          virtual = _ref.virtual,
-          dropdownMatchSelectWidth = _ref.dropdownMatchSelectWidth;
-      var _this$props = _this.props,
-          customizePrefixCls = _this$props.prefixCls,
-          notFoundContent = _this$props.notFoundContent,
-          className = _this$props.className,
-          customizeSize = _this$props.size,
-          _this$props$listHeigh = _this$props.listHeight,
-          listHeight = _this$props$listHeigh === void 0 ? 256 : _this$props$listHeigh,
-          _this$props$listItemH = _this$props.listItemHeight,
-          listItemHeight = _this$props$listItemH === void 0 ? 24 : _this$props$listItemH,
-          getPopupContainer = _this$props.getPopupContainer,
-          dropdownClassName = _this$props.dropdownClassName,
-          bordered = _this$props.bordered;
-      var prefixCls = getPrefixCls('select', customizePrefixCls);
-
-      var mode = _this.getMode();
-
-      var isMultiple = mode === 'multiple' || mode === 'tags'; // ===================== Empty =====================
-
-      var mergedNotFound;
-
-      if (notFoundContent !== undefined) {
-        mergedNotFound = notFoundContent;
-      } else if (mode === 'combobox') {
-        mergedNotFound = null;
-      } else {
-        mergedNotFound = renderEmpty('Select');
-      } // ===================== Icons =====================
-
-
-      var _getIcons = (0, _iconUtil["default"])((0, _extends2["default"])((0, _extends2["default"])({}, _this.props), {
-        multiple: isMultiple,
-        prefixCls: prefixCls
-      })),
-          suffixIcon = _getIcons.suffixIcon,
-          itemIcon = _getIcons.itemIcon,
-          removeIcon = _getIcons.removeIcon,
-          clearIcon = _getIcons.clearIcon;
-
-      var selectProps = (0, _omit["default"])(_this.props, ['prefixCls', 'suffixIcon', 'itemIcon', 'removeIcon', 'clearIcon', 'size', 'bordered']);
-      var rcSelectRtlDropDownClassName = (0, _classnames["default"])(dropdownClassName, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-dropdown-").concat(direction), direction === 'rtl'));
-      return /*#__PURE__*/React.createElement(_SizeContext["default"].Consumer, null, function (size) {
-        var _classNames2;
-
-        var mergedSize = customizeSize || size;
-        var mergedClassName = (0, _classnames["default"])(className, (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-lg"), mergedSize === 'large'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-sm"), mergedSize === 'small'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-borderless"), !bordered), _classNames2));
-        return /*#__PURE__*/React.createElement(_rcSelect["default"], (0, _extends2["default"])({
-          ref: _this.selectRef,
-          virtual: virtual,
-          dropdownMatchSelectWidth: dropdownMatchSelectWidth
-        }, selectProps, {
-          listHeight: listHeight,
-          listItemHeight: listItemHeight,
-          mode: mode,
-          prefixCls: prefixCls,
-          direction: direction,
-          inputIcon: suffixIcon,
-          menuItemSelectedIcon: itemIcon,
-          removeIcon: removeIcon,
-          clearIcon: clearIcon,
-          notFoundContent: mergedNotFound,
-          className: mergedClassName,
-          getPopupContainer: getPopupContainer || getContextPopupContainer,
-          dropdownClassName: rcSelectRtlDropDownClassName
-        }));
-      });
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(Select, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderSelect);
-    }
-  }]);
-  return Select;
-}(React.Component);
-
-Select.Option = _rcSelect.Option;
-Select.OptGroup = _rcSelect.OptGroup;
-Select.SECRET_COMBOBOX_MODE_DO_NOT_USE = 'SECRET_COMBOBOX_MODE_DO_NOT_USE';
-Select.defaultProps = {
-  transitionName: 'slide-up',
-  choiceTransitionName: '',
-  bordered: true
-};
-var _default = Select;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/select/utils/iconUtil.js":
+/***/ "./node_modules/@ant-design/icons/BankOutlined.js":
 /*!********************************************************!*\
-  !*** ./node_modules/antd/lib/select/utils/iconUtil.js ***!
+  !*** ./node_modules/@ant-design/icons/BankOutlined.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _BankOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/BankOutlined */ "./node_modules/@ant-design/icons/lib/icons/BankOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _BankOutlined;
+  exports.default = _default;
+  module.exports = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/lib/icons/BankOutlined.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/lib/icons/BankOutlined.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
@@ -367,118 +58,103 @@ var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/int
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = getIcons;
+exports.default = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _DownOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/DownOutlined */ "./node_modules/@ant-design/icons/DownOutlined.js"));
+var _BankOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/BankOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/BankOutlined.js"));
 
-var _LoadingOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LoadingOutlined */ "./node_modules/@ant-design/icons/LoadingOutlined.js"));
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
 
-var _CheckOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CheckOutlined */ "./node_modules/@ant-design/icons/CheckOutlined.js"));
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var BankOutlined = function BankOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _BankOutlined.default
+  }));
+};
 
-var _CloseOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CloseOutlined */ "./node_modules/@ant-design/icons/CloseOutlined.js"));
+BankOutlined.displayName = 'BankOutlined';
 
-var _CloseCircleFilled = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CloseCircleFilled */ "./node_modules/@ant-design/icons/CloseCircleFilled.js"));
+var _default = React.forwardRef(BankOutlined);
 
-var _SearchOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/SearchOutlined */ "./node_modules/@ant-design/icons/SearchOutlined.js"));
-
-function getIcons(_ref) {
-  var suffixIcon = _ref.suffixIcon,
-      clearIcon = _ref.clearIcon,
-      menuItemSelectedIcon = _ref.menuItemSelectedIcon,
-      removeIcon = _ref.removeIcon,
-      loading = _ref.loading,
-      multiple = _ref.multiple,
-      prefixCls = _ref.prefixCls;
-  // Clear Icon
-  var mergedClearIcon = clearIcon;
-
-  if (!clearIcon) {
-    mergedClearIcon = /*#__PURE__*/React.createElement(_CloseCircleFilled["default"], null);
-  } // Arrow item icon
-
-
-  var mergedSuffixIcon = null;
-
-  if (suffixIcon !== undefined) {
-    mergedSuffixIcon = suffixIcon;
-  } else if (loading) {
-    mergedSuffixIcon = /*#__PURE__*/React.createElement(_LoadingOutlined["default"], {
-      spin: true
-    });
-  } else {
-    var iconCls = "".concat(prefixCls, "-suffix");
-
-    mergedSuffixIcon = function mergedSuffixIcon(_ref2) {
-      var open = _ref2.open,
-          showSearch = _ref2.showSearch;
-
-      if (open && showSearch) {
-        return /*#__PURE__*/React.createElement(_SearchOutlined["default"], {
-          className: iconCls
-        });
-      }
-
-      return /*#__PURE__*/React.createElement(_DownOutlined["default"], {
-        className: iconCls
-      });
-    };
-  } // Checked item icon
-
-
-  var mergedItemIcon = null;
-
-  if (menuItemSelectedIcon !== undefined) {
-    mergedItemIcon = menuItemSelectedIcon;
-  } else if (multiple) {
-    mergedItemIcon = /*#__PURE__*/React.createElement(_CheckOutlined["default"], null);
-  } else {
-    mergedItemIcon = null;
-  }
-
-  var mergedRemoveIcon = null;
-
-  if (removeIcon !== undefined) {
-    mergedRemoveIcon = removeIcon;
-  } else {
-    mergedRemoveIcon = /*#__PURE__*/React.createElement(_CloseOutlined["default"], null);
-  }
-
-  return {
-    clearIcon: mergedClearIcon,
-    suffixIcon: mergedSuffixIcon,
-    itemIcon: mergedItemIcon,
-    removeIcon: mergedRemoveIcon
-  };
-}
+exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./resources/js/Pages/Dashboard/DashboardLayout.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/DashboardLayout.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Pages/SiteLayout */ "./resources/js/Pages/SiteLayout/index.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ "./resources/js/Pages/Dashboard/routes.js");
 
-    return url
-}
 
+
+
+
+var DashboardLayout = function DashboardLayout(_ref) {
+  var title = _ref.title,
+      children = _ref.children;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    routes: _routes__WEBPACK_IMPORTED_MODULE_4__["default"],
+    title: title
+  }, children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DashboardLayout);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Dashboard/routes.js":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/routes.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/icons/PieChartOutlined */ "./node_modules/@ant-design/icons/PieChartOutlined.js");
+/* harmony import */ var _ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ant-design/icons/BankOutlined */ "./node_modules/@ant-design/icons/BankOutlined.js");
+/* harmony import */ var _ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  name: "Dashboard",
+  route: "home",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1___default.a, null)
+}, {
+  name: "Organizations",
+  route: "organization",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+}, {
+  name: "has Keys",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null),
+  items: [{
+    name: "Key1",
+    route: "home",
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+  }, {
+    name: "Key2",
+    route: "home",
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
+  }]
+}]);
 
 /***/ })
 

@@ -1,1698 +1,571 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[30],{
 
-/***/ "./node_modules/antd/lib/_util/colors.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/_util/colors.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PresetColorTypes = exports.PresetStatusColorTypes = void 0;
-
-var _type = __webpack_require__(/*! ./type */ "./node_modules/antd/lib/_util/type.js");
-
-var PresetStatusColorTypes = (0, _type.tuple)('success', 'processing', 'error', 'default', 'warning'); // eslint-disable-next-line import/prefer-default-export
-
-exports.PresetStatusColorTypes = PresetStatusColorTypes;
-var PresetColorTypes = (0, _type.tuple)('pink', 'red', 'yellow', 'orange', 'cyan', 'green', 'blue', 'purple', 'geekblue', 'magenta', 'volcano', 'gold', 'lime');
-exports.PresetColorTypes = PresetColorTypes;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/_util/isNumeric.js":
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
 /*!**************************************************!*\
-  !*** ./node_modules/antd/lib/_util/isNumeric.js ***!
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var isNumeric = function isNumeric(value) {
-  return !isNaN(parseFloat(value)) && isFinite(value);
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
 };
 
-var _default = isNumeric;
-exports["default"] = _default;
 
-/***/ }),
-
-/***/ "./node_modules/antd/lib/_util/motion.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/_util/motion.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-// ================== Collapse Motion ==================
-var getCollapsedHeight = function getCollapsedHeight() {
-  return {
-    height: 0,
-    opacity: 0
-  };
-};
-
-var getRealHeight = function getRealHeight(node) {
-  return {
-    height: node.scrollHeight,
-    opacity: 1
-  };
-};
-
-var getCurrentHeight = function getCurrentHeight(node) {
-  return {
-    height: node.offsetHeight
-  };
-};
-
-var skipOpacityTransition = function skipOpacityTransition(_, event) {
-  return event.propertyName === 'height';
-};
-
-var collapseMotion = {
-  motionName: 'ant-motion-collapse',
-  onAppearStart: getCollapsedHeight,
-  onEnterStart: getCollapsedHeight,
-  onAppearActive: getRealHeight,
-  onEnterActive: getRealHeight,
-  onLeaveStart: getCurrentHeight,
-  onLeaveActive: getCollapsedHeight,
-  onAppearEnd: skipOpacityTransition,
-  onEnterEnd: skipOpacityTransition,
-  onLeaveEnd: skipOpacityTransition,
-  motionDeadline: 500
-};
-var _default = collapseMotion;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/_util/reactNode.js":
-/*!**************************************************!*\
-  !*** ./node_modules/antd/lib/_util/reactNode.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.replaceElement = replaceElement;
-exports.cloneElement = cloneElement;
-exports.isValidElement = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var isValidElement = React.isValidElement;
-exports.isValidElement = isValidElement;
-
-function replaceElement(element, replacement, props) {
-  if (!isValidElement(element)) return replacement;
-  return /*#__PURE__*/React.cloneElement(element, typeof props === 'function' ? props() : props);
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
 }
-
-function cloneElement(element, props) {
-  return replaceElement(element, element, props);
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
 }
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/_util/type.js":
-/*!*********************************************!*\
-  !*** ./node_modules/antd/lib/_util/type.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/organization/OrganizationForm.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.tupleNum = exports.tuple = void 0;
 
-// https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
-var tuple = function tuple() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
 
-  return args;
+
+
+var OrganizationForm = function OrganizationForm(_ref) {
+  var loading = _ref.loading,
+      onFinish = _ref.onFinish,
+      OrgForm = _ref.OrgForm,
+      edit = _ref.edit;
+
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["usePage"])(),
+      errors = _usePage.errors;
+
+  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_3__["Form"].useForm(),
+      _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
+      form = _Form$useForm2[0];
+
+  edit && form.setFieldsValue({
+    name: edit.name,
+    address: edit.address,
+    id: edit.id
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"], {
+    ref: OrgForm,
+    name: "normal_login",
+    className: "login-form",
+    onFinish: onFinish,
+    form: form
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"].Item, {
+    name: "name",
+    rules: [{
+      required: true,
+      message: "Please input Organization Name!"
+    }],
+    validateStatus: errors.name && "error",
+    help: errors.name && errors.name[0]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], {
+    placeholder: "Organization Name"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"].Item, {
+    name: "address",
+    rules: [{
+      required: true,
+      message: "Please input Address!"
+    }],
+    validateStatus: errors.address && "error",
+    help: errors.address && errors.address[0]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"].TextArea, {
+    allowClear: true,
+    rows: 3,
+    placeholder: "Organization Address"
+  })), edit && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"].Item, {
+    name: "id",
+    hidden: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    type: "primary",
+    htmlType: "submit",
+    className: "login-form-button",
+    loading: loading
+  }, "Save")));
 };
 
-exports.tuple = tuple;
-
-var tupleNum = function tupleNum() {
-  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    args[_key2] = arguments[_key2];
-  }
-
-  return args;
-};
-
-exports.tupleNum = tupleNum;
+/* harmony default export */ __webpack_exports__["default"] = (OrganizationForm);
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/layout/Sider.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/layout/Sider.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/js/Pages/Dashboard/organization/OrganizationsList.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/organization/OrganizationsList.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/table */ "./node_modules/antd/lib/table/index.js");
+/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/popover */ "./node_modules/antd/lib/popover/index.js");
+/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popover__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/popconfirm */ "./node_modules/antd/lib/popconfirm/index.js");
+/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/lib/space */ "./node_modules/antd/lib/space/index.js");
+/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_space__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var antd_lib_alert__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/alert */ "./node_modules/antd/lib/alert/index.js");
+/* harmony import */ var antd_lib_alert__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_alert__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var antd_lib_empty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd/lib/empty */ "./node_modules/antd/lib/empty/index.js");
+/* harmony import */ var antd_lib_empty__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(antd_lib_empty__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _OrganizationForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./OrganizationForm */ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = exports.SiderContext = void 0;
 
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
 
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
 
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
 
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
 
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
 
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
 
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+var OrganizationsList = function OrganizationsList(_ref) {
+  var organizations = _ref.organizations,
+      showDrawer = _ref.showDrawer;
 
-var _BarsOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/BarsOutlined */ "./node_modules/@ant-design/icons/BarsOutlined.js"));
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["usePage"])(),
+      flash = _usePage.flash;
 
-var _RightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/RightOutlined */ "./node_modules/@ant-design/icons/RightOutlined.js"));
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
 
-var _LeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LeftOutlined */ "./node_modules/@ant-design/icons/LeftOutlined.js"));
+  var OrgForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
-var _layout = __webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _isNumeric = _interopRequireDefault(__webpack_require__(/*! ../_util/isNumeric */ "./node_modules/antd/lib/_util/isNumeric.js"));
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var dimensionMaxMap = {
-  xs: '479.98px',
-  sm: '575.98px',
-  md: '767.98px',
-  lg: '991.98px',
-  xl: '1199.98px',
-  xxl: '1599.98px'
-};
-var SiderContext = /*#__PURE__*/React.createContext({});
-exports.SiderContext = SiderContext;
-
-var generateId = function () {
-  var i = 0;
-  return function () {
-    var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    i += 1;
-    return "".concat(prefix).concat(i);
+  var onFinish = function onFinish(data) {
+    setLoading(true);
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("organization.edit"), data).then(function (res) {
+      setLoading(false);
+    });
   };
-}();
 
-var InternalSider = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(InternalSider, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(InternalSider);
-
-  function InternalSider(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, InternalSider);
-    _this = _super.call(this, props);
-
-    _this.responsiveHandler = function (mql) {
-      _this.setState({
-        below: mql.matches
-      });
-
-      var onBreakpoint = _this.props.onBreakpoint;
-
-      if (onBreakpoint) {
-        onBreakpoint(mql.matches);
-      }
-
-      if (_this.state.collapsed !== mql.matches) {
-        _this.setCollapsed(mql.matches, 'responsive');
-      }
-    };
-
-    _this.setCollapsed = function (collapsed, type) {
-      if (!('collapsed' in _this.props)) {
-        _this.setState({
-          collapsed: collapsed
-        });
-      }
-
-      var onCollapse = _this.props.onCollapse;
-
-      if (onCollapse) {
-        onCollapse(collapsed, type);
-      }
-    };
-
-    _this.toggle = function () {
-      var collapsed = !_this.state.collapsed;
-
-      _this.setCollapsed(collapsed, 'clickTrigger');
-    };
-
-    _this.renderSider = function (_ref) {
-      var _classNames;
-
-      var getPrefixCls = _ref.getPrefixCls;
-
-      var _a = _this.props,
-          customizePrefixCls = _a.prefixCls,
-          className = _a.className,
-          theme = _a.theme,
-          collapsible = _a.collapsible,
-          reverseArrow = _a.reverseArrow,
-          trigger = _a.trigger,
-          style = _a.style,
-          width = _a.width,
-          collapsedWidth = _a.collapsedWidth,
-          zeroWidthTriggerStyle = _a.zeroWidthTriggerStyle,
-          children = _a.children,
-          others = __rest(_a, ["prefixCls", "className", "theme", "collapsible", "reverseArrow", "trigger", "style", "width", "collapsedWidth", "zeroWidthTriggerStyle", "children"]);
-
-      var _this$state = _this.state,
-          collapsed = _this$state.collapsed,
-          below = _this$state.below;
-      var prefixCls = getPrefixCls('layout-sider', customizePrefixCls);
-      var divProps = (0, _omit["default"])(others, ['collapsed', 'defaultCollapsed', 'onCollapse', 'breakpoint', 'onBreakpoint', 'siderHook', 'zeroWidthTriggerStyle']);
-      var rawWidth = collapsed ? collapsedWidth : width; // use "px" as fallback unit for width
-
-      var siderWidth = (0, _isNumeric["default"])(rawWidth) ? "".concat(rawWidth, "px") : String(rawWidth); // special trigger when collapsedWidth == 0
-
-      var zeroWidthTrigger = parseFloat(String(collapsedWidth || 0)) === 0 ? /*#__PURE__*/React.createElement("span", {
-        onClick: _this.toggle,
-        className: (0, _classnames["default"])("".concat(prefixCls, "-zero-width-trigger"), "".concat(prefixCls, "-zero-width-trigger-").concat(reverseArrow ? 'right' : 'left')),
-        style: zeroWidthTriggerStyle
-      }, trigger || /*#__PURE__*/React.createElement(_BarsOutlined["default"], null)) : null;
-      var iconObj = {
-        expanded: reverseArrow ? /*#__PURE__*/React.createElement(_RightOutlined["default"], null) : /*#__PURE__*/React.createElement(_LeftOutlined["default"], null),
-        collapsed: reverseArrow ? /*#__PURE__*/React.createElement(_LeftOutlined["default"], null) : /*#__PURE__*/React.createElement(_RightOutlined["default"], null)
-      };
-      var status = collapsed ? 'collapsed' : 'expanded';
-      var defaultTrigger = iconObj[status];
-      var triggerDom = trigger !== null ? zeroWidthTrigger || /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-trigger"),
-        onClick: _this.toggle,
-        style: {
-          width: siderWidth
-        }
-      }, trigger || defaultTrigger) : null;
-      var divStyle = (0, _extends2["default"])((0, _extends2["default"])({}, style), {
-        flex: "0 0 ".concat(siderWidth),
-        maxWidth: siderWidth,
-        minWidth: siderWidth,
-        width: siderWidth
-      });
-      var siderCls = (0, _classnames["default"])(className, prefixCls, "".concat(prefixCls, "-").concat(theme), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-collapsed"), !!collapsed), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-trigger"), collapsible && trigger !== null && !zeroWidthTrigger), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-below"), !!below), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-zero-width"), parseFloat(siderWidth) === 0), _classNames));
-      return /*#__PURE__*/React.createElement("aside", (0, _extends2["default"])({
-        className: siderCls
-      }, divProps, {
-        style: divStyle
-      }), /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-children")
-      }, children), collapsible || below && zeroWidthTrigger ? triggerDom : null);
-    };
-
-    _this.uniqueId = generateId('ant-sider-');
-    var matchMedia;
-
-    if (typeof window !== 'undefined') {
-      matchMedia = window.matchMedia;
-    }
-
-    if (matchMedia && props.breakpoint && props.breakpoint in dimensionMaxMap) {
-      _this.mql = matchMedia("(max-width: ".concat(dimensionMaxMap[props.breakpoint], ")"));
-    }
-
-    var collapsed;
-
-    if ('collapsed' in props) {
-      collapsed = props.collapsed;
-    } else {
-      collapsed = props.defaultCollapsed;
-    }
-
-    _this.state = {
-      collapsed: collapsed,
-      below: false
-    };
-    return _this;
-  }
-
-  (0, _createClass2["default"])(InternalSider, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.mql) {
-        this.mql.addListener(this.responsiveHandler);
-        this.responsiveHandler(this.mql);
-      }
-
-      if (this.props.siderHook) {
-        this.props.siderHook.addSider(this.uniqueId);
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (this.mql) {
-        this.mql.removeListener(this.responsiveHandler);
-      }
-
-      if (this.props.siderHook) {
-        this.props.siderHook.removeSider(this.uniqueId);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var collapsed = this.state.collapsed;
-      var collapsedWidth = this.props.collapsedWidth;
-      return /*#__PURE__*/React.createElement(SiderContext.Provider, {
-        value: {
-          siderCollapsed: collapsed,
-          collapsedWidth: collapsedWidth
-        }
-      }, /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderSider));
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps) {
-      if ('collapsed' in nextProps) {
-        return {
-          collapsed: nextProps.collapsed
-        };
-      }
-
-      return null;
-    }
-  }]);
-  return InternalSider;
-}(React.Component);
-
-InternalSider.defaultProps = {
-  collapsible: false,
-  defaultCollapsed: false,
-  reverseArrow: false,
-  width: 200,
-  collapsedWidth: 80,
-  style: {},
-  theme: 'dark'
-}; // eslint-disable-next-line react/prefer-stateless-function
-
-var Sider = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(Sider, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(Sider);
-
-  function Sider() {
-    (0, _classCallCheck2["default"])(this, Sider);
-    return _super2.apply(this, arguments);
-  }
-
-  (0, _createClass2["default"])(Sider, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/React.createElement(_layout.LayoutContext.Consumer, null, function (context) {
-        return /*#__PURE__*/React.createElement(InternalSider, (0, _extends2["default"])({}, context, _this2.props));
-      });
-    }
-  }]);
-  return Sider;
-}(React.Component);
-
-exports["default"] = Sider;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/layout/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/layout/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _layout = _interopRequireDefault(__webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js"));
-
-var _Sider = _interopRequireDefault(__webpack_require__(/*! ./Sider */ "./node_modules/antd/lib/layout/Sider.js"));
-
-_layout["default"].Sider = _Sider["default"];
-var _default = _layout["default"];
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/layout/layout.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/layout/layout.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = exports.LayoutContext = void 0;
-
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var LayoutContext = /*#__PURE__*/React.createContext({
-  siderHook: {
-    addSider: function addSider() {
-      return null;
+  var formProps = {
+    loading: loading,
+    onFinish: onFinish,
+    OrgForm: OrgForm
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, flash.success && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_alert__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    message: flash.success,
+    type: "success",
+    closable: true,
+    showIcon: true
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    scroll: {
+      x: 600
     },
-    removeSider: function removeSider() {
-      return null;
-    }
-  }
-});
-exports.LayoutContext = LayoutContext;
-
-function generator(_ref) {
-  var suffixCls = _ref.suffixCls,
-      tagName = _ref.tagName,
-      displayName = _ref.displayName;
-  return function (BasicComponent) {
-    var _a;
-
-    return _a = /*#__PURE__*/function (_React$Component) {
-      (0, _inherits2["default"])(Adapter, _React$Component);
-
-      var _super = (0, _createSuper2["default"])(Adapter);
-
-      function Adapter() {
-        var _this;
-
-        (0, _classCallCheck2["default"])(this, Adapter);
-        _this = _super.apply(this, arguments);
-
-        _this.renderComponent = function (_ref2) {
-          var getPrefixCls = _ref2.getPrefixCls;
-          var customizePrefixCls = _this.props.prefixCls;
-          var prefixCls = getPrefixCls(suffixCls, customizePrefixCls);
-          return /*#__PURE__*/React.createElement(BasicComponent, (0, _extends2["default"])({
-            prefixCls: prefixCls,
-            tagName: tagName
-          }, _this.props));
-        };
-
-        return _this;
+    style: {
+      marginTop: "10px"
+    },
+    bordered: true,
+    dataSource: organizations,
+    size: "small",
+    pagination: {
+      hideOnSinglePage: true,
+      defaultPageSize: 3,
+      showQuickJumper: true,
+      showSizeChanger: true,
+      showTotal: function showTotal(total, range) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, total, " Organization", total !== 1 && "s");
       }
-
-      (0, _createClass2["default"])(Adapter, [{
-        key: "render",
-        value: function render() {
-          return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-        }
-      }]);
-      return Adapter;
-    }(React.Component), _a.displayName = displayName, _a;
-  };
-}
-
-var Basic = function Basic(props) {
-  var prefixCls = props.prefixCls,
-      className = props.className,
-      children = props.children,
-      tagName = props.tagName,
-      others = __rest(props, ["prefixCls", "className", "children", "tagName"]);
-
-  var classString = (0, _classnames["default"])(prefixCls, className);
-  return /*#__PURE__*/React.createElement(tagName, (0, _extends2["default"])({
-    className: classString
-  }, others), children);
-};
-
-var BasicLayout = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(BasicLayout, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(BasicLayout);
-
-  function BasicLayout() {
-    var _this2;
-
-    (0, _classCallCheck2["default"])(this, BasicLayout);
-    _this2 = _super2.apply(this, arguments);
-    _this2.state = {
-      siders: []
-    };
-
-    _this2.renderComponent = function (_ref3) {
-      var _classNames;
-
-      var direction = _ref3.direction;
-
-      var _a = _this2.props,
-          prefixCls = _a.prefixCls,
-          className = _a.className,
-          children = _a.children,
-          hasSider = _a.hasSider,
-          Tag = _a.tagName,
-          others = __rest(_a, ["prefixCls", "className", "children", "hasSider", "tagName"]);
-
-      var classString = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-sider"), typeof hasSider === 'boolean' ? hasSider : _this2.state.siders.length > 0), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
-      return /*#__PURE__*/React.createElement(LayoutContext.Provider, {
-        value: {
-          siderHook: _this2.getSiderHook()
-        }
-      }, /*#__PURE__*/React.createElement(Tag, (0, _extends2["default"])({
-        className: classString
-      }, others), children));
-    };
-
-    return _this2;
-  }
-
-  (0, _createClass2["default"])(BasicLayout, [{
-    key: "getSiderHook",
-    value: function getSiderHook() {
-      var _this3 = this;
-
-      return {
-        addSider: function addSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: [].concat((0, _toConsumableArray2["default"])(state.siders), [id])
-            };
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default.a.Column, {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    render: function render(text) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, text);
+    },
+    onFilter: function onFilter(value, record) {
+      return record.name.indexOf(value) === 0;
+    },
+    sorter: function sorter(a, b) {
+      return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default.a.Column, {
+    title: "Address",
+    dataIndex: "address",
+    key: "address",
+    onFilter: function onFilter(value, record) {
+      return record.name.indexOf(value) === 0;
+    },
+    sorter: function sorter(a, b) {
+      return a.address === b.address ? 0 : a.address < b.address ? -1 : 1;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default.a.Column, {
+    title: "Code",
+    dataIndex: "code",
+    key: "code"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_3___default.a.Column, {
+    width: 200,
+    fixed: "right",
+    title: "Action",
+    key: "action",
+    render: function render(text, record) {
+      return organizations.length >= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_space__WEBPACK_IMPORTED_MODULE_6___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popover__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        placement: "leftTop",
+        title: "Edit ".concat(record.name),
+        content: function content() {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationForm__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({
+            edit: record
+          }, formProps));
+        },
+        trigger: "click"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_8___default.a, null, "Edit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        placement: "leftTop",
+        title: "Generate new ".concat(record.name, " code?"),
+        onConfirm: function onConfirm() {
+          setLoading(true);
+          _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("organization.change_code", {
+            organization: record.id
+          })).then(function () {
+            return setLoading(false);
           });
         },
-        removeSider: function removeSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: state.siders.filter(function (currentId) {
-                return currentId !== id;
-              })
-            };
-          });
-        }
-      };
+        okText: "Generate",
+        trigger: "click"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        loading: loading
+      }, "Change Code"))) : null;
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-    }
-  }]);
-  return BasicLayout;
-}(React.Component);
-
-var Layout = generator({
-  suffixCls: 'layout',
-  tagName: 'section',
-  displayName: 'Layout'
-})(BasicLayout);
-var Header = generator({
-  suffixCls: 'layout-header',
-  tagName: 'header',
-  displayName: 'Header'
-})(Basic);
-var Footer = generator({
-  suffixCls: 'layout-footer',
-  tagName: 'footer',
-  displayName: 'Footer'
-})(Basic);
-var Content = generator({
-  suffixCls: 'layout-content',
-  tagName: 'main',
-  displayName: 'Content'
-})(Basic);
-Layout.Header = Header;
-Layout.Footer = Footer;
-Layout.Content = Content;
-var _default = Layout;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/MenuContext.js":
-/*!***************************************************!*\
-  !*** ./node_modules/antd/lib/menu/MenuContext.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var MenuContext = /*#__PURE__*/(0, _react.createContext)({
-  inlineCollapsed: false
-});
-var _default = MenuContext;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/MenuItem.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/menu/MenuItem.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
-
-var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var _tooltip = _interopRequireDefault(__webpack_require__(/*! ../tooltip */ "./node_modules/antd/lib/tooltip/index.js"));
-
-var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
+  })), organizations.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_empty__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "No Organizations found!")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    onClick: showDrawer,
+    type: "primary"
+  }, "Create Organization")));
 };
 
-var MenuItem = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(MenuItem, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(MenuItem);
-
-  function MenuItem() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, MenuItem);
-    _this = _super.apply(this, arguments);
-
-    _this.onKeyDown = function (e) {
-      _this.menuItem.onKeyDown(e);
-    };
-
-    _this.saveMenuItem = function (menuItem) {
-      _this.menuItem = menuItem;
-    };
-
-    _this.renderItem = function (_ref) {
-      var siderCollapsed = _ref.siderCollapsed;
-      var _this$props = _this.props,
-          level = _this$props.level,
-          className = _this$props.className,
-          children = _this$props.children,
-          rootPrefixCls = _this$props.rootPrefixCls;
-
-      var _a = _this.props,
-          title = _a.title,
-          icon = _a.icon,
-          danger = _a.danger,
-          rest = __rest(_a, ["title", "icon", "danger"]);
-
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref2) {
-        var _classNames;
-
-        var inlineCollapsed = _ref2.inlineCollapsed,
-            direction = _ref2.direction;
-        var tooltipTitle = title;
-
-        if (typeof title === 'undefined') {
-          tooltipTitle = level === 1 ? children : '';
-        } else if (title === false) {
-          tooltipTitle = '';
-        }
-
-        var tooltipProps = {
-          title: tooltipTitle
-        };
-
-        if (!siderCollapsed && !inlineCollapsed) {
-          tooltipProps.title = null; // Reset `visible` to fix control mode tooltip display not correct
-          // ref: https://github.com/ant-design/ant-design/issues/16742
-
-          tooltipProps.visible = false;
-        }
-
-        var childrenLength = (0, _toArray["default"])(children).length;
-        return /*#__PURE__*/React.createElement(_tooltip["default"], (0, _extends2["default"])({}, tooltipProps, {
-          placement: direction === 'rtl' ? 'left' : 'right',
-          overlayClassName: "".concat(rootPrefixCls, "-inline-collapsed-tooltip")
-        }), /*#__PURE__*/React.createElement(_rcMenu.Item, (0, _extends2["default"])({}, rest, {
-          className: (0, _classnames["default"])(className, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-danger"), danger), (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-only-child"), (icon ? childrenLength + 1 : childrenLength) === 1), _classNames)),
-          title: title,
-          ref: _this.saveMenuItem
-        }), icon, _this.renderItemChildren(inlineCollapsed)));
-      });
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(MenuItem, [{
-    key: "renderItemChildren",
-    value: function renderItemChildren(inlineCollapsed) {
-      var _this$props2 = this.props,
-          icon = _this$props2.icon,
-          children = _this$props2.children,
-          level = _this$props2.level,
-          rootPrefixCls = _this$props2.rootPrefixCls; // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
-      // ref: https://github.com/ant-design/ant-design/pull/23456
-
-      if (!icon || (0, _reactNode.isValidElement)(children) && children.type === 'span') {
-        if (children && inlineCollapsed && level === 1 && typeof children === 'string') {
-          return /*#__PURE__*/React.createElement("div", {
-            className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
-          }, children.charAt(0));
-        }
-
-        return children;
-      }
-
-      return /*#__PURE__*/React.createElement("span", null, children);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, this.renderItem);
-    }
-  }]);
-  return MenuItem;
-}(React.Component);
-
-exports["default"] = MenuItem;
-MenuItem.isMenuItem = true;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/SubMenu.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/menu/SubMenu.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var SubMenu = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(SubMenu, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(SubMenu);
-
-  function SubMenu() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, SubMenu);
-    _this = _super.apply(this, arguments);
-
-    _this.onKeyDown = function (e) {
-      _this.subMenu.onKeyDown(e);
-    };
-
-    _this.saveSubMenu = function (subMenu) {
-      _this.subMenu = subMenu;
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(SubMenu, [{
-    key: "renderTitle",
-    value: function renderTitle(inlineCollapsed) {
-      var _this$props = this.props,
-          icon = _this$props.icon,
-          title = _this$props.title,
-          level = _this$props.level,
-          rootPrefixCls = _this$props.rootPrefixCls;
-
-      if (!icon) {
-        return inlineCollapsed && level === 1 && title && typeof title === 'string' ? /*#__PURE__*/React.createElement("div", {
-          className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
-        }, title.charAt(0)) : title;
-      } // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
-      // ref: https://github.com/ant-design/ant-design/pull/23456
-
-
-      var titleIsSpan = (0, _reactNode.isValidElement)(title) && title.type === 'span';
-      return /*#__PURE__*/React.createElement(React.Fragment, null, icon, titleIsSpan ? title : /*#__PURE__*/React.createElement("span", null, title));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props2 = this.props,
-          rootPrefixCls = _this$props2.rootPrefixCls,
-          popupClassName = _this$props2.popupClassName;
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref) {
-        var inlineCollapsed = _ref.inlineCollapsed,
-            antdMenuTheme = _ref.antdMenuTheme;
-        return /*#__PURE__*/React.createElement(_rcMenu.SubMenu, (0, _extends2["default"])({}, (0, _omit["default"])(_this2.props, ['icon']), {
-          title: _this2.renderTitle(inlineCollapsed),
-          ref: _this2.saveSubMenu,
-          popupClassName: (0, _classnames["default"])(rootPrefixCls, "".concat(rootPrefixCls, "-").concat(antdMenuTheme), popupClassName)
-        }));
-      });
-    }
-  }]);
-  return SubMenu;
-}(React.Component);
-
-SubMenu.contextType = _MenuContext["default"]; // fix issue:https://github.com/ant-design/ant-design/issues/8666
-
-SubMenu.isSubMenu = 1;
-var _default = SubMenu;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/antd/lib/menu/index.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = _interopRequireWildcard(__webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _SubMenu = _interopRequireDefault(__webpack_require__(/*! ./SubMenu */ "./node_modules/antd/lib/menu/SubMenu.js"));
-
-var _MenuItem = _interopRequireDefault(__webpack_require__(/*! ./MenuItem */ "./node_modules/antd/lib/menu/MenuItem.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
-
-var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
-
-var _motion = _interopRequireDefault(__webpack_require__(/*! ../_util/motion */ "./node_modules/antd/lib/_util/motion.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var InternalMenu = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(InternalMenu, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(InternalMenu);
-
-  function InternalMenu(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, InternalMenu);
-    _this = _super.call(this, props);
-
-    _this.renderMenu = function (_ref) {
-      var getPopupContainer = _ref.getPopupContainer,
-          getPrefixCls = _ref.getPrefixCls,
-          direction = _ref.direction;
-      var _this$props = _this.props,
-          customizePrefixCls = _this$props.prefixCls,
-          className = _this$props.className,
-          theme = _this$props.theme;
-      var defaultMotions = {
-        horizontal: {
-          motionName: 'slide-up'
-        },
-        inline: _motion["default"],
-        other: {
-          motionName: 'zoom-big'
-        }
-      };
-      var prefixCls = getPrefixCls('menu', customizePrefixCls);
-      var menuClassName = (0, _classnames["default"])(className, "".concat(prefixCls, "-").concat(theme), (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-inline-collapsed"), _this.getInlineCollapsed()));
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Provider, {
-        value: {
-          inlineCollapsed: _this.getInlineCollapsed() || false,
-          antdMenuTheme: theme,
-          direction: direction
-        }
-      }, /*#__PURE__*/React.createElement(_rcMenu["default"], (0, _extends2["default"])({
-        getPopupContainer: getPopupContainer
-      }, _this.props, {
-        className: menuClassName,
-        prefixCls: prefixCls,
-        direction: direction,
-        defaultMotions: defaultMotions
-      })));
-    };
-
-    (0, _devWarning["default"])(!('inlineCollapsed' in props && props.mode !== 'inline'), 'Menu', '`inlineCollapsed` should only be used when `mode` is inline.');
-    (0, _devWarning["default"])(!(props.siderCollapsed !== undefined && 'inlineCollapsed' in props), 'Menu', '`inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.');
-    return _this;
-  }
-
-  (0, _createClass2["default"])(InternalMenu, [{
-    key: "getInlineCollapsed",
-    value: function getInlineCollapsed() {
-      var _this$props2 = this.props,
-          inlineCollapsed = _this$props2.inlineCollapsed,
-          siderCollapsed = _this$props2.siderCollapsed;
-
-      if (siderCollapsed !== undefined) {
-        return siderCollapsed;
-      }
-
-      return inlineCollapsed;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderMenu);
-    }
-  }]);
-  return InternalMenu;
-}(React.Component);
-
-InternalMenu.defaultProps = {
-  className: '',
-  theme: 'light',
-  focusable: false
-}; // We should keep this as ref-able
-
-var Menu = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(Menu, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(Menu);
-
-  function Menu() {
-    (0, _classCallCheck2["default"])(this, Menu);
-    return _super2.apply(this, arguments);
-  }
-
-  (0, _createClass2["default"])(Menu, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, function (context) {
-        return /*#__PURE__*/React.createElement(InternalMenu, (0, _extends2["default"])({}, _this2.props, context));
-      });
-    }
-  }]);
-  return Menu;
-}(React.Component);
-
-exports["default"] = Menu;
-Menu.Divider = _rcMenu.Divider;
-Menu.Item = _MenuItem["default"];
-Menu.SubMenu = _SubMenu["default"];
-Menu.ItemGroup = _rcMenu.ItemGroup;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/tooltip/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/tooltip/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcTooltip = _interopRequireDefault(__webpack_require__(/*! rc-tooltip */ "./node_modules/rc-tooltip/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _placements = _interopRequireDefault(__webpack_require__(/*! ./placements */ "./node_modules/antd/lib/tooltip/placements.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _colors = __webpack_require__(/*! ../_util/colors */ "./node_modules/antd/lib/_util/colors.js");
-
-var splitObject = function splitObject(obj, keys) {
-  var picked = {};
-  var omitted = (0, _extends2["default"])({}, obj);
-  keys.forEach(function (key) {
-    if (obj && key in obj) {
-      picked[key] = obj[key];
-      delete omitted[key];
-    }
-  });
-  return {
-    picked: picked,
-    omitted: omitted
-  };
-};
-
-var PresetColorRegex = new RegExp("^(".concat(_colors.PresetColorTypes.join('|'), ")(-inverse)?$")); // Fix Tooltip won't hide at disabled button
-// mouse events don't trigger at disabled button in Chrome
-// https://github.com/react-component/tooltip/issues/18
-
-function getDisabledCompatibleChildren(element, prefixCls) {
-  var elementType = element.type;
-
-  if ((elementType.__ANT_BUTTON === true || elementType.__ANT_SWITCH === true || elementType.__ANT_CHECKBOX === true || element.type === 'button') && element.props.disabled) {
-    // Pick some layout related style properties up to span
-    // Prevent layout bugs like https://github.com/ant-design/ant-design/issues/5254
-    var _splitObject = splitObject(element.props.style, ['position', 'left', 'right', 'top', 'bottom', 'float', 'display', 'zIndex']),
-        picked = _splitObject.picked,
-        omitted = _splitObject.omitted;
-
-    var spanStyle = (0, _extends2["default"])((0, _extends2["default"])({
-      display: 'inline-block'
-    }, picked), {
-      cursor: 'not-allowed',
-      width: element.props.block ? '100%' : null
-    });
-    var buttonStyle = (0, _extends2["default"])((0, _extends2["default"])({}, omitted), {
-      pointerEvents: 'none'
-    });
-    var child = (0, _reactNode.cloneElement)(element, {
-      style: buttonStyle,
-      className: null
-    });
-    return /*#__PURE__*/React.createElement("span", {
-      style: spanStyle,
-      className: (0, _classnames["default"])(element.props.className, "".concat(prefixCls, "-disabled-compatible-wrapper"))
-    }, child);
-  }
-
-  return element;
-}
-
-var Tooltip = /*#__PURE__*/React.forwardRef(function (props, ref) {
-  var _classNames2;
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getContextPopupContainer = _React$useContext.getPopupContainer,
-      getPrefixCls = _React$useContext.getPrefixCls,
-      direction = _React$useContext.direction;
-
-  var _React$useState = React.useState(!!props.visible || !!props.defaultVisible),
-      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
-      visible = _React$useState2[0],
-      setVisible = _React$useState2[1];
-
-  React.useEffect(function () {
-    if ('visible' in props) {
-      setVisible(props.visible);
-    }
-  }, [props.visible]);
-
-  var isNoTitle = function isNoTitle() {
-    var title = props.title,
-        overlay = props.overlay;
-    return !title && !overlay && title !== 0; // overlay for old version compatibility
-  };
-
-  var onVisibleChange = function onVisibleChange(vis) {
-    if (!('visible' in props)) {
-      setVisible(isNoTitle() ? false : vis);
-    }
-
-    if (props.onVisibleChange && !isNoTitle()) {
-      props.onVisibleChange(vis);
-    }
-  };
-
-  var getTooltipPlacements = function getTooltipPlacements() {
-    var builtinPlacements = props.builtinPlacements,
-        arrowPointAtCenter = props.arrowPointAtCenter,
-        autoAdjustOverflow = props.autoAdjustOverflow;
-    return builtinPlacements || (0, _placements["default"])({
-      arrowPointAtCenter: arrowPointAtCenter,
-      autoAdjustOverflow: autoAdjustOverflow
-    });
-  }; // 动态设置动画点
-
-
-  var onPopupAlign = function onPopupAlign(domNode, align) {
-    var placements = getTooltipPlacements(); // 当前返回的位置
-
-    var placement = Object.keys(placements).filter(function (key) {
-      return placements[key].points[0] === align.points[0] && placements[key].points[1] === align.points[1];
-    })[0];
-
-    if (!placement) {
-      return;
-    } // 根据当前坐标设置动画点
-
-
-    var rect = domNode.getBoundingClientRect();
-    var transformOrigin = {
-      top: '50%',
-      left: '50%'
-    };
-
-    if (placement.indexOf('top') >= 0 || placement.indexOf('Bottom') >= 0) {
-      transformOrigin.top = "".concat(rect.height - align.offset[1], "px");
-    } else if (placement.indexOf('Top') >= 0 || placement.indexOf('bottom') >= 0) {
-      transformOrigin.top = "".concat(-align.offset[1], "px");
-    }
-
-    if (placement.indexOf('left') >= 0 || placement.indexOf('Right') >= 0) {
-      transformOrigin.left = "".concat(rect.width - align.offset[0], "px");
-    } else if (placement.indexOf('right') >= 0 || placement.indexOf('Left') >= 0) {
-      transformOrigin.left = "".concat(-align.offset[0], "px");
-    }
-
-    domNode.style.transformOrigin = "".concat(transformOrigin.left, " ").concat(transformOrigin.top);
-  };
-
-  var getOverlay = function getOverlay() {
-    var title = props.title,
-        overlay = props.overlay;
-
-    if (title === 0) {
-      return title;
-    }
-
-    return overlay || title || '';
-  };
-
-  var customizePrefixCls = props.prefixCls,
-      openClassName = props.openClassName,
-      getPopupContainer = props.getPopupContainer,
-      getTooltipContainer = props.getTooltipContainer,
-      overlayClassName = props.overlayClassName,
-      color = props.color,
-      overlayInnerStyle = props.overlayInnerStyle;
-  var children = props.children;
-  var prefixCls = getPrefixCls('tooltip', customizePrefixCls);
-  var tempVisible = visible; // Hide tooltip when there is no title
-
-  if (!('visible' in props) && isNoTitle()) {
-    tempVisible = false;
-  }
-
-  var child = getDisabledCompatibleChildren((0, _reactNode.isValidElement)(children) ? children : /*#__PURE__*/React.createElement("span", null, children), prefixCls);
-  var childProps = child.props;
-  var childCls = (0, _classnames["default"])(childProps.className, (0, _defineProperty2["default"])({}, openClassName || "".concat(prefixCls, "-open"), true));
-  var customOverlayClassName = (0, _classnames["default"])(overlayClassName, (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-").concat(color), color && PresetColorRegex.test(color)), _classNames2));
-  var formattedOverlayInnerStyle;
-  var arrowContentStyle;
-
-  if (color && !PresetColorRegex.test(color)) {
-    formattedOverlayInnerStyle = (0, _extends2["default"])((0, _extends2["default"])({}, overlayInnerStyle), {
-      background: color
-    });
-    arrowContentStyle = {
-      background: color
-    };
-  }
-
-  return /*#__PURE__*/React.createElement(_rcTooltip["default"], (0, _extends2["default"])({}, props, {
-    prefixCls: prefixCls,
-    overlayClassName: customOverlayClassName,
-    getTooltipContainer: getPopupContainer || getTooltipContainer || getContextPopupContainer,
-    ref: ref,
-    builtinPlacements: getTooltipPlacements(),
-    overlay: getOverlay(),
-    visible: tempVisible,
-    onVisibleChange: onVisibleChange,
-    onPopupAlign: onPopupAlign,
-    overlayInnerStyle: formattedOverlayInnerStyle,
-    arrowContent: /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-arrow-content"),
-      style: arrowContentStyle
-    })
-  }), tempVisible ? (0, _reactNode.cloneElement)(child, {
-    className: childCls
-  }) : child);
-});
-Tooltip.displayName = 'Tooltip';
-Tooltip.defaultProps = {
-  placement: 'top',
-  transitionName: 'zoom-big-fast',
-  mouseEnterDelay: 0.1,
-  mouseLeaveDelay: 0.1,
-  arrowPointAtCenter: false,
-  autoAdjustOverflow: true
-};
-var _default = Tooltip;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/tooltip/placements.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/antd/lib/tooltip/placements.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getOverflowOptions = getOverflowOptions;
-exports["default"] = getPlacements;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _placements = __webpack_require__(/*! rc-tooltip/lib/placements */ "./node_modules/rc-tooltip/lib/placements.js");
-
-var autoAdjustOverflowEnabled = {
-  adjustX: 1,
-  adjustY: 1
-};
-var autoAdjustOverflowDisabled = {
-  adjustX: 0,
-  adjustY: 0
-};
-var targetOffset = [0, 0];
-
-function getOverflowOptions(autoAdjustOverflow) {
-  if (typeof autoAdjustOverflow === 'boolean') {
-    return autoAdjustOverflow ? autoAdjustOverflowEnabled : autoAdjustOverflowDisabled;
-  }
-
-  return (0, _extends2["default"])((0, _extends2["default"])({}, autoAdjustOverflowDisabled), autoAdjustOverflow);
-}
-
-function getPlacements(config) {
-  var _config$arrowWidth = config.arrowWidth,
-      arrowWidth = _config$arrowWidth === void 0 ? 5 : _config$arrowWidth,
-      _config$horizontalArr = config.horizontalArrowShift,
-      horizontalArrowShift = _config$horizontalArr === void 0 ? 16 : _config$horizontalArr,
-      _config$verticalArrow = config.verticalArrowShift,
-      verticalArrowShift = _config$verticalArrow === void 0 ? 8 : _config$verticalArrow,
-      autoAdjustOverflow = config.autoAdjustOverflow;
-  var placementMap = {
-    left: {
-      points: ['cr', 'cl'],
-      offset: [-4, 0]
-    },
-    right: {
-      points: ['cl', 'cr'],
-      offset: [4, 0]
-    },
-    top: {
-      points: ['bc', 'tc'],
-      offset: [0, -4]
-    },
-    bottom: {
-      points: ['tc', 'bc'],
-      offset: [0, 4]
-    },
-    topLeft: {
-      points: ['bl', 'tc'],
-      offset: [-(horizontalArrowShift + arrowWidth), -4]
-    },
-    leftTop: {
-      points: ['tr', 'cl'],
-      offset: [-4, -(verticalArrowShift + arrowWidth)]
-    },
-    topRight: {
-      points: ['br', 'tc'],
-      offset: [horizontalArrowShift + arrowWidth, -4]
-    },
-    rightTop: {
-      points: ['tl', 'cr'],
-      offset: [4, -(verticalArrowShift + arrowWidth)]
-    },
-    bottomRight: {
-      points: ['tr', 'bc'],
-      offset: [horizontalArrowShift + arrowWidth, 4]
-    },
-    rightBottom: {
-      points: ['bl', 'cr'],
-      offset: [4, verticalArrowShift + arrowWidth]
-    },
-    bottomLeft: {
-      points: ['tl', 'bc'],
-      offset: [-(horizontalArrowShift + arrowWidth), 4]
-    },
-    leftBottom: {
-      points: ['br', 'cl'],
-      offset: [-4, verticalArrowShift + arrowWidth]
-    }
-  };
-  Object.keys(placementMap).forEach(function (key) {
-    placementMap[key] = config.arrowPointAtCenter ? (0, _extends2["default"])((0, _extends2["default"])({}, placementMap[key]), {
-      overflow: getOverflowOptions(autoAdjustOverflow),
-      targetOffset: targetOffset
-    }) : (0, _extends2["default"])((0, _extends2["default"])({}, _placements.placements[key]), {
-      overflow: getOverflowOptions(autoAdjustOverflow)
-    });
-    placementMap[key].ignoreShake = true;
-  });
-  return placementMap;
-}
-
-/***/ }),
-
-/***/ "./node_modules/rc-tooltip/lib/placements.js":
-/*!***************************************************!*\
-  !*** ./node_modules/rc-tooltip/lib/placements.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.placements = void 0;
-var autoAdjustOverflow = {
-  adjustX: 1,
-  adjustY: 1
-};
-var targetOffset = [0, 0];
-var placements = {
-  left: {
-    points: ['cr', 'cl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  right: {
-    points: ['cl', 'cr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  top: {
-    points: ['bc', 'tc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  bottom: {
-    points: ['tc', 'bc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  topLeft: {
-    points: ['bl', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  leftTop: {
-    points: ['tr', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  topRight: {
-    points: ['br', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  rightTop: {
-    points: ['tl', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomRight: {
-    points: ['tr', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  rightBottom: {
-    points: ['bl', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomLeft: {
-    points: ['tl', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  leftBottom: {
-    points: ['br', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  }
-};
-exports.placements = placements;
-var _default = placements;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/rc-util/lib/Children/toArray.js":
-/*!******************************************************!*\
-  !*** ./node_modules/rc-util/lib/Children/toArray.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toArray;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toArray(children) {
-  var ret = [];
-
-  _react.default.Children.forEach(children, function (child) {
-    if (child === undefined || child === null) {
-      return;
-    }
-
-    if (Array.isArray(child)) {
-      ret = ret.concat(toArray(child));
-    } else if ((0, _reactIs.isFragment)(child) && child.props) {
-      ret = ret.concat(toArray(child.props.children));
-    } else {
-      ret.push(child);
-    }
-  });
-
-  return ret;
-}
+/* harmony default export */ __webpack_exports__["default"] = (OrganizationsList);
 
 /***/ })
 

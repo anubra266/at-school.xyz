@@ -7,7 +7,7 @@ const { Content } = Layout;
 
 const Home = () => {
     return (
-        <Dashboardlayout title="Home">
+        <Dashboardlayout title="Dashboard">
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader

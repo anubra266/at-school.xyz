@@ -190,7 +190,7 @@ __webpack_require__.r(__webpack_exports__);
   icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_PieChartOutlined__WEBPACK_IMPORTED_MODULE_1___default.a, null)
 }, {
   name: "Organizations",
-  route: "organization.index",
+  route: "organization",
   icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_BankOutlined__WEBPACK_IMPORTED_MODULE_2___default.a, null)
 }, {
   name: "has Keys",

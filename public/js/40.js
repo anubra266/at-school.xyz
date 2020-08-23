@@ -83,34 +83,103 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
+/***/ "./node_modules/antd/lib/_util/reactNode.js":
+/*!**************************************************!*\
+  !*** ./node_modules/antd/lib/_util/reactNode.js ***!
+  \**************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+"use strict";
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.replaceElement = replaceElement;
+exports.cloneElement = cloneElement;
+exports.isValidElement = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var isValidElement = React.isValidElement;
+exports.isValidElement = isValidElement;
+
+function replaceElement(element, replacement, props) {
+  if (!isValidElement(element)) return replacement;
+  return /*#__PURE__*/React.cloneElement(element, typeof props === 'function' ? props() : props);
 }
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+function cloneElement(element, props) {
+  return replaceElement(element, element, props);
+}
 
-module.exports = g;
+/***/ }),
 
+/***/ "./node_modules/antd/lib/_util/type.js":
+/*!*********************************************!*\
+  !*** ./node_modules/antd/lib/_util/type.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tupleNum = exports.tuple = void 0;
+
+// https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
+var tuple = function tuple() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return args;
+};
+
+exports.tuple = tuple;
+
+var tupleNum = function tupleNum() {
+  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  return args;
+};
+
+exports.tupleNum = tupleNum;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/layout/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _layout = _interopRequireDefault(__webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js"));
+
+var _Sider = _interopRequireDefault(__webpack_require__(/*! ./Sider */ "./node_modules/antd/lib/layout/Sider.js"));
+
+_layout["default"].Sider = _Sider["default"];
+var _default = _layout["default"];
+exports["default"] = _default;
 
 /***/ }),
 

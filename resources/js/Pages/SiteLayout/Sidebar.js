@@ -54,7 +54,7 @@ function Sidebar({ routes }) {
                                                     `menu-${item.name}` ==
                                                     getRoute()[0][0]
                                                         ? "#"
-                                                        : route(menu.route)
+                                                        : menu.route
                                                 }
                                             >
                                                 {item.name}
@@ -72,7 +72,7 @@ function Sidebar({ routes }) {
                                     href={
                                         `menu-${menu.name}` == getRoute()[0][0]
                                             ? "#"
-                                            : route(menu.route)
+                                            : menu.route
                                     }
                                 >
                                     {menu.name}

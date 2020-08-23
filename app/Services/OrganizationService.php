@@ -12,6 +12,11 @@ class OrganizationService
         $this->organization = $organization;
     }
 
+    public function index()
+    {
+        $organizations = authUser()->organizations()->get();
+        return $organizations;
+    }
     public function store($request)
     {
         $organization = $request->validated();
@@ -19,6 +24,22 @@ class OrganizationService
         $organization['code'] = $this->organization->generateCode('ORG');
         //*create organization
         $organization = authUser()->organizations()->create($organization);
+        return $organization;
+    }
+    public function update($request)
+    {
+        $organization_id = $request->id;
+        $organization = $request->validated();
+        //*update organization
+        $organization = authUser()->organizations()->find($organization_id)->update($organization);
+        return $organization;
+    }
+    public function ChangeCode($organization)
+    {
+        //*Generate Code
+        $new_code = array("code" => $this->organization->generateCode('ORG'));
+        //*update organization
+        $organization = $organization->update($new_code);
         return $organization;
     }
 }

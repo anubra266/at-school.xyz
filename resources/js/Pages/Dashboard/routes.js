@@ -10,7 +10,7 @@ export default [
     },
     {
         name: "Organizations",
-        route: "organization.index",
+        route: "organization",
         icon: <BankOutlined />
     },
     {
