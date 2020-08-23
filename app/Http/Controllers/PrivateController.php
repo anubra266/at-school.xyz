@@ -13,6 +13,6 @@ class PrivateController extends Controller
     }
 
     public function FinishRegistration(){
-        return Inertia::render('Register.Finish/index');
+        return Inertia::render('Auth/Registerf/');
     }
 }

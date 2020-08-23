@@ -13,10 +13,14 @@ import EllipsisOutlined from "@ant-design/icons/EllipsisOutlined";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
 import { loadPage } from "@/Helpers/PageLoad";
 import { usePage } from "@inertiajs/inertia-react";
+import { trans_roles } from "@/Helpers/Translate.js";
+
 const { Header } = Layout;
+
 function Navbar({ pageLoader }) {
     // TODO Logout
     const { auth } = usePage();
+    const trans_role = trans_roles(auth.user.initial_role);
     loadPage(pageLoader);
     useEffectOnce(() => {
         //*complete pageLoader loading
@@ -41,7 +45,7 @@ function Navbar({ pageLoader }) {
                     title="at-School"
                     className="site-page-header"
                     subTitle={`${auth.user.first_name} ${auth.user.last_name}`}
-                    tags={<Tag color="blue">Running</Tag>}
+                    tags={<Tag color="blue">{trans_roles(auth.user.initial_role)[0]}</Tag>}
                     extra={[
                         <React.Fragment key={1}>
                             <button

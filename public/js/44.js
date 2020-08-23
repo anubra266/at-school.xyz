@@ -1,5 +1,67 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[44],{
 
+/***/ "./resources/js/Pages/Landing/Intro.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Pages/Landing/Intro.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Login */ "./resources/js/Pages/Landing/Login.js");
+
+
+
+
+function Intro() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "intro-section",
+    id: "home-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide-1",
+    style: {
+      backgroundImage: "url(".concat(__webpack_require__(/*! @/assets/landing/images/hero_1.jpg */ "./resources/js/assets/landing/images/hero_1.jpg"), ")")
+    },
+    "data-stellar-background-ratio": "0.5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    "data-aos": "fade-up",
+    "data-aos-delay": "100"
+  }, "Let the learning flow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "mb-4",
+    "data-aos": "fade-up",
+    "data-aos-delay": "200"
+  }, "We help you keep up with the flow of knowledge. Anywhere and anytime."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    "data-aos": "fade-up",
+    "data-aos-delay": "300"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    className: "btn prpbut py-3 px-5 btn-pill",
+    href: route("register")
+  }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-5 ml-auto",
+    "data-aos": "fade-up",
+    "data-aos-delay": "500"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login__WEBPACK_IMPORTED_MODULE_2__["default"], null))))))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Intro);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Landing/Login.js":
 /*!*********************************************!*\
   !*** ./resources/js/Pages/Landing/Login.js ***!
@@ -147,6 +209,17 @@ function Spinner(_ref) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Spinner);
+
+/***/ }),
+
+/***/ "./resources/js/assets/landing/images/hero_1.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/assets/landing/images/hero_1.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/hero_1.jpg?ab80f89895baea4b6dbb96f4b4dc451c";
 
 /***/ })
 

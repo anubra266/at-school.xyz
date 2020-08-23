@@ -21,12 +21,11 @@ Route::get('/', 'PublicController@landing')->name('landing');
 
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-    //? Only Users with finished registration
-    Route::group(['middleware' => 'freg'], function () {
-        Route::get('home', 'PrivateController@home')->name('home');
-        Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish');
-    });
+//? Only Users authenticated and with finished registration
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('home', 'PrivateController@home')->name('home');
+    Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish')->middleware('freg');
+    Route::post('organization', 'OrganizationController@store')->name('organization.create');
 });
 
 

@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"d45434f62cc83fb2dafb","1":"12ecbef8e07eb3f9b9b5","2":"8ace47238f3ecce68e5e","3":"42634ea70a769496ff3e","4":"9454750053065f83678e","5":"62e7a496e257a0048718","6":"1d500ea0a491e8394909","8":"f4983840c66afd5fd187","9":"097a076c5b0602911aa6","10":"7530f50f8b7e4aac3fd2","11":"2b0bea6b6b7581900a69","12":"491e0196c34af09030d2","13":"eeda9e5b7bc127a60e6f","14":"f28766caea20b85f5f05","15":"58d7265646e3d8d6f5ff","16":"10d90fdb69a10966cb59","17":"3e296b9732dad998eb73","18":"fc12887a0b0c11dd4b8b","19":"fc459825c8ef8f4e6c27","20":"627a39094acce90ba569","21":"9d0e83e54c631dfc3f1e","22":"7b840be4aa7fb833c15b","23":"a0fd24976968cfa85098","24":"2932f9e2f9f4aaf4c754","25":"f6a8ee63574b8e837f5a","26":"fe2898470be32d987252","27":"3ccc11037960391be0ce","28":"8f96a9cf86eadf6922b8","29":"9a5960786404e82895aa","30":"0d6d93f103edde254ae3","31":"f54e9d7020d89e411a9a","32":"9e917674197a5519183d","33":"ed139a11ba314bda3ada","34":"19df7b28f08a4ff27d2a","35":"5ae8e8cb6c05b32ed025","36":"262e783fe3f692b7914c","37":"4890785f7e3c94b9967b","38":"8f9da5e9896a16592f96","39":"3c13b7bb7eddebbd8859","40":"f7512b147757478cc419","41":"6d1503ab697482d52da2","42":"ac60a5a07892bb1fc09a","43":"8021c80bb56e33252369","44":"05f308d7958c1a1a7a09","45":"91d96d1cdb7446b8e4c6","46":"c7e3723df415c324af16","47":"6a5be68f6f6baeb23a8a","48":"3f0c137d0e684bfa761d","49":"b400ea59c27bb473a85a","53":"beadb65381f612560184"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"9b1a228b480974a8f8b3","1":"5e372995c78ca463f416","2":"68ba11c2c0b013ece566","3":"70d08b9d4c21ab6fe1e1","4":"40c6647b510d2cb30755","5":"5c614a2abf8f7f499319","6":"f6796a70d91ea4096f89","7":"7c8da9a2b0a64716a99c","9":"8bbb0c16ab6f53bf4fba","10":"052b4b3314a19f39a574","11":"c80f4765f00d9df3161a","12":"75b07824c8f9c45c98cb","13":"3b21b777d42d458235e1","14":"3618149aa5299dff9475","15":"ebc03b47dfc77dfe0975","16":"f46831331faba926204f","17":"1aaa7da39ed8a8b8bc7e","18":"e6ff32b4dac98995880a","19":"0c58e95ce8a0d6ee77b0","20":"3d8f38b93343a6caec84","21":"4c760c6dd8a9486c4ccd","22":"7e4b064da5c0827d0623","24":"524eab96214b7c59ceb7","26":"922c22c4bd794690d2db","27":"5a252d7bac35f414864c","28":"1df01a9484cecf4045af","29":"ecd5e6466f6c6e20936a","30":"26b888f7fd73a943207c","31":"10a9ec118cb80ee563ff","32":"ded68e67df5bae95dc4c","34":"326c30b6254932f5a262","36":"55bbfd9944754d28a624","37":"c48528bfc5c39d599c40","38":"f0c515c267890742d89a","39":"caa28ca1a6dc09d1864d","40":"218dc434ee894332e7a6","41":"818252f31d32069d31f8","43":"9c07a7e07825b7f22f5f","44":"0ff67355c56b17d706dc","45":"dd99298c065507c60d1c","46":"7e5dbd63595d81188143","47":"0e8216acc690c7685587","49":"14aa23e43f50640b473f","50":"0a12a8892310324bc98b","51":"680cab3cee371451b5e9","52":"0a186616c63e48535505","53":"e5c3a283a86342eca88e","54":"333437e9574d49b16dc7","55":"9cbb8868be0ff3528a8f","56":"7fd1c5bd8fac840a2bdd","58":"cf0934998f8a0c65cca9","60":"4b4259ef2080dcc2a84b","61":"d73e7f954abeafe549f8","62":"e5ef7444b231732859f5","63":"fff7e15de6913209c9de"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -31976,683 +31976,753 @@ var CatchError = /*#__PURE__*/function (_React$Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./About": [
-		"./resources/js/Pages/About/index.js",
-		0,
-		11,
-		23
-	],
-	"./About/": [
-		"./resources/js/Pages/About/index.js",
-		0,
-		11,
-		23
-	],
-	"./About/index": [
-		"./resources/js/Pages/About/index.js",
-		0,
-		11,
-		23
-	],
-	"./About/index.js": [
-		"./resources/js/Pages/About/index.js",
-		0,
-		11,
-		23
-	],
 	"./Auth/Assets": [
 		"./resources/js/Pages/Auth/Assets.js",
-		11,
-		5,
-		40
+		21,
+		12,
+		47
 	],
 	"./Auth/Assets.js": [
 		"./resources/js/Pages/Auth/Assets.js",
-		11,
-		5,
-		40
+		21,
+		12,
+		47
 	],
 	"./Auth/ForgotPassword": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
-		0,
-		3,
 		5,
-		22
+		17,
+		12,
+		29
 	],
 	"./Auth/ForgotPassword/": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
-		0,
-		3,
 		5,
-		22
+		17,
+		12,
+		29
 	],
 	"./Auth/ForgotPassword/index": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
-		0,
-		3,
 		5,
-		22
+		17,
+		12,
+		29
 	],
 	"./Auth/ForgotPassword/index.js": [
 		"./resources/js/Pages/Auth/ForgotPassword/index.js",
-		0,
-		3,
 		5,
-		22
+		17,
+		12,
+		29
 	],
 	"./Auth/Layout": [
 		"./resources/js/Pages/Auth/Layout.js",
-		0,
-		3,
 		5,
-		34
+		17,
+		12,
+		39
 	],
 	"./Auth/Layout.js": [
 		"./resources/js/Pages/Auth/Layout.js",
-		0,
-		3,
 		5,
-		34
+		17,
+		12,
+		39
 	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login/index.js",
-		0,
-		3,
 		5,
-		20
+		17,
+		12,
+		28
 	],
 	"./Auth/Login/": [
 		"./resources/js/Pages/Auth/Login/index.js",
-		0,
-		3,
 		5,
-		20
+		17,
+		12,
+		28
 	],
 	"./Auth/Login/index": [
 		"./resources/js/Pages/Auth/Login/index.js",
-		0,
-		3,
 		5,
-		20
+		17,
+		12,
+		28
 	],
 	"./Auth/Login/index.js": [
 		"./resources/js/Pages/Auth/Login/index.js",
-		0,
-		3,
 		5,
-		20
+		17,
+		12,
+		28
 	],
 	"./Auth/Register": [
 		"./resources/js/Pages/Auth/Register/index.js",
 		0,
 		1,
 		2,
-		4,
-		3,
-		19,
-		6,
-		14,
-		18,
-		17,
-		15,
-		16,
 		5,
-		48
+		3,
+		4,
+		17,
+		7,
+		18,
+		16,
+		26,
+		30,
+		22,
+		60,
+		24,
+		12,
+		27
 	],
 	"./Auth/Register/": [
 		"./resources/js/Pages/Auth/Register/index.js",
 		0,
 		1,
 		2,
-		4,
-		3,
-		19,
-		6,
-		14,
-		18,
-		17,
-		15,
-		16,
 		5,
-		48
+		3,
+		4,
+		17,
+		7,
+		18,
+		16,
+		26,
+		30,
+		22,
+		60,
+		24,
+		12,
+		27
 	],
 	"./Auth/Register/AcademicInfo": [
 		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		14,
-		35
+		18,
+		24,
+		51
 	],
 	"./Auth/Register/AcademicInfo.js": [
 		"./resources/js/Pages/Auth/Register/AcademicInfo.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		14,
-		35
+		18,
+		24,
+		51
 	],
 	"./Auth/Register/BasicInfo": [
 		"./resources/js/Pages/Auth/Register/BasicInfo.js",
-		17,
-		45
+		30,
+		52
 	],
 	"./Auth/Register/BasicInfo.js": [
 		"./resources/js/Pages/Auth/Register/BasicInfo.js",
-		17,
-		45
+		30,
+		52
 	],
 	"./Auth/Register/FormFooter": [
 		"./resources/js/Pages/Auth/Register/FormFooter.js",
-		1,
-		29
+		0,
+		38
 	],
 	"./Auth/Register/FormFooter.js": [
 		"./resources/js/Pages/Auth/Register/FormFooter.js",
-		1,
-		29
+		0,
+		38
 	],
 	"./Auth/Register/PasswordInfo": [
 		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		0,
 		1,
 		2,
-		4,
-		6,
-		15,
-		31
+		3,
+		7,
+		16,
+		22,
+		41
 	],
 	"./Auth/Register/PasswordInfo.js": [
 		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
+		0,
 		1,
 		2,
-		4,
-		6,
-		15,
-		31
+		3,
+		7,
+		16,
+		22,
+		41
 	],
 	"./Auth/Register/PersonalInfo": [
 		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		0,
 		1,
 		2,
-		16,
-		41
+		60,
+		53
 	],
 	"./Auth/Register/PersonalInfo.js": [
 		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
+		0,
 		1,
 		2,
-		16,
-		41
+		60,
+		53
 	],
 	"./Auth/Register/ProfileImageInfo": [
 		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		0,
 		1,
 		2,
-		18,
-		42
+		26,
+		54
 	],
 	"./Auth/Register/ProfileImageInfo.js": [
 		"./resources/js/Pages/Auth/Register/ProfileImageInfo.js",
+		0,
 		1,
 		2,
-		18,
-		42
+		26,
+		54
 	],
 	"./Auth/Register/index": [
 		"./resources/js/Pages/Auth/Register/index.js",
 		0,
 		1,
 		2,
-		4,
-		3,
-		19,
-		6,
-		14,
-		18,
-		17,
-		15,
-		16,
 		5,
-		48
+		3,
+		4,
+		17,
+		7,
+		18,
+		16,
+		26,
+		30,
+		22,
+		60,
+		24,
+		12,
+		27
 	],
 	"./Auth/Register/index.js": [
 		"./resources/js/Pages/Auth/Register/index.js",
 		0,
 		1,
 		2,
-		4,
-		3,
-		19,
-		6,
-		14,
-		18,
-		17,
-		15,
-		16,
 		5,
-		48
+		3,
+		4,
+		17,
+		7,
+		18,
+		16,
+		26,
+		30,
+		22,
+		60,
+		24,
+		12,
+		27
+	],
+	"./Auth/Registerf": [
+		"./resources/js/Pages/Auth/Registerf/index.js",
+		0,
+		1,
+		2,
+		5,
+		3,
+		4,
+		17,
+		6,
+		9,
+		7,
+		10,
+		11,
+		13,
+		15,
+		18,
+		16,
+		19,
+		14,
+		32
+	],
+	"./Auth/Registerf/": [
+		"./resources/js/Pages/Auth/Registerf/index.js",
+		0,
+		1,
+		2,
+		5,
+		3,
+		4,
+		17,
+		6,
+		9,
+		7,
+		10,
+		11,
+		13,
+		15,
+		18,
+		16,
+		19,
+		14,
+		32
+	],
+	"./Auth/Registerf/Organization": [
+		"./resources/js/Pages/Auth/Registerf/Organization.js",
+		0,
+		1,
+		3,
+		4,
+		6,
+		10,
+		18,
+		16,
+		19,
+		20
+	],
+	"./Auth/Registerf/Organization.js": [
+		"./resources/js/Pages/Auth/Registerf/Organization.js",
+		0,
+		1,
+		3,
+		4,
+		6,
+		10,
+		18,
+		16,
+		19,
+		20
+	],
+	"./Auth/Registerf/index": [
+		"./resources/js/Pages/Auth/Registerf/index.js",
+		0,
+		1,
+		2,
+		5,
+		3,
+		4,
+		17,
+		6,
+		9,
+		7,
+		10,
+		11,
+		13,
+		15,
+		18,
+		16,
+		19,
+		14,
+		32
+	],
+	"./Auth/Registerf/index.js": [
+		"./resources/js/Pages/Auth/Registerf/index.js",
+		0,
+		1,
+		2,
+		5,
+		3,
+		4,
+		17,
+		6,
+		9,
+		7,
+		10,
+		11,
+		13,
+		15,
+		18,
+		16,
+		19,
+		14,
+		32
 	],
 	"./Auth/template": [
 		"./resources/js/Pages/Auth/template.js",
-		0,
-		3,
 		5,
-		33
+		17,
+		12,
+		37
 	],
 	"./Auth/template.js": [
 		"./resources/js/Pages/Auth/template.js",
-		0,
-		3,
 		5,
-		33
-	],
-	"./Contact": [
-		"./resources/js/Pages/Contact/index.js",
-		0,
-		11,
-		21
-	],
-	"./Contact/": [
-		"./resources/js/Pages/Contact/index.js",
-		0,
-		11,
-		21
-	],
-	"./Contact/index": [
-		"./resources/js/Pages/Contact/index.js",
-		0,
-		11,
-		21
-	],
-	"./Contact/index.js": [
-		"./resources/js/Pages/Contact/index.js",
-		0,
-		11,
-		21
+		17,
+		12,
+		37
 	],
 	"./Error": [
 		"./resources/js/Pages/Error/index.js",
-		26
+		34
 	],
 	"./Error/": [
 		"./resources/js/Pages/Error/index.js",
-		26
+		34
 	],
 	"./Error/index": [
 		"./resources/js/Pages/Error/index.js",
-		26
+		34
 	],
 	"./Error/index.js": [
 		"./resources/js/Pages/Error/index.js",
-		26
+		34
 	],
 	"./Home": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		27
+		15,
+		14,
+		61
 	],
 	"./Home/": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		27
+		15,
+		14,
+		61
 	],
 	"./Home/index": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		27
+		15,
+		14,
+		61
 	],
 	"./Home/index.js": [
 		"./resources/js/Pages/Home/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		27
+		15,
+		14,
+		61
 	],
 	"./Landing": [
 		"./resources/js/Pages/Landing/index.js",
-		24
+		31
 	],
 	"./Landing/": [
 		"./resources/js/Pages/Landing/index.js",
-		24
+		31
 	],
 	"./Landing/Footer": [
 		"./resources/js/Pages/Landing/Footer.js",
-		46
+		55
 	],
 	"./Landing/Footer.js": [
 		"./resources/js/Pages/Landing/Footer.js",
-		46
+		55
 	],
 	"./Landing/Head": [
 		"./resources/js/Pages/Landing/Head.js",
-		0,
-		47
+		5,
+		43
 	],
 	"./Landing/Head.js": [
 		"./resources/js/Pages/Landing/Head.js",
-		0,
-		47
+		5,
+		43
 	],
 	"./Landing/Header": [
 		"./resources/js/Pages/Landing/Header.js",
-		43
+		49
 	],
 	"./Landing/Header.js": [
 		"./resources/js/Pages/Landing/Header.js",
-		43
+		49
 	],
 	"./Landing/Intro": [
 		"./resources/js/Pages/Landing/Intro.js",
-		36
+		44
 	],
 	"./Landing/Intro.js": [
 		"./resources/js/Pages/Landing/Intro.js",
-		36
+		44
 	],
 	"./Landing/Landing": [
 		"./resources/js/Pages/Landing/Landing.js",
-		0,
-		11,
-		28
+		5,
+		21,
+		36
 	],
 	"./Landing/Landing.js": [
 		"./resources/js/Pages/Landing/Landing.js",
-		0,
-		11,
-		28
+		5,
+		21,
+		36
 	],
 	"./Landing/Login": [
 		"./resources/js/Pages/Landing/Login.js",
-		44
+		50
 	],
 	"./Landing/Login.js": [
 		"./resources/js/Pages/Landing/Login.js",
-		44
+		50
 	],
 	"./Landing/OurOffer": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		37
+		45
 	],
 	"./Landing/OurOffer.js": [
 		"./resources/js/Pages/Landing/OurOffer.js",
-		37
+		45
 	],
 	"./Landing/WhyUs": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		38
+		46
 	],
 	"./Landing/WhyUs.js": [
 		"./resources/js/Pages/Landing/WhyUs.js",
-		38
+		46
 	],
 	"./Landing/index": [
 		"./resources/js/Pages/Landing/index.js",
-		24
+		31
 	],
 	"./Landing/index.js": [
 		"./resources/js/Pages/Landing/index.js",
-		24
-	],
-	"./Register.Finish": [
-		"./resources/js/Pages/Register.Finish/index.js",
-		0,
-		1,
-		2,
-		4,
-		3,
-		19,
-		8,
-		6,
-		9,
-		10,
-		12,
-		13,
-		25
-	],
-	"./Register.Finish/": [
-		"./resources/js/Pages/Register.Finish/index.js",
-		0,
-		1,
-		2,
-		4,
-		3,
-		19,
-		8,
-		6,
-		9,
-		10,
-		12,
-		13,
-		25
-	],
-	"./Register.Finish/index": [
-		"./resources/js/Pages/Register.Finish/index.js",
-		0,
-		1,
-		2,
-		4,
-		3,
-		19,
-		8,
-		6,
-		9,
-		10,
-		12,
-		13,
-		25
-	],
-	"./Register.Finish/index.js": [
-		"./resources/js/Pages/Register.Finish/index.js",
-		0,
-		1,
-		2,
-		4,
-		3,
-		19,
-		8,
-		6,
-		9,
-		10,
-		12,
-		13,
-		25
+		31
 	],
 	"./SiteLayout": [
 		"./resources/js/Pages/SiteLayout/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
-		13
+		11,
+		13,
+		15,
+		14
 	],
 	"./SiteLayout/": [
 		"./resources/js/Pages/SiteLayout/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
-		13
+		11,
+		13,
+		15,
+		14
 	],
 	"./SiteLayout/Navbar": [
 		"./resources/js/Pages/SiteLayout/Navbar.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
 		6,
 		9,
-		32
+		7,
+		10,
+		11,
+		62
 	],
 	"./SiteLayout/Navbar.js": [
 		"./resources/js/Pages/SiteLayout/Navbar.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
 		6,
 		9,
-		32
+		7,
+		10,
+		11,
+		62
 	],
 	"./SiteLayout/Sidebar": [
 		"./resources/js/Pages/SiteLayout/Sidebar.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
-		10,
-		39
+		6,
+		9,
+		13,
+		56
 	],
 	"./SiteLayout/Sidebar.js": [
 		"./resources/js/Pages/SiteLayout/Sidebar.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
-		10,
-		39
+		6,
+		9,
+		13,
+		56
 	],
 	"./SiteLayout/SiteFooter": [
 		"./resources/js/Pages/SiteLayout/SiteFooter.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
-		30
+		6,
+		9,
+		40
 	],
 	"./SiteLayout/SiteFooter.js": [
 		"./resources/js/Pages/SiteLayout/SiteFooter.js",
+		0,
 		1,
 		2,
+		3,
 		4,
-		19,
-		8,
-		30
+		6,
+		9,
+		40
 	],
 	"./SiteLayout/index": [
 		"./resources/js/Pages/SiteLayout/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
-		13
+		11,
+		13,
+		15,
+		14
 	],
 	"./SiteLayout/index.js": [
 		"./resources/js/Pages/SiteLayout/index.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
-		13
+		11,
+		13,
+		15,
+		14
 	],
 	"./Template": [
 		"./resources/js/Pages/Template.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		53
+		15,
+		14,
+		63
 	],
 	"./Template.js": [
 		"./resources/js/Pages/Template.js",
 		0,
 		1,
 		2,
-		4,
+		5,
 		3,
-		19,
-		8,
+		4,
+		17,
 		6,
 		9,
+		7,
 		10,
-		12,
+		11,
 		13,
-		53
+		15,
+		14,
+		63
 	]
 };
 function webpackAsyncContext(req) {
