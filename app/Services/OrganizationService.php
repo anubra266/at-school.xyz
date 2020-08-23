@@ -19,8 +19,6 @@ class OrganizationService
         $organization['code'] = $this->organization->generateCode('ORG');
         //*create organization
         $organization = authUser()->organizations()->create($organization);
-        //* Give role to user if it does not exist
-        authUser()->assignRole(authUser()->initial_role);
         return $organization;
     }
 }

@@ -1,1698 +1,643 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[9],{
 
-/***/ "./node_modules/antd/lib/_util/colors.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/_util/colors.js ***!
-  \***********************************************/
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+// This icon file is generated automatically.
+Object.defineProperty(exports, "__esModule", { value: true });
+var EyeInvisibleOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z" } }, { "tag": "path", "attrs": { "d": "M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z" } }] }, "name": "eye-invisible", "theme": "outlined" };
+exports.default = EyeInvisibleOutlined;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PresetColorTypes = exports.PresetStatusColorTypes = void 0;
-
-var _type = __webpack_require__(/*! ./type */ "./node_modules/antd/lib/_util/type.js");
-
-var PresetStatusColorTypes = (0, _type.tuple)('success', 'processing', 'error', 'default', 'warning'); // eslint-disable-next-line import/prefer-default-export
-
-exports.PresetStatusColorTypes = PresetStatusColorTypes;
-var PresetColorTypes = (0, _type.tuple)('pink', 'red', 'yellow', 'orange', 'cyan', 'green', 'blue', 'purple', 'geekblue', 'magenta', 'volcano', 'gold', 'lime');
-exports.PresetColorTypes = PresetColorTypes;
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/_util/isNumeric.js":
-/*!**************************************************!*\
-  !*** ./node_modules/antd/lib/_util/isNumeric.js ***!
-  \**************************************************/
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/EyeOutlined.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/EyeOutlined.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+// This icon file is generated automatically.
+Object.defineProperty(exports, "__esModule", { value: true });
+var EyeOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" } }] }, "name": "eye", "theme": "outlined" };
+exports.default = EyeOutlined;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var isNumeric = function isNumeric(value) {
-  return !isNaN(parseFloat(value)) && isFinite(value);
-};
-
-var _default = isNumeric;
-exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/_util/motion.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/_util/motion.js ***!
-  \***********************************************/
+/***/ "./node_modules/@ant-design/icons/EyeInvisibleOutlined.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/EyeInvisibleOutlined.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-// ================== Collapse Motion ==================
-var getCollapsedHeight = function getCollapsedHeight() {
-  return {
-    height: 0,
-    opacity: 0
-  };
-};
-
-var getRealHeight = function getRealHeight(node) {
-  return {
-    height: node.scrollHeight,
-    opacity: 1
-  };
-};
-
-var getCurrentHeight = function getCurrentHeight(node) {
-  return {
-    height: node.offsetHeight
-  };
-};
-
-var skipOpacityTransition = function skipOpacityTransition(_, event) {
-  return event.propertyName === 'height';
-};
-
-var collapseMotion = {
-  motionName: 'ant-motion-collapse',
-  onAppearStart: getCollapsedHeight,
-  onEnterStart: getCollapsedHeight,
-  onAppearActive: getRealHeight,
-  onEnterActive: getRealHeight,
-  onLeaveStart: getCurrentHeight,
-  onLeaveActive: getCollapsedHeight,
-  onAppearEnd: skipOpacityTransition,
-  onEnterEnd: skipOpacityTransition,
-  onLeaveEnd: skipOpacityTransition,
-  motionDeadline: 500
-};
-var _default = collapseMotion;
-exports["default"] = _default;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _EyeInvisibleOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/EyeInvisibleOutlined */ "./node_modules/@ant-design/icons/lib/icons/EyeInvisibleOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _EyeInvisibleOutlined;
+  exports.default = _default;
+  module.exports = _default;
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/_util/reactNode.js":
-/*!**************************************************!*\
-  !*** ./node_modules/antd/lib/_util/reactNode.js ***!
-  \**************************************************/
+/***/ "./node_modules/@ant-design/icons/EyeOutlined.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@ant-design/icons/EyeOutlined.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.replaceElement = replaceElement;
-exports.cloneElement = cloneElement;
-exports.isValidElement = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var isValidElement = React.isValidElement;
-exports.isValidElement = isValidElement;
-
-function replaceElement(element, replacement, props) {
-  if (!isValidElement(element)) return replacement;
-  return /*#__PURE__*/React.cloneElement(element, typeof props === 'function' ? props() : props);
-}
-
-function cloneElement(element, props) {
-  return replaceElement(element, element, props);
-}
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _EyeOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/EyeOutlined */ "./node_modules/@ant-design/icons/lib/icons/EyeOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _EyeOutlined;
+  exports.default = _default;
+  module.exports = _default;
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/_util/type.js":
-/*!*********************************************!*\
-  !*** ./node_modules/antd/lib/_util/type.js ***!
-  \*********************************************/
+/***/ "./node_modules/@ant-design/icons/lib/icons/EyeInvisibleOutlined.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/lib/icons/EyeInvisibleOutlined.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.tupleNum = exports.tuple = void 0;
-
-// https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
-var tuple = function tuple() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  return args;
-};
-
-exports.tuple = tuple;
-
-var tupleNum = function tupleNum() {
-  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    args[_key2] = arguments[_key2];
-  }
-
-  return args;
-};
-
-exports.tupleNum = tupleNum;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/layout/Sider.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/layout/Sider.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.SiderContext = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+exports.default = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+var _EyeInvisibleOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/EyeInvisibleOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined.js"));
 
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
 
-var _BarsOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/BarsOutlined */ "./node_modules/@ant-design/icons/BarsOutlined.js"));
-
-var _RightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/RightOutlined */ "./node_modules/@ant-design/icons/RightOutlined.js"));
-
-var _LeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LeftOutlined */ "./node_modules/@ant-design/icons/LeftOutlined.js"));
-
-var _layout = __webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _isNumeric = _interopRequireDefault(__webpack_require__(/*! ../_util/isNumeric */ "./node_modules/antd/lib/_util/isNumeric.js"));
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var EyeInvisibleOutlined = function EyeInvisibleOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _EyeInvisibleOutlined.default
+  }));
 };
 
-var dimensionMaxMap = {
-  xs: '479.98px',
-  sm: '575.98px',
-  md: '767.98px',
-  lg: '991.98px',
-  xl: '1199.98px',
-  xxl: '1599.98px'
+EyeInvisibleOutlined.displayName = 'EyeInvisibleOutlined';
+
+var _default = React.forwardRef(EyeInvisibleOutlined);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/lib/icons/EyeOutlined.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/lib/icons/EyeOutlined.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _EyeOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/EyeOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/EyeOutlined.js"));
+
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var EyeOutlined = function EyeOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _EyeOutlined.default
+  }));
 };
-var SiderContext = /*#__PURE__*/React.createContext({});
-exports.SiderContext = SiderContext;
 
-var generateId = function () {
-  var i = 0;
-  return function () {
-    var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    i += 1;
-    return "".concat(prefix).concat(i);
-  };
-}();
+EyeOutlined.displayName = 'EyeOutlined';
 
-var InternalSider = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(InternalSider, _React$Component);
+var _default = React.forwardRef(EyeOutlined);
 
-  var _super = (0, _createSuper2["default"])(InternalSider);
+exports.default = _default;
 
-  function InternalSider(props) {
+/***/ }),
+
+/***/ "./node_modules/rc-textarea/es/ResizableTextArea.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/rc-textarea/es/ResizableTextArea.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var rc_resize_observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rc-resize-observer */ "./node_modules/rc-resize-observer/es/index.js");
+/* harmony import */ var omit_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _calculateNodeHeight__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./calculateNodeHeight */ "./node_modules/rc-textarea/es/calculateNodeHeight.js");
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+ // eslint-disable-next-line @typescript-eslint/naming-convention
+
+var RESIZE_STATUS;
+
+(function (RESIZE_STATUS) {
+  RESIZE_STATUS[RESIZE_STATUS["NONE"] = 0] = "NONE";
+  RESIZE_STATUS[RESIZE_STATUS["RESIZING"] = 1] = "RESIZING";
+  RESIZE_STATUS[RESIZE_STATUS["RESIZED"] = 2] = "RESIZED";
+})(RESIZE_STATUS || (RESIZE_STATUS = {}));
+
+var ResizableTextArea = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(ResizableTextArea, _React$Component);
+
+  var _super = _createSuper(ResizableTextArea);
+
+  function ResizableTextArea(props) {
     var _this;
 
-    (0, _classCallCheck2["default"])(this, InternalSider);
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ResizableTextArea);
+
     _this = _super.call(this, props);
 
-    _this.responsiveHandler = function (mql) {
+    _this.saveTextArea = function (textArea) {
+      _this.textArea = textArea;
+    };
+
+    _this.handleResize = function (size) {
+      var resizeStatus = _this.state.resizeStatus;
+      var _this$props = _this.props,
+          autoSize = _this$props.autoSize,
+          onResize = _this$props.onResize;
+
+      if (resizeStatus !== RESIZE_STATUS.NONE) {
+        return;
+      }
+
+      if (typeof onResize === 'function') {
+        onResize(size);
+      }
+
+      if (autoSize) {
+        _this.resizeOnNextFrame();
+      }
+    };
+
+    _this.resizeOnNextFrame = function () {
+      cancelAnimationFrame(_this.nextFrameActionId);
+      _this.nextFrameActionId = requestAnimationFrame(_this.resizeTextarea);
+    };
+
+    _this.resizeTextarea = function () {
+      var autoSize = _this.props.autoSize;
+
+      if (!autoSize || !_this.textArea) {
+        return;
+      }
+
+      var minRows = autoSize.minRows,
+          maxRows = autoSize.maxRows;
+      var textareaStyles = Object(_calculateNodeHeight__WEBPACK_IMPORTED_MODULE_10__["default"])(_this.textArea, false, minRows, maxRows);
+
       _this.setState({
-        below: mql.matches
-      });
+        textareaStyles: textareaStyles,
+        resizeStatus: RESIZE_STATUS.RESIZING
+      }, function () {
+        cancelAnimationFrame(_this.resizeFrameId);
+        _this.resizeFrameId = requestAnimationFrame(function () {
+          _this.setState({
+            resizeStatus: RESIZE_STATUS.RESIZED
+          }, function () {
+            _this.resizeFrameId = requestAnimationFrame(function () {
+              _this.setState({
+                resizeStatus: RESIZE_STATUS.NONE
+              });
 
-      var onBreakpoint = _this.props.onBreakpoint;
-
-      if (onBreakpoint) {
-        onBreakpoint(mql.matches);
-      }
-
-      if (_this.state.collapsed !== mql.matches) {
-        _this.setCollapsed(mql.matches, 'responsive');
-      }
-    };
-
-    _this.setCollapsed = function (collapsed, type) {
-      if (!('collapsed' in _this.props)) {
-        _this.setState({
-          collapsed: collapsed
+              _this.fixFirefoxAutoScroll();
+            });
+          });
         });
-      }
-
-      var onCollapse = _this.props.onCollapse;
-
-      if (onCollapse) {
-        onCollapse(collapsed, type);
-      }
-    };
-
-    _this.toggle = function () {
-      var collapsed = !_this.state.collapsed;
-
-      _this.setCollapsed(collapsed, 'clickTrigger');
-    };
-
-    _this.renderSider = function (_ref) {
-      var _classNames;
-
-      var getPrefixCls = _ref.getPrefixCls;
-
-      var _a = _this.props,
-          customizePrefixCls = _a.prefixCls,
-          className = _a.className,
-          theme = _a.theme,
-          collapsible = _a.collapsible,
-          reverseArrow = _a.reverseArrow,
-          trigger = _a.trigger,
-          style = _a.style,
-          width = _a.width,
-          collapsedWidth = _a.collapsedWidth,
-          zeroWidthTriggerStyle = _a.zeroWidthTriggerStyle,
-          children = _a.children,
-          others = __rest(_a, ["prefixCls", "className", "theme", "collapsible", "reverseArrow", "trigger", "style", "width", "collapsedWidth", "zeroWidthTriggerStyle", "children"]);
-
-      var _this$state = _this.state,
-          collapsed = _this$state.collapsed,
-          below = _this$state.below;
-      var prefixCls = getPrefixCls('layout-sider', customizePrefixCls);
-      var divProps = (0, _omit["default"])(others, ['collapsed', 'defaultCollapsed', 'onCollapse', 'breakpoint', 'onBreakpoint', 'siderHook', 'zeroWidthTriggerStyle']);
-      var rawWidth = collapsed ? collapsedWidth : width; // use "px" as fallback unit for width
-
-      var siderWidth = (0, _isNumeric["default"])(rawWidth) ? "".concat(rawWidth, "px") : String(rawWidth); // special trigger when collapsedWidth == 0
-
-      var zeroWidthTrigger = parseFloat(String(collapsedWidth || 0)) === 0 ? /*#__PURE__*/React.createElement("span", {
-        onClick: _this.toggle,
-        className: (0, _classnames["default"])("".concat(prefixCls, "-zero-width-trigger"), "".concat(prefixCls, "-zero-width-trigger-").concat(reverseArrow ? 'right' : 'left')),
-        style: zeroWidthTriggerStyle
-      }, trigger || /*#__PURE__*/React.createElement(_BarsOutlined["default"], null)) : null;
-      var iconObj = {
-        expanded: reverseArrow ? /*#__PURE__*/React.createElement(_RightOutlined["default"], null) : /*#__PURE__*/React.createElement(_LeftOutlined["default"], null),
-        collapsed: reverseArrow ? /*#__PURE__*/React.createElement(_LeftOutlined["default"], null) : /*#__PURE__*/React.createElement(_RightOutlined["default"], null)
-      };
-      var status = collapsed ? 'collapsed' : 'expanded';
-      var defaultTrigger = iconObj[status];
-      var triggerDom = trigger !== null ? zeroWidthTrigger || /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-trigger"),
-        onClick: _this.toggle,
-        style: {
-          width: siderWidth
-        }
-      }, trigger || defaultTrigger) : null;
-      var divStyle = (0, _extends2["default"])((0, _extends2["default"])({}, style), {
-        flex: "0 0 ".concat(siderWidth),
-        maxWidth: siderWidth,
-        minWidth: siderWidth,
-        width: siderWidth
       });
-      var siderCls = (0, _classnames["default"])(className, prefixCls, "".concat(prefixCls, "-").concat(theme), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-collapsed"), !!collapsed), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-trigger"), collapsible && trigger !== null && !zeroWidthTrigger), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-below"), !!below), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-zero-width"), parseFloat(siderWidth) === 0), _classNames));
-      return /*#__PURE__*/React.createElement("aside", (0, _extends2["default"])({
-        className: siderCls
-      }, divProps, {
-        style: divStyle
-      }), /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-children")
-      }, children), collapsible || below && zeroWidthTrigger ? triggerDom : null);
     };
 
-    _this.uniqueId = generateId('ant-sider-');
-    var matchMedia;
+    _this.renderTextArea = function () {
+      var _this$props2 = _this.props,
+          _this$props2$prefixCl = _this$props2.prefixCls,
+          prefixCls = _this$props2$prefixCl === void 0 ? 'rc-textarea' : _this$props2$prefixCl,
+          autoSize = _this$props2.autoSize,
+          onResize = _this$props2.onResize,
+          className = _this$props2.className,
+          disabled = _this$props2.disabled;
+      var _this$state = _this.state,
+          textareaStyles = _this$state.textareaStyles,
+          resizeStatus = _this$state.resizeStatus;
+      var otherProps = Object(omit_js__WEBPACK_IMPORTED_MODULE_8__["default"])(_this.props, ['prefixCls', 'onPressEnter', 'autoSize', 'defaultValue', 'onResize']);
+      var cls = classnames__WEBPACK_IMPORTED_MODULE_9___default()(prefixCls, className, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, "".concat(prefixCls, "-disabled"), disabled)); // Fix https://github.com/ant-design/ant-design/issues/6776
+      // Make sure it could be reset when using form.getFieldDecorator
 
-    if (typeof window !== 'undefined') {
-      matchMedia = window.matchMedia;
-    }
+      if ('value' in otherProps) {
+        otherProps.value = otherProps.value || '';
+      }
 
-    if (matchMedia && props.breakpoint && props.breakpoint in dimensionMaxMap) {
-      _this.mql = matchMedia("(max-width: ".concat(dimensionMaxMap[props.breakpoint], ")"));
-    }
+      var style = _objectSpread(_objectSpread(_objectSpread({}, _this.props.style), textareaStyles), resizeStatus === RESIZE_STATUS.RESIZING ? // React will warning when mix `overflow` & `overflowY`.
+      // We need to define this separately.
+      {
+        overflowX: 'hidden',
+        overflowY: 'hidden'
+      } : null);
 
-    var collapsed;
-
-    if ('collapsed' in props) {
-      collapsed = props.collapsed;
-    } else {
-      collapsed = props.defaultCollapsed;
-    }
+      return react__WEBPACK_IMPORTED_MODULE_6__["createElement"](rc_resize_observer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        onResize: _this.handleResize,
+        disabled: !(autoSize || onResize)
+      }, react__WEBPACK_IMPORTED_MODULE_6__["createElement"]("textarea", Object.assign({}, otherProps, {
+        className: cls,
+        style: style,
+        ref: _this.saveTextArea
+      })));
+    };
 
     _this.state = {
-      collapsed: collapsed,
-      below: false
+      textareaStyles: {},
+      resizeStatus: RESIZE_STATUS.NONE
     };
     return _this;
   }
 
-  (0, _createClass2["default"])(InternalSider, [{
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ResizableTextArea, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.mql) {
-        this.mql.addListener(this.responsiveHandler);
-        this.responsiveHandler(this.mql);
-      }
-
-      if (this.props.siderHook) {
-        this.props.siderHook.addSider(this.uniqueId);
+      this.resizeTextarea();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      // Re-render with the new content then recalculate the height as required.
+      if (prevProps.value !== this.props.value) {
+        this.resizeTextarea();
       }
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      if (this.mql) {
-        this.mql.removeListener(this.responsiveHandler);
-      }
+      cancelAnimationFrame(this.nextFrameActionId);
+      cancelAnimationFrame(this.resizeFrameId);
+    } // https://github.com/ant-design/ant-design/issues/21870
 
-      if (this.props.siderHook) {
-        this.props.siderHook.removeSider(this.uniqueId);
+  }, {
+    key: "fixFirefoxAutoScroll",
+    value: function fixFirefoxAutoScroll() {
+      try {
+        if (document.activeElement === this.textArea) {
+          var currentStart = this.textArea.selectionStart;
+          var currentEnd = this.textArea.selectionEnd;
+          this.textArea.setSelectionRange(currentStart, currentEnd);
+        }
+      } catch (e) {// Fix error in Chrome:
+        // Failed to read the 'selectionStart' property from 'HTMLInputElement'
+        // http://stackoverflow.com/q/21177489/3040605
       }
     }
   }, {
     key: "render",
     value: function render() {
-      var collapsed = this.state.collapsed;
-      var collapsedWidth = this.props.collapsedWidth;
-      return /*#__PURE__*/React.createElement(SiderContext.Provider, {
-        value: {
-          siderCollapsed: collapsed,
-          collapsedWidth: collapsedWidth
-        }
-      }, /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderSider));
+      return this.renderTextArea();
+    }
+  }]);
+
+  return ResizableTextArea;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ResizableTextArea);
+
+/***/ }),
+
+/***/ "./node_modules/rc-textarea/es/calculateNodeHeight.js":
+/*!************************************************************!*\
+  !*** ./node_modules/rc-textarea/es/calculateNodeHeight.js ***!
+  \************************************************************/
+/*! exports provided: calculateNodeStyling, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "calculateNodeStyling", function() { return calculateNodeStyling; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return calculateNodeHeight; });
+// Thanks to https://github.com/andreypopp/react-textarea-autosize/
+
+/**
+ * calculateNodeHeight(uiTextNode, useCache = false)
+ */
+var HIDDEN_TEXTAREA_STYLE = "\n  min-height:0 !important;\n  max-height:none !important;\n  height:0 !important;\n  visibility:hidden !important;\n  overflow:hidden !important;\n  position:absolute !important;\n  z-index:-1000 !important;\n  top:0 !important;\n  right:0 !important\n";
+var SIZING_STYLE = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'font-variant', 'text-rendering', 'text-transform', 'width', 'text-indent', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+var computedStyleCache = {};
+var hiddenTextarea;
+function calculateNodeStyling(node) {
+  var useCache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var nodeRef = node.getAttribute('id') || node.getAttribute('data-reactid') || node.getAttribute('name');
+
+  if (useCache && computedStyleCache[nodeRef]) {
+    return computedStyleCache[nodeRef];
+  }
+
+  var style = window.getComputedStyle(node);
+  var boxSizing = style.getPropertyValue('box-sizing') || style.getPropertyValue('-moz-box-sizing') || style.getPropertyValue('-webkit-box-sizing');
+  var paddingSize = parseFloat(style.getPropertyValue('padding-bottom')) + parseFloat(style.getPropertyValue('padding-top'));
+  var borderSize = parseFloat(style.getPropertyValue('border-bottom-width')) + parseFloat(style.getPropertyValue('border-top-width'));
+  var sizingStyle = SIZING_STYLE.map(function (name) {
+    return "".concat(name, ":").concat(style.getPropertyValue(name));
+  }).join(';');
+  var nodeInfo = {
+    sizingStyle: sizingStyle,
+    paddingSize: paddingSize,
+    borderSize: borderSize,
+    boxSizing: boxSizing
+  };
+
+  if (useCache && nodeRef) {
+    computedStyleCache[nodeRef] = nodeInfo;
+  }
+
+  return nodeInfo;
+}
+function calculateNodeHeight(uiTextNode) {
+  var useCache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var minRows = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var maxRows = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+
+  if (!hiddenTextarea) {
+    hiddenTextarea = document.createElement('textarea');
+    hiddenTextarea.setAttribute('tab-index', '-1');
+    hiddenTextarea.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(hiddenTextarea);
+  } // Fix wrap="off" issue
+  // https://github.com/ant-design/ant-design/issues/6577
+
+
+  if (uiTextNode.getAttribute('wrap')) {
+    hiddenTextarea.setAttribute('wrap', uiTextNode.getAttribute('wrap'));
+  } else {
+    hiddenTextarea.removeAttribute('wrap');
+  } // Copy all CSS properties that have an impact on the height of the content in
+  // the textbox
+
+
+  var _calculateNodeStyling = calculateNodeStyling(uiTextNode, useCache),
+      paddingSize = _calculateNodeStyling.paddingSize,
+      borderSize = _calculateNodeStyling.borderSize,
+      boxSizing = _calculateNodeStyling.boxSizing,
+      sizingStyle = _calculateNodeStyling.sizingStyle; // Need to have the overflow attribute to hide the scrollbar otherwise
+  // text-lines will not calculated properly as the shadow will technically be
+  // narrower for content
+
+
+  hiddenTextarea.setAttribute('style', "".concat(sizingStyle, ";").concat(HIDDEN_TEXTAREA_STYLE));
+  hiddenTextarea.value = uiTextNode.value || uiTextNode.placeholder || '';
+  var minHeight = Number.MIN_SAFE_INTEGER;
+  var maxHeight = Number.MAX_SAFE_INTEGER;
+  var height = hiddenTextarea.scrollHeight;
+  var overflowY;
+
+  if (boxSizing === 'border-box') {
+    // border-box: add border, since height = content + padding + border
+    height += borderSize;
+  } else if (boxSizing === 'content-box') {
+    // remove padding, since height = content
+    height -= paddingSize;
+  }
+
+  if (minRows !== null || maxRows !== null) {
+    // measure height of a textarea with a single row
+    hiddenTextarea.value = ' ';
+    var singleRowHeight = hiddenTextarea.scrollHeight - paddingSize;
+
+    if (minRows !== null) {
+      minHeight = singleRowHeight * minRows;
+
+      if (boxSizing === 'border-box') {
+        minHeight = minHeight + paddingSize + borderSize;
+      }
+
+      height = Math.max(minHeight, height);
+    }
+
+    if (maxRows !== null) {
+      maxHeight = singleRowHeight * maxRows;
+
+      if (boxSizing === 'border-box') {
+        maxHeight = maxHeight + paddingSize + borderSize;
+      }
+
+      overflowY = height > maxHeight ? '' : 'hidden';
+      height = Math.min(maxHeight, height);
+    }
+  }
+
+  return {
+    height: height,
+    minHeight: minHeight,
+    maxHeight: maxHeight,
+    overflowY: overflowY
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/rc-textarea/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/rc-textarea/es/index.js ***!
+  \**********************************************/
+/*! exports provided: ResizableTextArea, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ResizableTextArea */ "./node_modules/rc-textarea/es/ResizableTextArea.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResizableTextArea", function() { return _ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+var TextArea = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_2__["default"])(TextArea, _React$Component);
+
+  var _super = _createSuper(TextArea);
+
+  function TextArea(props) {
+    var _this;
+
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TextArea);
+
+    _this = _super.call(this, props);
+
+    _this.focus = function () {
+      _this.resizableTextArea.textArea.focus();
+    };
+
+    _this.saveTextArea = function (resizableTextArea) {
+      _this.resizableTextArea = resizableTextArea;
+    };
+
+    _this.handleChange = function (e) {
+      var onChange = _this.props.onChange;
+
+      _this.setValue(e.target.value, function () {
+        _this.resizableTextArea.resizeTextarea();
+      });
+
+      if (onChange) {
+        onChange(e);
+      }
+    };
+
+    _this.handleKeyDown = function (e) {
+      var _this$props = _this.props,
+          onPressEnter = _this$props.onPressEnter,
+          onKeyDown = _this$props.onKeyDown;
+
+      if (e.keyCode === 13 && onPressEnter) {
+        onPressEnter(e);
+      }
+
+      if (onKeyDown) {
+        onKeyDown(e);
+      }
+    };
+
+    var value = typeof props.value === 'undefined' || props.value === null ? props.defaultValue : props.value;
+    _this.state = {
+      value: value
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(TextArea, [{
+    key: "setValue",
+    value: function setValue(value, callback) {
+      if (!('value' in this.props)) {
+        this.setState({
+          value: value
+        }, callback);
+      }
+    }
+  }, {
+    key: "blur",
+    value: function blur() {
+      this.resizableTextArea.textArea.blur();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5__["createElement"](_ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__["default"], Object.assign({}, this.props, {
+        value: this.state.value,
+        onKeyDown: this.handleKeyDown,
+        onChange: this.handleChange,
+        ref: this.saveTextArea
+      }));
     }
   }], [{
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps) {
-      if ('collapsed' in nextProps) {
+      if ('value' in nextProps) {
         return {
-          collapsed: nextProps.collapsed
+          value: nextProps.value
         };
       }
 
       return null;
     }
   }]);
-  return InternalSider;
-}(React.Component);
 
-InternalSider.defaultProps = {
-  collapsible: false,
-  defaultCollapsed: false,
-  reverseArrow: false,
-  width: 200,
-  collapsedWidth: 80,
-  style: {},
-  theme: 'dark'
-}; // eslint-disable-next-line react/prefer-stateless-function
+  return TextArea;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
-var Sider = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(Sider, _React$Component2);
 
-  var _super2 = (0, _createSuper2["default"])(Sider);
-
-  function Sider() {
-    (0, _classCallCheck2["default"])(this, Sider);
-    return _super2.apply(this, arguments);
-  }
-
-  (0, _createClass2["default"])(Sider, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/React.createElement(_layout.LayoutContext.Consumer, null, function (context) {
-        return /*#__PURE__*/React.createElement(InternalSider, (0, _extends2["default"])({}, context, _this2.props));
-      });
-    }
-  }]);
-  return Sider;
-}(React.Component);
-
-exports["default"] = Sider;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/layout/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/layout/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _layout = _interopRequireDefault(__webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js"));
-
-var _Sider = _interopRequireDefault(__webpack_require__(/*! ./Sider */ "./node_modules/antd/lib/layout/Sider.js"));
-
-_layout["default"].Sider = _Sider["default"];
-var _default = _layout["default"];
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/layout/layout.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/layout/layout.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = exports.LayoutContext = void 0;
-
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var LayoutContext = /*#__PURE__*/React.createContext({
-  siderHook: {
-    addSider: function addSider() {
-      return null;
-    },
-    removeSider: function removeSider() {
-      return null;
-    }
-  }
-});
-exports.LayoutContext = LayoutContext;
-
-function generator(_ref) {
-  var suffixCls = _ref.suffixCls,
-      tagName = _ref.tagName,
-      displayName = _ref.displayName;
-  return function (BasicComponent) {
-    var _a;
-
-    return _a = /*#__PURE__*/function (_React$Component) {
-      (0, _inherits2["default"])(Adapter, _React$Component);
-
-      var _super = (0, _createSuper2["default"])(Adapter);
-
-      function Adapter() {
-        var _this;
-
-        (0, _classCallCheck2["default"])(this, Adapter);
-        _this = _super.apply(this, arguments);
-
-        _this.renderComponent = function (_ref2) {
-          var getPrefixCls = _ref2.getPrefixCls;
-          var customizePrefixCls = _this.props.prefixCls;
-          var prefixCls = getPrefixCls(suffixCls, customizePrefixCls);
-          return /*#__PURE__*/React.createElement(BasicComponent, (0, _extends2["default"])({
-            prefixCls: prefixCls,
-            tagName: tagName
-          }, _this.props));
-        };
-
-        return _this;
-      }
-
-      (0, _createClass2["default"])(Adapter, [{
-        key: "render",
-        value: function render() {
-          return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-        }
-      }]);
-      return Adapter;
-    }(React.Component), _a.displayName = displayName, _a;
-  };
-}
-
-var Basic = function Basic(props) {
-  var prefixCls = props.prefixCls,
-      className = props.className,
-      children = props.children,
-      tagName = props.tagName,
-      others = __rest(props, ["prefixCls", "className", "children", "tagName"]);
-
-  var classString = (0, _classnames["default"])(prefixCls, className);
-  return /*#__PURE__*/React.createElement(tagName, (0, _extends2["default"])({
-    className: classString
-  }, others), children);
-};
-
-var BasicLayout = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(BasicLayout, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(BasicLayout);
-
-  function BasicLayout() {
-    var _this2;
-
-    (0, _classCallCheck2["default"])(this, BasicLayout);
-    _this2 = _super2.apply(this, arguments);
-    _this2.state = {
-      siders: []
-    };
-
-    _this2.renderComponent = function (_ref3) {
-      var _classNames;
-
-      var direction = _ref3.direction;
-
-      var _a = _this2.props,
-          prefixCls = _a.prefixCls,
-          className = _a.className,
-          children = _a.children,
-          hasSider = _a.hasSider,
-          Tag = _a.tagName,
-          others = __rest(_a, ["prefixCls", "className", "children", "hasSider", "tagName"]);
-
-      var classString = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-sider"), typeof hasSider === 'boolean' ? hasSider : _this2.state.siders.length > 0), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
-      return /*#__PURE__*/React.createElement(LayoutContext.Provider, {
-        value: {
-          siderHook: _this2.getSiderHook()
-        }
-      }, /*#__PURE__*/React.createElement(Tag, (0, _extends2["default"])({
-        className: classString
-      }, others), children));
-    };
-
-    return _this2;
-  }
-
-  (0, _createClass2["default"])(BasicLayout, [{
-    key: "getSiderHook",
-    value: function getSiderHook() {
-      var _this3 = this;
-
-      return {
-        addSider: function addSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: [].concat((0, _toConsumableArray2["default"])(state.siders), [id])
-            };
-          });
-        },
-        removeSider: function removeSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: state.siders.filter(function (currentId) {
-                return currentId !== id;
-              })
-            };
-          });
-        }
-      };
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-    }
-  }]);
-  return BasicLayout;
-}(React.Component);
-
-var Layout = generator({
-  suffixCls: 'layout',
-  tagName: 'section',
-  displayName: 'Layout'
-})(BasicLayout);
-var Header = generator({
-  suffixCls: 'layout-header',
-  tagName: 'header',
-  displayName: 'Header'
-})(Basic);
-var Footer = generator({
-  suffixCls: 'layout-footer',
-  tagName: 'footer',
-  displayName: 'Footer'
-})(Basic);
-var Content = generator({
-  suffixCls: 'layout-content',
-  tagName: 'main',
-  displayName: 'Content'
-})(Basic);
-Layout.Header = Header;
-Layout.Footer = Footer;
-Layout.Content = Content;
-var _default = Layout;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/MenuContext.js":
-/*!***************************************************!*\
-  !*** ./node_modules/antd/lib/menu/MenuContext.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var MenuContext = /*#__PURE__*/(0, _react.createContext)({
-  inlineCollapsed: false
-});
-var _default = MenuContext;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/MenuItem.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/menu/MenuItem.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
-
-var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var _tooltip = _interopRequireDefault(__webpack_require__(/*! ../tooltip */ "./node_modules/antd/lib/tooltip/index.js"));
-
-var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var MenuItem = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(MenuItem, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(MenuItem);
-
-  function MenuItem() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, MenuItem);
-    _this = _super.apply(this, arguments);
-
-    _this.onKeyDown = function (e) {
-      _this.menuItem.onKeyDown(e);
-    };
-
-    _this.saveMenuItem = function (menuItem) {
-      _this.menuItem = menuItem;
-    };
-
-    _this.renderItem = function (_ref) {
-      var siderCollapsed = _ref.siderCollapsed;
-      var _this$props = _this.props,
-          level = _this$props.level,
-          className = _this$props.className,
-          children = _this$props.children,
-          rootPrefixCls = _this$props.rootPrefixCls;
-
-      var _a = _this.props,
-          title = _a.title,
-          icon = _a.icon,
-          danger = _a.danger,
-          rest = __rest(_a, ["title", "icon", "danger"]);
-
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref2) {
-        var _classNames;
-
-        var inlineCollapsed = _ref2.inlineCollapsed,
-            direction = _ref2.direction;
-        var tooltipTitle = title;
-
-        if (typeof title === 'undefined') {
-          tooltipTitle = level === 1 ? children : '';
-        } else if (title === false) {
-          tooltipTitle = '';
-        }
-
-        var tooltipProps = {
-          title: tooltipTitle
-        };
-
-        if (!siderCollapsed && !inlineCollapsed) {
-          tooltipProps.title = null; // Reset `visible` to fix control mode tooltip display not correct
-          // ref: https://github.com/ant-design/ant-design/issues/16742
-
-          tooltipProps.visible = false;
-        }
-
-        var childrenLength = (0, _toArray["default"])(children).length;
-        return /*#__PURE__*/React.createElement(_tooltip["default"], (0, _extends2["default"])({}, tooltipProps, {
-          placement: direction === 'rtl' ? 'left' : 'right',
-          overlayClassName: "".concat(rootPrefixCls, "-inline-collapsed-tooltip")
-        }), /*#__PURE__*/React.createElement(_rcMenu.Item, (0, _extends2["default"])({}, rest, {
-          className: (0, _classnames["default"])(className, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-danger"), danger), (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-only-child"), (icon ? childrenLength + 1 : childrenLength) === 1), _classNames)),
-          title: title,
-          ref: _this.saveMenuItem
-        }), icon, _this.renderItemChildren(inlineCollapsed)));
-      });
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(MenuItem, [{
-    key: "renderItemChildren",
-    value: function renderItemChildren(inlineCollapsed) {
-      var _this$props2 = this.props,
-          icon = _this$props2.icon,
-          children = _this$props2.children,
-          level = _this$props2.level,
-          rootPrefixCls = _this$props2.rootPrefixCls; // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
-      // ref: https://github.com/ant-design/ant-design/pull/23456
-
-      if (!icon || (0, _reactNode.isValidElement)(children) && children.type === 'span') {
-        if (children && inlineCollapsed && level === 1 && typeof children === 'string') {
-          return /*#__PURE__*/React.createElement("div", {
-            className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
-          }, children.charAt(0));
-        }
-
-        return children;
-      }
-
-      return /*#__PURE__*/React.createElement("span", null, children);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, this.renderItem);
-    }
-  }]);
-  return MenuItem;
-}(React.Component);
-
-exports["default"] = MenuItem;
-MenuItem.isMenuItem = true;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/SubMenu.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/menu/SubMenu.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var SubMenu = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(SubMenu, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(SubMenu);
-
-  function SubMenu() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, SubMenu);
-    _this = _super.apply(this, arguments);
-
-    _this.onKeyDown = function (e) {
-      _this.subMenu.onKeyDown(e);
-    };
-
-    _this.saveSubMenu = function (subMenu) {
-      _this.subMenu = subMenu;
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(SubMenu, [{
-    key: "renderTitle",
-    value: function renderTitle(inlineCollapsed) {
-      var _this$props = this.props,
-          icon = _this$props.icon,
-          title = _this$props.title,
-          level = _this$props.level,
-          rootPrefixCls = _this$props.rootPrefixCls;
-
-      if (!icon) {
-        return inlineCollapsed && level === 1 && title && typeof title === 'string' ? /*#__PURE__*/React.createElement("div", {
-          className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
-        }, title.charAt(0)) : title;
-      } // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
-      // ref: https://github.com/ant-design/ant-design/pull/23456
-
-
-      var titleIsSpan = (0, _reactNode.isValidElement)(title) && title.type === 'span';
-      return /*#__PURE__*/React.createElement(React.Fragment, null, icon, titleIsSpan ? title : /*#__PURE__*/React.createElement("span", null, title));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props2 = this.props,
-          rootPrefixCls = _this$props2.rootPrefixCls,
-          popupClassName = _this$props2.popupClassName;
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref) {
-        var inlineCollapsed = _ref.inlineCollapsed,
-            antdMenuTheme = _ref.antdMenuTheme;
-        return /*#__PURE__*/React.createElement(_rcMenu.SubMenu, (0, _extends2["default"])({}, (0, _omit["default"])(_this2.props, ['icon']), {
-          title: _this2.renderTitle(inlineCollapsed),
-          ref: _this2.saveSubMenu,
-          popupClassName: (0, _classnames["default"])(rootPrefixCls, "".concat(rootPrefixCls, "-").concat(antdMenuTheme), popupClassName)
-        }));
-      });
-    }
-  }]);
-  return SubMenu;
-}(React.Component);
-
-SubMenu.contextType = _MenuContext["default"]; // fix issue:https://github.com/ant-design/ant-design/issues/8666
-
-SubMenu.isSubMenu = 1;
-var _default = SubMenu;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/menu/index.js":
-/*!*********************************************!*\
-  !*** ./node_modules/antd/lib/menu/index.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcMenu = _interopRequireWildcard(__webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _SubMenu = _interopRequireDefault(__webpack_require__(/*! ./SubMenu */ "./node_modules/antd/lib/menu/SubMenu.js"));
-
-var _MenuItem = _interopRequireDefault(__webpack_require__(/*! ./MenuItem */ "./node_modules/antd/lib/menu/MenuItem.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
-
-var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
-
-var _motion = _interopRequireDefault(__webpack_require__(/*! ../_util/motion */ "./node_modules/antd/lib/_util/motion.js"));
-
-var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
-
-var InternalMenu = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(InternalMenu, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(InternalMenu);
-
-  function InternalMenu(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, InternalMenu);
-    _this = _super.call(this, props);
-
-    _this.renderMenu = function (_ref) {
-      var getPopupContainer = _ref.getPopupContainer,
-          getPrefixCls = _ref.getPrefixCls,
-          direction = _ref.direction;
-      var _this$props = _this.props,
-          customizePrefixCls = _this$props.prefixCls,
-          className = _this$props.className,
-          theme = _this$props.theme;
-      var defaultMotions = {
-        horizontal: {
-          motionName: 'slide-up'
-        },
-        inline: _motion["default"],
-        other: {
-          motionName: 'zoom-big'
-        }
-      };
-      var prefixCls = getPrefixCls('menu', customizePrefixCls);
-      var menuClassName = (0, _classnames["default"])(className, "".concat(prefixCls, "-").concat(theme), (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-inline-collapsed"), _this.getInlineCollapsed()));
-      return /*#__PURE__*/React.createElement(_MenuContext["default"].Provider, {
-        value: {
-          inlineCollapsed: _this.getInlineCollapsed() || false,
-          antdMenuTheme: theme,
-          direction: direction
-        }
-      }, /*#__PURE__*/React.createElement(_rcMenu["default"], (0, _extends2["default"])({
-        getPopupContainer: getPopupContainer
-      }, _this.props, {
-        className: menuClassName,
-        prefixCls: prefixCls,
-        direction: direction,
-        defaultMotions: defaultMotions
-      })));
-    };
-
-    (0, _devWarning["default"])(!('inlineCollapsed' in props && props.mode !== 'inline'), 'Menu', '`inlineCollapsed` should only be used when `mode` is inline.');
-    (0, _devWarning["default"])(!(props.siderCollapsed !== undefined && 'inlineCollapsed' in props), 'Menu', '`inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.');
-    return _this;
-  }
-
-  (0, _createClass2["default"])(InternalMenu, [{
-    key: "getInlineCollapsed",
-    value: function getInlineCollapsed() {
-      var _this$props2 = this.props,
-          inlineCollapsed = _this$props2.inlineCollapsed,
-          siderCollapsed = _this$props2.siderCollapsed;
-
-      if (siderCollapsed !== undefined) {
-        return siderCollapsed;
-      }
-
-      return inlineCollapsed;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderMenu);
-    }
-  }]);
-  return InternalMenu;
-}(React.Component);
-
-InternalMenu.defaultProps = {
-  className: '',
-  theme: 'light',
-  focusable: false
-}; // We should keep this as ref-able
-
-var Menu = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(Menu, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(Menu);
-
-  function Menu() {
-    (0, _classCallCheck2["default"])(this, Menu);
-    return _super2.apply(this, arguments);
-  }
-
-  (0, _createClass2["default"])(Menu, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, function (context) {
-        return /*#__PURE__*/React.createElement(InternalMenu, (0, _extends2["default"])({}, _this2.props, context));
-      });
-    }
-  }]);
-  return Menu;
-}(React.Component);
-
-exports["default"] = Menu;
-Menu.Divider = _rcMenu.Divider;
-Menu.Item = _MenuItem["default"];
-Menu.SubMenu = _SubMenu["default"];
-Menu.ItemGroup = _rcMenu.ItemGroup;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/tooltip/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/tooltip/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcTooltip = _interopRequireDefault(__webpack_require__(/*! rc-tooltip */ "./node_modules/rc-tooltip/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _placements = _interopRequireDefault(__webpack_require__(/*! ./placements */ "./node_modules/antd/lib/tooltip/placements.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _colors = __webpack_require__(/*! ../_util/colors */ "./node_modules/antd/lib/_util/colors.js");
-
-var splitObject = function splitObject(obj, keys) {
-  var picked = {};
-  var omitted = (0, _extends2["default"])({}, obj);
-  keys.forEach(function (key) {
-    if (obj && key in obj) {
-      picked[key] = obj[key];
-      delete omitted[key];
-    }
-  });
-  return {
-    picked: picked,
-    omitted: omitted
-  };
-};
-
-var PresetColorRegex = new RegExp("^(".concat(_colors.PresetColorTypes.join('|'), ")(-inverse)?$")); // Fix Tooltip won't hide at disabled button
-// mouse events don't trigger at disabled button in Chrome
-// https://github.com/react-component/tooltip/issues/18
-
-function getDisabledCompatibleChildren(element, prefixCls) {
-  var elementType = element.type;
-
-  if ((elementType.__ANT_BUTTON === true || elementType.__ANT_SWITCH === true || elementType.__ANT_CHECKBOX === true || element.type === 'button') && element.props.disabled) {
-    // Pick some layout related style properties up to span
-    // Prevent layout bugs like https://github.com/ant-design/ant-design/issues/5254
-    var _splitObject = splitObject(element.props.style, ['position', 'left', 'right', 'top', 'bottom', 'float', 'display', 'zIndex']),
-        picked = _splitObject.picked,
-        omitted = _splitObject.omitted;
-
-    var spanStyle = (0, _extends2["default"])((0, _extends2["default"])({
-      display: 'inline-block'
-    }, picked), {
-      cursor: 'not-allowed',
-      width: element.props.block ? '100%' : null
-    });
-    var buttonStyle = (0, _extends2["default"])((0, _extends2["default"])({}, omitted), {
-      pointerEvents: 'none'
-    });
-    var child = (0, _reactNode.cloneElement)(element, {
-      style: buttonStyle,
-      className: null
-    });
-    return /*#__PURE__*/React.createElement("span", {
-      style: spanStyle,
-      className: (0, _classnames["default"])(element.props.className, "".concat(prefixCls, "-disabled-compatible-wrapper"))
-    }, child);
-  }
-
-  return element;
-}
-
-var Tooltip = /*#__PURE__*/React.forwardRef(function (props, ref) {
-  var _classNames2;
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getContextPopupContainer = _React$useContext.getPopupContainer,
-      getPrefixCls = _React$useContext.getPrefixCls,
-      direction = _React$useContext.direction;
-
-  var _React$useState = React.useState(!!props.visible || !!props.defaultVisible),
-      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
-      visible = _React$useState2[0],
-      setVisible = _React$useState2[1];
-
-  React.useEffect(function () {
-    if ('visible' in props) {
-      setVisible(props.visible);
-    }
-  }, [props.visible]);
-
-  var isNoTitle = function isNoTitle() {
-    var title = props.title,
-        overlay = props.overlay;
-    return !title && !overlay && title !== 0; // overlay for old version compatibility
-  };
-
-  var onVisibleChange = function onVisibleChange(vis) {
-    if (!('visible' in props)) {
-      setVisible(isNoTitle() ? false : vis);
-    }
-
-    if (props.onVisibleChange && !isNoTitle()) {
-      props.onVisibleChange(vis);
-    }
-  };
-
-  var getTooltipPlacements = function getTooltipPlacements() {
-    var builtinPlacements = props.builtinPlacements,
-        arrowPointAtCenter = props.arrowPointAtCenter,
-        autoAdjustOverflow = props.autoAdjustOverflow;
-    return builtinPlacements || (0, _placements["default"])({
-      arrowPointAtCenter: arrowPointAtCenter,
-      autoAdjustOverflow: autoAdjustOverflow
-    });
-  }; // 动态设置动画点
-
-
-  var onPopupAlign = function onPopupAlign(domNode, align) {
-    var placements = getTooltipPlacements(); // 当前返回的位置
-
-    var placement = Object.keys(placements).filter(function (key) {
-      return placements[key].points[0] === align.points[0] && placements[key].points[1] === align.points[1];
-    })[0];
-
-    if (!placement) {
-      return;
-    } // 根据当前坐标设置动画点
-
-
-    var rect = domNode.getBoundingClientRect();
-    var transformOrigin = {
-      top: '50%',
-      left: '50%'
-    };
-
-    if (placement.indexOf('top') >= 0 || placement.indexOf('Bottom') >= 0) {
-      transformOrigin.top = "".concat(rect.height - align.offset[1], "px");
-    } else if (placement.indexOf('Top') >= 0 || placement.indexOf('bottom') >= 0) {
-      transformOrigin.top = "".concat(-align.offset[1], "px");
-    }
-
-    if (placement.indexOf('left') >= 0 || placement.indexOf('Right') >= 0) {
-      transformOrigin.left = "".concat(rect.width - align.offset[0], "px");
-    } else if (placement.indexOf('right') >= 0 || placement.indexOf('Left') >= 0) {
-      transformOrigin.left = "".concat(-align.offset[0], "px");
-    }
-
-    domNode.style.transformOrigin = "".concat(transformOrigin.left, " ").concat(transformOrigin.top);
-  };
-
-  var getOverlay = function getOverlay() {
-    var title = props.title,
-        overlay = props.overlay;
-
-    if (title === 0) {
-      return title;
-    }
-
-    return overlay || title || '';
-  };
-
-  var customizePrefixCls = props.prefixCls,
-      openClassName = props.openClassName,
-      getPopupContainer = props.getPopupContainer,
-      getTooltipContainer = props.getTooltipContainer,
-      overlayClassName = props.overlayClassName,
-      color = props.color,
-      overlayInnerStyle = props.overlayInnerStyle;
-  var children = props.children;
-  var prefixCls = getPrefixCls('tooltip', customizePrefixCls);
-  var tempVisible = visible; // Hide tooltip when there is no title
-
-  if (!('visible' in props) && isNoTitle()) {
-    tempVisible = false;
-  }
-
-  var child = getDisabledCompatibleChildren((0, _reactNode.isValidElement)(children) ? children : /*#__PURE__*/React.createElement("span", null, children), prefixCls);
-  var childProps = child.props;
-  var childCls = (0, _classnames["default"])(childProps.className, (0, _defineProperty2["default"])({}, openClassName || "".concat(prefixCls, "-open"), true));
-  var customOverlayClassName = (0, _classnames["default"])(overlayClassName, (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-").concat(color), color && PresetColorRegex.test(color)), _classNames2));
-  var formattedOverlayInnerStyle;
-  var arrowContentStyle;
-
-  if (color && !PresetColorRegex.test(color)) {
-    formattedOverlayInnerStyle = (0, _extends2["default"])((0, _extends2["default"])({}, overlayInnerStyle), {
-      background: color
-    });
-    arrowContentStyle = {
-      background: color
-    };
-  }
-
-  return /*#__PURE__*/React.createElement(_rcTooltip["default"], (0, _extends2["default"])({}, props, {
-    prefixCls: prefixCls,
-    overlayClassName: customOverlayClassName,
-    getTooltipContainer: getPopupContainer || getTooltipContainer || getContextPopupContainer,
-    ref: ref,
-    builtinPlacements: getTooltipPlacements(),
-    overlay: getOverlay(),
-    visible: tempVisible,
-    onVisibleChange: onVisibleChange,
-    onPopupAlign: onPopupAlign,
-    overlayInnerStyle: formattedOverlayInnerStyle,
-    arrowContent: /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-arrow-content"),
-      style: arrowContentStyle
-    })
-  }), tempVisible ? (0, _reactNode.cloneElement)(child, {
-    className: childCls
-  }) : child);
-});
-Tooltip.displayName = 'Tooltip';
-Tooltip.defaultProps = {
-  placement: 'top',
-  transitionName: 'zoom-big-fast',
-  mouseEnterDelay: 0.1,
-  mouseLeaveDelay: 0.1,
-  arrowPointAtCenter: false,
-  autoAdjustOverflow: true
-};
-var _default = Tooltip;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/tooltip/placements.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/antd/lib/tooltip/placements.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getOverflowOptions = getOverflowOptions;
-exports["default"] = getPlacements;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _placements = __webpack_require__(/*! rc-tooltip/lib/placements */ "./node_modules/rc-tooltip/lib/placements.js");
-
-var autoAdjustOverflowEnabled = {
-  adjustX: 1,
-  adjustY: 1
-};
-var autoAdjustOverflowDisabled = {
-  adjustX: 0,
-  adjustY: 0
-};
-var targetOffset = [0, 0];
-
-function getOverflowOptions(autoAdjustOverflow) {
-  if (typeof autoAdjustOverflow === 'boolean') {
-    return autoAdjustOverflow ? autoAdjustOverflowEnabled : autoAdjustOverflowDisabled;
-  }
-
-  return (0, _extends2["default"])((0, _extends2["default"])({}, autoAdjustOverflowDisabled), autoAdjustOverflow);
-}
-
-function getPlacements(config) {
-  var _config$arrowWidth = config.arrowWidth,
-      arrowWidth = _config$arrowWidth === void 0 ? 5 : _config$arrowWidth,
-      _config$horizontalArr = config.horizontalArrowShift,
-      horizontalArrowShift = _config$horizontalArr === void 0 ? 16 : _config$horizontalArr,
-      _config$verticalArrow = config.verticalArrowShift,
-      verticalArrowShift = _config$verticalArrow === void 0 ? 8 : _config$verticalArrow,
-      autoAdjustOverflow = config.autoAdjustOverflow;
-  var placementMap = {
-    left: {
-      points: ['cr', 'cl'],
-      offset: [-4, 0]
-    },
-    right: {
-      points: ['cl', 'cr'],
-      offset: [4, 0]
-    },
-    top: {
-      points: ['bc', 'tc'],
-      offset: [0, -4]
-    },
-    bottom: {
-      points: ['tc', 'bc'],
-      offset: [0, 4]
-    },
-    topLeft: {
-      points: ['bl', 'tc'],
-      offset: [-(horizontalArrowShift + arrowWidth), -4]
-    },
-    leftTop: {
-      points: ['tr', 'cl'],
-      offset: [-4, -(verticalArrowShift + arrowWidth)]
-    },
-    topRight: {
-      points: ['br', 'tc'],
-      offset: [horizontalArrowShift + arrowWidth, -4]
-    },
-    rightTop: {
-      points: ['tl', 'cr'],
-      offset: [4, -(verticalArrowShift + arrowWidth)]
-    },
-    bottomRight: {
-      points: ['tr', 'bc'],
-      offset: [horizontalArrowShift + arrowWidth, 4]
-    },
-    rightBottom: {
-      points: ['bl', 'cr'],
-      offset: [4, verticalArrowShift + arrowWidth]
-    },
-    bottomLeft: {
-      points: ['tl', 'bc'],
-      offset: [-(horizontalArrowShift + arrowWidth), 4]
-    },
-    leftBottom: {
-      points: ['br', 'cl'],
-      offset: [-4, verticalArrowShift + arrowWidth]
-    }
-  };
-  Object.keys(placementMap).forEach(function (key) {
-    placementMap[key] = config.arrowPointAtCenter ? (0, _extends2["default"])((0, _extends2["default"])({}, placementMap[key]), {
-      overflow: getOverflowOptions(autoAdjustOverflow),
-      targetOffset: targetOffset
-    }) : (0, _extends2["default"])((0, _extends2["default"])({}, _placements.placements[key]), {
-      overflow: getOverflowOptions(autoAdjustOverflow)
-    });
-    placementMap[key].ignoreShake = true;
-  });
-  return placementMap;
-}
-
-/***/ }),
-
-/***/ "./node_modules/rc-tooltip/lib/placements.js":
-/*!***************************************************!*\
-  !*** ./node_modules/rc-tooltip/lib/placements.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.placements = void 0;
-var autoAdjustOverflow = {
-  adjustX: 1,
-  adjustY: 1
-};
-var targetOffset = [0, 0];
-var placements = {
-  left: {
-    points: ['cr', 'cl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  right: {
-    points: ['cl', 'cr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  top: {
-    points: ['bc', 'tc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  bottom: {
-    points: ['tc', 'bc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  topLeft: {
-    points: ['bl', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  leftTop: {
-    points: ['tr', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  topRight: {
-    points: ['br', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  rightTop: {
-    points: ['tl', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomRight: {
-    points: ['tr', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  rightBottom: {
-    points: ['bl', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomLeft: {
-    points: ['tl', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  leftBottom: {
-    points: ['br', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  }
-};
-exports.placements = placements;
-var _default = placements;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/rc-util/lib/Children/toArray.js":
-/*!******************************************************!*\
-  !*** ./node_modules/rc-util/lib/Children/toArray.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toArray;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toArray(children) {
-  var ret = [];
-
-  _react.default.Children.forEach(children, function (child) {
-    if (child === undefined || child === null) {
-      return;
-    }
-
-    if (Array.isArray(child)) {
-      ret = ret.concat(toArray(child));
-    } else if ((0, _reactIs.isFragment)(child) && child.props) {
-      ret = ret.concat(toArray(child.props.children));
-    } else {
-      ret.push(child);
-    }
-  });
-
-  return ret;
-}
+/* harmony default export */ __webpack_exports__["default"] = (TextArea);
 
 /***/ })
 

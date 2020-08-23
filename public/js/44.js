@@ -219,7 +219,7 @@ function Spinner(_ref) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/hero_1.jpg?ab80f89895baea4b6dbb96f4b4dc451c";
+module.exports = "/images/hero_1.jpg?a439d3d96d7c8571b7941c399f8ae5fd";
 
 /***/ })
 

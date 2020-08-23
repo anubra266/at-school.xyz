@@ -4,7 +4,7 @@ import { useBattery, useEffectOnce } from "react-use";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
 import { loadPage } from "@/Helpers/PageLoad";
-import routes from "./Routes";
+import routes from "../Pages/Dashboard/routes";
 function Navbar({ pageLoader }) {
     //* load battery State
     const batteryState = useBattery();

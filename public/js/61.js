@@ -1,58 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[61],{
 
-/***/ "./resources/js/Pages/Home/index.js":
-/*!******************************************!*\
-  !*** ./resources/js/Pages/Home/index.js ***!
-  \******************************************/
+/***/ "./resources/js/Pages/Dashboard/DashboardLayout.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/DashboardLayout.js ***!
+  \*********************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/page-header */ "./node_modules/antd/lib/page-header/index.js");
-/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/SiteLayout */ "./resources/js/Pages/SiteLayout/index.js");
-
-
-
-
-
-var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content;
-
-var Home = function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_SiteLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: "Home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
-    style: {
-      margin: "0 16px"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "site-page-header-ghost-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ghost: false,
-    onBack: function onBack() {
-      return window.history.back();
-    },
-    title: "Title",
-    subTitle: "This is a subtitle",
-    extra: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      key: "3"
-    }, "Operation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      key: "2"
-    }, "Operation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      key: "1",
-      type: "primary"
-    }, "Primary")]
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/at-school/resources/js/Pages/Dashboard/DashboardLayout.js: JSX value should be either an expression or a quoted JSX text (7:31)\n\n\u001b[0m \u001b[90m  5 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  6 | \u001b[39m\u001b[36mconst\u001b[39m \u001b[33mDashboardLayout\u001b[39m \u001b[33m=\u001b[39m ({ title\u001b[33m,\u001b[39m children }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 | \u001b[39m    \u001b[36mreturn\u001b[39m \u001b[33m<\u001b[39m\u001b[33mSiteLayout\u001b[39m routes\u001b[33m=\u001b[39m title\u001b[33m=\u001b[39m{title}\u001b[33m>\u001b[39m{children}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mSiteLayout\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m}\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[33mDashboardLayout\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object._raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:766:17)\n    at Object.raiseWithData (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:759:17)\n    at Object.raise (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:753:17)\n    at Object.jsxParseAttributeValue (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4549:20)\n    at Object.jsxParseAttribute (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4587:44)\n    at Object.jsxParseOpeningElementAfterName (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4607:28)\n    at Object.jsxParseOpeningElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4600:17)\n    at Object.jsxParseElementAt (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4632:33)\n    at Object.jsxParseElement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4706:17)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4713:19)\n    at Object.parseExprSubscripts (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Object.parseUpdate (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Object.parseMaybeUnary (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Object.parseExprOps (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Object.parseMaybeConditional (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9657:23)\n    at Object.parseMaybeAssign (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9620:21)\n    at Object.parseExpressionBase (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9564:23)\n    at /var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9558:39\n    at Object.allowInAnd (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11302:12)\n    at Object.parseExpression (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9558:17)\n    at Object.parseReturnStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11799:28)\n    at Object.parseStatementContent (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11478:21)\n    at Object.parseStatement (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11430:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:12012:25)\n    at Object.parseBlockBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11998:10)\n    at Object.parseBlock (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:11982:10)\n    at Object.parseFunctionBody (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10962:24)\n    at Object.parseArrowExpression (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10931:10)\n    at Object.parseParenAndDistinguishExpression (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10501:12)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:10177:21)\n    at Object.parseExprAtom (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:4718:20)\n    at Object.parseExprSubscripts (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Object.parseUpdate (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Object.parseMaybeUnary (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Object.parseExprOps (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Object.parseMaybeConditional (/var/www/html/at-school/node_modules/@babel/parser/lib/index.js:9657:23)");
 
 /***/ })
 

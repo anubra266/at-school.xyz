@@ -19,7 +19,7 @@ trait UploadProfile
         $image = str_replace($replace, '', $image_64);
         $image = str_replace(' ', '+', $image);
         $imageName = time() . Str::random(10) . '.' . $extension;
-        Storage::disk('profile')->put($imageName, base64_decode($image));
+        Storage::disk('profile')->put("image/$imageName", base64_decode($image));
         return $imageName;
     }
 }

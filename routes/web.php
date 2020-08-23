@@ -24,7 +24,8 @@ Auth::routes();
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {
     Route::get('home', 'PrivateController@home')->name('home');
-    Route::get('register/finish', 'PrivateController@FinishRegistration')->name('register.finish')->middleware('freg');
+
+    Route::get('organization', 'OrganizationController@index')->name('organization.index');
     Route::post('organization', 'OrganizationController@store')->name('organization.create');
 });
 

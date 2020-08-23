@@ -2,13 +2,12 @@ import React from "react";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
-import SiteLayout from "@/Pages/SiteLayout";
-
+import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 const { Content } = Layout;
 
-const Template = () => {
+const Home = () => {
     return (
-        <SiteLayout title="Template">
+        <Dashboardlayout title="Home">
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
@@ -26,7 +25,7 @@ const Template = () => {
                     ></PageHeader>
                 </div>
             </Content>
-        </SiteLayout>
+        </Dashboardlayout>
     );
 };
-export default Template;
+export default Home;

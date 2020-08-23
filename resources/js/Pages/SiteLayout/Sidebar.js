@@ -1,59 +1,86 @@
 import React, { useState } from "react";
+import { InertiaLink, usePage } from "@inertiajs/inertia-react";
+import { returnRoute } from "@/Helpers/PresentRoute";
 
 import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
-
 import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
 import DesktopOutlined from "@ant-design/icons/DesktopOutlined";
 import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
 import TeamOutlined from "@ant-design/icons/TeamOutlined";
 import UserOutlined from "@ant-design/icons/UserOutlined";
 
-import { InertiaLink } from "@inertiajs/inertia-react";
 //  TODO Dynamic JSON Routing
 const { Sider } = Layout;
 const { SubMenu } = Menu;
-function Sidebar() {
+function Sidebar({ routes }) {
+    const getRoute = () => {
+        return returnRoute(routes);
+    };
+
     const [collapsed, setCollapsed] = useState(false);
     const onCollapse = collapsed => {
         setCollapsed(collapsed);
     };
-    const handleClick = e => {
-        console.log("click ", e.key, e.keyPath);
-    };
+
     return (
         <React.Fragment>
             <Sider
                 collapsible
                 collapsed={collapsed}
-                breakpoint="lg"
+                breakpoint="md"
                 collapsedWidth="0"
                 onCollapse={onCollapse}
             >
                 <div className="logo" />
                 <Menu
-                    onClick={handleClick}
                     theme="dark"
-                    defaultSelectedKeys={["3"]}
-                    defaultOpenKeys={["sub1"]}
+                    defaultSelectedKeys={getRoute()[0]}
+                    defaultOpenKeys={getRoute()[1]}
                     mode="inline"
                 >
-                    <Menu.Item key="1" icon={<PieChartOutlined />}>
-                        Dashboard
-                    </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}>
-                        Option 2
-                    </Menu.Item>
-                    <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-                        <Menu.Item key="3">Tom</Menu.Item>
-                        <Menu.Item key="4">Bill</Menu.Item>
-                        <Menu.Item key="5">Alex</Menu.Item>
-                    </SubMenu>
-                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                        <Menu.Item key="6">Team 1</Menu.Item>
-                        <Menu.Item key="7">Team 2</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="8" icon={<PoweroffOutlined />}>
+                    {routes.map(menu => {
+                        return menu.items ? (
+                            <SubMenu
+                                key={`menu-${menu.name}`}
+                                icon={menu.icon}
+                                title={menu.name}
+                            >
+                                {menu.items.map(item => {
+                                    return (
+                                        <Menu.Item key={`menu-${item.name}`}>
+                                            <InertiaLink
+                                                href={
+                                                    `menu-${item.name}` ==
+                                                    getRoute()[0][0]
+                                                        ? "#"
+                                                        : route(menu.route)
+                                                }
+                                            >
+                                                {item.name}
+                                            </InertiaLink>
+                                        </Menu.Item>
+                                    );
+                                })}
+                            </SubMenu>
+                        ) : (
+                            <Menu.Item
+                                key={`menu-${menu.name}`}
+                                icon={menu.icon}
+                            >
+                                <InertiaLink
+                                    href={
+                                        `menu-${menu.name}` == getRoute()[0][0]
+                                            ? "#"
+                                            : route(menu.route)
+                                    }
+                                >
+                                    {menu.name}
+                                </InertiaLink>
+                            </Menu.Item>
+                        );
+                    })}
+                    <Menu.Item key="logout" icon={<PoweroffOutlined />}>
                         <InertiaLink href={route("logout")} method="POST">
                             Logout
                         </InertiaLink>

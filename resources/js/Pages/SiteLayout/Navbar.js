@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import useEffectOnce from "react-use/lib/useEffectOnce";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "antd/lib/layout";
+import Row from "antd/lib/row";
+import Col from "antd/lib/col";
+
 import Menu from "antd/lib/menu";
 import PageHeader from "antd/lib/page-header";
 import Dropdown from "antd/lib/dropdown";
@@ -40,12 +43,27 @@ function Navbar({ pageLoader }) {
                 ref={pageLoader}
                 waitingTime={1000}
             />
-            <Header className="site-layout-background" style={{ padding: 0 }}>
+            <Header className="header" style={{ padding: 0 }}>
                 <PageHeader
                     title="at-School"
                     className="site-page-header"
-                    subTitle={`${auth.user.first_name} ${auth.user.last_name}`}
-                    tags={<Tag color="blue">{trans_roles(auth.user.initial_role)[0]}</Tag>}
+                    subTitle={
+                        <Row>
+                            <Col
+                                xs={0}
+                                md={12}
+                            >{`${auth.user.first_name} ${auth.user.last_name}`}</Col>
+                        </Row>
+                    }
+                    tags={
+                        <Row>
+                            <Col xs={0} md={12}>
+                                <Tag color="blue">
+                                    {trans_roles(auth.user.initial_role)[0]}
+                                </Tag>
+                            </Col>
+                        </Row>
+                    }
                     extra={[
                         <React.Fragment key={1}>
                             <button

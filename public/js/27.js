@@ -991,7 +991,7 @@ function Spinner(_ref) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/bg-01.jpg?9ecd694a097fd59efe471c43ae4c17e9";
+module.exports = "/images/bg-01.jpg?a2ebe5df6f37bbf5729898e50713d7dd";
 
 /***/ }),
 

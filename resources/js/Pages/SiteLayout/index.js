@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
-function index({ title, noSidebar, children }) {
+function index({ title, noSidebar, children, routes }) {
     const pageLoader = useRef(null);
 
     const mode = "dark";
@@ -29,11 +29,13 @@ function index({ title, noSidebar, children }) {
         <React.Fragment>
             <Helmet title={`${title} - at-School`} />
             <Layout style={{ minHeight: "100vh" }}>
-                {noSidebar !== true && <Sidebar />}
-                <Layout className="site-layout">
-                    <Navbar pageLoader={pageLoader} />
-                    {children}
-                    <SiteFooter />
+                <Navbar pageLoader={pageLoader} />
+                <Layout>
+                    {noSidebar !== true && <Sidebar routes={routes} />}
+                    <Layout className="site-layout">
+                        {children}
+                        <SiteFooter />
+                    </Layout>
                 </Layout>
             </Layout>
         </React.Fragment>
