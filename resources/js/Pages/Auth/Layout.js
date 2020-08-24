@@ -1,16 +1,15 @@
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useRef, useEffect } from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import { Helmet } from "react-helmet";
 import FlashMessages from "@/Shared/FlashMessages";
-import "antd/dist/antd.css";
 
 import Loading from "@/Shared/Loading";
 
-import "@/assets/auth/css/util.css";
-import "@/assets/auth/css/main.css";
 const Assets = React.lazy(() => import("@/Pages/Auth/Assets"));
 
 function Layout({ children, title }) {
+    useEffect(() => {
+        document.title = title;
+    },[title]);
     const pageLoader = useRef(null);
     //* Start page Load on Navigator Change
 
@@ -44,7 +43,6 @@ function Layout({ children, title }) {
                         backgroundImage: `url(${require("@/assets/auth/images/bg-01.jpg")})`
                     }}
                 >
-                    <Helmet title={title} />
                     <div className="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
                         <FlashMessages />
                         {children}

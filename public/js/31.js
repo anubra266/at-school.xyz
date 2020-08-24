@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Loading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Shared/Loading */ "./resources/js/Shared/Loading.js");
 
 var Landing = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(5), __webpack_require__.e(21), __webpack_require__.e(36)]).then(__webpack_require__.bind(null, /*! ./Landing */ "./resources/js/Pages/Landing/Landing.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(21), __webpack_require__.e(9), __webpack_require__.e(36)]).then(__webpack_require__.bind(null, /*! ./Landing */ "./resources/js/Pages/Landing/Landing.js"));
 });
 
 

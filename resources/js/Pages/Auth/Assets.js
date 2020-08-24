@@ -11,7 +11,7 @@ function Assets({ children, pageLoader }) {
     loadPage(pageLoader);
     useEffectOnce(() => {
         //*complete pageLoader loading
-        pageLoader && pageLoader.current.complete(); 
+        pageLoader && pageLoader.current.complete();
     });
     return (
         <React.Fragment>

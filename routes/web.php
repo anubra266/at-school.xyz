@@ -26,14 +26,15 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('home', 'PrivateController@home')->name('home');
 
-    Route::group(['prefix' => 'organization', 'middleware' => []], function () {
+    Route::group(['prefix' => 'organization', 'middleware' => [/*'permission:create_organizations'*/]], function () {
         Route::get('/', 'OrganizationController@index')->name('organization.index');
         Route::post('/', 'OrganizationController@store')->name('organization.create');
         Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
         Route::patch('/', 'OrganizationController@update')->name('organization.edit');
     });
-
-
+    Route::group(['prefix' => 'staff'], function () {
+        Route::get('/', 'EnvironController@index')->name('environ.index');
+    });
 });
 
 

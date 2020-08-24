@@ -21,7 +21,7 @@ function Login() {
     const handleSubmit = e => {
         e.preventDefault();
         setChecking(true);
-        Inertia.post(route("login"), data)
+        Inertia.post(route("login"), data);
     };
     const { errors } = usePage();
 

@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Layout from "antd/lib/layout";
-import { Helmet } from "react-helmet";
 
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
 function index({ title, noSidebar, children, routes }) {
+    useEffect(() => {
+        document.title = `${title} - at-School`;
+    }, [title]);
     const pageLoader = useRef(null);
 
     const mode = "dark";
@@ -27,7 +29,6 @@ function index({ title, noSidebar, children, routes }) {
     }
     return (
         <React.Fragment>
-            <Helmet title={`${title} - at-School`} />
             <Layout style={{ minHeight: "100vh" }}>
                 <Navbar pageLoader={pageLoader} />
                 <Layout>

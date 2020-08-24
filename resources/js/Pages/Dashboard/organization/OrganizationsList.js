@@ -8,9 +8,14 @@ import Space from "antd/lib/space";
 import Alert from "antd/lib/alert";
 import Button from "antd/lib/button";
 import Empty from "antd/lib/empty";
+import Typography from "antd/lib/typography";
 import OrganizationForm from "./OrganizationForm";
 
 const OrganizationsList = ({ organizations, showDrawer }) => {
+    organizations = organizations.map((organization, key) => {
+        organization.key = `org-${key}`;
+        return organization;
+    });
     const { flash } = usePage();
     const [loading, setLoading] = useState(false);
     const OrgForm = useRef(null);
@@ -34,59 +39,85 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
                     />
                 </React.Fragment>
             )}
-            <Table
-                scroll={{ x: 600 }}
-                style={{ marginTop: "10px" }}
-                bordered
-                dataSource={organizations}
-                size="small"
-                pagination={{
-                    hideOnSinglePage: true,
-                    defaultPageSize: 3,
-                    showQuickJumper: true,
-                    showSizeChanger: true,
-                    showTotal: (total, range) => (
-                        <a>
-                            {total} Organization{total !== 1 && "s"}
-                        </a>
-                    )
-                }}
-            >
-                <Table.Column
-                    title="Name"
-                    dataIndex="name"
-                    key="name"
-                    render={text => <a>{text}</a>}
-                    onFilter={(value, record) =>
-                        record.name.indexOf(value) === 0
-                    }
-                    sorter={(a, b) =>
-                        a.name === b.name ? 0 : a.name < b.name ? -1 : 1
-                    }
-                />
-                <Table.Column
-                    title="Address"
-                    dataIndex="address"
-                    key="address"
-                    onFilter={(value, record) =>
-                        record.name.indexOf(value) === 0
-                    }
-                    sorter={(a, b) =>
-                        a.address === b.address
-                            ? 0
-                            : a.address < b.address
-                            ? -1
-                            : 1
-                    }
-                />
-                <Table.Column title="Code" dataIndex="code" key="code" />
-                <Table.Column
-                    width={200}
-                    fixed="right"
-                    title="Action"
-                    key="action"
-                    render={(text, record) =>
-                        organizations.length >= 1 ? (
+            {organizations.length !== 0 && (
+                <Table
+                    scroll={{ x: 600 }}
+                    style={{ marginTop: "10px" }}
+                    bordered
+                    dataSource={organizations}
+                    size="small"
+                    pagination={{
+                        hideOnSinglePage: true,
+                        defaultPageSize: 3,
+                        showQuickJumper: true,
+                        showSizeChanger: true,
+                        showTotal: (total, range) => (
+                            <a>
+                                {total} Organization{total !== 1 && "s"}
+                            </a>
+                        )
+                    }}
+                    expandable={{
+                        expandedRowRender: record => (
+                            <p style={{ margin: 0 }}>{record.code}</p>
+                        )
+                        // rowExpandable: record =>
+                        //     record.environs && record.environs.length !== 0
+                    }}
+                >
+                    <Table.Column
+                        title="Name"
+                        dataIndex="name"
+                        key="name"
+                        render={text => <a>{text}</a>}
+                        onFilter={(value, record) =>
+                            record.name.indexOf(value) === 0
+                        }
+                        sorter={(a, b) =>
+                            a.name === b.name ? 0 : a.name < b.name ? -1 : 1
+                        }
+                    />
+                    <Table.Column
+                        title="Address"
+                        dataIndex="address"
+                        key="address"
+                        onFilter={(value, record) =>
+                            record.name.indexOf(value) === 0
+                        }
+                        sorter={(a, b) =>
+                            a.address === b.address
+                                ? 0
+                                : a.address < b.address
+                                ? -1
+                                : 1
+                        }
+                        onFilter={(value, record) =>
+                            record.address
+                                .toLowerCase()
+                                .indexOf(value.toLocaleLowerCase()) !== -1
+                        }
+                        filterMultiple={false}
+                        filters={[
+                            { text: "Ogun", value: "Ogun" },
+                            { text: "Lagos", value: "Lagos" }
+                        ]}
+                    />
+                    <Table.Column
+                        title="Code"
+                        dataIndex="code"
+                        key="code"
+                        render={(text, record) => (
+                            <Typography.Paragraph copyable>
+                                {text}
+                            </Typography.Paragraph>
+                        )}
+                    />
+                    <Table.Column
+                        width={200}
+                        fixed="right"
+                        title="Action"
+                        key="action"
+                        render={(text, record) => (
                             <Space>
                                 <PopOver
                                     placement="leftTop"
@@ -120,10 +151,10 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
                                     </Button>
                                 </PopConfirm>
                             </Space>
-                        ) : null
-                    }
-                />
-            </Table>
+                        )}
+                    />
+                </Table>
+            )}
 
             {organizations.length === 0 && (
                 <Empty description={<span>No Organizations found!</span>}>
