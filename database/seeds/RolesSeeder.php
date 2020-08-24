@@ -28,6 +28,6 @@ class RolesSeeder extends Seeder
         $create_environs = Permission::create(['name' => 'create_environs']);
         $create_organizations = Permission::create(['name' => 'create_organizations']);
 
-
+        
     }
 }

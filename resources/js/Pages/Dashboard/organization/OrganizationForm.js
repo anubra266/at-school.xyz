@@ -1,17 +1,20 @@
 import React from "react";
 import { usePage } from "@inertiajs/inertia-react";
+import { useEffectOnce } from "react-use";
 import Button from "antd/lib/button";
 import { Form, Input } from "antd";
 
 const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
     const { errors } = usePage();
     const [form] = Form.useForm();
-    edit &&
-        form.setFieldsValue({
-            name: edit.name,
-            address: edit.address,
-            id: edit.id
-        });
+    useEffectOnce(() => {
+        edit &&
+            form.setFieldsValue({
+                name: edit.name,
+                address: edit.address,
+                id: edit.id
+            });
+    });
     return (
         <Form
             ref={OrgForm}

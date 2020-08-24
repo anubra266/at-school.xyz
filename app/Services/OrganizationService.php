@@ -14,7 +14,8 @@ class OrganizationService
 
     public function index()
     {
-        $organizations = authUser()->organizations()->get();
+        $organizations = authUser()->organizations()->latest()->get();
+        $organizations->load('environs.classrooms');
         return $organizations;
     }
     public function store($request)

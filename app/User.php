@@ -40,4 +40,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Organization::class);
     }
+
+    public function environs()
+    {
+        return $this->hasMany(Environ::class);
+    }
+
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
+
+    public function classes()
+    {
+        return $this->belongsToMany(Classroom::class, 'classroom_student', 'student_id', 'classroom_id')->withTimestamps();
+    }
 }

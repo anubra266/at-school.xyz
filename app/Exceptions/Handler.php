@@ -57,8 +57,8 @@ class Handler extends ExceptionHandler
             //show user friendly error pages in production
             // App::environment('local')
             // App::environment('development')
-            App::environment('production')
-            && $request->header('X-Inertia')
+            App::environment('production') &&
+            $request->header('X-Inertia')
             && in_array($response->status(), [500, 503, 404, 403])
         ) {
             return Inertia::render('Error', ['status' => $response->status()])

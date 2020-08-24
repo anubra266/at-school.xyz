@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        getsolaris\LaravelCreateService\CreateServiceProvider::class,
         /*
          * Application Service Providers...
          */

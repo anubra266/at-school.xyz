@@ -3,6 +3,8 @@ import { Inertia } from "@inertiajs/inertia";
 import Header from "./Header";
 import Layout from "antd/lib/layout";
 import Drawer from "antd/lib/drawer";
+import Button from "antd/lib/button";
+import Empty from "antd/lib/empty";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import OrganizationForm from "./OrganizationForm";
 import OrganizationsList from "./OrganizationsList";
@@ -31,11 +33,14 @@ const Organization = ({ organizations }) => {
         <Dashboardlayout title="Organizations">
             <Layout.Content style={{ margin: "0 16px" }}>
                 <Header showDrawer={showDrawer} />
-                <OrganizationsList
-                    organizations={organizations}
-                    showDrawer={showDrawer}
-                />
-
+                <OrganizationsList organizations={organizations} />
+                {organizations.length === 0 && (
+                    <Empty description={<span>No Organizations found!</span>}>
+                        <Button onClick={showDrawer} type="primary">
+                            Create Organization
+                        </Button>
+                    </Empty>
+                )}
                 <Drawer
                     title="Create New Organization"
                     placement="right"

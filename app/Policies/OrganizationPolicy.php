@@ -53,7 +53,7 @@ class OrganizationPolicy
      */
     public function update(User $user, Organization $organization)
     {
-        return $user->id === $organization->user_id;
+        //return $user->id === $organization->user_id;
     }
     /**
      * Determine whether the user can update the model's code.
@@ -64,7 +64,7 @@ class OrganizationPolicy
      */
     public function ChangeCode(User $user, Organization $organization)
     {
-        return $user->id === $organization->user_id;
+        //return $user->id === $organization->user_id;
     }
 
     /**

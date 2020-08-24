@@ -32,8 +32,20 @@ Route::group(['middleware' => ['auth']], function () {
         Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
         Route::patch('/', 'OrganizationController@update')->name('organization.edit');
     });
-    Route::group(['prefix' => 'staff'], function () {
+    Route::group(['prefix' => 'environ'], function () {
         Route::get('/', 'EnvironController@index')->name('environ.index');
+        Route::post('/', 'EnvironController@store')->name('environ.create');
+        Route::patch('/{environ}/newcode', 'EnvironController@ChangeCode')->name('environ.change_code');
+        Route::patch('/', 'EnvironController@update')->name('environ.edit');
+
+    });
+
+    Route::group(['prefix' => 'classroom'], function () {
+        Route::get('/', 'ClassroomController@index')->name('classroom.index');
+        Route::post('/', 'ClassroomController@store')->name('classroom.create');
+        Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
+        Route::patch('/', 'ClassroomController@update')->name('classroom.edit');
+
     });
 });
 

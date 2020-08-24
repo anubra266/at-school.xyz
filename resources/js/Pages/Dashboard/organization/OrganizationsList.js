@@ -1,28 +1,25 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
-import { usePage } from "@inertiajs/inertia-react";
 import Table from "antd/lib/table";
 import PopOver from "antd/lib/popover";
 import PopConfirm from "antd/lib/popconfirm";
 import Space from "antd/lib/space";
-import Alert from "antd/lib/alert";
 import Button from "antd/lib/button";
-import Empty from "antd/lib/empty";
+import Divider from "antd/lib/divider";
 import Typography from "antd/lib/typography";
 import OrganizationForm from "./OrganizationForm";
-
-const OrganizationsList = ({ organizations, showDrawer }) => {
-    const { flash } = usePage();
+import EnvironsList from "@/Pages/Dashboard/environ/EnvironsList";
+const OrganizationsList = ({ organizations }) => {
     const [loading, setLoading] = useState(false);
     const OrgForm = useRef(null);
-    const formProps = { loading, onFinish, OrgForm };
-
+    console.log(organizations);
     const onFinish = data => {
         setLoading(true);
         Inertia.patch(route("organization.edit"), data).then(res => {
             setLoading(false);
         });
     };
+    const formProps = { loading, onFinish, OrgForm };
 
     organizations = organizations.map((organization, key) => {
         organization.key = `org-${key}`;
@@ -38,16 +35,6 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
 
     return (
         <React.Fragment>
-            {flash.success && (
-                <React.Fragment>
-                    <Alert
-                        message={flash.success}
-                        type="success"
-                        closable
-                        showIcon
-                    />
-                </React.Fragment>
-            )}
             {organizations.length !== 0 && (
                 <Table
                     scroll={{ x: 600 }}
@@ -68,10 +55,16 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
                     }}
                     expandable={{
                         expandedRowRender: record => (
-                            <p style={{ margin: 0 }}>{record.code}</p>
-                        )
-                        // rowExpandable: record =>
-                        //     record.environs && record.environs.length !== 0
+                            <React.Fragment>
+                                <Divider orientation="left">
+                                    {record.environs.length} Environ
+                                    {record.environs.length !== 1 && "s"}
+                                </Divider>
+                                <EnvironsList environs={record.environs} />
+                            </React.Fragment>
+                        ),
+                        rowExpandable: record =>
+                            record.environs && record.environs.length !== 0
                     }}
                 >
                     <Table.Column
@@ -160,14 +153,6 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
                         )}
                     />
                 </Table>
-            )}
-
-            {organizations.length === 0 && (
-                <Empty description={<span>No Organizations found!</span>}>
-                    <Button onClick={showDrawer} type="primary">
-                        Create Organization
-                    </Button>
-                </Empty>
             )}
         </React.Fragment>
     );

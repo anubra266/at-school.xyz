@@ -39,9 +39,10 @@ function Navbar({ pageLoader }) {
     return (
         <React.Fragment>
             <LoadingBar
-                color="rgba(100,100,200,0.4)"
+                color="rgb(24, 144, 255)"
                 ref={pageLoader}
                 waitingTime={1000}
+                height={2}
             />
             <Header className="site-layout-background" style={{ padding: 0 }}>
                 <PageHeader

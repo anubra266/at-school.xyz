@@ -1,875 +1,944 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[14],{
 
-/***/ "./node_modules/antd/lib/input/ClearableLabeledInput.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/antd/lib/input/ClearableLabeledInput.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.hasPrefixSuffix = hasPrefixSuffix;
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _CloseCircleFilled = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CloseCircleFilled */ "./node_modules/@ant-design/icons/CloseCircleFilled.js"));
-
-var _type = __webpack_require__(/*! ../_util/type */ "./node_modules/antd/lib/_util/type.js");
-
-var _Input = __webpack_require__(/*! ./Input */ "./node_modules/antd/lib/input/Input.js");
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var ClearableInputType = (0, _type.tuple)('text', 'input');
-
-function hasPrefixSuffix(props) {
-  return !!(props.prefix || props.suffix || props.allowClear);
-}
-
-var ClearableLabeledInput = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(ClearableLabeledInput, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(ClearableLabeledInput);
-
-  function ClearableLabeledInput() {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, ClearableLabeledInput);
-    _this = _super.apply(this, arguments);
-    /** @private Do not use out of this class. We do not promise this is always keep. */
-
-    _this.containerRef = /*#__PURE__*/React.createRef();
-
-    _this.onInputMouseUp = function (e) {
-      var _a;
-
-      if ((_a = _this.containerRef.current) === null || _a === void 0 ? void 0 : _a.contains(e.target)) {
-        var triggerFocus = _this.props.triggerFocus;
-        triggerFocus();
-      }
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2["default"])(ClearableLabeledInput, [{
-    key: "renderClearIcon",
-    value: function renderClearIcon(prefixCls) {
-      var _this$props = this.props,
-          allowClear = _this$props.allowClear,
-          value = _this$props.value,
-          disabled = _this$props.disabled,
-          readOnly = _this$props.readOnly,
-          inputType = _this$props.inputType,
-          handleReset = _this$props.handleReset;
-
-      if (!allowClear) {
-        return null;
-      }
-
-      var needClear = !disabled && !readOnly && value;
-      var className = inputType === ClearableInputType[0] ? "".concat(prefixCls, "-textarea-clear-icon") : "".concat(prefixCls, "-clear-icon");
-      return /*#__PURE__*/React.createElement(_CloseCircleFilled["default"], {
-        onClick: handleReset,
-        className: (0, _classnames["default"])(className, (0, _defineProperty2["default"])({}, "".concat(className, "-hidden"), !needClear)),
-        role: "button"
-      });
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * A collection of shims that provide minimal functionality of the ES6 collections.
+ *
+ * These implementations are not meant to be used outside of the ResizeObserver
+ * modules as they cover only a limited range of use cases.
+ */
+/* eslint-disable require-jsdoc, valid-jsdoc */
+var MapShim = (function () {
+    if (typeof Map !== 'undefined') {
+        return Map;
     }
-  }, {
-    key: "renderSuffix",
-    value: function renderSuffix(prefixCls) {
-      var _this$props2 = this.props,
-          suffix = _this$props2.suffix,
-          allowClear = _this$props2.allowClear;
-
-      if (suffix || allowClear) {
-        return /*#__PURE__*/React.createElement("span", {
-          className: "".concat(prefixCls, "-suffix")
-        }, this.renderClearIcon(prefixCls), suffix);
-      }
-
-      return null;
-    }
-  }, {
-    key: "renderLabeledIcon",
-    value: function renderLabeledIcon(prefixCls, element) {
-      var _classNames2;
-
-      var _this$props3 = this.props,
-          focused = _this$props3.focused,
-          value = _this$props3.value,
-          prefix = _this$props3.prefix,
-          className = _this$props3.className,
-          size = _this$props3.size,
-          suffix = _this$props3.suffix,
-          disabled = _this$props3.disabled,
-          allowClear = _this$props3.allowClear,
-          direction = _this$props3.direction,
-          style = _this$props3.style,
-          readOnly = _this$props3.readOnly,
-          bordered = _this$props3.bordered;
-      var suffixNode = this.renderSuffix(prefixCls);
-
-      if (!hasPrefixSuffix(this.props)) {
-        return (0, _reactNode.cloneElement)(element, {
-          value: value
+    /**
+     * Returns index in provided array that matches the specified key.
+     *
+     * @param {Array<Array>} arr
+     * @param {*} key
+     * @returns {number}
+     */
+    function getIndex(arr, key) {
+        var result = -1;
+        arr.some(function (entry, index) {
+            if (entry[0] === key) {
+                result = index;
+                return true;
+            }
+            return false;
         });
-      }
-
-      var prefixNode = prefix ? /*#__PURE__*/React.createElement("span", {
-        className: "".concat(prefixCls, "-prefix")
-      }, prefix) : null;
-      var affixWrapperCls = (0, _classnames["default"])(className, "".concat(prefixCls, "-affix-wrapper"), (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-focused"), focused), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-disabled"), disabled), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-sm"), size === 'small'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-lg"), size === 'large'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-input-with-clear-btn"), suffix && allowClear && value), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-readonly"), readOnly), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-affix-wrapper-borderless"), !bordered), _classNames2));
-      return /*#__PURE__*/React.createElement("span", {
-        ref: this.containerRef,
-        className: affixWrapperCls,
-        style: style,
-        onMouseUp: this.onInputMouseUp
-      }, prefixNode, (0, _reactNode.cloneElement)(element, {
-        style: null,
-        value: value,
-        className: (0, _Input.getInputClassName)(prefixCls, bordered, size, disabled)
-      }), suffixNode);
+        return result;
     }
-  }, {
-    key: "renderInputWithLabel",
-    value: function renderInputWithLabel(prefixCls, labeledElement) {
-      var _classNames3, _classNames4;
-
-      var _this$props4 = this.props,
-          addonBefore = _this$props4.addonBefore,
-          addonAfter = _this$props4.addonAfter,
-          style = _this$props4.style,
-          size = _this$props4.size,
-          className = _this$props4.className,
-          direction = _this$props4.direction; // Not wrap when there is not addons
-
-      if (!addonBefore && !addonAfter) {
-        return labeledElement;
-      }
-
-      var wrapperClassName = "".concat(prefixCls, "-group");
-      var addonClassName = "".concat(wrapperClassName, "-addon");
-      var addonBeforeNode = addonBefore ? /*#__PURE__*/React.createElement("span", {
-        className: addonClassName
-      }, addonBefore) : null;
-      var addonAfterNode = addonAfter ? /*#__PURE__*/React.createElement("span", {
-        className: addonClassName
-      }, addonAfter) : null;
-      var mergedWrapperClassName = (0, _classnames["default"])("".concat(prefixCls, "-wrapper"), (_classNames3 = {}, (0, _defineProperty2["default"])(_classNames3, wrapperClassName, addonBefore || addonAfter), (0, _defineProperty2["default"])(_classNames3, "".concat(wrapperClassName, "-rtl"), direction === 'rtl'), _classNames3));
-      var mergedGroupClassName = (0, _classnames["default"])(className, "".concat(prefixCls, "-group-wrapper"), (_classNames4 = {}, (0, _defineProperty2["default"])(_classNames4, "".concat(prefixCls, "-group-wrapper-sm"), size === 'small'), (0, _defineProperty2["default"])(_classNames4, "".concat(prefixCls, "-group-wrapper-lg"), size === 'large'), (0, _defineProperty2["default"])(_classNames4, "".concat(prefixCls, "-group-wrapper-rtl"), direction === 'rtl'), _classNames4)); // Need another wrapper for changing display:table to display:inline-block
-      // and put style prop in wrapper
-
-      return /*#__PURE__*/React.createElement("span", {
-        className: mergedGroupClassName,
-        style: style
-      }, /*#__PURE__*/React.createElement("span", {
-        className: mergedWrapperClassName
-      }, addonBeforeNode, (0, _reactNode.cloneElement)(labeledElement, {
-        style: null
-      }), addonAfterNode));
-    }
-  }, {
-    key: "renderTextAreaWithClearIcon",
-    value: function renderTextAreaWithClearIcon(prefixCls, element) {
-      var _classNames5;
-
-      var _this$props5 = this.props,
-          value = _this$props5.value,
-          allowClear = _this$props5.allowClear,
-          className = _this$props5.className,
-          style = _this$props5.style,
-          direction = _this$props5.direction,
-          bordered = _this$props5.bordered;
-
-      if (!allowClear) {
-        return (0, _reactNode.cloneElement)(element, {
-          value: value
-        });
-      }
-
-      var affixWrapperCls = (0, _classnames["default"])(className, "".concat(prefixCls, "-affix-wrapper"), "".concat(prefixCls, "-affix-wrapper-textarea-with-clear-btn"), (_classNames5 = {}, (0, _defineProperty2["default"])(_classNames5, "".concat(prefixCls, "-affix-wrapper-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames5, "".concat(prefixCls, "-affix-wrapper-borderless"), !bordered), _classNames5));
-      return /*#__PURE__*/React.createElement("span", {
-        className: affixWrapperCls,
-        style: style
-      }, (0, _reactNode.cloneElement)(element, {
-        style: null,
-        value: value
-      }), this.renderClearIcon(prefixCls));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props6 = this.props,
-          prefixCls = _this$props6.prefixCls,
-          inputType = _this$props6.inputType,
-          element = _this$props6.element;
-
-      if (inputType === ClearableInputType[0]) {
-        return this.renderTextAreaWithClearIcon(prefixCls, element);
-      }
-
-      return this.renderInputWithLabel(prefixCls, this.renderLabeledIcon(prefixCls, element));
-    }
-  }]);
-  return ClearableLabeledInput;
-}(React.Component);
-
-var _default = ClearableLabeledInput;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/input/Input.js":
-/*!**********************************************!*\
-  !*** ./node_modules/antd/lib/input/Input.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fixControlledValue = fixControlledValue;
-exports.resolveOnChange = resolveOnChange;
-exports.getInputClassName = getInputClassName;
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _ClearableLabeledInput = _interopRequireWildcard(__webpack_require__(/*! ./ClearableLabeledInput */ "./node_modules/antd/lib/input/ClearableLabeledInput.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _SizeContext = _interopRequireDefault(__webpack_require__(/*! ../config-provider/SizeContext */ "./node_modules/antd/lib/config-provider/SizeContext.js"));
-
-var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
-
-function fixControlledValue(value) {
-  if (typeof value === 'undefined' || value === null) {
-    return '';
-  }
-
-  return value;
-}
-
-function resolveOnChange(target, e, onChange) {
-  if (onChange) {
-    var event = e;
-
-    if (e.type === 'click') {
-      // click clear icon
-      event = Object.create(e);
-      event.target = target;
-      event.currentTarget = target;
-      var originalInputValue = target.value; // change target ref value cause e.target.value should be '' when clear input
-
-      target.value = '';
-      onChange(event); // reset target ref value
-
-      target.value = originalInputValue;
-      return;
-    }
-
-    onChange(event);
-  }
-}
-
-function getInputClassName(prefixCls, bordered, size, disabled, direction) {
-  var _classNames;
-
-  return (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-sm"), size === 'small'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-lg"), size === 'large'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-disabled"), disabled), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-borderless"), !bordered), _classNames));
-}
-
-var Input = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(Input, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(Input);
-
-  function Input(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, Input);
-    _this = _super.call(this, props);
-    _this.direction = 'ltr';
-
-    _this.focus = function () {
-      _this.input.focus();
-    };
-
-    _this.saveClearableInput = function (input) {
-      _this.clearableInput = input;
-    };
-
-    _this.saveInput = function (input) {
-      _this.input = input;
-    };
-
-    _this.onFocus = function (e) {
-      var onFocus = _this.props.onFocus;
-
-      _this.setState({
-        focused: true
-      }, _this.clearPasswordValueAttribute);
-
-      if (onFocus) {
-        onFocus(e);
-      }
-    };
-
-    _this.onBlur = function (e) {
-      var onBlur = _this.props.onBlur;
-
-      _this.setState({
-        focused: false
-      }, _this.clearPasswordValueAttribute);
-
-      if (onBlur) {
-        onBlur(e);
-      }
-    };
-
-    _this.handleReset = function (e) {
-      _this.setValue('', function () {
-        _this.focus();
-      });
-
-      resolveOnChange(_this.input, e, _this.props.onChange);
-    };
-
-    _this.renderInput = function (prefixCls, size, bordered) {
-      var input = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-      var _this$props = _this.props,
-          className = _this$props.className,
-          addonBefore = _this$props.addonBefore,
-          addonAfter = _this$props.addonAfter,
-          customizeSize = _this$props.size,
-          disabled = _this$props.disabled; // Fix https://fb.me/react-unknown-prop
-
-      var otherProps = (0, _omit["default"])(_this.props, ['prefixCls', 'onPressEnter', 'addonBefore', 'addonAfter', 'prefix', 'suffix', 'allowClear', // Input elements must be either controlled or uncontrolled,
-      // specify either the value prop, or the defaultValue prop, but not both.
-      'defaultValue', 'size', 'inputType', 'bordered']);
-      return /*#__PURE__*/React.createElement("input", (0, _extends2["default"])({
-        autoComplete: input.autoComplete
-      }, otherProps, {
-        onChange: _this.handleChange,
-        onFocus: _this.onFocus,
-        onBlur: _this.onBlur,
-        onKeyDown: _this.handleKeyDown,
-        className: (0, _classnames["default"])(getInputClassName(prefixCls, bordered, customizeSize || size, disabled, _this.direction), (0, _defineProperty2["default"])({}, className, className && !addonBefore && !addonAfter)),
-        ref: _this.saveInput
-      }));
-    };
-
-    _this.clearPasswordValueAttribute = function () {
-      // https://github.com/ant-design/ant-design/issues/20541
-      _this.removePasswordTimeout = setTimeout(function () {
-        if (_this.input && _this.input.getAttribute('type') === 'password' && _this.input.hasAttribute('value')) {
-          _this.input.removeAttribute('value');
+    return /** @class */ (function () {
+        function class_1() {
+            this.__entries__ = [];
         }
-      });
-    };
-
-    _this.handleChange = function (e) {
-      _this.setValue(e.target.value, _this.clearPasswordValueAttribute);
-
-      resolveOnChange(_this.input, e, _this.props.onChange);
-    };
-
-    _this.handleKeyDown = function (e) {
-      var _this$props2 = _this.props,
-          onPressEnter = _this$props2.onPressEnter,
-          onKeyDown = _this$props2.onKeyDown;
-
-      if (e.keyCode === 13 && onPressEnter) {
-        onPressEnter(e);
-      }
-
-      if (onKeyDown) {
-        onKeyDown(e);
-      }
-    };
-
-    _this.renderComponent = function (_ref) {
-      var getPrefixCls = _ref.getPrefixCls,
-          direction = _ref.direction,
-          input = _ref.input;
-      var _this$state = _this.state,
-          value = _this$state.value,
-          focused = _this$state.focused;
-      var _this$props3 = _this.props,
-          customizePrefixCls = _this$props3.prefixCls,
-          _this$props3$bordered = _this$props3.bordered,
-          bordered = _this$props3$bordered === void 0 ? true : _this$props3$bordered;
-      var prefixCls = getPrefixCls('input', customizePrefixCls);
-      _this.direction = direction;
-      return /*#__PURE__*/React.createElement(_SizeContext["default"].Consumer, null, function (size) {
-        return /*#__PURE__*/React.createElement(_ClearableLabeledInput["default"], (0, _extends2["default"])({
-          size: size
-        }, _this.props, {
-          prefixCls: prefixCls,
-          inputType: "input",
-          value: fixControlledValue(value),
-          element: _this.renderInput(prefixCls, size, bordered, input),
-          handleReset: _this.handleReset,
-          ref: _this.saveClearableInput,
-          direction: direction,
-          focused: focused,
-          triggerFocus: _this.focus,
-          bordered: bordered
-        }));
-      });
-    };
-
-    var value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
-    _this.state = {
-      value: value,
-      focused: false,
-      // eslint-disable-next-line react/no-unused-state
-      prevValue: props.value
-    };
-    return _this;
-  }
-
-  (0, _createClass2["default"])(Input, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.clearPasswordValueAttribute();
-    } // Since polyfill `getSnapshotBeforeUpdate` need work with `componentDidUpdate`.
-    // We keep an empty function here.
-
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {}
-  }, {
-    key: "getSnapshotBeforeUpdate",
-    value: function getSnapshotBeforeUpdate(prevProps) {
-      if ((0, _ClearableLabeledInput.hasPrefixSuffix)(prevProps) !== (0, _ClearableLabeledInput.hasPrefixSuffix)(this.props)) {
-        (0, _devWarning["default"])(this.input !== document.activeElement, 'Input', "When Input is focused, dynamic add or remove prefix / suffix will make it lose focus caused by dom structure change. Read more: https://ant.design/components/input/#FAQ");
-      }
-
-      return null;
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (this.removePasswordTimeout) {
-        clearTimeout(this.removePasswordTimeout);
-      }
-    }
-  }, {
-    key: "blur",
-    value: function blur() {
-      this.input.blur();
-    }
-  }, {
-    key: "select",
-    value: function select() {
-      this.input.select();
-    }
-  }, {
-    key: "setValue",
-    value: function setValue(value, callback) {
-      if (this.props.value === undefined) {
-        this.setState({
-          value: value
-        }, callback);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps, _ref2) {
-      var prevValue = _ref2.prevValue;
-      var newState = {
-        prevValue: nextProps.value
-      };
-
-      if (nextProps.value !== undefined || prevValue !== nextProps.value) {
-        newState.value = nextProps.value;
-      }
-
-      return newState;
-    }
-  }]);
-  return Input;
-}(React.Component);
-
-Input.defaultProps = {
-  type: 'text'
-};
-var _default = Input;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/input/TextArea.js":
-/*!*************************************************!*\
-  !*** ./node_modules/antd/lib/input/TextArea.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _rcTextarea = _interopRequireDefault(__webpack_require__(/*! rc-textarea */ "./node_modules/rc-textarea/es/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _ClearableLabeledInput = _interopRequireDefault(__webpack_require__(/*! ./ClearableLabeledInput */ "./node_modules/antd/lib/input/ClearableLabeledInput.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _Input = __webpack_require__(/*! ./Input */ "./node_modules/antd/lib/input/Input.js");
-
-var TextArea = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(TextArea, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(TextArea);
-
-  function TextArea(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, TextArea);
-    _this = _super.call(this, props);
-
-    _this.focus = function () {
-      _this.resizableTextArea.textArea.focus();
-    };
-
-    _this.saveTextArea = function (textarea) {
-      _this.resizableTextArea = textarea === null || textarea === void 0 ? void 0 : textarea.resizableTextArea;
-    };
-
-    _this.saveClearableInput = function (clearableInput) {
-      _this.clearableInput = clearableInput;
-    };
-
-    _this.handleChange = function (e) {
-      _this.setValue(e.target.value);
-
-      (0, _Input.resolveOnChange)(_this.resizableTextArea.textArea, e, _this.props.onChange);
-    };
-
-    _this.handleReset = function (e) {
-      _this.setValue('', function () {
-        _this.focus();
-      });
-
-      (0, _Input.resolveOnChange)(_this.resizableTextArea.textArea, e, _this.props.onChange);
-    };
-
-    _this.renderTextArea = function (prefixCls, bordered) {
-      return /*#__PURE__*/React.createElement(_rcTextarea["default"], (0, _extends2["default"])({}, (0, _omit["default"])(_this.props, ['allowClear', 'bordered']), {
-        className: (0, _classnames["default"])(_this.props.className, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-borderless"), !bordered)),
-        prefixCls: prefixCls,
-        onChange: _this.handleChange,
-        ref: _this.saveTextArea
-      }));
-    };
-
-    _this.renderComponent = function (_ref) {
-      var getPrefixCls = _ref.getPrefixCls,
-          direction = _ref.direction;
-      var value = _this.state.value;
-      var _this$props = _this.props,
-          customizePrefixCls = _this$props.prefixCls,
-          _this$props$bordered = _this$props.bordered,
-          bordered = _this$props$bordered === void 0 ? true : _this$props$bordered;
-      var prefixCls = getPrefixCls('input', customizePrefixCls);
-      return /*#__PURE__*/React.createElement(_ClearableLabeledInput["default"], (0, _extends2["default"])({}, _this.props, {
-        prefixCls: prefixCls,
-        direction: direction,
-        inputType: "text",
-        value: (0, _Input.fixControlledValue)(value),
-        element: _this.renderTextArea(prefixCls, bordered),
-        handleReset: _this.handleReset,
-        ref: _this.saveClearableInput,
-        triggerFocus: _this.focus,
-        bordered: bordered
-      }));
-    };
-
-    var value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
-    _this.state = {
-      value: value
-    };
-    return _this;
-  }
-
-  (0, _createClass2["default"])(TextArea, [{
-    key: "setValue",
-    value: function setValue(value, callback) {
-      if (!('value' in this.props)) {
-        this.setState({
-          value: value
-        }, callback);
-      }
-    }
-  }, {
-    key: "blur",
-    value: function blur() {
-      this.resizableTextArea.textArea.blur();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps) {
-      if ('value' in nextProps) {
-        return {
-          value: nextProps.value
+        Object.defineProperty(class_1.prototype, "size", {
+            /**
+             * @returns {boolean}
+             */
+            get: function () {
+                return this.__entries__.length;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        /**
+         * @param {*} key
+         * @returns {*}
+         */
+        class_1.prototype.get = function (key) {
+            var index = getIndex(this.__entries__, key);
+            var entry = this.__entries__[index];
+            return entry && entry[1];
         };
-      }
+        /**
+         * @param {*} key
+         * @param {*} value
+         * @returns {void}
+         */
+        class_1.prototype.set = function (key, value) {
+            var index = getIndex(this.__entries__, key);
+            if (~index) {
+                this.__entries__[index][1] = value;
+            }
+            else {
+                this.__entries__.push([key, value]);
+            }
+        };
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        class_1.prototype.delete = function (key) {
+            var entries = this.__entries__;
+            var index = getIndex(entries, key);
+            if (~index) {
+                entries.splice(index, 1);
+            }
+        };
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        class_1.prototype.has = function (key) {
+            return !!~getIndex(this.__entries__, key);
+        };
+        /**
+         * @returns {void}
+         */
+        class_1.prototype.clear = function () {
+            this.__entries__.splice(0);
+        };
+        /**
+         * @param {Function} callback
+         * @param {*} [ctx=null]
+         * @returns {void}
+         */
+        class_1.prototype.forEach = function (callback, ctx) {
+            if (ctx === void 0) { ctx = null; }
+            for (var _i = 0, _a = this.__entries__; _i < _a.length; _i++) {
+                var entry = _a[_i];
+                callback.call(ctx, entry[1], entry[0]);
+            }
+        };
+        return class_1;
+    }());
+})();
 
-      return null;
+/**
+ * Detects whether window and document objects are available in current environment.
+ */
+var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined' && window.document === document;
+
+// Returns global object of a current environment.
+var global$1 = (function () {
+    if (typeof global !== 'undefined' && global.Math === Math) {
+        return global;
     }
-  }]);
-  return TextArea;
-}(React.Component);
+    if (typeof self !== 'undefined' && self.Math === Math) {
+        return self;
+    }
+    if (typeof window !== 'undefined' && window.Math === Math) {
+        return window;
+    }
+    // eslint-disable-next-line no-new-func
+    return Function('return this')();
+})();
 
-var _default = TextArea;
-exports["default"] = _default;
+/**
+ * A shim for the requestAnimationFrame which falls back to the setTimeout if
+ * first one is not supported.
+ *
+ * @returns {number} Requests' identifier.
+ */
+var requestAnimationFrame$1 = (function () {
+    if (typeof requestAnimationFrame === 'function') {
+        // It's required to use a bounded function because IE sometimes throws
+        // an "Invalid calling object" error if rAF is invoked without the global
+        // object on the left hand side.
+        return requestAnimationFrame.bind(global$1);
+    }
+    return function (callback) { return setTimeout(function () { return callback(Date.now()); }, 1000 / 60); };
+})();
 
-/***/ }),
+// Defines minimum timeout before adding a trailing call.
+var trailingTimeout = 2;
+/**
+ * Creates a wrapper function which ensures that provided callback will be
+ * invoked only once during the specified delay period.
+ *
+ * @param {Function} callback - Function to be invoked after the delay period.
+ * @param {number} delay - Delay after which to invoke callback.
+ * @returns {Function}
+ */
+function throttle (callback, delay) {
+    var leadingCall = false, trailingCall = false, lastCallTime = 0;
+    /**
+     * Invokes the original callback function and schedules new invocation if
+     * the "proxy" was called during current request.
+     *
+     * @returns {void}
+     */
+    function resolvePending() {
+        if (leadingCall) {
+            leadingCall = false;
+            callback();
+        }
+        if (trailingCall) {
+            proxy();
+        }
+    }
+    /**
+     * Callback invoked after the specified delay. It will further postpone
+     * invocation of the original function delegating it to the
+     * requestAnimationFrame.
+     *
+     * @returns {void}
+     */
+    function timeoutCallback() {
+        requestAnimationFrame$1(resolvePending);
+    }
+    /**
+     * Schedules invocation of the original function.
+     *
+     * @returns {void}
+     */
+    function proxy() {
+        var timeStamp = Date.now();
+        if (leadingCall) {
+            // Reject immediately following calls.
+            if (timeStamp - lastCallTime < trailingTimeout) {
+                return;
+            }
+            // Schedule new call to be in invoked when the pending one is resolved.
+            // This is important for "transitions" which never actually start
+            // immediately so there is a chance that we might miss one if change
+            // happens amids the pending invocation.
+            trailingCall = true;
+        }
+        else {
+            leadingCall = true;
+            trailingCall = false;
+            setTimeout(timeoutCallback, delay);
+        }
+        lastCallTime = timeStamp;
+    }
+    return proxy;
+}
 
-/***/ "./node_modules/antd/lib/space/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/antd/lib/space/index.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+// Minimum delay before invoking the update of observers.
+var REFRESH_DELAY = 20;
+// A list of substrings of CSS properties used to find transition events that
+// might affect dimensions of observed elements.
+var transitionKeys = ['top', 'right', 'bottom', 'left', 'width', 'height', 'size', 'weight'];
+// Check if MutationObserver is available.
+var mutationObserverSupported = typeof MutationObserver !== 'undefined';
+/**
+ * Singleton controller class which handles updates of ResizeObserver instances.
+ */
+var ResizeObserverController = /** @class */ (function () {
+    /**
+     * Creates a new instance of ResizeObserverController.
+     *
+     * @private
+     */
+    function ResizeObserverController() {
+        /**
+         * Indicates whether DOM listeners have been added.
+         *
+         * @private {boolean}
+         */
+        this.connected_ = false;
+        /**
+         * Tells that controller has subscribed for Mutation Events.
+         *
+         * @private {boolean}
+         */
+        this.mutationEventsAdded_ = false;
+        /**
+         * Keeps reference to the instance of MutationObserver.
+         *
+         * @private {MutationObserver}
+         */
+        this.mutationsObserver_ = null;
+        /**
+         * A list of connected observers.
+         *
+         * @private {Array<ResizeObserverSPI>}
+         */
+        this.observers_ = [];
+        this.onTransitionEnd_ = this.onTransitionEnd_.bind(this);
+        this.refresh = throttle(this.refresh.bind(this), REFRESH_DELAY);
+    }
+    /**
+     * Adds observer to observers list.
+     *
+     * @param {ResizeObserverSPI} observer - Observer to be added.
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.addObserver = function (observer) {
+        if (!~this.observers_.indexOf(observer)) {
+            this.observers_.push(observer);
+        }
+        // Add listeners if they haven't been added yet.
+        if (!this.connected_) {
+            this.connect_();
+        }
+    };
+    /**
+     * Removes observer from observers list.
+     *
+     * @param {ResizeObserverSPI} observer - Observer to be removed.
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.removeObserver = function (observer) {
+        var observers = this.observers_;
+        var index = observers.indexOf(observer);
+        // Remove observer if it's present in registry.
+        if (~index) {
+            observers.splice(index, 1);
+        }
+        // Remove listeners if controller has no connected observers.
+        if (!observers.length && this.connected_) {
+            this.disconnect_();
+        }
+    };
+    /**
+     * Invokes the update of observers. It will continue running updates insofar
+     * it detects changes.
+     *
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.refresh = function () {
+        var changesDetected = this.updateObservers_();
+        // Continue running updates if changes have been detected as there might
+        // be future ones caused by CSS transitions.
+        if (changesDetected) {
+            this.refresh();
+        }
+    };
+    /**
+     * Updates every observer from observers list and notifies them of queued
+     * entries.
+     *
+     * @private
+     * @returns {boolean} Returns "true" if any observer has detected changes in
+     *      dimensions of it's elements.
+     */
+    ResizeObserverController.prototype.updateObservers_ = function () {
+        // Collect observers that have active observations.
+        var activeObservers = this.observers_.filter(function (observer) {
+            return observer.gatherActive(), observer.hasActive();
+        });
+        // Deliver notifications in a separate cycle in order to avoid any
+        // collisions between observers, e.g. when multiple instances of
+        // ResizeObserver are tracking the same element and the callback of one
+        // of them changes content dimensions of the observed target. Sometimes
+        // this may result in notifications being blocked for the rest of observers.
+        activeObservers.forEach(function (observer) { return observer.broadcastActive(); });
+        return activeObservers.length > 0;
+    };
+    /**
+     * Initializes DOM listeners.
+     *
+     * @private
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.connect_ = function () {
+        // Do nothing if running in a non-browser environment or if listeners
+        // have been already added.
+        if (!isBrowser || this.connected_) {
+            return;
+        }
+        // Subscription to the "Transitionend" event is used as a workaround for
+        // delayed transitions. This way it's possible to capture at least the
+        // final state of an element.
+        document.addEventListener('transitionend', this.onTransitionEnd_);
+        window.addEventListener('resize', this.refresh);
+        if (mutationObserverSupported) {
+            this.mutationsObserver_ = new MutationObserver(this.refresh);
+            this.mutationsObserver_.observe(document, {
+                attributes: true,
+                childList: true,
+                characterData: true,
+                subtree: true
+            });
+        }
+        else {
+            document.addEventListener('DOMSubtreeModified', this.refresh);
+            this.mutationEventsAdded_ = true;
+        }
+        this.connected_ = true;
+    };
+    /**
+     * Removes DOM listeners.
+     *
+     * @private
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.disconnect_ = function () {
+        // Do nothing if running in a non-browser environment or if listeners
+        // have been already removed.
+        if (!isBrowser || !this.connected_) {
+            return;
+        }
+        document.removeEventListener('transitionend', this.onTransitionEnd_);
+        window.removeEventListener('resize', this.refresh);
+        if (this.mutationsObserver_) {
+            this.mutationsObserver_.disconnect();
+        }
+        if (this.mutationEventsAdded_) {
+            document.removeEventListener('DOMSubtreeModified', this.refresh);
+        }
+        this.mutationsObserver_ = null;
+        this.mutationEventsAdded_ = false;
+        this.connected_ = false;
+    };
+    /**
+     * "Transitionend" event handler.
+     *
+     * @private
+     * @param {TransitionEvent} event
+     * @returns {void}
+     */
+    ResizeObserverController.prototype.onTransitionEnd_ = function (_a) {
+        var _b = _a.propertyName, propertyName = _b === void 0 ? '' : _b;
+        // Detect whether transition may affect dimensions of an element.
+        var isReflowProperty = transitionKeys.some(function (key) {
+            return !!~propertyName.indexOf(key);
+        });
+        if (isReflowProperty) {
+            this.refresh();
+        }
+    };
+    /**
+     * Returns instance of the ResizeObserverController.
+     *
+     * @returns {ResizeObserverController}
+     */
+    ResizeObserverController.getInstance = function () {
+        if (!this.instance_) {
+            this.instance_ = new ResizeObserverController();
+        }
+        return this.instance_;
+    };
+    /**
+     * Holds reference to the controller's instance.
+     *
+     * @private {ResizeObserverController}
+     */
+    ResizeObserverController.instance_ = null;
+    return ResizeObserverController;
+}());
 
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+/**
+ * Defines non-writable/enumerable properties of the provided target object.
+ *
+ * @param {Object} target - Object for which to define properties.
+ * @param {Object} props - Properties to be defined.
+ * @returns {Object} Target object.
+ */
+var defineConfigurable = (function (target, props) {
+    for (var _i = 0, _a = Object.keys(props); _i < _a.length; _i++) {
+        var key = _a[_i];
+        Object.defineProperty(target, key, {
+            value: props[key],
+            enumerable: false,
+            writable: false,
+            configurable: true
+        });
+    }
+    return target;
 });
-exports["default"] = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var spaceSize = {
-  small: 8,
-  middle: 16,
-  large: 24
-};
-
-var Space = function Space(props) {
-  var _classNames;
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls,
-      space = _React$useContext.space,
-      directionConfig = _React$useContext.direction;
-
-  var _props$size = props.size,
-      size = _props$size === void 0 ? (space === null || space === void 0 ? void 0 : space.size) || 'small' : _props$size,
-      align = props.align,
-      className = props.className,
-      children = props.children,
-      _props$direction = props.direction,
-      direction = _props$direction === void 0 ? 'horizontal' : _props$direction,
-      customizePrefixCls = props.prefixCls,
-      otherProps = __rest(props, ["size", "align", "className", "children", "direction", "prefixCls"]);
-
-  var items = (0, _toArray["default"])(children);
-  var len = items.length;
-
-  if (len === 0) {
-    return null;
-  }
-
-  var mergedAlign = align === undefined && direction === 'horizontal' ? 'center' : align;
-  var prefixCls = getPrefixCls('space', customizePrefixCls);
-  var cn = (0, _classnames["default"])(prefixCls, "".concat(prefixCls, "-").concat(direction), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), directionConfig === 'rtl'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-align-").concat(mergedAlign), mergedAlign), _classNames), className);
-  var itemClassName = "".concat(prefixCls, "-item");
-  var marginDirection = directionConfig === 'rtl' ? 'marginLeft' : 'marginRight';
-  return /*#__PURE__*/React.createElement("div", (0, _extends2["default"])({
-    className: cn
-  }, otherProps), items.map(function (child, i) {
-    return /*#__PURE__*/React.createElement("div", {
-      className: itemClassName // eslint-disable-next-line react/no-array-index-key
-      ,
-      key: "".concat(itemClassName, "-").concat(i),
-      style: i === len - 1 ? {} : (0, _defineProperty2["default"])({}, direction === 'vertical' ? 'marginBottom' : marginDirection, typeof size === 'string' ? spaceSize[size] : size)
-    }, child);
-  }));
-};
-
-var _default = Space;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/rc-util/lib/ref.js":
-/*!*****************************************!*\
-  !*** ./node_modules/rc-util/lib/ref.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+/**
+ * Returns the global object associated with provided element.
+ *
+ * @param {Object} target
+ * @returns {Object}
+ */
+var getWindowOf = (function (target) {
+    // Assume that the element is an instance of Node, which means that it
+    // has the "ownerDocument" property from which we can retrieve a
+    // corresponding global object.
+    var ownerGlobal = target && target.ownerDocument && target.ownerDocument.defaultView;
+    // Return the local global object if it's not possible extract one from
+    // provided element.
+    return ownerGlobal || global$1;
 });
-exports.fillRef = fillRef;
-exports.composeRef = composeRef;
-exports.supportRef = supportRef;
 
-var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function fillRef(ref, node) {
-  if (typeof ref === 'function') {
-    ref(node);
-  } else if (_typeof(ref) === 'object' && ref && 'current' in ref) {
-    ref.current = node;
-  }
+// Placeholder of an empty content rectangle.
+var emptyRect = createRectInit(0, 0, 0, 0);
+/**
+ * Converts provided string to a number.
+ *
+ * @param {number|string} value
+ * @returns {number}
+ */
+function toFloat(value) {
+    return parseFloat(value) || 0;
 }
 /**
- * Merge refs into one ref function to support ref passing.
+ * Extracts borders size from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @param {...string} positions - Borders positions (top, right, ...)
+ * @returns {number}
  */
-
-
-function composeRef() {
-  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
-    refs[_key] = arguments[_key];
-  }
-
-  return function (node) {
-    refs.forEach(function (ref) {
-      fillRef(ref, node);
+function getBordersSize(styles) {
+    var positions = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        positions[_i - 1] = arguments[_i];
+    }
+    return positions.reduce(function (size, position) {
+        var value = styles['border-' + position + '-width'];
+        return size + toFloat(value);
+    }, 0);
+}
+/**
+ * Extracts paddings sizes from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @returns {Object} Paddings box.
+ */
+function getPaddings(styles) {
+    var positions = ['top', 'right', 'bottom', 'left'];
+    var paddings = {};
+    for (var _i = 0, positions_1 = positions; _i < positions_1.length; _i++) {
+        var position = positions_1[_i];
+        var value = styles['padding-' + position];
+        paddings[position] = toFloat(value);
+    }
+    return paddings;
+}
+/**
+ * Calculates content rectangle of provided SVG element.
+ *
+ * @param {SVGGraphicsElement} target - Element content rectangle of which needs
+ *      to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getSVGContentRect(target) {
+    var bbox = target.getBBox();
+    return createRectInit(0, 0, bbox.width, bbox.height);
+}
+/**
+ * Calculates content rectangle of provided HTMLElement.
+ *
+ * @param {HTMLElement} target - Element for which to calculate the content rectangle.
+ * @returns {DOMRectInit}
+ */
+function getHTMLElementContentRect(target) {
+    // Client width & height properties can't be
+    // used exclusively as they provide rounded values.
+    var clientWidth = target.clientWidth, clientHeight = target.clientHeight;
+    // By this condition we can catch all non-replaced inline, hidden and
+    // detached elements. Though elements with width & height properties less
+    // than 0.5 will be discarded as well.
+    //
+    // Without it we would need to implement separate methods for each of
+    // those cases and it's not possible to perform a precise and performance
+    // effective test for hidden elements. E.g. even jQuery's ':visible' filter
+    // gives wrong results for elements with width & height less than 0.5.
+    if (!clientWidth && !clientHeight) {
+        return emptyRect;
+    }
+    var styles = getWindowOf(target).getComputedStyle(target);
+    var paddings = getPaddings(styles);
+    var horizPad = paddings.left + paddings.right;
+    var vertPad = paddings.top + paddings.bottom;
+    // Computed styles of width & height are being used because they are the
+    // only dimensions available to JS that contain non-rounded values. It could
+    // be possible to utilize the getBoundingClientRect if only it's data wasn't
+    // affected by CSS transformations let alone paddings, borders and scroll bars.
+    var width = toFloat(styles.width), height = toFloat(styles.height);
+    // Width & height include paddings and borders when the 'border-box' box
+    // model is applied (except for IE).
+    if (styles.boxSizing === 'border-box') {
+        // Following conditions are required to handle Internet Explorer which
+        // doesn't include paddings and borders to computed CSS dimensions.
+        //
+        // We can say that if CSS dimensions + paddings are equal to the "client"
+        // properties then it's either IE, and thus we don't need to subtract
+        // anything, or an element merely doesn't have paddings/borders styles.
+        if (Math.round(width + horizPad) !== clientWidth) {
+            width -= getBordersSize(styles, 'left', 'right') + horizPad;
+        }
+        if (Math.round(height + vertPad) !== clientHeight) {
+            height -= getBordersSize(styles, 'top', 'bottom') + vertPad;
+        }
+    }
+    // Following steps can't be applied to the document's root element as its
+    // client[Width/Height] properties represent viewport area of the window.
+    // Besides, it's as well not necessary as the <html> itself neither has
+    // rendered scroll bars nor it can be clipped.
+    if (!isDocumentElement(target)) {
+        // In some browsers (only in Firefox, actually) CSS width & height
+        // include scroll bars size which can be removed at this step as scroll
+        // bars are the only difference between rounded dimensions + paddings
+        // and "client" properties, though that is not always true in Chrome.
+        var vertScrollbar = Math.round(width + horizPad) - clientWidth;
+        var horizScrollbar = Math.round(height + vertPad) - clientHeight;
+        // Chrome has a rather weird rounding of "client" properties.
+        // E.g. for an element with content width of 314.2px it sometimes gives
+        // the client width of 315px and for the width of 314.7px it may give
+        // 314px. And it doesn't happen all the time. So just ignore this delta
+        // as a non-relevant.
+        if (Math.abs(vertScrollbar) !== 1) {
+            width -= vertScrollbar;
+        }
+        if (Math.abs(horizScrollbar) !== 1) {
+            height -= horizScrollbar;
+        }
+    }
+    return createRectInit(paddings.left, paddings.top, width, height);
+}
+/**
+ * Checks whether provided element is an instance of the SVGGraphicsElement.
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+var isSVGGraphicsElement = (function () {
+    // Some browsers, namely IE and Edge, don't have the SVGGraphicsElement
+    // interface.
+    if (typeof SVGGraphicsElement !== 'undefined') {
+        return function (target) { return target instanceof getWindowOf(target).SVGGraphicsElement; };
+    }
+    // If it's so, then check that element is at least an instance of the
+    // SVGElement and that it has the "getBBox" method.
+    // eslint-disable-next-line no-extra-parens
+    return function (target) { return (target instanceof getWindowOf(target).SVGElement &&
+        typeof target.getBBox === 'function'); };
+})();
+/**
+ * Checks whether provided element is a document element (<html>).
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+function isDocumentElement(target) {
+    return target === getWindowOf(target).document.documentElement;
+}
+/**
+ * Calculates an appropriate content rectangle for provided html or svg element.
+ *
+ * @param {Element} target - Element content rectangle of which needs to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getContentRect(target) {
+    if (!isBrowser) {
+        return emptyRect;
+    }
+    if (isSVGGraphicsElement(target)) {
+        return getSVGContentRect(target);
+    }
+    return getHTMLElementContentRect(target);
+}
+/**
+ * Creates rectangle with an interface of the DOMRectReadOnly.
+ * Spec: https://drafts.fxtf.org/geometry/#domrectreadonly
+ *
+ * @param {DOMRectInit} rectInit - Object with rectangle's x/y coordinates and dimensions.
+ * @returns {DOMRectReadOnly}
+ */
+function createReadOnlyRect(_a) {
+    var x = _a.x, y = _a.y, width = _a.width, height = _a.height;
+    // If DOMRectReadOnly is available use it as a prototype for the rectangle.
+    var Constr = typeof DOMRectReadOnly !== 'undefined' ? DOMRectReadOnly : Object;
+    var rect = Object.create(Constr.prototype);
+    // Rectangle's properties are not writable and non-enumerable.
+    defineConfigurable(rect, {
+        x: x, y: y, width: width, height: height,
+        top: y,
+        right: x + width,
+        bottom: height + y,
+        left: x
     });
-  };
+    return rect;
+}
+/**
+ * Creates DOMRectInit object based on the provided dimensions and the x/y coordinates.
+ * Spec: https://drafts.fxtf.org/geometry/#dictdef-domrectinit
+ *
+ * @param {number} x - X coordinate.
+ * @param {number} y - Y coordinate.
+ * @param {number} width - Rectangle's width.
+ * @param {number} height - Rectangle's height.
+ * @returns {DOMRectInit}
+ */
+function createRectInit(x, y, width, height) {
+    return { x: x, y: y, width: width, height: height };
 }
 
-function supportRef(nodeOrComponent) {
-  var _type$prototype, _nodeOrComponent$prot;
+/**
+ * Class that is responsible for computations of the content rectangle of
+ * provided DOM element and for keeping track of it's changes.
+ */
+var ResizeObservation = /** @class */ (function () {
+    /**
+     * Creates an instance of ResizeObservation.
+     *
+     * @param {Element} target - Element to be observed.
+     */
+    function ResizeObservation(target) {
+        /**
+         * Broadcasted width of content rectangle.
+         *
+         * @type {number}
+         */
+        this.broadcastWidth = 0;
+        /**
+         * Broadcasted height of content rectangle.
+         *
+         * @type {number}
+         */
+        this.broadcastHeight = 0;
+        /**
+         * Reference to the last observed content rectangle.
+         *
+         * @private {DOMRectInit}
+         */
+        this.contentRect_ = createRectInit(0, 0, 0, 0);
+        this.target = target;
+    }
+    /**
+     * Updates content rectangle and tells whether it's width or height properties
+     * have changed since the last broadcast.
+     *
+     * @returns {boolean}
+     */
+    ResizeObservation.prototype.isActive = function () {
+        var rect = getContentRect(this.target);
+        this.contentRect_ = rect;
+        return (rect.width !== this.broadcastWidth ||
+            rect.height !== this.broadcastHeight);
+    };
+    /**
+     * Updates 'broadcastWidth' and 'broadcastHeight' properties with a data
+     * from the corresponding properties of the last observed content rectangle.
+     *
+     * @returns {DOMRectInit} Last observed content rectangle.
+     */
+    ResizeObservation.prototype.broadcastRect = function () {
+        var rect = this.contentRect_;
+        this.broadcastWidth = rect.width;
+        this.broadcastHeight = rect.height;
+        return rect;
+    };
+    return ResizeObservation;
+}());
 
-  var type = (0, _reactIs.isMemo)(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type; // Function component node
+var ResizeObserverEntry = /** @class */ (function () {
+    /**
+     * Creates an instance of ResizeObserverEntry.
+     *
+     * @param {Element} target - Element that is being observed.
+     * @param {DOMRectInit} rectInit - Data of the element's content rectangle.
+     */
+    function ResizeObserverEntry(target, rectInit) {
+        var contentRect = createReadOnlyRect(rectInit);
+        // According to the specification following properties are not writable
+        // and are also not enumerable in the native implementation.
+        //
+        // Property accessors are not being used as they'd require to define a
+        // private WeakMap storage which may cause memory leaks in browsers that
+        // don't support this type of collections.
+        defineConfigurable(this, { target: target, contentRect: contentRect });
+    }
+    return ResizeObserverEntry;
+}());
 
-  if (typeof type === 'function' && !((_type$prototype = type.prototype) === null || _type$prototype === void 0 ? void 0 : _type$prototype.render)) {
-    return false;
-  } // Class component
+var ResizeObserverSPI = /** @class */ (function () {
+    /**
+     * Creates a new instance of ResizeObserver.
+     *
+     * @param {ResizeObserverCallback} callback - Callback function that is invoked
+     *      when one of the observed elements changes it's content dimensions.
+     * @param {ResizeObserverController} controller - Controller instance which
+     *      is responsible for the updates of observer.
+     * @param {ResizeObserver} callbackCtx - Reference to the public
+     *      ResizeObserver instance which will be passed to callback function.
+     */
+    function ResizeObserverSPI(callback, controller, callbackCtx) {
+        /**
+         * Collection of resize observations that have detected changes in dimensions
+         * of elements.
+         *
+         * @private {Array<ResizeObservation>}
+         */
+        this.activeObservations_ = [];
+        /**
+         * Registry of the ResizeObservation instances.
+         *
+         * @private {Map<Element, ResizeObservation>}
+         */
+        this.observations_ = new MapShim();
+        if (typeof callback !== 'function') {
+            throw new TypeError('The callback provided as parameter 1 is not a function.');
+        }
+        this.callback_ = callback;
+        this.controller_ = controller;
+        this.callbackCtx_ = callbackCtx;
+    }
+    /**
+     * Starts observing provided element.
+     *
+     * @param {Element} target - Element to be observed.
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.observe = function (target) {
+        if (!arguments.length) {
+            throw new TypeError('1 argument required, but only 0 present.');
+        }
+        // Do nothing if current environment doesn't have the Element interface.
+        if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+            return;
+        }
+        if (!(target instanceof getWindowOf(target).Element)) {
+            throw new TypeError('parameter 1 is not of type "Element".');
+        }
+        var observations = this.observations_;
+        // Do nothing if element is already being observed.
+        if (observations.has(target)) {
+            return;
+        }
+        observations.set(target, new ResizeObservation(target));
+        this.controller_.addObserver(this);
+        // Force the update of observations.
+        this.controller_.refresh();
+    };
+    /**
+     * Stops observing provided element.
+     *
+     * @param {Element} target - Element to stop observing.
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.unobserve = function (target) {
+        if (!arguments.length) {
+            throw new TypeError('1 argument required, but only 0 present.');
+        }
+        // Do nothing if current environment doesn't have the Element interface.
+        if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+            return;
+        }
+        if (!(target instanceof getWindowOf(target).Element)) {
+            throw new TypeError('parameter 1 is not of type "Element".');
+        }
+        var observations = this.observations_;
+        // Do nothing if element is not being observed.
+        if (!observations.has(target)) {
+            return;
+        }
+        observations.delete(target);
+        if (!observations.size) {
+            this.controller_.removeObserver(this);
+        }
+    };
+    /**
+     * Stops observing all elements.
+     *
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.disconnect = function () {
+        this.clearActive();
+        this.observations_.clear();
+        this.controller_.removeObserver(this);
+    };
+    /**
+     * Collects observation instances the associated element of which has changed
+     * it's content rectangle.
+     *
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.gatherActive = function () {
+        var _this = this;
+        this.clearActive();
+        this.observations_.forEach(function (observation) {
+            if (observation.isActive()) {
+                _this.activeObservations_.push(observation);
+            }
+        });
+    };
+    /**
+     * Invokes initial callback function with a list of ResizeObserverEntry
+     * instances collected from active resize observations.
+     *
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.broadcastActive = function () {
+        // Do nothing if observer doesn't have active observations.
+        if (!this.hasActive()) {
+            return;
+        }
+        var ctx = this.callbackCtx_;
+        // Create ResizeObserverEntry instance for every active observation.
+        var entries = this.activeObservations_.map(function (observation) {
+            return new ResizeObserverEntry(observation.target, observation.broadcastRect());
+        });
+        this.callback_.call(ctx, entries, ctx);
+        this.clearActive();
+    };
+    /**
+     * Clears the collection of active observations.
+     *
+     * @returns {void}
+     */
+    ResizeObserverSPI.prototype.clearActive = function () {
+        this.activeObservations_.splice(0);
+    };
+    /**
+     * Tells whether observer has active observations.
+     *
+     * @returns {boolean}
+     */
+    ResizeObserverSPI.prototype.hasActive = function () {
+        return this.activeObservations_.length > 0;
+    };
+    return ResizeObserverSPI;
+}());
 
+// Registry of internal observers. If WeakMap is not available use current shim
+// for the Map collection as it has all required methods and because WeakMap
+// can't be fully polyfilled anyway.
+var observers = typeof WeakMap !== 'undefined' ? new WeakMap() : new MapShim();
+/**
+ * ResizeObserver API. Encapsulates the ResizeObserver SPI implementation
+ * exposing only those methods and properties that are defined in the spec.
+ */
+var ResizeObserver = /** @class */ (function () {
+    /**
+     * Creates a new instance of ResizeObserver.
+     *
+     * @param {ResizeObserverCallback} callback - Callback that is invoked when
+     *      dimensions of the observed elements change.
+     */
+    function ResizeObserver(callback) {
+        if (!(this instanceof ResizeObserver)) {
+            throw new TypeError('Cannot call a class as a function.');
+        }
+        if (!arguments.length) {
+            throw new TypeError('1 argument required, but only 0 present.');
+        }
+        var controller = ResizeObserverController.getInstance();
+        var observer = new ResizeObserverSPI(callback, controller, this);
+        observers.set(this, observer);
+    }
+    return ResizeObserver;
+}());
+// Expose public methods of ResizeObserver.
+[
+    'observe',
+    'unobserve',
+    'disconnect'
+].forEach(function (method) {
+    ResizeObserver.prototype[method] = function () {
+        var _a;
+        return (_a = observers.get(this))[method].apply(_a, arguments);
+    };
+});
 
-  if (typeof nodeOrComponent === 'function' && !((_nodeOrComponent$prot = nodeOrComponent.prototype) === null || _nodeOrComponent$prot === void 0 ? void 0 : _nodeOrComponent$prot.render)) {
-    return false;
-  }
+var index = (function () {
+    // Export existing implementation if available.
+    if (typeof global$1.ResizeObserver !== 'undefined') {
+        return global$1.ResizeObserver;
+    }
+    return ResizeObserver;
+})();
 
-  return true;
-}
-/* eslint-enable */
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ })
 
