@@ -196,7 +196,8 @@ var Sider = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Sider;
 var SubMenu = antd_lib_menu__WEBPACK_IMPORTED_MODULE_4___default.a.SubMenu;
 
 function Sidebar(_ref) {
-  var routes = _ref.routes;
+  var mode = _ref.mode,
+      routes = _ref.routes;
 
   var getRoute = function getRoute() {
     return Object(_Helpers_PresentRoute__WEBPACK_IMPORTED_MODULE_2__["returnRoute"])(routes);
@@ -216,11 +217,12 @@ function Sidebar(_ref) {
     collapsed: collapsed,
     breakpoint: "md",
     collapsedWidth: "0",
-    onCollapse: onCollapse
+    onCollapse: onCollapse,
+    theme: mode === "compact" ? "light" : mode
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    theme: "dark",
+    theme: "light",
     defaultSelectedKeys: getRoute()[0],
     defaultOpenKeys: getRoute()[1],
     mode: "inline"

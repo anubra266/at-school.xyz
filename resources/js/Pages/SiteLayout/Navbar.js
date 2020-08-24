@@ -43,10 +43,11 @@ function Navbar({ pageLoader }) {
                 ref={pageLoader}
                 waitingTime={1000}
             />
-            <Header className="header" style={{ padding: 0 }}>
+            <Header className="site-layout-background" style={{ padding: 0 }}>
                 <PageHeader
                     title="at-School"
                     className="site-page-header"
+                    ghost={false}
                     subTitle={
                         <Row>
                             <Col

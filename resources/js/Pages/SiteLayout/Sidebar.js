@@ -14,7 +14,7 @@ import UserOutlined from "@ant-design/icons/UserOutlined";
 //  TODO Dynamic JSON Routing
 const { Sider } = Layout;
 const { SubMenu } = Menu;
-function Sidebar({ routes }) {
+function Sidebar({ mode, routes }) {
     const getRoute = () => {
         return returnRoute(routes);
     };
@@ -32,10 +32,11 @@ function Sidebar({ routes }) {
                 breakpoint="md"
                 collapsedWidth="0"
                 onCollapse={onCollapse}
+                theme={mode === "compact" ? "light" : mode}
             >
                 <div className="logo" />
                 <Menu
-                    theme="dark"
+                    theme="light"
                     defaultSelectedKeys={getRoute()[0]}
                     defaultOpenKeys={getRoute()[1]}
                     mode="inline"

@@ -12,13 +12,10 @@ import Typography from "antd/lib/typography";
 import OrganizationForm from "./OrganizationForm";
 
 const OrganizationsList = ({ organizations, showDrawer }) => {
-    organizations = organizations.map((organization, key) => {
-        organization.key = `org-${key}`;
-        return organization;
-    });
     const { flash } = usePage();
     const [loading, setLoading] = useState(false);
     const OrgForm = useRef(null);
+    const formProps = { loading, onFinish, OrgForm };
 
     const onFinish = data => {
         setLoading(true);
@@ -26,7 +23,19 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
             setLoading(false);
         });
     };
-    const formProps = { loading, onFinish, OrgForm };
+
+    organizations = organizations.map((organization, key) => {
+        organization.key = `org-${key}`;
+        return organization;
+    });
+
+    const townfilters = [
+        //TODO Display Environs in collapse menu under Table
+        //! in production, get towns entered by students and reduce duplicates to use here.
+        { text: "Ogun", value: "Ogun" },
+        { text: "Lagos", value: "Lagos" }
+    ];
+
     return (
         <React.Fragment>
             {flash.success && (
@@ -94,13 +103,10 @@ const OrganizationsList = ({ organizations, showDrawer }) => {
                         onFilter={(value, record) =>
                             record.address
                                 .toLowerCase()
-                                .indexOf(value.toLocaleLowerCase()) !== -1
+                                .includes(value.toLocaleLowerCase())
                         }
                         filterMultiple={false}
-                        filters={[
-                            { text: "Ogun", value: "Ogun" },
-                            { text: "Lagos", value: "Lagos" }
-                        ]}
+                        filters={townfilters}
                     />
                     <Table.Column
                         title="Code"

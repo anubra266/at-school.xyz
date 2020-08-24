@@ -1,1001 +1,519 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[44],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M272.9 512l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L186.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H532c6.7 0 10.4-7.7 6.3-12.9L272.9 512zm304 0l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L490.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H836c6.7 0 10.4-7.7 6.3-12.9L576.9 512z" } }] }, "name": "double-left", "theme": "outlined" };
-exports.default = DoubleLeftOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M533.2 492.3L277.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H188c-6.7 0-10.4 7.7-6.3 12.9L447.1 512 181.7 851.1A7.98 7.98 0 00188 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5zm304 0L581.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H492c-6.7 0-10.4 7.7-6.3 12.9L751.1 512 485.7 851.1A7.98 7.98 0 00492 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5z" } }] }, "name": "double-right", "theme": "outlined" };
-exports.default = DoubleRightOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleLeftOutlined.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleLeftOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleRightOutlined.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleRightOutlined.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleRightOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleLeftOutlined = function DoubleLeftOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleLeftOutlined.default
-  }));
-};
-
-DoubleLeftOutlined.displayName = 'DoubleLeftOutlined';
-
-var _default = React.forwardRef(DoubleLeftOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleRightOutlined = function DoubleRightOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleRightOutlined.default
-  }));
-};
-
-DoubleRightOutlined.displayName = 'DoubleRightOutlined';
-
-var _default = React.forwardRef(DoubleRightOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Layout.js":
-/*!*******************************************!*\
-  !*** ./resources/js/Pages/Auth/Layout.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Shared_FlashMessages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Shared/FlashMessages */ "./resources/js/Shared/FlashMessages.js");
-/* harmony import */ var _Shared_Loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Shared/Loading */ "./resources/js/Shared/Loading.js");
-
-
-
-
-var Assets = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(21), __webpack_require__.e(58)]).then(__webpack_require__.bind(null, /*! @/Pages/Auth/Assets */ "./resources/js/Pages/Auth/Assets.js"));
-});
-
-function Layout(_ref) {
-  var children = _ref.children,
-      title = _ref.title;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    document.title = title;
-  }, [title]);
-  var pageLoader = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); //* Start page Load on Navigator Change
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
-    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], null)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Assets, {
-    pageLoader: pageLoader
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "navbar sticky-top text-light",
-    style: {
-      backgroundColor: "#bd59d4",
-      boxShadow: "1px 1px 15px black"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
-    href: route("landing")
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "navbar-brand mb-0 login100-form-title text-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: __webpack_require__(/*! @/assets/general/images/at-school.png */ "./resources/js/assets/general/images/at-school.png"),
-    width: "30",
-    height: "30",
-    className: "d-inline-block align-top",
-    alt: "",
-    loading: "lazy"
-  }), "at-school"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-login100",
-    style: {
-      backgroundImage: "url(".concat(__webpack_require__(/*! @/assets/auth/images/bg-01.jpg */ "./resources/js/assets/auth/images/bg-01.jpg"), ")")
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_FlashMessages__WEBPACK_IMPORTED_MODULE_2__["default"], null), children))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/AcademicInfo.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/AcademicInfo.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/select */ "./node_modules/antd/lib/select/index.js");
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var Option = antd_lib_select__WEBPACK_IMPORTED_MODULE_1___default.a.Option,
-    OptGroup = antd_lib_select__WEBPACK_IMPORTED_MODULE_1___default.a.OptGroup;
-
-function AcademicInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, errors.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.school[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "text",
-    name: "school",
-    placeholder: "School",
-    required: true,
-    value: data.school,
-    onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.school_town && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.school_town[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    required: true,
-    type: "text",
-    name: "school_town",
-    placeholder: "School's Town",
-    value: data.school_town,
-    onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.initial_role && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.initial_role[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    required: true,
-    name: "initial_role",
-    placeholder: "Select your classification",
-    value: data.initial_role,
-    className: "input100Select",
-    onChange: function onChange(value) {
-      handleChange({
-        target: {
-          name: "initial_role",
-          value: value
-        }
-      });
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(OptGroup, {
-    label: "Student"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Option, {
-    value: "practicist"
-  }, "Personal Practice"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Option, {
-    value: "student"
-  }, "Join a Classroom")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(OptGroup, {
-    label: "Educator - Join Organization"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Option, {
-    value: "educator"
-  }, "Create Classroom"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Option, {
-    value: "department_head"
-  }, "Create Environ / Department")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(OptGroup, {
-    label: "Organization Admin"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Option, {
-    value: "organization_admin"
-  }, "Register Organization"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (AcademicInfo);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/BasicInfo.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/BasicInfo.js ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_phone_input_2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-phone-input-2 */ "./node_modules/react-phone-input-2/lib/lib.js");
-/* harmony import */ var react_phone_input_2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_phone_input_2__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_phone_input_2_lib_bootstrap_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-phone-input-2/lib/bootstrap.css */ "./node_modules/react-phone-input-2/lib/bootstrap.css");
-/* harmony import */ var react_phone_input_2_lib_bootstrap_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_phone_input_2_lib_bootstrap_css__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-function BasicInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, errors.email && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.email[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "text",
-    name: "email",
-    placeholder: "Email",
-    value: data.email,
-    onChange: handleChange,
-    required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.telephone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.telephone[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "milabel"
-  }, "Telephone"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100  m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_phone_input_2__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    country: "ng",
-    defaultCountry: "ngn",
-    inputProps: {
-      name: "telephone",
-      required: true
-    },
-    value: data.telephone,
-    onChange: function onChange(phone) {
-      return handleChange({
-        target: {
-          name: "telephone",
-          value: phone
-        }
-      });
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.date_of_birth && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.date_of_birth[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "milabel"
-  }, "Date of Birth"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "date",
-    name: "date_of_birth",
-    placeholder: "Date of birth",
-    value: data.date_of_birth,
-    onChange: handleChange,
-    required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (BasicInfo);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/FormFooter.js":
-/*!********************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/FormFooter.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Shared/LoadingButton */ "./resources/js/Shared/LoadingButton.js");
-/* harmony import */ var _ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js");
-/* harmony import */ var _ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/DoubleRightOutlined.js");
-/* harmony import */ var _ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-function FormFooter(_ref) {
-  var page = _ref.page,
-      setPage = _ref.setPage,
-      lastPage = _ref.lastPage,
-      checking = _ref.checking;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-between"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    disabled: page === 0,
-    type: "button",
-    className: "login100-form-btn atlogin",
-    onClick: function onClick() {
-      setPage(page > -1 && page - 1);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3___default.a, null), " Prev")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
-  }, page === lastPage ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    type: "submit",
-    className: "login100-form-btn atlogin",
-    loading: checking
-  }, "Sign Up") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "login100-form-btn atlogin",
-    onClick: function onClick() {
-      setPage(page < lastPage && page + 1);
-    }
-  }, "Next ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4___default.a, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-between mt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
-    className: "txt2 hov1",
-    href: route("password.request")
-  }, "Forgot Password?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6 text-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
-    className: "txt2 hov1",
-    href: route("login")
-  }, "Sign In"))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (FormFooter);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/PasswordInfo.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/PasswordInfo.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/input */ "./node_modules/antd/lib/input/index.js");
-/* harmony import */ var antd_lib_input__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_input__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/space */ "./node_modules/antd/lib/space/index.js");
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_space__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ant_design_icons_EyeInvisibleOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons/EyeInvisibleOutlined */ "./node_modules/@ant-design/icons/EyeInvisibleOutlined.js");
-/* harmony import */ var _ant_design_icons_EyeInvisibleOutlined__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_EyeInvisibleOutlined__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-
-function PasswordInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, errors.password && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.password[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_input__WEBPACK_IMPORTED_MODULE_1___default.a.Password, {
-    placeholder: "input password",
-    required: true,
-    name: "password",
-    onChange: handleChange,
-    value: data.password
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.password_confirmation && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.password_confirmation[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_input__WEBPACK_IMPORTED_MODULE_1___default.a.Password, {
-    placeholder: "confirm password",
-    required: true,
-    name: "password_confirmation",
-    onChange: handleChange,
-    value: data.password_confirmation
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (PasswordInfo);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/PersonalInfo.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/PersonalInfo.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PersonalInfo; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/radio */ "./node_modules/antd/lib/radio/index.js");
-/* harmony import */ var antd_lib_radio__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_radio__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function PersonalInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, errors.first_name && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.first_name[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "text",
-    name: "first_name",
-    placeholder: "First Name",
-    required: true,
-    value: data.first_name,
-    onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.middle_name && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.middle_name[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "text",
-    name: "middle_name",
-    placeholder: "Middle Name",
-    required: true,
-    value: data.middle_name,
-    onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.last_name && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.last_name[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "input100",
-    type: "text",
-    name: "last_name",
-    placeholder: "Last Name",
-    required: true,
-    value: data.last_name,
-    onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "focus-input100"
-  })), errors.gender && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.gender[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Gender"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrap-input100 m-b-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_1___default.a.Group, {
-    name: "gender",
-    value: data.gender,
-    onChange: handleChange,
-    optionType: "button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    value: "male"
-  }, "Male"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    value: "female"
-  }, "Female"))));
-}
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/ProfileImageInfo.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/ProfileImageInfo.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_avatar_edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-avatar-edit */ "./node_modules/react-avatar-edit/lib/react-avatar.js");
-/* harmony import */ var react_avatar_edit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_avatar_edit__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_notification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/notification */ "./node_modules/antd/lib/notification/index.js");
-/* harmony import */ var antd_lib_notification__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_notification__WEBPACK_IMPORTED_MODULE_2__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-// noprotect
-
-
-
-
-function ProfileimageInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
-      _useState2 = _slicedToArray(_useState, 2),
-      src = _useState2[0],
-      setSrc = _useState2[1];
-
-  var onCrop = function onCrop(preview) {
-    setSrc(preview);
-    handleChange({
-      target: {
-        name: "profile_image",
-        value: preview
-      }
-    });
-  };
-
-  var onBeforeFileLoad = function onBeforeFileLoad(elem) {
-    var image = elem.target.files[0];
-    var name = image.name;
-    console.log([name]);
-
-    if (image.size > 2000000) {
-      antd_lib_notification__WEBPACK_IMPORTED_MODULE_2___default.a["error"]({
-        message: "Upload Profile Picture",
-        description: "Image must be smaller than 2mb.",
-        placement: "bottomRight"
-      });
-      elem.target.value = "";
-    }
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-center"
-  }, errors.profile_image && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.profile_image[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-    className: "milabel "
-  }, "Profile Picture")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center mb-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_avatar_edit__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    width: 200,
-    height: 200,
-    onCrop: onCrop,
-    onBeforeFileLoad: onBeforeFileLoad,
-    mimeTypes: "image/jpeg",
-    backgroundColor: "white",
-    src: src
-  })));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (ProfileimageInfo);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/index.js":
-/*!***************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/index.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Pages_Auth_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/Auth/Layout */ "./resources/js/Pages/Auth/Layout.js");
-/* harmony import */ var _Pages_Auth_Register_PersonalInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Auth/Register/PersonalInfo */ "./resources/js/Pages/Auth/Register/PersonalInfo.js");
-/* harmony import */ var _Pages_Auth_Register_BasicInfo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Pages/Auth/Register/BasicInfo */ "./resources/js/Pages/Auth/Register/BasicInfo.js");
-/* harmony import */ var _Pages_Auth_Register_AcademicInfo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Pages/Auth/Register/AcademicInfo */ "./resources/js/Pages/Auth/Register/AcademicInfo.js");
-/* harmony import */ var _Pages_Auth_Register_PasswordInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Pages/Auth/Register/PasswordInfo */ "./resources/js/Pages/Auth/Register/PasswordInfo.js");
-/* harmony import */ var _Pages_Auth_Register_ProfileImageInfo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/Pages/Auth/Register/ProfileImageInfo */ "./resources/js/Pages/Auth/Register/ProfileImageInfo.js");
-/* harmony import */ var _Pages_Auth_Register_FormFooter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Pages/Auth/Register/FormFooter */ "./resources/js/Pages/Auth/Register/FormFooter.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-function Register() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      checking = _useState2[0],
-      setChecking = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
-      _useState4 = _slicedToArray(_useState3, 2),
-      page = _useState4[0],
-      setPage = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    first_name: "",
-    middle_name: "",
-    last_name: "",
-    gender: "",
-    email: "",
-    telephone: "",
-    date_of_birth: "",
-    school: "",
-    school_town: "",
-    initial_role: "Select your Classification",
-    password: "",
-    password_confirmation: "",
-    profile_image: ""
-  }),
-      _useState6 = _slicedToArray(_useState5, 2),
-      data = _useState6[0],
-      setData = _useState6[1];
-
-  var handleChange = function handleChange(e) {
-    var key = e.target.name;
-    var value = e.target.value;
-    setData(function (values) {
-      return _objectSpread(_objectSpread({}, values), {}, _defineProperty({}, key, value));
-    });
-  };
-
-  var handleSubmit = function handleSubmit(e) {
-    e.preventDefault();
-    setChecking(true);
-    data.initial_role === "Select your Classification" ? data.initial_role = "" : "";
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].post(route("register"), data).then(function () {
-      setChecking(false);
-    });
-  };
-
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["usePage"])(),
-      errors = _usePage.errors;
-
-  var lastPage = 4;
-  var formprops = {
-    data: data,
-    handleChange: handleChange,
-    errors: errors
-  };
-  var footerprops = {
-    page: page,
-    setPage: setPage,
-    lastPage: lastPage,
-    checking: checking
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: "Register at-school"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "login100-form validate-form",
-    onSubmit: handleSubmit
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "login100-form-title p-b-37"
-  }, "Sign Up"), page === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_PersonalInfo__WEBPACK_IMPORTED_MODULE_5__["default"], formprops), page === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_BasicInfo__WEBPACK_IMPORTED_MODULE_6__["default"], formprops), page === 2 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_AcademicInfo__WEBPACK_IMPORTED_MODULE_7__["default"], formprops), page === 3 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_PasswordInfo__WEBPACK_IMPORTED_MODULE_8__["default"], formprops), page === 4 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_ProfileImageInfo__WEBPACK_IMPORTED_MODULE_9__["default"], formprops), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Register_FormFooter__WEBPACK_IMPORTED_MODULE_10__["default"], footerprops)));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Register);
-
-/***/ }),
-
-/***/ "./resources/js/Shared/FlashMessages.js":
+/***/ "./node_modules/antd/lib/input/Group.js":
 /*!**********************************************!*\
-  !*** ./resources/js/Shared/FlashMessages.js ***!
+  !*** ./node_modules/antd/lib/input/Group.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
-      _useState2 = _slicedToArray(_useState, 2),
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var Group = function Group(props) {
+  return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, function (_ref) {
+    var _classNames;
+
+    var getPrefixCls = _ref.getPrefixCls,
+        direction = _ref.direction;
+    var customizePrefixCls = props.prefixCls,
+        _props$className = props.className,
+        className = _props$className === void 0 ? '' : _props$className;
+    var prefixCls = getPrefixCls('input-group', customizePrefixCls);
+    var cls = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-lg"), props.size === 'large'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-sm"), props.size === 'small'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-compact"), props.compact), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
+    return /*#__PURE__*/React.createElement("span", {
+      className: cls,
+      style: props.style,
+      onMouseEnter: props.onMouseEnter,
+      onMouseLeave: props.onMouseLeave,
+      onFocus: props.onFocus,
+      onBlur: props.onBlur
+    }, props.children);
+  });
+};
+
+var _default = Group;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/input/Password.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/input/Password.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+
+var _EyeOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/EyeOutlined */ "./node_modules/@ant-design/icons/EyeOutlined.js"));
+
+var _EyeInvisibleOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/EyeInvisibleOutlined */ "./node_modules/@ant-design/icons/EyeInvisibleOutlined.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_modules/antd/lib/input/Input.js"));
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var ActionMap = {
+  click: 'onClick',
+  hover: 'onMouseOver'
+};
+var Password = /*#__PURE__*/React.forwardRef(function (props, ref) {
+  var _useState = (0, React.useState)(false),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
       visible = _useState2[0],
       setVisible = _useState2[1];
 
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["usePage"])(),
-      flash = _usePage.flash,
-      errors = _usePage.errors;
+  var onVisibleChange = function onVisibleChange() {
+    var disabled = props.disabled;
 
-  var numOfErrors = Object.keys(errors).length;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setVisible(true);
-  }, [flash, errors]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12"
-  }, flash.success && visible && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "alert alert-danger alert-dismissible fade show",
-    role: "alert"
-  }, flash.success, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return setVisible(false);
-    },
-    type: "button",
-    className: "close",
-    "aria-label": "Close"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, "\xD7"))), (flash.error || numOfErrors > 0) && visible && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "alert alert-danger alert-dismissible fade show",
-    role: "alert"
-  }, flash.error && flash.error, numOfErrors === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "There's an ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "error"), " in the form."), numOfErrors > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, numOfErrors, " errors"), " ", "in the form."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return setVisible(false);
-    },
-    type: "button",
-    className: "close",
-    "aria-label": "Close"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, "\xD7")))));
+    if (disabled) {
+      return;
+    }
+
+    setVisible(!visible);
+  };
+
+  var getIcon = function getIcon(prefixCls) {
+    var _iconProps;
+
+    var action = props.action,
+        _props$iconRender = props.iconRender,
+        iconRender = _props$iconRender === void 0 ? function () {
+      return null;
+    } : _props$iconRender;
+    var iconTrigger = ActionMap[action] || '';
+    var icon = iconRender(visible);
+    var iconProps = (_iconProps = {}, (0, _defineProperty2["default"])(_iconProps, iconTrigger, onVisibleChange), (0, _defineProperty2["default"])(_iconProps, "className", "".concat(prefixCls, "-icon")), (0, _defineProperty2["default"])(_iconProps, "key", 'passwordIcon'), (0, _defineProperty2["default"])(_iconProps, "onMouseDown", function onMouseDown(e) {
+      // Prevent focused state lost
+      // https://github.com/ant-design/ant-design/issues/15173
+      e.preventDefault();
+    }), (0, _defineProperty2["default"])(_iconProps, "onMouseUp", function onMouseUp(e) {
+      // Prevent caret position change
+      // https://github.com/ant-design/ant-design/issues/23524
+      e.preventDefault();
+    }), _iconProps);
+    return /*#__PURE__*/React.cloneElement( /*#__PURE__*/React.isValidElement(icon) ? icon : /*#__PURE__*/React.createElement("span", null, icon), iconProps);
+  };
+
+  var renderPassword = function renderPassword(_ref) {
+    var getPrefixCls = _ref.getPrefixCls;
+
+    var className = props.className,
+        customizePrefixCls = props.prefixCls,
+        customizeInputPrefixCls = props.inputPrefixCls,
+        size = props.size,
+        visibilityToggle = props.visibilityToggle,
+        restProps = __rest(props, ["className", "prefixCls", "inputPrefixCls", "size", "visibilityToggle"]);
+
+    var inputPrefixCls = getPrefixCls('input', customizeInputPrefixCls);
+    var prefixCls = getPrefixCls('input-password', customizePrefixCls);
+    var suffixIcon = visibilityToggle && getIcon(prefixCls);
+    var inputClassName = (0, _classnames["default"])(prefixCls, className, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-").concat(size), !!size));
+    var omittedProps = (0, _extends2["default"])((0, _extends2["default"])({}, (0, _omit["default"])(restProps, ['suffix', 'iconRender'])), {
+      type: visible ? 'text' : 'password',
+      className: inputClassName,
+      prefixCls: inputPrefixCls,
+      suffix: suffixIcon
+    });
+
+    if (size) {
+      omittedProps.size = size;
+    }
+
+    return /*#__PURE__*/React.createElement(_Input["default"], (0, _extends2["default"])({
+      ref: ref
+    }, omittedProps));
+  };
+
+  return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, renderPassword);
 });
+Password.defaultProps = {
+  action: 'click',
+  visibilityToggle: true,
+  iconRender: function iconRender(visible) {
+    return visible ? /*#__PURE__*/React.createElement(_EyeOutlined["default"], null) : /*#__PURE__*/React.createElement(_EyeInvisibleOutlined["default"], null);
+  }
+};
+Password.displayName = 'Password';
+var _default = Password;
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./resources/js/Shared/Loading.js":
-/*!****************************************!*\
-  !*** ./resources/js/Shared/Loading.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/antd/lib/input/Search.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/input/Search.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var Loading = function Loading() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "preloader"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "status"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "spinner"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "double-bounce1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "double-bounce2"
-  }))));
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _ref2 = __webpack_require__(/*! rc-util/lib/ref */ "./node_modules/rc-util/lib/ref.js");
+
+var _SearchOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/SearchOutlined */ "./node_modules/@ant-design/icons/SearchOutlined.js"));
+
+var _LoadingOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LoadingOutlined */ "./node_modules/@ant-design/icons/LoadingOutlined.js"));
+
+var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_modules/antd/lib/input/Input.js"));
+
+var _button = _interopRequireDefault(__webpack_require__(/*! ../button */ "./node_modules/antd/lib/button/index.js"));
+
+var _SizeContext = _interopRequireDefault(__webpack_require__(/*! ../config-provider/SizeContext */ "./node_modules/antd/lib/config-provider/SizeContext.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Loading);
+var Search = /*#__PURE__*/React.forwardRef(function (props, ref) {
+  var inputRef = React.useRef(null);
+
+  var onChange = function onChange(e) {
+    var customOnChange = props.onChange,
+        customOnSearch = props.onSearch;
+
+    if (e && e.target && e.type === 'click' && customOnSearch) {
+      customOnSearch(e.target.value, e);
+    }
+
+    if (customOnChange) {
+      customOnChange(e);
+    }
+  };
+
+  var onMouseDown = function onMouseDown(e) {
+    var _a;
+
+    if (document.activeElement === ((_a = inputRef.current) === null || _a === void 0 ? void 0 : _a.input)) {
+      e.preventDefault();
+    }
+  };
+
+  var onSearch = function onSearch(e) {
+    var _a;
+
+    var customOnSearch = props.onSearch,
+        loading = props.loading,
+        disabled = props.disabled;
+
+    if (loading || disabled) {
+      return;
+    }
+
+    if (customOnSearch) {
+      customOnSearch((_a = inputRef.current) === null || _a === void 0 ? void 0 : _a.input.value, e);
+    }
+  };
+
+  var renderLoading = function renderLoading(prefixCls) {
+    var enterButton = props.enterButton,
+        customizeSize = props.size;
+
+    if (enterButton) {
+      return /*#__PURE__*/React.createElement(_SizeContext["default"].Consumer, {
+        key: "enterButton"
+      }, function (size) {
+        return /*#__PURE__*/React.createElement(_button["default"], {
+          className: "".concat(prefixCls, "-button"),
+          type: "primary",
+          size: customizeSize || size
+        }, /*#__PURE__*/React.createElement(_LoadingOutlined["default"], null));
+      });
+    }
+
+    return /*#__PURE__*/React.createElement(_LoadingOutlined["default"], {
+      className: "".concat(prefixCls, "-icon"),
+      key: "loadingIcon"
+    });
+  };
+
+  var renderSuffix = function renderSuffix(prefixCls) {
+    var suffix = props.suffix,
+        enterButton = props.enterButton,
+        loading = props.loading;
+
+    if (loading && !enterButton) {
+      return [suffix, renderLoading(prefixCls)];
+    }
+
+    if (enterButton) return suffix;
+    var icon = /*#__PURE__*/React.createElement(_SearchOutlined["default"], {
+      className: "".concat(prefixCls, "-icon"),
+      key: "searchIcon",
+      onClick: onSearch
+    });
+
+    if (suffix) {
+      return [(0, _reactNode.replaceElement)(suffix, null, {
+        key: 'suffix'
+      }), icon];
+    }
+
+    return icon;
+  };
+
+  var renderAddonAfter = function renderAddonAfter(prefixCls, size) {
+    var enterButton = props.enterButton,
+        disabled = props.disabled,
+        addonAfter = props.addonAfter,
+        loading = props.loading;
+    var btnClassName = "".concat(prefixCls, "-button");
+
+    if (loading && enterButton) {
+      return [renderLoading(prefixCls), addonAfter];
+    }
+
+    if (!enterButton) return addonAfter;
+    var button;
+    var enterButtonAsElement = enterButton;
+    var isAntdButton = enterButtonAsElement.type && enterButtonAsElement.type.__ANT_BUTTON === true;
+
+    if (isAntdButton || enterButtonAsElement.type === 'button') {
+      button = (0, _reactNode.cloneElement)(enterButtonAsElement, (0, _extends2["default"])({
+        onMouseDown: onMouseDown,
+        onClick: onSearch,
+        key: 'enterButton'
+      }, isAntdButton ? {
+        className: btnClassName,
+        size: size
+      } : {}));
+    } else {
+      button = /*#__PURE__*/React.createElement(_button["default"], {
+        className: btnClassName,
+        type: "primary",
+        size: size,
+        disabled: disabled,
+        key: "enterButton",
+        onMouseDown: onMouseDown,
+        onClick: onSearch
+      }, enterButton === true ? /*#__PURE__*/React.createElement(_SearchOutlined["default"], null) : enterButton);
+    }
+
+    if (addonAfter) {
+      return [button, (0, _reactNode.replaceElement)(addonAfter, null, {
+        key: 'addonAfter'
+      })];
+    }
+
+    return button;
+  };
+
+  var renderSearch = function renderSearch(_ref) {
+    var getPrefixCls = _ref.getPrefixCls,
+        direction = _ref.direction;
+
+    var customizePrefixCls = props.prefixCls,
+        customizeInputPrefixCls = props.inputPrefixCls,
+        enterButton = props.enterButton,
+        className = props.className,
+        customizeSize = props.size,
+        restProps = __rest(props, ["prefixCls", "inputPrefixCls", "enterButton", "className", "size"]);
+
+    delete restProps.onSearch;
+    delete restProps.loading;
+    var prefixCls = getPrefixCls('input-search', customizePrefixCls);
+    var inputPrefixCls = getPrefixCls('input', customizeInputPrefixCls);
+
+    var getClassName = function getClassName(size) {
+      var inputClassName;
+
+      if (enterButton) {
+        var _classNames;
+
+        inputClassName = (0, _classnames["default"])(prefixCls, className, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-enter-button"), !!enterButton), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-").concat(size), !!size), _classNames));
+      } else {
+        inputClassName = (0, _classnames["default"])(prefixCls, className, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-rtl"), direction === 'rtl'));
+      }
+
+      return inputClassName;
+    };
+
+    return /*#__PURE__*/React.createElement(_SizeContext["default"].Consumer, null, function (size) {
+      return /*#__PURE__*/React.createElement(_Input["default"], (0, _extends2["default"])({
+        ref: (0, _ref2.composeRef)(inputRef, ref),
+        onPressEnter: onSearch
+      }, restProps, {
+        size: customizeSize || size,
+        prefixCls: inputPrefixCls,
+        addonAfter: renderAddonAfter(prefixCls, customizeSize || size),
+        suffix: renderSuffix(prefixCls),
+        onChange: onChange,
+        className: getClassName(customizeSize || size)
+      }));
+    });
+  };
+
+  return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, renderSearch);
+});
+Search.defaultProps = {
+  enterButton: false
+};
+Search.displayName = 'Search';
+var _default = Search;
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./resources/js/Shared/LoadingButton.js":
+/***/ "./node_modules/antd/lib/input/index.js":
 /*!**********************************************!*\
-  !*** ./resources/js/Shared/LoadingButton.js ***!
+  !*** ./node_modules/antd/lib/input/index.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-function Spinner(_ref) {
-  var children = _ref.children,
-      type = _ref.type,
-      className = _ref.className,
-      loading = _ref.loading;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: className,
-    type: type,
-    disabled: loading
-  }, loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "spinner-border",
-    role: "status"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Loading...")) : children);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_modules/antd/lib/input/Input.js"));
+
+var _Group = _interopRequireDefault(__webpack_require__(/*! ./Group */ "./node_modules/antd/lib/input/Group.js"));
+
+var _Search = _interopRequireDefault(__webpack_require__(/*! ./Search */ "./node_modules/antd/lib/input/Search.js"));
+
+var _TextArea = _interopRequireDefault(__webpack_require__(/*! ./TextArea */ "./node_modules/antd/lib/input/TextArea.js"));
+
+var _Password = _interopRequireDefault(__webpack_require__(/*! ./Password */ "./node_modules/antd/lib/input/Password.js"));
+
+_Input["default"].Group = _Group["default"];
+_Input["default"].Search = _Search["default"];
+_Input["default"].TextArea = _TextArea["default"];
+_Input["default"].Password = _Password["default"];
+var _default = _Input["default"];
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/rc-util/lib/Children/toArray.js":
+/*!******************************************************!*\
+  !*** ./node_modules/rc-util/lib/Children/toArray.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = toArray;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function toArray(children) {
+  var ret = [];
+
+  _react.default.Children.forEach(children, function (child) {
+    if (child === undefined || child === null) {
+      return;
+    }
+
+    if (Array.isArray(child)) {
+      ret = ret.concat(toArray(child));
+    } else if ((0, _reactIs.isFragment)(child) && child.props) {
+      ret = ret.concat(toArray(child.props.children));
+    } else {
+      ret.push(child);
+    }
+  });
+
+  return ret;
 }
-
-/* harmony default export */ __webpack_exports__["default"] = (Spinner);
-
-/***/ }),
-
-/***/ "./resources/js/assets/auth/images/bg-01.jpg":
-/*!***************************************************!*\
-  !*** ./resources/js/assets/auth/images/bg-01.jpg ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/bg-01.jpg?a2ebe5df6f37bbf5729898e50713d7dd";
-
-/***/ }),
-
-/***/ "./resources/js/assets/general/images/at-school.png":
-/*!**********************************************************!*\
-  !*** ./resources/js/assets/general/images/at-school.png ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/at-school.png?15f72add27c183615e4bd0bdba2f72a4";
 
 /***/ })
 

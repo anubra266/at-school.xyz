@@ -1,1256 +1,911 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[8],{
 
-/***/ "./node_modules/rc-drawer/es/DrawerChild.js":
+/***/ "./node_modules/antd/lib/_util/colors.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/_util/colors.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PresetColorTypes = exports.PresetStatusColorTypes = void 0;
+
+var _type = __webpack_require__(/*! ./type */ "./node_modules/antd/lib/_util/type.js");
+
+var PresetStatusColorTypes = (0, _type.tuple)('success', 'processing', 'error', 'default', 'warning'); // eslint-disable-next-line import/prefer-default-export
+
+exports.PresetStatusColorTypes = PresetStatusColorTypes;
+var PresetColorTypes = (0, _type.tuple)('pink', 'red', 'yellow', 'orange', 'cyan', 'green', 'blue', 'purple', 'geekblue', 'magenta', 'volcano', 'gold', 'lime');
+exports.PresetColorTypes = PresetColorTypes;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/_util/isNumeric.js":
 /*!**************************************************!*\
-  !*** ./node_modules/rc-drawer/es/DrawerChild.js ***!
+  !*** ./node_modules/antd/lib/_util/isNumeric.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var rc_util_es_getScrollBarSize__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rc-util/es/getScrollBarSize */ "./node_modules/rc-util/es/getScrollBarSize.js");
-/* harmony import */ var rc_util_es_KeyCode__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rc-util/es/KeyCode */ "./node_modules/rc-util/es/KeyCode.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils */ "./node_modules/rc-drawer/es/utils.js");
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__["default"])(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-
-
-
-
-
-var currentDrawer = {};
-
-var DrawerChild = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(DrawerChild, _React$Component);
-
-  var _super = _createSuper(DrawerChild);
-
-  function DrawerChild(props) {
-    var _this;
-
-    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, DrawerChild);
-
-    _this = _super.call(this, props);
-
-    _this.domFocus = function () {
-      if (_this.dom) {
-        _this.dom.focus();
-      }
-    };
-
-    _this.removeStartHandler = function (e) {
-      if (e.touches.length > 1) {
-        return;
-      }
-
-      _this.startPos = {
-        x: e.touches[0].clientX,
-        y: e.touches[0].clientY
-      };
-    };
-
-    _this.removeMoveHandler = function (e) {
-      if (e.changedTouches.length > 1) {
-        return;
-      }
-
-      var currentTarget = e.currentTarget;
-      var differX = e.changedTouches[0].clientX - _this.startPos.x;
-      var differY = e.changedTouches[0].clientY - _this.startPos.y;
-
-      if ((currentTarget === _this.maskDom || currentTarget === _this.handlerDom || currentTarget === _this.contentDom && Object(_utils__WEBPACK_IMPORTED_MODULE_12__["getTouchParentScroll"])(currentTarget, e.target, differX, differY)) && e.cancelable) {
-        e.preventDefault();
-      }
-    };
-
-    _this.transitionEnd = function (e) {
-      var dom = e.target;
-      Object(_utils__WEBPACK_IMPORTED_MODULE_12__["removeEventListener"])(dom, _utils__WEBPACK_IMPORTED_MODULE_12__["transitionEnd"], _this.transitionEnd);
-      dom.style.transition = '';
-    };
-
-    _this.onKeyDown = function (e) {
-      if (e.keyCode === rc_util_es_KeyCode__WEBPACK_IMPORTED_MODULE_10__["default"].ESC) {
-        var onClose = _this.props.onClose;
-        e.stopPropagation();
-
-        if (onClose) {
-          onClose(e);
-        }
-      }
-    };
-
-    _this.onWrapperTransitionEnd = function (e) {
-      var _this$props = _this.props,
-          open = _this$props.open,
-          afterVisibleChange = _this$props.afterVisibleChange;
-
-      if (e.target === _this.contentWrapper && e.propertyName.match(/transform$/)) {
-        _this.dom.style.transition = '';
-
-        if (!open && _this.getCurrentDrawerSome()) {
-          document.body.style.overflowX = '';
-
-          if (_this.maskDom) {
-            _this.maskDom.style.left = '';
-            _this.maskDom.style.width = '';
-          }
-        }
-
-        if (afterVisibleChange) {
-          afterVisibleChange(!!open);
-        }
-      }
-    };
-
-    _this.openLevelTransition = function () {
-      var _this$props2 = _this.props,
-          open = _this$props2.open,
-          width = _this$props2.width,
-          height = _this$props2.height;
-
-      var _this$getHorizontalBo = _this.getHorizontalBoolAndPlacementName(),
-          isHorizontal = _this$getHorizontalBo.isHorizontal,
-          placementName = _this$getHorizontalBo.placementName;
-
-      var contentValue = _this.contentDom ? _this.contentDom.getBoundingClientRect()[isHorizontal ? 'width' : 'height'] : 0;
-      var value = (isHorizontal ? width : height) || contentValue;
-
-      _this.setLevelAndScrolling(open, placementName, value);
-    };
-
-    _this.setLevelTransform = function (open, placementName, value, right) {
-      var _this$props3 = _this.props,
-          placement = _this$props3.placement,
-          levelMove = _this$props3.levelMove,
-          duration = _this$props3.duration,
-          ease = _this$props3.ease,
-          showMask = _this$props3.showMask; // router 切换时可能会导至页面失去滚动条，所以需要时时获取。
-
-      _this.levelDom.forEach(function (dom) {
-        dom.style.transition = "transform ".concat(duration, " ").concat(ease);
-        Object(_utils__WEBPACK_IMPORTED_MODULE_12__["addEventListener"])(dom, _utils__WEBPACK_IMPORTED_MODULE_12__["transitionEnd"], _this.transitionEnd);
-        var levelValue = open ? value : 0;
-
-        if (levelMove) {
-          var $levelMove = Object(_utils__WEBPACK_IMPORTED_MODULE_12__["transformArguments"])(levelMove, {
-            target: dom,
-            open: open
-          });
-          levelValue = open ? $levelMove[0] : $levelMove[1] || 0;
-        }
-
-        var $value = typeof levelValue === 'number' ? "".concat(levelValue, "px") : levelValue;
-        var placementPos = placement === 'left' || placement === 'top' ? $value : "-".concat($value);
-        placementPos = showMask && placement === 'right' && right ? "calc(".concat(placementPos, " + ").concat(right, "px)") : placementPos;
-        dom.style.transform = levelValue ? "".concat(placementName, "(").concat(placementPos, ")") : '';
-      });
-    };
-
-    _this.setLevelAndScrolling = function (open, placementName, value) {
-      var onChange = _this.props.onChange;
-
-      if (!_utils__WEBPACK_IMPORTED_MODULE_12__["windowIsUndefined"]) {
-        var right = document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight) && window.innerWidth > document.body.offsetWidth ? Object(rc_util_es_getScrollBarSize__WEBPACK_IMPORTED_MODULE_9__["default"])(true) : 0;
-
-        _this.setLevelTransform(open, placementName, value, right);
-
-        _this.toggleScrollingToDrawerAndBody(right);
-      }
-
-      if (onChange) {
-        onChange(open);
-      }
-    };
-
-    _this.toggleScrollingToDrawerAndBody = function (right) {
-      var _this$props4 = _this.props,
-          getOpenCount = _this$props4.getOpenCount,
-          getContainer = _this$props4.getContainer,
-          showMask = _this$props4.showMask,
-          open = _this$props4.open;
-      var container = getContainer && getContainer();
-      var openCount = getOpenCount && getOpenCount(); // 处理 body 滚动
-
-      if (container && container.parentNode === document.body && showMask) {
-        var eventArray = ['touchstart'];
-        var domArray = [document.body, _this.maskDom, _this.handlerDom, _this.contentDom];
-
-        if (open && document.body.style.overflow !== 'hidden') {
-          if (right) {
-            _this.addScrollingEffect(right);
-          }
-
-          if (openCount === 1) {
-            document.body.style.overflow = 'hidden';
-          }
-
-          document.body.style.touchAction = 'none'; // 手机禁滚
-
-          domArray.forEach(function (item, i) {
-            if (!item) {
-              return;
-            }
-
-            Object(_utils__WEBPACK_IMPORTED_MODULE_12__["addEventListener"])(item, eventArray[i] || 'touchmove', i ? _this.removeMoveHandler : _this.removeStartHandler, _this.passive);
-          });
-        } else if (_this.getCurrentDrawerSome()) {
-          // 没有弹框的状态下清除 overflow;
-          if (!openCount) {
-            document.body.style.overflow = '';
-          }
-
-          document.body.style.touchAction = '';
-
-          if (right) {
-            _this.remScrollingEffect(right);
-          } // 恢复事件
-
-
-          domArray.forEach(function (item, i) {
-            if (!item) {
-              return;
-            }
-
-            Object(_utils__WEBPACK_IMPORTED_MODULE_12__["removeEventListener"])(item, eventArray[i] || 'touchmove', i ? _this.removeMoveHandler : _this.removeStartHandler, _this.passive);
-          });
-        }
-      }
-    };
-
-    _this.addScrollingEffect = function (right) {
-      var _this$props5 = _this.props,
-          placement = _this$props5.placement,
-          duration = _this$props5.duration,
-          ease = _this$props5.ease,
-          getOpenCount = _this$props5.getOpenCount,
-          switchScrollingEffect = _this$props5.switchScrollingEffect;
-      var openCount = getOpenCount && getOpenCount();
-
-      if (openCount === 1) {
-        switchScrollingEffect();
-      }
-
-      var widthTransition = "width ".concat(duration, " ").concat(ease);
-      var transformTransition = "transform ".concat(duration, " ").concat(ease);
-      _this.dom.style.transition = 'none';
-
-      switch (placement) {
-        case 'right':
-          _this.dom.style.transform = "translateX(-".concat(right, "px)");
-          break;
-
-        case 'top':
-        case 'bottom':
-          _this.dom.style.width = "calc(100% - ".concat(right, "px)");
-          _this.dom.style.transform = 'translateZ(0)';
-          break;
-
-        default:
-          break;
-      }
-
-      clearTimeout(_this.timeout);
-      _this.timeout = setTimeout(function () {
-        if (_this.dom) {
-          _this.dom.style.transition = "".concat(transformTransition, ",").concat(widthTransition);
-          _this.dom.style.width = '';
-          _this.dom.style.transform = '';
-        }
-      });
-    };
-
-    _this.remScrollingEffect = function (right) {
-      var _this$props6 = _this.props,
-          placement = _this$props6.placement,
-          duration = _this$props6.duration,
-          ease = _this$props6.ease,
-          getOpenCount = _this$props6.getOpenCount,
-          switchScrollingEffect = _this$props6.switchScrollingEffect;
-      var openCount = getOpenCount && getOpenCount();
-
-      if (!openCount) {
-        switchScrollingEffect(true);
-      }
-
-      if (_utils__WEBPACK_IMPORTED_MODULE_12__["transitionStr"]) {
-        document.body.style.overflowX = 'hidden';
-      }
-
-      _this.dom.style.transition = 'none';
-      var heightTransition;
-      var widthTransition = "width ".concat(duration, " ").concat(ease);
-      var transformTransition = "transform ".concat(duration, " ").concat(ease);
-
-      switch (placement) {
-        case 'left':
-          {
-            _this.dom.style.width = '100%';
-            widthTransition = "width 0s ".concat(ease, " ").concat(duration);
-            break;
-          }
-
-        case 'right':
-          {
-            _this.dom.style.transform = "translateX(".concat(right, "px)");
-            _this.dom.style.width = '100%';
-            widthTransition = "width 0s ".concat(ease, " ").concat(duration);
-
-            if (_this.maskDom) {
-              _this.maskDom.style.left = "-".concat(right, "px");
-              _this.maskDom.style.width = "calc(100% + ".concat(right, "px)");
-            }
-
-            break;
-          }
-
-        case 'top':
-        case 'bottom':
-          {
-            _this.dom.style.width = "calc(100% + ".concat(right, "px)");
-            _this.dom.style.height = '100%';
-            _this.dom.style.transform = 'translateZ(0)';
-            heightTransition = "height 0s ".concat(ease, " ").concat(duration);
-            break;
-          }
-
-        default:
-          break;
-      }
-
-      clearTimeout(_this.timeout);
-      _this.timeout = setTimeout(function () {
-        if (_this.dom) {
-          _this.dom.style.transition = "".concat(transformTransition, ",").concat(heightTransition ? "".concat(heightTransition, ",") : '').concat(widthTransition);
-          _this.dom.style.transform = '';
-          _this.dom.style.width = '';
-          _this.dom.style.height = '';
-        }
-      });
-    };
-
-    _this.getCurrentDrawerSome = function () {
-      return !Object.keys(currentDrawer).some(function (key) {
-        return currentDrawer[key];
-      });
-    };
-
-    _this.getLevelDom = function (_ref) {
-      var level = _ref.level,
-          getContainer = _ref.getContainer;
-
-      if (_utils__WEBPACK_IMPORTED_MODULE_12__["windowIsUndefined"]) {
-        return;
-      }
-
-      var container = getContainer && getContainer();
-      var parent = container ? container.parentNode : null;
-      _this.levelDom = [];
-
-      if (level === 'all') {
-        var children = parent ? Array.prototype.slice.call(parent.children) : [];
-        children.forEach(function (child) {
-          if (child.nodeName !== 'SCRIPT' && child.nodeName !== 'STYLE' && child.nodeName !== 'LINK' && child !== container) {
-            _this.levelDom.push(child);
-          }
-        });
-      } else if (level) {
-        Object(_utils__WEBPACK_IMPORTED_MODULE_12__["dataToArray"])(level).forEach(function (key) {
-          document.querySelectorAll(key).forEach(function (item) {
-            _this.levelDom.push(item);
-          });
-        });
-      }
-    };
-
-    _this.getHorizontalBoolAndPlacementName = function () {
-      var placement = _this.props.placement;
-      var isHorizontal = placement === 'left' || placement === 'right';
-      var placementName = "translate".concat(isHorizontal ? 'X' : 'Y');
-      return {
-        isHorizontal: isHorizontal,
-        placementName: placementName
-      };
-    };
-
-    _this.state = {
-      _self: Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this)
-    };
-    return _this;
-  }
-
-  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(DrawerChild, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      if (!_utils__WEBPACK_IMPORTED_MODULE_12__["windowIsUndefined"]) {
-        var passiveSupported = false;
-
-        try {
-          window.addEventListener('test', null, Object.defineProperty({}, 'passive', {
-            get: function get() {
-              passiveSupported = true;
-              return null;
-            }
-          }));
-        } catch (err) {}
-
-        this.passive = passiveSupported ? {
-          passive: false
-        } : false;
-      }
-
-      var _this$props7 = this.props,
-          open = _this$props7.open,
-          getContainer = _this$props7.getContainer;
-      var container = getContainer && getContainer();
-      this.drawerId = "drawer_id_".concat(Number((Date.now() + Math.random()).toString().replace('.', Math.round(Math.random() * 9).toString())).toString(16));
-      this.getLevelDom(this.props);
-
-      if (open) {
-        if (container && container.parentNode === document.body) {
-          currentDrawer[this.drawerId] = open;
-        } // 默认打开状态时推出 level;
-
-
-        this.openLevelTransition();
-        this.forceUpdate(function () {
-          _this2.domFocus();
-        });
-      }
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      var _this$props8 = this.props,
-          open = _this$props8.open,
-          getContainer = _this$props8.getContainer;
-      var container = getContainer && getContainer();
-
-      if (open !== prevProps.open) {
-        if (open) {
-          this.domFocus();
-        }
-
-        if (container && container.parentNode === document.body) {
-          currentDrawer[this.drawerId] = !!open;
-        }
-
-        this.openLevelTransition();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      var _this$props9 = this.props,
-          getOpenCount = _this$props9.getOpenCount,
-          open = _this$props9.open,
-          switchScrollingEffect = _this$props9.switchScrollingEffect;
-      var openCount = typeof getOpenCount === 'function' && getOpenCount();
-      delete currentDrawer[this.drawerId];
-
-      if (open) {
-        this.setLevelTransform(false);
-        document.body.style.touchAction = '';
-      }
-
-      if (!openCount) {
-        document.body.style.overflow = '';
-        switchScrollingEffect(true);
-      }
-    } // tslint:disable-next-line:member-ordering
-
-  }, {
-    key: "render",
-    value: function render() {
-      var _classnames,
-          _this3 = this;
-
-      var _this$props10 = this.props,
-          className = _this$props10.className,
-          children = _this$props10.children,
-          style = _this$props10.style,
-          width = _this$props10.width,
-          height = _this$props10.height,
-          defaultOpen = _this$props10.defaultOpen,
-          $open = _this$props10.open,
-          prefixCls = _this$props10.prefixCls,
-          placement = _this$props10.placement,
-          level = _this$props10.level,
-          levelMove = _this$props10.levelMove,
-          ease = _this$props10.ease,
-          duration = _this$props10.duration,
-          getContainer = _this$props10.getContainer,
-          handler = _this$props10.handler,
-          onChange = _this$props10.onChange,
-          afterVisibleChange = _this$props10.afterVisibleChange,
-          showMask = _this$props10.showMask,
-          maskClosable = _this$props10.maskClosable,
-          maskStyle = _this$props10.maskStyle,
-          onClose = _this$props10.onClose,
-          onHandleClick = _this$props10.onHandleClick,
-          keyboard = _this$props10.keyboard,
-          getOpenCount = _this$props10.getOpenCount,
-          switchScrollingEffect = _this$props10.switchScrollingEffect,
-          props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props10, ["className", "children", "style", "width", "height", "defaultOpen", "open", "prefixCls", "placement", "level", "levelMove", "ease", "duration", "getContainer", "handler", "onChange", "afterVisibleChange", "showMask", "maskClosable", "maskStyle", "onClose", "onHandleClick", "keyboard", "getOpenCount", "switchScrollingEffect"]); // 首次渲染都将是关闭状态。
-
-
-      var open = this.dom ? $open : false;
-      var wrapperClassName = classnames__WEBPACK_IMPORTED_MODULE_8___default()(prefixCls, (_classnames = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_classnames, "".concat(prefixCls, "-").concat(placement), true), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_classnames, "".concat(prefixCls, "-open"), open), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_classnames, className || '', !!className), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_classnames, 'no-mask', !showMask), _classnames));
-
-      var _this$getHorizontalBo2 = this.getHorizontalBoolAndPlacementName(),
-          placementName = _this$getHorizontalBo2.placementName; // 百分比与像素动画不同步，第一次打用后全用像素动画。
-      // const defaultValue = !this.contentDom || !level ? '100%' : `${value}px`;
-
-
-      var placementPos = placement === 'left' || placement === 'top' ? '-100%' : '100%';
-      var transform = open ? '' : "".concat(placementName, "(").concat(placementPos, ")");
-      var handlerChildren = handler && react__WEBPACK_IMPORTED_MODULE_11__["cloneElement"](handler, {
-        onClick: function onClick(e) {
-          if (handler.props.onClick) {
-            handler.props.onClick();
-          }
-
-          if (onHandleClick) {
-            onHandleClick(e);
-          }
-        },
-        ref: function ref(c) {
-          _this3.handlerDom = c;
-        }
-      });
-      return react__WEBPACK_IMPORTED_MODULE_11__["createElement"]("div", Object.assign({}, props, {
-        tabIndex: -1,
-        className: wrapperClassName,
-        style: style,
-        ref: function ref(c) {
-          _this3.dom = c;
-        },
-        onKeyDown: open && keyboard ? this.onKeyDown : undefined,
-        onTransitionEnd: this.onWrapperTransitionEnd
-      }), showMask && react__WEBPACK_IMPORTED_MODULE_11__["createElement"]("div", {
-        className: "".concat(prefixCls, "-mask"),
-        onClick: maskClosable ? onClose : undefined,
-        style: maskStyle,
-        ref: function ref(c) {
-          _this3.maskDom = c;
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_11__["createElement"]("div", {
-        className: "".concat(prefixCls, "-content-wrapper"),
-        style: {
-          transform: transform,
-          msTransform: transform,
-          width: Object(_utils__WEBPACK_IMPORTED_MODULE_12__["isNumeric"])(width) ? "".concat(width, "px") : width,
-          height: Object(_utils__WEBPACK_IMPORTED_MODULE_12__["isNumeric"])(height) ? "".concat(height, "px") : height
-        },
-        ref: function ref(c) {
-          _this3.contentWrapper = c;
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_11__["createElement"]("div", {
-        className: "".concat(prefixCls, "-content"),
-        ref: function ref(c) {
-          _this3.contentDom = c;
-        },
-        onTouchStart: open && showMask ? this.removeStartHandler : undefined,
-        onTouchMove: open && showMask ? this.removeMoveHandler : undefined
-      }, children), handlerChildren));
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(props, _ref2) {
-      var prevProps = _ref2.prevProps,
-          _self = _ref2._self;
-      var nextState = {
-        prevProps: props
-      };
-
-      if (prevProps !== undefined) {
-        var placement = props.placement,
-            level = props.level;
-
-        if (placement !== prevProps.placement) {
-          // test 的 bug, 有动画过场，删除 dom
-          _self.contentDom = null;
-        }
-
-        if (level !== prevProps.level) {
-          _self.getLevelDom(props);
-        }
-      }
-
-      return nextState;
-    }
-  }]);
-
-  return DrawerChild;
-}(react__WEBPACK_IMPORTED_MODULE_11__["Component"]);
-
-DrawerChild.defaultProps = {
-  switchScrollingEffect: function switchScrollingEffect() {}
-};
-/* harmony default export */ __webpack_exports__["default"] = (DrawerChild);
-
-/***/ }),
-
-/***/ "./node_modules/rc-drawer/es/DrawerWrapper.js":
-/*!****************************************************!*\
-  !*** ./node_modules/rc-drawer/es/DrawerWrapper.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var rc_util_es_PortalWrapper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rc-util/es/PortalWrapper */ "./node_modules/rc-util/es/PortalWrapper.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _DrawerChild__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./DrawerChild */ "./node_modules/rc-drawer/es/DrawerChild.js");
-
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-
-
-
-
-var DrawerWrapper = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(DrawerWrapper, _React$Component);
-
-  var _super = _createSuper(DrawerWrapper);
-
-  function DrawerWrapper(props) {
-    var _this;
-
-    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, DrawerWrapper);
-
-    _this = _super.call(this, props);
-
-    _this.onHandleClick = function (e) {
-      var _this$props = _this.props,
-          onHandleClick = _this$props.onHandleClick,
-          $open = _this$props.open;
-
-      if (onHandleClick) {
-        onHandleClick(e);
-      }
-
-      if (typeof $open === 'undefined') {
-        var _open = _this.state.open;
-
-        _this.setState({
-          open: !_open
-        });
-      }
-    };
-
-    _this.onClose = function (e) {
-      var _this$props2 = _this.props,
-          onClose = _this$props2.onClose,
-          open = _this$props2.open;
-
-      if (onClose) {
-        onClose(e);
-      }
-
-      if (typeof open === 'undefined') {
-        _this.setState({
-          open: false
-        });
-      }
-    };
-
-    var open = typeof props.open !== 'undefined' ? props.open : !!props.defaultOpen;
-    _this.state = {
-      open: open
-    };
-
-    if ('onMaskClick' in props) {
-      console.warn('`onMaskClick` are removed, please use `onClose` instead.');
-    }
-
-    return _this;
-  }
-
-  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(DrawerWrapper, [{
-    key: "render",
-    // tslint:disable-next-line:member-ordering
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props3 = this.props,
-          defaultOpen = _this$props3.defaultOpen,
-          getContainer = _this$props3.getContainer,
-          wrapperClassName = _this$props3.wrapperClassName,
-          forceRender = _this$props3.forceRender,
-          handler = _this$props3.handler,
-          props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props3, ["defaultOpen", "getContainer", "wrapperClassName", "forceRender", "handler"]);
-
-      var open = this.state.open; // 渲染在当前 dom 里；
-
-      if (!getContainer) {
-        return react__WEBPACK_IMPORTED_MODULE_7__["createElement"]("div", {
-          className: wrapperClassName,
-          ref: function ref(c) {
-            _this2.dom = c;
-          }
-        }, react__WEBPACK_IMPORTED_MODULE_7__["createElement"](_DrawerChild__WEBPACK_IMPORTED_MODULE_8__["default"], Object.assign({}, props, {
-          open: open,
-          handler: handler,
-          getContainer: function getContainer() {
-            return _this2.dom;
-          },
-          onClose: this.onClose,
-          onHandleClick: this.onHandleClick
-        })));
-      } // 如果有 handler 为内置强制渲染；
-
-
-      var $forceRender = !!handler || forceRender;
-      return react__WEBPACK_IMPORTED_MODULE_7__["createElement"](rc_util_es_PortalWrapper__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        visible: open,
-        forceRender: $forceRender,
-        getContainer: getContainer,
-        wrapperClassName: wrapperClassName
-      }, function (_ref) {
-        var visible = _ref.visible,
-            afterClose = _ref.afterClose,
-            rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["visible", "afterClose"]);
-
-        return (// react 15，componentWillUnmount 时 Portal 返回 afterClose, visible.
-          react__WEBPACK_IMPORTED_MODULE_7__["createElement"](_DrawerChild__WEBPACK_IMPORTED_MODULE_8__["default"], Object.assign({}, props, rest, {
-            open: visible !== undefined ? visible : open,
-            afterVisibleChange: afterClose !== undefined ? afterClose : props.afterVisibleChange,
-            handler: handler,
-            onClose: _this2.onClose,
-            onHandleClick: _this2.onHandleClick
-          }))
-        );
-      });
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(props, _ref2) {
-      var prevProps = _ref2.prevProps;
-      var newState = {
-        prevProps: props
-      };
-
-      if (typeof prevProps !== 'undefined' && props.open !== prevProps.open) {
-        newState.open = props.open;
-      }
-
-      return newState;
-    }
-  }]);
-
-  return DrawerWrapper;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
-
-DrawerWrapper.defaultProps = {
-  prefixCls: 'drawer',
-  placement: 'left',
-  getContainer: 'body',
-  defaultOpen: false,
-  level: 'all',
-  duration: '.3s',
-  ease: 'cubic-bezier(0.78, 0.14, 0.15, 0.86)',
-  onChange: function onChange() {},
-  afterVisibleChange: function afterVisibleChange() {},
-  handler: react__WEBPACK_IMPORTED_MODULE_7__["createElement"]("div", {
-    className: "drawer-handle"
-  }, react__WEBPACK_IMPORTED_MODULE_7__["createElement"]("i", {
-    className: "drawer-handle-icon"
-  })),
-  showMask: true,
-  maskClosable: true,
-  maskStyle: {},
-  wrapperClassName: '',
-  className: '',
-  keyboard: true,
-  forceRender: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (DrawerWrapper);
-
-/***/ }),
-
-/***/ "./node_modules/rc-drawer/es/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/rc-drawer/es/index.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DrawerWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DrawerWrapper */ "./node_modules/rc-drawer/es/DrawerWrapper.js");
-// export this package's api
-
-/* harmony default export */ __webpack_exports__["default"] = (_DrawerWrapper__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./node_modules/rc-drawer/es/utils.js":
-/*!********************************************!*\
-  !*** ./node_modules/rc-drawer/es/utils.js ***!
-  \********************************************/
-/*! exports provided: dataToArray, transitionStr, transitionEnd, addEventListener, removeEventListener, transformArguments, isNumeric, windowIsUndefined, getTouchParentScroll */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataToArray", function() { return dataToArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transitionStr", function() { return transitionStr; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transitionEnd", function() { return transitionEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addEventListener", function() { return addEventListener; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeEventListener", function() { return removeEventListener; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transformArguments", function() { return transformArguments; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumeric", function() { return isNumeric; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "windowIsUndefined", function() { return windowIsUndefined; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTouchParentScroll", function() { return getTouchParentScroll; });
-function dataToArray(vars) {
-  if (Array.isArray(vars)) {
-    return vars;
-  }
-
-  return [vars];
-}
-var transitionEndObject = {
-  transition: 'transitionend',
-  WebkitTransition: 'webkitTransitionEnd',
-  MozTransition: 'transitionend',
-  OTransition: 'oTransitionEnd otransitionend'
-};
-var transitionStr = Object.keys(transitionEndObject).filter(function (key) {
-  if (typeof document === 'undefined') {
-    return false;
-  }
-
-  var html = document.getElementsByTagName('html')[0];
-  return key in (html ? html.style : {});
-})[0];
-var transitionEnd = transitionEndObject[transitionStr];
-function addEventListener(target, eventType, callback, options) {
-  if (target.addEventListener) {
-    target.addEventListener(eventType, callback, options);
-  } else if (target.attachEvent) {
-    // tslint:disable-line
-    target.attachEvent("on".concat(eventType), callback); // tslint:disable-line
-  }
-}
-function removeEventListener(target, eventType, callback, options) {
-  if (target.removeEventListener) {
-    target.removeEventListener(eventType, callback, options);
-  } else if (target.attachEvent) {
-    // tslint:disable-line
-    target.detachEvent("on".concat(eventType), callback); // tslint:disable-line
-  }
-}
-function transformArguments(arg, cb) {
-  var result = typeof arg === 'function' ? arg(cb) : arg;
-
-  if (Array.isArray(result)) {
-    if (result.length === 2) {
-      return result;
-    }
-
-    return [result[0], result[1]];
-  }
-
-  return [result];
-}
 var isNumeric = function isNumeric(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
 };
-var windowIsUndefined = !(typeof window !== 'undefined' && window.document && window.document.createElement);
-var getTouchParentScroll = function getTouchParentScroll(root, currentTarget, differX, differY) {
-  if (!currentTarget || currentTarget === document || currentTarget instanceof Document) {
-    return false;
-  } // root 为 drawer-content 设定了 overflow, 判断为 root 的 parent 时结束滚动；
 
-
-  if (currentTarget === root.parentNode) {
-    return true;
-  }
-
-  var isY = Math.max(Math.abs(differX), Math.abs(differY)) === Math.abs(differY);
-  var isX = Math.max(Math.abs(differX), Math.abs(differY)) === Math.abs(differX);
-  var scrollY = currentTarget.scrollHeight - currentTarget.clientHeight;
-  var scrollX = currentTarget.scrollWidth - currentTarget.clientWidth;
-  var style = document.defaultView.getComputedStyle(currentTarget);
-  var overflowY = style.overflowY === 'auto' || style.overflowY === 'scroll';
-  var overflowX = style.overflowX === 'auto' || style.overflowX === 'scroll';
-  var y = scrollY && overflowY;
-  var x = scrollX && overflowX;
-
-  if (isY && (!y || y && (currentTarget.scrollTop >= scrollY && differY < 0 || currentTarget.scrollTop <= 0 && differY > 0)) || isX && (!x || x && (currentTarget.scrollLeft >= scrollX && differX < 0 || currentTarget.scrollLeft <= 0 && differX > 0))) {
-    return getTouchParentScroll(root, currentTarget.parentNode, differX, differY);
-  }
-
-  return false;
-};
+var _default = isNumeric;
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/rc-util/es/ContainerRender.js":
-/*!****************************************************!*\
-  !*** ./node_modules/rc-util/es/ContainerRender.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/antd/lib/_util/motion.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/_util/motion.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContainerRender; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+// ================== Collapse Motion ==================
+var getCollapsedHeight = function getCollapsedHeight() {
+  return {
+    height: 0,
+    opacity: 0
+  };
+};
+
+var getRealHeight = function getRealHeight(node) {
+  return {
+    height: node.scrollHeight,
+    opacity: 1
+  };
+};
+
+var getCurrentHeight = function getCurrentHeight(node) {
+  return {
+    height: node.offsetHeight
+  };
+};
+
+var skipOpacityTransition = function skipOpacityTransition(_, event) {
+  return event.propertyName === 'height';
+};
+
+var collapseMotion = {
+  motionName: 'ant-motion-collapse',
+  onAppearStart: getCollapsedHeight,
+  onEnterStart: getCollapsedHeight,
+  onAppearActive: getRealHeight,
+  onEnterActive: getRealHeight,
+  onLeaveStart: getCurrentHeight,
+  onLeaveActive: getCollapsedHeight,
+  onAppearEnd: skipOpacityTransition,
+  onEnterEnd: skipOpacityTransition,
+  onLeaveEnd: skipOpacityTransition,
+  motionDeadline: 500
+};
+var _default = collapseMotion;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/Sider.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/layout/Sider.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
-var ContainerRender = /*#__PURE__*/function (_React$Component) {
-  _inherits(ContainerRender, _React$Component);
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-  var _super = _createSuper(ContainerRender);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-  function ContainerRender() {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.SiderContext = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+
+var _BarsOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/BarsOutlined */ "./node_modules/@ant-design/icons/BarsOutlined.js"));
+
+var _RightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/RightOutlined */ "./node_modules/@ant-design/icons/RightOutlined.js"));
+
+var _LeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LeftOutlined */ "./node_modules/@ant-design/icons/LeftOutlined.js"));
+
+var _layout = __webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js");
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _isNumeric = _interopRequireDefault(__webpack_require__(/*! ../_util/isNumeric */ "./node_modules/antd/lib/_util/isNumeric.js"));
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var dimensionMaxMap = {
+  xs: '479.98px',
+  sm: '575.98px',
+  md: '767.98px',
+  lg: '991.98px',
+  xl: '1199.98px',
+  xxl: '1599.98px'
+};
+var SiderContext = /*#__PURE__*/React.createContext({});
+exports.SiderContext = SiderContext;
+
+var generateId = function () {
+  var i = 0;
+  return function () {
+    var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    i += 1;
+    return "".concat(prefix).concat(i);
+  };
+}();
+
+var InternalSider = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(InternalSider, _React$Component);
+
+  var _super = (0, _createSuper2["default"])(InternalSider);
+
+  function InternalSider(props) {
     var _this;
 
-    _classCallCheck(this, ContainerRender);
+    (0, _classCallCheck2["default"])(this, InternalSider);
+    _this = _super.call(this, props);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    _this.responsiveHandler = function (mql) {
+      _this.setState({
+        below: mql.matches
+      });
 
-    _this = _super.call.apply(_super, [this].concat(args));
+      var onBreakpoint = _this.props.onBreakpoint;
 
-    _this.removeContainer = function () {
-      if (_this.container) {
-        react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.unmountComponentAtNode(_this.container);
+      if (onBreakpoint) {
+        onBreakpoint(mql.matches);
+      }
 
-        _this.container.parentNode.removeChild(_this.container);
-
-        _this.container = null;
+      if (_this.state.collapsed !== mql.matches) {
+        _this.setCollapsed(mql.matches, 'responsive');
       }
     };
 
-    _this.renderComponent = function (props, ready) {
-      var _this$props = _this.props,
-          visible = _this$props.visible,
-          getComponent = _this$props.getComponent,
-          forceRender = _this$props.forceRender,
-          getContainer = _this$props.getContainer,
-          parent = _this$props.parent;
-
-      if (visible || parent._component || forceRender) {
-        if (!_this.container) {
-          _this.container = getContainer();
-        }
-
-        react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.unstable_renderSubtreeIntoContainer(parent, getComponent(props), _this.container, function callback() {
-          if (ready) {
-            ready.call(this);
-          }
+    _this.setCollapsed = function (collapsed, type) {
+      if (!('collapsed' in _this.props)) {
+        _this.setState({
+          collapsed: collapsed
         });
       }
+
+      var onCollapse = _this.props.onCollapse;
+
+      if (onCollapse) {
+        onCollapse(collapsed, type);
+      }
     };
 
+    _this.toggle = function () {
+      var collapsed = !_this.state.collapsed;
+
+      _this.setCollapsed(collapsed, 'clickTrigger');
+    };
+
+    _this.renderSider = function (_ref) {
+      var _classNames;
+
+      var getPrefixCls = _ref.getPrefixCls;
+
+      var _a = _this.props,
+          customizePrefixCls = _a.prefixCls,
+          className = _a.className,
+          theme = _a.theme,
+          collapsible = _a.collapsible,
+          reverseArrow = _a.reverseArrow,
+          trigger = _a.trigger,
+          style = _a.style,
+          width = _a.width,
+          collapsedWidth = _a.collapsedWidth,
+          zeroWidthTriggerStyle = _a.zeroWidthTriggerStyle,
+          children = _a.children,
+          others = __rest(_a, ["prefixCls", "className", "theme", "collapsible", "reverseArrow", "trigger", "style", "width", "collapsedWidth", "zeroWidthTriggerStyle", "children"]);
+
+      var _this$state = _this.state,
+          collapsed = _this$state.collapsed,
+          below = _this$state.below;
+      var prefixCls = getPrefixCls('layout-sider', customizePrefixCls);
+      var divProps = (0, _omit["default"])(others, ['collapsed', 'defaultCollapsed', 'onCollapse', 'breakpoint', 'onBreakpoint', 'siderHook', 'zeroWidthTriggerStyle']);
+      var rawWidth = collapsed ? collapsedWidth : width; // use "px" as fallback unit for width
+
+      var siderWidth = (0, _isNumeric["default"])(rawWidth) ? "".concat(rawWidth, "px") : String(rawWidth); // special trigger when collapsedWidth == 0
+
+      var zeroWidthTrigger = parseFloat(String(collapsedWidth || 0)) === 0 ? /*#__PURE__*/React.createElement("span", {
+        onClick: _this.toggle,
+        className: (0, _classnames["default"])("".concat(prefixCls, "-zero-width-trigger"), "".concat(prefixCls, "-zero-width-trigger-").concat(reverseArrow ? 'right' : 'left')),
+        style: zeroWidthTriggerStyle
+      }, trigger || /*#__PURE__*/React.createElement(_BarsOutlined["default"], null)) : null;
+      var iconObj = {
+        expanded: reverseArrow ? /*#__PURE__*/React.createElement(_RightOutlined["default"], null) : /*#__PURE__*/React.createElement(_LeftOutlined["default"], null),
+        collapsed: reverseArrow ? /*#__PURE__*/React.createElement(_LeftOutlined["default"], null) : /*#__PURE__*/React.createElement(_RightOutlined["default"], null)
+      };
+      var status = collapsed ? 'collapsed' : 'expanded';
+      var defaultTrigger = iconObj[status];
+      var triggerDom = trigger !== null ? zeroWidthTrigger || /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-trigger"),
+        onClick: _this.toggle,
+        style: {
+          width: siderWidth
+        }
+      }, trigger || defaultTrigger) : null;
+      var divStyle = (0, _extends2["default"])((0, _extends2["default"])({}, style), {
+        flex: "0 0 ".concat(siderWidth),
+        maxWidth: siderWidth,
+        minWidth: siderWidth,
+        width: siderWidth
+      });
+      var siderCls = (0, _classnames["default"])(className, prefixCls, "".concat(prefixCls, "-").concat(theme), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-collapsed"), !!collapsed), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-trigger"), collapsible && trigger !== null && !zeroWidthTrigger), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-below"), !!below), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-zero-width"), parseFloat(siderWidth) === 0), _classNames));
+      return /*#__PURE__*/React.createElement("aside", (0, _extends2["default"])({
+        className: siderCls
+      }, divProps, {
+        style: divStyle
+      }), /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-children")
+      }, children), collapsible || below && zeroWidthTrigger ? triggerDom : null);
+    };
+
+    _this.uniqueId = generateId('ant-sider-');
+    var matchMedia;
+
+    if (typeof window !== 'undefined') {
+      matchMedia = window.matchMedia;
+    }
+
+    if (matchMedia && props.breakpoint && props.breakpoint in dimensionMaxMap) {
+      _this.mql = matchMedia("(max-width: ".concat(dimensionMaxMap[props.breakpoint], ")"));
+    }
+
+    var collapsed;
+
+    if ('collapsed' in props) {
+      collapsed = props.collapsed;
+    } else {
+      collapsed = props.defaultCollapsed;
+    }
+
+    _this.state = {
+      collapsed: collapsed,
+      below: false
+    };
     return _this;
   }
 
-  _createClass(ContainerRender, [{
+  (0, _createClass2["default"])(InternalSider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.props.autoMount) {
-        this.renderComponent();
+      if (this.mql) {
+        this.mql.addListener(this.responsiveHandler);
+        this.responsiveHandler(this.mql);
       }
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      if (this.props.autoMount) {
-        this.renderComponent();
+
+      if (this.props.siderHook) {
+        this.props.siderHook.addSider(this.uniqueId);
       }
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      if (this.props.autoDestroy) {
-        this.removeContainer();
+      if (this.mql) {
+        this.mql.removeListener(this.responsiveHandler);
+      }
+
+      if (this.props.siderHook) {
+        this.props.siderHook.removeSider(this.uniqueId);
       }
     }
   }, {
     key: "render",
     value: function render() {
-      return this.props.children({
-        renderComponent: this.renderComponent,
-        removeContainer: this.removeContainer
+      var collapsed = this.state.collapsed;
+      var collapsedWidth = this.props.collapsedWidth;
+      return /*#__PURE__*/React.createElement(SiderContext.Provider, {
+        value: {
+          siderCollapsed: collapsed,
+          collapsedWidth: collapsedWidth
+        }
+      }, /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderSider));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps) {
+      if ('collapsed' in nextProps) {
+        return {
+          collapsed: nextProps.collapsed
+        };
+      }
+
+      return null;
+    }
+  }]);
+  return InternalSider;
+}(React.Component);
+
+InternalSider.defaultProps = {
+  collapsible: false,
+  defaultCollapsed: false,
+  reverseArrow: false,
+  width: 200,
+  collapsedWidth: 80,
+  style: {},
+  theme: 'dark'
+}; // eslint-disable-next-line react/prefer-stateless-function
+
+var Sider = /*#__PURE__*/function (_React$Component2) {
+  (0, _inherits2["default"])(Sider, _React$Component2);
+
+  var _super2 = (0, _createSuper2["default"])(Sider);
+
+  function Sider() {
+    (0, _classCallCheck2["default"])(this, Sider);
+    return _super2.apply(this, arguments);
+  }
+
+  (0, _createClass2["default"])(Sider, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/React.createElement(_layout.LayoutContext.Consumer, null, function (context) {
+        return /*#__PURE__*/React.createElement(InternalSider, (0, _extends2["default"])({}, context, _this2.props));
       });
     }
   }]);
+  return Sider;
+}(React.Component);
 
-  return ContainerRender;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-ContainerRender.defaultProps = {
-  autoMount: true,
-  autoDestroy: true,
-  forceRender: false
-};
-
+exports["default"] = Sider;
 
 /***/ }),
 
-/***/ "./node_modules/rc-util/es/PortalWrapper.js":
-/*!**************************************************!*\
-  !*** ./node_modules/rc-util/es/PortalWrapper.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/antd/lib/layout/layout.js":
+/*!************************************************!*\
+  !*** ./node_modules/antd/lib/layout/layout.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ContainerRender__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContainerRender */ "./node_modules/rc-util/es/ContainerRender.js");
-/* harmony import */ var _Portal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Portal */ "./node_modules/rc-util/es/Portal.js");
-/* harmony import */ var _switchScrollingEffect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./switchScrollingEffect */ "./node_modules/rc-util/es/switchScrollingEffect.js");
-/* harmony import */ var _setStyle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./setStyle */ "./node_modules/rc-util/es/setStyle.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-/* eslint-disable no-underscore-dangle,react/require-default-props */
 
 
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.LayoutContext = void 0;
 
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js"));
 
-var openCount = 0;
-var windowIsUndefined = !(typeof window !== 'undefined' && window.document && window.document.createElement);
-var IS_REACT_16 = ('createPortal' in react_dom__WEBPACK_IMPORTED_MODULE_1___default.a); // https://github.com/ant-design/ant-design/issues/19340
-// https://github.com/ant-design/ant-design/issues/19332
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
 
-var cacheOverflow = {};
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
 
-var getParent = function getParent(getContainer) {
-  if (windowIsUndefined) {
-    return null;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
   }
 
-  if (getContainer) {
-    if (typeof getContainer === 'string') {
-      return document.querySelectorAll(getContainer)[0];
-    }
-
-    if (typeof getContainer === 'function') {
-      return getContainer();
-    }
-
-    if (_typeof(getContainer) === 'object' && getContainer instanceof window.HTMLElement) {
-      return getContainer;
-    }
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
   }
-
-  return document.body;
+  return t;
 };
 
-var PortalWrapper = /*#__PURE__*/function (_React$Component) {
-  _inherits(PortalWrapper, _React$Component);
+var LayoutContext = /*#__PURE__*/React.createContext({
+  siderHook: {
+    addSider: function addSider() {
+      return null;
+    },
+    removeSider: function removeSider() {
+      return null;
+    }
+  }
+});
+exports.LayoutContext = LayoutContext;
 
-  var _super = _createSuper(PortalWrapper);
+function generator(_ref) {
+  var suffixCls = _ref.suffixCls,
+      tagName = _ref.tagName,
+      displayName = _ref.displayName;
+  return function (BasicComponent) {
+    var _a;
 
-  function PortalWrapper(props) {
+    return _a = /*#__PURE__*/function (_React$Component) {
+      (0, _inherits2["default"])(Adapter, _React$Component);
+
+      var _super = (0, _createSuper2["default"])(Adapter);
+
+      function Adapter() {
+        var _this;
+
+        (0, _classCallCheck2["default"])(this, Adapter);
+        _this = _super.apply(this, arguments);
+
+        _this.renderComponent = function (_ref2) {
+          var getPrefixCls = _ref2.getPrefixCls;
+          var customizePrefixCls = _this.props.prefixCls;
+          var prefixCls = getPrefixCls(suffixCls, customizePrefixCls);
+          return /*#__PURE__*/React.createElement(BasicComponent, (0, _extends2["default"])({
+            prefixCls: prefixCls,
+            tagName: tagName
+          }, _this.props));
+        };
+
+        return _this;
+      }
+
+      (0, _createClass2["default"])(Adapter, [{
+        key: "render",
+        value: function render() {
+          return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
+        }
+      }]);
+      return Adapter;
+    }(React.Component), _a.displayName = displayName, _a;
+  };
+}
+
+var Basic = function Basic(props) {
+  var prefixCls = props.prefixCls,
+      className = props.className,
+      children = props.children,
+      tagName = props.tagName,
+      others = __rest(props, ["prefixCls", "className", "children", "tagName"]);
+
+  var classString = (0, _classnames["default"])(prefixCls, className);
+  return /*#__PURE__*/React.createElement(tagName, (0, _extends2["default"])({
+    className: classString
+  }, others), children);
+};
+
+var BasicLayout = /*#__PURE__*/function (_React$Component2) {
+  (0, _inherits2["default"])(BasicLayout, _React$Component2);
+
+  var _super2 = (0, _createSuper2["default"])(BasicLayout);
+
+  function BasicLayout() {
+    var _this2;
+
+    (0, _classCallCheck2["default"])(this, BasicLayout);
+    _this2 = _super2.apply(this, arguments);
+    _this2.state = {
+      siders: []
+    };
+
+    _this2.renderComponent = function (_ref3) {
+      var _classNames;
+
+      var direction = _ref3.direction;
+
+      var _a = _this2.props,
+          prefixCls = _a.prefixCls,
+          className = _a.className,
+          children = _a.children,
+          hasSider = _a.hasSider,
+          Tag = _a.tagName,
+          others = __rest(_a, ["prefixCls", "className", "children", "hasSider", "tagName"]);
+
+      var classString = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-sider"), typeof hasSider === 'boolean' ? hasSider : _this2.state.siders.length > 0), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
+      return /*#__PURE__*/React.createElement(LayoutContext.Provider, {
+        value: {
+          siderHook: _this2.getSiderHook()
+        }
+      }, /*#__PURE__*/React.createElement(Tag, (0, _extends2["default"])({
+        className: classString
+      }, others), children));
+    };
+
+    return _this2;
+  }
+
+  (0, _createClass2["default"])(BasicLayout, [{
+    key: "getSiderHook",
+    value: function getSiderHook() {
+      var _this3 = this;
+
+      return {
+        addSider: function addSider(id) {
+          _this3.setState(function (state) {
+            return {
+              siders: [].concat((0, _toConsumableArray2["default"])(state.siders), [id])
+            };
+          });
+        },
+        removeSider: function removeSider(id) {
+          _this3.setState(function (state) {
+            return {
+              siders: state.siders.filter(function (currentId) {
+                return currentId !== id;
+              })
+            };
+          });
+        }
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
+    }
+  }]);
+  return BasicLayout;
+}(React.Component);
+
+var Layout = generator({
+  suffixCls: 'layout',
+  tagName: 'section',
+  displayName: 'Layout'
+})(BasicLayout);
+var Header = generator({
+  suffixCls: 'layout-header',
+  tagName: 'header',
+  displayName: 'Header'
+})(Basic);
+var Footer = generator({
+  suffixCls: 'layout-footer',
+  tagName: 'footer',
+  displayName: 'Footer'
+})(Basic);
+var Content = generator({
+  suffixCls: 'layout-content',
+  tagName: 'main',
+  displayName: 'Content'
+})(Basic);
+Layout.Header = Header;
+Layout.Footer = Footer;
+Layout.Content = Content;
+var _default = Layout;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/menu/MenuContext.js":
+/*!***************************************************!*\
+  !*** ./node_modules/antd/lib/menu/MenuContext.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var MenuContext = /*#__PURE__*/(0, _react.createContext)({
+  inlineCollapsed: false
+});
+var _default = MenuContext;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/menu/MenuItem.js":
+/*!************************************************!*\
+  !*** ./node_modules/antd/lib/menu/MenuItem.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
+
+var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
+
+var _tooltip = _interopRequireDefault(__webpack_require__(/*! ../tooltip */ "./node_modules/antd/lib/tooltip/index.js"));
+
+var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
+
+var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var MenuItem = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(MenuItem, _React$Component);
+
+  var _super = (0, _createSuper2["default"])(MenuItem);
+
+  function MenuItem() {
     var _this;
 
-    _classCallCheck(this, PortalWrapper);
+    (0, _classCallCheck2["default"])(this, MenuItem);
+    _this = _super.apply(this, arguments);
 
-    _this = _super.call(this, props);
+    _this.onKeyDown = function (e) {
+      _this.menuItem.onKeyDown(e);
+    };
 
-    _this.getContainer = function () {
-      if (windowIsUndefined) {
-        return null;
-      }
+    _this.saveMenuItem = function (menuItem) {
+      _this.menuItem = menuItem;
+    };
 
-      if (!_this.container) {
-        _this.container = document.createElement('div');
-        var parent = getParent(_this.props.getContainer);
+    _this.renderItem = function (_ref) {
+      var siderCollapsed = _ref.siderCollapsed;
+      var _this$props = _this.props,
+          level = _this$props.level,
+          className = _this$props.className,
+          children = _this$props.children,
+          rootPrefixCls = _this$props.rootPrefixCls;
 
-        if (parent) {
-          parent.appendChild(_this.container);
+      var _a = _this.props,
+          title = _a.title,
+          icon = _a.icon,
+          danger = _a.danger,
+          rest = __rest(_a, ["title", "icon", "danger"]);
+
+      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref2) {
+        var _classNames;
+
+        var inlineCollapsed = _ref2.inlineCollapsed,
+            direction = _ref2.direction;
+        var tooltipTitle = title;
+
+        if (typeof title === 'undefined') {
+          tooltipTitle = level === 1 ? children : '';
+        } else if (title === false) {
+          tooltipTitle = '';
         }
-      }
 
-      _this.setWrapperClassName();
+        var tooltipProps = {
+          title: tooltipTitle
+        };
 
-      return _this.container;
-    };
+        if (!siderCollapsed && !inlineCollapsed) {
+          tooltipProps.title = null; // Reset `visible` to fix control mode tooltip display not correct
+          // ref: https://github.com/ant-design/ant-design/issues/16742
 
-    _this.setWrapperClassName = function () {
-      var wrapperClassName = _this.props.wrapperClassName;
-
-      if (_this.container && wrapperClassName && wrapperClassName !== _this.container.className) {
-        _this.container.className = wrapperClassName;
-      }
-    };
-
-    _this.savePortal = function (c) {
-      // Warning: don't rename _component
-      // https://github.com/react-component/util/pull/65#discussion_r352407916
-      _this._component = c;
-    };
-
-    _this.removeCurrentContainer = function (visible) {
-      _this.container = null;
-      _this._component = null;
-
-      if (!IS_REACT_16) {
-        if (visible) {
-          _this.renderComponent({
-            afterClose: _this.removeContainer,
-            onClose: function onClose() {},
-            visible: false
-          });
-        } else {
-          _this.removeContainer();
+          tooltipProps.visible = false;
         }
-      }
+
+        var childrenLength = (0, _toArray["default"])(children).length;
+        return /*#__PURE__*/React.createElement(_tooltip["default"], (0, _extends2["default"])({}, tooltipProps, {
+          placement: direction === 'rtl' ? 'left' : 'right',
+          overlayClassName: "".concat(rootPrefixCls, "-inline-collapsed-tooltip")
+        }), /*#__PURE__*/React.createElement(_rcMenu.Item, (0, _extends2["default"])({}, rest, {
+          className: (0, _classnames["default"])(className, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-danger"), danger), (0, _defineProperty2["default"])(_classNames, "".concat(rootPrefixCls, "-item-only-child"), (icon ? childrenLength + 1 : childrenLength) === 1), _classNames)),
+          title: title,
+          ref: _this.saveMenuItem
+        }), icon, _this.renderItemChildren(inlineCollapsed)));
+      });
     };
 
-    _this.switchScrollingEffect = function () {
-      if (openCount === 1 && !Object.keys(cacheOverflow).length) {
-        Object(_switchScrollingEffect__WEBPACK_IMPORTED_MODULE_4__["default"])(); // Must be set after switchScrollingEffect
-
-        cacheOverflow = Object(_setStyle__WEBPACK_IMPORTED_MODULE_5__["default"])({
-          overflow: 'hidden',
-          overflowX: 'hidden',
-          overflowY: 'hidden'
-        });
-      } else if (!openCount) {
-        Object(_setStyle__WEBPACK_IMPORTED_MODULE_5__["default"])(cacheOverflow);
-        cacheOverflow = {};
-        Object(_switchScrollingEffect__WEBPACK_IMPORTED_MODULE_4__["default"])(true);
-      }
-    };
-
-    var _visible = props.visible,
-        getContainer = props.getContainer;
-
-    if (!windowIsUndefined && getParent(getContainer) === document.body) {
-      openCount = _visible ? openCount + 1 : openCount;
-    }
-
-    _this.state = {
-      _self: _assertThisInitialized(_this)
-    };
     return _this;
   }
 
-  _createClass(PortalWrapper, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      this.setWrapperClassName();
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      var _this$props = this.props,
-          visible = _this$props.visible,
-          getContainer = _this$props.getContainer;
+  (0, _createClass2["default"])(MenuItem, [{
+    key: "renderItemChildren",
+    value: function renderItemChildren(inlineCollapsed) {
+      var _this$props2 = this.props,
+          icon = _this$props2.icon,
+          children = _this$props2.children,
+          level = _this$props2.level,
+          rootPrefixCls = _this$props2.rootPrefixCls; // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
+      // ref: https://github.com/ant-design/ant-design/pull/23456
 
-      if (!windowIsUndefined && getParent(getContainer) === document.body) {
-        // 离开时不会 render， 导到离开时数值不变，改用 func 。。
-        openCount = visible && openCount ? openCount - 1 : openCount;
+      if (!icon || (0, _reactNode.isValidElement)(children) && children.type === 'span') {
+        if (children && inlineCollapsed && level === 1 && typeof children === 'string') {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
+          }, children.charAt(0));
+        }
+
+        return children;
       }
 
-      this.removeCurrentContainer(visible);
+      return /*#__PURE__*/React.createElement("span", null, children);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, this.renderItem);
+    }
+  }]);
+  return MenuItem;
+}(React.Component);
+
+exports["default"] = MenuItem;
+MenuItem.isMenuItem = true;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/menu/SubMenu.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/menu/SubMenu.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _rcMenu = __webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js");
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+
+var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
+
+var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
+
+var SubMenu = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(SubMenu, _React$Component);
+
+  var _super = (0, _createSuper2["default"])(SubMenu);
+
+  function SubMenu() {
+    var _this;
+
+    (0, _classCallCheck2["default"])(this, SubMenu);
+    _this = _super.apply(this, arguments);
+
+    _this.onKeyDown = function (e) {
+      _this.subMenu.onKeyDown(e);
+    };
+
+    _this.saveSubMenu = function (subMenu) {
+      _this.subMenu = subMenu;
+    };
+
+    return _this;
+  }
+
+  (0, _createClass2["default"])(SubMenu, [{
+    key: "renderTitle",
+    value: function renderTitle(inlineCollapsed) {
+      var _this$props = this.props,
+          icon = _this$props.icon,
+          title = _this$props.title,
+          level = _this$props.level,
+          rootPrefixCls = _this$props.rootPrefixCls;
+
+      if (!icon) {
+        return inlineCollapsed && level === 1 && title && typeof title === 'string' ? /*#__PURE__*/React.createElement("div", {
+          className: "".concat(rootPrefixCls, "-inline-collapsed-noicon")
+        }, title.charAt(0)) : title;
+      } // inline-collapsed.md demo 依赖 span 来隐藏文字,有 icon 属性，则内部包裹一个 span
+      // ref: https://github.com/ant-design/ant-design/pull/23456
+
+
+      var titleIsSpan = (0, _reactNode.isValidElement)(title) && title.type === 'span';
+      return /*#__PURE__*/React.createElement(React.Fragment, null, icon, titleIsSpan ? title : /*#__PURE__*/React.createElement("span", null, title));
     }
   }, {
     key: "render",
@@ -1258,220 +913,686 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       var _this$props2 = this.props,
-          children = _this$props2.children,
-          forceRender = _this$props2.forceRender,
-          visible = _this$props2.visible;
-      var portal = null;
-      var childProps = {
-        getOpenCount: function getOpenCount() {
-          return openCount;
-        },
-        getContainer: this.getContainer,
-        switchScrollingEffect: this.switchScrollingEffect
-      }; // suppport react15
-
-      if (!IS_REACT_16) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContainerRender__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          parent: this,
-          visible: visible,
-          autoDestroy: false,
-          getComponent: function getComponent() {
-            var extra = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-            return children(_objectSpread(_objectSpread(_objectSpread({}, extra), childProps), {}, {
-              ref: _this2.savePortal
-            }));
-          },
-          getContainer: this.getContainer,
-          forceRender: forceRender
-        }, function (_ref) {
-          var renderComponent = _ref.renderComponent,
-              removeContainer = _ref.removeContainer;
-          _this2.renderComponent = renderComponent;
-          _this2.removeContainer = removeContainer;
-          return null;
-        });
-      }
-
-      if (forceRender || visible || this._component) {
-        portal = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Portal__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          getContainer: this.getContainer,
-          ref: this.savePortal
-        }, children(childProps));
-      }
-
-      return portal;
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(props, _ref2) {
-      var prevProps = _ref2.prevProps,
-          _self = _ref2._self;
-      var visible = props.visible,
-          getContainer = props.getContainer;
-
-      if (prevProps) {
-        var prevVisible = prevProps.visible,
-            prevGetContainer = prevProps.getContainer;
-
-        if (visible !== prevVisible && !windowIsUndefined && getParent(getContainer) === document.body) {
-          openCount = visible && !prevVisible ? openCount + 1 : openCount - 1;
-        }
-
-        var getContainerIsFunc = typeof getContainer === 'function' && typeof prevGetContainer === 'function';
-
-        if (getContainerIsFunc ? getContainer.toString() !== prevGetContainer.toString() : getContainer !== prevGetContainer) {
-          _self.removeCurrentContainer(false);
-        }
-      }
-
-      return {
-        prevProps: props
-      };
+          rootPrefixCls = _this$props2.rootPrefixCls,
+          popupClassName = _this$props2.popupClassName;
+      return /*#__PURE__*/React.createElement(_MenuContext["default"].Consumer, null, function (_ref) {
+        var inlineCollapsed = _ref.inlineCollapsed,
+            antdMenuTheme = _ref.antdMenuTheme;
+        return /*#__PURE__*/React.createElement(_rcMenu.SubMenu, (0, _extends2["default"])({}, (0, _omit["default"])(_this2.props, ['icon']), {
+          title: _this2.renderTitle(inlineCollapsed),
+          ref: _this2.saveSubMenu,
+          popupClassName: (0, _classnames["default"])(rootPrefixCls, "".concat(rootPrefixCls, "-").concat(antdMenuTheme), popupClassName)
+        }));
+      });
     }
   }]);
+  return SubMenu;
+}(React.Component);
 
-  return PortalWrapper;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+SubMenu.contextType = _MenuContext["default"]; // fix issue:https://github.com/ant-design/ant-design/issues/8666
 
-/* harmony default export */ __webpack_exports__["default"] = (PortalWrapper);
-
-/***/ }),
-
-/***/ "./node_modules/rc-util/es/getScrollBarSize.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/rc-util/es/getScrollBarSize.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getScrollBarSize; });
-var cached;
-function getScrollBarSize(fresh) {
-  if (typeof document === 'undefined') {
-    return 0;
-  }
-
-  if (fresh || cached === undefined) {
-    var inner = document.createElement('div');
-    inner.style.width = '100%';
-    inner.style.height = '200px';
-    var outer = document.createElement('div');
-    var outerStyle = outer.style;
-    outerStyle.position = 'absolute';
-    outerStyle.top = 0;
-    outerStyle.left = 0;
-    outerStyle.pointerEvents = 'none';
-    outerStyle.visibility = 'hidden';
-    outerStyle.width = '200px';
-    outerStyle.height = '150px';
-    outerStyle.overflow = 'hidden';
-    outer.appendChild(inner);
-    document.body.appendChild(outer);
-    var widthContained = inner.offsetWidth;
-    outer.style.overflow = 'scroll';
-    var widthScroll = inner.offsetWidth;
-
-    if (widthContained === widthScroll) {
-      widthScroll = outer.clientWidth;
-    }
-
-    document.body.removeChild(outer);
-    cached = widthContained - widthScroll;
-  }
-
-  return cached;
-}
+SubMenu.isSubMenu = 1;
+var _default = SubMenu;
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/rc-util/es/setStyle.js":
+/***/ "./node_modules/antd/lib/menu/index.js":
 /*!*********************************************!*\
-  !*** ./node_modules/rc-util/es/setStyle.js ***!
+  !*** ./node_modules/antd/lib/menu/index.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Easy to set element style, return previous style
- * IE browser compatible(IE browser doesn't merge overflow style, need to set it separately)
- * https://github.com/ant-design/ant-design/issues/19393
- *
- */
-function setStyle(style) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var _options$element = options.element,
-      element = _options$element === void 0 ? document.body : _options$element;
-  var oldStyle = {};
-  var styleKeys = Object.keys(style); // IE browser compatible
 
-  styleKeys.forEach(function (key) {
-    oldStyle[key] = element.style[key];
-  });
-  styleKeys.forEach(function (key) {
-    element.style[key] = style[key];
-  });
-  return oldStyle;
-}
 
-/* harmony default export */ __webpack_exports__["default"] = (setStyle);
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _rcMenu = _interopRequireWildcard(__webpack_require__(/*! rc-menu */ "./node_modules/rc-menu/es/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _SubMenu = _interopRequireDefault(__webpack_require__(/*! ./SubMenu */ "./node_modules/antd/lib/menu/SubMenu.js"));
+
+var _MenuItem = _interopRequireDefault(__webpack_require__(/*! ./MenuItem */ "./node_modules/antd/lib/menu/MenuItem.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
+
+var _Sider = __webpack_require__(/*! ../layout/Sider */ "./node_modules/antd/lib/layout/Sider.js");
+
+var _motion = _interopRequireDefault(__webpack_require__(/*! ../_util/motion */ "./node_modules/antd/lib/_util/motion.js"));
+
+var _MenuContext = _interopRequireDefault(__webpack_require__(/*! ./MenuContext */ "./node_modules/antd/lib/menu/MenuContext.js"));
+
+var InternalMenu = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(InternalMenu, _React$Component);
+
+  var _super = (0, _createSuper2["default"])(InternalMenu);
+
+  function InternalMenu(props) {
+    var _this;
+
+    (0, _classCallCheck2["default"])(this, InternalMenu);
+    _this = _super.call(this, props);
+
+    _this.renderMenu = function (_ref) {
+      var getPopupContainer = _ref.getPopupContainer,
+          getPrefixCls = _ref.getPrefixCls,
+          direction = _ref.direction;
+      var _this$props = _this.props,
+          customizePrefixCls = _this$props.prefixCls,
+          className = _this$props.className,
+          theme = _this$props.theme;
+      var defaultMotions = {
+        horizontal: {
+          motionName: 'slide-up'
+        },
+        inline: _motion["default"],
+        other: {
+          motionName: 'zoom-big'
+        }
+      };
+      var prefixCls = getPrefixCls('menu', customizePrefixCls);
+      var menuClassName = (0, _classnames["default"])(className, "".concat(prefixCls, "-").concat(theme), (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-inline-collapsed"), _this.getInlineCollapsed()));
+      return /*#__PURE__*/React.createElement(_MenuContext["default"].Provider, {
+        value: {
+          inlineCollapsed: _this.getInlineCollapsed() || false,
+          antdMenuTheme: theme,
+          direction: direction
+        }
+      }, /*#__PURE__*/React.createElement(_rcMenu["default"], (0, _extends2["default"])({
+        getPopupContainer: getPopupContainer
+      }, _this.props, {
+        className: menuClassName,
+        prefixCls: prefixCls,
+        direction: direction,
+        defaultMotions: defaultMotions
+      })));
+    };
+
+    (0, _devWarning["default"])(!('inlineCollapsed' in props && props.mode !== 'inline'), 'Menu', '`inlineCollapsed` should only be used when `mode` is inline.');
+    (0, _devWarning["default"])(!(props.siderCollapsed !== undefined && 'inlineCollapsed' in props), 'Menu', '`inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.');
+    return _this;
+  }
+
+  (0, _createClass2["default"])(InternalMenu, [{
+    key: "getInlineCollapsed",
+    value: function getInlineCollapsed() {
+      var _this$props2 = this.props,
+          inlineCollapsed = _this$props2.inlineCollapsed,
+          siderCollapsed = _this$props2.siderCollapsed;
+
+      if (siderCollapsed !== undefined) {
+        return siderCollapsed;
+      }
+
+      return inlineCollapsed;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderMenu);
+    }
+  }]);
+  return InternalMenu;
+}(React.Component);
+
+InternalMenu.defaultProps = {
+  className: '',
+  theme: 'light',
+  focusable: false
+}; // We should keep this as ref-able
+
+var Menu = /*#__PURE__*/function (_React$Component2) {
+  (0, _inherits2["default"])(Menu, _React$Component2);
+
+  var _super2 = (0, _createSuper2["default"])(Menu);
+
+  function Menu() {
+    (0, _classCallCheck2["default"])(this, Menu);
+    return _super2.apply(this, arguments);
+  }
+
+  (0, _createClass2["default"])(Menu, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/React.createElement(_Sider.SiderContext.Consumer, null, function (context) {
+        return /*#__PURE__*/React.createElement(InternalMenu, (0, _extends2["default"])({}, _this2.props, context));
+      });
+    }
+  }]);
+  return Menu;
+}(React.Component);
+
+exports["default"] = Menu;
+Menu.Divider = _rcMenu.Divider;
+Menu.Item = _MenuItem["default"];
+Menu.SubMenu = _SubMenu["default"];
+Menu.ItemGroup = _rcMenu.ItemGroup;
 
 /***/ }),
 
-/***/ "./node_modules/rc-util/es/switchScrollingEffect.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/rc-util/es/switchScrollingEffect.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/antd/lib/tooltip/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/antd/lib/tooltip/index.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _getScrollBarSize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getScrollBarSize */ "./node_modules/rc-util/es/getScrollBarSize.js");
-/* harmony import */ var _setStyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setStyle */ "./node_modules/rc-util/es/setStyle.js");
 
 
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-function isBodyOverflowing() {
-  return document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight) && window.innerWidth > document.body.offsetWidth;
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _rcTooltip = _interopRequireDefault(__webpack_require__(/*! rc-tooltip */ "./node_modules/rc-tooltip/es/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _placements = _interopRequireDefault(__webpack_require__(/*! ./placements */ "./node_modules/antd/lib/tooltip/placements.js"));
+
+var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _colors = __webpack_require__(/*! ../_util/colors */ "./node_modules/antd/lib/_util/colors.js");
+
+var splitObject = function splitObject(obj, keys) {
+  var picked = {};
+  var omitted = (0, _extends2["default"])({}, obj);
+  keys.forEach(function (key) {
+    if (obj && key in obj) {
+      picked[key] = obj[key];
+      delete omitted[key];
+    }
+  });
+  return {
+    picked: picked,
+    omitted: omitted
+  };
+};
+
+var PresetColorRegex = new RegExp("^(".concat(_colors.PresetColorTypes.join('|'), ")(-inverse)?$")); // Fix Tooltip won't hide at disabled button
+// mouse events don't trigger at disabled button in Chrome
+// https://github.com/react-component/tooltip/issues/18
+
+function getDisabledCompatibleChildren(element, prefixCls) {
+  var elementType = element.type;
+
+  if ((elementType.__ANT_BUTTON === true || elementType.__ANT_SWITCH === true || elementType.__ANT_CHECKBOX === true || element.type === 'button') && element.props.disabled) {
+    // Pick some layout related style properties up to span
+    // Prevent layout bugs like https://github.com/ant-design/ant-design/issues/5254
+    var _splitObject = splitObject(element.props.style, ['position', 'left', 'right', 'top', 'bottom', 'float', 'display', 'zIndex']),
+        picked = _splitObject.picked,
+        omitted = _splitObject.omitted;
+
+    var spanStyle = (0, _extends2["default"])((0, _extends2["default"])({
+      display: 'inline-block'
+    }, picked), {
+      cursor: 'not-allowed',
+      width: element.props.block ? '100%' : null
+    });
+    var buttonStyle = (0, _extends2["default"])((0, _extends2["default"])({}, omitted), {
+      pointerEvents: 'none'
+    });
+    var child = (0, _reactNode.cloneElement)(element, {
+      style: buttonStyle,
+      className: null
+    });
+    return /*#__PURE__*/React.createElement("span", {
+      style: spanStyle,
+      className: (0, _classnames["default"])(element.props.className, "".concat(prefixCls, "-disabled-compatible-wrapper"))
+    }, child);
+  }
+
+  return element;
 }
 
-var cacheStyle = {};
-/* harmony default export */ __webpack_exports__["default"] = (function (close) {
-  if (!isBodyOverflowing() && !close) {
-    return;
-  } // https://github.com/ant-design/ant-design/issues/19729
+var Tooltip = /*#__PURE__*/React.forwardRef(function (props, ref) {
+  var _classNames2;
 
+  var _React$useContext = React.useContext(_configProvider.ConfigContext),
+      getContextPopupContainer = _React$useContext.getPopupContainer,
+      getPrefixCls = _React$useContext.getPrefixCls,
+      direction = _React$useContext.direction;
 
-  var scrollingEffectClassName = 'ant-scrolling-effect';
-  var scrollingEffectClassNameReg = new RegExp("".concat(scrollingEffectClassName), 'g');
-  var bodyClassName = document.body.className;
+  var _React$useState = React.useState(!!props.visible || !!props.defaultVisible),
+      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
+      visible = _React$useState2[0],
+      setVisible = _React$useState2[1];
 
-  if (close) {
-    if (!scrollingEffectClassNameReg.test(bodyClassName)) return;
-    Object(_setStyle__WEBPACK_IMPORTED_MODULE_1__["default"])(cacheStyle);
-    cacheStyle = {};
-    document.body.className = bodyClassName.replace(scrollingEffectClassNameReg, '').trim();
-    return;
-  }
-
-  var scrollBarSize = Object(_getScrollBarSize__WEBPACK_IMPORTED_MODULE_0__["default"])();
-
-  if (scrollBarSize) {
-    cacheStyle = Object(_setStyle__WEBPACK_IMPORTED_MODULE_1__["default"])({
-      position: 'relative',
-      width: "calc(100% - ".concat(scrollBarSize, "px)")
-    });
-
-    if (!scrollingEffectClassNameReg.test(bodyClassName)) {
-      var addClassName = "".concat(bodyClassName, " ").concat(scrollingEffectClassName);
-      document.body.className = addClassName.trim();
+  React.useEffect(function () {
+    if ('visible' in props) {
+      setVisible(props.visible);
     }
+  }, [props.visible]);
+
+  var isNoTitle = function isNoTitle() {
+    var title = props.title,
+        overlay = props.overlay;
+    return !title && !overlay && title !== 0; // overlay for old version compatibility
+  };
+
+  var onVisibleChange = function onVisibleChange(vis) {
+    if (!('visible' in props)) {
+      setVisible(isNoTitle() ? false : vis);
+    }
+
+    if (props.onVisibleChange && !isNoTitle()) {
+      props.onVisibleChange(vis);
+    }
+  };
+
+  var getTooltipPlacements = function getTooltipPlacements() {
+    var builtinPlacements = props.builtinPlacements,
+        arrowPointAtCenter = props.arrowPointAtCenter,
+        autoAdjustOverflow = props.autoAdjustOverflow;
+    return builtinPlacements || (0, _placements["default"])({
+      arrowPointAtCenter: arrowPointAtCenter,
+      autoAdjustOverflow: autoAdjustOverflow
+    });
+  }; // 动态设置动画点
+
+
+  var onPopupAlign = function onPopupAlign(domNode, align) {
+    var placements = getTooltipPlacements(); // 当前返回的位置
+
+    var placement = Object.keys(placements).filter(function (key) {
+      return placements[key].points[0] === align.points[0] && placements[key].points[1] === align.points[1];
+    })[0];
+
+    if (!placement) {
+      return;
+    } // 根据当前坐标设置动画点
+
+
+    var rect = domNode.getBoundingClientRect();
+    var transformOrigin = {
+      top: '50%',
+      left: '50%'
+    };
+
+    if (placement.indexOf('top') >= 0 || placement.indexOf('Bottom') >= 0) {
+      transformOrigin.top = "".concat(rect.height - align.offset[1], "px");
+    } else if (placement.indexOf('Top') >= 0 || placement.indexOf('bottom') >= 0) {
+      transformOrigin.top = "".concat(-align.offset[1], "px");
+    }
+
+    if (placement.indexOf('left') >= 0 || placement.indexOf('Right') >= 0) {
+      transformOrigin.left = "".concat(rect.width - align.offset[0], "px");
+    } else if (placement.indexOf('right') >= 0 || placement.indexOf('Left') >= 0) {
+      transformOrigin.left = "".concat(-align.offset[0], "px");
+    }
+
+    domNode.style.transformOrigin = "".concat(transformOrigin.left, " ").concat(transformOrigin.top);
+  };
+
+  var getOverlay = function getOverlay() {
+    var title = props.title,
+        overlay = props.overlay;
+
+    if (title === 0) {
+      return title;
+    }
+
+    return overlay || title || '';
+  };
+
+  var customizePrefixCls = props.prefixCls,
+      openClassName = props.openClassName,
+      getPopupContainer = props.getPopupContainer,
+      getTooltipContainer = props.getTooltipContainer,
+      overlayClassName = props.overlayClassName,
+      color = props.color,
+      overlayInnerStyle = props.overlayInnerStyle;
+  var children = props.children;
+  var prefixCls = getPrefixCls('tooltip', customizePrefixCls);
+  var tempVisible = visible; // Hide tooltip when there is no title
+
+  if (!('visible' in props) && isNoTitle()) {
+    tempVisible = false;
   }
+
+  var child = getDisabledCompatibleChildren((0, _reactNode.isValidElement)(children) ? children : /*#__PURE__*/React.createElement("span", null, children), prefixCls);
+  var childProps = child.props;
+  var childCls = (0, _classnames["default"])(childProps.className, (0, _defineProperty2["default"])({}, openClassName || "".concat(prefixCls, "-open"), true));
+  var customOverlayClassName = (0, _classnames["default"])(overlayClassName, (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-").concat(color), color && PresetColorRegex.test(color)), _classNames2));
+  var formattedOverlayInnerStyle;
+  var arrowContentStyle;
+
+  if (color && !PresetColorRegex.test(color)) {
+    formattedOverlayInnerStyle = (0, _extends2["default"])((0, _extends2["default"])({}, overlayInnerStyle), {
+      background: color
+    });
+    arrowContentStyle = {
+      background: color
+    };
+  }
+
+  return /*#__PURE__*/React.createElement(_rcTooltip["default"], (0, _extends2["default"])({}, props, {
+    prefixCls: prefixCls,
+    overlayClassName: customOverlayClassName,
+    getTooltipContainer: getPopupContainer || getTooltipContainer || getContextPopupContainer,
+    ref: ref,
+    builtinPlacements: getTooltipPlacements(),
+    overlay: getOverlay(),
+    visible: tempVisible,
+    onVisibleChange: onVisibleChange,
+    onPopupAlign: onPopupAlign,
+    overlayInnerStyle: formattedOverlayInnerStyle,
+    arrowContent: /*#__PURE__*/React.createElement("span", {
+      className: "".concat(prefixCls, "-arrow-content"),
+      style: arrowContentStyle
+    })
+  }), tempVisible ? (0, _reactNode.cloneElement)(child, {
+    className: childCls
+  }) : child);
 });
+Tooltip.displayName = 'Tooltip';
+Tooltip.defaultProps = {
+  placement: 'top',
+  transitionName: 'zoom-big-fast',
+  mouseEnterDelay: 0.1,
+  mouseLeaveDelay: 0.1,
+  arrowPointAtCenter: false,
+  autoAdjustOverflow: true
+};
+var _default = Tooltip;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tooltip/placements.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/antd/lib/tooltip/placements.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getOverflowOptions = getOverflowOptions;
+exports["default"] = getPlacements;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _placements = __webpack_require__(/*! rc-tooltip/lib/placements */ "./node_modules/rc-tooltip/lib/placements.js");
+
+var autoAdjustOverflowEnabled = {
+  adjustX: 1,
+  adjustY: 1
+};
+var autoAdjustOverflowDisabled = {
+  adjustX: 0,
+  adjustY: 0
+};
+var targetOffset = [0, 0];
+
+function getOverflowOptions(autoAdjustOverflow) {
+  if (typeof autoAdjustOverflow === 'boolean') {
+    return autoAdjustOverflow ? autoAdjustOverflowEnabled : autoAdjustOverflowDisabled;
+  }
+
+  return (0, _extends2["default"])((0, _extends2["default"])({}, autoAdjustOverflowDisabled), autoAdjustOverflow);
+}
+
+function getPlacements(config) {
+  var _config$arrowWidth = config.arrowWidth,
+      arrowWidth = _config$arrowWidth === void 0 ? 5 : _config$arrowWidth,
+      _config$horizontalArr = config.horizontalArrowShift,
+      horizontalArrowShift = _config$horizontalArr === void 0 ? 16 : _config$horizontalArr,
+      _config$verticalArrow = config.verticalArrowShift,
+      verticalArrowShift = _config$verticalArrow === void 0 ? 8 : _config$verticalArrow,
+      autoAdjustOverflow = config.autoAdjustOverflow;
+  var placementMap = {
+    left: {
+      points: ['cr', 'cl'],
+      offset: [-4, 0]
+    },
+    right: {
+      points: ['cl', 'cr'],
+      offset: [4, 0]
+    },
+    top: {
+      points: ['bc', 'tc'],
+      offset: [0, -4]
+    },
+    bottom: {
+      points: ['tc', 'bc'],
+      offset: [0, 4]
+    },
+    topLeft: {
+      points: ['bl', 'tc'],
+      offset: [-(horizontalArrowShift + arrowWidth), -4]
+    },
+    leftTop: {
+      points: ['tr', 'cl'],
+      offset: [-4, -(verticalArrowShift + arrowWidth)]
+    },
+    topRight: {
+      points: ['br', 'tc'],
+      offset: [horizontalArrowShift + arrowWidth, -4]
+    },
+    rightTop: {
+      points: ['tl', 'cr'],
+      offset: [4, -(verticalArrowShift + arrowWidth)]
+    },
+    bottomRight: {
+      points: ['tr', 'bc'],
+      offset: [horizontalArrowShift + arrowWidth, 4]
+    },
+    rightBottom: {
+      points: ['bl', 'cr'],
+      offset: [4, verticalArrowShift + arrowWidth]
+    },
+    bottomLeft: {
+      points: ['tl', 'bc'],
+      offset: [-(horizontalArrowShift + arrowWidth), 4]
+    },
+    leftBottom: {
+      points: ['br', 'cl'],
+      offset: [-4, verticalArrowShift + arrowWidth]
+    }
+  };
+  Object.keys(placementMap).forEach(function (key) {
+    placementMap[key] = config.arrowPointAtCenter ? (0, _extends2["default"])((0, _extends2["default"])({}, placementMap[key]), {
+      overflow: getOverflowOptions(autoAdjustOverflow),
+      targetOffset: targetOffset
+    }) : (0, _extends2["default"])((0, _extends2["default"])({}, _placements.placements[key]), {
+      overflow: getOverflowOptions(autoAdjustOverflow)
+    });
+    placementMap[key].ignoreShake = true;
+  });
+  return placementMap;
+}
+
+/***/ }),
+
+/***/ "./node_modules/rc-tooltip/lib/placements.js":
+/*!***************************************************!*\
+  !*** ./node_modules/rc-tooltip/lib/placements.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.placements = void 0;
+var autoAdjustOverflow = {
+  adjustX: 1,
+  adjustY: 1
+};
+var targetOffset = [0, 0];
+var placements = {
+  left: {
+    points: ['cr', 'cl'],
+    overflow: autoAdjustOverflow,
+    offset: [-4, 0],
+    targetOffset: targetOffset
+  },
+  right: {
+    points: ['cl', 'cr'],
+    overflow: autoAdjustOverflow,
+    offset: [4, 0],
+    targetOffset: targetOffset
+  },
+  top: {
+    points: ['bc', 'tc'],
+    overflow: autoAdjustOverflow,
+    offset: [0, -4],
+    targetOffset: targetOffset
+  },
+  bottom: {
+    points: ['tc', 'bc'],
+    overflow: autoAdjustOverflow,
+    offset: [0, 4],
+    targetOffset: targetOffset
+  },
+  topLeft: {
+    points: ['bl', 'tl'],
+    overflow: autoAdjustOverflow,
+    offset: [0, -4],
+    targetOffset: targetOffset
+  },
+  leftTop: {
+    points: ['tr', 'tl'],
+    overflow: autoAdjustOverflow,
+    offset: [-4, 0],
+    targetOffset: targetOffset
+  },
+  topRight: {
+    points: ['br', 'tr'],
+    overflow: autoAdjustOverflow,
+    offset: [0, -4],
+    targetOffset: targetOffset
+  },
+  rightTop: {
+    points: ['tl', 'tr'],
+    overflow: autoAdjustOverflow,
+    offset: [4, 0],
+    targetOffset: targetOffset
+  },
+  bottomRight: {
+    points: ['tr', 'br'],
+    overflow: autoAdjustOverflow,
+    offset: [0, 4],
+    targetOffset: targetOffset
+  },
+  rightBottom: {
+    points: ['bl', 'br'],
+    overflow: autoAdjustOverflow,
+    offset: [4, 0],
+    targetOffset: targetOffset
+  },
+  bottomLeft: {
+    points: ['tl', 'bl'],
+    overflow: autoAdjustOverflow,
+    offset: [0, 4],
+    targetOffset: targetOffset
+  },
+  leftBottom: {
+    points: ['br', 'bl'],
+    overflow: autoAdjustOverflow,
+    offset: [-4, 0],
+    targetOffset: targetOffset
+  }
+};
+exports.placements = placements;
+var _default = placements;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/rc-util/lib/Children/toArray.js":
+/*!******************************************************!*\
+  !*** ./node_modules/rc-util/lib/Children/toArray.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = toArray;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function toArray(children) {
+  var ret = [];
+
+  _react.default.Children.forEach(children, function (child) {
+    if (child === undefined || child === null) {
+      return;
+    }
+
+    if (Array.isArray(child)) {
+      ret = ret.concat(toArray(child));
+    } else if ((0, _reactIs.isFragment)(child) && child.props) {
+      ret = ret.concat(toArray(child.props.children));
+    } else {
+      ret.push(child);
+    }
+  });
+
+  return ret;
+}
 
 /***/ })
 

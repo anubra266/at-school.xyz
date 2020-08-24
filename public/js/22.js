@@ -220,13 +220,14 @@ function Navbar(_ref) {
     ref: pageLoader,
     waitingTime: 1000
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, {
-    className: "header",
+    className: "site-layout-background",
     style: {
       padding: 0
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_7___default.a, {
     title: "at-School",
     className: "site-page-header",
+    ghost: false,
     subTitle: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_4___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
       xs: 0,
       md: 12
@@ -360,7 +361,8 @@ var Sider = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Sider;
 var SubMenu = antd_lib_menu__WEBPACK_IMPORTED_MODULE_4___default.a.SubMenu;
 
 function Sidebar(_ref) {
-  var routes = _ref.routes;
+  var mode = _ref.mode,
+      routes = _ref.routes;
 
   var getRoute = function getRoute() {
     return Object(_Helpers_PresentRoute__WEBPACK_IMPORTED_MODULE_2__["returnRoute"])(routes);
@@ -380,11 +382,12 @@ function Sidebar(_ref) {
     collapsed: collapsed,
     breakpoint: "md",
     collapsedWidth: "0",
-    onCollapse: onCollapse
+    onCollapse: onCollapse,
+    theme: mode === "compact" ? "light" : mode
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    theme: "dark",
+    theme: "light",
     defaultSelectedKeys: getRoute()[0],
     defaultOpenKeys: getRoute()[1],
     mode: "inline"
@@ -521,6 +524,7 @@ function index(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     pageLoader: pageLoader
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, null, noSidebar !== true && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sidebar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    mode: mode,
     routes: routes
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
     className: "site-layout"

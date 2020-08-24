@@ -32,7 +32,7 @@ function index({ title, noSidebar, children, routes }) {
             <Layout style={{ minHeight: "100vh" }}>
                 <Navbar pageLoader={pageLoader} />
                 <Layout>
-                    {noSidebar !== true && <Sidebar routes={routes} />}
+                    {noSidebar !== true && <Sidebar mode={mode} routes={routes} />}
                     <Layout className="site-layout">
                         {children}
                         <SiteFooter />
