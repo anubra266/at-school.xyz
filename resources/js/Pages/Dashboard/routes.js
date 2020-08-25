@@ -4,6 +4,9 @@ import BankOutlined from "@ant-design/icons/BankOutlined";
 import ApartmentOutlined from "@ant-design/icons/ApartmentOutlined";
 import DeploymentUnitOutlined from "@ant-design/icons/DeploymentUnitOutlined";
 import TeamOutlined from "@ant-design/icons/TeamOutlined";
+import SettingOutlined from "@ant-design/icons/SettingOutlined";
+import UserOutlined from "@ant-design/icons/UserOutlined";
+import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
 
 export default [
     {
@@ -32,11 +35,20 @@ export default [
         icon: <TeamOutlined />
     },
     {
-        name: "has Keys",
-        icon: <BankOutlined />,
+        name: "Settings",
+        route: "settings",
+        icon: <SettingOutlined />,
         items: [
-            { name: "Key1", route: "home", icon: <BankOutlined /> },
-            { name: "Key2", route: "home", icon: <BankOutlined /> }
+            {
+                name: "Profile Settings",
+                route: "settings/profile",
+                icon: <UserOutlined />
+            },
+            {
+                name: "Theme Settings",
+                route: "settings/theme",
+                icon: <HighlightOutlined />
+            }
         ]
     }
 ];

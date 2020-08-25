@@ -15,8 +15,7 @@ class ClassroomService
 
     public function index()
     {
-        $classrooms = authUser()->classrooms()->latest()->get();
-        return $classrooms;
+        return authUser()->classrooms()->latest()->get();
     }
 
     public function store($request)

@@ -11,11 +11,13 @@ function index({ title, noSidebar, children, routes }) {
     useEffect(() => {
         flash.success && message.success(flash.success, 5);
         flash.error && message.error(flash.error, 5);
+        flash.info && message.info(flash.info, 5);
+        flash.warning && message.warning(flash.warning, 5);
     }, [flash]);
     useEffect(() => {
         errors &&
             Object.keys(errors).forEach(err => {
-                message.error(errors[err][0],3);
+                message.error(errors[err][0], 3);
             });
     }, [errors]);
     useEffect(() => {

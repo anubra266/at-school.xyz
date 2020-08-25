@@ -10,6 +10,7 @@ class EnvironService
     public function __construct(Environ $environ)
     {
         $this->environ = $environ;
+        $this->prefic = "ENV";
     }
 
     public function index()
@@ -29,7 +30,7 @@ class EnvironService
         //*add organization data to environ
         $environ['organization_id'] = $organization->id;
         //*generate random code with faker
-        $environ['code'] = $this->environ->generateCode('ENV');
+        $environ['code'] = $this->environ->generateCode($this->prefix);
         //*create environ
         $environ = authUser()->environs()->create($environ);
         return $environ;
@@ -46,7 +47,7 @@ class EnvironService
     public function ChangeCode($environ)
     {
         //*Generate Code
-        $new_code = array("code" => $this->environ->generateCode('ENV'));
+        $new_code = array("code" => $this->environ->generateCode($this->prefix));
         //*update environ
         $environ = $environ->update($new_code);
         return $environ;

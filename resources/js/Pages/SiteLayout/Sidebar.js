@@ -50,7 +50,10 @@ function Sidebar({ mode, routes }) {
                             >
                                 {menu.items.map(item => {
                                     return (
-                                        <Menu.Item key={`menu-${item.name}`}>
+                                        <Menu.Item
+                                            key={`menu-${item.name}`}
+                                            icon={item.icon}
+                                        >
                                             <InertiaLink
                                                 href={
                                                     `menu-${item.name}` ==

@@ -37,7 +37,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/', 'EnvironController@store')->name('environ.create');
         Route::patch('/{environ}/newcode', 'EnvironController@ChangeCode')->name('environ.change_code');
         Route::patch('/', 'EnvironController@update')->name('environ.edit');
-
     });
 
     Route::group(['prefix' => 'classroom'], function () {
@@ -45,7 +44,12 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/', 'ClassroomController@store')->name('classroom.create');
         Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
         Route::patch('/', 'ClassroomController@update')->name('classroom.edit');
+    });
 
+    Route::group(['prefix' => 'class'], function () {
+        Route::get('/', 'ClassController@index')->name('class.index');
+        Route::post('/join', 'ClassController@join')->name('class.join');
+        Route::post('/leave', 'ClassController@leave')->name('class.join');
     });
 });
 

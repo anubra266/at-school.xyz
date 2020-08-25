@@ -70,6 +70,8 @@ class AppServiceProvider extends ServiceProvider
                 return [
                     'success' => Session::get('success'),
                     'error' => Session::get('error'),
+                    'info' => Session::get('info'),
+                    'warning' => Session::get('warning'),
                 ];
             },
         ]);

@@ -10,6 +10,7 @@ class OrganizationService
     public function __construct(Organization $organization)
     {
         $this->organization = $organization;
+        $this->prefix = 'ORG';
     }
 
     public function index()
@@ -22,7 +23,7 @@ class OrganizationService
     {
         $organization = $request->validated();
         //*generate random code with faker
-        $organization['code'] = $this->organization->generateCode('ORG');
+        $organization['code'] = $this->organization->generateCode($this->prefix);
         //*create organization
         $organization = authUser()->organizations()->create($organization);
         return $organization;
@@ -38,7 +39,7 @@ class OrganizationService
     public function ChangeCode($organization)
     {
         //*Generate Code
-        $new_code = array("code" => $this->organization->generateCode('ORG'));
+        $new_code = array("code" => $this->organization->generateCode($this->prefix));
         //*update organization
         $organization = $organization->update($new_code);
         return $organization;

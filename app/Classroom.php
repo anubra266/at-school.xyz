@@ -16,7 +16,7 @@ class Classroom extends Model
 
     public function students()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'classroom_student', 'classroom_id', 'student_id')->withTimestamps();
     }
 
     public function Environ()
