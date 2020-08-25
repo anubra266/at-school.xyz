@@ -17,7 +17,7 @@ function index({ title, noSidebar, children, routes }) {
     useEffect(() => {
         errors &&
             Object.keys(errors).forEach(err => {
-                message.error(errors[err][0], 3);
+                message.error(errors[err][0], 3); 
             });
     }, [errors]);
     useEffect(() => {

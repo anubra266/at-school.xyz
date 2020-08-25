@@ -1,8 +1,91 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
-/***/ "./node_modules/antd/lib/_util/isNumeric.js":
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/HeartOutlined.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/HeartOutlined.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// This icon file is generated automatically.
+Object.defineProperty(exports, "__esModule", { value: true });
+var HeartOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M923 283.6a260.04 260.04 0 00-56.9-82.8 264.4 264.4 0 00-84-55.5A265.34 265.34 0 00679.7 125c-49.3 0-97.4 13.5-139.2 39-10 6.1-19.5 12.8-28.5 20.1-9-7.3-18.5-14-28.5-20.1-41.8-25.5-89.9-39-139.2-39-35.5 0-69.9 6.8-102.4 20.3-31.4 13-59.7 31.7-84 55.5a258.44 258.44 0 00-56.9 82.8c-13.9 32.3-21 66.6-21 101.9 0 33.3 6.8 68 20.3 103.3 11.3 29.5 27.5 60.1 48.2 91 32.8 48.9 77.9 99.9 133.9 151.6 92.8 85.7 184.7 144.9 188.6 147.3l23.7 15.2c10.5 6.7 24 6.7 34.5 0l23.7-15.2c3.9-2.5 95.7-61.6 188.6-147.3 56-51.7 101.1-102.7 133.9-151.6 20.7-30.9 37-61.5 48.2-91 13.5-35.3 20.3-70 20.3-103.3.1-35.3-7-69.6-20.9-101.9zM512 814.8S156 586.7 156 385.5C156 283.6 240.3 201 344.3 201c73.1 0 136.5 40.8 167.7 100.4C543.2 241.8 606.6 201 679.7 201c104 0 188.3 82.6 188.3 184.5 0 201.2-356 429.3-356 429.3z" } }] }, "name": "heart", "theme": "outlined" };
+exports.default = HeartOutlined;
+
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/HeartOutlined.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@ant-design/icons/HeartOutlined.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _HeartOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/HeartOutlined */ "./node_modules/@ant-design/icons/lib/icons/HeartOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _HeartOutlined;
+  exports.default = _default;
+  module.exports = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/lib/icons/HeartOutlined.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/lib/icons/HeartOutlined.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _HeartOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/HeartOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/HeartOutlined.js"));
+
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var HeartOutlined = function HeartOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _HeartOutlined.default
+  }));
+};
+
+HeartOutlined.displayName = 'HeartOutlined';
+
+var _default = React.forwardRef(HeartOutlined);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/_util/reactNode.js":
 /*!**************************************************!*\
-  !*** ./node_modules/antd/lib/_util/isNumeric.js ***!
+  !*** ./node_modules/antd/lib/_util/reactNode.js ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10,23 +93,72 @@
 "use strict";
 
 
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.replaceElement = replaceElement;
+exports.cloneElement = cloneElement;
+exports.isValidElement = void 0;
 
-var isNumeric = function isNumeric(value) {
-  return !isNaN(parseFloat(value)) && isFinite(value);
-};
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _default = isNumeric;
-exports["default"] = _default;
+var isValidElement = React.isValidElement;
+exports.isValidElement = isValidElement;
+
+function replaceElement(element, replacement, props) {
+  if (!isValidElement(element)) return replacement;
+  return /*#__PURE__*/React.cloneElement(element, typeof props === 'function' ? props() : props);
+}
+
+function cloneElement(element, props) {
+  return replaceElement(element, element, props);
+}
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/layout/Sider.js":
+/***/ "./node_modules/antd/lib/_util/type.js":
+/*!*********************************************!*\
+  !*** ./node_modules/antd/lib/_util/type.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tupleNum = exports.tuple = void 0;
+
+// https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
+var tuple = function tuple() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return args;
+};
+
+exports.tuple = tuple;
+
+var tupleNum = function tupleNum() {
+  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  return args;
+};
+
+exports.tupleNum = tupleNum;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/index.js":
 /*!***********************************************!*\
-  !*** ./node_modules/antd/lib/layout/Sider.js ***!
+  !*** ./node_modules/antd/lib/layout/index.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -34,517 +166,58 @@ exports["default"] = _default;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.SiderContext = void 0;
+exports["default"] = void 0;
 
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+var _layout = _interopRequireDefault(__webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js"));
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+var _Sider = _interopRequireDefault(__webpack_require__(/*! ./Sider */ "./node_modules/antd/lib/layout/Sider.js"));
 
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
-
-var _BarsOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/BarsOutlined */ "./node_modules/@ant-design/icons/BarsOutlined.js"));
-
-var _RightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/RightOutlined */ "./node_modules/@ant-design/icons/RightOutlined.js"));
-
-var _LeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/LeftOutlined */ "./node_modules/@ant-design/icons/LeftOutlined.js"));
-
-var _layout = __webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _isNumeric = _interopRequireDefault(__webpack_require__(/*! ../_util/isNumeric */ "./node_modules/antd/lib/_util/isNumeric.js"));
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var dimensionMaxMap = {
-  xs: '479.98px',
-  sm: '575.98px',
-  md: '767.98px',
-  lg: '991.98px',
-  xl: '1199.98px',
-  xxl: '1599.98px'
-};
-var SiderContext = /*#__PURE__*/React.createContext({});
-exports.SiderContext = SiderContext;
-
-var generateId = function () {
-  var i = 0;
-  return function () {
-    var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    i += 1;
-    return "".concat(prefix).concat(i);
-  };
-}();
-
-var InternalSider = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2["default"])(InternalSider, _React$Component);
-
-  var _super = (0, _createSuper2["default"])(InternalSider);
-
-  function InternalSider(props) {
-    var _this;
-
-    (0, _classCallCheck2["default"])(this, InternalSider);
-    _this = _super.call(this, props);
-
-    _this.responsiveHandler = function (mql) {
-      _this.setState({
-        below: mql.matches
-      });
-
-      var onBreakpoint = _this.props.onBreakpoint;
-
-      if (onBreakpoint) {
-        onBreakpoint(mql.matches);
-      }
-
-      if (_this.state.collapsed !== mql.matches) {
-        _this.setCollapsed(mql.matches, 'responsive');
-      }
-    };
-
-    _this.setCollapsed = function (collapsed, type) {
-      if (!('collapsed' in _this.props)) {
-        _this.setState({
-          collapsed: collapsed
-        });
-      }
-
-      var onCollapse = _this.props.onCollapse;
-
-      if (onCollapse) {
-        onCollapse(collapsed, type);
-      }
-    };
-
-    _this.toggle = function () {
-      var collapsed = !_this.state.collapsed;
-
-      _this.setCollapsed(collapsed, 'clickTrigger');
-    };
-
-    _this.renderSider = function (_ref) {
-      var _classNames;
-
-      var getPrefixCls = _ref.getPrefixCls;
-
-      var _a = _this.props,
-          customizePrefixCls = _a.prefixCls,
-          className = _a.className,
-          theme = _a.theme,
-          collapsible = _a.collapsible,
-          reverseArrow = _a.reverseArrow,
-          trigger = _a.trigger,
-          style = _a.style,
-          width = _a.width,
-          collapsedWidth = _a.collapsedWidth,
-          zeroWidthTriggerStyle = _a.zeroWidthTriggerStyle,
-          children = _a.children,
-          others = __rest(_a, ["prefixCls", "className", "theme", "collapsible", "reverseArrow", "trigger", "style", "width", "collapsedWidth", "zeroWidthTriggerStyle", "children"]);
-
-      var _this$state = _this.state,
-          collapsed = _this$state.collapsed,
-          below = _this$state.below;
-      var prefixCls = getPrefixCls('layout-sider', customizePrefixCls);
-      var divProps = (0, _omit["default"])(others, ['collapsed', 'defaultCollapsed', 'onCollapse', 'breakpoint', 'onBreakpoint', 'siderHook', 'zeroWidthTriggerStyle']);
-      var rawWidth = collapsed ? collapsedWidth : width; // use "px" as fallback unit for width
-
-      var siderWidth = (0, _isNumeric["default"])(rawWidth) ? "".concat(rawWidth, "px") : String(rawWidth); // special trigger when collapsedWidth == 0
-
-      var zeroWidthTrigger = parseFloat(String(collapsedWidth || 0)) === 0 ? /*#__PURE__*/React.createElement("span", {
-        onClick: _this.toggle,
-        className: (0, _classnames["default"])("".concat(prefixCls, "-zero-width-trigger"), "".concat(prefixCls, "-zero-width-trigger-").concat(reverseArrow ? 'right' : 'left')),
-        style: zeroWidthTriggerStyle
-      }, trigger || /*#__PURE__*/React.createElement(_BarsOutlined["default"], null)) : null;
-      var iconObj = {
-        expanded: reverseArrow ? /*#__PURE__*/React.createElement(_RightOutlined["default"], null) : /*#__PURE__*/React.createElement(_LeftOutlined["default"], null),
-        collapsed: reverseArrow ? /*#__PURE__*/React.createElement(_LeftOutlined["default"], null) : /*#__PURE__*/React.createElement(_RightOutlined["default"], null)
-      };
-      var status = collapsed ? 'collapsed' : 'expanded';
-      var defaultTrigger = iconObj[status];
-      var triggerDom = trigger !== null ? zeroWidthTrigger || /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-trigger"),
-        onClick: _this.toggle,
-        style: {
-          width: siderWidth
-        }
-      }, trigger || defaultTrigger) : null;
-      var divStyle = (0, _extends2["default"])((0, _extends2["default"])({}, style), {
-        flex: "0 0 ".concat(siderWidth),
-        maxWidth: siderWidth,
-        minWidth: siderWidth,
-        width: siderWidth
-      });
-      var siderCls = (0, _classnames["default"])(className, prefixCls, "".concat(prefixCls, "-").concat(theme), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-collapsed"), !!collapsed), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-trigger"), collapsible && trigger !== null && !zeroWidthTrigger), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-below"), !!below), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-zero-width"), parseFloat(siderWidth) === 0), _classNames));
-      return /*#__PURE__*/React.createElement("aside", (0, _extends2["default"])({
-        className: siderCls
-      }, divProps, {
-        style: divStyle
-      }), /*#__PURE__*/React.createElement("div", {
-        className: "".concat(prefixCls, "-children")
-      }, children), collapsible || below && zeroWidthTrigger ? triggerDom : null);
-    };
-
-    _this.uniqueId = generateId('ant-sider-');
-    var matchMedia;
-
-    if (typeof window !== 'undefined') {
-      matchMedia = window.matchMedia;
-    }
-
-    if (matchMedia && props.breakpoint && props.breakpoint in dimensionMaxMap) {
-      _this.mql = matchMedia("(max-width: ".concat(dimensionMaxMap[props.breakpoint], ")"));
-    }
-
-    var collapsed;
-
-    if ('collapsed' in props) {
-      collapsed = props.collapsed;
-    } else {
-      collapsed = props.defaultCollapsed;
-    }
-
-    _this.state = {
-      collapsed: collapsed,
-      below: false
-    };
-    return _this;
-  }
-
-  (0, _createClass2["default"])(InternalSider, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.mql) {
-        this.mql.addListener(this.responsiveHandler);
-        this.responsiveHandler(this.mql);
-      }
-
-      if (this.props.siderHook) {
-        this.props.siderHook.addSider(this.uniqueId);
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (this.mql) {
-        this.mql.removeListener(this.responsiveHandler);
-      }
-
-      if (this.props.siderHook) {
-        this.props.siderHook.removeSider(this.uniqueId);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var collapsed = this.state.collapsed;
-      var collapsedWidth = this.props.collapsedWidth;
-      return /*#__PURE__*/React.createElement(SiderContext.Provider, {
-        value: {
-          siderCollapsed: collapsed,
-          collapsedWidth: collapsedWidth
-        }
-      }, /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderSider));
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps) {
-      if ('collapsed' in nextProps) {
-        return {
-          collapsed: nextProps.collapsed
-        };
-      }
-
-      return null;
-    }
-  }]);
-  return InternalSider;
-}(React.Component);
-
-InternalSider.defaultProps = {
-  collapsible: false,
-  defaultCollapsed: false,
-  reverseArrow: false,
-  width: 200,
-  collapsedWidth: 80,
-  style: {},
-  theme: 'dark'
-}; // eslint-disable-next-line react/prefer-stateless-function
-
-var Sider = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(Sider, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(Sider);
-
-  function Sider() {
-    (0, _classCallCheck2["default"])(this, Sider);
-    return _super2.apply(this, arguments);
-  }
-
-  (0, _createClass2["default"])(Sider, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/React.createElement(_layout.LayoutContext.Consumer, null, function (context) {
-        return /*#__PURE__*/React.createElement(InternalSider, (0, _extends2["default"])({}, context, _this2.props));
-      });
-    }
-  }]);
-  return Sider;
-}(React.Component);
-
-exports["default"] = Sider;
+_layout["default"].Sider = _Sider["default"];
+var _default = _layout["default"];
+exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/antd/lib/layout/layout.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/layout/layout.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/js/Pages/SiteLayout/SiteFooter.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages/SiteLayout/SiteFooter.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/menu */ "./node_modules/antd/lib/menu/index.js");
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ant_design_icons_HeartOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons/HeartOutlined */ "./node_modules/@ant-design/icons/HeartOutlined.js");
+/* harmony import */ var _ant_design_icons_HeartOutlined__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_HeartOutlined__WEBPACK_IMPORTED_MODULE_3__);
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = exports.LayoutContext = void 0;
+var Footer = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Footer;
 
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var LayoutContext = /*#__PURE__*/React.createContext({
-  siderHook: {
-    addSider: function addSider() {
-      return null;
-    },
-    removeSider: function removeSider() {
-      return null;
+function SiteFooter() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
+    style: {
+      textAlign: "center"
     }
-  }
-});
-exports.LayoutContext = LayoutContext;
-
-function generator(_ref) {
-  var suffixCls = _ref.suffixCls,
-      tagName = _ref.tagName,
-      displayName = _ref.displayName;
-  return function (BasicComponent) {
-    var _a;
-
-    return _a = /*#__PURE__*/function (_React$Component) {
-      (0, _inherits2["default"])(Adapter, _React$Component);
-
-      var _super = (0, _createSuper2["default"])(Adapter);
-
-      function Adapter() {
-        var _this;
-
-        (0, _classCallCheck2["default"])(this, Adapter);
-        _this = _super.apply(this, arguments);
-
-        _this.renderComponent = function (_ref2) {
-          var getPrefixCls = _ref2.getPrefixCls;
-          var customizePrefixCls = _this.props.prefixCls;
-          var prefixCls = getPrefixCls(suffixCls, customizePrefixCls);
-          return /*#__PURE__*/React.createElement(BasicComponent, (0, _extends2["default"])({
-            prefixCls: prefixCls,
-            tagName: tagName
-          }, _this.props));
-        };
-
-        return _this;
-      }
-
-      (0, _createClass2["default"])(Adapter, [{
-        key: "render",
-        value: function render() {
-          return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-        }
-      }]);
-      return Adapter;
-    }(React.Component), _a.displayName = displayName, _a;
-  };
+  }, "at-School \xA9", new Date().getFullYear(), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/anubra266",
+    target: "_blank"
+  }, "Anubra")));
 }
 
-var Basic = function Basic(props) {
-  var prefixCls = props.prefixCls,
-      className = props.className,
-      children = props.children,
-      tagName = props.tagName,
-      others = __rest(props, ["prefixCls", "className", "children", "tagName"]);
-
-  var classString = (0, _classnames["default"])(prefixCls, className);
-  return /*#__PURE__*/React.createElement(tagName, (0, _extends2["default"])({
-    className: classString
-  }, others), children);
-};
-
-var BasicLayout = /*#__PURE__*/function (_React$Component2) {
-  (0, _inherits2["default"])(BasicLayout, _React$Component2);
-
-  var _super2 = (0, _createSuper2["default"])(BasicLayout);
-
-  function BasicLayout() {
-    var _this2;
-
-    (0, _classCallCheck2["default"])(this, BasicLayout);
-    _this2 = _super2.apply(this, arguments);
-    _this2.state = {
-      siders: []
-    };
-
-    _this2.renderComponent = function (_ref3) {
-      var _classNames;
-
-      var direction = _ref3.direction;
-
-      var _a = _this2.props,
-          prefixCls = _a.prefixCls,
-          className = _a.className,
-          children = _a.children,
-          hasSider = _a.hasSider,
-          Tag = _a.tagName,
-          others = __rest(_a, ["prefixCls", "className", "children", "hasSider", "tagName"]);
-
-      var classString = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-sider"), typeof hasSider === 'boolean' ? hasSider : _this2.state.siders.length > 0), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
-      return /*#__PURE__*/React.createElement(LayoutContext.Provider, {
-        value: {
-          siderHook: _this2.getSiderHook()
-        }
-      }, /*#__PURE__*/React.createElement(Tag, (0, _extends2["default"])({
-        className: classString
-      }, others), children));
-    };
-
-    return _this2;
-  }
-
-  (0, _createClass2["default"])(BasicLayout, [{
-    key: "getSiderHook",
-    value: function getSiderHook() {
-      var _this3 = this;
-
-      return {
-        addSider: function addSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: [].concat((0, _toConsumableArray2["default"])(state.siders), [id])
-            };
-          });
-        },
-        removeSider: function removeSider(id) {
-          _this3.setState(function (state) {
-            return {
-              siders: state.siders.filter(function (currentId) {
-                return currentId !== id;
-              })
-            };
-          });
-        }
-      };
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, this.renderComponent);
-    }
-  }]);
-  return BasicLayout;
-}(React.Component);
-
-var Layout = generator({
-  suffixCls: 'layout',
-  tagName: 'section',
-  displayName: 'Layout'
-})(BasicLayout);
-var Header = generator({
-  suffixCls: 'layout-header',
-  tagName: 'header',
-  displayName: 'Header'
-})(Basic);
-var Footer = generator({
-  suffixCls: 'layout-footer',
-  tagName: 'footer',
-  displayName: 'Footer'
-})(Basic);
-var Content = generator({
-  suffixCls: 'layout-content',
-  tagName: 'main',
-  displayName: 'Content'
-})(Basic);
-Layout.Header = Header;
-Layout.Footer = Footer;
-Layout.Content = Content;
-var _default = Layout;
-exports["default"] = _default;
+/* harmony default export */ __webpack_exports__["default"] = (SiteFooter);
 
 /***/ })
 

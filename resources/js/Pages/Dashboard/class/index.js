@@ -47,7 +47,7 @@ const DClass = ({ classes }) => {
                     onClose={onClose}
                     visible={visible}
                 >
-                    <ClassForm edit={false} {...formProps} />
+                    <ClassForm {...formProps} />
                 </Drawer>
             </Layout.Content>
         </Dashboardlayout>

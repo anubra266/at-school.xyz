@@ -1,112 +1,27 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[31],{
 
-/***/ "./node_modules/antd/lib/divider/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/divider/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var Divider = function Divider(props) {
-  return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, function (_ref) {
-    var _classNames;
-
-    var getPrefixCls = _ref.getPrefixCls,
-        direction = _ref.direction;
-
-    var customizePrefixCls = props.prefixCls,
-        _props$type = props.type,
-        type = _props$type === void 0 ? 'horizontal' : _props$type,
-        _props$orientation = props.orientation,
-        orientation = _props$orientation === void 0 ? 'center' : _props$orientation,
-        className = props.className,
-        children = props.children,
-        dashed = props.dashed,
-        plain = props.plain,
-        restProps = __rest(props, ["prefixCls", "type", "orientation", "className", "children", "dashed", "plain"]);
-
-    var prefixCls = getPrefixCls('divider', customizePrefixCls);
-    var orientationPrefix = orientation.length > 0 ? "-".concat(orientation) : orientation;
-    var hasChildren = !!children;
-    var classString = (0, _classnames["default"])(className, prefixCls, "".concat(prefixCls, "-").concat(type), (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-with-text"), hasChildren), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-with-text").concat(orientationPrefix), hasChildren), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-dashed"), !!dashed), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-plain"), !!plain), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames));
-    return /*#__PURE__*/React.createElement("div", (0, _extends2["default"])({
-      className: classString
-    }, restProps, {
-      role: "separator"
-    }), children && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-inner-text")
-    }, children));
-  });
-};
-
-var _default = Divider;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Dashboard/environ/EnvironForm.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/environ/EnvironForm.js ***!
-  \*************************************************************/
+/***/ "./node_modules/rc-textarea/es/ResizableTextArea.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/rc-textarea/es/ResizableTextArea.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_use__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-use */ "./node_modules/react-use/esm/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/index.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var rc_resize_observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rc-resize-observer */ "./node_modules/rc-resize-observer/es/index.js");
+/* harmony import */ var omit_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _calculateNodeHeight__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./calculateNodeHeight */ "./node_modules/rc-textarea/es/calculateNodeHeight.js");
 
 
 
@@ -114,233 +29,449 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var EnvironForm = function EnvironForm(_ref) {
-  var loading = _ref.loading,
-      onFinish = _ref.onFinish,
-      EnvForm = _ref.EnvForm,
-      edit = _ref.edit;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["usePage"])(),
-      errors = _usePage.errors;
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_4__["Form"].useForm(),
-      _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
-      form = _Form$useForm2[0];
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
 
-  Object(react_use__WEBPACK_IMPORTED_MODULE_2__["useEffectOnce"])(function () {
-    edit && form.setFieldsValue({
-      name: edit.name,
-      id: edit.id
-    });
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"], {
-    ref: EnvForm,
-    name: "normal_login",
-    className: "login-form",
-    onFinish: onFinish,
-    form: form
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "name",
-    rules: [{
-      required: true,
-      message: "Please input Environ / Department Name!"
-    }],
-    validateStatus: errors.name && "error",
-    help: errors.name && errors.name[0]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], {
-    placeholder: "Environ / Department Name"
-  })), edit ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "id",
-    hidden: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "code",
-    rules: [{
-      required: true,
-      message: "Please input Organization Code!"
-    }],
-    validateStatus: errors.code && "error",
-    help: errors.code && errors.code[0]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], {
-    placeholder: "Organization Code"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    type: "primary",
-    htmlType: "submit",
-    className: "login-form-button",
-    loading: loading
-  }, "Save")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (EnvironForm);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Dashboard/environ/EnvironsList.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/environ/EnvironsList.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/table */ "./node_modules/antd/lib/table/index.js");
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/popover */ "./node_modules/antd/lib/popover/index.js");
-/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popover__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/popconfirm */ "./node_modules/antd/lib/popconfirm/index.js");
-/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/space */ "./node_modules/antd/lib/space/index.js");
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_space__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/lib/divider */ "./node_modules/antd/lib/divider/index.js");
-/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_divider__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/lib/typography */ "./node_modules/antd/lib/typography/index.js");
-/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_typography__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _EnvironForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./EnvironForm */ "./resources/js/Pages/Dashboard/environ/EnvironForm.js");
-/* harmony import */ var _Pages_Dashboard_classroom_ClassroomsList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Pages/Dashboard/classroom/ClassroomsList */ "./resources/js/Pages/Dashboard/classroom/ClassroomsList.js");
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
 
+ // eslint-disable-next-line @typescript-eslint/naming-convention
 
+var RESIZE_STATUS;
 
+(function (RESIZE_STATUS) {
+  RESIZE_STATUS[RESIZE_STATUS["NONE"] = 0] = "NONE";
+  RESIZE_STATUS[RESIZE_STATUS["RESIZING"] = 1] = "RESIZING";
+  RESIZE_STATUS[RESIZE_STATUS["RESIZED"] = 2] = "RESIZED";
+})(RESIZE_STATUS || (RESIZE_STATUS = {}));
 
+var ResizableTextArea = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(ResizableTextArea, _React$Component);
 
+  var _super = _createSuper(ResizableTextArea);
 
+  function ResizableTextArea(props) {
+    var _this;
 
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ResizableTextArea);
 
+    _this = _super.call(this, props);
 
-var EnvironsList = function EnvironsList(_ref) {
-  var environs = _ref.environs;
+    _this.saveTextArea = function (textArea) {
+      _this.textArea = textArea;
+    };
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      loading = _useState2[0],
-      setLoading = _useState2[1];
+    _this.handleResize = function (size) {
+      var resizeStatus = _this.state.resizeStatus;
+      var _this$props = _this.props,
+          autoSize = _this$props.autoSize,
+          onResize = _this$props.onResize;
 
-  var EnvForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-
-  var onFinish = function onFinish(data) {
-    setLoading(true);
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("environ.edit"), data).then(function (res) {
-      setLoading(false);
-    });
-  };
-
-  var formProps = {
-    loading: loading,
-    onFinish: onFinish,
-    EnvForm: EnvForm
-  };
-  environs = environs.map(function (environ, key) {
-    environ.key = "env-".concat(key);
-    return environ;
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, environs.length !== 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    scroll: {
-      x: 600
-    },
-    style: {
-      marginTop: "10px"
-    },
-    bordered: true,
-    dataSource: environs,
-    size: "small",
-    pagination: {
-      hideOnSinglePage: true,
-      defaultPageSize: 3,
-      showQuickJumper: true,
-      showSizeChanger: true,
-      showTotal: function showTotal(total, range) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, total, " Environ", total !== 1 && "s");
+      if (resizeStatus !== RESIZE_STATUS.NONE) {
+        return;
       }
-    },
-    expandable: {
-      expandedRowRender: function expandedRowRender(record) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_divider__WEBPACK_IMPORTED_MODULE_6___default.a, {
-          orientation: "left"
-        }, record.classrooms.length, " Classroom", record.classrooms.length !== 1 && "s"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_classroom_ClassroomsList__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          classrooms: record.classrooms
-        }));
-      },
-      rowExpandable: function rowExpandable(record) {
-        return record.classrooms && record.classrooms.length !== 0;
+
+      if (typeof onResize === 'function') {
+        onResize(size);
       }
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-    render: function render(text) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, text);
-    },
-    sorter: function sorter(a, b) {
-      return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    title: "Code",
-    dataIndex: "code",
-    key: "code",
-    render: function render(text, record) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_typography__WEBPACK_IMPORTED_MODULE_8___default.a.Paragraph, {
-        copyable: true
-      }, text);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    width: 200,
-    fixed: "right",
-    title: "Action",
-    key: "action",
-    render: function render(text, record) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_space__WEBPACK_IMPORTED_MODULE_5___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popover__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        placement: "leftTop",
-        title: "Edit ".concat(record.name),
-        content: function content() {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EnvironForm__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({
-            edit: record
-          }, formProps));
-        },
-        trigger: "click"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_7___default.a, null, "Edit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4___default.a, {
-        placement: "leftTop",
-        title: "Generate new ".concat(record.name, " code?"),
-        onConfirm: function onConfirm() {
-          setLoading(true);
-          _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("environ.change_code", {
-            environ: record.id
-          })).then(function () {
-            return setLoading(false);
+
+      if (autoSize) {
+        _this.resizeOnNextFrame();
+      }
+    };
+
+    _this.resizeOnNextFrame = function () {
+      cancelAnimationFrame(_this.nextFrameActionId);
+      _this.nextFrameActionId = requestAnimationFrame(_this.resizeTextarea);
+    };
+
+    _this.resizeTextarea = function () {
+      var autoSize = _this.props.autoSize;
+
+      if (!autoSize || !_this.textArea) {
+        return;
+      }
+
+      var minRows = autoSize.minRows,
+          maxRows = autoSize.maxRows;
+      var textareaStyles = Object(_calculateNodeHeight__WEBPACK_IMPORTED_MODULE_10__["default"])(_this.textArea, false, minRows, maxRows);
+
+      _this.setState({
+        textareaStyles: textareaStyles,
+        resizeStatus: RESIZE_STATUS.RESIZING
+      }, function () {
+        cancelAnimationFrame(_this.resizeFrameId);
+        _this.resizeFrameId = requestAnimationFrame(function () {
+          _this.setState({
+            resizeStatus: RESIZE_STATUS.RESIZED
+          }, function () {
+            _this.resizeFrameId = requestAnimationFrame(function () {
+              _this.setState({
+                resizeStatus: RESIZE_STATUS.NONE
+              });
+
+              _this.fixFirefoxAutoScroll();
+            });
           });
-        },
-        okText: "Generate",
-        trigger: "click"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        loading: loading
-      }, "Change Code")));
-    }
-  })));
-};
+        });
+      });
+    };
 
-/* harmony default export */ __webpack_exports__["default"] = (EnvironsList);
+    _this.renderTextArea = function () {
+      var _this$props2 = _this.props,
+          _this$props2$prefixCl = _this$props2.prefixCls,
+          prefixCls = _this$props2$prefixCl === void 0 ? 'rc-textarea' : _this$props2$prefixCl,
+          autoSize = _this$props2.autoSize,
+          onResize = _this$props2.onResize,
+          className = _this$props2.className,
+          disabled = _this$props2.disabled;
+      var _this$state = _this.state,
+          textareaStyles = _this$state.textareaStyles,
+          resizeStatus = _this$state.resizeStatus;
+      var otherProps = Object(omit_js__WEBPACK_IMPORTED_MODULE_8__["default"])(_this.props, ['prefixCls', 'onPressEnter', 'autoSize', 'defaultValue', 'onResize']);
+      var cls = classnames__WEBPACK_IMPORTED_MODULE_9___default()(prefixCls, className, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, "".concat(prefixCls, "-disabled"), disabled)); // Fix https://github.com/ant-design/ant-design/issues/6776
+      // Make sure it could be reset when using form.getFieldDecorator
+
+      if ('value' in otherProps) {
+        otherProps.value = otherProps.value || '';
+      }
+
+      var style = _objectSpread(_objectSpread(_objectSpread({}, _this.props.style), textareaStyles), resizeStatus === RESIZE_STATUS.RESIZING ? // React will warning when mix `overflow` & `overflowY`.
+      // We need to define this separately.
+      {
+        overflowX: 'hidden',
+        overflowY: 'hidden'
+      } : null);
+
+      return react__WEBPACK_IMPORTED_MODULE_6__["createElement"](rc_resize_observer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        onResize: _this.handleResize,
+        disabled: !(autoSize || onResize)
+      }, react__WEBPACK_IMPORTED_MODULE_6__["createElement"]("textarea", Object.assign({}, otherProps, {
+        className: cls,
+        style: style,
+        ref: _this.saveTextArea
+      })));
+    };
+
+    _this.state = {
+      textareaStyles: {},
+      resizeStatus: RESIZE_STATUS.NONE
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ResizableTextArea, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.resizeTextarea();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      // Re-render with the new content then recalculate the height as required.
+      if (prevProps.value !== this.props.value) {
+        this.resizeTextarea();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      cancelAnimationFrame(this.nextFrameActionId);
+      cancelAnimationFrame(this.resizeFrameId);
+    } // https://github.com/ant-design/ant-design/issues/21870
+
+  }, {
+    key: "fixFirefoxAutoScroll",
+    value: function fixFirefoxAutoScroll() {
+      try {
+        if (document.activeElement === this.textArea) {
+          var currentStart = this.textArea.selectionStart;
+          var currentEnd = this.textArea.selectionEnd;
+          this.textArea.setSelectionRange(currentStart, currentEnd);
+        }
+      } catch (e) {// Fix error in Chrome:
+        // Failed to read the 'selectionStart' property from 'HTMLInputElement'
+        // http://stackoverflow.com/q/21177489/3040605
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return this.renderTextArea();
+    }
+  }]);
+
+  return ResizableTextArea;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ResizableTextArea);
+
+/***/ }),
+
+/***/ "./node_modules/rc-textarea/es/calculateNodeHeight.js":
+/*!************************************************************!*\
+  !*** ./node_modules/rc-textarea/es/calculateNodeHeight.js ***!
+  \************************************************************/
+/*! exports provided: calculateNodeStyling, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "calculateNodeStyling", function() { return calculateNodeStyling; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return calculateNodeHeight; });
+// Thanks to https://github.com/andreypopp/react-textarea-autosize/
+
+/**
+ * calculateNodeHeight(uiTextNode, useCache = false)
+ */
+var HIDDEN_TEXTAREA_STYLE = "\n  min-height:0 !important;\n  max-height:none !important;\n  height:0 !important;\n  visibility:hidden !important;\n  overflow:hidden !important;\n  position:absolute !important;\n  z-index:-1000 !important;\n  top:0 !important;\n  right:0 !important\n";
+var SIZING_STYLE = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'font-variant', 'text-rendering', 'text-transform', 'width', 'text-indent', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+var computedStyleCache = {};
+var hiddenTextarea;
+function calculateNodeStyling(node) {
+  var useCache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var nodeRef = node.getAttribute('id') || node.getAttribute('data-reactid') || node.getAttribute('name');
+
+  if (useCache && computedStyleCache[nodeRef]) {
+    return computedStyleCache[nodeRef];
+  }
+
+  var style = window.getComputedStyle(node);
+  var boxSizing = style.getPropertyValue('box-sizing') || style.getPropertyValue('-moz-box-sizing') || style.getPropertyValue('-webkit-box-sizing');
+  var paddingSize = parseFloat(style.getPropertyValue('padding-bottom')) + parseFloat(style.getPropertyValue('padding-top'));
+  var borderSize = parseFloat(style.getPropertyValue('border-bottom-width')) + parseFloat(style.getPropertyValue('border-top-width'));
+  var sizingStyle = SIZING_STYLE.map(function (name) {
+    return "".concat(name, ":").concat(style.getPropertyValue(name));
+  }).join(';');
+  var nodeInfo = {
+    sizingStyle: sizingStyle,
+    paddingSize: paddingSize,
+    borderSize: borderSize,
+    boxSizing: boxSizing
+  };
+
+  if (useCache && nodeRef) {
+    computedStyleCache[nodeRef] = nodeInfo;
+  }
+
+  return nodeInfo;
+}
+function calculateNodeHeight(uiTextNode) {
+  var useCache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var minRows = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var maxRows = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+
+  if (!hiddenTextarea) {
+    hiddenTextarea = document.createElement('textarea');
+    hiddenTextarea.setAttribute('tab-index', '-1');
+    hiddenTextarea.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(hiddenTextarea);
+  } // Fix wrap="off" issue
+  // https://github.com/ant-design/ant-design/issues/6577
+
+
+  if (uiTextNode.getAttribute('wrap')) {
+    hiddenTextarea.setAttribute('wrap', uiTextNode.getAttribute('wrap'));
+  } else {
+    hiddenTextarea.removeAttribute('wrap');
+  } // Copy all CSS properties that have an impact on the height of the content in
+  // the textbox
+
+
+  var _calculateNodeStyling = calculateNodeStyling(uiTextNode, useCache),
+      paddingSize = _calculateNodeStyling.paddingSize,
+      borderSize = _calculateNodeStyling.borderSize,
+      boxSizing = _calculateNodeStyling.boxSizing,
+      sizingStyle = _calculateNodeStyling.sizingStyle; // Need to have the overflow attribute to hide the scrollbar otherwise
+  // text-lines will not calculated properly as the shadow will technically be
+  // narrower for content
+
+
+  hiddenTextarea.setAttribute('style', "".concat(sizingStyle, ";").concat(HIDDEN_TEXTAREA_STYLE));
+  hiddenTextarea.value = uiTextNode.value || uiTextNode.placeholder || '';
+  var minHeight = Number.MIN_SAFE_INTEGER;
+  var maxHeight = Number.MAX_SAFE_INTEGER;
+  var height = hiddenTextarea.scrollHeight;
+  var overflowY;
+
+  if (boxSizing === 'border-box') {
+    // border-box: add border, since height = content + padding + border
+    height += borderSize;
+  } else if (boxSizing === 'content-box') {
+    // remove padding, since height = content
+    height -= paddingSize;
+  }
+
+  if (minRows !== null || maxRows !== null) {
+    // measure height of a textarea with a single row
+    hiddenTextarea.value = ' ';
+    var singleRowHeight = hiddenTextarea.scrollHeight - paddingSize;
+
+    if (minRows !== null) {
+      minHeight = singleRowHeight * minRows;
+
+      if (boxSizing === 'border-box') {
+        minHeight = minHeight + paddingSize + borderSize;
+      }
+
+      height = Math.max(minHeight, height);
+    }
+
+    if (maxRows !== null) {
+      maxHeight = singleRowHeight * maxRows;
+
+      if (boxSizing === 'border-box') {
+        maxHeight = maxHeight + paddingSize + borderSize;
+      }
+
+      overflowY = height > maxHeight ? '' : 'hidden';
+      height = Math.min(maxHeight, height);
+    }
+  }
+
+  return {
+    height: height,
+    minHeight: minHeight,
+    maxHeight: maxHeight,
+    overflowY: overflowY
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/rc-textarea/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/rc-textarea/es/index.js ***!
+  \**********************************************/
+/*! exports provided: ResizableTextArea, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ResizableTextArea */ "./node_modules/rc-textarea/es/ResizableTextArea.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ResizableTextArea", function() { return _ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+var TextArea = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_2__["default"])(TextArea, _React$Component);
+
+  var _super = _createSuper(TextArea);
+
+  function TextArea(props) {
+    var _this;
+
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TextArea);
+
+    _this = _super.call(this, props);
+
+    _this.focus = function () {
+      _this.resizableTextArea.textArea.focus();
+    };
+
+    _this.saveTextArea = function (resizableTextArea) {
+      _this.resizableTextArea = resizableTextArea;
+    };
+
+    _this.handleChange = function (e) {
+      var onChange = _this.props.onChange;
+
+      _this.setValue(e.target.value, function () {
+        _this.resizableTextArea.resizeTextarea();
+      });
+
+      if (onChange) {
+        onChange(e);
+      }
+    };
+
+    _this.handleKeyDown = function (e) {
+      var _this$props = _this.props,
+          onPressEnter = _this$props.onPressEnter,
+          onKeyDown = _this$props.onKeyDown;
+
+      if (e.keyCode === 13 && onPressEnter) {
+        onPressEnter(e);
+      }
+
+      if (onKeyDown) {
+        onKeyDown(e);
+      }
+    };
+
+    var value = typeof props.value === 'undefined' || props.value === null ? props.defaultValue : props.value;
+    _this.state = {
+      value: value
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(TextArea, [{
+    key: "setValue",
+    value: function setValue(value, callback) {
+      if (!('value' in this.props)) {
+        this.setState({
+          value: value
+        }, callback);
+      }
+    }
+  }, {
+    key: "blur",
+    value: function blur() {
+      this.resizableTextArea.textArea.blur();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5__["createElement"](_ResizableTextArea__WEBPACK_IMPORTED_MODULE_6__["default"], Object.assign({}, this.props, {
+        value: this.state.value,
+        onKeyDown: this.handleKeyDown,
+        onChange: this.handleChange,
+        ref: this.saveTextArea
+      }));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps) {
+      if ('value' in nextProps) {
+        return {
+          value: nextProps.value
+        };
+      }
+
+      return null;
+    }
+  }]);
+
+  return TextArea;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (TextArea);
 
 /***/ })
 

@@ -1,1013 +1,279 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/js/Helpers/PageLoad.js":
+/*!******************************************!*\
+  !*** ./resources/js/Helpers/PageLoad.js ***!
+  \******************************************/
+/*! exports provided: loadPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var ArrowLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 000 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z" } }] }, "name": "arrow-left", "theme": "outlined" };
-exports.default = ArrowLeftOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var ArrowRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" } }] }, "name": "arrow-right", "theme": "outlined" };
-exports.default = ArrowRightOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/ArrowLeftOutlined.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/ArrowLeftOutlined.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _ArrowLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/ArrowLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _ArrowLeftOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/ArrowRightOutlined.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/ArrowRightOutlined.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _ArrowRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/ArrowRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _ArrowRightOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/ArrowLeftOutlined.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _ArrowLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/ArrowLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowLeftOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var ArrowLeftOutlined = function ArrowLeftOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _ArrowLeftOutlined.default
-  }));
-};
-
-ArrowLeftOutlined.displayName = 'ArrowLeftOutlined';
-
-var _default = React.forwardRef(ArrowLeftOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/ArrowRightOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _ArrowRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/ArrowRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/ArrowRightOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var ArrowRightOutlined = function ArrowRightOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _ArrowRightOutlined.default
-  }));
-};
-
-ArrowRightOutlined.displayName = 'ArrowRightOutlined';
-
-var _default = React.forwardRef(ArrowRightOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/avatar/avatar.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/lib/avatar/avatar.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
-
-var _ref = __webpack_require__(/*! ../_util/ref */ "./node_modules/antd/lib/_util/ref.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var InternalAvatar = function InternalAvatar(props, ref) {
-  var _classNames, _classNames2;
-
-  var _React$useState = React.useState(1),
-      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
-      scale = _React$useState2[0],
-      setScale = _React$useState2[1];
-
-  var _React$useState3 = React.useState(false),
-      _React$useState4 = (0, _slicedToArray2["default"])(_React$useState3, 2),
-      mounted = _React$useState4[0],
-      setMounted = _React$useState4[1];
-
-  var _React$useState5 = React.useState(true),
-      _React$useState6 = (0, _slicedToArray2["default"])(_React$useState5, 2),
-      isImgExist = _React$useState6[0],
-      setIsImgExist = _React$useState6[1];
-
-  var avatarNodeRef = React.useRef();
-  var avatarChildrenRef = React.useRef();
-  var avatarNodeMergeRef = (0, _ref.composeRef)(ref, avatarNodeRef);
-  var lastChildrenWidth;
-  var lastNodeWidth;
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls;
-
-  var setScaleParam = function setScaleParam() {
-    if (!avatarChildrenRef.current || !avatarNodeRef.current) {
-      return;
-    }
-
-    var childrenWidth = avatarChildrenRef.current.offsetWidth; // offsetWidth avoid affecting be transform scale
-
-    var nodeWidth = avatarNodeRef.current.offsetWidth;
-    var _props$gap = props.gap,
-        gap = _props$gap === void 0 ? 4 : _props$gap; // denominator is 0 is no meaning
-
-    if (childrenWidth !== 0 && nodeWidth !== 0 && (lastChildrenWidth !== childrenWidth || lastNodeWidth !== nodeWidth)) {
-      lastChildrenWidth = childrenWidth;
-      lastNodeWidth = nodeWidth;
-    }
-
-    if (gap * 2 < nodeWidth) {
-      setScale(nodeWidth - gap * 2 < childrenWidth ? (nodeWidth - gap * 2) / childrenWidth : 1);
-    }
-  };
-
-  React.useEffect(function () {
-    setMounted(true);
-  }, []);
-  React.useEffect(function () {
-    setIsImgExist(true);
-    setScale(1);
-  }, [props.src]);
-  React.useEffect(function () {
-    setScaleParam();
-  }, [props.children, props.gap, props.size]);
-  React.useEffect(function () {
-    if (props.children) {
-      setScaleParam();
-    }
-  }, [isImgExist]);
-
-  var handleImgLoadError = function handleImgLoadError() {
-    var onError = props.onError;
-    var errorFlag = onError ? onError() : undefined;
-
-    if (errorFlag !== false) {
-      setIsImgExist(false);
-    }
-  };
-
-  var customizePrefixCls = props.prefixCls,
-      shape = props.shape,
-      size = props.size,
-      src = props.src,
-      srcSet = props.srcSet,
-      icon = props.icon,
-      className = props.className,
-      alt = props.alt,
-      draggable = props.draggable,
-      children = props.children,
-      others = __rest(props, ["prefixCls", "shape", "size", "src", "srcSet", "icon", "className", "alt", "draggable", "children"]);
-
-  (0, _devWarning["default"])(!(typeof icon === 'string' && icon.length > 2), 'Avatar', "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(icon, "` at https://ant.design/components/icon"));
-  var prefixCls = getPrefixCls('avatar', customizePrefixCls);
-  var sizeCls = (0, _classnames["default"])((_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-lg"), size === 'large'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-sm"), size === 'small'), _classNames));
-  var classString = (0, _classnames["default"])(prefixCls, className, sizeCls, (_classNames2 = {}, (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-").concat(shape), shape), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-image"), src && isImgExist), (0, _defineProperty2["default"])(_classNames2, "".concat(prefixCls, "-icon"), icon), _classNames2));
-  var sizeStyle = typeof size === 'number' ? {
-    width: size,
-    height: size,
-    lineHeight: "".concat(size, "px"),
-    fontSize: icon ? size / 2 : 18
-  } : {};
-  var childrenToRender;
-
-  if (src && isImgExist) {
-    childrenToRender = /*#__PURE__*/React.createElement("img", {
-      src: src,
-      draggable: draggable,
-      srcSet: srcSet,
-      onError: handleImgLoadError,
-      alt: alt
-    });
-  } else if (icon) {
-    childrenToRender = icon;
-  } else if (mounted || scale !== 1) {
-    var transformString = "scale(".concat(scale, ") translateX(-50%)");
-    var childrenStyle = {
-      msTransform: transformString,
-      WebkitTransform: transformString,
-      transform: transformString
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadPage", function() { return loadPage; });
+/**
+ * Starts page loader on every page navigation
+ * @param {object} pageLoader the progress bar at top of the page
+ */
+function loadPage(pageLoader) {
+  // Select all links
+  var allLinks = document.links; // Bind the event handler to each link individually
+
+  for (var i = 0, n = allLinks.length; i < n; i++) {
+    allLinks[i].onclick = function () {
+      pageLoader && pageLoader.current.continuousStart();
     };
-    var sizeChildrenStyle = typeof size === 'number' ? {
-      lineHeight: "".concat(size, "px")
-    } : {};
-    childrenToRender = /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-string"),
-      ref: function ref(node) {
-        avatarChildrenRef.current = node;
-      },
-      style: (0, _extends2["default"])((0, _extends2["default"])({}, sizeChildrenStyle), childrenStyle)
-    }, children);
-  } else {
-    childrenToRender = /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-string"),
+  }
+}
+
+/***/ }),
+
+/***/ "./resources/js/Helpers/Translate.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Helpers/Translate.js ***!
+  \*******************************************/
+/*! exports provided: trans_roles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trans_roles", function() { return trans_roles; });
+/**
+ * Takes raw role and returns User Friendly Text
+ * @param {string} role the raw role to be translated
+ */
+function trans_roles(role) {
+  var activity;
+
+  switch (role) {
+    case "practicist":
+      role = "Personal Practice";
+      activity = "Start Practicing";
+      break;
+
+    case "student":
+      role = "Student";
+      activity = "Join a Classroom";
+      break;
+
+    case "educator":
+      role = "Educator";
+      activity = "Create Classroom";
+      break;
+
+    case "department_head":
+      role = "Educator";
+      activity = "Create Environ / Department";
+      break;
+
+    case "organization_admin":
+      role = "Organization Admin";
+      activity = "Register Organization";
+      break;
+
+    default:
+      break;
+  }
+
+  return [role, activity];
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SiteLayout/Navbar.js":
+/*!*************************************************!*\
+  !*** ./resources/js/Pages/SiteLayout/Navbar.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_use_lib_useEffectOnce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-use/lib/useEffectOnce */ "./node_modules/react-use/lib/useEffectOnce.js");
+/* harmony import */ var react_use_lib_useEffectOnce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_use_lib_useEffectOnce__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_top_loading_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-top-loading-bar */ "./node_modules/react-top-loading-bar/dist/index.modern.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_row__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/row */ "./node_modules/antd/lib/row/index.js");
+/* harmony import */ var antd_lib_row__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_row__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/col */ "./node_modules/antd/lib/col/index.js");
+/* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/lib/menu */ "./node_modules/antd/lib/menu/index.js");
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/page-header */ "./node_modules/antd/lib/page-header/index.js");
+/* harmony import */ var antd_lib_page_header__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var antd_lib_dropdown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/lib/dropdown */ "./node_modules/antd/lib/dropdown/index.js");
+/* harmony import */ var antd_lib_dropdown__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_dropdown__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var antd_lib_tag__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/tag */ "./node_modules/antd/lib/tag/index.js");
+/* harmony import */ var antd_lib_tag__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tag__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/drawer */ "./node_modules/antd/lib/drawer/index.js");
+/* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _ant_design_icons_EllipsisOutlined__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons/EllipsisOutlined */ "./node_modules/@ant-design/icons/EllipsisOutlined.js");
+/* harmony import */ var _ant_design_icons_EllipsisOutlined__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_EllipsisOutlined__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons/MenuOutlined */ "./node_modules/@ant-design/icons/MenuOutlined.js");
+/* harmony import */ var _ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _Helpers_PageLoad__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/Helpers/PageLoad */ "./resources/js/Helpers/PageLoad.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _Helpers_Translate_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @/Helpers/Translate.js */ "./resources/js/Helpers/Translate.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a.Header;
+
+function Navbar(_ref) {
+  var pageLoader = _ref.pageLoader;
+
+  // TODO Logout
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_15__["usePage"])(),
+      auth = _usePage.auth;
+
+  var trans_role = Object(_Helpers_Translate_js__WEBPACK_IMPORTED_MODULE_16__["trans_roles"])(auth.user.initial_role);
+  Object(_Helpers_PageLoad__WEBPACK_IMPORTED_MODULE_14__["loadPage"])(pageLoader);
+  react_use_lib_useEffectOnce__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+    //*complete pageLoader loading
+    pageLoader && pageLoader.current.complete();
+  });
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      visible = _useState2[0],
+      setVisible = _useState2[1];
+
+  var showDrawer = function showDrawer() {
+    setVisible(true);
+  };
+
+  var onClose = function onClose() {
+    setVisible(false);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_top_loading_bar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    color: "rgb(24, 144, 255)",
+    ref: pageLoader,
+    waitingTime: 1000,
+    height: 2
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, {
+    className: "site-layout-background",
+    style: {
+      padding: 0
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_page_header__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    title: "at-School",
+    className: "site-page-header",
+    ghost: false,
+    subTitle: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_4___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      xs: 0,
+      md: 12
+    }, "".concat(auth.user.first_name, " ").concat(auth.user.last_name))),
+    tags: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_4___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      xs: 0,
+      md: 12
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_tag__WEBPACK_IMPORTED_MODULE_10___default.a, {
+      color: "blue"
+    }, Object(_Helpers_Translate_js__WEBPACK_IMPORTED_MODULE_16__["trans_roles"])(auth.user.initial_role)[0]))),
+    extra: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      key: 1
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: showDrawer,
+      className: "navbar-toggler",
       style: {
-        opacity: 0
+        color: "white"
       },
-      ref: function ref(node) {
-        avatarChildrenRef.current = node;
-      }
-    }, children);
-  } // The event is triggered twice from bubbling up the DOM tree.
-  // see https://codesandbox.io/s/kind-snow-9lidz
-
-
-  delete others.onError;
-  delete others.gap;
-  return /*#__PURE__*/React.createElement("span", (0, _extends2["default"])({}, others, {
-    style: (0, _extends2["default"])((0, _extends2["default"])({}, sizeStyle), others.style),
-    className: classString,
-    ref: avatarNodeMergeRef
-  }), childrenToRender);
-};
-
-var Avatar = /*#__PURE__*/React.forwardRef(InternalAvatar);
-Avatar.displayName = 'Avatar';
-Avatar.defaultProps = {
-  shape: 'circle',
-  size: 'default'
-};
-var _default = Avatar;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/avatar/group.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/avatar/group.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _avatar = _interopRequireDefault(__webpack_require__(/*! ./avatar */ "./node_modules/antd/lib/avatar/avatar.js"));
-
-var _popover = _interopRequireDefault(__webpack_require__(/*! ../popover */ "./node_modules/antd/lib/popover/index.js"));
-
-var Group = function Group(props) {
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls,
-      direction = _React$useContext.direction;
-
-  var customizePrefixCls = props.prefixCls,
-      _props$className = props.className,
-      className = _props$className === void 0 ? '' : _props$className,
-      maxCount = props.maxCount,
-      maxStyle = props.maxStyle;
-  var prefixCls = getPrefixCls('avatar-group', customizePrefixCls);
-  var cls = (0, _classnames["default"])(prefixCls, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-rtl"), direction === 'rtl'), className);
-  var children = props.children,
-      _props$maxPopoverPlac = props.maxPopoverPlacement,
-      maxPopoverPlacement = _props$maxPopoverPlac === void 0 ? 'top' : _props$maxPopoverPlac;
-  var childrenWithProps = (0, _toArray["default"])(children).map(function (child, index) {
-    return (0, _reactNode.cloneElement)(child, {
-      key: "avatar-key-".concat(index)
-    });
-  });
-  var numOfChildren = childrenWithProps.length;
-
-  if (maxCount && maxCount < numOfChildren) {
-    var childrenShow = childrenWithProps.slice(0, maxCount);
-    var childrenHidden = childrenWithProps.slice(maxCount, numOfChildren);
-    childrenShow.push( /*#__PURE__*/React.createElement(_popover["default"], {
-      key: "avatar-popover-key",
-      content: childrenHidden,
-      trigger: "hover",
-      placement: maxPopoverPlacement,
-      overlayClassName: "".concat(prefixCls, "-popover")
-    }, /*#__PURE__*/React.createElement(_avatar["default"], {
-      style: maxStyle
-    }, "+".concat(numOfChildren - maxCount))));
-    return /*#__PURE__*/React.createElement("div", {
-      className: cls,
-      style: props.style
-    }, childrenShow);
-  }
-
-  return /*#__PURE__*/React.createElement("div", {
-    className: cls,
-    style: props.style
-  }, children);
-};
-
-var _default = Group;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/avatar/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/lib/avatar/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Group", {
-  enumerable: true,
-  get: function get() {
-    return _group["default"];
-  }
-});
-exports["default"] = void 0;
-
-var _avatar = _interopRequireDefault(__webpack_require__(/*! ./avatar */ "./node_modules/antd/lib/avatar/avatar.js"));
-
-var _group = _interopRequireDefault(__webpack_require__(/*! ./group */ "./node_modules/antd/lib/avatar/group.js"));
-
-var Avatar = _avatar["default"];
-Avatar.Group = _group["default"];
-var _default = Avatar;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/breadcrumb/Breadcrumb.js":
-/*!********************************************************!*\
-  !*** ./node_modules/antd/lib/breadcrumb/Breadcrumb.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _toArray = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/Children/toArray */ "./node_modules/rc-util/lib/Children/toArray.js"));
-
-var _BreadcrumbItem = _interopRequireDefault(__webpack_require__(/*! ./BreadcrumbItem */ "./node_modules/antd/lib/breadcrumb/BreadcrumbItem.js"));
-
-var _BreadcrumbSeparator = _interopRequireDefault(__webpack_require__(/*! ./BreadcrumbSeparator */ "./node_modules/antd/lib/breadcrumb/BreadcrumbSeparator.js"));
-
-var _menu = _interopRequireDefault(__webpack_require__(/*! ../menu */ "./node_modules/antd/lib/menu/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _devWarning = _interopRequireDefault(__webpack_require__(/*! ../_util/devWarning */ "./node_modules/antd/lib/_util/devWarning.js"));
-
-var _reactNode = __webpack_require__(/*! ../_util/reactNode */ "./node_modules/antd/lib/_util/reactNode.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-function getBreadcrumbName(route, params) {
-  if (!route.breadcrumbName) {
-    return null;
-  }
-
-  var paramsKeys = Object.keys(params).join('|');
-  var name = route.breadcrumbName.replace(new RegExp(":(".concat(paramsKeys, ")"), 'g'), function (replacement, key) {
-    return params[key] || replacement;
-  });
-  return name;
+      type: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_MenuOutlined__WEBPACK_IMPORTED_MODULE_13___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      title: "Basic Drawer",
+      placement: "right",
+      closable: false,
+      onClose: onClose,
+      visible: visible
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      key: "3"
+    }, "Operation")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      key: "2"
+    }, "Operation")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      key: "1",
+      type: "primary"
+    }, "Primary")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DropdownMenu, {
+      key: "more"
+    }))))],
+    avatar: {
+      src: __webpack_require__(/*! @/assets/general/images/at-school.png */ "./resources/js/assets/general/images/at-school.png")
+    }
+  })));
 }
 
-function defaultItemRender(route, params, routes, paths) {
-  var isLastItem = routes.indexOf(route) === routes.length - 1;
-  var name = getBreadcrumbName(route, params);
-  return isLastItem ? /*#__PURE__*/React.createElement("span", null, name) : /*#__PURE__*/React.createElement("a", {
-    href: "#/".concat(paths.join('/'))
-  }, name);
-}
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+var menu = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_6___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_6___default.a.Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  target: "_blank",
+  rel: "noopener noreferrer",
+  href: "http://www.alipay.com/"
+}, "1st menu item")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_6___default.a.Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  target: "_blank",
+  rel: "noopener noreferrer",
+  href: "http://www.taobao.com/"
+}, "2nd menu item")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_menu__WEBPACK_IMPORTED_MODULE_6___default.a.Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  target: "_blank",
+  rel: "noopener noreferrer",
+  href: "http://www.tmall.com/"
+}, "3rd menu item")));
 
-var getPath = function getPath(path, params) {
-  path = (path || '').replace(/^\//, '');
-  Object.keys(params).forEach(function (key) {
-    path = path.replace(":".concat(key), params[key]);
-  });
-  return path;
-};
-
-var addChildPath = function addChildPath(paths) {
-  var childPath = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  var params = arguments.length > 2 ? arguments[2] : undefined;
-  var originalPaths = (0, _toConsumableArray2["default"])(paths);
-  var path = getPath(childPath, params);
-
-  if (path) {
-    originalPaths.push(path);
-  }
-
-  return originalPaths;
-};
-
-var Breadcrumb = function Breadcrumb(_a) {
-  var customizePrefixCls = _a.prefixCls,
-      _a$separator = _a.separator,
-      separator = _a$separator === void 0 ? '/' : _a$separator,
-      style = _a.style,
-      className = _a.className,
-      routes = _a.routes,
-      children = _a.children,
-      _a$itemRender = _a.itemRender,
-      itemRender = _a$itemRender === void 0 ? defaultItemRender : _a$itemRender,
-      _a$params = _a.params,
-      params = _a$params === void 0 ? {} : _a$params,
-      restProps = __rest(_a, ["prefixCls", "separator", "style", "className", "routes", "children", "itemRender", "params"]);
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls,
-      direction = _React$useContext.direction;
-
-  var crumbs;
-  var prefixCls = getPrefixCls('breadcrumb', customizePrefixCls);
-
-  if (routes && routes.length > 0) {
-    // generated by route
-    var paths = [];
-    crumbs = routes.map(function (route) {
-      var path = getPath(route.path, params);
-
-      if (path) {
-        paths.push(path);
-      } // generated overlay by route.children
-
-
-      var overlay;
-
-      if (route.children && route.children.length) {
-        overlay = /*#__PURE__*/React.createElement(_menu["default"], null, route.children.map(function (child) {
-          return /*#__PURE__*/React.createElement(_menu["default"].Item, {
-            key: child.path || child.breadcrumbName
-          }, itemRender(child, params, routes, addChildPath(paths, child.path, params)));
-        }));
-      }
-
-      return /*#__PURE__*/React.createElement(_BreadcrumbItem["default"], {
-        overlay: overlay,
-        separator: separator,
-        key: path || route.breadcrumbName
-      }, itemRender(route, params, routes, paths));
-    });
-  } else if (children) {
-    crumbs = (0, _toArray["default"])(children).map(function (element, index) {
-      if (!element) {
-        return element;
-      }
-
-      (0, _devWarning["default"])(element.type && (element.type.__ANT_BREADCRUMB_ITEM === true || element.type.__ANT_BREADCRUMB_SEPARATOR === true), 'Breadcrumb', "Only accepts Breadcrumb.Item and Breadcrumb.Separator as it's children");
-      return (0, _reactNode.cloneElement)(element, {
-        separator: separator,
-        key: index
-      });
-    });
-  }
-
-  var breadcrumbClassName = (0, _classnames["default"])(className, prefixCls, (0, _defineProperty2["default"])({}, "".concat(prefixCls, "-rtl"), direction === 'rtl'));
-  return /*#__PURE__*/React.createElement("div", (0, _extends2["default"])({
-    className: breadcrumbClassName,
-    style: style
-  }, restProps), crumbs);
-};
-
-Breadcrumb.Item = _BreadcrumbItem["default"];
-Breadcrumb.Separator = _BreadcrumbSeparator["default"];
-var _default = Breadcrumb;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/breadcrumb/BreadcrumbItem.js":
-/*!************************************************************!*\
-  !*** ./node_modules/antd/lib/breadcrumb/BreadcrumbItem.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DownOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/DownOutlined */ "./node_modules/@ant-design/icons/DownOutlined.js"));
-
-var _dropdown = _interopRequireDefault(__webpack_require__(/*! ../dropdown/dropdown */ "./node_modules/antd/lib/dropdown/dropdown.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var BreadcrumbItem = function BreadcrumbItem(_a) {
-  var customizePrefixCls = _a.prefixCls,
-      _a$separator = _a.separator,
-      separator = _a$separator === void 0 ? '/' : _a$separator,
-      children = _a.children,
-      overlay = _a.overlay,
-      dropdownProps = _a.dropdownProps,
-      restProps = __rest(_a, ["prefixCls", "separator", "children", "overlay", "dropdownProps"]);
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls;
-
-  var prefixCls = getPrefixCls('breadcrumb', customizePrefixCls);
-  /**
-   * if overlay is have
-   * Wrap a DropDown
-   */
-
-  var renderBreadcrumbNode = function renderBreadcrumbNode(breadcrumbItem) {
-    if (overlay) {
-      return /*#__PURE__*/React.createElement(_dropdown["default"], (0, _extends2["default"])({
-        overlay: overlay,
-        placement: "bottomCenter"
-      }, dropdownProps), /*#__PURE__*/React.createElement("span", {
-        className: "".concat(prefixCls, "-overlay-link")
-      }, breadcrumbItem, /*#__PURE__*/React.createElement(_DownOutlined["default"], null)));
+var DropdownMenu = function DropdownMenu() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_dropdown__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    key: "more",
+    overlay: menu
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    style: {
+      border: "none",
+      padding: 0
     }
-
-    return breadcrumbItem;
-  };
-
-  var link;
-
-  if ('href' in restProps) {
-    link = /*#__PURE__*/React.createElement("a", (0, _extends2["default"])({
-      className: "".concat(prefixCls, "-link")
-    }, restProps), children);
-  } else {
-    link = /*#__PURE__*/React.createElement("span", (0, _extends2["default"])({
-      className: "".concat(prefixCls, "-link")
-    }, restProps), children);
-  } // wrap to dropDown
-
-
-  link = renderBreadcrumbNode(link);
-
-  if (children) {
-    return /*#__PURE__*/React.createElement("span", null, link, separator && separator !== '' && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(prefixCls, "-separator")
-    }, separator));
-  }
-
-  return null;
-};
-
-BreadcrumbItem.__ANT_BREADCRUMB_ITEM = true;
-var _default = BreadcrumbItem;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/breadcrumb/BreadcrumbSeparator.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/antd/lib/breadcrumb/BreadcrumbSeparator.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var BreadcrumbSeparator = function BreadcrumbSeparator(_ref) {
-  var children = _ref.children;
-
-  var _React$useContext = React.useContext(_configProvider.ConfigContext),
-      getPrefixCls = _React$useContext.getPrefixCls;
-
-  var prefixCls = getPrefixCls('breadcrumb');
-  return /*#__PURE__*/React.createElement("span", {
-    className: "".concat(prefixCls, "-separator")
-  }, children || '/');
-};
-
-BreadcrumbSeparator.__ANT_BREADCRUMB_SEPARATOR = true;
-var _default = BreadcrumbSeparator;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/breadcrumb/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/antd/lib/breadcrumb/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _Breadcrumb = _interopRequireDefault(__webpack_require__(/*! ./Breadcrumb */ "./node_modules/antd/lib/breadcrumb/Breadcrumb.js"));
-
-var _default = _Breadcrumb["default"];
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/antd/lib/page-header/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/antd/lib/page-header/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _ArrowLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/ArrowLeftOutlined */ "./node_modules/@ant-design/icons/ArrowLeftOutlined.js"));
-
-var _ArrowRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/ArrowRightOutlined */ "./node_modules/@ant-design/icons/ArrowRightOutlined.js"));
-
-var _rcResizeObserver = _interopRequireDefault(__webpack_require__(/*! rc-resize-observer */ "./node_modules/rc-resize-observer/es/index.js"));
-
-var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
-
-var _breadcrumb = _interopRequireDefault(__webpack_require__(/*! ../breadcrumb */ "./node_modules/antd/lib/breadcrumb/index.js"));
-
-var _avatar = _interopRequireDefault(__webpack_require__(/*! ../avatar */ "./node_modules/antd/lib/avatar/index.js"));
-
-var _transButton = _interopRequireDefault(__webpack_require__(/*! ../_util/transButton */ "./node_modules/antd/lib/_util/transButton.js"));
-
-var _LocaleReceiver = _interopRequireDefault(__webpack_require__(/*! ../locale-provider/LocaleReceiver */ "./node_modules/antd/lib/locale-provider/LocaleReceiver.js"));
-
-var renderBack = function renderBack(prefixCls, backIcon, onBack) {
-  if (!backIcon || !onBack) {
-    return null;
-  }
-
-  return /*#__PURE__*/React.createElement(_LocaleReceiver["default"], {
-    componentName: "PageHeader"
-  }, function (_ref) {
-    var back = _ref.back;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "".concat(prefixCls, "-back")
-    }, /*#__PURE__*/React.createElement(_transButton["default"], {
-      onClick: function onClick(e) {
-        if (onBack) {
-          onBack(e);
-        }
-      },
-      className: "".concat(prefixCls, "-back-button"),
-      "aria-label": back
-    }, backIcon));
-  });
-};
-
-var renderBreadcrumb = function renderBreadcrumb(breadcrumb) {
-  return /*#__PURE__*/React.createElement(_breadcrumb["default"], breadcrumb);
-};
-
-var getBackIcon = function getBackIcon(props) {
-  var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'ltr';
-
-  if (props.backIcon !== undefined) {
-    return props.backIcon;
-  }
-
-  return direction === 'rtl' ? /*#__PURE__*/React.createElement(_ArrowRightOutlined["default"], null) : /*#__PURE__*/React.createElement(_ArrowLeftOutlined["default"], null);
-};
-
-var renderTitle = function renderTitle(prefixCls, props) {
-  var direction = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'ltr';
-  var title = props.title,
-      avatar = props.avatar,
-      subTitle = props.subTitle,
-      tags = props.tags,
-      extra = props.extra,
-      onBack = props.onBack;
-  var headingPrefixCls = "".concat(prefixCls, "-heading");
-
-  if (title || subTitle || tags || extra) {
-    var backIcon = getBackIcon(props, direction);
-    var backIconDom = renderBack(prefixCls, backIcon, onBack);
-    return /*#__PURE__*/React.createElement("div", {
-      className: headingPrefixCls
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "".concat(headingPrefixCls, "-left")
-    }, backIconDom, avatar && /*#__PURE__*/React.createElement(_avatar["default"], avatar), title && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(headingPrefixCls, "-title"),
-      title: typeof title === 'string' ? title : undefined
-    }, title), subTitle && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(headingPrefixCls, "-sub-title"),
-      title: typeof subTitle === 'string' ? subTitle : undefined
-    }, subTitle), tags && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(headingPrefixCls, "-tags")
-    }, tags)), extra && /*#__PURE__*/React.createElement("span", {
-      className: "".concat(headingPrefixCls, "-extra")
-    }, extra));
-  }
-
-  return null;
-};
-
-var renderFooter = function renderFooter(prefixCls, footer) {
-  if (footer) {
-    return /*#__PURE__*/React.createElement("div", {
-      className: "".concat(prefixCls, "-footer")
-    }, footer);
-  }
-
-  return null;
-};
-
-var renderChildren = function renderChildren(prefixCls, children) {
-  return /*#__PURE__*/React.createElement("div", {
-    className: "".concat(prefixCls, "-content")
-  }, children);
-};
-
-var PageHeader = function PageHeader(props) {
-  var _React$useState = React.useState(false),
-      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
-      compact = _React$useState2[0],
-      updateCompact = _React$useState2[1];
-
-  var onResize = function onResize(_ref2) {
-    var width = _ref2.width;
-    updateCompact(width < 768);
-  };
-
-  return /*#__PURE__*/React.createElement(_configProvider.ConfigConsumer, null, function (_ref3) {
-    var _classNames;
-
-    var getPrefixCls = _ref3.getPrefixCls,
-        pageHeader = _ref3.pageHeader,
-        direction = _ref3.direction;
-    var customizePrefixCls = props.prefixCls,
-        style = props.style,
-        footer = props.footer,
-        children = props.children,
-        breadcrumb = props.breadcrumb,
-        customizeClassName = props.className;
-    var ghost = true; // Use `ghost` from `props` or from `ConfigProvider` instead.
-
-    if ('ghost' in props) {
-      ghost = props.ghost;
-    } else if (pageHeader && 'ghost' in pageHeader) {
-      ghost = pageHeader.ghost;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_EllipsisOutlined__WEBPACK_IMPORTED_MODULE_12___default.a, {
+    style: {
+      fontSize: 20,
+      verticalAlign: "top"
     }
-
-    var prefixCls = getPrefixCls('page-header', customizePrefixCls);
-    var breadcrumbDom = breadcrumb && breadcrumb.routes ? renderBreadcrumb(breadcrumb) : null;
-    var className = (0, _classnames["default"])(prefixCls, customizeClassName, (_classNames = {
-      'has-breadcrumb': breadcrumbDom,
-      'has-footer': footer
-    }, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-ghost"), ghost), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-compact"), compact), _classNames));
-    return /*#__PURE__*/React.createElement(_rcResizeObserver["default"], {
-      onResize: onResize
-    }, /*#__PURE__*/React.createElement("div", {
-      className: className,
-      style: style
-    }, breadcrumbDom, renderTitle(prefixCls, props, direction), children && renderChildren(prefixCls, children), renderFooter(prefixCls, footer)));
-  });
+  })));
 };
 
-var _default = PageHeader;
-exports["default"] = _default;
+/***/ }),
+
+/***/ "./resources/js/assets/general/images/at-school.png":
+/*!**********************************************************!*\
+  !*** ./resources/js/assets/general/images/at-school.png ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/at-school.png?15f72add27c183615e4bd0bdba2f72a4";
 
 /***/ })
 

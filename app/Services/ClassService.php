@@ -6,7 +6,10 @@ use App\Classroom;
 
 class ClassService
 {
-
+    public function __construct(Classroom $classroom)
+    {
+        $this->classroom = $classroom;
+    }
     public function index()
     {
         return authUser()->classes()->latest()->get();
@@ -15,7 +18,7 @@ class ClassService
     public function join($request)
     {
         $classroom_code = $request->validated();
-        $classroom = Classroom::whereCode($classroom_code)->first();
+        $classroom = $this->classroom->whereCode($classroom_code)->first();
         if (!$classroom) {
             return [null, 'Invalid Classroom code!'];
         } elseif ($classroom->user_id === authUser()->id) {
@@ -25,5 +28,10 @@ class ClassService
         }
         $classroom->students()->attach(authUser()->id);
         return [$classroom];
+    }
+    public function leave($classroom)
+    {
+        $classroom = $classroom->students()->detach(authUser()->id);
+        return $classroom;
     }
 }

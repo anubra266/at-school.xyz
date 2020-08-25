@@ -49,7 +49,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'class'], function () {
         Route::get('/', 'ClassController@index')->name('class.index');
         Route::post('/join', 'ClassController@join')->name('class.join');
-        Route::post('/leave', 'ClassController@leave')->name('class.join');
+        Route::patch('/{classroom}/leave', 'ClassController@leave')->name('class.leave');
     });
 });
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Classroom;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Services\ClassService;
@@ -26,5 +27,11 @@ class ClassController extends Controller
             return redirect()->back()->with('success', "You joined Classroom Successfully");
         }
         return redirect()->back()->with('error', $error);
+    }
+
+    public function leave(Classroom $classroom)
+    {
+        $this->classService->leave($classroom);
+        return redirect()->back()->with('success', "You left the Classroom Successfully");
     }
 }
