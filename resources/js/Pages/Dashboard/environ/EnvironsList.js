@@ -16,9 +16,11 @@ const EnvironsList = ({ environs }) => {
 
     const onFinish = data => {
         setLoading(true);
-        Inertia.patch(route("environ.edit"), data).then(res => {
-            setLoading(false);
-        });
+        Inertia.patch(route("environ.edit", { environ: data.id }), data).then(
+            res => {
+                setLoading(false);
+            }
+        );
     };
     const formProps = { loading, onFinish, EnvForm };
 
@@ -82,47 +84,49 @@ const EnvironsList = ({ environs }) => {
                             </Typography.Paragraph>
                         )}
                     />
-                    <Table.Column
-                        width={200}
-                        fixed="right"
-                        title="Action"
-                        key="action"
-                        render={(text, record) => (
-                            <Space>
-                                <PopOver
-                                    placement="leftTop"
-                                    title={`Edit ${record.name}`}
-                                    content={() => (
-                                        <EnvironForm
-                                            edit={record}
-                                            {...formProps}
-                                        />
-                                    )}
-                                    trigger="click"
-                                >
-                                    <Button>Edit</Button>
-                                </PopOver>
-                                <PopConfirm
-                                    placement="leftTop"
-                                    title={`Generate new ${record.name} code?`}
-                                    onConfirm={() => {
-                                        setLoading(true);
-                                        Inertia.patch(
-                                            route("environ.change_code", {
-                                                environ: record.id
-                                            })
-                                        ).then(() => setLoading(false));
-                                    }}
-                                    okText="Generate"
-                                    trigger="click"
-                                >
-                                    <Button loading={loading}>
-                                        Change Code
-                                    </Button>
-                                </PopConfirm>
-                            </Space>
-                        )}
-                    />
+                    {window.location.pathname === "/environ" && (
+                        <Table.Column
+                            width={200}
+                            fixed="right"
+                            title="Action"
+                            key="action"
+                            render={(text, record) => (
+                                <Space>
+                                    <PopOver
+                                        placement="leftTop"
+                                        title={`Edit ${record.name}`}
+                                        content={() => (
+                                            <EnvironForm
+                                                edit={record}
+                                                {...formProps}
+                                            />
+                                        )}
+                                        trigger="click"
+                                    >
+                                        <Button>Edit</Button>
+                                    </PopOver>
+                                    <PopConfirm
+                                        placement="leftTop"
+                                        title={`Generate new ${record.name} code?`}
+                                        onConfirm={() => {
+                                            setLoading(true);
+                                            Inertia.patch(
+                                                route("environ.change_code", {
+                                                    environ: record.id
+                                                })
+                                            ).then(() => setLoading(false));
+                                        }}
+                                        okText="Generate"
+                                        trigger="click"
+                                    >
+                                        <Button loading={loading}>
+                                            Change Code
+                                        </Button>
+                                    </PopConfirm>
+                                </Space>
+                            )}
+                        />
+                    )}
                 </Table>
             )}
         </React.Fragment>

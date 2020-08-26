@@ -36,12 +36,11 @@ class EnvironService
         return $environ;
     }
 
-    public function update($request)
+    public function update($request, $environ)
     {
-        $environ_id = $request->id;
-        $environ = $request->validated();
+        $new_environ = $request->validated();
         //*update environ
-        $environ = authUser()->environs()->find($environ_id)->update($environ);
+        $environ = $environ->update($new_environ);
         return $environ;
     }
     public function ChangeCode($environ)

@@ -26,9 +26,9 @@ class OrganizationController extends Controller
         $this->organizationService->store($request);
         return redirect()->back()->with('success', " Organization saved successfully");
     }
-    public function update(OrganizationRequest $request)
+    public function update(OrganizationRequest $request, Organization $organization)
     {
-        $this->organizationService->update($request);
+        $this->organizationService->update($request, $organization);
         return redirect()->back()->with('success', " Organization updated successfully");
     }
 

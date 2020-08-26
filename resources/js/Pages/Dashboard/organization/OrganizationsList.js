@@ -12,10 +12,14 @@ import EnvironsList from "@/Pages/Dashboard/environ/EnvironsList";
 const OrganizationsList = ({ organizations }) => {
     const [loading, setLoading] = useState(false);
     const OrgForm = useRef(null);
-    console.log(organizations);
     const onFinish = data => {
         setLoading(true);
-        Inertia.patch(route("organization.edit"), data).then(res => {
+        Inertia.patch(
+            route("organization.edit", {
+                organization: data.id
+            }),
+            data
+        ).then(res => {
             setLoading(false);
         });
     };
@@ -25,7 +29,6 @@ const OrganizationsList = ({ organizations }) => {
         organization.key = `org-${key}`;
         return organization;
     });
-
     const townfilters = [
         //TODO Display Environs in collapse menu under Table
         //! in production, get towns entered by students and reduce duplicates to use here.
@@ -111,47 +114,52 @@ const OrganizationsList = ({ organizations }) => {
                             </Typography.Paragraph>
                         )}
                     />
-                    <Table.Column
-                        width={200}
-                        fixed="right"
-                        title="Action"
-                        key="action"
-                        render={(text, record) => (
-                            <Space>
-                                <PopOver
-                                    placement="leftTop"
-                                    title={`Edit ${record.name}`}
-                                    content={() => (
-                                        <OrganizationForm
-                                            edit={record}
-                                            {...formProps}
-                                        />
-                                    )}
-                                    trigger="click"
-                                >
-                                    <Button>Edit</Button>
-                                </PopOver>
-                                <PopConfirm
-                                    placement="leftTop"
-                                    title={`Generate new ${record.name} code?`}
-                                    onConfirm={() => {
-                                        setLoading(true);
-                                        Inertia.patch(
-                                            route("organization.change_code", {
-                                                organization: record.id
-                                            })
-                                        ).then(() => setLoading(false));
-                                    }}
-                                    okText="Generate"
-                                    trigger="click"
-                                >
-                                    <Button loading={loading}>
-                                        Change Code
-                                    </Button>
-                                </PopConfirm>
-                            </Space>
-                        )}
-                    />
+                    {window.location.pathname === "/organization" && (
+                        <Table.Column
+                            width={200}
+                            fixed="right"
+                            title="Action"
+                            key="action"
+                            render={(text, record) => (
+                                <Space>
+                                    <PopOver
+                                        placement="leftTop"
+                                        title={`Edit ${record.name}`}
+                                        content={() => (
+                                            <OrganizationForm
+                                                edit={record}
+                                                {...formProps}
+                                            />
+                                        )}
+                                        trigger="click"
+                                    >
+                                        <Button>Edit</Button>
+                                    </PopOver>
+                                    <PopConfirm
+                                        placement="leftTop"
+                                        title={`Generate new ${record.name} code?`}
+                                        onConfirm={() => {
+                                            setLoading(true);
+                                            Inertia.patch(
+                                                route(
+                                                    "organization.change_code",
+                                                    {
+                                                        organization: record.id
+                                                    }
+                                                )
+                                            ).then(() => setLoading(false));
+                                        }}
+                                        okText="Generate"
+                                        trigger="click"
+                                    >
+                                        <Button loading={loading}>
+                                            Change Code
+                                        </Button>
+                                    </PopConfirm>
+                                </Space>
+                            )}
+                        />
+                    )}
                 </Table>
             )}
         </React.Fragment>

@@ -15,7 +15,8 @@ class ClassroomService
 
     public function index()
     {
-        return authUser()->classrooms()->latest()->get();
+        $classrooms = authUser()->classrooms()->latest()->get();
+        return $classrooms;
     }
 
     public function store($request)
@@ -35,12 +36,11 @@ class ClassroomService
         return $environ;
     }
 
-    public function update($request)
+    public function update($request, $classroom)
     {
-        $classroom_id = $request->id;
-        $classroom = $request->validated();
+        $new_classroom = $request->validated();
         //*update classroom
-        $classroom = authUser()->classrooms()->find($classroom_id)->update($classroom);
+        $classroom = $classroom->update($new_classroom);
         return $classroom;
     }
     public function ChangeCode($classroom)

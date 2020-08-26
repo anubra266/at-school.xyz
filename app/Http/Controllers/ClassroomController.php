@@ -28,9 +28,9 @@ class ClassroomController extends Controller
         return redirect()->back()->with('error', "Invalid Environ / Department code!");
     }
 
-    public function update(ClassroomRequest $request)
+    public function update(ClassroomRequest $request, Classroom $classroom)
     {
-        $this->classroomService->update($request);
+        $this->classroomService->update($request, $classroom);
         return redirect()->back()->with('success', " Classroom updated successfully");
     }
 

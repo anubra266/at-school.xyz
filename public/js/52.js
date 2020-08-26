@@ -306,6 +306,10 @@ __webpack_require__.r(__webpack_exports__);
   route: "class",
   icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_TeamOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, null)
 }, {
+  name: "Practice",
+  route: "practice",
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_TeamOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, null)
+}, {
   name: "Settings",
   route: "settings",
   icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_SettingOutlined__WEBPACK_IMPORTED_MODULE_6___default.a, null),

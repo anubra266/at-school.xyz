@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Classroom;
+use App\Environ;
+use App\Organization;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -52,6 +55,15 @@ class AppServiceProvider extends ServiceProvider
                         'school_town' => Auth::user()->school_town,
                         'profile_image' => Auth::user()->profile_image,
                         'initial_role' => Auth::user()->initial_role,
+                        'can' => [
+                            'home' => true,
+                            'organization' => Auth::user()->can('create_organizations'),
+                            'environ' => Auth::user()->can('create_environs'),
+                            'classroom' => Auth::user()->can('create_classrooms'),
+                            'class' => Auth::user()->can('participate_classes'),
+                            'practice' =>  Auth::user()->can('practice'),
+                            'settings' => true,
+                        ]
                         // 'account' => [
                         //     'id' => Auth::user()->account->id,
                         //     'name' => Auth::user()->account->name,

@@ -11,7 +11,6 @@ const Header = ({ showDrawer }) => {
                 title="Organizations"
                 subTitle="Organizations you created"
                 extra={[
-                    <Button key="title-export">Export List</Button>,
                     <Button
                         onClick={showDrawer}
                         key="title-create"

@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Organization;
+use App\Environ;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class OrganizationPolicy
+class EnvironPolicy
 {
     use HandlesAuthorization;
 
@@ -18,17 +18,17 @@ class OrganizationPolicy
      */
     public function viewAny(User $user)
     {
-        //return $user->hasAnyRole(['organization_admin']);
+        //return $user->hasAnyRole(['department_head', 'organization_admin']);
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Organization  $organization
+     * @param  \App\Environ  $environ
      * @return mixed
      */
-    public function view(User $user, Organization $organization)
+    public function view(User $user, Environ $environ)
     {
         //
     }
@@ -48,22 +48,22 @@ class OrganizationPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Organization  $organization
+     * @param  \App\Environ  $environ
      * @return mixed
      */
-    public function update(User $user, Organization $organization)
+    public function update(User $user, Environ $environ)
     {
-        return $user->id === $organization->user_id;
+        return $user->id === $environ->user_id;
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Organization  $organization
+     * @param  \App\Environ  $environ
      * @return mixed
      */
-    public function delete(User $user, Organization $organization)
+    public function delete(User $user, Environ $environ)
     {
         //
     }
@@ -72,10 +72,10 @@ class OrganizationPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Organization  $organization
+     * @param  \App\Environ  $environ
      * @return mixed
      */
-    public function restore(User $user, Organization $organization)
+    public function restore(User $user, Environ $environ)
     {
         //
     }
@@ -84,10 +84,10 @@ class OrganizationPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Organization  $organization
+     * @param  \App\Environ  $environ
      * @return mixed
      */
-    public function forceDelete(User $user, Organization $organization)
+    public function forceDelete(User $user, Environ $environ)
     {
         //
     }

@@ -35,6 +35,11 @@ export default [
         icon: <TeamOutlined />
     },
     {
+        name: "Practice",
+        route: "practice",
+        icon: <TeamOutlined />
+    },
+    {
         name: "Settings",
         route: "settings",
         icon: <SettingOutlined />,

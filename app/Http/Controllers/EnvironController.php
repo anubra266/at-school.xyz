@@ -30,9 +30,9 @@ class EnvironController extends Controller
         return redirect()->back()->with('error', "Invalid Organization code!");
     }
 
-    public function update(EnvironRequest $request)
+    public function update(EnvironRequest $request, Environ $environ)
     {
-        $this->environService->update($request);
+        $this->environService->update($request, $environ);
         return redirect()->back()->with('success', " Environ updated successfully");
     }
 

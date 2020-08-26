@@ -23,6 +23,7 @@ function Sidebar({ mode, routes }) {
     const onCollapse = collapsed => {
         setCollapsed(collapsed);
     };
+    const { auth } = usePage();
 
     return (
         <React.Fragment>
@@ -42,49 +43,54 @@ function Sidebar({ mode, routes }) {
                     mode="inline"
                 >
                     {routes.map(menu => {
-                        return menu.items ? (
-                            <SubMenu
-                                key={`menu-${menu.name}`}
-                                icon={menu.icon}
-                                title={menu.name}
-                            >
-                                {menu.items.map(item => {
-                                    return (
-                                        <Menu.Item
-                                            key={`menu-${item.name}`}
-                                            icon={item.icon}
-                                        >
-                                            <InertiaLink
-                                                href={
-                                                    `menu-${item.name}` ==
-                                                    getRoute()[0][0]
-                                                        ? "#"
-                                                        : menu.route
-                                                }
-                                            >
-                                                {item.name}
-                                            </InertiaLink>
-                                        </Menu.Item>
-                                    );
-                                })}
-                            </SubMenu>
-                        ) : (
-                            <Menu.Item
-                                key={`menu-${menu.name}`}
-                                icon={menu.icon}
-                            >
-                                <InertiaLink
-                                    href={
-                                        `menu-${menu.name}` == getRoute()[0][0]
-                                            ? "#"
-                                            : menu.route
-                                    }
+                        return (
+                            auth.user.can[menu.route] &&
+                            (menu.items ? (
+                                <SubMenu
+                                    key={`menu-${menu.name}`}
+                                    icon={menu.icon}
+                                    title={menu.name}
                                 >
-                                    {menu.name}
-                                </InertiaLink>
-                            </Menu.Item>
+                                    {menu.items.map(item => {
+                                        return (
+                                            <Menu.Item
+                                                key={`menu-${item.name}`}
+                                                icon={item.icon}
+                                            >
+                                                <InertiaLink
+                                                    href={
+                                                        `menu-${item.name}` ==
+                                                        getRoute()[0][0]
+                                                            ? "#"
+                                                            : menu.route
+                                                    }
+                                                >
+                                                    {item.name}
+                                                </InertiaLink>
+                                            </Menu.Item>
+                                        );
+                                    })}
+                                </SubMenu>
+                            ) : (
+                                <Menu.Item
+                                    key={`menu-${menu.name}`}
+                                    icon={menu.icon}
+                                >
+                                    <InertiaLink
+                                        href={
+                                            `menu-${menu.name}` ==
+                                            getRoute()[0][0]
+                                                ? "#"
+                                                : menu.route
+                                        }
+                                    >
+                                        {menu.name}
+                                    </InertiaLink>
+                                </Menu.Item>
+                            ))
                         );
                     })}
+
                     <Menu.Item
                         key="logout"
                         icon={<PoweroffOutlined />}

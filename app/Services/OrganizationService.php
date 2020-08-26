@@ -28,12 +28,12 @@ class OrganizationService
         $organization = authUser()->organizations()->create($organization);
         return $organization;
     }
-    public function update($request)
+    public function update($request, $organization)
     {
-        $organization_id = $request->id;
-        $organization = $request->validated();
+        // $organization_id = $request->id;
+        $new_organization = $request->validated();
         //*update organization
-        $organization = authUser()->organizations()->find($organization_id)->update($organization);
+        $organization = $organization->update($new_organization);
         return $organization;
     }
     public function ChangeCode($organization)

@@ -16,6 +16,7 @@ class ClassController extends Controller
     }
     public function index()
     {
+        dd(authUser()->permissions()->pluck('name'));
         $classes = $this->classService->index();
         return Inertia::render('Dashboard/class', ['classes' => $classes]);
     }

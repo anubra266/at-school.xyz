@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--SEO assets -->
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="rgba(10,10,200,0.6)" />
     <meta name="title" content="at-School" />
     <meta name="description" content="We help to keep the flow of education, wherever you are, at anytime." />
     <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <!--include assets required for Inertia app here -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <!-- End assets call-->

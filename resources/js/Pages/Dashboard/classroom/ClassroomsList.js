@@ -14,7 +14,10 @@ const ClassroomsList = ({ classrooms }) => {
 
     const onFinish = data => {
         setLoading(true);
-        Inertia.patch(route("classroom.edit"), data).then(res => {
+        Inertia.patch(
+            route("classroom.edit", { classroom: data.id }),
+            data
+        ).then(res => {
             setLoading(false);
         });
     };
@@ -65,47 +68,49 @@ const ClassroomsList = ({ classrooms }) => {
                             </Typography.Paragraph>
                         )}
                     />
-                    <Table.Column
-                        width={200}
-                        fixed="right"
-                        title="Action"
-                        key="action"
-                        render={(text, record) => (
-                            <Space>
-                                <PopOver
-                                    placement="leftTop"
-                                    title={`Edit ${record.name}`}
-                                    content={() => (
-                                        <ClassroomForm
-                                            edit={record}
-                                            {...formProps}
-                                        />
-                                    )}
-                                    trigger="click"
-                                >
-                                    <Button>Edit</Button>
-                                </PopOver>
-                                <PopConfirm
-                                    placement="leftTop"
-                                    title={`Generate new ${record.name} code?`}
-                                    onConfirm={() => {
-                                        setLoading(true);
-                                        Inertia.patch(
-                                            route("classroom.change_code", {
-                                                classroom: record.id
-                                            })
-                                        ).then(() => setLoading(false));
-                                    }}
-                                    okText="Generate"
-                                    trigger="click"
-                                >
-                                    <Button loading={loading}>
-                                        Change Code
-                                    </Button>
-                                </PopConfirm>
-                            </Space>
-                        )}
-                    />
+                    {window.location.pathname === "/classroom" && (
+                        <Table.Column
+                            width={200}
+                            fixed="right"
+                            title="Action"
+                            key="action"
+                            render={(text, record) => (
+                                <Space>
+                                    <PopOver
+                                        placement="leftTop"
+                                        title={`Edit ${record.name}`}
+                                        content={() => (
+                                            <ClassroomForm
+                                                edit={record}
+                                                {...formProps}
+                                            />
+                                        )}
+                                        trigger="click"
+                                    >
+                                        <Button>Edit</Button>
+                                    </PopOver>
+                                    <PopConfirm
+                                        placement="leftTop"
+                                        title={`Generate new ${record.name} code?`}
+                                        onConfirm={() => {
+                                            setLoading(true);
+                                            Inertia.patch(
+                                                route("classroom.change_code", {
+                                                    classroom: record.id
+                                                })
+                                            ).then(() => setLoading(false));
+                                        }}
+                                        okText="Generate"
+                                        trigger="click"
+                                    >
+                                        <Button loading={loading}>
+                                            Change Code
+                                        </Button>
+                                    </PopConfirm>
+                                </Space>
+                            )}
+                        />
+                    )}
                 </Table>
             )}
         </React.Fragment>

@@ -7,14 +7,13 @@ import { Form, Input } from "antd";
 const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
     const { errors } = usePage();
     const [form] = Form.useForm();
-    useEffectOnce(() => {
-        edit &&
-            form.setFieldsValue({
-                name: edit.name,
-                address: edit.address,
-                id: edit.id
-            });
-    });
+    useEffectOnce(() => {});
+    edit &&
+        form.setFieldsValue({
+            name: edit.name,
+            address: edit.address,
+            id: edit.id
+        });
     return (
         <Form
             ref={OrgForm}

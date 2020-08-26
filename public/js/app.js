@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"9b1a228b480974a8f8b3","1":"5e372995c78ca463f416","2":"68ba11c2c0b013ece566","3":"b378907bafaa91a3657d","4":"7489d096f74da918403b","5":"ac2f61b83f7609ffaeb4","6":"043fcb1fdb9c6ed471c3","8":"0613fb2cd2c49b64428c","10":"6f349d7235e9cad69eb3","11":"b46e5f30f87ac962134f","13":"350f390444ab839a6528","14":"d5e3a4a62c8b683aadde","15":"4120e934187748613f35","16":"0e1972031ead3b329712","17":"8445109def2a8a408798","18":"c54ea5ca70a3f910cc35","19":"956fda04041545b66238","21":"330e9d0ed16b01c641ef","22":"5986b60842a734ff6fae","23":"7a5ba928436508d9d38d","25":"dba1564b023d33e66439","26":"f54e681fb552365c9513","27":"ce12fdcbeefc733451c2","28":"4f57a2d660b889c918b3","29":"82d99a24c95c40e31ad3","31":"25e718868911670901b4","33":"6c2540bdc2ab498ee773","34":"d6d1cea2ee598174108f","36":"10ac832db6a32a0fe3ba","37":"1ccd62e56b67de8ee965","38":"ea493862ac19a4e89d23","39":"6583ee5c4247715388c7","40":"ae0e805db2f4b00aaf56","41":"45f37d0f6e3f9a9e151e","42":"5858078d1f2deadf49c1","43":"c70d4f1609e19eb30b57","44":"ca1769b383a26eb5e1e0","45":"85c969927dc7f9e20896","46":"22ed270a918a6814a0f1","48":"9249b4d37fe9afe79cb7","49":"5c5ec1765ceb36ca35ac","50":"ba8ca9b9fce338142c9b","52":"b9841e6b846022ff5f30","53":"97bd7f9609fd0331cfa2","54":"0793d8e89286ef7a2275","55":"2d24d7f83e61a28b6114","56":"bdccc5a0f2ec145a48de","57":"49ee17bec9bf1cac86a3","58":"150ab629f28f072054be","59":"4cc15689a38bcbdef411","61":"2e7f2d097f6e9008d760","62":"7b3588256dadc9985844","64":"e25e6f301d1acf28908c","65":"38ec9a5806e17c89ab90","66":"063a4de49081ee25d191","68":"51d3bd0cd2081c5babe9","69":"30af14234741aadfdb20","71":"4ff4a6fd5e4528cc72dd","72":"c3b32c9d0a8330ac4d8b","73":"be46b4a9663c153b7188","74":"3d72bc62236669f11f1e","76":"b059b9b153b998d58c31","79":"fc6b137ad3efcd4a20da","80":"e85de12c5b539e4212b1","83":"6a5f6042169a7d5da6f5","84":"c38940ecdea0b747b9e1","85":"930e7be0b8b726092f82","87":"30025aebc55b31c481c5","88":"b3ce8454ec9ef6670a5b","89":"976c98c0e431f32a3d3b","90":"05d2481346978b509430","91":"9da36c9f6ec32bc890a3","92":"82bfd0d766559de76018","93":"6a96a5f318e2d84593c7","94":"6ac5c2766e4d4030e1ba","95":"9a62e40bc864d2de349b","96":"03d317eba23f2e694ee0","97":"20b320d0a0f42a64732b","102":"9fdee724dd49a5540729","108":"13a0dc0b4822a4be5b26","109":"b5887c13bd4ec1443b08","110":"6a3faa0d9e67a0477f5f","111":"ab635c901f916c35d8d9","112":"dedfe61ad9d9d2cff7a9"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"9b1a228b480974a8f8b3","1":"5e372995c78ca463f416","2":"68ba11c2c0b013ece566","3":"b378907bafaa91a3657d","4":"7489d096f74da918403b","5":"ac2f61b83f7609ffaeb4","6":"043fcb1fdb9c6ed471c3","8":"0613fb2cd2c49b64428c","10":"6f349d7235e9cad69eb3","11":"b46e5f30f87ac962134f","13":"350f390444ab839a6528","14":"d5e3a4a62c8b683aadde","15":"4120e934187748613f35","16":"9e92a91b270dd970c0a3","17":"8445109def2a8a408798","18":"c54ea5ca70a3f910cc35","19":"956fda04041545b66238","20":"068512905e9671ea191c","21":"330e9d0ed16b01c641ef","22":"5986b60842a734ff6fae","23":"7a5ba928436508d9d38d","24":"f7018177cd23587baa49","25":"90865f4846e7763521ae","26":"f54e681fb552365c9513","27":"ce12fdcbeefc733451c2","28":"4f57a2d660b889c918b3","29":"82d99a24c95c40e31ad3","31":"25e718868911670901b4","33":"6c2540bdc2ab498ee773","34":"d6d1cea2ee598174108f","36":"10ac832db6a32a0fe3ba","37":"1ccd62e56b67de8ee965","38":"ea493862ac19a4e89d23","39":"6583ee5c4247715388c7","40":"ae0e805db2f4b00aaf56","41":"45f37d0f6e3f9a9e151e","42":"5858078d1f2deadf49c1","43":"c70d4f1609e19eb30b57","44":"ca1769b383a26eb5e1e0","45":"85c969927dc7f9e20896","46":"22ed270a918a6814a0f1","48":"9249b4d37fe9afe79cb7","49":"5c5ec1765ceb36ca35ac","50":"ba8ca9b9fce338142c9b","51":"d0bf0855f6f3c310f76a","52":"b198d15e23abf111d7b2","53":"97bd7f9609fd0331cfa2","54":"0793d8e89286ef7a2275","55":"2d24d7f83e61a28b6114","56":"bdccc5a0f2ec145a48de","57":"49ee17bec9bf1cac86a3","58":"150ab629f28f072054be","59":"4cc15689a38bcbdef411","60":"7982326de9ed7239f332","61":"2e7f2d097f6e9008d760","62":"7b3588256dadc9985844","64":"e25e6f301d1acf28908c","65":"38ec9a5806e17c89ab90","66":"063a4de49081ee25d191","68":"51d3bd0cd2081c5babe9","71":"9931adf83d66f9b7449a","72":"072d6dba49dcdae9d8f1","76":"b059b9b153b998d58c31","80":"77fe6bcd5dc17d9e643a","83":"6a5f6042169a7d5da6f5","84":"ae44fb5138a5cfdf33d7","85":"930e7be0b8b726092f82","87":"47979eca7f262898f9ce","88":"17748ffdb6e926639470","89":"976c98c0e431f32a3d3b","90":"05d2481346978b509430","91":"ce4169e12d40f544bb02","92":"b22693677f8ea971ffb2","93":"6a96a5f318e2d84593c7","94":"b04421af71943ce57175","95":"9a62e40bc864d2de349b","96":"03d317eba23f2e694ee0","97":"20b320d0a0f42a64732b","102":"33118e9c9d884cb92430","108":"13a0dc0b4822a4be5b26","109":"b5887c13bd4ec1443b08","110":"6a3faa0d9e67a0477f5f","111":"d4a454e59c13cc657fba","112":"dedfe61ad9d9d2cff7a9"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -32235,7 +32235,7 @@ var map = {
 		76,
 		66,
 		28,
-		25,
+		51,
 		83
 	],
 	"./Auth/Registerf/": [
@@ -32261,7 +32261,7 @@ var map = {
 		76,
 		66,
 		28,
-		25,
+		51,
 		83
 	],
 	"./Auth/Registerf/Organization": [
@@ -32319,7 +32319,7 @@ var map = {
 		76,
 		66,
 		28,
-		25,
+		51,
 		83
 	],
 	"./Auth/Registerf/index.js": [
@@ -32345,7 +32345,7 @@ var map = {
 		76,
 		66,
 		28,
-		25,
+		51,
 		83
 	],
 	"./Auth/template": [
@@ -32375,8 +32375,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		102
 	],
 	"./Dashboard/DashboardLayout.js": [
@@ -32398,8 +32398,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		102
 	],
 	"./Dashboard/Template": [
@@ -32421,8 +32421,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		71
 	],
 	"./Dashboard/Template.js": [
@@ -32444,8 +32444,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		71
 	],
 	"./Dashboard/class": [
@@ -32474,8 +32474,8 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
+		60,
+		51,
 		16
 	],
 	"./Dashboard/class/": [
@@ -32504,8 +32504,8 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
+		60,
+		51,
 		16
 	],
 	"./Dashboard/class/ClassForm": [
@@ -32644,8 +32644,8 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
+		60,
+		51,
 		16
 	],
 	"./Dashboard/class/index.js": [
@@ -32674,8 +32674,8 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
+		60,
+		51,
 		16
 	],
 	"./Dashboard/classroom": [
@@ -32705,9 +32705,9 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
+		60,
+		51,
+		20,
 		72
 	],
 	"./Dashboard/classroom/": [
@@ -32737,9 +32737,9 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
+		60,
+		51,
+		20,
 		72
 	],
 	"./Dashboard/classroom/ClassroomForm": [
@@ -32802,7 +32802,7 @@ var map = {
 		57,
 		44,
 		23,
-		73,
+		20,
 		93
 	],
 	"./Dashboard/classroom/ClassroomsList.js": [
@@ -32827,7 +32827,7 @@ var map = {
 		57,
 		44,
 		23,
-		73,
+		20,
 		93
 	],
 	"./Dashboard/classroom/Header": [
@@ -32889,9 +32889,9 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
+		60,
+		51,
+		20,
 		72
 	],
 	"./Dashboard/classroom/index.js": [
@@ -32921,9 +32921,9 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
+		60,
+		51,
+		20,
 		72
 	],
 	"./Dashboard/environ": [
@@ -32953,10 +32953,10 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
-		74,
+		60,
+		51,
+		20,
+		24,
 		84
 	],
 	"./Dashboard/environ/": [
@@ -32986,10 +32986,10 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
-		74,
+		60,
+		51,
+		20,
+		24,
 		84
 	],
 	"./Dashboard/environ/EnvironForm": [
@@ -33052,8 +33052,8 @@ var map = {
 		57,
 		44,
 		23,
-		73,
-		74,
+		20,
+		24,
 		96
 	],
 	"./Dashboard/environ/EnvironsList.js": [
@@ -33078,8 +33078,8 @@ var map = {
 		57,
 		44,
 		23,
-		73,
-		74,
+		20,
+		24,
 		96
 	],
 	"./Dashboard/environ/Header": [
@@ -33141,10 +33141,10 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
-		74,
+		60,
+		51,
+		20,
+		24,
 		84
 	],
 	"./Dashboard/environ/index.js": [
@@ -33174,10 +33174,10 @@ var map = {
 		66,
 		28,
 		23,
-		69,
-		25,
-		73,
-		74,
+		60,
+		51,
+		20,
+		24,
 		84
 	],
 	"./Dashboard/home": [
@@ -33199,8 +33199,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		94
 	],
 	"./Dashboard/home.js": [
@@ -33222,8 +33222,8 @@ var map = {
 		76,
 		66,
 		28,
-		69,
-		25,
+		60,
+		51,
 		94
 	],
 	"./Dashboard/organization": [
@@ -33253,11 +33253,11 @@ var map = {
 		66,
 		28,
 		23,
-		69,
+		60,
+		51,
+		20,
+		24,
 		25,
-		73,
-		74,
-		79,
 		80
 	],
 	"./Dashboard/organization/": [
@@ -33287,11 +33287,11 @@ var map = {
 		66,
 		28,
 		23,
-		69,
+		60,
+		51,
+		20,
+		24,
 		25,
-		73,
-		74,
-		79,
 		80
 	],
 	"./Dashboard/organization/Header": [
@@ -33386,9 +33386,9 @@ var map = {
 		57,
 		44,
 		23,
-		73,
-		74,
-		79,
+		20,
+		24,
+		25,
 		97
 	],
 	"./Dashboard/organization/OrganizationsList.js": [
@@ -33413,9 +33413,9 @@ var map = {
 		57,
 		44,
 		23,
-		73,
-		74,
-		79,
+		20,
+		24,
+		25,
 		97
 	],
 	"./Dashboard/organization/index": [
@@ -33445,11 +33445,11 @@ var map = {
 		66,
 		28,
 		23,
-		69,
+		60,
+		51,
+		20,
+		24,
 		25,
-		73,
-		74,
-		79,
 		80
 	],
 	"./Dashboard/organization/index.js": [
@@ -33479,23 +33479,23 @@ var map = {
 		66,
 		28,
 		23,
-		69,
+		60,
+		51,
+		20,
+		24,
 		25,
-		73,
-		74,
-		79,
 		80
 	],
 	"./Dashboard/routes": [
 		"./resources/js/Pages/Dashboard/routes.js",
 		0,
-		69,
+		60,
 		52
 	],
 	"./Dashboard/routes.js": [
 		"./resources/js/Pages/Dashboard/routes.js",
 		0,
-		69,
+		60,
 		52
 	],
 	"./Error": [
@@ -33643,7 +33643,7 @@ var map = {
 		76,
 		66,
 		28,
-		25
+		51
 	],
 	"./SiteLayout/": [
 		"./resources/js/Pages/SiteLayout/index.js",
@@ -33664,7 +33664,7 @@ var map = {
 		76,
 		66,
 		28,
-		25
+		51
 	],
 	"./SiteLayout/Navbar": [
 		"./resources/js/Pages/SiteLayout/Navbar.js",
@@ -33771,7 +33771,7 @@ var map = {
 		76,
 		66,
 		28,
-		25
+		51
 	],
 	"./SiteLayout/index.js": [
 		"./resources/js/Pages/SiteLayout/index.js",
@@ -33792,7 +33792,7 @@ var map = {
 		76,
 		66,
 		28,
-		25
+		51
 	]
 };
 function webpackAsyncContext(req) {

@@ -16,18 +16,22 @@ class RolesSeeder extends Seeder
         // Reset cached roles and permissions
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        $practicist = Role::create(['name' => 'practicist']);
-        $student = Role::create(['name' => 'student']);
-        $educator = Role::create(['name' => 'educator']);
-        $department_head = Role::create(['name' => 'department_head']);
-        $organization_admin = Role::create(['name' => 'organization_admin']);
+        $arrayOfPermissionNames = ['practice', 'participate_classes', 'create_classrooms', 'create_environs', 'create_organizations'];
 
-        $practice = Permission::create(['name' => 'practice_questions']);
-        $participate_classes = Permission::create(['name' => 'participate_classes']);
-        $create_classrooms = Permission::create(['name' => 'create_classrooms']);
-        $create_environs = Permission::create(['name' => 'create_environs']);
-        $create_organizations = Permission::create(['name' => 'create_organizations']);
+        $permissions = collect($arrayOfPermissionNames)->map(function ($permission) {
+            return ['name' => $permission, 'guard_name' => 'web'];
+        });
 
-        
+        Permission::insert($permissions->toArray());
+
+        Role::create(['name' => 'practicist'])->givePermissionTo(['practice']);
+
+        Role::create(['name' => 'student'])->givePermissionTo(['participate_classes', 'practice']);
+
+        Role::create(['name' => 'educator'])->givePermissionTo(['create_classrooms']);
+
+        Role::create(['name' => 'department_head'])->givePermissionTo(['create_environs', 'create_classrooms']);
+
+        Role::create(['name' => 'organization_admin'])->givePermissionTo(['create_organizations', 'create_environs', 'create_classrooms']);
     }
 }
