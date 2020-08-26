@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Builder;
 
 
@@ -7,7 +8,11 @@ function GenCode($data)
 {
     [$model, $prefix, $faker] = $data;
     //* Generate random code
-    $code =  "$prefix-" . ($faker->numberBetween(10000, 90000) . '-' . $faker->numberBetween(60000, 99000));
+    $code = Str::random(10);
+    //*format it
+    $codeArr = str_split($code, 5);
+    $code = strtoupper("$prefix-$codeArr[0]-$codeArr[1]");
+    // $code =  "$prefix-" . ($faker->numberBetween(10000, 90000) . '-' . $faker->numberBetween(60000, 99000));
     $duplicates = $model->whereCode($code)->get();
     return [$code, count($duplicates) > 0];
 }
