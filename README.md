@@ -20,6 +20,23 @@ It's public for now, As you can see. That might change depending on ... .
 ## How do I set this up
 
 ```
-Find out
+
+git clone https://github.com/anubra266/at-school.xyz.git
+
+composer install
+
+npm install
+
+npm run dev
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan ziggy:generate
+
+php artisan migrate
 ```
+**I'm not dumb, the above is all self explanatory.**
+
 
