@@ -7,6 +7,7 @@ import PopConfirm from "antd/lib/popconfirm";
 import Space from "antd/lib/space";
 import Button from "antd/lib/button";
 import Typography from "antd/lib/typography";
+import EditOutlined from "@ant-design/icons/EditOutlined";
 import ClassroomForm from "./ClassroomForm";
 
 const ClassroomsList = ({ classrooms }) => {
@@ -90,7 +91,7 @@ const ClassroomsList = ({ classrooms }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button>Edit</Button>
+                                        <Button><EditOutlined /></Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"

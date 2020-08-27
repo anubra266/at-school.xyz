@@ -7,6 +7,7 @@ import Space from "antd/lib/space";
 import Divider from "antd/lib/divider";
 import Button from "antd/lib/button";
 import Typography from "antd/lib/typography";
+import EditOutlined from "@ant-design/icons/EditOutlined";
 import EnvironForm from "./EnvironForm";
 import ClassroomsList from "@/Pages/Dashboard/classroom/ClassroomsList";
 
@@ -103,7 +104,7 @@ const EnvironsList = ({ environs }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button>Edit</Button>
+                                        <Button><EditOutlined /> </Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"

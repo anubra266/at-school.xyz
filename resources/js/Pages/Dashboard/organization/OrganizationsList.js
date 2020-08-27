@@ -8,6 +8,7 @@ import Button from "antd/lib/button";
 import Divider from "antd/lib/divider";
 import Typography from "antd/lib/typography";
 import OrganizationForm from "./OrganizationForm";
+import EditOutlined from "@ant-design/icons/EditOutlined";
 import EnvironsList from "@/Pages/Dashboard/environ/EnvironsList";
 const OrganizationsList = ({ organizations }) => {
     const [loading, setLoading] = useState(false);
@@ -133,7 +134,7 @@ const OrganizationsList = ({ organizations }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button>Edit</Button>
+                                        <Button><EditOutlined /></Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"

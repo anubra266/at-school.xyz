@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import Table from "antd/lib/table";
-import PopOver from "antd/lib/popover";
 import PopConfirm from "antd/lib/popconfirm";
 import Space from "antd/lib/space";
 import Button from "antd/lib/button";

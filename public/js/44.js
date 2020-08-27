@@ -33,10 +33,10 @@ var DashboardLayout = function DashboardLayout(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Dashboard/classroom/Header.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/classroom/Header.js ***!
-  \**********************************************************/
+/***/ "./resources/js/Pages/Dashboard/environ/Header.js":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/environ/Header.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -61,8 +61,8 @@ var Header = function Header(_ref) {
     onBack: function onBack() {
       return window.history.back();
     },
-    title: "Classrooms",
-    subTitle: "Classrooms you educate",
+    title: "Environs",
+    subTitle: "Environs you oversee",
     extra: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default.a, {
       onClick: showDrawer,
       key: "title-create",
@@ -75,10 +75,10 @@ var Header = function Header(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Dashboard/classroom/index.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/classroom/index.js ***!
-  \*********************************************************/
+/***/ "./resources/js/Pages/Dashboard/environ/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/Dashboard/environ/index.js ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -90,7 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./resources/js/Pages/Dashboard/classroom/Header.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./resources/js/Pages/Dashboard/environ/Header.js");
 /* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
 /* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var antd_lib_empty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/empty */ "./node_modules/antd/lib/empty/index.js");
@@ -100,8 +100,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/drawer */ "./node_modules/antd/lib/drawer/index.js");
 /* harmony import */ var antd_lib_drawer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Pages/Dashboard/DashboardLayout */ "./resources/js/Pages/Dashboard/DashboardLayout.js");
-/* harmony import */ var _ClassroomForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ClassroomForm */ "./resources/js/Pages/Dashboard/classroom/ClassroomForm.js");
-/* harmony import */ var _ClassroomsList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ClassroomsList */ "./resources/js/Pages/Dashboard/classroom/ClassroomsList.js");
+/* harmony import */ var _EnvironForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./EnvironForm */ "./resources/js/Pages/Dashboard/environ/EnvironForm.js");
+/* harmony import */ var _EnvironsList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./EnvironsList */ "./resources/js/Pages/Dashboard/environ/EnvironsList.js");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -128,9 +128,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Classroom = function Classroom(_ref) {
-  var classrooms = _ref.classrooms,
-      url = _ref.url;
+var Environ = function Environ(_ref) {
+  var environs = _ref.environs;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -142,7 +141,10 @@ var Classroom = function Classroom(_ref) {
       loading = _useState4[0],
       setLoading = _useState4[1];
 
-  var CrmForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["usePage"])(),
+      flash = _usePage.flash;
+
+  var EnvForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
   var showDrawer = function showDrawer() {
     setVisible(true);
@@ -152,14 +154,11 @@ var Classroom = function Classroom(_ref) {
     setVisible(false);
   };
 
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__["usePage"])(),
-      flash = _usePage.flash;
-
   var onFinish = function onFinish(data) {
     setLoading(true);
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].post(route("classroom.create"), data).then(function (res) {
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].post(route("environ.create"), data).then(function (res) {
       setLoading(false);
-      CrmForm.current.resetFields();
+      EnvForm.current.resetFields();
       setVisible(false);
     });
   };
@@ -167,35 +166,35 @@ var Classroom = function Classroom(_ref) {
   var formProps = {
     loading: loading,
     onFinish: onFinish,
-    CrmForm: CrmForm
+    EnvForm: EnvForm
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_DashboardLayout__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    title: "Classrooms"
+    title: "Environs"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default.a.Content, {
     style: {
       margin: "0 16px"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
     showDrawer: showDrawer
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, url), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClassroomsList__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    classrooms: classrooms
-  }), classrooms.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_empty__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "No Classrooms found!")
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EnvironsList__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    environs: environs
+  }), environs.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_empty__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "No Environs found!")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_6___default.a, {
     onClick: showDrawer,
     type: "primary"
-  }, "Create Classroom")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    title: "Create New Classroom",
+  }, "Create Environ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    title: "Create New Environ",
     placement: "right",
     closable: false,
     onClose: onClose,
     visible: visible
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClassroomForm__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EnvironForm__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({
     edit: false
   }, formProps)))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Classroom);
+/* harmony default export */ __webpack_exports__["default"] = (Environ);
 
 /***/ }),
 

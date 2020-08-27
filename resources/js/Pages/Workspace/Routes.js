@@ -1,17 +1,17 @@
 import React from "react";
 
 import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
-import BankOutlined from "@ant-design/icons/BankOutlined";
-import ApartmentOutlined from "@ant-design/icons/ApartmentOutlined";
-import DeploymentUnitOutlined from "@ant-design/icons/DeploymentUnitOutlined";
-import TeamOutlined from "@ant-design/icons/TeamOutlined";
-import SettingOutlined from "@ant-design/icons/SettingOutlined";
-import UserOutlined from "@ant-design/icons/UserOutlined";
-import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
+import DoubleLeftOutlined from "@ant-design/icons/DoubleLeftOutlined";
 
 class Routes {
     routes(classroom) {
         return [
+            {
+                name: "Dashboard",
+                route: "/home",
+                action: "home",
+                icon: <DoubleLeftOutlined />
+            },
             {
                 name: "Home",
                 route: `classroom/${classroom}`,

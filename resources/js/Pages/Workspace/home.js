@@ -1,28 +1,23 @@
 import React from "react";
 import Layout from "antd/lib/layout";
+import Row from "antd/lib/row";
 import PageHeader from "antd/lib/page-header";
-import Button from "antd/lib/button";
+import Descriptions from "antd/lib/descriptions";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 const { Content } = Layout;
 
-const Home = ({ classroom,id }) => {
+const Home = ({ classroom, id }) => {
     return (
         <Workspacelayout title={classroom.name} classroom={id}>
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
-                        ghost={false}
+                        className="site-page-header"
                         onBack={() => window.history.back()}
-                        title="Title"
-                        subTitle="This is a subtitle"
-                        extra={[
-                            <Button key="3">Operation</Button>,
-                            <Button key="2">Operation</Button>,
-                            <Button key="1" type="primary">
-                                Primary
-                            </Button>
-                        ]}
+                        title={classroom.name}
+                        subTitle={classroom.environ.name}
                     ></PageHeader>
+
                 </div>
             </Content>
         </Workspacelayout>

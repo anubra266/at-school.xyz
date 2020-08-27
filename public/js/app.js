@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"9b1a228b480974a8f8b3","1":"3b8bcb267fdbbc6f0058","2":"368ee1c0ecabd331ca7b","3":"4584b9b7ea24f873d973","4":"4e5c8241e1956f3156ca","5":"5c20c340ed8adde1b68b","6":"aa0dd374938dbc785d2b","7":"6b8c101541ff9a8161b7","8":"0dd91dec287ab43eed96","9":"5c01dd6f3d312d01764f","10":"1f959468189e2833a71e","11":"9e9ba2e4aa47680a768a","12":"0011adc5dd7ffbe4324c","13":"eca4f4a516d0f2225e15","14":"d6ea660e10c5939cd21c","15":"251fda4d459ee1f78123","16":"0a39c6f5cdf6cc23fcc3","17":"edf1d34dc5ef014b819f","18":"695111b58c449587df98","19":"bba8bb82137ab565706f","20":"843964feeaf022045ae7","21":"5c77ad2b25d0ff509e04","22":"882e8aac19822ec00e7f","23":"e1084eed19fd39b64e88","24":"67fc3a080512ac82629d","26":"015e3d65397cf8fc9c5a","27":"0ce41f967229a5ff9ef9","28":"d12a8bfd6610cb3378ad","29":"4373da364af11c3b3d0a","31":"dea444b8fc060c7707f5","33":"0b2266de388ef4253867","34":"d3805a01c199477bfc89","36":"e3dda8fb6ebed9f521d5","37":"7918ebb2257eeca6c3b2","38":"aff56752cb49e351632f","39":"52adff4eb956bf507ff4","40":"1b4ae239453b2271ebb3","41":"e5c97d033f68ddbdaf8c","42":"abe7a7dec12cbc11dc5d","43":"ba69abee39c696ba434c","44":"a45c928db75f87e5e0ba","45":"d4619fbf70cc744a8853","47":"12c07750dcb2e62079a2","48":"7d0ec6637310342764de","49":"c3719629944b47ddc847","50":"f7dca03a8d75eb2c323a","51":"762a92655917bd3067c2","52":"ae286588be52e5e7e333","54":"2914776d143c62b21040","57":"3d62bec16e5994527406","59":"c82e2f168806937afbad","66":"633e8f405a5bd6280900","67":"75f2c2e890c1f2eefa1d","68":"af908d39690260248b85","69":"e676d55fb88f87d248ae","70":"99a6757685b69be21bc5","77":"2179d180d8f65824c074","78":"6e5dd4a62ff9913cf9db","80":"f8d4dab617e3a103962f","82":"8347c9134ed371998a52","83":"2d0fa7b1ecd0a11271ca","84":"153e45fa9fc313a7d290","86":"75893794d743ef5fc89d","89":"80dcf9f934aa3c317a3e","90":"ca3e2f0c66afa2e7374a","91":"fb1eff99bde3ec93513b","92":"bf4b2b52b32d228942a7","99":"51d911f60e3635f3d347","100":"c9408f40bcd7442780cd","102":"37b03af25bca89d08136","103":"2286e4f18345cacf50b3","104":"9d03df507a15a0007b65","105":"0a5068c05545d5ece245","106":"3603a943d342f330a204","108":"9f63a0fa947107e56cd7","109":"a10c80afb22232646cb2","110":"cd47b1912ac6511ea9be","111":"0482beccee5f32580f66","112":"1c254a460f442307f315","113":"8d7c071dbb3eb3afb21b","114":"1ac28b33b5aaee021ff1","115":"b7fd09f077c0788a34d8","116":"95f1425736adb3e088ac","117":"1410789e455180f43864","118":"7266e72aee68ab29e02d","119":"8cf73fcb0e9c62bd444d"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"9b1a228b480974a8f8b3","1":"3b8bcb267fdbbc6f0058","2":"368ee1c0ecabd331ca7b","3":"4584b9b7ea24f873d973","4":"4e5c8241e1956f3156ca","5":"5c20c340ed8adde1b68b","6":"aa0dd374938dbc785d2b","7":"6b8c101541ff9a8161b7","8":"0dd91dec287ab43eed96","9":"16cf04b4017323b7c99f","10":"1f959468189e2833a71e","11":"9e9ba2e4aa47680a768a","12":"0011adc5dd7ffbe4324c","13":"3c818ef0b7618e38caf4","14":"0585576ba52178280446","15":"251fda4d459ee1f78123","16":"0a39c6f5cdf6cc23fcc3","17":"edf1d34dc5ef014b819f","19":"c5571fa45897dd29c89f","20":"843964feeaf022045ae7","21":"5c77ad2b25d0ff509e04","22":"bd532a846fb9650ad9b1","24":"67fc3a080512ac82629d","25":"638280c0a94c4f586638","26":"154834a6e117452e8fe5","27":"36b9109ff3a1a6fd512d","28":"c800dfd02083bf62dd24","29":"2df12cbe2ae4367e7c08","31":"dea444b8fc060c7707f5","32":"e40886dc65cd6a08df55","33":"0b2266de388ef4253867","34":"d3805a01c199477bfc89","35":"18921e765803dcfb7ecc","36":"e3dda8fb6ebed9f521d5","37":"7918ebb2257eeca6c3b2","38":"aff56752cb49e351632f","39":"52adff4eb956bf507ff4","40":"1b4ae239453b2271ebb3","41":"e1725d5a9ce0e7d12624","42":"abcaf0636c32c10b0a5a","43":"ba69abee39c696ba434c","44":"f3ca28b4ca7ef3410859","45":"d4619fbf70cc744a8853","46":"bc92b4d0e126662ac1d6","47":"12c07750dcb2e62079a2","48":"938e50057d6b66bfb039","49":"a88df55024cc66f2d805","50":"f7dca03a8d75eb2c323a","51":"03589a4076918120a810","52":"ae286588be52e5e7e333","53":"68baf9191b696ab93093","54":"68199326c08542803cbc","55":"aaa4ddd1cae0e9b4f562","56":"4e3d893ffb93b3df886c","57":"3d62bec16e5994527406","59":"c82e2f168806937afbad","66":"633e8f405a5bd6280900","67":"75f2c2e890c1f2eefa1d","68":"af908d39690260248b85","69":"5740e9a5a5a43050615d","70":"99a6757685b69be21bc5","71":"48f9120a69e7284137d7","72":"2c3ddf121b396cfcaa47","77":"2179d180d8f65824c074","78":"6e5dd4a62ff9913cf9db","80":"f8d4dab617e3a103962f","81":"3dda0fef02dfccad3cb3","82":"8347c9134ed371998a52","83":"2d0fa7b1ecd0a11271ca","84":"153e45fa9fc313a7d290","85":"c7d13ad53c125593b8b3","86":"a30f4868c98349281f87","87":"d310a874d33348398664","88":"eddbd5fe45a31aa060ee","89":"80dcf9f934aa3c317a3e","90":"ca3e2f0c66afa2e7374a","91":"86d944f72828a506b74b","92":"bf4b2b52b32d228942a7","93":"108b6ac821f902b5a357","102":"37b03af25bca89d08136","103":"2286e4f18345cacf50b3","104":"9d03df507a15a0007b65","105":"0a5068c05545d5ece245","106":"6e5c13c14f9cc982fb8a","108":"9f63a0fa947107e56cd7","109":"a10c80afb22232646cb2","119":"8cf73fcb0e9c62bd444d"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -32036,14 +32036,14 @@ var map = {
 		3,
 		5,
 		43,
-		69,
+		9,
 		84,
 		21,
 		89,
 		31,
 		39,
 		12,
-		42,
+		29,
 		36
 	],
 	"./Auth/Register/": [
@@ -32056,14 +32056,14 @@ var map = {
 		3,
 		5,
 		43,
-		69,
+		9,
 		84,
 		21,
 		89,
 		31,
 		39,
 		12,
-		42,
+		29,
 		36
 	],
 	"./Auth/Register/AcademicInfo": [
@@ -32118,7 +32118,7 @@ var map = {
 		43,
 		84,
 		39,
-		29
+		81
 	],
 	"./Auth/Register/PasswordInfo.js": [
 		"./resources/js/Pages/Auth/Register/PasswordInfo.js",
@@ -32130,7 +32130,7 @@ var map = {
 		43,
 		84,
 		39,
-		29
+		81
 	],
 	"./Auth/Register/PersonalInfo": [
 		"./resources/js/Pages/Auth/Register/PersonalInfo.js",
@@ -32170,14 +32170,14 @@ var map = {
 		3,
 		5,
 		43,
-		69,
+		9,
 		84,
 		21,
 		89,
 		31,
 		39,
 		12,
-		42,
+		29,
 		36
 	],
 	"./Auth/Register/index.js": [
@@ -32190,14 +32190,14 @@ var map = {
 		3,
 		5,
 		43,
-		69,
+		9,
 		84,
 		21,
 		89,
 		31,
 		39,
 		12,
-		42,
+		29,
 		36
 	],
 	"./Auth/template": [
@@ -32223,12 +32223,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		114
+		26,
+		55
 	],
 	"./Dashboard/DashboardLayout.js": [
 		"./resources/js/Pages/Dashboard/DashboardLayout.js",
@@ -32245,12 +32246,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		114
+		26,
+		55
 	],
 	"./Dashboard/Template": [
 		"./resources/js/Pages/Dashboard/Template.js",
@@ -32267,12 +32269,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		110
+		26,
+		46
 	],
 	"./Dashboard/Template.js": [
 		"./resources/js/Pages/Dashboard/Template.js",
@@ -32289,12 +32292,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		110
+		26,
+		46
 	],
 	"./Dashboard/class": [
 		"./resources/js/Pages/Dashboard/class/index.js",
@@ -32313,7 +32317,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32323,6 +32327,7 @@ var map = {
 		21,
 		52,
 		54,
+		26,
 		51
 	],
 	"./Dashboard/class/": [
@@ -32342,7 +32347,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32352,6 +32357,7 @@ var map = {
 		21,
 		52,
 		54,
+		26,
 		51
 	],
 	"./Dashboard/class/ClassForm": [
@@ -32475,7 +32481,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32485,6 +32491,7 @@ var map = {
 		21,
 		52,
 		54,
+		26,
 		51
 	],
 	"./Dashboard/class/index.js": [
@@ -32504,7 +32511,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32514,6 +32521,7 @@ var map = {
 		21,
 		52,
 		54,
+		26,
 		51
 	],
 	"./Dashboard/classroom": [
@@ -32533,7 +32541,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32544,8 +32552,9 @@ var map = {
 		21,
 		52,
 		54,
-		14,
-		44
+		26,
+		13,
+		42
 	],
 	"./Dashboard/classroom/": [
 		"./resources/js/Pages/Dashboard/classroom/index.js",
@@ -32564,7 +32573,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32575,8 +32584,9 @@ var map = {
 		21,
 		52,
 		54,
-		14,
-		44
+		26,
+		13,
+		42
 	],
 	"./Dashboard/classroom/ClassroomForm": [
 		"./resources/js/Pages/Dashboard/classroom/ClassroomForm.js",
@@ -32594,7 +32604,7 @@ var map = {
 		24,
 		15,
 		20,
-		115
+		87
 	],
 	"./Dashboard/classroom/ClassroomForm.js": [
 		"./resources/js/Pages/Dashboard/classroom/ClassroomForm.js",
@@ -32612,7 +32622,7 @@ var map = {
 		24,
 		15,
 		20,
-		115
+		87
 	],
 	"./Dashboard/classroom/ClassroomsList": [
 		"./resources/js/Pages/Dashboard/classroom/ClassroomsList.js",
@@ -32635,7 +32645,7 @@ var map = {
 		84,
 		21,
 		52,
-		14,
+		13,
 		27
 	],
 	"./Dashboard/classroom/ClassroomsList.js": [
@@ -32659,7 +32669,7 @@ var map = {
 		84,
 		21,
 		52,
-		14,
+		13,
 		27
 	],
 	"./Dashboard/classroom/Header": [
@@ -32709,7 +32719,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32720,8 +32730,9 @@ var map = {
 		21,
 		52,
 		54,
-		14,
-		44
+		26,
+		13,
+		42
 	],
 	"./Dashboard/classroom/index.js": [
 		"./resources/js/Pages/Dashboard/classroom/index.js",
@@ -32740,7 +32751,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32751,8 +32762,9 @@ var map = {
 		21,
 		52,
 		54,
-		14,
-		44
+		26,
+		13,
+		42
 	],
 	"./Dashboard/environ": [
 		"./resources/js/Pages/Dashboard/environ/index.js",
@@ -32771,7 +32783,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32782,9 +32794,10 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		99
+		44
 	],
 	"./Dashboard/environ/": [
 		"./resources/js/Pages/Dashboard/environ/index.js",
@@ -32803,7 +32816,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32814,9 +32827,10 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		99
+		44
 	],
 	"./Dashboard/environ/EnvironForm": [
 		"./resources/js/Pages/Dashboard/environ/EnvironForm.js",
@@ -32834,7 +32848,7 @@ var map = {
 		24,
 		15,
 		20,
-		116
+		88
 	],
 	"./Dashboard/environ/EnvironForm.js": [
 		"./resources/js/Pages/Dashboard/environ/EnvironForm.js",
@@ -32852,7 +32866,7 @@ var map = {
 		24,
 		15,
 		20,
-		116
+		88
 	],
 	"./Dashboard/environ/EnvironsList": [
 		"./resources/js/Pages/Dashboard/environ/EnvironsList.js",
@@ -32875,8 +32889,8 @@ var map = {
 		84,
 		21,
 		52,
+		13,
 		14,
-		18,
 		28
 	],
 	"./Dashboard/environ/EnvironsList.js": [
@@ -32900,8 +32914,8 @@ var map = {
 		84,
 		21,
 		52,
+		13,
 		14,
-		18,
 		28
 	],
 	"./Dashboard/environ/Header": [
@@ -32951,7 +32965,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32962,9 +32976,10 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		99
+		44
 	],
 	"./Dashboard/environ/index.js": [
 		"./resources/js/Pages/Dashboard/environ/index.js",
@@ -32983,7 +32998,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -32994,9 +33009,10 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		99
+		44
 	],
 	"./Dashboard/home": [
 		"./resources/js/Pages/Dashboard/home.js",
@@ -33013,12 +33029,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		111
+		26,
+		53
 	],
 	"./Dashboard/home.js": [
 		"./resources/js/Pages/Dashboard/home.js",
@@ -33035,12 +33052,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
 		54,
-		111
+		26,
+		53
 	],
 	"./Dashboard/organization": [
 		"./resources/js/Pages/Dashboard/organization/index.js",
@@ -33059,7 +33077,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -33070,10 +33088,11 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		23,
-		100
+		35,
+		56
 	],
 	"./Dashboard/organization/": [
 		"./resources/js/Pages/Dashboard/organization/index.js",
@@ -33092,7 +33111,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -33103,10 +33122,11 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		23,
-		100
+		35,
+		56
 	],
 	"./Dashboard/organization/Header": [
 		"./resources/js/Pages/Dashboard/organization/Header.js",
@@ -33154,7 +33174,7 @@ var map = {
 		24,
 		15,
 		20,
-		117
+		93
 	],
 	"./Dashboard/organization/OrganizationForm.js": [
 		"./resources/js/Pages/Dashboard/organization/OrganizationForm.js",
@@ -33172,7 +33192,7 @@ var map = {
 		24,
 		15,
 		20,
-		117
+		93
 	],
 	"./Dashboard/organization/OrganizationsList": [
 		"./resources/js/Pages/Dashboard/organization/OrganizationsList.js",
@@ -33195,9 +33215,9 @@ var map = {
 		84,
 		21,
 		52,
+		13,
 		14,
-		18,
-		23,
+		35,
 		91
 	],
 	"./Dashboard/organization/OrganizationsList.js": [
@@ -33221,9 +33241,9 @@ var map = {
 		84,
 		21,
 		52,
+		13,
 		14,
-		18,
-		23,
+		35,
 		91
 	],
 	"./Dashboard/organization/index": [
@@ -33243,7 +33263,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -33254,10 +33274,11 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		23,
-		100
+		35,
+		56
 	],
 	"./Dashboard/organization/index.js": [
 		"./resources/js/Pages/Dashboard/organization/index.js",
@@ -33276,7 +33297,7 @@ var map = {
 		5,
 		43,
 		34,
-		69,
+		9,
 		24,
 		70,
 		19,
@@ -33287,21 +33308,22 @@ var map = {
 		21,
 		52,
 		54,
+		26,
+		13,
 		14,
-		18,
-		23,
-		100
+		35,
+		56
 	],
 	"./Dashboard/routes": [
 		"./resources/js/Pages/Dashboard/routes.js",
 		0,
-		19,
+		54,
 		49
 	],
 	"./Dashboard/routes.js": [
 		"./resources/js/Pages/Dashboard/routes.js",
 		0,
-		19,
+		54,
 		49
 	],
 	"./Error": [
@@ -33443,10 +33465,10 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
+		19,
 		22,
-		54,
 		26
 	],
 	"./SiteLayout/": [
@@ -33464,10 +33486,10 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
+		19,
 		22,
-		54,
 		26
 	],
 	"./SiteLayout/Navbar": [
@@ -33513,7 +33535,8 @@ var map = {
 		17,
 		7,
 		8,
-		9
+		19,
+		71
 	],
 	"./SiteLayout/Sidebar.js": [
 		"./resources/js/Pages/SiteLayout/Sidebar.js",
@@ -33524,7 +33547,8 @@ var map = {
 		17,
 		7,
 		8,
-		9
+		19,
+		71
 	],
 	"./SiteLayout/SiteFooter": [
 		"./resources/js/Pages/SiteLayout/SiteFooter.js",
@@ -33563,10 +33587,10 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
+		19,
 		22,
-		54,
 		26
 	],
 	"./SiteLayout/index.js": [
@@ -33584,23 +33608,21 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
+		19,
 		22,
-		54,
 		26
 	],
 	"./Workspace/Routes": [
 		"./resources/js/Pages/Workspace/Routes.js",
 		0,
-		19,
-		13
+		72
 	],
 	"./Workspace/Routes.js": [
 		"./resources/js/Pages/Workspace/Routes.js",
 		0,
-		19,
-		13
+		72
 	],
 	"./Workspace/Template": [
 		"./resources/js/Pages/Workspace/Template.js",
@@ -33617,12 +33639,12 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		112
+		26,
+		25
 	],
 	"./Workspace/Template.js": [
 		"./resources/js/Pages/Workspace/Template.js",
@@ -33639,12 +33661,12 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		112
+		26,
+		25
 	],
 	"./Workspace/WorkspaceLayout": [
 		"./resources/js/Pages/Workspace/WorkspaceLayout.js",
@@ -33661,12 +33683,12 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		118
+		26,
+		32
 	],
 	"./Workspace/WorkspaceLayout.js": [
 		"./resources/js/Pages/Workspace/WorkspaceLayout.js",
@@ -33683,12 +33705,12 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		118
+		26,
+		32
 	],
 	"./Workspace/home": [
 		"./resources/js/Pages/Workspace/home.js",
@@ -33705,12 +33727,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		113
+		69,
+		26,
+		85
 	],
 	"./Workspace/home.js": [
 		"./resources/js/Pages/Workspace/home.js",
@@ -33727,12 +33750,13 @@ var map = {
 		10,
 		86,
 		34,
-		69,
+		9,
 		70,
 		19,
 		22,
-		54,
-		113
+		69,
+		26,
+		85
 	]
 };
 function webpackAsyncContext(req) {
