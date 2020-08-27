@@ -10,7 +10,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import ClassroomForm from "./ClassroomForm";
 import ClassroomsList from "./ClassroomsList";
 
-const Classroom = ({ classrooms }) => {
+const Classroom = ({ classrooms,url }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const CrmForm = useRef(null);
@@ -34,6 +34,7 @@ const Classroom = ({ classrooms }) => {
         <Dashboardlayout title="Classrooms">
             <Layout.Content style={{ margin: "0 16px" }}>
                 <Header showDrawer={showDrawer} />
+                <h1>{url}</h1>
                 <ClassroomsList classrooms={classrooms} />
                 {classrooms.length === 0 && (
                     <Empty description={<span>No Classrooms found!</span>}>

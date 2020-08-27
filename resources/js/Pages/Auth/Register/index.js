@@ -32,7 +32,8 @@ function Register() {
         password: "",
         password_confirmation: "",
 
-        profile_image: ""
+        profile_image: "",
+        initial_profile_image: ""
     });
     const handleChange = e => {
         const key = e.target.name;

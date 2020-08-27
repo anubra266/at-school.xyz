@@ -26,26 +26,22 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('home', 'PrivateController@home')->name('home');
 
-    Route::group(['prefix' => 'organization', 'middleware' => [/*'permission:create_organizations'*/]], function () {
+    //? Organization routes
+    Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
 
-        Route::group(['middleware' => ['can:create_organizations']], function () {
-            Route::get('/', 'OrganizationController@index')->name('organization.index');
-            Route::post('/', 'OrganizationController@store')->name('organization.create');
-        });
-
+        Route::get('/', 'OrganizationController@index')->name('organization.index');
+        Route::post('/', 'OrganizationController@store')->name('organization.create');
 
         Route::group(['middleware' => ['can:update,organization']], function () {
-            Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code')
-                ->middleware('can:update,organization');
+            Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
             Route::patch('/{organization}', 'OrganizationController@update')->name('organization.edit');
         });
     });
 
-    Route::group(['prefix' => 'environ'], function () {
-        Route::group(['middleware' => ['can:create_environs']], function () {
-            Route::get('/', 'EnvironController@index')->name('environ.index');
-            Route::post('/', 'EnvironController@store')->name('environ.create');
-        });
+    //? Environ routes
+    Route::group(['prefix' => 'environ', 'middleware' => ['can:create_environs']], function () {
+        Route::get('/', 'EnvironController@index')->name('environ.index');
+        Route::post('/', 'EnvironController@store')->name('environ.create');
 
         Route::group(['middleware' => ['can:update,environ']], function () {
             Route::patch('/{environ}/newcode', 'EnvironController@ChangeCode')->name('environ.change_code');
@@ -53,24 +49,29 @@ Route::group(['middleware' => ['auth']], function () {
         });
     });
 
-    Route::group(['prefix' => 'classroom'], function () {
-        Route::group(['middleware' => ['can:create_classrooms']], function () {
-            Route::get('/', 'ClassroomController@index')->name('classroom.index');
-            Route::post('/', 'ClassroomController@store')->name('classroom.create');
-        });
-
-        Route::group(['middleware' => ['can:update,classroom']], function () {
-            Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
-            Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
-        });
-    });
-
+    //? Classroom Participation routes
     Route::group(['prefix' => 'class'], function () {
         Route::group(['middleware' => ['can:participate_classes']], function () {
             Route::get('/', 'ClassController@index')->name('class.index');
             Route::post('/join', 'ClassController@join')->name('class.join');
             Route::patch('/{classroom}/leave', 'ClassController@leave')->name('class.leave');
         });
+    });
+
+    //? Classroom routes
+    Route::group(['prefix' => 'classroom', 'middleware' => ['can:create_classrooms']], function () {
+        Route::get('/', 'ClassroomController@index')->name('classroom.index');
+        Route::post('/', 'ClassroomController@store')->name('classroom.create');
+
+        Route::group(['middleware' => ['can:update,classroom']], function () {
+            Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
+            Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
+        });
+
+        // TODO middleware that checks if you are a member or educator of the class
+        //? Classroom activities routes
+        Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
+        Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
     });
 });
 

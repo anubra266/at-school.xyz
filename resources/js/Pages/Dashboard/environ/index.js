@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { usePage } from "@inertiajs/inertia-react";
 import Header from "./Header";
 import Layout from "antd/lib/layout";
 import Empty from "antd/lib/empty";
@@ -12,6 +13,7 @@ import EnvironsList from "./EnvironsList";
 const Environ = ({ environs }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
+    const { flash } = usePage();
     const EnvForm = useRef(null);
     const showDrawer = () => {
         setVisible(true);

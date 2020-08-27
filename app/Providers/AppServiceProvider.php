@@ -63,6 +63,8 @@ class AppServiceProvider extends ServiceProvider
                             'class' => Auth::user()->can('participate_classes'),
                             'practice' =>  Auth::user()->can('practice'),
                             'settings' => true,
+
+                            'classroom_home' => true,
                         ]
                         // 'account' => [
                         //     'id' => Auth::user()->account->id,

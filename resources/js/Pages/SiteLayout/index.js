@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { usePage } from "@inertiajs/inertia-react";
+import { Helmet } from "react-helmet";
 import Layout from "antd/lib/layout";
 import message from "antd/lib/message";
 
@@ -44,6 +45,9 @@ function index({ title, noSidebar, children, routes }) {
     }
     return (
         <React.Fragment>
+            <Helmet>
+                <meta name="theme-color" content="red" />
+            </Helmet>
             <Layout style={{ minHeight: "100vh" }}>
                 <Navbar pageLoader={pageLoader} />
                 <Layout>

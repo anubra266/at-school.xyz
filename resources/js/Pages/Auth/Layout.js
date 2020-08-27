@@ -19,7 +19,7 @@ function Layout({ children, title }) {
                 <nav
                     className="navbar sticky-top text-light"
                     style={{
-                        backgroundColor: "#bd59d4",
+                        backgroundColor: "#7971ea",
                         boxShadow: "1px 1px 15px black"
                     }}
                 >
@@ -40,7 +40,7 @@ function Layout({ children, title }) {
                 <div
                     className="container-login100"
                     style={{
-                        backgroundImage: `url(${require("@/assets/auth/images/bg-01.jpg")})`
+
                     }}
                 >
                     <div className="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">

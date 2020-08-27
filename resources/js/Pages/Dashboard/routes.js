@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
 import BankOutlined from "@ant-design/icons/BankOutlined";
 import ApartmentOutlined from "@ant-design/icons/ApartmentOutlined";
@@ -19,7 +19,7 @@ export default [
         route: "organization",
         icon: <BankOutlined />
     },
-    {
+    { 
         name: "Environs",
         route: "environ",
         icon: <ApartmentOutlined />

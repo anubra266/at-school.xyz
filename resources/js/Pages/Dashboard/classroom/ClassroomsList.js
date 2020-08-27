@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { InertiaLink } from "@inertiajs/inertia-react";
 import Table from "antd/lib/table";
 import PopOver from "antd/lib/popover";
 import PopConfirm from "antd/lib/popconfirm";
@@ -52,7 +53,9 @@ const ClassroomsList = ({ classrooms }) => {
                         title="Name"
                         dataIndex="name"
                         key="name"
-                        render={text => <a>{text}</a>}
+                        render={(text, record) => (
+                            <InertiaLink href={record.url}>{text}</InertiaLink>
+                        )}
                         sorter={(a, b) =>
                             a.name === b.name ? 0 : a.name < b.name ? -1 : 1
                         }

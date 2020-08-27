@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--SEO assets -->
-    <meta name="theme-color" content="rgba(10,10,200,0.6)" />
+    <meta name="theme-color" content="#7971ea" />
     <meta name="title" content="at-School" />
     <meta name="description" content="We help to keep the flow of education, wherever you are, at anytime." />
     <meta property="og:type" content="website" />

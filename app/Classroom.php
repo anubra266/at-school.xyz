@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Mtvs\EloquentHashids\HasHashid;
 use Illuminate\Database\Eloquent\Model;
+use Mtvs\EloquentHashids\HashidRouting;
 
 class Classroom extends Model
 {
+    use HasHashid, HashidRouting;
 
     protected $guarded = [];
 

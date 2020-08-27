@@ -17,8 +17,10 @@
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
+        "mtvs/eloquent-hashids": "^2.0",
         "spatie/laravel-permission": "^3.13",
-        "tightenco/ziggy": "^0.9.4"
+        "tightenco/ziggy": "^0.9.4",
+        "vinkla/hashids": "^8.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

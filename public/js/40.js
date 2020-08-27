@@ -1,175 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[40],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M272.9 512l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L186.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H532c6.7 0 10.4-7.7 6.3-12.9L272.9 512zm304 0l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L490.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H836c6.7 0 10.4-7.7 6.3-12.9L576.9 512z" } }] }, "name": "double-left", "theme": "outlined" };
-exports.default = DoubleLeftOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DoubleRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M533.2 492.3L277.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H188c-6.7 0-10.4 7.7-6.3 12.9L447.1 512 181.7 851.1A7.98 7.98 0 00188 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5zm304 0L581.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H492c-6.7 0-10.4 7.7-6.3 12.9L751.1 512 485.7 851.1A7.98 7.98 0 00492 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5z" } }] }, "name": "double-right", "theme": "outlined" };
-exports.default = DoubleRightOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleLeftOutlined.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleLeftOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DoubleRightOutlined.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DoubleRightOutlined.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DoubleRightOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleLeftOutlined = function DoubleLeftOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleLeftOutlined.default
-  }));
-};
-
-DoubleLeftOutlined.displayName = 'DoubleLeftOutlined';
-
-var _default = React.forwardRef(DoubleLeftOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DoubleRightOutlined = function DoubleRightOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DoubleRightOutlined.default
-  }));
-};
-
-DoubleRightOutlined.displayName = 'DoubleRightOutlined';
-
-var _default = React.forwardRef(DoubleRightOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Auth/Register/FormFooter.js":
-/*!********************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/FormFooter.js ***!
-  \********************************************************/
+/***/ "./resources/js/Pages/Auth/ForgotPassword/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Auth/ForgotPassword/index.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -179,68 +13,194 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Shared/LoadingButton */ "./resources/js/Shared/LoadingButton.js");
-/* harmony import */ var _ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js");
-/* harmony import */ var _ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/DoubleRightOutlined.js");
-/* harmony import */ var _ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Pages_Auth_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Pages/Auth/Layout */ "./resources/js/Pages/Auth/Layout.js");
 
 
 
 
-
-
-function FormFooter(_ref) {
-  var page = _ref.page,
-      setPage = _ref.setPage,
-      lastPage = _ref.lastPage,
-      checking = _ref.checking;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-between"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
+function ForgotPassword() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Auth_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "at-school Login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "login100-form validate-form"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "login100-form-title p-b-37"
+  }, "Reset Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrap-input100 m-b-20"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "input100",
+    type: "email",
+    name: "email",
+    placeholder: "Account email",
+    required: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "focus-input100"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-login100-form-btn"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    disabled: page === 0,
-    type: "button",
-    className: "login100-form-btn atlogin",
-    onClick: function onClick() {
-      setPage(page > -1 && page - 1);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_DoubleLeftOutlined__WEBPACK_IMPORTED_MODULE_3___default.a, null), " Prev")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
-  }, page === lastPage ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_LoadingButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     type: "submit",
-    className: "login100-form-btn atlogin",
-    loading: checking
-  }, "Sign Up") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "login100-form-btn atlogin",
-    onClick: function onClick() {
-      setPage(page < lastPage && page + 1);
-    }
-  }, "Next ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ant_design_icons_DoubleRightOutlined__WEBPACK_IMPORTED_MODULE_4___default.a, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "login100-form-btn"
+  }, "Reset Password")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-between mt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: "txt2 hov1",
-    href: route("password.request")
-  }, "Forgot Password?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    href: route("login")
+  }, "Sign In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 text-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: "txt2 hov1",
-    href: route("login")
-  }, "Sign In"))));
+    href: route("register")
+  }, "Sign Up")))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (FormFooter);
+/* harmony default export */ __webpack_exports__["default"] = (ForgotPassword);
 
 /***/ }),
 
-/***/ "./resources/js/Shared/LoadingButton.js":
+/***/ "./resources/js/Pages/Auth/Layout.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Auth/Layout.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Shared_FlashMessages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Shared/FlashMessages */ "./resources/js/Shared/FlashMessages.js");
+/* harmony import */ var _Shared_Loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Shared/Loading */ "./resources/js/Shared/Loading.js");
+
+
+
+
+var Assets = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
+  return Promise.all(/*! import() */[__webpack_require__.e(20), __webpack_require__.e(48)]).then(__webpack_require__.bind(null, /*! @/Pages/Auth/Assets */ "./resources/js/Pages/Auth/Assets.js"));
+});
+
+function Layout(_ref) {
+  var children = _ref.children,
+      title = _ref.title;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    document.title = title;
+  }, [title]);
+  var pageLoader = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); //* Start page Load on Navigator Change
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
+    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], null)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Assets, {
+    pageLoader: pageLoader
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "navbar sticky-top text-light",
+    style: {
+      backgroundColor: "#7971ea",
+      boxShadow: "1px 1px 15px black"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route("landing")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "navbar-brand mb-0 login100-form-title text-white"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: __webpack_require__(/*! @/assets/general/images/at-school.png */ "./resources/js/assets/general/images/at-school.png"),
+    width: "30",
+    height: "30",
+    className: "d-inline-block align-top",
+    alt: "",
+    loading: "lazy"
+  }), "at-school"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-login100",
+    style: {}
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_FlashMessages__WEBPACK_IMPORTED_MODULE_2__["default"], null), children))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./resources/js/Shared/FlashMessages.js":
 /*!**********************************************!*\
-  !*** ./resources/js/Shared/LoadingButton.js ***!
+  !*** ./resources/js/Shared/FlashMessages.js ***!
   \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      visible = _useState2[0],
+      setVisible = _useState2[1];
+
+  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["usePage"])(),
+      flash = _usePage.flash,
+      errors = _usePage.errors;
+
+  var numOfErrors = Object.keys(errors).length;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setVisible(true);
+  }, [flash, errors]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, flash.success && visible && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "alert alert-danger alert-dismissible fade show",
+    role: "alert"
+  }, flash.success, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setVisible(false);
+    },
+    type: "button",
+    className: "close",
+    "aria-label": "Close"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, "\xD7"))), (flash.error || numOfErrors > 0) && visible && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "alert alert-danger alert-dismissible fade show",
+    role: "alert"
+  }, flash.error && flash.error, numOfErrors === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "There's an ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "error"), " in the form."), numOfErrors > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, numOfErrors, " errors"), " ", "in the form."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setVisible(false);
+    },
+    type: "button",
+    className: "close",
+    "aria-label": "Close"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, "\xD7")))));
+});
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Loading.js":
+/*!****************************************!*\
+  !*** ./resources/js/Shared/Loading.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -250,24 +210,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-function Spinner(_ref) {
-  var children = _ref.children,
-      type = _ref.type,
-      className = _ref.className,
-      loading = _ref.loading;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: className,
-    type: type,
-    disabled: loading
-  }, loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "spinner-border",
-    role: "status"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Loading...")) : children);
-}
+var Loading = function Loading() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "preloader"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "status"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "spinner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "double-bounce1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "double-bounce2"
+  }))));
+};
 
-/* harmony default export */ __webpack_exports__["default"] = (Spinner);
+/* harmony default export */ __webpack_exports__["default"] = (Loading);
+
+/***/ }),
+
+/***/ "./resources/js/assets/general/images/at-school.png":
+/*!**********************************************************!*\
+  !*** ./resources/js/assets/general/images/at-school.png ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/at-school.png?15f72add27c183615e4bd0bdba2f72a4";
 
 /***/ })
 

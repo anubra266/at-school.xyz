@@ -16,6 +16,9 @@ class ClassroomService
     public function index()
     {
         $classrooms = authUser()->classrooms()->latest()->get();
+        foreach ($classrooms as $classroom) {
+            $classroom->url = route('classroom.home', ['classroom' => $classroom->hashid()]);
+        }
         return $classrooms;
     }
 

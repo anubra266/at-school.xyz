@@ -8,7 +8,7 @@ class ClassService
 {
     public function __construct(Classroom $classroom)
     {
-        $this->classroom = $classroom;
+        $this->class = $classroom;
     }
     public function index()
     {
@@ -18,7 +18,7 @@ class ClassService
     public function join($request)
     {
         $classroom_code = $request->validated();
-        $classroom = $this->classroom->whereCode($classroom_code)->first();
+        $classroom = $this->class->whereCode($classroom_code)->first();
         if (!$classroom) {
             return [null, 'Invalid Classroom code!'];
         } elseif ($classroom->user_id === authUser()->id) {

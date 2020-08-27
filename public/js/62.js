@@ -1,92 +1,218 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[62],{
 
-/***/ "./resources/js/Pages/Auth/Register/ProfileImageInfo.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/Pages/Auth/Register/ProfileImageInfo.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/antd/lib/_util/responsiveObserve.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/antd/lib/_util/responsiveObserve.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_avatar_edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-avatar-edit */ "./node_modules/react-avatar-edit/lib/react-avatar.js");
-/* harmony import */ var react_avatar_edit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_avatar_edit__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_notification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/notification */ "./node_modules/antd/lib/notification/index.js");
-/* harmony import */ var antd_lib_notification__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_notification__WEBPACK_IMPORTED_MODULE_2__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-// noprotect
 
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.responsiveMap = exports.responsiveArray = void 0;
 
-function ProfileimageInfo(_ref) {
-  var data = _ref.data,
-      handleChange = _ref.handleChange,
-      errors = _ref.errors;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
-      _useState2 = _slicedToArray(_useState, 2),
-      src = _useState2[0],
-      setSrc = _useState2[1];
+var _extends3 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
 
-  var onCrop = function onCrop(preview) {
-    setSrc(preview);
-    handleChange({
-      target: {
-        name: "profile_image",
-        value: preview
-      }
+var responsiveArray = ['xxl', 'xl', 'lg', 'md', 'sm', 'xs'];
+exports.responsiveArray = responsiveArray;
+var responsiveMap = {
+  xs: '(max-width: 575px)',
+  sm: '(min-width: 576px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 992px)',
+  xl: '(min-width: 1200px)',
+  xxl: '(min-width: 1600px)'
+};
+exports.responsiveMap = responsiveMap;
+var subscribers = new Map();
+var subUid = -1;
+var screens = {};
+var responsiveObserve = {
+  matchHandlers: {},
+  dispatch: function dispatch(pointMap) {
+    screens = pointMap;
+    subscribers.forEach(function (func) {
+      return func(screens);
     });
-  };
+    return subscribers.size >= 1;
+  },
+  subscribe: function subscribe(func) {
+    if (!subscribers.size) this.register();
+    subUid += 1;
+    subscribers.set(subUid, func);
+    func(screens);
+    return subUid;
+  },
+  unsubscribe: function unsubscribe(token) {
+    subscribers["delete"](token);
+    if (!subscribers.size) this.unregister();
+  },
+  unregister: function unregister() {
+    var _this = this;
 
-  var onBeforeFileLoad = function onBeforeFileLoad(elem) {
-    var image = elem.target.files[0];
-    var name = image.name;
-    console.log([name]);
+    Object.keys(responsiveMap).forEach(function (screen) {
+      var matchMediaQuery = responsiveMap[screen];
+      var handler = _this.matchHandlers[matchMediaQuery];
+      handler === null || handler === void 0 ? void 0 : handler.mql.removeListener(handler === null || handler === void 0 ? void 0 : handler.listener);
+    });
+    subscribers.clear();
+  },
+  register: function register() {
+    var _this2 = this;
 
-    if (image.size > 2000000) {
-      antd_lib_notification__WEBPACK_IMPORTED_MODULE_2___default.a["error"]({
-        message: "Upload Profile Picture",
-        description: "Image must be smaller than 2mb.",
-        placement: "bottomRight"
-      });
-      elem.target.value = "";
-    }
-  };
+    Object.keys(responsiveMap).forEach(function (screen) {
+      var matchMediaQuery = responsiveMap[screen];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-center"
-  }, errors.profile_image && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-danger"
-  }, errors.profile_image[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-    className: "milabel "
-  }, "Profile Picture")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center mb-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_avatar_edit__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    width: 200,
-    height: 200,
-    onCrop: onCrop,
-    onBeforeFileLoad: onBeforeFileLoad,
-    mimeTypes: "image/jpeg",
-    backgroundColor: "white",
-    src: src
-  })));
+      var listener = function listener(_ref) {
+        var matches = _ref.matches;
+
+        _this2.dispatch((0, _extends3["default"])((0, _extends3["default"])({}, screens), (0, _defineProperty2["default"])({}, screen, matches)));
+      };
+
+      var mql = window.matchMedia(matchMediaQuery);
+      mql.addListener(listener);
+      _this2.matchHandlers[matchMediaQuery] = {
+        mql: mql,
+        listener: listener
+      };
+      listener(mql);
+    });
+  }
+};
+var _default = responsiveObserve;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/dropdown/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/dropdown/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _dropdown = _interopRequireDefault(__webpack_require__(/*! ./dropdown */ "./node_modules/antd/lib/dropdown/dropdown.js"));
+
+var _default = _dropdown["default"];
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/grid/hooks/useBreakpoint.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/antd/lib/grid/hooks/useBreakpoint.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _responsiveObserve = _interopRequireDefault(__webpack_require__(/*! ../../_util/responsiveObserve */ "./node_modules/antd/lib/_util/responsiveObserve.js"));
+
+function useBreakpoint() {
+  var _useState = (0, _react.useState)({}),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
+      screens = _useState2[0],
+      setScreens = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    var token = _responsiveObserve["default"].subscribe(function (supportScreens) {
+      setScreens(supportScreens);
+    });
+
+    return function () {
+      return _responsiveObserve["default"].unsubscribe(token);
+    };
+  }, []);
+  return screens;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (ProfileimageInfo);
+var _default = useBreakpoint;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/rc-util/lib/getScrollBarSize.js":
+/*!******************************************************!*\
+  !*** ./node_modules/rc-util/lib/getScrollBarSize.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getScrollBarSize;
+var cached;
+
+function getScrollBarSize(fresh) {
+  if (typeof document === 'undefined') {
+    return 0;
+  }
+
+  if (fresh || cached === undefined) {
+    var inner = document.createElement('div');
+    inner.style.width = '100%';
+    inner.style.height = '200px';
+    var outer = document.createElement('div');
+    var outerStyle = outer.style;
+    outerStyle.position = 'absolute';
+    outerStyle.top = 0;
+    outerStyle.left = 0;
+    outerStyle.pointerEvents = 'none';
+    outerStyle.visibility = 'hidden';
+    outerStyle.width = '200px';
+    outerStyle.height = '150px';
+    outerStyle.overflow = 'hidden';
+    outer.appendChild(inner);
+    document.body.appendChild(outer);
+    var widthContained = inner.offsetWidth;
+    outer.style.overflow = 'scroll';
+    var widthScroll = inner.offsetWidth;
+
+    if (widthContained === widthScroll) {
+      widthScroll = outer.clientWidth;
+    }
+
+    document.body.removeChild(outer);
+    cached = widthContained - widthScroll;
+  }
+
+  return cached;
+}
 
 /***/ })
 

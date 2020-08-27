@@ -1,11 +1,9 @@
 // noprotect
 import React, { useState } from "react";
 import Avatar from "react-avatar-edit";
-import notification from "antd/lib/notification"
+import notification from "antd/lib/notification";
 function ProfileimageInfo({ data, handleChange, errors }) {
-    const [src, setSrc] = useState("");
     const onCrop = preview => {
-        setSrc(preview);
         handleChange({
             target: { name: "profile_image", value: preview }
         });
@@ -13,14 +11,30 @@ function ProfileimageInfo({ data, handleChange, errors }) {
     const onBeforeFileLoad = elem => {
         const image = elem.target.files[0];
         const name = image.name;
-        console.log([name]);
-        if (image.size > 2000000) {
+        if (image.size > 5000000) {
             notification["error"]({
                 message: "Upload Profile Picture",
-                description: "Image must be smaller than 2mb.",
+                description: "Image must be smaller than 5mb.",
                 placement: "bottomRight"
             });
             elem.target.value = "";
+        } else {
+            var reader = new FileReader();
+            reader.addEventListener(
+                "load",
+                function() {
+                    // convert image file to base64 string
+                    var src = reader.result;
+                    //add file to input
+                    handleChange({
+                        target: { name: "initial_profile_image", value: src }
+                    });
+                },
+                false
+            );
+            if (image) {
+                reader.readAsDataURL(image);
+            }
         }
     };
     return (
@@ -39,7 +53,7 @@ function ProfileimageInfo({ data, handleChange, errors }) {
                     onBeforeFileLoad={onBeforeFileLoad}
                     mimeTypes={"image/jpeg"}
                     backgroundColor={"white"}
-                    src={src}
+                    src={data.initial_profile_image}
                 />
             </div>
         </React.Fragment>

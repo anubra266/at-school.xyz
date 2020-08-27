@@ -1,299 +1,433 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[25],{
 
-/***/ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js":
-/*!***********************************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/organization/OrganizationForm.js ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_use__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-use */ "./node_modules/react-use/esm/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/index.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+// This icon file is generated automatically.
+Object.defineProperty(exports, "__esModule", { value: true });
+var DoubleLeftOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M272.9 512l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L186.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H532c6.7 0 10.4-7.7 6.3-12.9L272.9 512zm304 0l265.4-339.1c4.1-5.2.4-12.9-6.3-12.9h-77.3c-4.9 0-9.6 2.3-12.6 6.1L490.8 492.3a31.99 31.99 0 000 39.5l255.3 326.1c3 3.9 7.7 6.1 12.6 6.1H836c6.7 0 10.4-7.7 6.3-12.9L576.9 512z" } }] }, "name": "double-left", "theme": "outlined" };
+exports.default = DoubleLeftOutlined;
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-var OrganizationForm = function OrganizationForm(_ref) {
-  var loading = _ref.loading,
-      onFinish = _ref.onFinish,
-      OrgForm = _ref.OrgForm,
-      edit = _ref.edit;
-
-  var _usePage = Object(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["usePage"])(),
-      errors = _usePage.errors;
-
-  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_4__["Form"].useForm(),
-      _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
-      form = _Form$useForm2[0];
-
-  Object(react_use__WEBPACK_IMPORTED_MODULE_2__["useEffectOnce"])(function () {});
-  edit && form.setFieldsValue({
-    name: edit.name,
-    address: edit.address,
-    id: edit.id
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"], {
-    ref: OrgForm,
-    name: "normal_login",
-    className: "login-form",
-    onFinish: onFinish,
-    form: form
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "name",
-    rules: [{
-      required: true,
-      message: "Please input Organization Name!"
-    }],
-    validateStatus: errors.name && "error",
-    help: errors.name && errors.name[0]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], {
-    placeholder: "Organization Name"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "address",
-    rules: [{
-      required: true,
-      message: "Please input Address!"
-    }],
-    validateStatus: errors.address && "error",
-    help: errors.address && errors.address[0]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"].TextArea, {
-    allowClear: true,
-    rows: 3,
-    placeholder: "Organization Address"
-  })), edit && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
-    name: "id",
-    hidden: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    type: "primary",
-    htmlType: "submit",
-    className: "login-form-button",
-    loading: loading
-  }, "Save")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (OrganizationForm);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Dashboard/organization/OrganizationsList.js":
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// This icon file is generated automatically.
+Object.defineProperty(exports, "__esModule", { value: true });
+var DoubleRightOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M533.2 492.3L277.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H188c-6.7 0-10.4 7.7-6.3 12.9L447.1 512 181.7 851.1A7.98 7.98 0 00188 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5zm304 0L581.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H492c-6.7 0-10.4 7.7-6.3 12.9L751.1 512 485.7 851.1A7.98 7.98 0 00492 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5z" } }] }, "name": "double-right", "theme": "outlined" };
+exports.default = DoubleRightOutlined;
+
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/DoubleLeftOutlined.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/DoubleLeftOutlined.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleLeftOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _DoubleLeftOutlined;
+  exports.default = _default;
+  module.exports = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/DoubleRightOutlined.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/DoubleRightOutlined.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  
+  var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DoubleRightOutlined */ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js"));
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  
+  var _default = _DoubleRightOutlined;
+  exports.default = _default;
+  module.exports = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js":
 /*!************************************************************************!*\
-  !*** ./resources/js/Pages/Dashboard/organization/OrganizationsList.js ***!
+  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleLeftOutlined.js ***!
   \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _DoubleLeftOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleLeftOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleLeftOutlined.js"));
+
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var DoubleLeftOutlined = function DoubleLeftOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _DoubleLeftOutlined.default
+  }));
+};
+
+DoubleLeftOutlined.displayName = 'DoubleLeftOutlined';
+
+var _default = React.forwardRef(DoubleLeftOutlined);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/lib/icons/DoubleRightOutlined.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _DoubleRightOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DoubleRightOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DoubleRightOutlined.js"));
+
+var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var DoubleRightOutlined = function DoubleRightOutlined(props, ref) {
+  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
+    ref: ref,
+    icon: _DoubleRightOutlined.default
+  }));
+};
+
+DoubleRightOutlined.displayName = 'DoubleRightOutlined';
+
+var _default = React.forwardRef(DoubleRightOutlined);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/table */ "./node_modules/antd/lib/table/index.js");
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/popover */ "./node_modules/antd/lib/popover/index.js");
-/* harmony import */ var antd_lib_popover__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popover__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/popconfirm */ "./node_modules/antd/lib/popconfirm/index.js");
-/* harmony import */ var antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/space */ "./node_modules/antd/lib/space/index.js");
-/* harmony import */ var antd_lib_space__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_space__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/lib/button */ "./node_modules/antd/lib/button/index.js");
-/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/divider */ "./node_modules/antd/lib/divider/index.js");
-/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_divider__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/lib/typography */ "./node_modules/antd/lib/typography/index.js");
-/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_typography__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _OrganizationForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./OrganizationForm */ "./resources/js/Pages/Dashboard/organization/OrganizationForm.js");
-/* harmony import */ var _Pages_Dashboard_environ_EnvironsList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Pages/Dashboard/environ/EnvironsList */ "./resources/js/Pages/Dashboard/environ/EnvironsList.js");
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+    return target;
+  };
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+  return _extends.apply(this, arguments);
+}
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+/***/ }),
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+/***/ "./node_modules/antd/lib/_util/ref.js":
+/*!********************************************!*\
+  !*** ./node_modules/antd/lib/_util/ref.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+"use strict";
 
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fillRef = fillRef;
+exports.composeRef = composeRef;
 
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js"));
 
+function fillRef(ref, node) {
+  if (typeof ref === 'function') {
+    ref(node);
+  } else if ((0, _typeof2["default"])(ref) === 'object' && ref && 'current' in ref) {
+    ref.current = node;
+  }
+}
 
+function composeRef() {
+  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
+    refs[_key] = arguments[_key];
+  }
 
-
-
-
-
-
-
-var OrganizationsList = function OrganizationsList(_ref) {
-  var _React$createElement;
-
-  var organizations = _ref.organizations;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      loading = _useState2[0],
-      setLoading = _useState2[1];
-
-  var OrgForm = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-
-  var onFinish = function onFinish(data) {
-    setLoading(true);
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("organization.edit", {
-      organization: data.id
-    }), data).then(function (res) {
-      setLoading(false);
+  return function (node) {
+    refs.forEach(function (ref) {
+      fillRef(ref, node);
     });
   };
+}
 
-  var formProps = {
-    loading: loading,
-    onFinish: onFinish,
-    OrgForm: OrgForm
-  };
-  organizations = organizations.map(function (organization, key) {
-    organization.key = "org-".concat(key);
-    return organization;
-  });
-  var townfilters = [//TODO Display Environs in collapse menu under Table
-  //! in production, get towns entered by students and reduce duplicates to use here.
-  {
-    text: "Ogun",
-    value: "Ogun"
+/***/ }),
+
+/***/ "./node_modules/rc-checkbox/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/rc-checkbox/es/index.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+// eslint-disable-next-line import/no-extraneous-dependencies
+
+
+
+var Checkbox = /*#__PURE__*/function (_Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Checkbox, _Component);
+
+  var _super = _createSuper(Checkbox);
+
+  function Checkbox(props) {
+    var _this;
+
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Checkbox);
+
+    _this = _super.call(this, props);
+
+    _this.handleChange = function (e) {
+      var _this$props = _this.props,
+          disabled = _this$props.disabled,
+          onChange = _this$props.onChange;
+
+      if (disabled) {
+        return;
+      }
+
+      if (!('checked' in _this.props)) {
+        _this.setState({
+          checked: e.target.checked
+        });
+      }
+
+      if (onChange) {
+        onChange({
+          target: _objectSpread(_objectSpread({}, _this.props), {}, {
+            checked: e.target.checked
+          }),
+          stopPropagation: function stopPropagation() {
+            e.stopPropagation();
+          },
+          preventDefault: function preventDefault() {
+            e.preventDefault();
+          },
+          nativeEvent: e.nativeEvent
+        });
+      }
+    };
+
+    _this.saveInput = function (node) {
+      _this.input = node;
+    };
+
+    var checked = 'checked' in props ? props.checked : props.defaultChecked;
+    _this.state = {
+      checked: checked
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Checkbox, [{
+    key: "focus",
+    value: function focus() {
+      this.input.focus();
+    }
   }, {
-    text: "Lagos",
-    value: "Lagos"
-  }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, organizations.length !== 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    scroll: {
-      x: 600
-    },
-    style: {
-      marginTop: "10px"
-    },
-    bordered: true,
-    dataSource: organizations,
-    size: "small",
-    pagination: {
-      hideOnSinglePage: true,
-      defaultPageSize: 3,
-      showQuickJumper: true,
-      showSizeChanger: true,
-      showTotal: function showTotal(total, range) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, total, " Organization", total !== 1 && "s");
-      }
-    },
-    expandable: {
-      expandedRowRender: function expandedRowRender(record) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_divider__WEBPACK_IMPORTED_MODULE_7___default.a, {
-          orientation: "left"
-        }, record.environs.length, " Environ", record.environs.length !== 1 && "s"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pages_Dashboard_environ_EnvironsList__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          environs: record.environs
-        }));
-      },
-      rowExpandable: function rowExpandable(record) {
-        return record.environs && record.environs.length !== 0;
-      }
+    key: "blur",
+    value: function blur() {
+      this.input.blur();
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-    render: function render(text) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, text);
-    },
-    onFilter: function onFilter(value, record) {
-      return record.name.indexOf(value) === 0;
-    },
-    sorter: function sorter(a, b) {
-      return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, (_React$createElement = {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
-    onFilter: function onFilter(value, record) {
-      return record.name.indexOf(value) === 0;
-    },
-    sorter: function sorter(a, b) {
-      return a.address === b.address ? 0 : a.address < b.address ? -1 : 1;
-    }
-  }, _defineProperty(_React$createElement, "onFilter", function onFilter(value, record) {
-    return record.address.toLowerCase().includes(value.toLocaleLowerCase());
-  }), _defineProperty(_React$createElement, "filterMultiple", false), _defineProperty(_React$createElement, "filters", townfilters), _React$createElement)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    title: "Code",
-    dataIndex: "code",
-    key: "code",
-    render: function render(text, record) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_typography__WEBPACK_IMPORTED_MODULE_8___default.a.Paragraph, {
-        copyable: true
-      }, text);
-    }
-  }), window.location.pathname === "/organization" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_2___default.a.Column, {
-    width: 200,
-    fixed: "right",
-    title: "Action",
-    key: "action",
-    render: function render(text, record) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_space__WEBPACK_IMPORTED_MODULE_5___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popover__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        placement: "leftTop",
-        title: "Edit ".concat(record.name),
-        content: function content() {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrganizationForm__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({
-            edit: record
-          }, formProps));
-        },
-        trigger: "click"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_6___default.a, null, "Edit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_popconfirm__WEBPACK_IMPORTED_MODULE_4___default.a, {
-        placement: "leftTop",
-        title: "Generate new ".concat(record.name, " code?"),
-        onConfirm: function onConfirm() {
-          setLoading(true);
-          _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"].patch(route("organization.change_code", {
-            organization: record.id
-          })).then(function () {
-            return setLoading(false);
-          });
-        },
-        okText: "Generate",
-        trigger: "click"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        loading: loading
-      }, "Change Code")));
-    }
-  })));
-};
+  }, {
+    key: "render",
+    value: function render() {
+      var _classNames;
 
-/* harmony default export */ __webpack_exports__["default"] = (OrganizationsList);
+      var _this$props2 = this.props,
+          prefixCls = _this$props2.prefixCls,
+          className = _this$props2.className,
+          style = _this$props2.style,
+          name = _this$props2.name,
+          id = _this$props2.id,
+          type = _this$props2.type,
+          disabled = _this$props2.disabled,
+          readOnly = _this$props2.readOnly,
+          tabIndex = _this$props2.tabIndex,
+          onClick = _this$props2.onClick,
+          onFocus = _this$props2.onFocus,
+          onBlur = _this$props2.onBlur,
+          autoFocus = _this$props2.autoFocus,
+          value = _this$props2.value,
+          required = _this$props2.required,
+          others = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["prefixCls", "className", "style", "name", "id", "type", "disabled", "readOnly", "tabIndex", "onClick", "onFocus", "onBlur", "autoFocus", "value", "required"]);
+
+      var globalProps = Object.keys(others).reduce(function (prev, key) {
+        if (key.substr(0, 5) === 'aria-' || key.substr(0, 5) === 'data-' || key === 'role') {
+          // eslint-disable-next-line no-param-reassign
+          prev[key] = others[key];
+        }
+
+        return prev;
+      }, {});
+      var checked = this.state.checked;
+      var classString = classnames__WEBPACK_IMPORTED_MODULE_9___default()(prefixCls, className, (_classNames = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_classNames, "".concat(prefixCls, "-checked"), checked), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_classNames, "".concat(prefixCls, "-disabled"), disabled), _classNames));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
+        className: classString,
+        style: style
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        name: name,
+        id: id,
+        type: type,
+        required: required,
+        readOnly: readOnly,
+        disabled: disabled,
+        tabIndex: tabIndex,
+        className: "".concat(prefixCls, "-input"),
+        checked: !!checked,
+        onClick: onClick,
+        onFocus: onFocus,
+        onBlur: onBlur,
+        onChange: this.handleChange,
+        autoFocus: autoFocus,
+        ref: this.saveInput,
+        value: value
+      }, globalProps)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
+        className: "".concat(prefixCls, "-inner")
+      }));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(props, state) {
+      if ('checked' in props) {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          checked: props.checked
+        });
+      }
+
+      return null;
+    }
+  }]);
+
+  return Checkbox;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+Checkbox.defaultProps = {
+  prefixCls: 'rc-checkbox',
+  className: '',
+  style: {},
+  type: 'checkbox',
+  defaultChecked: false,
+  onFocus: function onFocus() {},
+  onBlur: function onBlur() {},
+  onChange: function onChange() {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (Checkbox);
 
 /***/ })
 

@@ -10,7 +10,7 @@ class EnvironService
     public function __construct(Environ $environ)
     {
         $this->environ = $environ;
-        $this->prefic = "ENV";
+        $this->prefix = "ENV";
     }
 
     public function index()
