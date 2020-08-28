@@ -14,11 +14,11 @@ const Theory = ({ classroom, tests = [""] }) => {
         <Workspacelayout title={classroom.name} classroom={classroom.hash}>
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
-                    <PageHeader 
+                    <PageHeader
                         ghost={false}
                         onBack={() => window.history.back()}
                         title="Theory Assessments"
-                        subTitle={classroom.name}
+                        subTitle={classroom.name} 
                         extra={[
                             <Button key="1" type="primary">
                                 New Test

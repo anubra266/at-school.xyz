@@ -39,4 +39,4 @@ php artisan migrate
 ```
 **I'm not dumb, the above is all self explanatory.**
 
-
+Feel free to fork and make Pull requests.
