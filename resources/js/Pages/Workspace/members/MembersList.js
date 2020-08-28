@@ -139,6 +139,13 @@ const MembersList = ({ members }) => {
                         }}
                     >
                         <Table.Column
+                            width={60}
+                            title="S/N"
+                            render={(text, record) => (
+                                <a>{result.indexOf(record) + 1}</a>
+                            )}
+                        />
+                        <Table.Column
                             title="Name"
                             key="name"
                             render={(text, record) => (
