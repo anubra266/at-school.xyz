@@ -1,26 +1,20 @@
 import React from "react";
 import { usePage } from "@inertiajs/inertia-react";
-import { useEffectOnce } from "react-use";
 import Button from "antd/lib/button";
 import { Form, Input } from "antd";
 
 const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
     const { errors } = usePage();
-    const [form] = Form.useForm();
-    useEffectOnce(() => {
-        edit &&
-            form.setFieldsValue({
-                name: edit.name,
-                id: edit.id
-            });
-    });
     return (
         <Form
             ref={EnvForm}
             name="normal_login"
             className="login-form"
             onFinish={onFinish}
-            form={form}
+            initialValues={{
+                name: edit.name,
+                id: edit.id
+            }}
         >
             <Form.Item
                 name="name"

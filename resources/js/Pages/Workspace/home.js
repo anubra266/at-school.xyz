@@ -8,7 +8,7 @@ const { Content } = Layout;
 
 const Home = ({ classroom }) => {
     return (
-        <Workspacelayout title={classroom.name} classroom={classroom.hash}>
+        <Workspacelayout title={classroom.name} classroom={classroom}>
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader

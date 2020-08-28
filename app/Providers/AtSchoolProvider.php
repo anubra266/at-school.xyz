@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Classroom;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
 use App\Helpers\CreateCode;

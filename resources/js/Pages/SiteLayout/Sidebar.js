@@ -14,7 +14,7 @@ import UserOutlined from "@ant-design/icons/UserOutlined";
 //  TODO Dynamic JSON Routing
 const { Sider } = Layout;
 const { SubMenu } = Menu;
-function Sidebar({ mode, routes, layout }) {
+function Sidebar({ mode, routes, layout, classroom }) {
     const getRoute = () => {
         return returnRoute(layout, routes);
     };
@@ -59,7 +59,9 @@ function Sidebar({ mode, routes, layout }) {
                     {routes.map(menu => {
                         return (
                             (auth.user.can[menu.name] ||
-                                auth.user.can[menu.action]) &&
+                                (classroom &&
+                                    (menu.for.includes(classroom.role) ||
+                                        menu.for == "gen"))) &&
                             (menu.items ? (
                                 <SubMenu
                                     key={`menu-${menu.name}`}

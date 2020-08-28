@@ -8,7 +8,8 @@ import BackTop from "antd/lib/back-top";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
-function index({ title, noSidebar, children, routes, layout }) {
+function index({ title, noSidebar, children, routes, layout, classroom }) {
+    
     const { flash, errors } = usePage();
     useEffect(() => {
         flash.success && message.success(flash.success, 5);
@@ -44,6 +45,7 @@ function index({ title, noSidebar, children, routes, layout }) {
             require("antd/dist/antd.dark.css");
             break;
     }
+    const sidebarprops = { mode, routes, layout, classroom };
     return (
         <React.Fragment>
             <Helmet>
@@ -53,9 +55,7 @@ function index({ title, noSidebar, children, routes, layout }) {
             <Layout style={{ minHeight: "100vh" }}>
                 <Navbar pageLoader={pageLoader} />
                 <Layout>
-                    {noSidebar !== true && (
-                        <Sidebar mode={mode} routes={routes} layout={layout} />
-                    )}
+                    {noSidebar !== true && <Sidebar {...sidebarprops} />}
                     <Layout className="site-layout">
                         {children}
                         <SiteFooter />

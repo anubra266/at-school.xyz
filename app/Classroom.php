@@ -17,13 +17,18 @@ class Classroom extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function Environ()
+    {
+        return $this->belongsTo(Environ::class);
+    }
+
     public function students()
     {
         return $this->belongsToMany(User::class, 'classroom_student', 'classroom_id', 'student_id')->withTimestamps();
     }
 
-    public function Environ()
+    public function theorytests()
     {
-        return $this->belongsTo(Environ::class);
+        return $this->hasMany(TheoryTest::class);
     }
 }

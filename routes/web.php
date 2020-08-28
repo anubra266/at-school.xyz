@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Contracts\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,8 +74,16 @@ Route::group(['middleware' => ['auth']], function () {
         //? Classroom activities routes
         Route::group(['middleware' => ['class.auth']], function () {
             Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
+            //? View Members
             Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
-            Route::get('/{classroom}/assessments/theory', 'WorkspaceController@theoryTest')->name('classroom.members');
+            //? Educator Only Routes
+            Route::group(['middleware' => ['educator.only']], function () {
+                //? View Theory Assessments
+                Route::get('/{classroom}/assessments/edu-theory', 'WorkspaceController@TheoryTest')->name('classroom.theory.edu.view');
+                Route::post('/{classroom}/assessments/edu-theory', 'WorkspaceController@createTheoryTest')->name('classroom.theory.create');
+
+                Route::get('/{classroom}/assessments/edu-objective', 'WorkspaceController@ObjectiveTest')->name('classroom.objective.edu.view');
+            });
         });
     });
 });

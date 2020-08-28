@@ -16,7 +16,6 @@ import Main from "@/Helpers/Main";
 const CheckboxGroup = Checkbox.Group;
 
 const MembersList = ({ members, classroom }) => {
-    console.log(classroom.role);
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
     const filtersList = [
@@ -45,7 +44,6 @@ const MembersList = ({ members, classroom }) => {
             !!filtered.length && filtered.length < filtersList.length
         );
         setCheckAll(filtered.length === filtersList.length);
-        console.log(filtered);
     };
     const onFilterAll = e => {
         setShowFilter(e.target.checked ? filtersList : []);

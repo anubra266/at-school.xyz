@@ -11,35 +11,35 @@ export default [
     {
         name: "Dashboard",
         route: "/home",
-        action: "home",
+        for: "gen",
         icon: <DoubleLeftOutlined />
     },
     {
         name: "Home",
         route: "",
-        action: "classroom_home",
+        for: "gen",
         icon: <PieChartOutlined />
     },
     {
         name: "Members",
         route: `/members`,
-        action: "view_classroom_members",
+        for: "gen",
         icon: <UserSwitchOutlined />
     },
     {
         name: "Assessments",
-        action: "view_tests",
         route: "/assessments",
+        for: ["educator", "supervisor"],
         icon: <EditOutlined />,
         items: [
             {
                 name: "Theory",
-                route: `/assessments/theory`,
+                route: `/assessments/edu-theory`,
                 icon: <BookOutlined />
             },
             {
                 name: "Objective",
-                route: `/assessments/objective`,
+                route: `/assessments/edu-objective`,
                 icon: <OrderedListOutlined />
             }
         ]

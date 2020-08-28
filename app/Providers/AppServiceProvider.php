@@ -64,9 +64,6 @@ class AppServiceProvider extends ServiceProvider
                             'Practice' =>  authUser()->can('practice'),
                             'Settings' => true,
 
-                            'classroom_home' => true,
-                            'view_classroom_members' => true,
-                            'view_tests' => true,
                         ]
                     ] : null,
                 ];

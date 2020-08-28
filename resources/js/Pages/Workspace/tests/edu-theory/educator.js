@@ -1,19 +1,21 @@
 import React from "react";
 import Empty from "antd/lib/empty";
 import Button from "antd/lib/button";
-import Main from "@/Helpers/Main";
-import { Card, Avatar, Col, Row, Tooltip } from "antd";
-import {
-    CheckOutlined,
-    EditOutlined,
-    DeleteOutlined,
-    SettingOutlined,
-    DoubleRightOutlined
-} from "@ant-design/icons";
+import Card from "antd/lib/card";
+import Avatar from "antd/lib/avatar";
+import Col from "antd/lib/col";
+import Row from "antd/lib/row";
+import Tooltip from "antd/lib/tooltip";
+import CheckOutlined from "@ant-design/icons/CheckOutlined";
+import EditOutlined from "@ant-design/icons/EditOutlined";
+import DeleteOutlined from "@ant-design/icons/DeleteOutlined";
+import SettingOutlined from "@ant-design/icons/SettingOutlined";
+import DoubleRightOutlined from "@ant-design/icons/DoubleRightOutlined";
 
+import Main from "@/Helpers/Main";
 const { Meta } = Card;
 
-const Student = ({ tests, classroom }) => {
+const Student = ({ tests, classroom, showDrawer }) => {
     return (
         <React.Fragment>
             <Row>
@@ -25,7 +27,7 @@ const Student = ({ tests, classroom }) => {
                                 <DoubleRightOutlined
                                     style={{ color: "green" }}
                                     key="take"
-                                />{" "}
+                                />
                             </Tooltip>,
                             <Tooltip title="Edit Test Settings">
                                 <SettingOutlined key="setting" />
@@ -34,19 +36,19 @@ const Student = ({ tests, classroom }) => {
                                 <CheckOutlined
                                     style={{ color: "green" }}
                                     key="mark"
-                                />{" "}
+                                />
                             </Tooltip>,
                             <Tooltip title="Edit Test Questions">
                                 <EditOutlined
                                     style={{ color: "orange" }}
                                     key="edit"
-                                />{" "}
+                                />
                             </Tooltip>,
                             <Tooltip title="Delete Test">
                                 <DeleteOutlined
                                     style={{ color: "red" }}
                                     key="delete"
-                                />{" "}
+                                />
                             </Tooltip>
                         ]}
                     >
@@ -70,7 +72,7 @@ const Student = ({ tests, classroom }) => {
             </Row>
             {tests.length === 0 && (
                 <Empty description={<span>No Tests found!</span>}>
-                    <Button type="primary">Create new Test</Button>
+                    <Button type="primary" onClick={showDrawer}>Create new Test</Button>
                 </Empty>
             )}
         </React.Fragment>
