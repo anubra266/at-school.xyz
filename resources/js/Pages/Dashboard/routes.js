@@ -11,47 +11,47 @@ import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
 export default [
     {
         name: "Dashboard",
-        route: "home",
+        route: "/home",
         icon: <PieChartOutlined />
     },
     {
         name: "Organizations",
-        route: "organization",
+        route: "/organization",
         icon: <BankOutlined />
     },
-    { 
+    {
         name: "Environs",
-        route: "environ",
+        route: "/environ",
         icon: <ApartmentOutlined />
     },
     {
         name: "Classrooms",
-        route: "classroom",
+        route: "/classroom",
         icon: <DeploymentUnitOutlined />
     },
     {
         name: "Classes",
-        route: "class",
+        route: "/class",
         icon: <TeamOutlined />
     },
     {
         name: "Practice",
-        route: "practice",
+        route: "/practice",
         icon: <TeamOutlined />
     },
     {
         name: "Settings",
-        route: "settings",
+        route: "/settings",
         icon: <SettingOutlined />,
         items: [
             {
                 name: "Profile Settings",
-                route: "settings/profile",
+                route: "/settings/profile",
                 icon: <UserOutlined />
             },
             {
                 name: "Theme Settings",
-                route: "settings/theme",
+                route: "/settings/theme",
                 icon: <HighlightOutlined />
             }
         ]

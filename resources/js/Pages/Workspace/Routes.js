@@ -2,6 +2,7 @@ import React from "react";
 
 import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
 import DoubleLeftOutlined from "@ant-design/icons/DoubleLeftOutlined";
+import UserSwitchOutlined from "@ant-design/icons/UserSwitchOutlined";
 
 class Routes {
     routes(classroom) {
@@ -14,9 +15,15 @@ class Routes {
             },
             {
                 name: "Home",
-                route: `classroom/${classroom}`,
+                route: `/classroom/${classroom}`,
                 action: "classroom_home",
                 icon: <PieChartOutlined />
+            },
+            {
+                name: "Members",
+                route: `/classroom/${classroom}/members`,
+                action: "view_classroom_members",
+                icon: <UserSwitchOutlined />
             }
         ];
     }

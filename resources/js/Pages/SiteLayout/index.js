@@ -3,6 +3,7 @@ import { usePage } from "@inertiajs/inertia-react";
 import { Helmet } from "react-helmet";
 import Layout from "antd/lib/layout";
 import message from "antd/lib/message";
+import BackTop from "antd/lib/back-top";
 
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -48,6 +49,7 @@ function index({ title, noSidebar, children, routes }) {
             <Helmet>
                 <meta name="theme-color" content="red" />
             </Helmet>
+            <BackTop />
             <Layout style={{ minHeight: "100vh" }}>
                 <Navbar pageLoader={pageLoader} />
                 <Layout>

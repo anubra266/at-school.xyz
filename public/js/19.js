@@ -1,59 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[19],{
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/DesktopOutlined.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/DesktopOutlined.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var DesktopOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M928 140H96c-17.7 0-32 14.3-32 32v496c0 17.7 14.3 32 32 32h380v112H304c-8.8 0-16 7.2-16 16v48c0 4.4 3.6 8 8 8h432c4.4 0 8-3.6 8-8v-48c0-8.8-7.2-16-16-16H548V700h380c17.7 0 32-14.3 32-32V172c0-17.7-14.3-32-32-32zm-40 488H136V212h752v416z" } }] }, "name": "desktop", "theme": "outlined" };
-exports.default = DesktopOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var PieChartOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 00-282.8 117.1 398.19 398.19 0 00-85.7 127.1A397.61 397.61 0 0072 552a398.46 398.46 0 00117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 00472 952a398.46 398.46 0 00282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 00872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 01470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 00589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 01166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z" } }] }, "name": "pie-chart", "theme": "outlined" };
-exports.default = PieChartOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/PoweroffOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/PoweroffOutlined.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var PoweroffOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M705.6 124.9a8 8 0 00-11.6 7.2v64.2c0 5.5 2.9 10.6 7.5 13.6a352.2 352.2 0 0162.2 49.8c32.7 32.8 58.4 70.9 76.3 113.3a355 355 0 0127.9 138.7c0 48.1-9.4 94.8-27.9 138.7a355.92 355.92 0 01-76.3 113.3 353.06 353.06 0 01-113.2 76.4c-43.8 18.6-90.5 28-138.5 28s-94.7-9.4-138.5-28a353.06 353.06 0 01-113.2-76.4A355.92 355.92 0 01184 650.4a355 355 0 01-27.9-138.7c0-48.1 9.4-94.8 27.9-138.7 17.9-42.4 43.6-80.5 76.3-113.3 19-19 39.8-35.6 62.2-49.8 4.7-2.9 7.5-8.1 7.5-13.6V132c0-6-6.3-9.8-11.6-7.2C178.5 195.2 82 339.3 80 506.3 77.2 745.1 272.5 943.5 511.2 944c239 .5 432.8-193.3 432.8-432.4 0-169.2-97-315.7-238.4-386.7zM480 560h64c4.4 0 8-3.6 8-8V88c0-4.4-3.6-8-8-8h-64c-4.4 0-8 3.6-8 8v464c0 4.4 3.6 8 8 8z" } }] }, "name": "poweroff", "theme": "outlined" };
-exports.default = PoweroffOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/TeamOutlined.js":
+/***/ "./node_modules/@ant-design/icons-svg/lib/asn/MenuOutlined.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/TeamOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons-svg/lib/asn/MenuOutlined.js ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -62,104 +11,15 @@ exports.default = PoweroffOutlined;
 
 // This icon file is generated automatically.
 Object.defineProperty(exports, "__esModule", { value: true });
-var TeamOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z" } }] }, "name": "team", "theme": "outlined" };
-exports.default = TeamOutlined;
+var MenuOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" } }] }, "name": "menu", "theme": "outlined" };
+exports.default = MenuOutlined;
 
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons-svg/lib/asn/UserOutlined.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/lib/asn/UserOutlined.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// This icon file is generated automatically.
-Object.defineProperty(exports, "__esModule", { value: true });
-var UserOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z" } }] }, "name": "user", "theme": "outlined" };
-exports.default = UserOutlined;
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/DesktopOutlined.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@ant-design/icons/DesktopOutlined.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _DesktopOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/DesktopOutlined */ "./node_modules/@ant-design/icons/lib/icons/DesktopOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _DesktopOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/PieChartOutlined.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/PieChartOutlined.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _PieChartOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/PieChartOutlined */ "./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _PieChartOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/PoweroffOutlined.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/PoweroffOutlined.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _PoweroffOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/PoweroffOutlined */ "./node_modules/@ant-design/icons/lib/icons/PoweroffOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _PoweroffOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/TeamOutlined.js":
+/***/ "./node_modules/@ant-design/icons/MenuOutlined.js":
 /*!********************************************************!*\
-  !*** ./node_modules/@ant-design/icons/TeamOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/MenuOutlined.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -171,169 +31,19 @@ exports.default = UserOutlined;
   });
   exports.default = void 0;
   
-  var _TeamOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/TeamOutlined */ "./node_modules/@ant-design/icons/lib/icons/TeamOutlined.js"));
+  var _MenuOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/MenuOutlined */ "./node_modules/@ant-design/icons/lib/icons/MenuOutlined.js"));
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _TeamOutlined;
+  var _default = _MenuOutlined;
   exports.default = _default;
   module.exports = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/UserOutlined.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@ant-design/icons/UserOutlined.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _UserOutlined = _interopRequireDefault(__webpack_require__(/*! ./lib/icons/UserOutlined */ "./node_modules/@ant-design/icons/lib/icons/UserOutlined.js"));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _UserOutlined;
-  exports.default = _default;
-  module.exports = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/DesktopOutlined.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/DesktopOutlined.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _DesktopOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/DesktopOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/DesktopOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var DesktopOutlined = function DesktopOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _DesktopOutlined.default
-  }));
-};
-
-DesktopOutlined.displayName = 'DesktopOutlined';
-
-var _default = React.forwardRef(DesktopOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/PieChartOutlined.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _PieChartOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/PieChartOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/PieChartOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var PieChartOutlined = function PieChartOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _PieChartOutlined.default
-  }));
-};
-
-PieChartOutlined.displayName = 'PieChartOutlined';
-
-var _default = React.forwardRef(PieChartOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/PoweroffOutlined.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/PoweroffOutlined.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _PoweroffOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/PoweroffOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/PoweroffOutlined.js"));
-
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var PoweroffOutlined = function PoweroffOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _PoweroffOutlined.default
-  }));
-};
-
-PoweroffOutlined.displayName = 'PoweroffOutlined';
-
-var _default = React.forwardRef(PoweroffOutlined);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/lib/icons/TeamOutlined.js":
+/***/ "./node_modules/@ant-design/icons/lib/icons/MenuOutlined.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/TeamOutlined.js ***!
+  !*** ./node_modules/@ant-design/icons/lib/icons/MenuOutlined.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -352,31 +62,412 @@ exports.default = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _TeamOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/TeamOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/TeamOutlined.js"));
+var _MenuOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/MenuOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/MenuOutlined.js"));
 
 var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-var TeamOutlined = function TeamOutlined(props, ref) {
+var MenuOutlined = function MenuOutlined(props, ref) {
   return React.createElement(_AntdIcon.default, Object.assign({}, props, {
     ref: ref,
-    icon: _TeamOutlined.default
+    icon: _MenuOutlined.default
   }));
 };
 
-TeamOutlined.displayName = 'TeamOutlined';
+MenuOutlined.displayName = 'MenuOutlined';
 
-var _default = React.forwardRef(TeamOutlined);
+var _default = React.forwardRef(MenuOutlined);
 
 exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/lib/icons/UserOutlined.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/lib/icons/UserOutlined.js ***!
-  \******************************************************************/
+/***/ "./node_modules/antd/lib/drawer/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/drawer/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createSuper */ "./node_modules/@babel/runtime/helpers/createSuper.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _rcDrawer = _interopRequireDefault(__webpack_require__(/*! rc-drawer */ "./node_modules/rc-drawer/es/index.js"));
+
+var _getScrollBarSize = _interopRequireDefault(__webpack_require__(/*! rc-util/lib/getScrollBarSize */ "./node_modules/rc-util/lib/getScrollBarSize.js"));
+
+var _CloseOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CloseOutlined */ "./node_modules/@ant-design/icons/CloseOutlined.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+
+var _context = __webpack_require__(/*! ../config-provider/context */ "./node_modules/antd/lib/config-provider/context.js");
+
+var _type = __webpack_require__(/*! ../_util/type */ "./node_modules/antd/lib/_util/type.js");
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var DrawerContext = /*#__PURE__*/React.createContext(null);
+var PlacementTypes = (0, _type.tuple)('top', 'right', 'bottom', 'left');
+var defaultPushState = {
+  distance: 180
+};
+
+var Drawer = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(Drawer, _React$Component);
+
+  var _super = (0, _createSuper2["default"])(Drawer);
+
+  function Drawer() {
+    var _this;
+
+    (0, _classCallCheck2["default"])(this, Drawer);
+    _this = _super.apply(this, arguments);
+    _this.state = {
+      push: false
+    };
+
+    _this.push = function () {
+      if (_this.props.push) {
+        _this.setState({
+          push: true
+        });
+      }
+    };
+
+    _this.pull = function () {
+      if (_this.props.push) {
+        _this.setState({
+          push: false
+        });
+      }
+    };
+
+    _this.onDestroyTransitionEnd = function () {
+      var isDestroyOnClose = _this.getDestroyOnClose();
+
+      if (!isDestroyOnClose) {
+        return;
+      }
+
+      if (!_this.props.visible) {
+        _this.destroyClose = true;
+
+        _this.forceUpdate();
+      }
+    };
+
+    _this.getDestroyOnClose = function () {
+      return _this.props.destroyOnClose && !_this.props.visible;
+    };
+
+    _this.getPushDistance = function () {
+      var push = _this.props.push;
+      var distance;
+
+      if (typeof push === 'boolean') {
+        distance = push ? defaultPushState.distance : 0;
+      } else {
+        distance = push.distance;
+      }
+
+      return parseFloat(String(distance || 0));
+    }; // get drawer push width or height
+
+
+    _this.getPushTransform = function (placement) {
+      var distance = _this.getPushDistance();
+
+      if (placement === 'left' || placement === 'right') {
+        return "translateX(".concat(placement === 'left' ? distance : -distance, "px)");
+      }
+
+      if (placement === 'top' || placement === 'bottom') {
+        return "translateY(".concat(placement === 'top' ? distance : -distance, "px)");
+      }
+    };
+
+    _this.getRcDrawerStyle = function () {
+      var _this$props = _this.props,
+          zIndex = _this$props.zIndex,
+          placement = _this$props.placement,
+          mask = _this$props.mask,
+          style = _this$props.style;
+      var push = _this.state.push; // 当无 mask 时，将 width 应用到外层容器上
+      // 解决 https://github.com/ant-design/ant-design/issues/12401 的问题
+
+      var offsetStyle = mask ? {} : _this.getOffsetStyle();
+      return (0, _extends2["default"])((0, _extends2["default"])({
+        zIndex: zIndex,
+        transform: push ? _this.getPushTransform(placement) : undefined
+      }, offsetStyle), style);
+    }; // render drawer body dom
+
+
+    _this.renderBody = function () {
+      var _this$props2 = _this.props,
+          bodyStyle = _this$props2.bodyStyle,
+          drawerStyle = _this$props2.drawerStyle,
+          prefixCls = _this$props2.prefixCls,
+          visible = _this$props2.visible;
+
+      if (_this.destroyClose && !visible) {
+        return null;
+      }
+
+      _this.destroyClose = false;
+      var containerStyle = {};
+
+      var isDestroyOnClose = _this.getDestroyOnClose();
+
+      if (isDestroyOnClose) {
+        // Increase the opacity transition, delete children after closing.
+        containerStyle.opacity = 0;
+        containerStyle.transition = 'opacity .3s';
+      }
+
+      return /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-wrapper-body"),
+        style: (0, _extends2["default"])((0, _extends2["default"])({}, containerStyle), drawerStyle),
+        onTransitionEnd: _this.onDestroyTransitionEnd
+      }, _this.renderHeader(), /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-body"),
+        style: bodyStyle
+      }, _this.props.children), _this.renderFooter());
+    }; // render Provider for Multi-level drawer
+
+
+    _this.renderProvider = function (value) {
+      _this.parentDrawer = value;
+      return /*#__PURE__*/React.createElement(_context.ConfigConsumer, null, function (_ref) {
+        var getPopupContainer = _ref.getPopupContainer,
+            getPrefixCls = _ref.getPrefixCls;
+
+        var _a = _this.props,
+            customizePrefixCls = _a.prefixCls,
+            placement = _a.placement,
+            className = _a.className,
+            mask = _a.mask,
+            direction = _a.direction,
+            visible = _a.visible,
+            rest = __rest(_a, ["prefixCls", "placement", "className", "mask", "direction", "visible"]);
+
+        var prefixCls = getPrefixCls('select', customizePrefixCls);
+        var drawerClassName = (0, _classnames["default"])(className, (0, _defineProperty2["default"])({
+          'no-mask': !mask
+        }, "".concat(prefixCls, "-rtl"), direction === 'rtl'));
+        var offsetStyle = mask ? _this.getOffsetStyle() : {};
+        return /*#__PURE__*/React.createElement(DrawerContext.Provider, {
+          value: (0, _assertThisInitialized2["default"])(_this)
+        }, /*#__PURE__*/React.createElement(_rcDrawer["default"], (0, _extends2["default"])({
+          handler: false
+        }, (0, _omit["default"])(rest, ['zIndex', 'style', 'closable', 'closeIcon', 'destroyOnClose', 'drawerStyle', 'headerStyle', 'bodyStyle', 'footerStyle', 'footer', 'locale', 'title', 'push', 'visible', 'getPopupContainer', 'rootPrefixCls', 'getPrefixCls', 'renderEmpty', 'csp', 'pageHeader', 'autoInsertSpaceInButton', 'width', 'height', 'dropdownMatchSelectWidth', 'getTargetContainer']), {
+          getContainer: // 有可能为 false，所以不能直接判断
+          rest.getContainer === undefined && getPopupContainer ? function () {
+            return getPopupContainer(document.body);
+          } : rest.getContainer
+        }, offsetStyle, {
+          prefixCls: prefixCls,
+          open: visible,
+          showMask: mask,
+          placement: placement,
+          style: _this.getRcDrawerStyle(),
+          className: drawerClassName
+        }), _this.renderBody()));
+      });
+    };
+
+    return _this;
+  }
+
+  (0, _createClass2["default"])(Drawer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // fix: delete drawer in child and re-render, no push started.
+      // <Drawer>{show && <Drawer />}</Drawer>
+      var visible = this.props.visible;
+
+      if (visible && this.parentDrawer) {
+        this.parentDrawer.push();
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(preProps) {
+      var visible = this.props.visible;
+
+      if (preProps.visible !== visible && this.parentDrawer) {
+        if (visible) {
+          this.parentDrawer.push();
+        } else {
+          this.parentDrawer.pull();
+        }
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      // unmount drawer in child, clear push.
+      if (this.parentDrawer) {
+        this.parentDrawer.pull();
+        this.parentDrawer = null;
+      }
+    }
+  }, {
+    key: "getOffsetStyle",
+    value: function getOffsetStyle() {
+      var _this$props3 = this.props,
+          placement = _this$props3.placement,
+          width = _this$props3.width,
+          height = _this$props3.height,
+          visible = _this$props3.visible,
+          mask = _this$props3.mask; // https://github.com/ant-design/ant-design/issues/24287
+
+      if (!visible && !mask) {
+        return {};
+      }
+
+      var offsetStyle = {};
+
+      if (placement === 'left' || placement === 'right') {
+        offsetStyle.width = width;
+      } else {
+        offsetStyle.height = height;
+      }
+
+      return offsetStyle;
+    }
+  }, {
+    key: "renderHeader",
+    value: function renderHeader() {
+      var _this$props4 = this.props,
+          title = _this$props4.title,
+          prefixCls = _this$props4.prefixCls,
+          closable = _this$props4.closable,
+          headerStyle = _this$props4.headerStyle;
+
+      if (!title && !closable) {
+        return null;
+      }
+
+      var headerClassName = title ? "".concat(prefixCls, "-header") : "".concat(prefixCls, "-header-no-title");
+      return /*#__PURE__*/React.createElement("div", {
+        className: headerClassName,
+        style: headerStyle
+      }, title && /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-title")
+      }, title), closable && this.renderCloseIcon());
+    }
+  }, {
+    key: "renderFooter",
+    value: function renderFooter() {
+      var _this$props5 = this.props,
+          footer = _this$props5.footer,
+          footerStyle = _this$props5.footerStyle,
+          prefixCls = _this$props5.prefixCls;
+
+      if (!footer) {
+        return null;
+      }
+
+      var footerClassName = "".concat(prefixCls, "-footer");
+      return /*#__PURE__*/React.createElement("div", {
+        className: footerClassName,
+        style: footerStyle
+      }, footer);
+    }
+  }, {
+    key: "renderCloseIcon",
+    value: function renderCloseIcon() {
+      var _this$props6 = this.props,
+          closable = _this$props6.closable,
+          _this$props6$closeIco = _this$props6.closeIcon,
+          closeIcon = _this$props6$closeIco === void 0 ? /*#__PURE__*/React.createElement(_CloseOutlined["default"], null) : _this$props6$closeIco,
+          prefixCls = _this$props6.prefixCls,
+          onClose = _this$props6.onClose;
+      return closable &&
+      /*#__PURE__*/
+      // eslint-disable-next-line react/button-has-type
+      React.createElement("button", {
+        onClick: onClose,
+        "aria-label": "Close",
+        className: "".concat(prefixCls, "-close"),
+        style: {
+          '--scroll-bar': "".concat((0, _getScrollBarSize["default"])(), "px")
+        }
+      }, closeIcon);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/React.createElement(DrawerContext.Consumer, null, this.renderProvider);
+    }
+  }]);
+  return Drawer;
+}(React.Component);
+
+Drawer.defaultProps = {
+  width: 256,
+  height: 256,
+  closable: true,
+  placement: 'right',
+  maskClosable: true,
+  mask: true,
+  level: null,
+  keyboard: true,
+  push: defaultPushState
+};
+
+var _default = (0, _context.withConfigConsumer)({
+  prefixCls: 'drawer'
+})(Drawer);
+
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/layout/index.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -385,33 +476,288 @@ exports.default = _default;
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _layout = _interopRequireDefault(__webpack_require__(/*! ./layout */ "./node_modules/antd/lib/layout/layout.js"));
+
+var _Sider = _interopRequireDefault(__webpack_require__(/*! ./Sider */ "./node_modules/antd/lib/layout/Sider.js"));
+
+_layout["default"].Sider = _Sider["default"];
+var _default = _layout["default"];
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tag/CheckableTag.js":
+/*!***************************************************!*\
+  !*** ./node_modules/antd/lib/tag/CheckableTag.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _UserOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons-svg/lib/asn/UserOutlined */ "./node_modules/@ant-design/icons-svg/lib/asn/UserOutlined.js"));
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
 
-var _AntdIcon = _interopRequireDefault(__webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/lib/components/AntdIcon.js"));
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
 
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-var UserOutlined = function UserOutlined(props, ref) {
-  return React.createElement(_AntdIcon.default, Object.assign({}, props, {
-    ref: ref,
-    icon: _UserOutlined.default
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var CheckableTag = function CheckableTag(props) {
+  var _classNames;
+
+  var _React$useContext = React.useContext(_configProvider.ConfigContext),
+      getPrefixCls = _React$useContext.getPrefixCls;
+
+  var handleClick = function handleClick(e) {
+    var checked = props.checked,
+        onChange = props.onChange,
+        onClick = props.onClick;
+
+    if (onChange) {
+      onChange(!checked);
+    }
+
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
+  var customizePrefixCls = props.prefixCls,
+      className = props.className,
+      checked = props.checked,
+      restProps = __rest(props, ["prefixCls", "className", "checked"]);
+
+  var prefixCls = getPrefixCls('tag', customizePrefixCls);
+  var cls = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-checkable"), true), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-checkable-checked"), checked), _classNames), className);
+  delete restProps.onChange; // TypeScript cannot check delete now.
+
+  return /*#__PURE__*/React.createElement("span", (0, _extends2["default"])({}, restProps, {
+    className: cls,
+    onClick: handleClick
   }));
 };
 
-UserOutlined.displayName = 'UserOutlined';
+var _default = CheckableTag;
+exports["default"] = _default;
 
-var _default = React.forwardRef(UserOutlined);
+/***/ }),
 
-exports.default = _default;
+/***/ "./node_modules/antd/lib/tag/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/antd/lib/tag/index.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _omit = _interopRequireDefault(__webpack_require__(/*! omit.js */ "./node_modules/omit.js/es/index.js"));
+
+var _CloseOutlined = _interopRequireDefault(__webpack_require__(/*! @ant-design/icons/CloseOutlined */ "./node_modules/@ant-design/icons/CloseOutlined.js"));
+
+var _CheckableTag = _interopRequireDefault(__webpack_require__(/*! ./CheckableTag */ "./node_modules/antd/lib/tag/CheckableTag.js"));
+
+var _configProvider = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/lib/config-provider/index.js");
+
+var _colors = __webpack_require__(/*! ../_util/colors */ "./node_modules/antd/lib/_util/colors.js");
+
+var _wave = _interopRequireDefault(__webpack_require__(/*! ../_util/wave */ "./node_modules/antd/lib/_util/wave.js"));
+
+var __rest = void 0 && (void 0).__rest || function (s, e) {
+  var t = {};
+
+  for (var p in s) {
+    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  }
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+};
+
+var PresetColorRegex = new RegExp("^(".concat(_colors.PresetColorTypes.join('|'), ")(-inverse)?$"));
+var PresetStatusColorRegex = new RegExp("^(".concat(_colors.PresetStatusColorTypes.join('|'), ")$"));
+
+var InternalTag = function InternalTag(_a, ref) {
+  var _classNames;
+
+  var customizePrefixCls = _a.prefixCls,
+      className = _a.className,
+      style = _a.style,
+      children = _a.children,
+      icon = _a.icon,
+      color = _a.color,
+      onClose = _a.onClose,
+      closeIcon = _a.closeIcon,
+      _a$closable = _a.closable,
+      closable = _a$closable === void 0 ? false : _a$closable,
+      props = __rest(_a, ["prefixCls", "className", "style", "children", "icon", "color", "onClose", "closeIcon", "closable"]);
+
+  var _React$useContext = React.useContext(_configProvider.ConfigContext),
+      getPrefixCls = _React$useContext.getPrefixCls,
+      direction = _React$useContext.direction;
+
+  var _React$useState = React.useState(true),
+      _React$useState2 = (0, _slicedToArray2["default"])(_React$useState, 2),
+      visible = _React$useState2[0],
+      setVisible = _React$useState2[1];
+
+  React.useEffect(function () {
+    if ('visible' in props) {
+      setVisible(props.visible);
+    }
+  }, [props.visible]);
+
+  var isPresetColor = function isPresetColor() {
+    if (!color) {
+      return false;
+    }
+
+    return PresetColorRegex.test(color) || PresetStatusColorRegex.test(color);
+  };
+
+  var tagStyle = (0, _extends2["default"])({
+    backgroundColor: color && !isPresetColor() ? color : undefined
+  }, style);
+  var presetColor = isPresetColor();
+  var prefixCls = getPrefixCls('tag', customizePrefixCls);
+  var tagClassName = (0, _classnames["default"])(prefixCls, (_classNames = {}, (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-").concat(color), presetColor), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-has-color"), color && !presetColor), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-hidden"), !visible), (0, _defineProperty2["default"])(_classNames, "".concat(prefixCls, "-rtl"), direction === 'rtl'), _classNames), className);
+
+  var handleCloseClick = function handleCloseClick(e) {
+    e.stopPropagation();
+
+    if (onClose) {
+      onClose(e);
+    }
+
+    if (e.defaultPrevented) {
+      return;
+    }
+
+    if (!('visible' in props)) {
+      setVisible(false);
+    }
+  };
+
+  var renderCloseIcon = function renderCloseIcon() {
+    if (closable) {
+      return closeIcon ? /*#__PURE__*/React.createElement("div", {
+        className: "".concat(prefixCls, "-close-icon"),
+        onClick: handleCloseClick
+      }, closeIcon) : /*#__PURE__*/React.createElement(_CloseOutlined["default"], {
+        className: "".concat(prefixCls, "-close-icon"),
+        onClick: handleCloseClick
+      });
+    }
+
+    return null;
+  };
+
+  var isNeedWave = 'onClick' in props || children && children.type === 'a';
+  var tagProps = (0, _omit["default"])(props, ['visible']);
+  var iconNode = icon || null;
+  var kids = iconNode ? /*#__PURE__*/React.createElement(React.Fragment, null, iconNode, /*#__PURE__*/React.createElement("span", null, children)) : children;
+  var tagNode = /*#__PURE__*/React.createElement("span", (0, _extends2["default"])({}, tagProps, {
+    ref: ref,
+    className: tagClassName,
+    style: tagStyle
+  }), kids, renderCloseIcon());
+  return isNeedWave ? /*#__PURE__*/React.createElement(_wave["default"], null, tagNode) : tagNode;
+};
+
+var Tag = /*#__PURE__*/React.forwardRef(InternalTag);
+Tag.displayName = 'Tag';
+Tag.CheckableTag = _CheckableTag["default"];
+var _default = Tag;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/react-top-loading-bar/dist/index.modern.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-top-loading-bar/dist/index.modern.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function i(){return(i=Object.assign||function(t){for(var o=1;o<arguments.length;o++){var e=arguments[o];for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&(t[n]=e[n])}return t}).apply(this,arguments)}var l=function(){};function c(t,o){return Math.floor(Math.random()*(o-t+1)+t)}var s=Object(react__WEBPACK_IMPORTED_MODULE_0__["forwardRef"])(function(e,s){var u=e.progress,d=e.height,f=void 0===d?2:d,v=e.className,p=void 0===v?"":v,h=e.color,b=void 0===h?"red":h,g=e.background,m=void 0===g?"transparent":g,w=e.onLoaderFinished,y=e.transitionTime,x=void 0===y?300:y,S=e.loaderSpeed,k=void 0===S?500:S,R=e.waitingTime,T=void 0===R?1e3:R,Y=e.shadow,I=void 0===Y||Y,O=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),j=O[0],M=O[1],N=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({active:!1,startingValue:20,refreshRate:1e3}),P=N[0],V=N[1],z=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(!1),F=z[0],L=z[1],q=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({active:!1,value:20}),A=q[0],B=q[1],C={position:"fixed",top:0,left:0,height:f,background:m,zIndex:99999999999,width:"100%"},D={boxShadow:"0 0 10px "+b+", 0 0 10px "+b,width:"5%",opacity:1,position:"absolute",height:"100%",transition:"all "+k+"ms ease",transform:"rotate(3deg) translate(0px, -4px)",left:"-10rem"},E=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({height:"100%",background:b,transition:"all "+k+"ms ease",width:"0%"}),G=E[0],H=E[1],J=Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(D),K=J[0],Q=J[1];Object(react__WEBPACK_IMPORTED_MODULE_0__["useImperativeHandle"])(s,function(){return{continuousStart:function(t,o){if(void 0===o&&(o=1e3),!A.active)if(F)console.warn("react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!");else{var e=t||c(10,20);V({active:!0,refreshRate:o,startingValue:t}),M(e),Z(e)}},staticStart:function(t){if(!P.active)if(F)console.warn("react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!");else{var o=t||c(30,50);B({active:!0,value:o}),M(o),Z(o)}},complete:function(){F?console.warn("react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"):(M(100),Z(100))}}}),Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){H(i({},G,{background:b})),Q(i({},K,{boxShadow:"0 0 10px "+b+", 0 0 5px "+b}))},[b]),Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){if(s){if(s&&void 0!==u)return void console.warn('react-top-loading-bar: You can\'t use both controlling by props and ref methods to control the bar! Please use only props or only ref methods! Ref methods will override props if "ref" property is available.');Z(j),L(!1)}else u&&Z(u),L(!0)},[u]);var U,W,X,Z=function t(o){o>=100?(H(i({},G,{width:"100%"})),I&&Q(i({},K,{left:o-10+"%"})),setTimeout(function(){H(i({},G,{opacity:0,width:"100%",transition:"all "+x+"ms ease-out",color:b})),setTimeout(function(){P.active&&(V(i({},P,{active:!1})),M(0),t(0)),A.active&&(B(i({},A,{active:!1})),M(0),t(0)),w&&w(),M(0),t(0)},x)},T)):(H(function(t){return i({},t,{width:o+"%",opacity:1,transition:o>0?"all "+k+"ms ease":""})}),I&&Q(i({},K,{left:o-5.5+"%",transition:o>0?"all "+k+"ms ease":""})))};return U=function(){var t=c(10,20);j+t<90&&(M(j+t),Z(j+t))},W=P.active?P.refreshRate:null,X=Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(l),Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){X.current=U}),Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){},[void 0]),Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){if(null!==W&&!1!==W){var t=setInterval(function(){return X.current()},W);return function(){return clearInterval(t)}}},[W]),Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div",{className:p,style:C},Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div",{style:G},I?Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div",{style:K}):null))});/* harmony default export */ __webpack_exports__["default"] = (s);
+//# sourceMappingURL=index.modern.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/react-use/lib/useEffectOnce.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-use/lib/useEffectOnce.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var useEffectOnce = function (effect) {
+    react_1.useEffect(effect, []);
+};
+exports.default = useEffectOnce;
+
 
 /***/ })
 

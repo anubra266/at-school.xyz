@@ -6,9 +6,9 @@ import Descriptions from "antd/lib/descriptions";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 const { Content } = Layout;
 
-const Home = ({ classroom, id }) => {
+const Home = ({ classroom }) => {
     return (
-        <Workspacelayout title={classroom.name} classroom={id}>
+        <Workspacelayout title={classroom.name} classroom={classroom.hash}>
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
@@ -17,7 +17,6 @@ const Home = ({ classroom, id }) => {
                         title={classroom.name}
                         subTitle={classroom.environ.name}
                     ></PageHeader>
-
                 </div>
             </Content>
         </Workspacelayout>

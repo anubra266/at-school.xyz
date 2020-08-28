@@ -42,7 +42,7 @@ const Classroom = ({ classrooms,url }) => {
                             Create Classroom
                         </Button>
                     </Empty>
-                )}
+                )} 
                 <Drawer
                     title="Create New Classroom"
                     placement="right"

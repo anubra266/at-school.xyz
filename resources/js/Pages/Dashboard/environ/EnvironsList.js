@@ -24,15 +24,11 @@ const EnvironsList = ({ environs }) => {
         );
     };
     const formProps = { loading, onFinish, EnvForm };
-
-    environs = environs.map((environ, key) => {
-        environ.key = `env-${key}`;
-        return environ;
-    });
     return (
         <React.Fragment>
             {environs.length !== 0 && (
                 <Table
+                    rowKey={record => `env-${record.id}`}
                     scroll={{ x: 600 }}
                     style={{ marginTop: "10px" }}
                     bordered
@@ -104,7 +100,9 @@ const EnvironsList = ({ environs }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button><EditOutlined /> </Button>
+                                        <Button>
+                                            <EditOutlined />{" "}
+                                        </Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"

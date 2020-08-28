@@ -26,10 +26,6 @@ const OrganizationsList = ({ organizations }) => {
     };
     const formProps = { loading, onFinish, OrgForm };
 
-    organizations = organizations.map((organization, key) => {
-        organization.key = `org-${key}`;
-        return organization;
-    });
     const townfilters = [
         //TODO Display Environs in collapse menu under Table
         //! in production, get towns entered by students and reduce duplicates to use here.
@@ -41,6 +37,7 @@ const OrganizationsList = ({ organizations }) => {
         <React.Fragment>
             {organizations.length !== 0 && (
                 <Table
+                    rowKey={record => `org-${record.id}`}
                     scroll={{ x: 600 }}
                     style={{ marginTop: "10px" }}
                     bordered
@@ -88,19 +85,9 @@ const OrganizationsList = ({ organizations }) => {
                         dataIndex="address"
                         key="address"
                         onFilter={(value, record) =>
-                            record.name.indexOf(value) === 0
-                        }
-                        sorter={(a, b) =>
-                            a.address === b.address
-                                ? 0
-                                : a.address < b.address
-                                ? -1
-                                : 1
-                        }
-                        onFilter={(value, record) =>
                             record.address
                                 .toLowerCase()
-                                .includes(value.toLocaleLowerCase())
+                                .includes(value.toLowerCase())
                         }
                         filterMultiple={false}
                         filters={townfilters}
@@ -134,7 +121,9 @@ const OrganizationsList = ({ organizations }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button><EditOutlined /></Button>
+                                        <Button>
+                                            <EditOutlined />
+                                        </Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"

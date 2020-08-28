@@ -1,6 +1,6 @@
 export function returnRoute(routes) {
     var presentRoute = routes.reduce((proutes, nxt) => {
-        if (`/${nxt.route}` == window.location.pathname) {
+        if (nxt.route == window.location.pathname) {
             proutes.push(`menu-${nxt.name}`);
         } else {
             nxt.items &&

@@ -44,7 +44,7 @@ function Sidebar({ mode, routes }) {
                 >
                     {routes.map(menu => {
                         return (
-                            (auth.user.can[menu.route] ||
+                            (auth.user.can[menu.name] ||
                                 auth.user.can[menu.action]) &&
                             (menu.items ? (
                                 <SubMenu

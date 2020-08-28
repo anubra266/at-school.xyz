@@ -59,13 +59,15 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     //? Classroom routes
-    Route::group(['prefix' => 'classroom', 'middleware' => ['can:create_classrooms']], function () {
-        Route::get('/', 'ClassroomController@index')->name('classroom.index');
-        Route::post('/', 'ClassroomController@store')->name('classroom.create');
+    Route::group(['prefix' => 'classroom'], function () {
+        Route::group(['middleware' => ['can:create_classrooms']], function () {
+            Route::get('/', 'ClassroomController@index')->name('classroom.index');
+            Route::post('/', 'ClassroomController@store')->name('classroom.create');
 
-        Route::group(['middleware' => ['can:update,classroom']], function () {
-            Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
-            Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
+            Route::group(['middleware' => ['can:update,classroom']], function () {
+                Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
+                Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
+            });
         });
 
         // TODO middleware that checks if you are a member or educator of the class

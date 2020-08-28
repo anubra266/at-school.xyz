@@ -12,7 +12,11 @@ class ClassService
     }
     public function index()
     {
-        return authUser()->classes()->latest()->get();
+        $classes = authUser()->classes()->latest()->get();
+        foreach ($classes as $classroom) {
+            $classroom->url = route('classroom.home', ['classroom' => $classroom->hashid()]);
+        }
+        return $classes;
     }
 
     public function join($request)
@@ -27,7 +31,7 @@ class ClassService
             return [null, 'You\'re already a member of this Class!'];
         }
         $classroom->students()->attach(authUser()->id);
-        return [$classroom];
+        return [$classroom, false];
     }
     public function leave($classroom)
     {

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { InertiaLink } from "@inertiajs/inertia-react";
 import Table from "antd/lib/table";
 import PopConfirm from "antd/lib/popconfirm";
 import Space from "antd/lib/space";
@@ -9,14 +10,11 @@ import Typography from "antd/lib/typography";
 const ClassroomsList = ({ classes }) => {
     const [loading, setLoading] = useState(false);
 
-    classes = classes.map((dclass, key) => {
-        dclass.key = `crm-${key}`;
-        return dclass;
-    });
     return (
         <React.Fragment>
             {classes.length !== 0 && (
                 <Table
+                    rowKey={record => `crm-${record.id}`}
                     scroll={{ x: 600 }}
                     style={{ marginTop: "10px" }}
                     bordered
@@ -38,7 +36,9 @@ const ClassroomsList = ({ classes }) => {
                         title="Name"
                         dataIndex="name"
                         key="name"
-                        render={text => <a>{text}</a>}
+                        render={(text, record) => (
+                            <InertiaLink href={record.url}>{text}</InertiaLink>
+                        )}
                         sorter={(a, b) =>
                             a.name === b.name ? 0 : a.name < b.name ? -1 : 1
                         }
@@ -56,7 +56,6 @@ const ClassroomsList = ({ classes }) => {
                     />
                     <Table.Column
                         width={200}
-                        fixed="right"
                         title="Action"
                         key="action"
                         render={(text, record) => (

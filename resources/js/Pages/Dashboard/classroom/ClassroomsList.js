@@ -25,14 +25,11 @@ const ClassroomsList = ({ classrooms }) => {
     };
     const formProps = { loading, onFinish, CrmForm };
 
-    classrooms = classrooms.map((classroom, key) => {
-        classroom.key = `crm-${key}`;
-        return classroom;
-    });
     return (
         <React.Fragment>
             {classrooms.length !== 0 && (
                 <Table
+                    rowKey={record => `crm-${record.id}`}
                     scroll={{ x: 600 }}
                     style={{ marginTop: "10px" }}
                     bordered
@@ -91,7 +88,9 @@ const ClassroomsList = ({ classrooms }) => {
                                         )}
                                         trigger="click"
                                     >
-                                        <Button><EditOutlined /></Button>
+                                        <Button>
+                                            <EditOutlined />
+                                        </Button>
                                     </PopOver>
                                     <PopConfirm
                                         placement="leftTop"
