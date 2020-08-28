@@ -70,10 +70,11 @@ Route::group(['middleware' => ['auth']], function () {
             });
         });
 
-        // TODO middleware that checks if you are a member or educator of the class
         //? Classroom activities routes
-        Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
-        Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
+        Route::group(['middleware' => ['class.auth']], function () {
+            Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
+            Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
+        });
     });
 });
 

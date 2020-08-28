@@ -17,4 +17,9 @@ class Organization extends Model
     {
         return $this->hasMany(Environ::class);
     }
+
+    public function classrooms()
+    {
+        return $this->hasManyThrough(Classroom::class, Environ::class);
+    }
 }

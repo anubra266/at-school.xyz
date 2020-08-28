@@ -66,6 +66,7 @@ class AppServiceProvider extends ServiceProvider
 
                             'classroom_home' => true,
                             'view_classroom_members' => true,
+                            'view_tests' => true,
                         ]
                     ] : null,
                 ];
