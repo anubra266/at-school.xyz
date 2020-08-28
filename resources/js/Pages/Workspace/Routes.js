@@ -16,7 +16,7 @@ export default [
     },
     {
         name: "Home",
-        route: "/",
+        route: "",
         action: "classroom_home",
         icon: <PieChartOutlined />
     },

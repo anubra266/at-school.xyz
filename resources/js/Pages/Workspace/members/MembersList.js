@@ -8,13 +8,15 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Checkbox from "antd/lib/checkbox";
+
 import { Input, AutoComplete } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import Main from "@/Helpers/Main";
 
 const CheckboxGroup = Checkbox.Group;
 
-const MembersList = ({ members }) => {
+const MembersList = ({ members, classroom }) => {
+    console.log(classroom.role);
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
     const filtersList = [
@@ -70,11 +72,11 @@ const MembersList = ({ members }) => {
             {members.length !== 0 && (
                 <React.Fragment>
                     <Row>
-                        <Col>
+                        <Col xs={20} md={12}>
                             <AutoComplete
                                 onSearch={handleSearch}
                                 style={{
-                                    width: 400
+                                    width: "100%"
                                 }}
                                 placeholder="Search Members by Name or Email"
                             >
@@ -171,19 +173,8 @@ const MembersList = ({ members }) => {
                                 ]}
                             />
                         )}
-                        )
                         {auth.user.can.Classrooms && (
                             <React.Fragment>
-                                {show("email") && (
-                                    <Table.Column
-                                        title="Email"
-                                        key="email"
-                                        dataIndex="email"
-                                        render={text => (
-                                            <a>{Main.fCap(text)}</a>
-                                        )}
-                                    />
-                                )}
                                 {show("telephone") && (
                                     <Table.Column
                                         title="Telephone"
@@ -230,40 +221,46 @@ const MembersList = ({ members }) => {
                                         }
                                     />
                                 )}
-                                <Table.Column
-                                    // width={200}
-                                    fixed="right"
-                                    title="Action"
-                                    key="action"
-                                    render={(text, record) => (
-                                        <Space>
-                                            <PopConfirm
-                                                placement="leftTop"
-                                                title={`Leave ${record.name} Class?`}
-                                                onConfirm={() => {
-                                                    setLoading(true);
-                                                    Inertia.patch(
-                                                        route("class.leave", {
-                                                            classroom: record.id
-                                                        })
-                                                    ).then(() =>
-                                                        setLoading(false)
-                                                    );
-                                                }}
-                                                okText="Leave"
-                                                okType="danger"
-                                                trigger="click"
-                                            >
-                                                <Button
-                                                    disabled={true}
-                                                    loading={loading}
+                                {classroom.role === "educator" && (
+                                    <Table.Column
+                                        // width={200}
+                                        fixed="right"
+                                        title="Action"
+                                        key="action"
+                                        render={(text, record) => (
+                                            <Space>
+                                                <PopConfirm
+                                                    placement="leftTop"
+                                                    title={`Leave ${record.name} Class?`}
+                                                    onConfirm={() => {
+                                                        setLoading(true);
+                                                        Inertia.patch(
+                                                            route(
+                                                                "class.leave",
+                                                                {
+                                                                    classroom:
+                                                                        record.id
+                                                                }
+                                                            )
+                                                        ).then(() =>
+                                                            setLoading(false)
+                                                        );
+                                                    }}
+                                                    okText="Leave"
+                                                    okType="danger"
+                                                    trigger="click"
                                                 >
-                                                    Block
-                                                </Button>
-                                            </PopConfirm>
-                                        </Space>
-                                    )}
-                                />
+                                                    <Button
+                                                        disabled={true}
+                                                        loading={loading}
+                                                    >
+                                                        Block
+                                                    </Button>
+                                                </PopConfirm>
+                                            </Space>
+                                        )}
+                                    />
+                                )}
                             </React.Fragment>
                         )}
                     </Table>

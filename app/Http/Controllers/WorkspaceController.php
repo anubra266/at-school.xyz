@@ -17,16 +17,25 @@ class WorkspaceController extends Controller
 
     public function home(Classroom $classroom)
     {
+        $classroom = $this->hash($classroom);
         $classroom->load('Environ.Organization');
         $classroom->load('User');
-        $classroom = $this->hash($classroom);
         return Inertia::render('Workspace/home', ['classroom' => $classroom]);
     }
 
     public function members(Classroom $classroom)
     {
+        $classroom->role = checkClass($classroom, authUser());
         $classroom = $this->hash($classroom);
         $members = $classroom->students()->get();
         return Inertia::render('Workspace/members/', ['classroom' => $classroom, 'members' => $members]);
+    }
+
+    public function theoryTest(Classroom $classroom)
+    {
+        $classroom->load('User');
+        $classroom->role = checkClass($classroom, authUser());
+        $classroom = $this->hash($classroom);
+        return Inertia::render('Workspace/tests/theory/', ['classroom' => $classroom]);
     }
 }

@@ -24,11 +24,13 @@ function Sidebar({ mode, routes, layout }) {
         setCollapsed(collapsed);
     };
     const { auth } = usePage();
-    const route = item => {
+    const genroute = item => {
         return (
             <InertiaLink
                 href={
-                    `menu-${item.name}` == getRoute()[0][0]
+                    item.route === "/home"
+                        ? "/home"
+                        : `menu-${item.name}` == getRoute()[0][0]
                         ? "#"
                         : `${layout}${item.route}`
                 }
@@ -70,7 +72,7 @@ function Sidebar({ mode, routes, layout }) {
                                                 key={`menu-${item.name}`}
                                                 icon={item.icon}
                                             >
-                                                {route(item)}
+                                                {genroute(item)}
                                             </Menu.Item>
                                         );
                                     })}
@@ -80,7 +82,7 @@ function Sidebar({ mode, routes, layout }) {
                                     key={`menu-${menu.name}`}
                                     icon={menu.icon}
                                 >
-                                    {route(menu)}
+                                    {genroute(menu)}
                                 </Menu.Item>
                             ))
                         );

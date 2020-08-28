@@ -30,6 +30,7 @@ const members = ({ classroom, members }) => {
                                 content={export_content}
                                 title="Export Members"
                                 trigger="click"
+                                placement="leftBottom"
                             >
                                 <Button>
                                     <DownloadOutlined />
@@ -40,7 +41,7 @@ const members = ({ classroom, members }) => {
                         ]}
                     ></PageHeader>
                 </div>
-                <MembersList members={members} />
+                <MembersList members={members} classroom={classroom} />
                 {members.length === 0 && (
                     <Empty description={<span>No Students found!</span>}>
                         <Invite key="empty" {...classroom} />
@@ -75,6 +76,7 @@ const Invite = classroom => {
                     {classroom.code}
                 </Typography.Paragraph>
             }
+            placement="leftBottom"
             title="Classroom Code"
             trigger="click"
         >
