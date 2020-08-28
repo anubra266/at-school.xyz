@@ -18,7 +18,7 @@ class OrganizationController extends Controller
 
     public function index()
     {
-        $organizations = $this->organizationService->index();
+        $organizations = $this->organizationService->index(); 
         return Inertia::render('Dashboard/organization/', ['organizations' => $organizations]);
     }
     public function store(OrganizationRequest $request)

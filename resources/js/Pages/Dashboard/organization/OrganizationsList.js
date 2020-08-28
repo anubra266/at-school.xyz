@@ -19,19 +19,12 @@ const OrganizationsList = ({ organizations }) => {
             route("organization.edit", {
                 organization: data.id
             }),
-            data
+            data 
         ).then(res => {
             setLoading(false);
         });
     };
     const formProps = { loading, onFinish, OrgForm };
-
-    const townfilters = [
-        //TODO Display Environs in collapse menu under Table
-        //! in production, get towns entered by students and reduce duplicates to use here.
-        { text: "Ogun", value: "Ogun" },
-        { text: "Lagos", value: "Lagos" }
-    ];
 
     return (
         <React.Fragment>
@@ -84,13 +77,6 @@ const OrganizationsList = ({ organizations }) => {
                         title="Address"
                         dataIndex="address"
                         key="address"
-                        onFilter={(value, record) =>
-                            record.address
-                                .toLowerCase()
-                                .includes(value.toLowerCase())
-                        }
-                        filterMultiple={false}
-                        filters={townfilters}
                     />
                     <Table.Column
                         title="Code"
