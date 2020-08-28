@@ -8,7 +8,7 @@ import BackTop from "antd/lib/back-top";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
-function index({ title, noSidebar, children, routes }) {
+function index({ title, noSidebar, children, routes, layout }) {
     const { flash, errors } = usePage();
     useEffect(() => {
         flash.success && message.success(flash.success, 5);
@@ -54,7 +54,7 @@ function index({ title, noSidebar, children, routes }) {
                 <Navbar pageLoader={pageLoader} />
                 <Layout>
                     {noSidebar !== true && (
-                        <Sidebar mode={mode} routes={routes} />
+                        <Sidebar mode={mode} routes={routes} layout={layout} />
                     )}
                     <Layout className="site-layout">
                         {children}

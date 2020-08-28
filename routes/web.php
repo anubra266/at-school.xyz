@@ -74,6 +74,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::group(['middleware' => ['class.auth']], function () {
             Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
             Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
+            Route::get('/{classroom}/assessments/theory', 'WorkspaceController@members')->name('classroom.members');
         });
     });
 });

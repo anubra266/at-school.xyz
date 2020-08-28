@@ -1,11 +1,14 @@
-export function returnRoute(routes) {
+export function returnRoute(layout, routes) {
     var presentRoute = routes.reduce((proutes, nxt) => {
-        if (nxt.route == window.location.pathname) {
+        var url = window.location.pathname;
+        var route = `${layout}${nxt.route}`;
+        if (route == url) {
             proutes.push(`menu-${nxt.name}`);
         } else {
             nxt.items &&
                 nxt.items.forEach(item => {
-                    if (`/${item.route}` == window.location.pathname) {
+                    var menu_route = `${layout}${item.route}`;
+                    if (menu_route == url) {
                         proutes.push(`menu-${item.name}`);
                     }
                 });

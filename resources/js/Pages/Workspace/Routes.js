@@ -7,45 +7,41 @@ import EditOutlined from "@ant-design/icons/EditOutlined";
 import BookOutlined from "@ant-design/icons/BookOutlined";
 import OrderedListOutlined from "@ant-design/icons/OrderedListOutlined";
 
-class Routes {
-    routes(classroom) {
-        return [
+export default [
+    {
+        name: "Dashboard",
+        route: "/home",
+        action: "home",
+        icon: <DoubleLeftOutlined />
+    },
+    {
+        name: "Home",
+        route: "/",
+        action: "classroom_home",
+        icon: <PieChartOutlined />
+    },
+    {
+        name: "Members",
+        route: `/members`,
+        action: "view_classroom_members",
+        icon: <UserSwitchOutlined />
+    },
+    {
+        name: "Assessments",
+        action: "view_tests",
+        route: "/assessments",
+        icon: <EditOutlined />,
+        items: [
             {
-                name: "Dashboard",
-                route: "/home",
-                action: "home",
-                icon: <DoubleLeftOutlined />
+                name: "Theory",
+                route: `/assessments/theory`,
+                icon: <BookOutlined />
             },
             {
-                name: "Home",
-                route: `/classroom/${classroom}`,
-                action: "classroom_home",
-                icon: <PieChartOutlined />
-            },
-            {
-                name: "Members",
-                route: `/classroom/${classroom}/members`,
-                action: "view_classroom_members",
-                icon: <UserSwitchOutlined />
-            },
-            {
-                name: "Assessments",
-                action: "view_tests",
-                icon: <EditOutlined />,
-                items: [
-                    {
-                        name: "Theory",
-                        route: "/settings/profile",
-                        icon: <BookOutlined />
-                    },
-                    {
-                        name: "Objective",
-                        route: "/settings/theme",
-                        icon: <OrderedListOutlined />
-                    }
-                ]
+                name: "Objective",
+                route: `/assessments/objective`,
+                icon: <OrderedListOutlined />
             }
-        ];
+        ]
     }
-}
-export default new Routes();
+];

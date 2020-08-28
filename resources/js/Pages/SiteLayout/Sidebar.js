@@ -14,9 +14,9 @@ import UserOutlined from "@ant-design/icons/UserOutlined";
 //  TODO Dynamic JSON Routing
 const { Sider } = Layout;
 const { SubMenu } = Menu;
-function Sidebar({ mode, routes }) {
+function Sidebar({ mode, routes, layout }) {
     const getRoute = () => {
-        return returnRoute(routes);
+        return returnRoute(layout, routes);
     };
 
     const [collapsed, setCollapsed] = useState(false);
@@ -24,7 +24,19 @@ function Sidebar({ mode, routes }) {
         setCollapsed(collapsed);
     };
     const { auth } = usePage();
-
+    const route = item => {
+        return (
+            <InertiaLink
+                href={
+                    `menu-${item.name}` == getRoute()[0][0]
+                        ? "#"
+                        : `${layout}${item.route}`
+                }
+            >
+                {item.name}
+            </InertiaLink>
+        );
+    };
     return (
         <React.Fragment>
             <Sider
@@ -58,16 +70,7 @@ function Sidebar({ mode, routes }) {
                                                 key={`menu-${item.name}`}
                                                 icon={item.icon}
                                             >
-                                                <InertiaLink
-                                                    href={
-                                                        `menu-${item.name}` ==
-                                                        getRoute()[0][0]
-                                                            ? "#"
-                                                            : menu.route
-                                                    }
-                                                >
-                                                    {item.name}
-                                                </InertiaLink>
+                                                {route(item)}
                                             </Menu.Item>
                                         );
                                     })}
@@ -77,16 +80,7 @@ function Sidebar({ mode, routes }) {
                                     key={`menu-${menu.name}`}
                                     icon={menu.icon}
                                 >
-                                    <InertiaLink
-                                        href={
-                                            `menu-${menu.name}` ==
-                                            getRoute()[0][0]
-                                                ? "#"
-                                                : menu.route
-                                        }
-                                    >
-                                        {menu.name}
-                                    </InertiaLink>
+                                    {route(menu)}
                                 </Menu.Item>
                             ))
                         );
