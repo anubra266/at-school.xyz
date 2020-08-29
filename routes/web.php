@@ -22,6 +22,19 @@ Route::get('/', 'PublicController@landing')->name('landing');
 
 Auth::routes();
 
+//? Registration Routes...
+Route::get('register', 'MyAuthController@showRegistrationForm')->name('register');
+
+//? login routes
+Route::get('login', 'MyAuthController@showLoginForm')->name('login');
+
+//? Password Reset Routes...
+Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');
+
+//? Email Verification Routes...
+Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+
+
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {
 
@@ -99,4 +112,3 @@ Route::group(['middleware' => ['auth']], function () {
 // Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 // Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 // Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
-

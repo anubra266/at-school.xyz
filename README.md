@@ -23,7 +23,7 @@ It's public for now, As you can see. That might change depending on ... .
 
 git clone https://github.com/anubra266/at-school.xyz.git
 
-composer install
+composer install 
 
 npm install
 
@@ -36,6 +36,10 @@ php artisan key:generate
 php artisan ziggy:generate
 
 php artisan migrate
+
+php artisan db:seed --class=RolesSeeder
+
+php artisan storage:link
 ```
 **I'm not dumb, the above is all self explanatory.**
 
