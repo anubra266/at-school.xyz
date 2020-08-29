@@ -21,6 +21,7 @@ class AtSchoolProvider extends ServiceProvider
         require_once app_path('Helpers/AuthUser.php');
         require_once app_path('Helpers/ClassroomAuthorization.php');
         require_once app_path('Helpers/CreateCode.php');
+        require_once app_path('Helpers/Pop.php');
     }
 
     /**

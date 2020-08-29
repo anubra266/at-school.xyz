@@ -11,7 +11,7 @@ import OrganizationsList from "./OrganizationsList";
 
 const Organization = ({ organizations }) => {
     const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);  
     const OrgForm = useRef(null);
     const showDrawer = () => {
         setVisible(true);

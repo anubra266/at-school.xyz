@@ -38,5 +38,17 @@ class Main {
         canvas.fillText("This will be animage", 0, 0);
         return canvas.canvas.toDataURL();
     }
+    date(date) {
+        const options = {
+            weekday: "short",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true
+        };
+        return new Date(date).toLocaleString(undefined, options);
+    }
 }
 export default new Main();

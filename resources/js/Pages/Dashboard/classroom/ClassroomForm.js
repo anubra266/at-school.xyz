@@ -11,12 +11,15 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
             name="normal_login"
             className="login-form"
             onFinish={onFinish}
-            initialValues={{
-                name: edit.name,
-                id: edit.id
-            }}
+            initialValues={
+                edit && {
+                    name: edit.name,
+                    id: edit.id
+                }
+            }
         >
             <Form.Item
+                label="Classroom Name"
                 name="name"
                 rules={[
                     {
@@ -36,6 +39,7 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
                 </Form.Item>
             ) : (
                 <Form.Item
+                    label="Environ Code"
                     name="code"
                     rules={[
                         {

@@ -79,10 +79,10 @@ Route::group(['middleware' => ['auth']], function () {
             //? Educator Only Routes
             Route::group(['middleware' => ['educator.only']], function () {
                 //? View Theory Assessments
-                Route::get('/{classroom}/assessments/edu-theory', 'WorkspaceController@TheoryTest')->name('classroom.theory.edu.view');
-                Route::post('/{classroom}/assessments/edu-theory', 'WorkspaceController@createTheoryTest')->name('classroom.theory.create');
+                Route::get('/{classroom}/assessments/edu-theory', 'TheoryTestController@index')->name('theory.index');
+                Route::post('/{classroom}/assessments/edu-theory', 'TheoryTestController@store')->name('theory.create');
 
-                Route::get('/{classroom}/assessments/edu-objective', 'WorkspaceController@ObjectiveTest')->name('classroom.objective.edu.view');
+                Route::get('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
             });
         });
     });
@@ -100,4 +100,3 @@ Route::group(['middleware' => ['auth']], function () {
 // Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 // Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
-// Route::get('/home', 'HomeController@index')->name('home');

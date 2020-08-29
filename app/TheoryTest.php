@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TheoryTest extends Model
 {
+    protected $guarded = [];
 
     public function Classroom()
     {

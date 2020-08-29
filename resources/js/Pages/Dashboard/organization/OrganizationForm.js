@@ -11,13 +11,16 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
             name="normal_login"
             className="login-form"
             onFinish={onFinish}
-            initialValues={{
-                name: edit.name,
-                address: edit.address,
-                id: edit.id
-            }}
+            initialValues={
+                edit && {
+                    name: edit.name,
+                    address: edit.address,
+                    id: edit.id
+                }
+            }
         >
             <Form.Item
+                label="Organization Name"
                 name="name"
                 rules={[
                     {
@@ -31,6 +34,7 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
                 <Input placeholder="Organization Name" />
             </Form.Item>
             <Form.Item
+                label="Address"
                 name="address"
                 rules={[
                     {

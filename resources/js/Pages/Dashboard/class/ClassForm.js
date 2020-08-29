@@ -13,6 +13,7 @@ const ClassForm = ({ loading, onFinish, ClsForm }) => {
             onFinish={onFinish}
         >
             <Form.Item
+                label="Classroom Code"
                 name="code"
                 rules={[
                     {

@@ -11,12 +11,15 @@ const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
             name="normal_login"
             className="login-form"
             onFinish={onFinish}
-            initialValues={{
-                name: edit.name,
-                id: edit.id
-            }}
+            initialValues={
+                edit && {
+                    name: edit.name,
+                    id: edit.id
+                }
+            }
         >
             <Form.Item
+            label="Environ / Department Name"
                 name="name"
                 rules={[
                     {
@@ -36,6 +39,7 @@ const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
                 </Form.Item>
             ) : (
                 <Form.Item
+                label="Organization Code"
                     name="code"
                     rules={[
                         {
