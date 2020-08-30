@@ -30,7 +30,6 @@ class OrganizationService
     }
     public function update($request, $organization)
     {
-        // $organization_id = $request->id;
         $new_organization = $request->validated();
         //*update organization
         $organization = $organization->update($new_organization);

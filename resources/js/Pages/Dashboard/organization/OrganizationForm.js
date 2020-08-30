@@ -18,7 +18,7 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
                     id: edit.id
                 }
             }
-            layout="vertical"
+            layout="vertical" 
         >
             <Form.Item
                 label="Organization Name"

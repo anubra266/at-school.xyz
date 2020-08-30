@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Empty from "antd/lib/empty";
 import Button from "antd/lib/button";
 import Card from "antd/lib/card";
@@ -6,23 +6,51 @@ import Avatar from "antd/lib/avatar";
 import Col from "antd/lib/col";
 import Row from "antd/lib/row";
 import Tooltip from "antd/lib/tooltip";
+import Popover from "antd/lib/popover";
 import CheckOutlined from "@ant-design/icons/CheckOutlined";
 import EditOutlined from "@ant-design/icons/EditOutlined";
 import DeleteOutlined from "@ant-design/icons/DeleteOutlined";
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
 import DoubleRightOutlined from "@ant-design/icons/DoubleRightOutlined";
+import EduTheoryForm from "./EduTheoryForm";
+import Auth from "@/Helpers/Auth";
 
 import Main from "@/Helpers/Main";
 const { Meta } = Card;
 
-const Student = ({ tests, classroom, showDrawer }) => {
+const Educator = ({ tests, classroom, showDrawer }) => {
+    const [loading, setLoading] = useState(false);
+    const TestForm = useRef(null);
+    const [data, setData] = useState({
+        title: "",
+        start_time: "",
+        deadline: "",
+        total_score: ""
+    });
+    const handleChange = e => {
+        Auth.handleChange(e, setData);
+    };
+    const after = () => {
+        TestForm.current.resetFields();
+        setVisible(false);
+    };
+    const onFinish = () => {
+        Auth.handleSubmit(
+            "theory.update",
+            setLoading,
+            data,
+            { classroom: classroom.hash },
+            after
+        );
+    };
+    const formProps = { loading, TestForm, onFinish, handleChange };
     return (
         <React.Fragment>
-            <Row>
-                {tests.map(test => (
-                    <Col xs={20} md={8}>
+            <Row gutter={[16, 16]}>
+                {tests.map((test, key) => (
+                    <Col xs={20} lg={8} key={key}>
                         <Card
-                            style={{ width: 300 }}
+                            style={{ width: "100%" }}
                             actions={[
                                 <Tooltip title="Take test">
                                     <DoubleRightOutlined
@@ -31,7 +59,19 @@ const Student = ({ tests, classroom, showDrawer }) => {
                                     />
                                 </Tooltip>,
                                 <Tooltip title="Edit Test Settings">
-                                    <SettingOutlined key="setting" />
+                                    <Popover
+                                        placement="bottom"
+                                        title={"Edit Test Settings"}
+                                        content={
+                                            <EduTheoryForm
+                                                edit={test}
+                                                {...formProps}
+                                            />
+                                        }
+                                        trigger="click"
+                                    >
+                                        <SettingOutlined key="setting" />{" "}
+                                    </Popover>
                                 </Tooltip>,
                                 <Tooltip title="Mark Test">
                                     <CheckOutlined
@@ -88,4 +128,4 @@ const Student = ({ tests, classroom, showDrawer }) => {
         </React.Fragment>
     );
 };
-export default Student;
+export default Educator;

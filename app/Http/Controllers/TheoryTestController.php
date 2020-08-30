@@ -7,6 +7,7 @@ use App\Http\Requests\TheoryTestRequest;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Services\TheoryTestService;
+use App\TheoryTest;
 
 class TheoryTestController extends Controller
 {
@@ -24,7 +25,18 @@ class TheoryTestController extends Controller
 
     public function store(Classroom $classroom, TheoryTestRequest $request)
     {
-        $test = $this->theoryTestService->store($classroom, $request);
-        return redirect()->back()->with('success', "");
+        $this->theoryTestService->store($classroom, $request);
+        return redirect()->back()->with('success', "Assessment Created Successfully");
+    }
+
+    public function update(Classroom $classroom, TheoryTestRequest $request)
+    {
+        $this->theoryTestService->update($classroom, $request);
+        return redirect()->back()->with('success', "Assessment Updated Successfully");
+    }
+    public function destroy(Classroom $classroom, TheoryTest $test)
+    {
+        $this->theoryTestService->destroy($classroom, $test);
+        return redirect()->back()->with('success', "Assessment Deleted Successfully");
     }
 }

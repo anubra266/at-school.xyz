@@ -9,12 +9,27 @@ import Button from "antd/lib/button";
 import DatePicker from "antd/lib/date-picker";
 import Main from "@/Helpers/Main";
 const { RangePicker } = DatePicker;
-const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
+const EduTheoryForm = ({ loading, onFinish, TestForm, edit, handleChange }) => {
     const { errors } = usePage();
+    function onChange(value, dateString) {
+        handleChange({
+            target: {
+                name: "start_time",
+                value: Main.laradate(value[0]._d)
+            }
+        });
+        handleChange({
+            target: {
+                name: "deadline",
+                value: Main.laradate(value[1]._d)
+            }
+        });
+    }
     function disabledDate(current) {
         // Can not select days before today
         return current && current < moment().startOf("day");
     }
+    edit && console.log(edit);
     return (
         <div>
             <Form
@@ -28,8 +43,7 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
                         period: [
                             moment(new Date(edit.start_time)),
                             moment(new Date(edit.deadline))
-                        ],
-                        id: edit.id
+                        ]
                     }
                 }
             >
@@ -45,7 +59,11 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
                     validateStatus={errors.title && "error"}
                     help={errors.title && errors.title[0]}
                 >
-                    <Input placeholder="Test Title" name="title" />
+                    <Input
+                        placeholder="Test Title"
+                        onChange={handleChange}
+                        name="title"
+                    />
                 </Form.Item>
                 <Form.Item
                     label="Test Period"
@@ -71,6 +89,7 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
                         format="YYYY-MM-DD"
                         name="period"
                         disabledDate={disabledDate}
+                        onChange={onChange}
                     />
                 </Form.Item>
                 <Tooltip
@@ -95,14 +114,14 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
                             style={{ width: "100%" }}
                             min={1}
                             placeholder="Input Highest Possible Score"
+                            onChange={value => {
+                                handleChange({
+                                    target: { name: "total_score", value }
+                                });
+                            }}
                             name="total_score"
                         />
                     </Form.Item>
-                    {edit && (
-                        <Form.Item name="id" hidden={true}>
-                            <Input />
-                        </Form.Item>
-                    )}
                 </Tooltip>
 
                 <Form.Item>

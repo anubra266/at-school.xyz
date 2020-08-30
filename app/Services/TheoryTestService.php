@@ -23,4 +23,14 @@ class TheoryTestService
     {
         return $classroom->theoryTests()->create($request->validated());
     }
+
+    public function update($classroom, $request)
+    {
+        return $this->theoryTest->find($request->id)->update($request->validated());
+    }
+
+    public function destroy($classroom, $test)
+    {
+        return $test->delete();
+    }
 }

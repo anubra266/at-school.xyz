@@ -10,11 +10,16 @@ import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import Educator from "./Educator";
 import EduTheoryForm from "./EduTheoryForm";
 const { Content } = Layout;
-import Main from "@/Helpers/Main";
 
 const Theory = ({ classroom, tests }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [data, setData] = useState({
+        title: "",
+        start_time: "",
+        deadline: "",
+        total_score: ""
+    });
     const TestForm = useRef(null);
     const showDrawer = () => {
         setVisible(true);
@@ -22,24 +27,24 @@ const Theory = ({ classroom, tests }) => {
     const onClose = () => {
         setVisible(false);
     };
+    const handleChange = e => {
+        Auth.handleChange(e, setData);
+    };
     const after = () => {
         TestForm.current.resetFields();
         setVisible(false);
     };
-    const onFinish = data => {
-        data.start_time = Main.laradate(data.period[0]._d);
-        data.deadline = Main.laradate(data.period[1]._d);
-        setLoading(true);
-        Inertia.post(
-            route("theory.create", { classroom: classroom.hash }),
-            data
-        ).then(() => {
-            setLoading(false);
-            after();
-        });
+    const onFinish = () => {
+        Auth.handleSubmit(
+            "theory.create",
+            setLoading,
+            data,
+            { classroom: classroom.hash },
+            after
+        );
     };
     const testProps = { classroom, tests, showDrawer };
-    const formProps = { loading, TestForm, onFinish };
+    const formProps = { loading, TestForm, onFinish, handleChange };
     return (
         <Workspacelayout title={classroom.name} classroom={classroom}>
             <Content style={{ margin: "0 16px" }}>
