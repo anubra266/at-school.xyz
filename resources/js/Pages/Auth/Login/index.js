@@ -8,7 +8,8 @@ const login = () => {
     const [checking, setChecking] = useState(false);
     const [data, setData] = useState({
         email: "",
-        password: ""
+        password: "",
+        remember: false
     });
     const handleChange = e => {
         Auth.handleChange(e, setData);
@@ -18,7 +19,7 @@ const login = () => {
         e.preventDefault();
         Auth.handleSubmit("login", setChecking, data);
     };
-    const { errors } = usePage();
+    const { errors, flash } = usePage();
     return (
         <Layout
             title="Login at-school"
@@ -37,7 +38,11 @@ const login = () => {
                             className="form-control"
                             name="email"
                             required
-                            value={data.email}
+                            value={
+                                flash.input && flash.input.email
+                                    ? flash.input.email
+                                    : data.email
+                            }
                             id="email"
                             onChange={handleChange}
                             placeholder="Enter email"
@@ -73,6 +78,9 @@ const login = () => {
                                     type="checkbox"
                                     className="custom-control-input"
                                     id="customControlInline"
+                                    value={true}
+                                    name="remember"
+                                    onChange={handleChange}
                                 />
                                 <label
                                     className="custom-control-label"
