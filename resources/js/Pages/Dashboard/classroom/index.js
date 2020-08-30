@@ -19,7 +19,7 @@ const Classroom = ({ classrooms,url }) => {
     };
     const onClose = () => {
         setVisible(false);
-    };
+    }; 
     const { flash } = usePage();
     const onFinish = data => {
         setLoading(true);

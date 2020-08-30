@@ -69,6 +69,20 @@ const ClassroomsList = ({ classrooms }) => {
                             </Typography.Paragraph>
                         )}
                     />
+
+                    <Table.Column
+                        title="Students"
+                        dataIndex="students_count"
+                        key="students_count"
+                        sorter={(a, b) =>
+                            a.students_count === b.students_count
+                                ? 0
+                                : a.students_count < b.students_count
+                                ? -1
+                                : 1
+                        }
+                    />
+
                     {window.location.pathname === "/classroom" && (
                         <Table.Column
                             width={200}

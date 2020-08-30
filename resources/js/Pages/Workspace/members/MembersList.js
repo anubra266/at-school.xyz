@@ -69,56 +69,61 @@ const MembersList = ({ members, classroom }) => {
         <React.Fragment>
             {members.length !== 0 && (
                 <React.Fragment>
-                    <Row>
-                        <Col xs={20} md={12}>
-                            <AutoComplete
-                                onSearch={handleSearch}
-                                style={{
-                                    width: "100%"
-                                }}
-                                placeholder="Search Members by Name or Email"
-                            >
-                                {result.slice(0, 3).map(member => {
-                                    return (
-                                        <AutoComplete.Option
-                                            key={member.email}
-                                            value={member.email}
-                                        >
-                                            <div
-                                                style={{
-                                                    display: "flex",
-                                                    justifyContent:
-                                                        "space-between"
-                                                }}
-                                            >
-                                                {Main.name(member)}
-                                                <span>
-                                                    <UserOutlined />
-                                                </span>
-                                            </div>
-                                        </AutoComplete.Option>
-                                    );
-                                })}
-                            </AutoComplete>
-                        </Col>
-                    </Row>
-                    <br />
-                    <Space>
-                        <div className="site-checkbox-all-wrapper">
-                            <Checkbox
-                                indeterminate={indeterminate}
-                                onChange={onFilterAll}
-                                checked={checkAll}
-                            >
-                                Check all
-                            </Checkbox>
-                        </div>
-                        <CheckboxGroup
-                            options={filterChecks}
-                            value={showFilter}
-                            onChange={onFilter}
-                        />
-                    </Space>
+                    {auth.user.can.Classrooms && (
+                        <React.Fragment>
+                            <Row>
+                                <Col xs={20} md={12}>
+                                    <AutoComplete
+                                        onSearch={handleSearch}
+                                        style={{
+                                            width: "100%"
+                                        }}
+                                        placeholder="Search Members by Name or Email"
+                                    >
+                                        {result.slice(0, 3).map(member => {
+                                            return (
+                                                <AutoComplete.Option
+                                                    key={member.email}
+                                                    value={member.email}
+                                                >
+                                                    <div
+                                                        style={{
+                                                            display: "flex",
+                                                            justifyContent:
+                                                                "space-between"
+                                                        }}
+                                                    >
+                                                        {Main.name(member)}
+                                                        <span>
+                                                            <UserOutlined />
+                                                        </span>
+                                                    </div>
+                                                </AutoComplete.Option>
+                                            );
+                                        })}
+                                    </AutoComplete>
+                                </Col>
+                            </Row>
+                            <br />
+                            <Space>
+                                <div className="site-checkbox-all-wrapper">
+                                    <Checkbox
+                                        indeterminate={indeterminate}
+                                        onChange={onFilterAll}
+                                        checked={checkAll}
+                                    >
+                                        Check all
+                                    </Checkbox>
+                                </div>
+                                <CheckboxGroup
+                                    options={filterChecks}
+                                    value={showFilter}
+                                    onChange={onFilter}
+                                />
+                            </Space>
+                        </React.Fragment>
+                    )}
+
                     <Table
                         scroll={{ x: auth.user.can.Classrooms ? 600 : 0 }}
                         rowKey={record => `mem-${record.id}`}
@@ -148,9 +153,13 @@ const MembersList = ({ members, classroom }) => {
                         <Table.Column
                             title="Name"
                             key="name"
-                            render={(text, record) => (
-                                <a>{Main.name(record)}</a>
-                            )}
+                            render={(text, record) =>
+                                record.email == auth.user.email ? (
+                                    <a href="#">{Main.name(record)}</a>
+                                ) : (
+                                    <a>{Main.name(record)}</a>
+                                )
+                            }
                             sorter={(a, b) => Main.sort(a, b, "first_name")}
                         />
                         {show("gender") && (
