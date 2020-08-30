@@ -11,6 +11,7 @@ const ClassForm = ({ loading, onFinish, ClsForm }) => {
             name="normal_login"
             className="login-form"
             onFinish={onFinish}
+            layout="vertical"
         >
             <Form.Item
                 label="Classroom Code"

@@ -1,5 +1,4 @@
 import React, { Suspense, useRef, useEffect } from "react";
-import FlashMessages from "@/Shared/FlashMessages";
 
 import Loading from "@/Shared/Loading";
 
@@ -16,7 +15,6 @@ function Layout({ children, title, header, subheader }) {
             <Assets pageLoader={pageLoader}>
                 <div className="wrapper-page">
                     <div className="card overflow-hidden account-card mx-3">
-                        <FlashMessages />
                         <div className="bg-primary p-4 text-white text-center position-relative">
                             <h4 className="font-20 m-b-5">{header}</h4>
                             <p className="text-white-50 mb-4">{subheader}</p>

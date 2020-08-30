@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useEffectOnce } from "react-use";
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 import Layout from "@/Pages/Auth/Layout";
 import LoadingButton from "@/Shared/LoadingButton";
@@ -20,6 +20,13 @@ const login = () => {
         Auth.handleSubmit("login", setChecking, data);
     };
     const { errors, flash } = usePage();
+    useEffectOnce(() => {
+        flash.input &&
+            flash.input.email &&
+            handleChange({
+                target: { name: "email", value: flash.input.email }
+            });
+    });
     return (
         <Layout
             title="Login at-school"
@@ -38,11 +45,7 @@ const login = () => {
                             className="form-control"
                             name="email"
                             required
-                            value={
-                                flash.input && flash.input.email
-                                    ? flash.input.email
-                                    : data.email
-                            }
+                            value={data.email}
                             id="email"
                             onChange={handleChange}
                             placeholder="Enter email"

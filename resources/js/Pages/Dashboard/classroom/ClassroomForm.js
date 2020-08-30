@@ -17,6 +17,7 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
                     id: edit.id
                 }
             }
+            layout="vertical"
         >
             <Form.Item
                 label="Classroom Name"

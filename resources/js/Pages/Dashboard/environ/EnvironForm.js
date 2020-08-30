@@ -17,9 +17,10 @@ const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
                     id: edit.id
                 }
             }
+            layout="vertical"
         >
             <Form.Item
-            label="Environ / Department Name"
+                label="Environ / Department Name"
                 name="name"
                 rules={[
                     {
@@ -39,7 +40,7 @@ const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
                 </Form.Item>
             ) : (
                 <Form.Item
-                label="Organization Code"
+                    label="Organization Code"
                     name="code"
                     rules={[
                         {
