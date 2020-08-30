@@ -64,12 +64,12 @@ const Student = ({ tests, classroom, showDrawer }) => {
                                     <React.Fragment>
                                         <span>
                                             <strong>Start Time: </strong>
-                                            {Main.date(test.start_time)}
+                                            {Main.human_date(test.start_time)}
                                         </span>
                                         <br></br>
                                         <span>
                                             <strong>Deadline: </strong>
-                                            {Main.date(test.deadline)}
+                                            {Main.human_date(test.deadline)}
                                         </span>
                                     </React.Fragment>
                                 }

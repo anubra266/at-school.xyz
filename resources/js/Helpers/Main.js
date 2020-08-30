@@ -38,7 +38,7 @@ class Main {
         canvas.fillText("This will be animage", 0, 0);
         return canvas.canvas.toDataURL();
     }
-    date(date) {
+    human_date(date) {
         const options = {
             weekday: "short",
             year: "numeric",
@@ -49,6 +49,17 @@ class Main {
             hour12: true
         };
         return new Date(date).toLocaleString(undefined, options);
+    }
+    laradate(date) {
+        var year = date.getFullYear();
+        var month = ("0" + (date.getMonth() + 1)).slice(-2);
+        var day = ("0" + date.getDate()).slice(-2);
+
+        var hours = ("0" + date.getHours()).slice(-2);
+        var minutes = ("0" + date.getMinutes()).slice(-2);
+        var seconds = "00";
+
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; //2020-08-29 23:02:00
     }
 }
 export default new Main();

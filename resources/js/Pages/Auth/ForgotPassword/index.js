@@ -1,57 +1,57 @@
 import React from "react";
+import Layout from "@/Pages/Auth/Layout";
 import { InertiaLink } from "@inertiajs/inertia-react";
 
-
-import Layout from "@/Pages/Auth/Layout";
-
-function ForgotPassword() {
+const resetpassword = () => {
     return (
-            <Layout title="at-school Login">
-                <form className="login100-form validate-form">
-                    <span className="login100-form-title p-b-37">
-                        Reset Password
-                    </span>
+        <Layout
+            title="Reset Password at-school"
+            header="Reset Password"
+            subheader=""
+        >
+            <div class="account-card-content">
+                <div class="alert alert-success m-t-30" role="alert">
+                    Enter your Email and instructions will be sent to you!
+                </div>
 
-                    <div
-                        className="wrap-input100 m-b-20"
-                    >
+                <form class="form-horizontal m-t-30" action="index.html">
+                    <div class="form-group">
+                        <label for="useremail">Email</label>
                         <input
-                            className="input100"
                             type="email"
-                            name="email"
-                            placeholder="Account email"
-                            required
+                            class="form-control"
+                            id="useremail"
+                            placeholder="Enter email"
                         />
-                        <span className="focus-input100"></span>
                     </div>
 
-                    <div className="container-login100-form-btn">
-                        <button type="submit" className="login100-form-btn">
-                            Reset Password
-                        </button>
-                    </div>
-
-                    <div className="row justify-content-between mt-4">
-                        <div className="col-6">
-                            <InertiaLink
-                                className="txt2 hov1"
-                                href={route("login")}
+                    <div class="form-group row m-t-20 mb-0">
+                        <div class="col-12 text-right">
+                            <button
+                                class="btn btn-primary w-md waves-effect waves-light"
+                                type="submit"
                             >
-                                Sign In
-                            </InertiaLink>
-                        </div>
-                        <div className="col-6 text-right">
-                            <InertiaLink
-                                className="txt2 hov1"
-                                href={route("register")}
-                            >
-                                Sign Up
-                            </InertiaLink>
+                                Reset
+                            </button>
                         </div>
                     </div>
                 </form>
-            </Layout>
+            </div>
+            <div className="row">
+                <div className="col text-center">
+                    <p>
+                        Don't have an account?{" "}
+                        <InertiaLink
+                            className="font-500 text-primary"
+                            href={route("register")}
+                        >
+                            Signup now
+                        </InertiaLink>
+                    </p>
+                </div>
+            </div>
+        </Layout>
     );
-}
+};
 
-export default ForgotPassword;
+export default resetpassword;
