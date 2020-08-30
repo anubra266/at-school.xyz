@@ -76,7 +76,7 @@ function Register() {
 
                 {page === 4 && <ProfileImageInfo {...formprops} />}
 
-                <FormFooter {...footerprops} />
+                <FormFooter {...footerprops} /> 
             </form>
         </Layout>
     );

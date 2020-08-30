@@ -48,17 +48,22 @@ const login = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="userpassword">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                             type="password"
                             className="form-control"
-                            id="userpassword"
+                            id="password"
                             placeholder="Enter password"
                             name="password"
                             required
                             value={data.password}
                             onChange={handleChange}
                         />
+                        {errors.password && (
+                            <div className="text-danger">
+                                {errors.password[0]}
+                            </div>
+                        )}
                     </div>
 
                     <div className="form-group row m-t-20">

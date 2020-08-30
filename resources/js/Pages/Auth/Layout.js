@@ -1,5 +1,4 @@
 import React, { Suspense, useRef, useEffect } from "react";
-import { InertiaLink } from "@inertiajs/inertia-react";
 import FlashMessages from "@/Shared/FlashMessages";
 
 import Loading from "@/Shared/Loading";
