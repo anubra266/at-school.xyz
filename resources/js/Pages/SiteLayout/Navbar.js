@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import useEffectOnce from "react-use/lib/useEffectOnce";
-import LoadingBar from "react-top-loading-bar";
 import Layout from "antd/lib/layout";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
@@ -14,21 +12,15 @@ import Drawer from "antd/lib/drawer";
 
 import EllipsisOutlined from "@ant-design/icons/EllipsisOutlined";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
-import { loadPage } from "@/Helpers/PageLoad";
 import { usePage } from "@inertiajs/inertia-react";
 import { trans_roles } from "@/Helpers/Translate.js";
 
 const { Header } = Layout;
 
-function Navbar({ pageLoader }) {
+function Navbar() {
     // TODO Logout
     const { auth } = usePage();
     const trans_role = trans_roles(auth.user.initial_role);
-    loadPage(pageLoader);
-    useEffectOnce(() => {
-        //*complete pageLoader loading
-        pageLoader && pageLoader.current.complete();
-    });
     const [visible, setVisible] = useState(false);
     const showDrawer = () => {
         setVisible(true);
@@ -38,12 +30,6 @@ function Navbar({ pageLoader }) {
     };
     return (
         <React.Fragment>
-            <LoadingBar
-                color="rgb(24, 144, 255)"
-                ref={pageLoader}
-                waitingTime={1000}
-                height={2}
-            />
             <Header className="site-layout-background" style={{ padding: 0 }}>
                 <PageHeader
                     title="at-School"

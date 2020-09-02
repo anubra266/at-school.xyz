@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import { Helmet } from "react-helmet";
 import Layout from "antd/lib/layout";
@@ -8,8 +8,8 @@ import BackTop from "antd/lib/back-top";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
+
 function index({ title, noSidebar, children, routes, layout, classroom }) {
-    
     const { flash, errors } = usePage();
     useEffect(() => {
         flash.success && message.success(flash.success, 5);
@@ -26,7 +26,6 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
     useEffect(() => {
         document.title = `${title} - at-School`;
     }, [title]);
-    const pageLoader = useRef(null);
 
     const mode = "dark";
 
@@ -53,7 +52,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
             </Helmet>
             <BackTop />
             <Layout style={{ minHeight: "100vh" }}>
-                <Navbar pageLoader={pageLoader} />
+                <Navbar />
                 <Layout>
                     {noSidebar !== true && <Sidebar {...sidebarprops} />}
                     <Layout className="site-layout">

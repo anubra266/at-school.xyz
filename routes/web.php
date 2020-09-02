@@ -16,6 +16,9 @@ Route::get('register', 'MyAuthController@showRegistrationForm')->name('register'
 
 //? login routes
 Route::get('login', 'MyAuthController@showLoginForm')->name('login');
+Route::group(['namespace' => 'Auth', 'middleware' => ['auth']], function () {
+    Route::get('logout', 'LoginController@logout')->name('logout');
+});
 
 //? Password Reset Routes...
 Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');

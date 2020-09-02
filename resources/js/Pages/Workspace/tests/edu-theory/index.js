@@ -4,7 +4,6 @@ import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
 import Drawer from "antd/lib/drawer";
-import Auth from "@/Helpers/Auth";
 
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import Educator from "./Educator";

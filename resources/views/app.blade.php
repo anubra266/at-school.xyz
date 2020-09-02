@@ -8,19 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--SEO assets -->
-    <meta name="theme-color" content="#7971ea" />
-    <meta name="title" content="at-School" />
+    <meta name="theme-color" content="#141414" />
+    <meta name="title" content="at-School - E-learning Site" />
     <meta name="description" content="We help to keep the flow of education, wherever you are, at anytime." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://at-school.xyz/" />
-    <meta property="og:title" content="at-School" />
+    <meta property="og:title" content="at-School- E-learning Site" />
     <meta property="og:description" content="We help to keep the flow of education, wherever you are, at anytime." />
     <meta property="og:image" content="%PUBLIC_URL%/at-school.png" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="@anubra266" />
     <meta property="twitter:creator" content="@anubra266" />
     <meta property="twitter:url" content="https://at-school.xyz/" />
-    <meta property="twitter:title" content="at-School" />
+    <meta property="twitter:title" content="at-School- E-learning Site" />
     <meta property="twitter:description"
         content="We help to keep the flow of education, wherever you are, at anytime." />
     <meta property="twitter:image" content="%PUBLIC_URL%/at-school.png" />

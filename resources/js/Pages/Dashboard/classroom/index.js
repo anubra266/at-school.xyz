@@ -10,7 +10,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import ClassroomForm from "./ClassroomForm";
 import ClassroomsList from "./ClassroomsList";
 
-const Classroom = ({ classrooms,url }) => {
+const Classroom = ({ classrooms, url }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const CrmForm = useRef(null);
@@ -19,7 +19,7 @@ const Classroom = ({ classrooms,url }) => {
     };
     const onClose = () => {
         setVisible(false);
-    }; 
+    };
     const { flash } = usePage();
     const onFinish = data => {
         setLoading(true);
@@ -42,7 +42,7 @@ const Classroom = ({ classrooms,url }) => {
                             Create Classroom
                         </Button>
                     </Empty>
-                )} 
+                )}
                 <Drawer
                     title="Create New Classroom"
                     placement="right"

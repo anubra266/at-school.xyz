@@ -20,13 +20,14 @@ const { Meta } = Card;
 
 const Educator = ({ tests, classroom, showDrawer }) => {
     const [loading, setLoading] = useState(false);
+    const { role } = classroom;
+    console.log(role);
     const TestForm = useRef(null);
     const after = () => {
         TestForm.current.resetFields();
     };
     const onFinish = data => {
         data.start_time = Main.laradate(data.period[0]._d);
-        data.deadline = Main.laradate(data.period[1]._d);
         data.deadline = Main.laradate(data.period[1]._d);
         setLoading(true);
         Inertia.patch(
@@ -45,58 +46,60 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                     <Col xs={20} lg={8} key={key}>
                         <Card
                             style={{ width: "100%" }}
-                            actions={[
-                                <Tooltip title="Mark Test">
-                                    <CheckOutlined
-                                        style={{ color: "green" }}
-                                        key="mark"
-                                    />
-                                </Tooltip>,
-                                <Tooltip title="Edit Test Settings">
-                                    <Popover
-                                        placement="top"
-                                        title={"Edit Test Settings"}
-                                        content={
-                                            <EduTheoryForm
-                                                edit={test}
-                                                {...formProps}
-                                            />
-                                        }
-                                        trigger="click"
-                                    >
-                                        <SettingOutlined key="setting" />{" "}
-                                    </Popover>
-                                </Tooltip>,
-                                <Tooltip title="Edit Test Questions">
-                                    <EditOutlined
-                                        style={{ color: "orange" }}
-                                        key="edit"
-                                    />
-                                </Tooltip>,
-                                <PopConfirm
-                                    placement="top"
-                                    title={`Delete ${test.title} Test ?`}
-                                    onConfirm={() => {
-                                        setLoading(true);
-                                        Inertia.delete(
-                                            route("theory.delete", {
-                                                classroom: classroom.hash,
-                                                test: test.id
-                                            })
-                                        );
-                                    }}
-                                    trigger="click"
-                                    okText="Delete"
-                                    okType="danger"
-                                >
-                                    <Tooltip title="Delete Test">
-                                        <DeleteOutlined
-                                            style={{ color: "red" }}
-                                            key="delete"
+                            actions={
+                                role === "educator" && [
+                                    <Tooltip title="Mark Test">
+                                        <CheckOutlined
+                                            style={{ color: "green" }}
+                                            key="mark"
                                         />
-                                    </Tooltip>
-                                </PopConfirm>
-                            ]}
+                                    </Tooltip>,
+                                    <Tooltip title="Edit Test Settings">
+                                        <Popover
+                                            placement="top"
+                                            title={"Edit Test Settings"}
+                                            content={
+                                                <EduTheoryForm
+                                                    edit={test}
+                                                    {...formProps}
+                                                />
+                                            }
+                                            trigger="click"
+                                        >
+                                            <SettingOutlined key="setting" />{" "}
+                                        </Popover>
+                                    </Tooltip>,
+                                    <Tooltip title="Edit Test Questions">
+                                        <EditOutlined
+                                            style={{ color: "orange" }}
+                                            key="edit"
+                                        />
+                                    </Tooltip>,
+                                    <PopConfirm
+                                        placement="top"
+                                        title={`Delete ${test.title} Test ?`}
+                                        onConfirm={() => {
+                                            setLoading(true);
+                                            Inertia.delete(
+                                                route("theory.delete", {
+                                                    classroom: classroom.hash,
+                                                    test: test.id
+                                                })
+                                            );
+                                        }}
+                                        trigger="click"
+                                        okText="Delete"
+                                        okType="danger"
+                                    >
+                                        <Tooltip title="Delete Test">
+                                            <DeleteOutlined
+                                                style={{ color: "red" }}
+                                                key="delete"
+                                            />
+                                        </Tooltip>
+                                    </PopConfirm>
+                                ]
+                            }
                         >
                             <Meta
                                 avatar={

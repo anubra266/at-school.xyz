@@ -97,9 +97,9 @@ function Sidebar({ mode, routes, layout, classroom }) {
                             message.loading("Logging you out...");
                         }}
                     >
-                        <InertiaLink href={route("logout")} method="POST">
+                        <a href={route("logout")}>
                             <span>Logout</span>
-                        </InertiaLink>
+                        </a>
                     </Menu.Item>
                 </Menu>
             </Sider>
