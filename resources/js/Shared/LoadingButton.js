@@ -4,9 +4,14 @@ function Spinner({ children, type, className, loading }) {
     return (
         <button className={className} type={type} disabled={loading}>
             {loading ? (
-                <div className="spinner-border" role="status">
-                    <span className="sr-only">Loading...</span>
-                </div>
+                <React.Fragment>
+                    <span
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="">Loading...</span>
+                </React.Fragment>
             ) : (
                 children
             )}

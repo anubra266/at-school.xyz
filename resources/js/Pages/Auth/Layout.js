@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-
+import { InertiaLink } from "@inertiajs/inertia-react";
 import Loading from "@/Shared/Loading";
 
 import "@/assets/auth/css/style.css";
@@ -16,13 +16,13 @@ function Layout({ children, title, header, subheader }) {
                     <div className="bg-primary p-4 text-white text-center position-relative">
                         <h4 className="font-20 m-b-5">{header}</h4>
                         <p className="text-white-50 mb-4">{subheader}</p>
-                        <a href="index.html" className="logo logo-admin">
+                        <InertiaLink href="/" className="logo logo-admin">
                             <img
                                 src={require("@/assets/general/images/at-school.png")}
                                 height="24"
                                 alt="logo"
                             />
-                        </a>
+                        </InertiaLink>
                     </div>
                     {children}
                 </div>

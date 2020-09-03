@@ -57,9 +57,6 @@ function Navbar() {
                             <button
                                 onClick={showDrawer}
                                 className="navbar-toggler"
-                                style={{
-                                    color: "white"
-                                }}
                                 type="button"
                             >
                                 <MenuOutlined />

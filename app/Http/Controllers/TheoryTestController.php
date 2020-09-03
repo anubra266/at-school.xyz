@@ -29,6 +29,11 @@ class TheoryTestController extends Controller
         return redirect()->back()->with('success', "Assessment Created Successfully");
     }
 
+    public function edit(Classroom $classroom, TheoryTest $test)
+    {
+        $data = $this->theoryTestService->edit($classroom, $test);
+        return Inertia::render('Workspace/tests/edu-theory/edit/', $data);
+    }
     public function update(Classroom $classroom, TheoryTestRequest $request)
     {
         $this->theoryTestService->update($classroom, $request);

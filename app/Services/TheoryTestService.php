@@ -24,6 +24,12 @@ class TheoryTestService
         return $classroom->theoryTests()->create($request->validated());
     }
 
+    public function edit($classroom, $test)
+    {
+        $classroom = pop($classroom)->load('User');
+        return ['classroom' => $classroom, 'test' => $test];
+    }
+
     public function update($classroom, $request)
     {
         return $this->theoryTest->find($request->id)->update($request->validated());

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import moment from "moment";
 import Form from "antd/lib/form";
@@ -9,12 +10,34 @@ import Button from "antd/lib/button";
 import DatePicker from "antd/lib/date-picker";
 import Main from "@/Helpers/Main";
 const { RangePicker } = DatePicker;
-const EduTheoryForm = ({ loading, onFinish, TestForm, edit }) => {
+const EduTheoryForm = ({ classroom, edit }) => {
     const { errors } = usePage();
+    const [loading, setLoading] = useState(false);
     function disabledDate(current) {
         // Can not select days before today
         return current && current < moment().startOf("day");
     }
+    const TestForm = useRef(null);
+    const onFinish = data => {
+        data = Main.antdate(data);
+        setLoading(true);
+        edit
+            ? Inertia.patch(
+                  route("theory.update", { classroom: classroom.hash }),
+                  data
+              ).then(() => {
+                  setLoading(false);
+                  TestForm.current.resetFields();
+              })
+            : Inertia.post(
+                  route("theory.create", { classroom: classroom.hash }),
+                  data
+              ).then(() => {
+                  setLoading(false);
+                  TestForm.current.resetFields();
+                  //   setVisible(false);
+              });
+    };
     return (
         <div>
             <Form

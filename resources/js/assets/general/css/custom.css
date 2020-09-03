@@ -1,5 +1,6 @@
-
-
+.ck-editor__editable{
+    color: black !important;
+}
 .site-page-header-ghost-wrapper {
     padding: 24px;
 }

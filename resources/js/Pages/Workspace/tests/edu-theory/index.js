@@ -6,39 +6,21 @@ import Button from "antd/lib/button";
 import Drawer from "antd/lib/drawer";
 
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
-import Educator from "./Educator";
+import List from "./List";
 import EduTheoryForm from "./EduTheoryForm";
 const { Content } = Layout;
 import Main from "@/Helpers/Main";
 
 const Theory = ({ classroom, tests }) => {
     const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const TestForm = useRef(null);
     const showDrawer = () => {
         setVisible(true);
     };
     const onClose = () => {
         setVisible(false);
     };
-    const after = () => {
-        TestForm.current.resetFields();
-        setVisible(false);
-    };
-    const onFinish = data => {
-        data.start_time = Main.laradate(data.period[0]._d);
-        data.deadline = Main.laradate(data.period[1]._d);
-        setLoading(true);
-        Inertia.post(
-            route("theory.create", { classroom: classroom.hash }),
-            data
-        ).then(() => {
-            setLoading(false);
-            after();
-        });
-    };
+
     const testProps = { classroom, tests, showDrawer };
-    const formProps = { loading, TestForm, onFinish };
     return (
         <Workspacelayout title={classroom.name} classroom={classroom}>
             <Content style={{ margin: "0 16px" }}>
@@ -56,7 +38,7 @@ const Theory = ({ classroom, tests }) => {
                     ></PageHeader>
                 </div>
 
-                <Educator {...testProps} />
+                <List {...testProps} />
                 <Drawer
                     title="Create New Theory Assessment"
                     placement="right"
@@ -64,7 +46,7 @@ const Theory = ({ classroom, tests }) => {
                     onClose={onClose}
                     visible={visible}
                 >
-                    <EduTheoryForm edit={false} {...formProps} />
+                    <EduTheoryForm edit={false} classroom={classroom} />
                 </Drawer>
             </Content>
         </Workspacelayout>

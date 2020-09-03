@@ -1,4 +1,6 @@
 import React from "react";
+import { InertiaLink } from "@inertiajs/inertia-react";
+
 function Header() {
     return (
         <header
@@ -54,12 +56,12 @@ function Header() {
                         >
                             <ul className="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
                                 <li className="cta">
-                                    <a
+                                    <InertiaLink
                                         href={route("register")}
                                         className="nav-link"
                                     >
                                         <span>Signup</span>
-                                    </a>
+                                    </InertiaLink>
                                 </li>
                             </ul>
                         </nav>

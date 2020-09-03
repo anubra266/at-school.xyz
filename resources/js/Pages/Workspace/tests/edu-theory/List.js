@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { InertiaLink } from "@inertiajs/inertia-react";
 import Empty from "antd/lib/empty";
 import Button from "antd/lib/button";
 import Card from "antd/lib/card";
@@ -19,26 +20,8 @@ import Main from "@/Helpers/Main";
 const { Meta } = Card;
 
 const Educator = ({ tests, classroom, showDrawer }) => {
-    const [loading, setLoading] = useState(false);
     const { role } = classroom;
-    console.log(role);
-    const TestForm = useRef(null);
-    const after = () => {
-        TestForm.current.resetFields();
-    };
-    const onFinish = data => {
-        data.start_time = Main.laradate(data.period[0]._d);
-        data.deadline = Main.laradate(data.period[1]._d);
-        setLoading(true);
-        Inertia.patch(
-            route("theory.create", { classroom: classroom.hash }),
-            data
-        ).then(() => {
-            setLoading(false);
-            after();
-        });
-    };
-    const formProps = { loading, TestForm, onFinish };
+
     return (
         <React.Fragment>
             <Row gutter={[24, 24]}>
@@ -54,26 +37,31 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                             key="mark"
                                         />
                                     </Tooltip>,
-                                    <Tooltip title="Edit Test Settings">
-                                        <Popover
-                                            placement="top"
-                                            title={"Edit Test Settings"}
-                                            content={
-                                                <EduTheoryForm
-                                                    edit={test}
-                                                    {...formProps}
-                                                />
-                                            }
-                                            trigger="click"
-                                        >
-                                            <SettingOutlined key="setting" />{" "}
-                                        </Popover>
-                                    </Tooltip>,
+
+                                    <Popover
+                                        placement="bottom"
+                                        title={"Edit Test Settings"}
+                                        trigger="click"
+                                        content={
+                                            <EduTheoryForm
+                                                edit={test}
+                                                classroom={classroom}
+                                            />
+                                        }
+                                    >
+                                        <Tooltip title="Edit Test Settings">
+                                            <SettingOutlined key="setting" />
+                                        </Tooltip>
+                                    </Popover>,
                                     <Tooltip title="Edit Test Questions">
-                                        <EditOutlined
-                                            style={{ color: "orange" }}
-                                            key="edit"
-                                        />
+                                        <InertiaLink
+                                            href={`edu-theory/${test.id}/edit`}
+                                        >
+                                            <EditOutlined
+                                                style={{ color: "orange" }}
+                                                key="edit"
+                                            />
+                                        </InertiaLink>
                                     </Tooltip>,
                                     <PopConfirm
                                         placement="top"

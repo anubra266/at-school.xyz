@@ -15,13 +15,13 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit, handleChange }) => {
         handleChange({
             target: {
                 name: "start_time",
-                value: Main.laradate(value[0]._d)
+                value: Main.dbdate(value[0]._d)
             }
         });
         handleChange({
             target: {
                 name: "deadline",
-                value: Main.laradate(value[1]._d)
+                value: Main.dbdate(value[1]._d)
             }
         });
     }
