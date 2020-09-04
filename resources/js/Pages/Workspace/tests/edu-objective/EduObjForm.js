@@ -10,7 +10,7 @@ import Button from "antd/lib/button";
 import DatePicker from "antd/lib/date-picker";
 import Main from "@/Helpers/Main";
 const { RangePicker } = DatePicker;
-const EduTheoryForm = ({ classroom, edit }) => {
+const EduObjForm = ({ classroom, edit }) => {
     const { errors } = usePage();
     const [loading, setLoading] = useState(false);
     function disabledDate(current) {
@@ -23,19 +23,18 @@ const EduTheoryForm = ({ classroom, edit }) => {
         setLoading(true);
         edit
             ? Inertia.patch(
-                  route("theory.update", { classroom: classroom.hash }),
+                  route("objective.update", { classroom: classroom.hash }),
                   data
               ).then(() => {
                   setLoading(false);
                   TestForm.current.resetFields();
               })
             : Inertia.post(
-                  route("theory.create", { classroom: classroom.hash }),
+                  route("objective.create", { classroom: classroom.hash }),
                   data
               ).then(() => {
                   setLoading(false);
                   TestForm.current.resetFields();
-                  //   setVisible(false);
               });
     };
     return (
@@ -47,7 +46,6 @@ const EduTheoryForm = ({ classroom, edit }) => {
                 initialValues={
                     edit && {
                         title: edit.title,
-                        total_score: edit.total_score,
                         period: [
                             moment(new Date(edit.start_time)),
                             moment(new Date(edit.deadline))
@@ -96,32 +94,6 @@ const EduTheoryForm = ({ classroom, edit }) => {
                         disabledDate={disabledDate}
                     />
                 </Form.Item>
-                <Tooltip
-                    trigger={["focus"]}
-                    title="This is used to calculate percentage Score in test."
-                    placement="topLeft"
-                    overlayClassName="numeric-input"
-                >
-                    <Form.Item
-                        label="Total Score"
-                        name="total_score"
-                        rules={[
-                            {
-                                required: true,
-                                message: "Please input Possible Total Score!"
-                            }
-                        ]}
-                        validateStatus={errors.total_score && "error"}
-                        help={errors.total_score && errors.total_score[0]}
-                    >
-                        <InputNumber
-                            style={{ width: "100%" }}
-                            min={1}
-                            placeholder="Input Highest Possible Score"
-                            name="total_score"
-                        />
-                    </Form.Item>
-                </Tooltip>
                 {edit && (
                     <Form.Item name="id" hidden={true}>
                         <Input />
@@ -143,4 +115,4 @@ const EduTheoryForm = ({ classroom, edit }) => {
     );
 };
 
-export default EduTheoryForm;
+export default EduObjForm;

@@ -16,7 +16,7 @@ class TheoryTestController extends Controller
     {
         $this->theoryTestService = $theoryTestService;
     }
-
+ 
     public function index(Classroom $classroom)
     {
         $data = $this->theoryTestService->index($classroom);
