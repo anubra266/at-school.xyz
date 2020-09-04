@@ -74,7 +74,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                                     test: test.id
                                                 })
                                             );
-                                        }}
+                                        }} 
                                         trigger="click"
                                         okText="Delete"
                                         okType="danger"

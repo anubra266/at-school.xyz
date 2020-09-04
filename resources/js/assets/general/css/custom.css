@@ -7,9 +7,8 @@
 .site-layout-background {
     background: #fff !important;
 }
-.ant-layout-header .ant-page-header-heading-title,
-.ant-layout-header .ant-page-header-heading-sub-title {
-    /*color: white !important;*/
+.ck-editor__editable_inline {
+    min-height: 200px;
 }
 .prpbut {
     background: #7971ea !important;

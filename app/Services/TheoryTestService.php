@@ -26,6 +26,7 @@ class TheoryTestService
 
     public function edit($classroom, $test)
     {
+        $test->load('questions');
         $classroom = pop($classroom)->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }

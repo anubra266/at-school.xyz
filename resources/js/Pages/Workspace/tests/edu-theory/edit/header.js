@@ -2,21 +2,30 @@ import React from "react";
 import PageHeader from "antd/lib/page-header";
 import Descriptions from "antd/lib/descriptions";
 import Button from "antd/lib/button";
-import SettingFilled from "@ant-design/icons/SettingFilled";
+import Popover from "antd/lib/popover";
+import EduTheoryForm from "../EduTheoryForm";
 import Main from "@/Helpers/Main";
 
-const header = ({ test }) => {
+const header = ({ test, classroom }) => {
     return (
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
                 ghost={false}
                 onBack={() => window.history.back()}
                 title={test.title}
-                subTitle="Edit Assessment"
+                subTitle="Edit Theory Assessment"
                 extra={[
-                    <Button icon={<SettingFilled />} key="header-edit">
-                        Test Settings
-                    </Button>,
+                    <Popover
+                        key="header-edit"
+                        placement="bottom"
+                        title={"Edit Test Settings"}
+                        trigger="click"
+                        content={
+                            <EduTheoryForm edit={test} classroom={classroom} />
+                        }
+                    >
+                        <Button>Test Settings</Button>
+                    </Popover>,
                     <Button key="solution" type="primary">
                         Add Solution
                     </Button>
