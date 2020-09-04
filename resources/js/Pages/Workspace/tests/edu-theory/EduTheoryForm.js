@@ -68,7 +68,7 @@ const EduTheoryForm = ({ classroom, edit }) => {
                     validateStatus={errors.title && "error"}
                     help={errors.title && errors.title[0]}
                 >
-                    <Input placeholder="Test Title" name="title" />
+                    <Input placeholder="Test Title" />
                 </Form.Item>
                 <Form.Item
                     label="Test Period"
@@ -118,10 +118,27 @@ const EduTheoryForm = ({ classroom, edit }) => {
                             style={{ width: "100%" }}
                             min={1}
                             placeholder="Input Highest Possible Score"
-                            name="total_score"
                         />
                     </Form.Item>
                 </Tooltip>
+                <Form.Item
+                    label="Test Duration (Minutes)"
+                    name="duration"
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please input Test duration!"
+                        }
+                    ]}
+                    validateStatus={errors.title && "error"}
+                    help={errors.title && errors.title[0]}
+                >
+                    <InputNumber
+                        style={{ width: "100%" }}
+                        min={1}
+                        placeholder="Input Test Duration"
+                    />
+                </Form.Item>
                 {edit && (
                     <Form.Item name="id" hidden={true}>
                         <Input />

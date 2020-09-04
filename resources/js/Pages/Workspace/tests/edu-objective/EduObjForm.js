@@ -5,7 +5,6 @@ import moment from "moment";
 import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 import InputNumber from "antd/lib/input-number";
-import Tooltip from "antd/lib/tooltip";
 import Button from "antd/lib/button";
 import DatePicker from "antd/lib/date-picker";
 import Main from "@/Helpers/Main";
@@ -66,7 +65,7 @@ const EduObjForm = ({ classroom, edit }) => {
                     validateStatus={errors.title && "error"}
                     help={errors.title && errors.title[0]}
                 >
-                    <Input placeholder="Test Title" name="title" />
+                    <Input placeholder="Test Title" />
                 </Form.Item>
                 <Form.Item
                     label="Test Period"
@@ -92,6 +91,24 @@ const EduObjForm = ({ classroom, edit }) => {
                         format="YYYY-MM-DD"
                         name="period"
                         disabledDate={disabledDate}
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Test Duration (Minutes)"
+                    name="duration"
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please input Test duration!"
+                        }
+                    ]}
+                    validateStatus={errors.title && "error"}
+                    help={errors.title && errors.title[0]}
+                >
+                    <InputNumber
+                        style={{ width: "100%" }}
+                        min={1}
+                        placeholder="Input Test Duration"
                     />
                 </Form.Item>
                 {edit && (

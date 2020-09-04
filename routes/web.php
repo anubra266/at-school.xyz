@@ -98,6 +98,12 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
                 Route::patch('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
                 Route::delete('/{classroom}/assessments/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
+                Route::get('/{classroom}/assessments/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
+
+                Route::post('/{classroom}/assessments/objective/question', 'ObjectiveQuestionController@store')->name('objective.question.create');
+                Route::patch('/{classroom}/assessments/objective/question', 'ObjectiveQuestionController@update')->name('objective.question.update');
+                Route::delete('/{classroom}/assessments/objective/question/{question}', 'ObjectiveQuestionController@destroy')->name('objective.question.delete');
+
             });
         });
     });

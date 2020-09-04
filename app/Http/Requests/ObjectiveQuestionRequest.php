@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TheoryTestRequest extends FormRequest
+class ObjectiveQuestionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,7 @@ class TheoryTestRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string',
-            'start_time' => 'required|date',
-            'deadline' => 'required|date',
-            'duration' => 'required|numeric',
-            'total_score' => 'required|numeric',
+            'question' => 'required'
         ];
     }
 }

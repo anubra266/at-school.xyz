@@ -18,6 +18,7 @@ class CreateTheoryTestsTable extends Migration
             $table->string('title');
             $table->dateTime('start_time');
             $table->dateTime('deadline');
+            $table->integer('duration');
             $table->string('total_score');
             $table->unsignedBigInteger('classroom_id');
             $table->timestamps();

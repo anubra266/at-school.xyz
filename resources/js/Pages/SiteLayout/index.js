@@ -35,6 +35,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
             break;
         case "dark":
             require("antd/dist/antd.dark.css");
+            require("@/assets/general/css/ckeditor-dark.css")
             break;
         case "compact":
             require("antd/dist/antd.compact.css");

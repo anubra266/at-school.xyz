@@ -27,6 +27,7 @@ class ObjectiveTestRequest extends FormRequest
             'title' => 'required|string',
             'start_time' => 'required|date',
             'deadline' => 'required|date',
+            'duration' => 'required|numeric',
         ];
     }
 }

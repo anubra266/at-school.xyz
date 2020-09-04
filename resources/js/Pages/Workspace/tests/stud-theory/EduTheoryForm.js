@@ -29,7 +29,6 @@ const EduTheoryForm = ({ loading, onFinish, TestForm, edit, handleChange }) => {
         // Can not select days before today
         return current && current < moment().startOf("day");
     }
-    edit && console.log(edit);
     return (
         <div>
             <Form
