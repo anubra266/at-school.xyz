@@ -7,9 +7,10 @@ import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Pagination from "antd/lib/pagination";
 import Space from "antd/lib/space";
+import PopConfirm from "antd/lib/popconfirm";
 
 const test = ({ test, classroom }) => {
-    const testProps = { classroom: classroom.hash, test: test.id };
+    const testProps = { classroom: classroom.hash };
     const [loading, setLoading] = useState(false);
     const { questions } = test;
     const [editor, setEditor] = useState();
@@ -20,10 +21,13 @@ const test = ({ test, classroom }) => {
     //     }, []);
     // });
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    var is_new = currentQuestion === test.questions.length;
+    var question = questions[currentQuestion];
     const savequestion = () => {
         setLoading(true);
         var data = { question: editor.getData() };
         if (is_new) {
+            data.id = test.id;
             //? if it's a new question then create
             Inertia.post(
                 route("theory.question.create", testProps),
@@ -31,14 +35,23 @@ const test = ({ test, classroom }) => {
             ).then(() => setLoading(false));
         } else {
             //? if not update the previous question
-            data.id = questions[currentQuestion].id;
+            data.id = question.id;
             Inertia.patch(
                 route("theory.question.update", testProps),
                 data
             ).then(() => setLoading(false));
         }
     };
-    var is_new = currentQuestion === test.questions.length;
+
+    const deletequestion = () => {
+        setLoading(true);
+        Inertia.delete(
+            route("theory.question.delete", {
+                ...testProps,
+                question: question.id
+            })
+        ).then(() => setLoading(false));
+    };
     return (
         <React.Fragment>
             <Row justify="end" gutter={[0, 14]}>
@@ -65,14 +78,19 @@ const test = ({ test, classroom }) => {
                 <Col>
                     <Space>
                         {!is_new && (
-                            <Button
-                                danger
-                                type="primary"
-                                loading={loading}
-                                onClick={savequestion}
+                            <PopConfirm
+                                placement="top"
+                                title={`Delete Question ${currentQuestion +
+                                    1}?`}
+                                onConfirm={deletequestion}
+                                trigger="click"
+                                okText="Delete"
+                                okType="danger"
                             >
-                                Delete Question
-                            </Button>
+                                <Button danger type="primary" loading={loading}>
+                                    Delete Question
+                                </Button>
+                            </PopConfirm>
                         )}
                         <Button
                             type="primary"

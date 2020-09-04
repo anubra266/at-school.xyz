@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\TheoryQuestion;
+use App\TheoryTest;
 
 class TheoryQuestionService
 {
@@ -11,13 +12,17 @@ class TheoryQuestionService
     {
         $this->theoryQuestion = $theoryQuestion;
     }
-    public function store($test, $request)
+    public function store($request)
     {
-        return $test->questions()->create($request->validated());
+        return TheoryTest::find($request->id)->questions()->create($request->validated());
     }
 
     public function update($request)
     {
         $this->theoryQuestion->find($request->id)->update($request->validated());
+    }
+    public function destroy($question)
+    {
+        $question->delete();
     }
 }

@@ -17,7 +17,6 @@ import EduTheoryForm from "./EduTheoryForm";
 import PopConfirm from "antd/lib/popconfirm";
 
 import Main from "@/Helpers/Main";
-const { Meta } = Card;
 
 const Educator = ({ tests, classroom, showDrawer }) => {
     const { role } = classroom;
@@ -67,14 +66,13 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         placement="top"
                                         title={`Delete ${test.title} Test ?`}
                                         onConfirm={() => {
-                                            setLoading(true);
                                             Inertia.delete(
                                                 route("theory.delete", {
                                                     classroom: classroom.hash,
                                                     test: test.id
                                                 })
                                             );
-                                        }} 
+                                        }}
                                         trigger="click"
                                         okText="Delete"
                                         okType="danger"
@@ -89,7 +87,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                 ]
                             }
                         >
-                            <Meta
+                            <Card.Meta
                                 avatar={
                                     <Avatar
                                         src={`/profile/image/${classroom.user.profile_image}`}

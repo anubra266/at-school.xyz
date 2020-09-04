@@ -90,8 +90,9 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::delete('/{classroom}/assessments/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
                 Route::get('/{classroom}/assessments/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
 
-                Route::post('/{classroom}/assessments/theory/{test}/question', 'TheoryQuestionController@store')->name('theory.question.create');
-                Route::patch('/{classroom}/assessments/theory/{test}/question', 'TheoryQuestionController@update')->name('theory.question.update');
+                Route::post('/{classroom}/assessments/theory/question', 'TheoryQuestionController@store')->name('theory.question.create');
+                Route::patch('/{classroom}/assessments/theory/question', 'TheoryQuestionController@update')->name('theory.question.update');
+                Route::delete('/{classroom}/assessments/theory/question/{question}', 'TheoryQuestionController@destroy')->name('theory.question.delete');
 
                 Route::get('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
             });
