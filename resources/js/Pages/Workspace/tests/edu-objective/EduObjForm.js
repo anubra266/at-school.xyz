@@ -49,6 +49,7 @@ const EduObjForm = ({ classroom, edit }) => {
                             moment(new Date(edit.start_time)),
                             moment(new Date(edit.deadline))
                         ],
+                        duration: edit.duration,
                         id: edit.id
                     }
                 }

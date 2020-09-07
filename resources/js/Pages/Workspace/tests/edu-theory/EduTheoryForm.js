@@ -52,6 +52,7 @@ const EduTheoryForm = ({ classroom, edit }) => {
                             moment(new Date(edit.start_time)),
                             moment(new Date(edit.deadline))
                         ],
+                        duration: edit.duration,
                         id: edit.id
                     }
                 }
@@ -96,6 +97,24 @@ const EduTheoryForm = ({ classroom, edit }) => {
                         disabledDate={disabledDate}
                     />
                 </Form.Item>
+                <Form.Item
+                    label="Test Duration - Minutes (Optional)"
+                    name="duration"
+                    rules={[
+                        {
+                            required: false,
+                            message: "Please input Test duration!"
+                        }
+                    ]}
+                    validateStatus={errors.title && "error"}
+                    help={errors.title && errors.title[0]}
+                >
+                    <InputNumber
+                        style={{ width: "100%" }}
+                        min={1}
+                        placeholder="Input Test Duration"
+                    />
+                </Form.Item>
                 <Tooltip
                     trigger={["focus"]}
                     title="This is used to calculate percentage Score in test."
@@ -121,24 +140,6 @@ const EduTheoryForm = ({ classroom, edit }) => {
                         />
                     </Form.Item>
                 </Tooltip>
-                <Form.Item
-                    label="Test Duration (Minutes)"
-                    name="duration"
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input Test duration!"
-                        }
-                    ]}
-                    validateStatus={errors.title && "error"}
-                    help={errors.title && errors.title[0]}
-                >
-                    <InputNumber
-                        style={{ width: "100%" }}
-                        min={1}
-                        placeholder="Input Test Duration"
-                    />
-                </Form.Item>
                 {edit && (
                     <Form.Item name="id" hidden={true}>
                         <Input />

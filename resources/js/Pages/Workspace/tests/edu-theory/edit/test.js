@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { Inertia } from "@inertiajs/inertia";
-import CKEditor from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@diasraphael/ck-editor5-base64uploadadapter";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Pagination from "antd/lib/pagination";
 import Space from "antd/lib/space";
 import PopConfirm from "antd/lib/popconfirm";
+import TestEditor from "@/Pages/Workspace/tests/editor";
+import PTest from "@/Helpers/PostTest";
 
 const test = ({ test, classroom }) => {
-    const testProps = { classroom: classroom.hash };
     const [editor, setEditor] = useState();
 
     const [loading, setLoading] = useState(false);
@@ -18,37 +16,18 @@ const test = ({ test, classroom }) => {
     const { questions } = test;
     const [currentQuestion, setCurrentQuestion] = useState(0);
     var question = questions[currentQuestion];
-    var is_new = currentQuestion === test.questions.length;
-    
+    var is_new = currentQuestion === questions.length;
+
+    const PTesti = new PTest(setLoading, classroom, question, "theory");
+
     const savequestion = () => {
-        setLoading(true);
-        var data = { question: editor.getData() };
-        if (is_new) {
-            data.id = test.id;
-            //? if it's a new question then create
-            Inertia.post(
-                route("theory.question.create", testProps),
-                data
-            ).then(() => setLoading(false));
-        } else {
-            //? if not update the previous question
-            data.id = question.id;
-            Inertia.patch(
-                route("theory.question.update", testProps),
-                data
-            ).then(() => setLoading(false));
-        }
+        PTesti.savequestion(editor, is_new, test);
     };
 
     const deletequestion = () => {
-        setLoading(true);
-        Inertia.delete(
-            route("theory.question.delete", {
-                ...testProps,
-                question: question.id
-            })
-        ).then(() => setLoading(false));
+        PTesti.deletequestion();
     };
+    const editorProps = { is_new, questions, currentQuestion, setEditor };
     return (
         <React.Fragment>
             <Row justify="end" gutter={[0, 14]}>
@@ -59,18 +38,7 @@ const test = ({ test, classroom }) => {
                     </strong>
                 </Col>
                 <Col xs={24}>
-                    <CKEditor
-                        editor={ClassicEditor}
-                        data={
-                            !is_new ? questions[currentQuestion].question : ""
-                        }
-                        onInit={editor => {
-                            setEditor(editor);
-                        }}
-                        onChange={(event, editor) => {
-                            //is_new && setNewQuestion(editor.getData());
-                        }}
-                    />
+                    <TestEditor {...editorProps} />
                 </Col>
                 <Col>
                     <Space>
@@ -94,9 +62,7 @@ const test = ({ test, classroom }) => {
                             loading={loading}
                             onClick={savequestion}
                         >
-                            {currentQuestion === test.questions.length
-                                ? "Add Question"
-                                : "Save Question"}
+                            {is_new ? "Add Question" : "Save Question"}
                         </Button>
                     </Space>
                 </Col>
@@ -105,11 +71,11 @@ const test = ({ test, classroom }) => {
             <Pagination
                 current={currentQuestion + 1}
                 pageSize={1}
-                total={test.questions.length + 1}
+                total={questions.length + 1}
                 showQuickJumper
                 showTotal={total =>
-                    `${test.questions.length} question${
-                        test.questions.length !== 1 ? "s" : ""
+                    `${questions.length} question${
+                        questions.length !== 1 ? "s" : ""
                     }`
                 }
                 onChange={page => {

@@ -38,6 +38,9 @@ const header = ({ test, classroom }) => {
                     <Descriptions.Item label="Deadline">
                         {Main.human_date(test.deadline)}
                     </Descriptions.Item>
+                    <Descriptions.Item label="Duration">
+                        {test.duration} minutes
+                    </Descriptions.Item>
                     <Descriptions.Item label="Questions">
                         {test.questions.length}
                     </Descriptions.Item>

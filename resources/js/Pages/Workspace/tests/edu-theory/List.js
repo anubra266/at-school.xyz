@@ -93,7 +93,11 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         src={`/profile/image/${classroom.user.profile_image}`}
                                     />
                                 }
-                                title={test.title}
+                                title={`${test.title} ${
+                                    test.duration
+                                        ? `- Timed ${test.duration} minutes`
+                                        : ""
+                                }`}
                                 description={
                                     <React.Fragment>
                                         <span>

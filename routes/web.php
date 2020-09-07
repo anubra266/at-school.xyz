@@ -77,39 +77,45 @@ Route::group(['middleware' => ['auth']], function () {
         });
 
         //? Classroom activities routes
-        Route::group(['middleware' => ['class.auth']], function () {
-            Route::get('/{classroom}', 'WorkspaceController@home')->name('classroom.home');
+        Route::group(['middleware' => ['class.auth'], 'prefix' => '{classroom}'], function () {
+            Route::get('/', 'WorkspaceController@home')->name('classroom.home');
             //? View Members
-            Route::get('/{classroom}/members', 'WorkspaceController@members')->name('classroom.members');
+            Route::get('/members', 'WorkspaceController@members')->name('classroom.members');
             //? Educator Only Routes
             Route::group(['middleware' => ['educator.only']], function () {
-                //? View Theory Assessments
-                Route::get('/{classroom}/assessments/edu-theory', 'TheoryTestController@index')->name('theory.index');
-                Route::post('/{classroom}/assessments/edu-theory', 'TheoryTestController@store')->name('theory.create');
-                Route::patch('/{classroom}/assessments/edu-theory', 'TheoryTestController@update')->name('theory.update');
-                Route::delete('/{classroom}/assessments/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
-                Route::get('/{classroom}/assessments/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
+                //? Assessments' routes
+                Route::group(['prefix' => 'assessments'], function () {
+                    //? View Theory Assessments
+                    Route::get('/edu-theory', 'TheoryTestController@index')->name('theory.index');
+                    Route::post('/edu-theory', 'TheoryTestController@store')->name('theory.create');
+                    Route::patch('/edu-theory', 'TheoryTestController@update')->name('theory.update');
+                    Route::delete('/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
+                    Route::get('/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
 
-                Route::post('/{classroom}/assessments/theory/question', 'TheoryQuestionController@store')->name('theory.question.create');
-                Route::patch('/{classroom}/assessments/theory/question', 'TheoryQuestionController@update')->name('theory.question.update');
-                Route::delete('/{classroom}/assessments/theory/question/{question}', 'TheoryQuestionController@destroy')->name('theory.question.delete');
+                    Route::post('/theory/question', 'TheoryQuestionController@store')->name('theory.question.create');
+                    Route::patch('/theory/question', 'TheoryQuestionController@update')->name('theory.question.update');
+                    Route::delete('/theory/question/{question}', 'TheoryQuestionController@destroy')->name('theory.question.delete');
 
-                Route::get('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
-                Route::post('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
-                Route::patch('/{classroom}/assessments/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
-                Route::delete('/{classroom}/assessments/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
-                Route::get('/{classroom}/assessments/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
+                    //? View Objective Assessments
+                    Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
+                    Route::post('/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
+                    Route::patch('/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
+                    Route::delete('/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
+                    Route::get('/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
 
-                Route::post('/{classroom}/assessments/objective/question', 'ObjectiveQuestionController@store')->name('objective.question.create');
-                Route::patch('/{classroom}/assessments/objective/question', 'ObjectiveQuestionController@update')->name('objective.question.update');
-                Route::delete('/{classroom}/assessments/objective/question/{question}', 'ObjectiveQuestionController@destroy')->name('objective.question.delete');
+                    Route::post('/objective/question', 'ObjectiveQuestionController@store')->name('objective.question.create');
+                    Route::patch('/objective/question', 'ObjectiveQuestionController@update')->name('objective.question.update');
+                    Route::delete('/objective/question/{question}', 'ObjectiveQuestionController@destroy')->name('objective.question.delete');
 
+                    Route::post('/question/{question}/option', 'ObjectiveOptionController@store')->name('objective.option.create');
+                    Route::post('/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('objective.option.correct');
+                });
             });
         });
     });
 });
 
-
+//TODO - Delete questions when test is deleted
 
 // ?Password Reset Routes...
 // Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
