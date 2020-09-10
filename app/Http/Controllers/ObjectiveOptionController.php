@@ -26,4 +26,9 @@ class ObjectiveOptionController extends Controller
         $message = $this->objectiveOptionService->correctOption($question, $option);
         return redirect()->back()->with($message[0], $message[1]);
     }
+    public function destroy(Classroom $classroom, ObjectiveOption $option)
+    {
+        $message = $this->objectiveOptionService->destroy($option);
+        return redirect()->back()->with('success', "Option deleted Successfully");
+    }
 }

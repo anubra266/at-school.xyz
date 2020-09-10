@@ -30,6 +30,9 @@ const options = ({ currentQuestion, question, PTesti, loading }) => {
     const setCorrectOption = e => {
         PTesti.setCorrectOption(e.target.value);
     };
+    const delete_option = option => {
+        PTesti.delete_option(option);
+    };
     return (
         <div>
             <Row gutter={[0, 14]}>
@@ -88,37 +91,15 @@ const options = ({ currentQuestion, question, PTesti, loading }) => {
                                             >
                                                 <Space>
                                                     <span>{option.option}</span>
-                                                    <Tooltip title="Edit option">
-                                                        <Popover
-                                                            placement="right"
-                                                            title={
-                                                                "Edit Option"
-                                                            }
-                                                            trigger="click"
-                                                            content={
-                                                                <Input
-                                                                    style={{
-                                                                        width: 100,
-                                                                        marginLeft: 10
-                                                                    }}
-                                                                    value={
-                                                                        option.value
-                                                                    }
-                                                                />
-                                                            }
-                                                        >
-                                                            <EditOutlined
-                                                                style={{
-                                                                    color:
-                                                                        "orange"
-                                                                }}
-                                                            />
-                                                        </Popover>
-                                                    </Tooltip>
+
                                                     <PopConfirm
                                                         placement="bottom"
                                                         title={`Delete Option?`}
-                                                        onConfirm={() => {}}
+                                                        onConfirm={() =>
+                                                            delete_option(
+                                                                option.id
+                                                            )
+                                                        }
                                                         trigger="click"
                                                         okText="Delete"
                                                         okType="danger"

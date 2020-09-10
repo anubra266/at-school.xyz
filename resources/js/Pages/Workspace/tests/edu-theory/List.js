@@ -34,7 +34,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         <CheckOutlined
                                             style={{ color: "green" }}
                                             key="mark"
-                                        />
+                                        /> 
                                     </Tooltip>,
 
                                     <Popover

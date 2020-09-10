@@ -94,7 +94,7 @@ Route::group(['middleware' => ['auth']], function () {
 
                     Route::post('/theory/question', 'TheoryQuestionController@store')->name('theory.question.create');
                     Route::patch('/theory/question', 'TheoryQuestionController@update')->name('theory.question.update');
-                    Route::delete('/theory/question/{question}', 'TheoryQuestionController@destroy')->name('theory.question.delete');
+                    Route::post('/theory/question/{question}', 'TheoryQuestionController@destroy')->name('theory.question.delete');
 
                     //? View Objective Assessments
                     Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
@@ -105,10 +105,11 @@ Route::group(['middleware' => ['auth']], function () {
 
                     Route::post('/objective/question', 'ObjectiveQuestionController@store')->name('objective.question.create');
                     Route::patch('/objective/question', 'ObjectiveQuestionController@update')->name('objective.question.update');
-                    Route::delete('/objective/question/{question}', 'ObjectiveQuestionController@destroy')->name('objective.question.delete');
+                    Route::post('/objective/question/{question}', 'ObjectiveQuestionController@destroy')->name('objective.question.delete');
 
                     Route::post('/question/{question}/option', 'ObjectiveOptionController@store')->name('objective.option.create');
                     Route::post('/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('objective.option.correct');
+                    Route::post('/option/{option}', 'ObjectiveOptionController@destroy')->name('objective.option.destroy');
                 });
             });
         });

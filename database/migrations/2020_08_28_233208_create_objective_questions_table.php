@@ -17,6 +17,7 @@ class CreateObjectiveQuestionsTable extends Migration
             $table->id();
             $table->longText('question');
             $table->unsignedBigInteger('objective_test_id');
+            $table->foreign('objective_test_id')->references('id')->on('objective_tests')->onDelete('cascade');
             $table->timestamps();
         });
     }

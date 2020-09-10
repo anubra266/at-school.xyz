@@ -31,12 +31,16 @@ const test = ({ test, classroom }) => {
     };
 
     const optionProps = { currentQuestion, question, PTesti, loading };
-    const editorProps = { is_new, questions, currentQuestion, setEditor };
+    const editorProps = {
+        is_new,
+        question,
+        setEditor
+    };
 
     return (
         <React.Fragment>
             <Row gutter={[30, 0]}>
-                <Col md={12}>
+                <Col md={is_new ? 24 : 12}>
                     <Row justify="end" gutter={[0, 14]}>
                         <Col xs={24}>
                             <strong>

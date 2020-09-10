@@ -17,6 +17,7 @@ class CreateTheoryQuestionsTable extends Migration
             $table->id();
             $table->longText('question');
             $table->unsignedBigInteger('theory_test_id');
+            $table->foreign('theory_test_id')->references('id')->on('theory_tests')->onDelete('cascade');
             $table->timestamps();
         });
     }

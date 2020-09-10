@@ -18,6 +18,7 @@ class CreateObjectiveOptionsTable extends Migration
             $table->longText('option');
             $table->boolean('is_correct')->default(false);
             $table->unsignedBigInteger('objective_question_id');
+            $table->foreign('objective_question_id')->references('id')->on('objective_questions')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -75,7 +75,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         }}
                                         trigger="click"
                                         okText="Delete"
-                                        okType="danger"
+                                        okType="danger" 
                                     >
                                         <Tooltip title="Delete Test">
                                             <DeleteOutlined

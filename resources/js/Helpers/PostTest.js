@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Inertia } from "@inertiajs/inertia";
 
 class PTest {
@@ -34,7 +33,7 @@ class PTest {
 
     deletequestion() {
         this.setLoading(true);
-        Inertia.delete(
+        Inertia.post(
             route(`${this.type}.question.delete`, {
                 classroom: this.classroom.hash,
                 question: this.question.id
@@ -66,6 +65,15 @@ class PTest {
             route(`${this.type}.option.correct`, {
                 classroom: this.classroom.hash,
                 question: this.question.id,
+                option: option
+            })
+        ).then(() => this.setLoading(false));
+    }
+    delete_option(option) {
+        this.setLoading(true);
+        Inertia.post(
+            route(`${this.type}.option.destroy`, {
+                classroom: this.classroom.hash,
                 option: option
             })
         ).then(() => this.setLoading(false));

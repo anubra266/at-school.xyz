@@ -10,7 +10,7 @@ function Spinner({ children, type, className, loading }) {
                         role="status"
                         aria-hidden="true"
                     ></span>
-                    <span class="">Loading...</span>
+                    <span class=""> Loading...</span>
                 </React.Fragment>
             ) : (
                 children

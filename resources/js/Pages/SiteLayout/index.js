@@ -27,7 +27,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
         document.title = `${title} - at-School`;
     }, [title]);
 
-    const mode = "dark";
+    const mode = "light";
 
     switch (mode) {
         case "light":

@@ -3,10 +3,9 @@ import PageHeader from "antd/lib/page-header";
 import Descriptions from "antd/lib/descriptions";
 import Button from "antd/lib/button";
 import Popover from "antd/lib/popover";
-import EduObjForm from "../EduObjForm";
 import Main from "@/Helpers/Main";
 
-const header = ({ test, classroom }) => {
+const EditHeader = ({ test, classroom, form }) => {
     return (
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
@@ -20,9 +19,7 @@ const header = ({ test, classroom }) => {
                         placement="bottom"
                         title={"Edit Test Settings"}
                         trigger="click"
-                        content={
-                            <EduObjForm edit={test} classroom={classroom} />
-                        }
+                        content={<form edit={test} classroom={classroom} />}
                     >
                         <Button>Test Settings</Button>
                     </Popover>,
@@ -50,4 +47,4 @@ const header = ({ test, classroom }) => {
     );
 };
 
-export default header;
+export default EditHeader;

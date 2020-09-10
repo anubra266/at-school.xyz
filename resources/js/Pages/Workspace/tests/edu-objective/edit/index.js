@@ -1,19 +1,8 @@
 import React from "react";
-import Layout from "antd/lib/layout";
-import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
-import Header from "./header";
+import Edit from "@/Pages/Workspace/tests/shared/edit-index.js";
 import Test from "./test";
-const Edit = ({ classroom, test }) => {
-    return (
-        <Workspacelayout
-            title={`Edit ${test.title} - ${classroom.name}`}
-            classroom={classroom}
-        >
-            <Layout.Content style={{ margin: "0 16px" }}>
-                <Header {...{ test, classroom }} />
-                <Test {...{ test, classroom }} />
-            </Layout.Content>
-        </Workspacelayout>
-    );
+const index = ({ classroom, test }) => {
+    const editProps = { test, classroom, Test };
+    return <Edit {...editProps} />;
 };
-export default Edit;
+export default index;

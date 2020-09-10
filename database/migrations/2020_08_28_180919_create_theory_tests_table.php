@@ -21,7 +21,7 @@ class CreateTheoryTestsTable extends Migration
             $table->integer('duration')->nullable();
             $table->string('total_score');
             $table->unsignedBigInteger('classroom_id');
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 

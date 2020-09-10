@@ -11,8 +11,7 @@ class ObjectiveOptionService
 
     public function correctOption($question, $option)
     {
-        $correctOptions = $question->options()->whereIs_correct(true)->get();
-        $correctOption = count($correctOptions) > 0 ? $correctOptions[0] : null;
+        $correctOption = $question->options()->whereIs_correct(true)->first();
         if ($correctOption) {
             if ($correctOption->id === $option->id) {
                 return ['error', 'Option has been set before'];
@@ -20,12 +19,16 @@ class ObjectiveOptionService
                 $correctOption->update(['is_correct' => false]);
             }
         }
-        $verify_option  = $question->options()->whereId($option->id)->get();
-        if ($verify_option[0]) {
+        $verify_option  = $question->options()->whereId($option->id)->first();
+        if ($verify_option) {
             $option->update(['is_correct' => true]);
             return ['success', 'Correct option set successfully'];
         } else {
             return ['error', 'Invalid Option'];
         }
+    }
+    public function destroy($option)
+    {
+        $option->delete();
     }
 }

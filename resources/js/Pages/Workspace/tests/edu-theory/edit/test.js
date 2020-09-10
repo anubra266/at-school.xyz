@@ -27,7 +27,11 @@ const test = ({ test, classroom }) => {
     const deletequestion = () => {
         PTesti.deletequestion();
     };
-    const editorProps = { is_new, questions, currentQuestion, setEditor };
+    const editorProps = {
+        is_new,
+        question,
+        setEditor
+    };
     return (
         <React.Fragment>
             <Row justify="end" gutter={[0, 14]}>
