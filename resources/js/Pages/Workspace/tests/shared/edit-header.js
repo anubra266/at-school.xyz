@@ -5,21 +5,21 @@ import Button from "antd/lib/button";
 import Popover from "antd/lib/popover";
 import Main from "@/Helpers/Main";
 
-const EditHeader = ({ test, classroom, form }) => {
+const EditHeader = ({ test, classroom, TestForm, type }) => {
     return (
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
                 ghost={false}
                 onBack={() => window.history.back()}
                 title={test.title}
-                subTitle="Edit Objective Assessment"
+                subTitle={`Edit ${type} Assessment`}
                 extra={[
                     <Popover
                         key="header-edit"
                         placement="bottom"
                         title={"Edit Test Settings"}
                         trigger="click"
-                        content={<form edit={test} classroom={classroom} />}
+                        content={<TestForm edit={test} classroom={classroom} />}
                     >
                         <Button>Test Settings</Button>
                     </Popover>,
@@ -35,9 +35,11 @@ const EditHeader = ({ test, classroom, form }) => {
                     <Descriptions.Item label="Deadline">
                         {Main.human_date(test.deadline)}
                     </Descriptions.Item>
-                    <Descriptions.Item label="Duration">
-                        {test.duration} minutes
-                    </Descriptions.Item>
+                    {test.duration && (
+                        <Descriptions.Item label="Duration">
+                            {test.duration} minutes
+                        </Descriptions.Item>
+                    )}
                     <Descriptions.Item label="Questions">
                         {test.questions.length}
                     </Descriptions.Item>

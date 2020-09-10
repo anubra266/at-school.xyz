@@ -10,7 +10,7 @@ import Button from "antd/lib/button";
 import DatePicker from "antd/lib/date-picker";
 import Main from "@/Helpers/Main";
 const { RangePicker } = DatePicker;
-const EduTheoryForm = ({ classroom, edit }) => {
+const TestForm = ({ classroom, edit }) => {
     const { errors } = usePage();
     const [loading, setLoading] = useState(false);
     function disabledDate(current) {
@@ -161,4 +161,4 @@ const EduTheoryForm = ({ classroom, edit }) => {
     );
 };
 
-export default EduTheoryForm;
+export default TestForm;
