@@ -9,26 +9,26 @@ const resetpassword = () => {
             header="Reset Password"
             subheader=""
         >
-            <div class="account-card-content">
-                <div class="alert alert-success m-t-30" role="alert">
+            <div className="account-card-content">
+                <div className="alert alert-success m-t-30" role="alert">
                     Enter your Email and instructions will be sent to you!
                 </div>
 
-                <form class="form-horizontal m-t-30" action="index.html">
-                    <div class="form-group">
+                <form className="form-horizontal m-t-30" action="index.html">
+                    <div className="form-group">
                         <label for="useremail">Email</label>
                         <input
                             type="email"
-                            class="form-control"
+                            className="form-control"
                             id="useremail"
                             placeholder="Enter email"
                         />
                     </div>
 
-                    <div class="form-group row m-t-20 mb-0">
-                        <div class="col-12 text-right">
+                    <div className="form-group row m-t-20 mb-0">
+                        <div className="col-12 text-right">
                             <button
-                                class="btn btn-primary w-md waves-effect waves-light"
+                                className="btn btn-primary w-md waves-effect waves-light"
                                 type="submit"
                             >
                                 Reset

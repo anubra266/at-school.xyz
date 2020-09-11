@@ -6,11 +6,11 @@ function Spinner({ children, type, className, loading }) {
             {loading ? (
                 <React.Fragment>
                     <span
-                        class="spinner-border spinner-border-sm"
+                        className="spinner-border spinner-border-sm"
                         role="status"
                         aria-hidden="true"
                     ></span>
-                    <span class=""> Loading...</span>
+                    <span className=""> Loading...</span>
                 </React.Fragment>
             ) : (
                 children

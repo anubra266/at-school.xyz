@@ -23,7 +23,7 @@ const DClass = ({ classes }) => {
         setLoading(true);
         Inertia.post(route("class.join"), data).then(res => {
             setLoading(false);
-            ClassForm.current.resetFields();
+            ClsForm.current.resetFields();
             setVisible(false);
         });
     };
