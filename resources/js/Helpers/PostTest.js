@@ -10,11 +10,12 @@ class PTest {
     savequestion(editor, is_new, test) {
         this.setLoading(true);
         var data = { question: editor.getData() };
+        data.type = this.type;
         if (is_new) {
             data.id = test.id;
             //? if it's a new question then create
             Inertia.post(
-                route(`${this.type}.question.create`, {
+                route(`question.create`, {
                     classroom: this.classroom.hash
                 }),
                 data
@@ -23,7 +24,7 @@ class PTest {
             //? if not update the previous question
             data.id = this.question.id;
             Inertia.patch(
-                route(`${this.type}.question.update`, {
+                route(`question.update`, {
                     classroom: this.classroom.hash
                 }),
                 data
@@ -34,12 +35,15 @@ class PTest {
     deletequestion() {
         this.setLoading(true);
         Inertia.post(
-            route(`${this.type}.question.delete`, {
+            route(`question.delete`, {
                 classroom: this.classroom.hash,
                 question: this.question.id
-            })
+            }),
+            { type: this.type }
         ).then(() => this.setLoading(false));
     }
+
+    //?----------------------------------------------------------
 
     correctoption(options) {
         var is_correct = options.filter(option => {
@@ -52,7 +56,7 @@ class PTest {
     add_option(data) {
         this.setLoading(true);
         Inertia.post(
-            route(`${this.type}.option.create`, {
+            route(`option.create`, {
                 classroom: this.classroom.hash,
                 question: this.question.id
             }),
@@ -62,7 +66,7 @@ class PTest {
     setCorrectOption(option) {
         this.setLoading(true);
         Inertia.post(
-            route(`${this.type}.option.correct`, {
+            route(`option.correct`, {
                 classroom: this.classroom.hash,
                 question: this.question.id,
                 option: option
@@ -72,10 +76,23 @@ class PTest {
     delete_option(option) {
         this.setLoading(true);
         Inertia.post(
-            route(`${this.type}.option.destroy`, {
+            route(`option.destroy`, {
                 classroom: this.classroom.hash,
                 option: option
             })
+        ).then(() => this.setLoading(false));
+    }
+    //?----------------------------------------------------------
+    save_solution(solution, old_solution) {
+        var data = { solution: solution };
+        data.id = old_solution ? old_solution.id : null;
+        this.setLoading(true);
+        Inertia.post(
+            route(`solution.save`, {
+                classroom: this.classroom.hash,
+                question: this.question.id
+            }),
+            data
         ).then(() => this.setLoading(false));
     }
 }

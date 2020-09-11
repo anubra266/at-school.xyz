@@ -19,7 +19,7 @@ const TestForm = ({ classroom, edit }) => {
     const TestForm = useRef(null);
     const onFinish = data => {
         data = Main.antdate(data);
-        setLoading(true);
+        setLoading(true); 
         edit
             ? Inertia.patch(
                   route("objective.update", { classroom: classroom.hash }),

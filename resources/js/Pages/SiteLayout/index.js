@@ -11,11 +11,15 @@ import SiteFooter from "./SiteFooter";
 
 function index({ title, noSidebar, children, routes, layout, classroom }) {
     const { flash, errors } = usePage();
+    message.config({
+        duration: 5,
+        maxCount: 1
+    });
     useEffect(() => {
-        flash.success && message.success(flash.success, 5);
-        flash.error && message.error(flash.error, 5);
-        flash.info && message.info(flash.info, 5);
-        flash.warning && message.warning(flash.warning, 5);
+        flash.success && message.success(flash.success);
+        flash.error && message.error(flash.error);
+        flash.info && message.info(flash.info);
+        flash.warning && message.warning(flash.warning);
     }, [flash]);
     useEffect(() => {
         errors &&
@@ -35,7 +39,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
             break;
         case "dark":
             require("antd/dist/antd.dark.css");
-            require("@/assets/general/css/ckeditor-dark.css")
+            require("@/assets/general/css/ckeditor-dark.css");
             break;
         case "compact":
             require("antd/dist/antd.compact.css");

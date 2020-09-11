@@ -21,7 +21,7 @@ const TestForm = ({ classroom, edit }) => {
     const onFinish = data => {
         data = Main.antdate(data);
         setLoading(true);
-        edit
+        edit 
             ? Inertia.patch(
                   route("theory.update", { classroom: classroom.hash }),
                   data

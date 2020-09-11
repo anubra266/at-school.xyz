@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ObjectiveOption extends Model
+class Solution extends Model
 {
     protected $guarded = [];
 

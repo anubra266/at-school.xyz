@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTheoryQuestionsTable extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateTheoryQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('theory_questions', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->longText('question');
-            $table->unsignedBigInteger('theory_test_id');
+            $table->unsignedBigInteger('obj_test_id')->nullable();
+            $table->unsignedBigInteger('theory_test_id')->nullable();
+            $table->foreign('obj_test_id')->references('id')->on('objective_tests',)->onDelete('cascade');
             $table->foreign('theory_test_id')->references('id')->on('theory_tests')->onDelete('cascade');
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class CreateTheoryQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('theory_questions');
+        Schema::dropIfExists('questions');
     }
 }

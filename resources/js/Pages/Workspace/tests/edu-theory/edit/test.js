@@ -6,32 +6,31 @@ import Pagination from "antd/lib/pagination";
 import Space from "antd/lib/space";
 import PopConfirm from "antd/lib/popconfirm";
 import TestEditor from "@/Pages/Workspace/tests/editor";
-import PTest from "@/Helpers/PostTest";
 
-const test = ({ test, classroom }) => {
-    const [editor, setEditor] = useState();
+const test = ({
+    test,
+    PTesti,
+    loading,
+    currentQuestion,
+    setCurrentQuestion,
+    questions,
+    deletequestion
+}) => {
+    const [editor, setEditor] = useState(null);
 
-    const [loading, setLoading] = useState(false);
-
-    const { questions } = test;
-    const [currentQuestion, setCurrentQuestion] = useState(0);
     var question = questions[currentQuestion];
     var is_new = currentQuestion === questions.length;
-
-    const PTesti = new PTest(setLoading, classroom, question, "theory");
 
     const savequestion = () => {
         PTesti.savequestion(editor, is_new, test);
     };
-
-    const deletequestion = () => {
-        PTesti.deletequestion();
-    };
+    var data = question && question.question;
     const editorProps = {
         is_new,
-        question,
+        data,
         setEditor
     };
+
     return (
         <React.Fragment>
             <Row justify="end" gutter={[0, 14]}>

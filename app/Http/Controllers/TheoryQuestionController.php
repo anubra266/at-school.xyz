@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classroom;
-use App\TheoryTest;
 use App\TheoryQuestion;
-use Illuminate\Http\Request;
 use App\Services\TheoryQuestionService;
 use App\Http\Requests\TheoryQuestionRequest;
 

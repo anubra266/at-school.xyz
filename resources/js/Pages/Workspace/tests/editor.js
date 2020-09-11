@@ -2,11 +2,11 @@ import React from "react";
 import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@diasraphael/ck-editor5-base64uploadadapter";
 
-const editor = ({ is_new, question, setEditor }) => {
+const editor = ({ is_new, data, setEditor }) => {
     return (
         <CKEditor
             editor={ClassicEditor}
-            data={!is_new ? question.question : ""}
+            data={!is_new ? data : ""}
             onInit={editor => {
                 setEditor(editor);
             }}

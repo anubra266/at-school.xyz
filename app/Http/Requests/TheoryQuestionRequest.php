@@ -23,7 +23,7 @@ class TheoryQuestionRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        return [ 
             'question' => 'required|string'
         ];
     }

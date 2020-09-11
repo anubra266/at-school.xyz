@@ -16,5 +16,5 @@ class ObjectiveQuestion extends Model
     public function options()
     {
         return $this->hasMany(ObjectiveOption::class);
-    }
+    } 
 }

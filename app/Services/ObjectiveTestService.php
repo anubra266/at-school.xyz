@@ -25,7 +25,7 @@ class ObjectiveTestService
 
     public function edit($classroom, $test)
     {
-        $test->load('questions.options');
+        $test->load(['questions.options', 'questions.solution']);
         $classroom = pop($classroom)->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }

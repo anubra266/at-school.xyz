@@ -9,34 +9,33 @@ import PopConfirm from "antd/lib/popconfirm";
 import TestEditor from "@/Pages/Workspace/tests/editor";
 
 import Options from "./options";
-import PTest from "@/Helpers/PostTest";
 
-const test = ({ test, classroom }) => {
+const test = ({
+    test,
+    PTesti,
+    loading,
+    currentQuestion,
+    setCurrentQuestion,
+    questions,
+    deletequestion
+}) => {
     const [editor, setEditor] = useState(null);
-    const [loading, setLoading] = useState(false);
 
-    const { questions } = test;
-    const [currentQuestion, setCurrentQuestion] = useState(0);
     var question = questions[currentQuestion];
     var is_new = currentQuestion === questions.length;
-
-    const PTesti = new PTest(setLoading, classroom, question, "objective");
 
     const savequestion = () => {
         PTesti.savequestion(editor, is_new, test);
     };
 
-    const deletequestion = () => {
-        PTesti.deletequestion();
-    };
-
-    const optionProps = { currentQuestion, question, PTesti, loading };
+    var data = question && question.question;
     const editorProps = {
         is_new,
-        question,
+        data,
         setEditor
     };
 
+    const optionProps = { currentQuestion, question, PTesti, loading };
     return (
         <React.Fragment>
             <Row gutter={[30, 0]}>

@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "antd/lib/page-header";
 import Descriptions from "antd/lib/descriptions";
 import Button from "antd/lib/button";
 import Popover from "antd/lib/popover";
+import Tooltip from "antd/lib/tooltip";
 import Main from "@/Helpers/Main";
+import Solution from "./solution";
 
-const EditHeader = ({ test, classroom, TestForm, type }) => {
+const EditHeader = ({
+    test,
+    classroom,
+    TestForm,
+    type,
+    question,
+    is_new,
+    PTesti,
+    loading
+}) => {
+    const [visible, setVisible] = useState(false);
+
+    const solutionProps = {
+        question,
+        is_new,
+        PTesti,
+        visible,
+        setVisible,
+        loading
+    };
     return (
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
@@ -23,9 +44,23 @@ const EditHeader = ({ test, classroom, TestForm, type }) => {
                     >
                         <Button>Test Settings</Button>
                     </Popover>,
-                    <Button key="solution" type="primary">
-                        Add Solution
-                    </Button>
+                    <Tooltip
+                        key="solution"
+                        title={
+                            is_new
+                                ? "Save Question First"
+                                : "Give extensive explanation"
+                        }
+                    >
+                        <Button
+                            type="primary"
+                            onClick={() => setVisible(true)}
+                            disabled={is_new}
+                        >
+                            Add Solution
+                        </Button>
+                        <Solution {...solutionProps} />
+                    </Tooltip>
                 ]}
             >
                 <Descriptions size="small" column={3}>
