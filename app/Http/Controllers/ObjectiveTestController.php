@@ -42,4 +42,18 @@ class ObjectiveTestController extends Controller
         $this->objectiveTestService->destroy($classroom, $test);
         return redirect()->back()->with('success', "Assessment Deleted Successfully");
     }
+
+    //? Students Section
+
+    public function list(Classroom $classroom)
+    {
+        $data = $this->objectiveTestService->list($classroom);
+        return Inertia::render('Workspace/tests/stud-test/', $data);
+    }
+
+    //? Take Assessment
+    public function take(Classroom $classroom, ObjectiveTest $test)
+    {
+        return Inertia::render('ExamHall', $test);
+    }
 }

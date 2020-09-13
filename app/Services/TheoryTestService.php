@@ -40,4 +40,11 @@ class TheoryTestService
     {
         return $test->delete();
     }
+
+    public function list($classroom)
+    {
+        $classroom = pop($classroom)->load('User');
+        $tests = $classroom->theoryTests()->get();
+        return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'theory'];
+    }
 }

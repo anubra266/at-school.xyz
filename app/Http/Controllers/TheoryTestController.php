@@ -16,7 +16,7 @@ class TheoryTestController extends Controller
     {
         $this->theoryTestService = $theoryTestService;
     }
- 
+
     public function index(Classroom $classroom)
     {
         $data = $this->theoryTestService->index($classroom);
@@ -43,5 +43,21 @@ class TheoryTestController extends Controller
     {
         $this->theoryTestService->destroy($classroom, $test);
         return redirect()->back()->with('success', "Assessment Deleted Successfully");
+    }
+
+    //? Students Section
+
+    public function list(Classroom $classroom)
+    {
+        $data = $this->theoryTestService->list($classroom);
+        return Inertia::render('Workspace/tests/stud-test/', $data);
+    }
+
+
+    //? Take Assessment
+    public function take(Classroom $classroom, TheoryTest $test)
+    {
+        $data = ['classroom' => $classroom, 'test' => $test];
+        return Inertia::render('ExamHall/theory', $data);
     }
 }

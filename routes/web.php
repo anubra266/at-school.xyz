@@ -110,11 +110,21 @@ Route::group(['middleware' => ['auth']], function () {
                     Route::post('/question/{question}/solution', 'SolutionController@save')->name('solution.save');
                 });
             });
+
+            Route::group(['prefix' => 'assessments'], function () {
+                Route::get('/stud-theory', 'TheoryTestController@list')->name('theory.list');
+                Route::get('/stud-objective', 'ObjectiveTestController@list')->name('objective.list');
+            });
+            //? take assesments
+            Route::get('/theass/{test}', 'TheoryTestController@take')->name('theory.take');
+            Route::get('/objeass/{test}', 'ObjectiveTestController@take')->name('objective.take');
         });
     });
 });
 
-//TODO - Delete questions when test is deleted
+
+
+
 
 // ?Password Reset Routes...
 // Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');

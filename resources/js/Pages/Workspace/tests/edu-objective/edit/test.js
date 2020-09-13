@@ -6,7 +6,7 @@ import Pagination from "antd/lib/pagination";
 import Space from "antd/lib/space";
 import PopConfirm from "antd/lib/popconfirm";
 
-import TestEditor from "@/Pages/Workspace/tests/editor";
+import TestEditor from "@/Shared/editor";
 
 import Options from "./options";
 
@@ -28,9 +28,8 @@ const test = ({
         PTesti.savequestion(editor, is_new, test);
     };
 
-    var data = question && question.question;
+    var data = is_new ? "" : question && question.question;
     const editorProps = {
-        is_new,
         data,
         setEditor
     };

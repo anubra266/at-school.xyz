@@ -6,12 +6,7 @@ import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
 import message from "antd/lib/message";
 import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
-import DesktopOutlined from "@ant-design/icons/DesktopOutlined";
-import PieChartOutlined from "@ant-design/icons/PieChartOutlined";
-import TeamOutlined from "@ant-design/icons/TeamOutlined";
-import UserOutlined from "@ant-design/icons/UserOutlined";
 
-//  TODO Dynamic JSON Routing
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 function Sidebar({ mode, routes, layout, classroom }) {

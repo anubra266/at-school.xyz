@@ -39,4 +39,11 @@ class ObjectiveTestService
     {
         return $test->delete();
     }
+
+    public function list($classroom)
+    {
+        $classroom = pop($classroom)->load('User');
+        $tests = $classroom->objectiveTests()->get();
+        return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'objective'];
+    }
 }

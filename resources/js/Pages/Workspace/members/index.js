@@ -7,6 +7,7 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Popover from "antd/lib/popover";
 import Typography from "antd/lib/typography";
+import { usePage } from "@inertiajs/inertia-react";
 
 import DownloadOutlined from "@ant-design/icons/DownloadOutlined";
 import FileExcelOutlined from "@ant-design/icons/FileExcelOutlined";
@@ -15,6 +16,7 @@ import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import MembersList from "./MembersList";
 const { Content } = Layout;
 const members = ({ classroom, members }) => {
+    const { auth } = usePage();
     return (
         <Workspacelayout title={classroom.name} classroom={classroom}>
             <Content style={{ margin: "0 16px" }}>
@@ -25,18 +27,22 @@ const members = ({ classroom, members }) => {
                         title="Members"
                         subTitle={classroom.name}
                         extra={[
-                            <Popover
-                                key="2"
-                                content={export_content}
-                                title="Export Members"
-                                trigger="click"
-                                placement="leftBottom"
-                            >
-                                <Button>
-                                    <DownloadOutlined />
-                                    Export
-                                </Button>
-                            </Popover>,
+                            <React.Fragment>
+                                {auth.user.can.Classrooms && (
+                                    <Popover
+                                        key="2"
+                                        content={export_content}
+                                        title="Export Members"
+                                        trigger="click"
+                                        placement="leftBottom"
+                                    >
+                                        <Button>
+                                            <DownloadOutlined />
+                                            Export
+                                        </Button>
+                                    </Popover>
+                                )}
+                            </React.Fragment>,
                             <Invite key="header" {...classroom} />
                         ]}
                     ></PageHeader>

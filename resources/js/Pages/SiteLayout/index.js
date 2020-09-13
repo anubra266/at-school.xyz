@@ -8,9 +8,10 @@ import BackTop from "antd/lib/back-top";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SiteFooter from "./SiteFooter";
-
+import Assets from "@/Helpers/Assets";
 function index({ title, noSidebar, children, routes, layout, classroom }) {
-    const { flash, errors } = usePage();
+    const { flash, errors, theme } = usePage();
+    const mode = theme;
     message.config({
         duration: 5,
         maxCount: 1
@@ -30,28 +31,10 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
     useEffect(() => {
         document.title = `${title} - at-School`;
     }, [title]);
-
-    const mode = "light";
-
-    switch (mode) {
-        case "light":
-            require("antd/dist/antd.css");
-            break;
-        case "dark":
-            require("antd/dist/antd.dark.css");
-            require("@/assets/general/css/ckeditor-dark.css");
-            break;
-        case "compact":
-            require("antd/dist/antd.compact.css");
-            break;
-
-        default:
-            require("antd/dist/antd.dark.css");
-            break;
-    }
     const sidebarprops = { mode, routes, layout, classroom };
     return (
         <React.Fragment>
+            <Assets />
             <Helmet>
                 <meta name="theme-color" content="red" />
             </Helmet>

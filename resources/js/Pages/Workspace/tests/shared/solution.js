@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "antd/lib/modal";
 import Button from "antd/lib/button";
-import TestEditor from "@/Pages/Workspace/tests/editor";
+import TestEditor from "@/Shared/editor";
 
 const Solution = ({
     question,
@@ -14,7 +14,6 @@ const Solution = ({
     const [editor, setEditor] = useState(null);
     const data = !is_new && question.solution && question.solution.solution;
     const editorProps = {
-        is_new,
         data,
         setEditor
     };

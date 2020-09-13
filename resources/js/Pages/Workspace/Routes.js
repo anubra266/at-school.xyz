@@ -43,5 +43,23 @@ export default [
                 icon: <OrderedListOutlined />
             }
         ]
+    },
+    {
+        name: "Assessments",
+        route: "/assessments",
+        for: ["student"],
+        icon: <EditOutlined />,
+        items: [
+            {
+                name: "Theory",
+                route: `/assessments/stud-theory`,
+                icon: <BookOutlined />
+            },
+            {
+                name: "Objective",
+                route: `/assessments/stud-objective`,
+                icon: <OrderedListOutlined />
+            }
+        ]
     }
 ];

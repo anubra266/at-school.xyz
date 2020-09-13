@@ -1,7 +1,7 @@
 import React from "react";
 import SiteLayout from "@/Pages/SiteLayout";
 import Routes from "./Routes";
-const DashboardLayout = ({ title, classroom, children }) => {
+const WorkspaceLayout = ({ title, classroom, children }) => {
     return (
         <SiteLayout
             routes={Routes}
@@ -14,4 +14,4 @@ const DashboardLayout = ({ title, classroom, children }) => {
     );
 };
 
-export default DashboardLayout;
+export default WorkspaceLayout;

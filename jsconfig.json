@@ -4,5 +4,6 @@
         "paths": {
             "@/*": ["./resources/js/*"]
         }
-    }
+    },
+    "exclude": ["node_modules", "vendor","storage"]
 }
