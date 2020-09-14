@@ -40,17 +40,16 @@ function Sidebar({ mode, routes, layout, classroom }) {
                 collapsible
                 collapsed={collapsed}
                 breakpoint="md"
-                collapsedWidth="0"
                 onCollapse={onCollapse}
-                theme={mode === "compact" ? "light" : mode}
+                theme="dark"
             >
-                <div className="logo" />
                 <Menu
-                    theme="light"
+                    theme="dark"
                     defaultSelectedKeys={getRoute()[0]}
                     defaultOpenKeys={getRoute()[1]}
                     mode="inline"
                 >
+                    <div className="greylogo" />
                     {routes.map(menu => {
                         return (
                             (auth.user.can[menu.name] ||

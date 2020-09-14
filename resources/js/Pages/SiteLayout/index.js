@@ -40,10 +40,10 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
             </Helmet>
             <BackTop />
             <Layout style={{ minHeight: "100vh" }}>
-                <Navbar />
                 <Layout>
                     {noSidebar !== true && <Sidebar {...sidebarprops} />}
                     <Layout className="site-layout">
+                        <Navbar />
                         {children}
                         <SiteFooter />
                     </Layout>

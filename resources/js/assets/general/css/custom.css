@@ -1,6 +1,42 @@
+.fixedCountdown {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(39, 38, 38);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 4px 6px rgb(43, 42, 42);
+}
+.calcspace {
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 100px;
+    width: 300px;
+    height: 400px;
+}
+@media only screen and (max-width: 600px) {
+    .calcspace {
+        width: 100%;
+    }
+}
+.ant-layout-sider .greylogo {
+    max-width: 150px;
+    min-width: 55px;
+    width: 100%;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 0px 16px 25px;
+    float: left;
+}
+.ant-layout-sider-collapsed .greylogo {
+    margin: 16px 0px 16px 12px;
+    width: 20%;
+    font-size: 14 !important;
+}
 
-
-.ck-editor__editable{
+.ck-editor__editable {
     color: black !important;
 }
 .site-page-header-ghost-wrapper {

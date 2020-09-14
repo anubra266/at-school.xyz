@@ -1,0 +1,111 @@
+:root {
+    --color-white: #fff;
+    --color-light-white: #eee;
+
+    --color-primary: #1890ff;
+
+    --color-purple-transparent: rgba(88, 24, 69, 0.9);
+    --color-pink-transparent: rgba(216, 14, 91, 0.9);
+
+    --color-orange: #ff3c00;
+
+    --color-light-black: #222;
+    --color-black: #000;
+
+    --shadow: rgba(63, 63, 63, 0.515);
+}
+.closecalc {
+    background-color: var(--color-orange);
+    height: 30px;
+    padding-right: 10px;
+    cursor: pointer;
+    text-align: end;
+    font-size: 1rem;
+}
+.calculator {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: var(--color-white);
+    font-size: 62.5%;
+}
+
+.result-screen {
+    height: 70%;
+    font-size: 2rem;
+    font-weight: 600; /* To display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.computation-screen {
+    height: 30%;
+    font-size: 1.5rem;
+
+    /* To display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.screen {
+    height: 25%;
+    width: 100%;
+    padding: 0 2rem;
+    overflow: hidden;
+    white-space: no-wrap;
+    color: var(--color-light-white);
+    background-color: var(--color-primary);
+}
+
+.keypad__row {
+    height: 20%; /* 100% KeyPad / 5 keypadRow components */
+    width: 100%;
+    display: flex; /* To control the dimension */
+    color: white;
+}
+.keypad {
+    height: 75%;
+    width: 100%;
+}
+
+.calcbtn {
+    width: 25%;
+    height: 100%;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--color-white);
+    color: var(--color-light-black);
+    border: 1px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.calcbtn:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-primary);
+}
+.calcbtn:active {
+    transform: scale(0.95);
+}
+
+.btn--large {
+    width: 50%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: all 0.2s;
+}
+.btn--large:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.btn--primary {
+    color: var(--color-primary);
+}
+.btn--operator {
+    color: var(--color-orange);
+}
