@@ -25,9 +25,9 @@ class ObjectiveTestRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'start_time' => 'required|date',
-            'deadline' => 'required|date',
-            'duration' => 'required|numeric',
+            'start_time' => 'required|date|after_or_equal:today',
+            'deadline' => 'required|date|after:start_time',
+            'duration' => 'nullable|numeric',
         ];
     }
 }

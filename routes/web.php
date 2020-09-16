@@ -118,6 +118,8 @@ Route::group(['middleware' => ['auth']], function () {
             //? take assesments
             Route::get('/theass/{test}', 'TheoryTestController@take')->name('theory.take');
             Route::get('/objeass/{test}', 'ObjectiveTestController@take')->name('objective.take');
+
+            Route::post('/theory/answer/{test}', 'TestAnswerController@saveTheory')->name('theory.answer');
         });
     });
 });

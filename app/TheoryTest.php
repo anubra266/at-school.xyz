@@ -17,4 +17,9 @@ class TheoryTest extends Model
     {
         return $this->hasMany(Question::class, 'theory_test_id');
     }
+
+    public function answers()
+    {
+        return $this->hasMany(TheoryAnswer::class);
+    }
 }

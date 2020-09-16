@@ -17,6 +17,7 @@ const sidebar = ({ isFullscreen, toggle, test }) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
     const [startDate, setStartDate] = useState(Date.now());
     const finish = () => {
+        //TODO Countdown is called in several places, so this function may be recalled severally, work on letting this script run once
         alert("Test Over!");
     };
     const countdown = (prefix = "", style) => {

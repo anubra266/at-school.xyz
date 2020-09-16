@@ -1,7 +1,6 @@
-import React from "react";
 import { usePage } from "@inertiajs/inertia-react";
 
-const Assets = () => {
+const useAssets = () => {
     const { theme } = usePage();
     const mode = theme;
     switch (mode) {
@@ -20,6 +19,6 @@ const Assets = () => {
             require("antd/dist/antd.css");
             break;
     }
-    return <React.Fragment></React.Fragment>;
+    return mode;
 };
-export default Assets;
+export default useAssets;

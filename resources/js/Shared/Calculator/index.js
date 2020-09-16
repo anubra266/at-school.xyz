@@ -9,21 +9,28 @@ const Calculator = ({ countdown, close }) => {
     const [result, setResult] = useState(0);
     const [calculated, setCalculated] = useState(false);
 
+    const contains_operator = string => {
+        return ["+", "-", "*", "/", "%"].indexOf(string) !== -1;
+    };
     const onButtonPress = e => {
         let newEquation = "";
-        if (calculated) {
+        const pressedButton = e.target.innerHTML;
+        const is_operator = contains_operator(pressedButton);
+        if (
+            calculated &&
+            !is_operator &&
+            !contains_operator(equation.charAt(equation.length - 2))
+        ) {
             clear();
-            setCalculated(false);
         } else {
             newEquation = equation;
         }
-        const pressedButton = e.target.innerHTML;
+        setCalculated(false);
         if (pressedButton === "C") return clear();
-        else if (pressedButton >= "0" && pressedButton <= "9")
+        else if (pressedButton >= "0" && pressedButton <= "9") {
             newEquation += pressedButton;
-        else if (pressedButton === ".") newEquation += `0${pressedButton}`;
-        else if (["+", "-", "*", "/", "%"].indexOf(pressedButton) !== -1)
-            newEquation += " " + pressedButton + " ";
+        } else if (pressedButton === ".") newEquation += `0${pressedButton}`;
+        else if (is_operator) newEquation += " " + pressedButton + " ";
         else if (pressedButton === "=") {
             try {
                 const evalResult = eval(newEquation);
@@ -50,7 +57,10 @@ const Calculator = ({ countdown, close }) => {
         <main className="calculator">
             <div className="closecalc">
                 <Space>
-                    {countdown("Time Left - ", { fontSize: "1rem" })}
+                    {countdown("Time Left - ", {
+                        fontSize: "1rem",
+                        fontWeight: "bolder"
+                    })}
                     <CloseOutlined onClick={() => close()} />
                 </Space>
             </div>

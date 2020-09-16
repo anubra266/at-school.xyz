@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import useFullscreen from "react-use/lib/useFullscreen";
 import useToggle from "react-use/lib/useToggle";
 
-import Assets from "@/Helpers/Assets";
+import useFlashMessage from "@/Helpers/FlashMessages";
+import useAssets from "@/Helpers/Assets";
 import SiteFooter from "@/Pages/SiteLayout/SiteFooter";
 import PageHeader from "antd/lib/page-header";
 import Layout from "antd/lib/layout";
@@ -12,6 +13,8 @@ const { Header, Content } = Layout;
 
 const index = ({ classroom, test, children }) => {
     document.title = `${test.title} - ${classroom.name}`;
+    useFlashMessage();
+    useAssets();
     const ref = useRef(null);
     const [show, toggle] = useToggle(false);
     const isFullscreen = useFullscreen(ref, show, {
@@ -21,8 +24,6 @@ const index = ({ classroom, test, children }) => {
     const sidebarProps = { isFullscreen, toggle, test };
     return (
         <div ref={ref}>
-            <Assets />
-
             <Layout style={{ minHeight: "100vh" }}>
                 <SideBar {...sidebarProps} />
                 <Layout className="site-layout">

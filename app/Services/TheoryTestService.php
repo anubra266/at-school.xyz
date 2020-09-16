@@ -47,4 +47,12 @@ class TheoryTestService
         $tests = $classroom->theoryTests()->get();
         return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'theory'];
     }
+    public function take($classroom, $test)
+    {
+        $classroom = pop($classroom)->load('User');
+        $test->load(['questions', 'answers' => function ($query) {
+            return $query->whereUser_id(authUser()->id);
+        }]);
+        return ['classroom' => $classroom, 'test' => $test];
+    }
 }

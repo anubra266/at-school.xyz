@@ -18,7 +18,7 @@ class Classroom extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function Environ()
+    public function Environ() 
     {
         return $this->belongsTo(Environ::class);
     }

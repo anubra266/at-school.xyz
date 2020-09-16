@@ -57,7 +57,7 @@ class TheoryTestController extends Controller
     //? Take Assessment
     public function take(Classroom $classroom, TheoryTest $test)
     {
-        $data = ['classroom' => $classroom, 'test' => $test];
+        $data = $this->theoryTestService->take($classroom, $test);
         return Inertia::render('ExamHall/theory', $data);
     }
 }

@@ -25,10 +25,10 @@ class TheoryTestRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'start_time' => 'required|date',
-            'deadline' => 'required|date',
+            'start_time' => 'required|date|after_or_equal:today',
+            'deadline' => 'required|date|after:start_time',
             'duration' => 'nullable|numeric',
-            'total_score' => 'required|numeric',
+            'total_score' => 'required|numeric|min:0',
         ];
     }
 }
