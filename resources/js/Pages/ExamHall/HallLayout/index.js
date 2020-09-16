@@ -11,7 +11,7 @@ import SideBar from "./sidebar";
 
 const { Header, Content } = Layout;
 
-const index = ({ classroom, test, children }) => {
+const index = ({ classroom, test, submitTest, children }) => {
     document.title = `${test.title} - ${classroom.name}`;
     useFlashMessage();
     useAssets();
@@ -21,7 +21,7 @@ const index = ({ classroom, test, children }) => {
         onClose: () => toggle(false)
     });
 
-    const sidebarProps = { isFullscreen, toggle, test };
+    const sidebarProps = { isFullscreen, toggle, test, submitTest };
     return (
         <div ref={ref}>
             <Layout style={{ minHeight: "100vh" }}>

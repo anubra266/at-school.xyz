@@ -35,7 +35,7 @@ const Index = props => {
         );
     };
     return (
-        <Halllayout {...props}>
+        <Halllayout submitTest={submitTest} {...props}>
             <Content style={{ margin: "15px 16px", height: "100%" }}>
                 <ReflexContainer orientation="horizontal">
                     <ReflexElement minSize={10}>

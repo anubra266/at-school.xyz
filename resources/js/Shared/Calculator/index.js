@@ -57,10 +57,11 @@ const Calculator = ({ countdown, close }) => {
         <main className="calculator">
             <div className="closecalc">
                 <Space>
-                    {countdown("Time Left - ", {
-                        fontSize: "1rem",
-                        fontWeight: "bolder"
-                    })}
+                    {countdown &&
+                        countdown("Time Left - ", {
+                            fontSize: "1rem",
+                            fontWeight: "bolder"
+                        })}
                     <CloseOutlined onClick={() => close()} />
                 </Space>
             </div>

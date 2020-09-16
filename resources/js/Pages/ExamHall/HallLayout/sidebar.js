@@ -11,16 +11,13 @@ import CalculatorOutlined from "@ant-design/icons/CalculatorOutlined";
 import FullscreenOutlined from "@ant-design/icons/FullscreenOutlined";
 import FullscreenExitOutlined from "@ant-design/icons/FullscreenExitOutlined";
 import ClockCircleOutlined from "@ant-design/icons/ClockCircleOutlined";
+import LogoutOutlined from "@ant-design/icons/LogoutOutlined";
 const { Sider } = Layout;
 
-const sidebar = ({ isFullscreen, toggle, test }) => {
+const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
     const [startDate, setStartDate] = useState(Date.now());
-    const finish = () => {
-        //TODO Countdown is called in several places, so this function may be recalled severally, work on letting this script run once
-        alert("Test Over!");
-    };
-    const countdown = (prefix = "", style) => {
+    const countdown = (prefix = "", style, main) => {
         return (
             test.duration && (
                 <Statistic.Countdown
@@ -28,7 +25,7 @@ const sidebar = ({ isFullscreen, toggle, test }) => {
                     format="HH:mm:ss"
                     prefix={prefix}
                     valueStyle={style}
-                    onFinish={() => finish()}
+                    onFinish={() => main && submitTest()}
                 />
             )
         );
@@ -53,6 +50,14 @@ const sidebar = ({ isFullscreen, toggle, test }) => {
                 >
                     Calculator
                 </Menu.Item>
+                {test.duration && (
+                    <Menu.Item key="4" icon={<ClockCircleOutlined />}>
+                        {countdown("Time Left:", {
+                            fontSize: 12,
+                            color: "white"
+                        })}
+                    </Menu.Item>
+                )}
                 <Menu.Item
                     key="3"
                     icon={
@@ -66,8 +71,12 @@ const sidebar = ({ isFullscreen, toggle, test }) => {
                 >
                     Full Screen
                 </Menu.Item>
-                <Menu.Item key="4" icon={<ClockCircleOutlined />}>
-                    {countdown("Time Left:", { fontSize: 12 })}
+                <Menu.Item
+                    onClick={submitTest}
+                    key="4"
+                    icon={<LogoutOutlined />}
+                >
+                    Submit Test
                 </Menu.Item>
             </Menu>
 
@@ -80,9 +89,9 @@ const sidebar = ({ isFullscreen, toggle, test }) => {
                 </div>
             )}
 
-            {!showCalculator && (
+            {!showCalculator && test.duration && (
                 <div className="fixedCountdown">
-                    {countdown("", { color: "white" })}
+                    {countdown("", { color: "white" }, "main")}
                 </div>
             )}
         </Sider>
