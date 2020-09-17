@@ -56,5 +56,13 @@ class User extends Authenticatable
         return $this->belongsToMany(Classroom::class, 'classroom_student', 'student_id', 'classroom_id')->withTimestamps();
     }
 
+    public function objectiveAnswers()
+    {
+        return $this->hasMany(ObjectiveAnswer::class);
+    }
 
+    public function objectiveResults()
+    {
+        return $this->hasMany(ObjectiveResult::class);
+    }
 }

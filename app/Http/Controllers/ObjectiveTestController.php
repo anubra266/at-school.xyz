@@ -54,6 +54,7 @@ class ObjectiveTestController extends Controller
     //? Take Assessment
     public function take(Classroom $classroom, ObjectiveTest $test)
     {
-        return Inertia::render('ExamHall', $test);
+        $data = $this->objectiveTestService->take($classroom, $test);
+        return Inertia::render('ExamHall/objective', $data);
     }
 }

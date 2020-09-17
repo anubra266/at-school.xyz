@@ -10,12 +10,13 @@ import EditOutlined from "@ant-design/icons/EditOutlined";
 import CalculatorOutlined from "@ant-design/icons/CalculatorOutlined";
 import FullscreenOutlined from "@ant-design/icons/FullscreenOutlined";
 import FullscreenExitOutlined from "@ant-design/icons/FullscreenExitOutlined";
-import ClockCircleOutlined from "@ant-design/icons/ClockCircleOutlined";
+import RiseOutlined from "@ant-design/icons/RiseOutlined";
 import LogoutOutlined from "@ant-design/icons/LogoutOutlined";
 const { Sider } = Layout;
 
 const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
+    const [collapsed, toggleCollapse] = useToggle(true);
     const [startDate, setStartDate] = useState(Date.now());
     const countdown = (prefix = "", style, main) => {
         return (
@@ -31,7 +32,12 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
         );
     };
     return (
-        <Sider collapsible collapsed={true} trigger={null} theme="dark">
+        <Sider
+            collapsible
+            onCollapse={toggleCollapse}
+            collapsed={collapsed}
+            theme="dark"
+        >
             <div className="greylogo" />
             <Menu
                 theme="dark"
@@ -50,14 +56,9 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
                 >
                     Calculator
                 </Menu.Item>
-                {test.duration && (
-                    <Menu.Item key="4" icon={<ClockCircleOutlined />}>
-                        {countdown("Time Left:", {
-                            fontSize: 12,
-                            color: "white"
-                        })}
-                    </Menu.Item>
-                )}
+                <Menu.Item key="4" icon={<RiseOutlined />}>
+                    Test Progress
+                </Menu.Item>
                 <Menu.Item
                     key="3"
                     icon={
@@ -73,7 +74,7 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
                 </Menu.Item>
                 <Menu.Item
                     onClick={submitTest}
-                    key="4"
+                    key="5"
                     icon={<LogoutOutlined />}
                 >
                     Submit Test

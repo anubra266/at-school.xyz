@@ -46,4 +46,13 @@ class ObjectiveTestService
         $tests = $classroom->objectiveTests()->get();
         return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'objective'];
     }
+
+    public function take($classroom, $test)
+    {
+        $classroom = pop($classroom)->load('User');
+        $test->load(['questions.options' => function ($q) {
+            $q->exclude('is_correct');
+        }]);
+        return ['classroom' => $classroom, 'test' => $test];
+    }
 }

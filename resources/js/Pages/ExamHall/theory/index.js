@@ -8,6 +8,7 @@ import { ReflexContainer, ReflexSplitter, ReflexElement } from "react-reflex";
 import "react-reflex/styles.css";
 
 import Button from "antd/lib/button";
+import Card from "antd/lib/card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import { Inertia } from "@inertiajs/inertia";
@@ -39,14 +40,16 @@ const Index = props => {
             <Content style={{ margin: "15px 16px", height: "100%" }}>
                 <ReflexContainer orientation="horizontal">
                     <ReflexElement minSize={10}>
-                        {questions.map((question, index) => {
-                            return (
-                                <React.Fragment key={`question-${index}`}>
-                                    <strong>Question {index + 1}</strong>
-                                    {parse(question.question)}
-                                </React.Fragment>
+                    <Card>
+                    {questions.map((question, index) => {
+                        return (
+                            <React.Fragment key={`question-${index}`}>
+                            <strong>Question {index + 1}</strong>
+                            {parse(question.question)}
+                            </React.Fragment>
                             );
                         })}
+                        </Card>
                     </ReflexElement>
 
                     <ReflexSplitter />

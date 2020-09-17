@@ -5,12 +5,13 @@ import Header from "./Header";
 import Layout from "antd/lib/layout";
 import Empty from "antd/lib/empty";
 import Button from "antd/lib/button";
+import Card from "antd/lib/card";
 import Drawer from "antd/lib/drawer";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import ClassroomForm from "./ClassroomForm";
 import ClassroomsList from "./ClassroomsList";
 
-const Classroom = ({ classrooms, url }) => {
+const Classroom = ({ classrooms }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const CrmForm = useRef(null);
@@ -34,15 +35,16 @@ const Classroom = ({ classrooms, url }) => {
         <Dashboardlayout title="Classrooms">
             <Layout.Content style={{ margin: "0 16px" }}>
                 <Header showDrawer={showDrawer} />
-                <h1>{url}</h1>
-                <ClassroomsList classrooms={classrooms} />
-                {classrooms.length === 0 && (
-                    <Empty description={<span>No Classrooms found!</span>}>
-                        <Button onClick={showDrawer} type="primary">
-                            Create Classroom
-                        </Button>
-                    </Empty>
-                )}
+                <Card>
+                    <ClassroomsList classrooms={classrooms} />
+                    {classrooms.length === 0 && (
+                        <Empty description={<span>No Classrooms found!</span>}>
+                            <Button onClick={showDrawer} type="primary">
+                                Create Classroom
+                            </Button>
+                        </Empty>
+                    )}
+                </Card>
                 <Drawer
                     title="Create New Classroom"
                     placement="right"

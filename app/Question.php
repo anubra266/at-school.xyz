@@ -12,7 +12,7 @@ class Question extends Model
     {
         return $this->belongsTo(ObjectiveTest::class);
     }
-    public function THeoryTest()
+    public function TheoryTest()
     {
         return $this->belongsTo(THeoryTest::class);
     }

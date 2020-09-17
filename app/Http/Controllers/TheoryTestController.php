@@ -61,3 +61,4 @@ class TheoryTestController extends Controller
         return Inertia::render('ExamHall/theory', $data);
     }
 }
+ 

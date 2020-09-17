@@ -38,7 +38,7 @@ const index = ({ classroom, test, submitTest, children }) => {
                             }}
                         ></PageHeader>
                     </Header>
-                    <Content style={{ margin: "0 16px" }}>{children}</Content>
+                    <Content style={{ margin: "0 6px" }}>{children}</Content>
                     <SiteFooter />
                 </Layout>
             </Layout>
