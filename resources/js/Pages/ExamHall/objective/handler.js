@@ -10,6 +10,7 @@ export const change = (e, test, setData) => {
         };
         return newData;
     });
+    return index;
 };
 
 export const radioStyle = {

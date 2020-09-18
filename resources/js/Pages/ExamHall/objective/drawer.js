@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Space from "antd/lib/space";
 import Badge from "antd/lib/badge";
 import Drawer from "antd/lib/drawer";
@@ -34,6 +34,33 @@ const drawer = props => {
                                     onClick={() => toQuestion(i)}
                                     count={i + 1}
                                     style={{
+                                        background: "red",
+                                        cursor: "pointer"
+                                    }}
+                                />
+                            )
+                        );
+                    })}
+                    {props.questions.length === props.data.length &&
+                        "No unattempted questions."}
+                </Space>
+            </React.Fragment>
+            <React.Fragment>
+                <p>
+                    <strong>Marked for Revisit</strong>
+                </p>
+                <Space>
+                    {props.questions.map((q, i) => {
+                        return (
+                            props.revisit[i] && (
+                                <Badge
+                                    key={`revisit-${i}`}
+                                    onClick={() =>
+                                        toQuestion(i) &&
+                                        props.toggleVisit(i, false)
+                                    }
+                                    count={i + 1}
+                                    style={{
                                         background: "green",
                                         cursor: "pointer"
                                     }}
@@ -41,12 +68,9 @@ const drawer = props => {
                             )
                         );
                     })}
+                    {Object.keys(props.revisit).length < 1 &&
+                        "No questions marked for revisit."}
                 </Space>
-            </React.Fragment>
-            <React.Fragment>
-                <p>
-                    <strong>Marked to Revisit</strong>
-                </p>
             </React.Fragment>
         </Drawer>
     );

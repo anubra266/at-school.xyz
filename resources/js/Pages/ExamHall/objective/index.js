@@ -16,6 +16,8 @@ const { Content } = Layout;
 import { change, radioStyle, useDynamicRefs } from "./handler";
 const parse = require("html-react-parser");
 const Index = props => {
+    const [revisit, setRevisit] = useState({});
+
     const { classroom, test } = props;
     const { questions } = test;
     const [loading, setLoading] = useState(false);
@@ -31,8 +33,15 @@ const Index = props => {
     };
 
     const handleChange = e => {
-        change(e, test, setData);
-    }; 
+        let ind = change(e, test, setData);
+        revisit[ind] && toggleVisit(ind, false);
+    };
+    const toggleVisit = (i, status = true) => {
+        setRevisit(visits => ({
+            ...visits,
+            [i]: status
+        }));
+    };
     const questionRefs = useDynamicRefs(questions);
     const layoutProps = { ...props, submitTest, drawerSwitch };
     const drawerProps = {
@@ -40,7 +49,9 @@ const Index = props => {
         drawerSwitch,
         questions,
         data,
-        questionRefs
+        questionRefs,
+        revisit,
+        toggleVisit
     };
 
     return (
@@ -54,11 +65,18 @@ const Index = props => {
                                     <strong>
                                         Question {index + 1} {"  "}
                                         <Badge
-                                            count={"Revisit"}
+                                            count={
+                                                revisit[index]
+                                                    ? "To-Visit"
+                                                    : "Revisit"
+                                            }
                                             style={{
-                                                background: "green",
+                                                background: revisit[index]
+                                                    ? "grey"
+                                                    : "green",
                                                 cursor: "pointer"
                                             }}
+                                            onClick={() => toggleVisit(index)}
                                         />
                                     </strong>
                                     {parse(question.question)}
