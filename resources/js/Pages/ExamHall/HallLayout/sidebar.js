@@ -14,7 +14,7 @@ import RiseOutlined from "@ant-design/icons/RiseOutlined";
 import LogoutOutlined from "@ant-design/icons/LogoutOutlined";
 const { Sider } = Layout;
 
-const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
+const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
     const [collapsed, toggleCollapse] = useToggle(true);
     const [startDate, setStartDate] = useState(Date.now());
@@ -56,9 +56,15 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest }) => {
                 >
                     Calculator
                 </Menu.Item>
-                <Menu.Item key="4" icon={<RiseOutlined />}>
-                    Test Progress
-                </Menu.Item>
+                {drawerSwitch && (
+                    <Menu.Item
+                        key="4"
+                        onClick={drawerSwitch}
+                        icon={<RiseOutlined />}
+                    >
+                        Test Progress
+                    </Menu.Item>
+                )}
                 <Menu.Item
                     key="3"
                     icon={

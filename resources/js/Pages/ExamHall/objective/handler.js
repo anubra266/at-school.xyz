@@ -17,3 +17,12 @@ export const radioStyle = {
     height: "30px",
     lineHeight: "30px"
 };
+import React from "react";
+
+export const useDynamicRefs = list => {
+    const refs = list.reduce((acc, nxt, index) => {
+        acc[index] = React.createRef();
+        return acc;
+    }, {});
+    return refs;
+};
