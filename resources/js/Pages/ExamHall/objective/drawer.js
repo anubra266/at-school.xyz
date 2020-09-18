@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Space from "antd/lib/space";
 import Badge from "antd/lib/badge";
 import Drawer from "antd/lib/drawer";
+import Row from "antd/lib/row";
+import Col from "antd/lib/col";
 
 const drawer = props => {
     const toQuestion = i => {
@@ -21,57 +23,61 @@ const drawer = props => {
             onClose={props.drawerSwitch}
             visible={props.drawer}
         >
-            <React.Fragment>
-                <p>
-                    <strong>Unattempted Questions</strong>
-                </p>
-                <Space>
-                    {props.questions.map((q, i) => {
-                        return (
-                            !props.data[i] && (
-                                <Badge
-                                    key={`unattempted-${i}`}
-                                    onClick={() => toQuestion(i)}
-                                    count={i + 1}
-                                    style={{
-                                        background: "red",
-                                        cursor: "pointer"
-                                    }}
-                                />
-                            )
-                        );
-                    })}
-                    {props.questions.length === props.data.length &&
-                        "No unattempted questions."}
-                </Space>
-            </React.Fragment>
-            <React.Fragment>
-                <p>
-                    <strong>Marked for Revisit</strong>
-                </p>
-                <Space>
-                    {props.questions.map((q, i) => {
-                        return (
-                            props.revisit[i] && (
-                                <Badge
-                                    key={`revisit-${i}`}
-                                    onClick={() =>
-                                        toQuestion(i) &&
-                                        props.toggleVisit(i, false)
-                                    }
-                                    count={i + 1}
-                                    style={{
-                                        background: "green",
-                                        cursor: "pointer"
-                                    }}
-                                />
-                            )
-                        );
-                    })}
-                    {Object.keys(props.revisit).length < 1 &&
-                        "No questions marked for revisit."}
-                </Space>
-            </React.Fragment>
+            <Row>
+                <React.Fragment>
+                    <Col>
+                        <strong>Unattempted Questions</strong>
+                        <br />
+                        <Space>
+                            {props.questions.map((q, i) => {
+                                return (
+                                    !props.data[i] && (
+                                        <Badge
+                                            key={`unattempted-${i}`}
+                                            onClick={() => toQuestion(i)}
+                                            count={i + 1}
+                                            style={{
+                                                background: "red",
+                                                cursor: "pointer"
+                                            }}
+                                        />
+                                    )
+                                );
+                            })}
+                            {props.questions.filter((q, i) => !props.data[i])
+                                .length < 1 && "No unattempted questions."}
+                        </Space>
+                    </Col>
+                </React.Fragment>
+                <React.Fragment>
+                    <Col>
+                        <strong>Marked for Revisit</strong>
+                        <br />
+                        <Space>
+                            {props.questions.map((q, i) => {
+                                return (
+                                    props.revisit[i] && (
+                                        <Badge
+                                            key={`revisit-${i}`}
+                                            onClick={() =>
+                                                toQuestion(i) &&
+                                                props.toggleVisit(i, false)
+                                            }
+                                            count={i + 1}
+                                            style={{
+                                                background: "green",
+                                                cursor: "pointer"
+                                            }}
+                                        />
+                                    )
+                                );
+                            })}
+                            {Object.keys(props.revisit).length < 1 &&
+                                "No questions marked for revisit."}
+                        </Space>
+                    </Col>
+                </React.Fragment>
+            </Row>
         </Drawer>
     );
 };

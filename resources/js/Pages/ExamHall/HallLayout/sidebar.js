@@ -42,7 +42,8 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                     overflow: "auto",
                     height: "100vh",
                     position: "fixed",
-                    left: 0
+                    left: 0,
+                    zIndex:9000
                 }}
             >
                 <div className="greylogo" />

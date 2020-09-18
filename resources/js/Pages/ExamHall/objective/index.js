@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { useToggle } from "react-use";
 import Layout from "antd/lib/layout";
@@ -13,13 +13,19 @@ import Radio from "antd/lib/radio";
 import Badge from "antd/lib/badge";
 
 const { Content } = Layout;
-import { change, radioStyle, useDynamicRefs } from "./handler";
+import { change, radioStyle, useDynamicRefs, useShuffle } from "./handler";
 const parse = require("html-react-parser");
 const Index = props => {
     const [revisit, setRevisit] = useState({});
 
     const { classroom, test } = props;
-    const { questions } = test;
+    const [questions, setQuestions] = useState([]);
+    useEffect(() => {
+        setQuestions(() => {
+            test.questions.forEach(question => useShuffle(question.options));
+            return useShuffle(test.questions);
+        });
+    }, []);
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
     const [drawer, drawerSwitch] = useToggle(false);
@@ -76,7 +82,14 @@ const Index = props => {
                                                     : "green",
                                                 cursor: "pointer"
                                             }}
-                                            onClick={() => toggleVisit(index)}
+                                            onClick={() =>
+                                                toggleVisit(
+                                                    index,
+                                                    revisit[index]
+                                                        ? false
+                                                        : true
+                                                )
+                                            }
                                         />
                                     </strong>
                                     {parse(question.question)}

@@ -27,3 +27,7 @@ export const useDynamicRefs = list => {
     }, {});
     return refs;
 };
+
+export function useShuffle(array) {
+    return array.sort(() => 0.5 - Math.random());
+}

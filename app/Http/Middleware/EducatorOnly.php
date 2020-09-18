@@ -17,7 +17,7 @@ class EducatorOnly
     {
         if (checkClass($request->classroom, $request->user()) === 'educator') {
             return $next($request);
-        } else {
+        } else { 
             return redirect()->route('home');
         }
     }

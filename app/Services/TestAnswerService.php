@@ -11,7 +11,7 @@ class TestAnswerService
     public function saveTheory($test, $request)
     {
         $answer = $request->answer;
-        $test->answers()->updateOrCreate(['id' => $request->id], ['answer' => $answer, 'user_id' => authUser()->id]);
+        $test->answers()->updateOrCreate(['id' => $request->id], ['answer' => $answer ? $answer : "Empty Answer", 'user_id' => authUser()->id]);
     }
 
     public function saveobjective($test, $request)
