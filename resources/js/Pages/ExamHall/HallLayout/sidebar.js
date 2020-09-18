@@ -32,61 +32,68 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
         );
     };
     return (
-        <Sider
-            collapsible
-            onCollapse={toggleCollapse}
-            collapsed={collapsed}
-            theme="dark"
-        >
-            <div className="greylogo" />
-            <Menu
+        <React.Fragment>
+            <Sider
+                collapsible
+                onCollapse={toggleCollapse}
+                collapsed={collapsed}
                 theme="dark"
-                defaultSelectedKeys={["1"]}
-                selectedKeys={["1"]}
-                mode="inline"
+                style={{
+                    overflow: "auto",
+                    height: "100vh",
+                    position: "fixed",
+                    left: 0
+                }}
             >
-                <Menu.Item key="1" icon={<EditOutlined />}>
-                    {test.title}
-                </Menu.Item>
-
-                <Menu.Item
-                    key="2"
-                    onClick={() => toggleCalculator()}
-                    icon={<CalculatorOutlined />}
+                <div className="greylogo" />
+                <Menu
+                    theme="dark"
+                    defaultSelectedKeys={["1"]}
+                    selectedKeys={["1"]}
+                    mode="inline"
                 >
-                    Calculator
-                </Menu.Item>
-                {drawerSwitch && (
-                    <Menu.Item
-                        key="4"
-                        onClick={drawerSwitch}
-                        icon={<RiseOutlined />}
-                    >
-                        Test Progress
+                    <Menu.Item key="1" icon={<EditOutlined />}>
+                        {test.title}
                     </Menu.Item>
-                )}
-                <Menu.Item
-                    key="3"
-                    icon={
-                        isFullscreen ? (
-                            <FullscreenExitOutlined />
-                        ) : (
-                            <FullscreenOutlined />
-                        )
-                    }
-                    onClick={() => toggle()}
-                >
-                    Full Screen
-                </Menu.Item>
-                <Menu.Item
-                    onClick={submitTest}
-                    key="5"
-                    icon={<LogoutOutlined />}
-                >
-                    Submit Test
-                </Menu.Item>
-            </Menu>
 
+                    <Menu.Item
+                        key="2"
+                        onClick={() => toggleCalculator()}
+                        icon={<CalculatorOutlined />}
+                    >
+                        Calculator
+                    </Menu.Item>
+                    {drawerSwitch && (
+                        <Menu.Item
+                            key="4"
+                            onClick={drawerSwitch}
+                            icon={<RiseOutlined />}
+                        >
+                            Test Progress
+                        </Menu.Item>
+                    )}
+                    <Menu.Item
+                        key="3"
+                        icon={
+                            isFullscreen ? (
+                                <FullscreenExitOutlined />
+                            ) : (
+                                <FullscreenOutlined />
+                            )
+                        }
+                        onClick={() => toggle()}
+                    >
+                        Full Screen
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={submitTest}
+                        key="5"
+                        icon={<LogoutOutlined />}
+                    >
+                        Submit Test
+                    </Menu.Item>
+                </Menu>
+            </Sider>
             {showCalculator && (
                 <div className="calcspace">
                     <Calculator
@@ -101,7 +108,7 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                     {countdown("", { color: "white" }, "main")}
                 </div>
             )}
-        </Sider>
+        </React.Fragment>
     );
 };
 

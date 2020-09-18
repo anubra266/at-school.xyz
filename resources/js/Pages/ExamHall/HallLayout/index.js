@@ -30,9 +30,9 @@ const index = ({ classroom, test, submitTest, drawerSwitch, children }) => {
     };
     return (
         <div ref={ref}>
-            <Layout style={{ minHeight: "100vh" }}>
+            <Layout>
                 <SideBar {...sidebarProps} />
-                <Layout className="site-layout">
+                <Layout className="site-layout" style={{ marginLeft: 100 }}>
                     <Header style={{ padding: 0 }}>
                         <PageHeader
                             title="at-School"
@@ -44,7 +44,9 @@ const index = ({ classroom, test, submitTest, drawerSwitch, children }) => {
                             }}
                         ></PageHeader>
                     </Header>
-                    <Content style={{ margin: "0 6px" }}>{children}</Content>
+                    <Content style={{ margin: "0 6px", overflow: "initial" }}>
+                        {children}
+                    </Content>
                     <SiteFooter />
                 </Layout>
             </Layout>
