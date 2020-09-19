@@ -121,6 +121,7 @@ Route::group(['middleware' => ['auth']], function () {
 
             Route::post('/theory/answer/{test}', 'TestAnswerController@saveTheory')->name('theory.answer');
             Route::post('/objective/answer/{test}', 'TestAnswerController@saveObjective')->name('objective.answer');
+            Route::get('/objereview/{test}', 'ObjectiveTestController@review')->name('objective.review');
         });
     });
 });

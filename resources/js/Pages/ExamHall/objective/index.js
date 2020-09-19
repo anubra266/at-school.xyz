@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Inertia } from "@inertiajs/inertia";
+import { usePage } from "@inertiajs/inertia-react";
 import { useToggle } from "react-use";
 import Layout from "antd/lib/layout";
-import Halllayout from "@/Pages/ExamHall/HallLayout/";
 
-import SideDrawer from "./drawer";
 import Button from "antd/lib/button";
 import Card from "antd/lib/card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
-import Radio from "antd/lib/radio";
 import Badge from "antd/lib/badge";
+import Modal from "antd/lib/modal";
+import ExclamationCircleOutlined from "@ant-design/icons/ExclamationCircleOutlined";
+
+import Halllayout from "@/Pages/ExamHall/HallLayout/";
+import ViewResult from "./result";
+import SideDrawer from "./drawer";
+import { Option } from "./option.jsx";
 
 const { Content } = Layout;
-import { change, radioStyle, useDynamicRefs, useShuffle } from "./handler";
+import { change, useDynamicRefs, useShuffle } from "./handler";
 const parse = require("html-react-parser");
 const Index = props => {
+    const { response } = usePage();
     const [revisit, setRevisit] = useState({});
 
     const { classroom, test } = props;
@@ -30,14 +36,35 @@ const Index = props => {
     const [data, setData] = useState([]);
     const [drawer, drawerSwitch] = useToggle(false);
 
-    const submitTest = () => {
+    const confirm_submit = () => {
+        const ua = questions.filter((q, i) => !data[i]).length;
+        const ud = Object.keys(revisit).length;
+        Modal.confirm({
+            title: "Are you sure, you want to Submit?",
+            content: `There are ${ua} unattempted question${
+                ua !== 1 ? "s" : ""
+            } and ${ud} question${ud !== 1 ? "s" : ""} marked for revisit.`,
+            icon: <ExclamationCircleOutlined />,
+            centered: true,
+            okText: "Submit",
+            onOk() {
+                return new Promise((resolve, reject) => {
+                    submitTest(resolve);
+                });
+            }
+        });
+    };
+    const submitTest = resolve => {
         setLoading(true);
         const formParams = { classroom: classroom.hash, test: test.id };
-        Inertia.post(route("objective.answer", formParams), {
-            answers: data
-        }).then(() => setLoading(false));
+        const formData = { answers: data };
+        Inertia.post(route("objective.answer", formParams), formData).then(
+            () => {
+                setLoading(false);
+                resolve && resolve();
+            }
+        );
     };
-
     const handleChange = e => {
         let ind = change(e, test, setData);
         revisit[ind] && toggleVisit(ind, false);
@@ -49,7 +76,7 @@ const Index = props => {
         }));
     };
     const questionRefs = useDynamicRefs(questions);
-    const layoutProps = { ...props, submitTest, drawerSwitch };
+    const layoutProps = { ...props, submitTest, confirm_submit, drawerSwitch };
     const drawerProps = {
         drawer,
         drawerSwitch,
@@ -93,34 +120,25 @@ const Index = props => {
                                         />
                                     </strong>
                                     {parse(question.question)}
-                                    <Radio.Group
-                                        onChange={handleChange}
-                                        name={[index, question.id]}
-                                    >
-                                        {question.options.map(
-                                            (option, index) => {
-                                                return (
-                                                    <Radio
-                                                        key={`opt${index}`}
-                                                        style={radioStyle}
-                                                        value={option.id}
-                                                    >
-                                                        {option.option}
-                                                    </Radio>
-                                                );
-                                            }
-                                        )}
-                                    </Radio.Group>
+                                    <Option
+                                        {...{ question, index, handleChange }}
+                                    />
                                 </Card>
                             </Col>
                         );
                     })}
                     <Col>
-                        <Button type="primary" onClick={submitTest}>
+                        <Button
+                            type="primary"
+                            onClick={confirm_submit}
+                            loading={loading}
+                        >
                             Submit
                         </Button>
                     </Col>
                 </Row>
+
+                <ViewResult response={response} props={props} />
 
                 <SideDrawer {...drawerProps} />
             </Content>

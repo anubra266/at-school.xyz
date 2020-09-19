@@ -12,15 +12,25 @@ import FullscreenOutlined from "@ant-design/icons/FullscreenOutlined";
 import FullscreenExitOutlined from "@ant-design/icons/FullscreenExitOutlined";
 import RiseOutlined from "@ant-design/icons/RiseOutlined";
 import LogoutOutlined from "@ant-design/icons/LogoutOutlined";
+import { Inertia } from "@inertiajs/inertia";
 const { Sider } = Layout;
 
-const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
+const sidebar = ({
+    isFullscreen,
+    toggle,
+    test,
+    submitTest,
+    drawerSwitch,
+    confirm_submit,
+    classroom
+}) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
     const [collapsed, toggleCollapse] = useToggle(true);
     const [startDate, setStartDate] = useState(Date.now());
+    const showCalc = test.duration && !test.noCountdown;
     const countdown = (prefix = "", style, main) => {
         return (
-            test.duration && (
+            showCalc && (
                 <Statistic.Countdown
                     value={startDate + test.duration * 60000}
                     format="HH:mm:ss"
@@ -30,6 +40,9 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                 />
             )
         );
+    };
+    const leave = () => {
+        Inertia.visit(route("classroom.home", { classroom: classroom.hash }));
     };
     return (
         <React.Fragment>
@@ -43,7 +56,7 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                     height: "100vh",
                     position: "fixed",
                     left: 0,
-                    zIndex:9000
+                    zIndex: 9000
                 }}
             >
                 <div className="greylogo" />
@@ -87,11 +100,11 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                         Full Screen
                     </Menu.Item>
                     <Menu.Item
-                        onClick={submitTest}
+                        onClick={confirm_submit ? confirm_submit : leave}
                         key="5"
                         icon={<LogoutOutlined />}
                     >
-                        Submit Test
+                        {confirm_submit ? "Submit Test" : "Leave"}
                     </Menu.Item>
                 </Menu>
             </Sider>
@@ -104,7 +117,7 @@ const sidebar = ({ isFullscreen, toggle, test, submitTest, drawerSwitch }) => {
                 </div>
             )}
 
-            {!showCalculator && test.duration && (
+            {!showCalculator && showCalc && (
                 <div className="fixedCountdown">
                     {countdown("", { color: "white" }, "main")}
                 </div>

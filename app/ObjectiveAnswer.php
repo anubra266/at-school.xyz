@@ -12,4 +12,5 @@ class ObjectiveAnswer extends Model
     {
         return $this->belongsTo(ObjectiveOption::class, 'objective_option_id');
     }
+    
 }

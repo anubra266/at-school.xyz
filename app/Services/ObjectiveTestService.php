@@ -55,4 +55,13 @@ class ObjectiveTestService
         }]);
         return ['classroom' => $classroom, 'test' => $test];
     }
+    public function review($classroom, $test)
+    {
+        $classroom = pop($classroom)->load('User');
+        $test->load(['questions.options.answers' => function ($q) {
+            $q->whereUser_id(authUser()->id);
+        }]);
+        $test->noCountdown = true;
+        return ['classroom' => $classroom, 'test' => $test];
+    }
 }

@@ -21,7 +21,7 @@ class TestAnswerController extends Controller
         if ($test->duration && $request->id) {
             //? redirect if the test is one-time(has duration) and has been taken before
             //TODO Teacher could choose (Only if it has been marked)
-            return redirect()->back();
+            return redirect()->back()->with('error', "That test cannot be retaken");
         }
         $this->testAnswerService->saveTheory($test, $request);
         return redirect()->back()->with('success', "Solution Submitted Successfully");
@@ -33,6 +33,6 @@ class TestAnswerController extends Controller
             return redirect()->back()->with('warning', "That test cannot be retaken.");
         }
         $data = $this->testAnswerService->saveObjective($test, $request);
-        return redirect()->back()->with('success', "Test Submitted Successfully. You got " . $data->score . "/" . $data->total);
+        return redirect()->back()->with('response', $data);
     }
 }

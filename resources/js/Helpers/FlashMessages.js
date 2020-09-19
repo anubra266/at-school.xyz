@@ -6,7 +6,7 @@ const useFlashMesssage = () => {
     const { flash, errors } = usePage();
     message.config({
         duration: 5,
-        maxCount: 1
+        maxCount: 1 
     });
     useEffect(() => {
         flash.success && message.success(flash.success);

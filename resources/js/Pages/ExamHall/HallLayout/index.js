@@ -11,7 +11,14 @@ import SideBar from "./sidebar";
 
 const { Header, Content } = Layout;
 
-const index = ({ classroom, test, submitTest, drawerSwitch, children }) => {
+const index = ({
+    classroom,
+    test,
+    submitTest,
+    drawerSwitch,
+    confirm_submit,
+    children
+}) => {
     document.title = `${test.title} - ${classroom.name}`;
     useFlashMessage();
     useAssets();
@@ -26,7 +33,9 @@ const index = ({ classroom, test, submitTest, drawerSwitch, children }) => {
         toggle,
         test,
         submitTest,
-        drawerSwitch
+        drawerSwitch,
+        confirm_submit,
+        classroom
     };
     return (
         <div ref={ref}>
