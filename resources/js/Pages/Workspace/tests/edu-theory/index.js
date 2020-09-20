@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { Inertia } from "@inertiajs/inertia";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
@@ -9,7 +8,6 @@ import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import List from "./List";
 import EduTheoryForm from "./EduTheoryForm";
 const { Content } = Layout;
-import Main from "@/Helpers/Main";
 
 const Theory = ({ classroom, tests }) => {
     const [visible, setVisible] = useState(false);

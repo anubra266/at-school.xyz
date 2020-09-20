@@ -21,7 +21,6 @@ export const ROption = ({ question, index }) => {
         </div>
     );
 };
-//✔️ ❌
 const Answer = (option, index, userAnswer) => {
     const isUserAnswer = userAnswer === option.id;
     const isCorrect = option.is_correct;

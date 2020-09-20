@@ -15,13 +15,28 @@ import DeleteOutlined from "@ant-design/icons/DeleteOutlined";
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
 import EduObjForm from "./EduObjForm";
 import PopConfirm from "antd/lib/popconfirm";
+import Switch from "antd/lib/switch";
 
 import Main from "@/Helpers/Main";
 
 const Educator = ({ tests, classroom, showDrawer }) => {
     const { role } = classroom;
 
-    return (
+    const [loading, setLoading] = useState(false);
+    const updateStatus = (checked, id) => {
+        setLoading(true);
+        const status = checked ? "open" : "closed";
+        Inertia.patch(
+            route("objective.status", { classroom: classroom.hash }),
+            {
+                status: status,
+                id
+            }
+        ).then(() => {
+            setLoading(false);
+        });
+    };
+    return ( 
         <React.Fragment>
             <Row gutter={[24, 24]}>
                 {tests.map((test, key) => (
@@ -75,7 +90,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         }}
                                         trigger="click"
                                         okText="Delete"
-                                        okType="danger" 
+                                        okType="danger"
                                     >
                                         <Tooltip title="Delete Test">
                                             <DeleteOutlined
@@ -97,6 +112,23 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                 description={
                                     <React.Fragment>
                                         <span>
+                                            <strong>Status: </strong>
+                                            <Switch
+                                                checkedChildren="Open"
+                                                unCheckedChildren="Closed"
+                                                checked={test.status === "open"}
+                                                size="small"
+                                                loading={loading}
+                                                onClick={checked =>
+                                                    updateStatus(
+                                                        checked,
+                                                        test.id
+                                                    )
+                                                }
+                                            />
+                                        </span>
+                                        <br></br>
+                                        <span>
                                             <strong>Start Time: </strong>
                                             {Main.human_date(test.start_time)}
                                         </span>
@@ -113,11 +145,13 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                 ))}
             </Row>
             {tests.length === 0 && (
-                <Empty description={<span>No Tests found!</span>}>
-                    <Button type="primary" onClick={showDrawer}>
-                        Create new Test
-                    </Button>
-                </Empty>
+                <Card>
+                    <Empty description={<span>No Tests found!</span>}>
+                        <Button type="primary" onClick={showDrawer}>
+                            Create new Test
+                        </Button>
+                    </Empty>
+                </Card>
             )}
         </React.Fragment>
     );

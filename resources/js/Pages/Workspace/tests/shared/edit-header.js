@@ -41,7 +41,7 @@ const EditHeader = ({
                         title={"Edit Test Settings"}
                         trigger="click"
                         content={<TestForm edit={test} classroom={classroom} />}
-                    >
+                    > 
                         <Button>Test Settings</Button>
                     </Popover>,
                     <Tooltip

@@ -34,9 +34,18 @@ class ObjectiveTestController extends Controller
     }
     public function update(Classroom $classroom, ObjectiveTestRequest $request)
     {
-        $this->objectiveTestService->update($classroom, $request);
+        $result = $this->objectiveTestService->update($classroom, $request);
+        if ($result === 'open') {
+            return redirect()->back()->with('warning', "You can't edit an open Test");
+        }
         return redirect()->back()->with('success', "Assessment Updated Successfully");
     }
+    public function status(Classroom $classroom, Request $request)
+    {
+        [$status, $message] = $this->objectiveTestService->status($classroom, $request);
+        return redirect()->back()->with($status, $message);
+    }
+
     public function destroy(Classroom $classroom, ObjectiveTest $test)
     {
         $this->objectiveTestService->destroy($classroom, $test);

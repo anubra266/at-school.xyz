@@ -36,8 +36,16 @@ class TheoryTestController extends Controller
     }
     public function update(Classroom $classroom, TheoryTestRequest $request)
     {
-        $this->theoryTestService->update($classroom, $request);
+        $result = $this->theoryTestService->update($classroom, $request);
+        if ($result === 'open') {
+            return redirect()->back()->with('warning', "You can't edit an open Test");
+        }
         return redirect()->back()->with('success', "Assessment Updated Successfully");
+    }
+    public function status(Classroom $classroom, Request $request)
+    {
+        [$status, $message] = $this->theoryTestService->status($classroom, $request);
+        return redirect()->back()->with($status, $message);
     }
     public function destroy(Classroom $classroom, TheoryTest $test)
     {
@@ -61,4 +69,3 @@ class TheoryTestController extends Controller
         return Inertia::render('ExamHall/theory', $data);
     }
 }
- 

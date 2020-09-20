@@ -1,13 +1,24 @@
 import { Inertia } from "@inertiajs/inertia";
-
+import message from "antd/lib/message";
 class PTest {
-    constructor(setLoading, classroom, question, type) {
+    constructor(setLoading, classroom, question, type, status) {
         this.setLoading = setLoading;
         this.classroom = classroom;
         this.question = question;
         this.type = type;
+        this.status = status;
     }
+
+    checkstatus() {
+        if (this.status === "open") {
+            message.info("You can't make changes to an open Test!");
+            return false;
+        }
+        return true;
+    }
+
     savequestion(editor, is_new, test) {
+        if (!this.checkstatus()) return false;
         this.setLoading(true);
         var data = { question: editor.getData() };
         data.type = this.type;
@@ -33,6 +44,7 @@ class PTest {
     }
 
     deletequestion() {
+        if (!this.checkstatus()) return false;
         this.setLoading(true);
         Inertia.post(
             route(`question.delete`, {
@@ -54,6 +66,7 @@ class PTest {
         return is_correct.length > 0 && is_correct[0].id;
     }
     add_option(data) {
+        if (!this.checkstatus()) return false;
         this.setLoading(true);
         Inertia.post(
             route(`option.create`, {
@@ -64,6 +77,7 @@ class PTest {
         ).then(() => this.setLoading(false));
     }
     setCorrectOption(option) {
+        if (!this.checkstatus()) return false;
         this.setLoading(true);
         Inertia.post(
             route(`option.correct`, {
@@ -74,6 +88,7 @@ class PTest {
         ).then(() => this.setLoading(false));
     }
     delete_option(option) {
+        if (!this.checkstatus()) return false;
         this.setLoading(true);
         Inertia.post(
             route(`option.destroy`, {
@@ -84,6 +99,7 @@ class PTest {
     }
     //?----------------------------------------------------------
     save_solution(solution, old_solution) {
+        if (!this.checkstatus()) return false;
         var data = { solution: solution };
         data.id = old_solution ? old_solution.id : null;
         this.setLoading(true);

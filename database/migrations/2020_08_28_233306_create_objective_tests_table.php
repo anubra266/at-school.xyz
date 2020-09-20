@@ -19,8 +19,9 @@ class CreateObjectiveTestsTable extends Migration
             $table->dateTime('start_time');
             $table->dateTime('deadline');
             $table->integer('duration');
+            $table->string('status')->default('closed');
             $table->unsignedBigInteger('classroom_id');
-            $table->timestamps(); 
+            $table->timestamps();
         });
     }
 

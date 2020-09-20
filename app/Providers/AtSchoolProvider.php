@@ -6,6 +6,7 @@ use App\Classroom;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
 use App\Helpers\CreateCode;
+use App\Question;
 use Faker\Generator as Faker;
 
 
@@ -22,6 +23,7 @@ class AtSchoolProvider extends ServiceProvider
         require_once app_path('Helpers/ClassroomAuthorization.php');
         require_once app_path('Helpers/CreateCode.php');
         require_once app_path('Helpers/Pop.php');
+        require_once app_path('Helpers/CheckQuestions.php');
     }
 
     /**

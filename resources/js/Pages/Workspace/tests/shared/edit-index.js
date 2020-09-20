@@ -9,7 +9,13 @@ const Edit = ({ classroom, test, Test, TestForm, type }) => {
     const { questions } = test;
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const question = questions[currentQuestion];
-    const PTesti = new PTest(setLoading, classroom, question, type);
+    const PTesti = new PTest(
+        setLoading,
+        classroom,
+        question,
+        type,
+        test.status
+    );
     const deletequestion = () => {
         PTesti.deletequestion();
     };

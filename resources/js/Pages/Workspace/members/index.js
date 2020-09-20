@@ -5,6 +5,7 @@ import Button from "antd/lib/button";
 import Empty from "antd/lib/empty";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
+import Card from "antd/lib/card";
 import Popover from "antd/lib/popover";
 import Typography from "antd/lib/typography";
 import { usePage } from "@inertiajs/inertia-react";
@@ -47,12 +48,15 @@ const members = ({ classroom, members }) => {
                         ]}
                     ></PageHeader>
                 </div>
-                <MembersList members={members} classroom={classroom} />
-                {members.length === 0 && (
-                    <Empty description={<span>No Students found!</span>}>
-                        <Invite key="empty" {...classroom} />
-                    </Empty>
-                )}
+                <Card>
+                    <MembersList members={members} classroom={classroom} />
+
+                    {members.length === 0 && (
+                        <Empty description={<span>No Students found!</span>}>
+                            <Invite key="empty" {...classroom} />
+                        </Empty>
+                    )}
+                </Card>
             </Content>
         </Workspacelayout>
     );

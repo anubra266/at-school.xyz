@@ -1,15 +1,14 @@
 import React, { useState, useRef } from "react";
-import { Inertia } from "@inertiajs/inertia";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
 import Drawer from "antd/lib/drawer";
 
+
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import List from "./List";
 import EduObjForm from "./EduObjForm";
 const { Content } = Layout;
-import Main from "@/Helpers/Main";
 
 const Objective = ({ classroom, tests }) => {
     const [visible, setVisible] = useState(false);

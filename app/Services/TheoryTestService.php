@@ -33,20 +33,47 @@ class TheoryTestService
 
     public function update($classroom, $request)
     {
-        return $this->theoryTest->find($request->id)->update($request->validated());
+        $test = $this->theoryTest->find($request->id);
+        if ($test->status === 'closed') {
+            return $test->update($request->validated());
+        } else {
+            return 'open';
+        }
     }
+
+    public function status($classroom, $request)
+    {
+        $status = $request->validate(['status' => 'in:open,closed']);
+        $test = $this->theoryTest->find($request->id);
+        if ($request->status === 'open') {
+            [$pass, $message] =  check_questions($test);
+            if (!$pass) return ['error', $message];
+        } else {
+            $message = ['error', "You can't close a test already taken by your Students!"];
+            if ($test->answers()->count() > 0) return $message;
+        }
+        $test->update($status);
+        $message = ['success', "Assessment $request->status successfully"];
+        return $message;
+    }
+
 
     public function destroy($classroom, $test)
     {
         return $test->delete();
     }
 
+
+
     public function list($classroom)
     {
         $classroom = pop($classroom)->load('User');
-        $tests = $classroom->theoryTests()->get();
+        $tests = $classroom->theoryTests()->whereStatus('open')->get();
         return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'theory'];
     }
+
+
+
     public function take($classroom, $test)
     {
         $classroom = pop($classroom)->load('User');

@@ -42,7 +42,7 @@ const Page = ({ tests, classroom, type }) => {
                                 }
                                 title={`${test.title} ${
                                     test.duration
-                                        ? `- Timed ${test.duration} minutes`
+                                        ? `- ${test.duration} minutes Duration`
                                         : ""
                                 }`}
                                 description={
@@ -64,9 +64,11 @@ const Page = ({ tests, classroom, type }) => {
                 ))}
             </Row>
             {tests.length === 0 && (
-                <Empty description={<span>No Tests found!</span>}>
-                    No Pending Tests! They'll be here when Available.
-                </Empty>
+                <Card>
+                    <Empty description={<span>No Tests found!</span>}>
+                        No Pending Tests! They'll be here when Available.
+                    </Empty>
+                </Card>
             )}
         </React.Fragment>
     );
