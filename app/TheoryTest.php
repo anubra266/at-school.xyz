@@ -22,4 +22,9 @@ class TheoryTest extends Model
     {
         return $this->hasMany(TheoryAnswer::class);
     }
+
+    public function results()
+    {
+        return $this->hasMany(TheoryTestResult::class);
+    }
 }

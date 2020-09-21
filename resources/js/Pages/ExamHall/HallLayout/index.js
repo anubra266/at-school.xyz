@@ -41,10 +41,13 @@ const index = ({
         <div ref={ref}>
             <Layout style={{ minHeight: "100vh" }}>
                 <SideBar {...sidebarProps} />
-                <Layout className="site-layout" style={{ marginLeft: 100 }}>
+                <Layout
+                    className="site-layout"
+                    style={{ marginLeft: 100}}
+                >
                     <Header style={{ padding: 0 }}>
                         <PageHeader
-                            title="at-School"
+                            title={classroom && classroom.name}
                             subTitle={test.title}
                             className="site-page-header"
                             ghost={false}

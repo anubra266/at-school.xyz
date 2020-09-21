@@ -4,6 +4,7 @@ import Calculator from "@/Shared/Calculator/";
 
 import Menu from "antd/lib/menu";
 import Layout from "antd/lib/layout";
+import Space from "antd/lib/space";
 import Statistic from "antd/lib/statistic";
 
 import EditOutlined from "@ant-design/icons/EditOutlined";
@@ -56,10 +57,15 @@ const sidebar = ({
                     height: "100vh",
                     position: "fixed",
                     left: 0,
-                    zIndex: 9000
+                    // zIndex: 9000
                 }}
             >
-                <div className="greylogo" />
+                <Space style={{ paddingLeft: 10, paddingTop: 10 }}>
+                    <img
+                        height={30}
+                        src={require("@/assets/general/images/at-school.png")}
+                    />
+                </Space>
                 <Menu
                     theme="dark"
                     defaultSelectedKeys={["1"]}

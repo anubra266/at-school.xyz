@@ -17,7 +17,7 @@ import { trans_roles } from "@/Helpers/Translate.js";
 
 const { Header } = Layout;
 
-function Navbar() {
+function Navbar(props) {
     // TODO Logout
     const { auth } = usePage();
     const trans_role = trans_roles(auth.user.initial_role);
@@ -32,7 +32,7 @@ function Navbar() {
         <React.Fragment>
             <Header className="site-layout-background" style={{ padding: 0 }}>
                 <PageHeader
-                    title="at-School"
+                    title={props.classroom && props.classroom.name}
                     className="site-page-header"
                     ghost={false}
                     subTitle={
@@ -89,9 +89,6 @@ function Navbar() {
                             </Drawer>
                         </React.Fragment>
                     ]}
-                    avatar={{
-                        src: require("@/assets/general/images/at-school.png")
-                    }}
                 ></PageHeader>
             </Header>
         </React.Fragment>

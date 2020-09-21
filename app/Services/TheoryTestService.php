@@ -32,9 +32,19 @@ class TheoryTestService
     }
     public function mark($classroom, $test)
     {
-        $test->load(['questions', 'answers.User']);
+        $test->load(['questions', 'answers.User.theoryResults' => function ($q) use ($test) {
+            $q->where('theory_test_id', $test->id);
+        }, 'results']);
         $classroom = pop($classroom)->load('User');
         return ['classroom' => $classroom, 'test' => $test];
+    }
+
+    public function score($test, $request)
+    {
+        $user_id = $request->user_id;
+        $data = $request->validate(['score' => 'required|integer']);
+        $store = ['user_id' => $user_id, 'score' => $data['score'], 'total' => $test->total_score];
+        $test->results()->updateOrCreate(['id' => $request->id], $store);
     }
 
     public function update($classroom, $request)

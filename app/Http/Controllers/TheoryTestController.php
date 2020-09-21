@@ -39,6 +39,13 @@ class TheoryTestController extends Controller
         $data = $this->theoryTestService->mark($classroom, $test);
         return Inertia::render('Workspace/tests/mark/', $data);
     }
+
+    public function score(Classroom $classroom, TheoryTest $test, Request $request)
+    {
+        $this->theoryTestService->score($test, $request);
+        return redirect()->back()->with('success', "Assessment Marked Successfully");
+    }
+
     public function update(Classroom $classroom, TheoryTestRequest $request)
     {
         $result = $this->theoryTestService->update($classroom, $request);

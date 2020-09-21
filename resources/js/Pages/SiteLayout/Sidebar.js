@@ -4,6 +4,7 @@ import { returnRoute } from "@/Helpers/PresentRoute";
 
 import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
+import Space from "antd/lib/space";
 import message from "antd/lib/message";
 import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
 
@@ -43,13 +44,18 @@ function Sidebar({ mode, routes, layout, classroom }) {
                 onCollapse={onCollapse}
                 theme="dark"
             >
+                <Space style={{ paddingLeft: 10, paddingTop: 10 }}>
+                    <img
+                        height={30}
+                        src={require("@/assets/general/images/at-school.png")}
+                    />
+                </Space>
                 <Menu
                     theme="dark"
                     defaultSelectedKeys={getRoute()[0]}
                     defaultOpenKeys={getRoute()[1]}
                     mode="inline"
                 >
-                    <div className="greylogo" />
                     {routes.map(menu => {
                         return (
                             (auth.user.can[menu.name] ||

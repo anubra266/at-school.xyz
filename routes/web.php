@@ -95,6 +95,7 @@ Route::group(['middleware' => ['auth']], function () {
                     Route::delete('/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
                     Route::get('/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
                     Route::get('/mark/{test}/', 'TheoryTestController@mark')->name('theory.mark');
+                    Route::post('/score/{test}/', 'TheoryTestController@score')->name('theory.score');
 
                     //? View Objective Assessments
                     Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');

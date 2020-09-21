@@ -59,10 +59,13 @@ const Index = props => {
                 <ReflexContainer orientation="horizontal">
                     <ReflexElement minSize={10}>
                         <Card>
-                            {questions.map((question, index) => {
+                            {questions.map((question, index, arr) => {
                                 return (
                                     <React.Fragment key={`question-${index}`}>
-                                        <strong>Question {index + 1}</strong>
+                                        <strong>
+                                            Question{" "}
+                                            {arr.length > 1 && index + 1}
+                                        </strong>
                                         {parse(question.question)}
                                     </React.Fragment>
                                 );

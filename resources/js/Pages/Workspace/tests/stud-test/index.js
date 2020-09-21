@@ -5,21 +5,12 @@ import PageHeader from "antd/lib/page-header";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import Page from "./Page";
 import Main from "@/Helpers/Main";
-import { Inertia } from "@inertiajs/inertia";
 const { Content } = Layout;
+import { useSmoothRefresh } from "@/Helpers/useRefresh";
 
 const Index = props => {
     const { classroom, type } = props;
-    const refresh = () => {
-        Inertia.reload();
-    };
-    const refreshTime = 5000;
-    useEffect(() => {
-        const refresher = setInterval(refresh, refreshTime);
-        return () => {
-            clearInterval(refresher);
-        };
-    }, []);
+    useSmoothRefresh(5000);
 
     return (
         <Workspacelayout
@@ -38,7 +29,6 @@ const Index = props => {
                         subTitle={classroom.name}
                     ></PageHeader>
                 </div>
-
                 <Page {...props} />
             </Content>
         </Workspacelayout>
