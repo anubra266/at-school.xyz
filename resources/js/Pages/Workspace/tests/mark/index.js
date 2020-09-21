@@ -1,13 +1,16 @@
 import React from "react";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
-import Button from "antd/lib/button";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 const { Content } = Layout;
+import Submissions from "./submissions";
 
-const Template = ({ classroom }) => {
+const Mark = props => {
     return (
-        <Workspacelayout title={classroom.name} classroom={classroom}>
+        <Workspacelayout
+            title={`Mark Test - ${props.classroom.name}`}
+            classroom={props.classroom}
+        >
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
@@ -16,19 +19,13 @@ const Template = ({ classroom }) => {
                             window.history.length > 1 &&
                             (() => window.history.back())
                         }
-                        title="Title"
-                        subTitle="This is a subtitle"
-                        extra={[
-                            <Button key="3">Operation</Button>,
-                            <Button key="2">Operation</Button>,
-                            <Button key="1" type="primary">
-                                Primary
-                            </Button>
-                        ]}
+                        title={props.test.title}
+                        subTitle="Student Submissions"
                     ></PageHeader>
                 </div>
+                <Submissions {...props} />
             </Content>
         </Workspacelayout>
     );
 };
-export default Template;
+export default Mark;

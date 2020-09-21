@@ -67,7 +67,7 @@ class ObjectiveTestService
     public function list($classroom)
     {
         $classroom = pop($classroom)->load('User');
-        $tests = $classroom->objectiveTests()->whereStatus('open')->get();
+        $tests = filter_time($classroom->objectiveTests()->whereStatus('open'));
         return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'objective'];
     }
 

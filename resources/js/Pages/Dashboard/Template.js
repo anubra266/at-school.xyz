@@ -12,7 +12,10 @@ const Template = () => {
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
                         ghost={false}
-                        onBack={() => window.history.back()}
+                        onBack={
+                            window.history.length > 1 &&
+                            (() => window.history.back())
+                        }
                         title="Title"
                         subTitle="This is a subtitle"
                         extra={[

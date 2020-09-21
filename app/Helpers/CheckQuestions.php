@@ -1,4 +1,7 @@
 <?php
+
+use Carbon\Carbon;
+
 if (!function_exists('check_questions')) {
     /**
      * Filter Tests without questions
@@ -11,7 +14,7 @@ if (!function_exists('check_questions')) {
         $pass = [true, ''];
         $test_has_questions =  $test->questions()->count() > 0;
         if (!$test_has_questions) {
-            $message =  [false, 'Test must have questions to be open'];
+            $message =  [false, 'Test must contain questions to be open'];
             return $message;
         } else {
             $message = $pass;
@@ -42,5 +45,19 @@ if (!function_exists('check_questions')) {
             }
         }
         return $message;
+    }
+}
+if (!function_exists('filter_time')) {
+    /**
+     *  Get tests by starttime and deadline
+     */
+    function filter_time($tests)
+    {
+        $now = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->addHour())->format('Y-m-d H:i:s');
+        // dd($now);
+        return $tests
+            ->where('deadline', ">", $now)
+            ->where('start_time', "<=", $now)
+            ->get();
     }
 }

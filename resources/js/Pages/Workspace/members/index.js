@@ -24,7 +24,10 @@ const members = ({ classroom, members }) => {
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
                         ghost={false}
-                        onBack={() => window.history.back()}
+                        onBack={
+                            window.history.length > 1 &&
+                            (() => window.history.back())
+                        }
                         title="Members"
                         subTitle={classroom.name}
                         extra={[

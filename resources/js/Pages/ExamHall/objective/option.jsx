@@ -4,7 +4,6 @@ import { radioStyle } from "./handler";
 
 export const Option = ({ question, index, handleChange }) => {
     const { options } = question;
-    console.log(options);
     return (
         <div>
             <Radio.Group onChange={handleChange} name={[index, question.id]}>

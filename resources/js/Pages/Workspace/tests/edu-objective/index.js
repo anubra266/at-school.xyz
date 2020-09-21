@@ -4,7 +4,6 @@ import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
 import Drawer from "antd/lib/drawer";
 
-
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import List from "./List";
 import EduObjForm from "./EduObjForm";
@@ -21,12 +20,18 @@ const Objective = ({ classroom, tests }) => {
 
     const testProps = { classroom, tests, showDrawer };
     return (
-        <Workspacelayout title={classroom.name} classroom={classroom}>
+        <Workspacelayout
+            title={`Objective Assessments - ${classroom.name}`}
+            classroom={classroom}
+        >
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
                         ghost={false}
-                        onBack={() => window.history.back()}
+                        onBack={
+                            window.history.length > 1 &&
+                            (() => window.history.back())
+                        }
                         title="Objective Assessments"
                         subTitle={classroom.name}
                         extra={[

@@ -36,7 +36,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
             setLoading(false);
         });
     };
-    return ( 
+    return (
         <React.Fragment>
             <Row gutter={[24, 24]}>
                 {tests.map((test, key) => (

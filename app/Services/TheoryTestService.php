@@ -30,6 +30,12 @@ class TheoryTestService
         $classroom = pop($classroom)->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }
+    public function mark($classroom, $test)
+    {
+        $test->load(['questions', 'answers.User']);
+        $classroom = pop($classroom)->load('User');
+        return ['classroom' => $classroom, 'test' => $test];
+    }
 
     public function update($classroom, $request)
     {
@@ -68,7 +74,7 @@ class TheoryTestService
     public function list($classroom)
     {
         $classroom = pop($classroom)->load('User');
-        $tests = $classroom->theoryTests()->whereStatus('open')->get();
+        $tests = filter_time($classroom->theoryTests()->whereStatus('open'));
         return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'theory'];
     }
 

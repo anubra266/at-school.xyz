@@ -7,7 +7,7 @@ const Header = ({ showDrawer }) => {
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
                 ghost={false}
-                onBack={() => window.history.back()}
+                onBack={window.history.length > 1 && (() => window.history.back())}
                 title="Classrooms"
                 subTitle="Classrooms you educate"
                 extra={[

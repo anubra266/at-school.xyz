@@ -62,16 +62,18 @@ function Sidebar({ mode, routes, layout, classroom }) {
                                     icon={menu.icon}
                                     title={menu.name}
                                 >
-                                    {menu.items.map(item => {
-                                        return (
-                                            <Menu.Item
-                                                key={`menu-${item.name}`}
-                                                icon={item.icon}
-                                            >
-                                                {genroute(item)}
-                                            </Menu.Item>
-                                        );
-                                    })}
+                                    {menu.items
+                                        .filter(item => !item.ignore)
+                                        .map(item => {
+                                            return (
+                                                <Menu.Item
+                                                    key={`menu-${item.name}`}
+                                                    icon={item.icon}
+                                                >
+                                                    {genroute(item)}
+                                                </Menu.Item>
+                                            );
+                                        })}
                                 </SubMenu>
                             ) : (
                                 <Menu.Item

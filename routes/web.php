@@ -90,32 +90,34 @@ Route::group(['middleware' => ['auth']], function () {
                     Route::post('/edu-theory', 'TheoryTestController@store')->name('theory.create');
                     Route::patch('/edu-theory-status', 'TheoryTestController@status')->name('theory.status');
 
-                    //? View Objective Assessments
-                    Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
-                    Route::post('/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
-                    Route::patch('/edu-objective-status', 'ObjectiveTestController@status')->name('objective.status');
-
                     //? Edit Theory Assessments
                     Route::patch('/edu-theory', 'TheoryTestController@update')->name('theory.update');
                     Route::delete('/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
                     Route::get('/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
+                    Route::get('/mark/{test}/', 'TheoryTestController@mark')->name('theory.mark');
+
+                    //? View Objective Assessments
+                    Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
+                    Route::post('/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
+                    Route::patch('/edu-objective-status', 'ObjectiveTestController@status')->name('objective.status');
 
                     //? Edit Objective Assessments
                     Route::patch('/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
                     Route::delete('/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
                     Route::get('/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
 
-                     
+                    //? Questions
                     Route::post('/question', 'QuestionController@store')->name('question.create');
                     Route::patch('/question', 'QuestionController@update')->name('question.update');
                     Route::post('/question/{question}', 'QuestionController@destroy')->name('question.delete');
 
+                    //? Options
                     Route::post('/question/{question}/option', 'ObjectiveOptionController@store')->name('option.create');
                     Route::post('/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('option.correct');
                     Route::post('/option/{option}', 'ObjectiveOptionController@destroy')->name('option.destroy');
 
+                    //? Solution
                     Route::post('/question/{question}/solution', 'SolutionController@save')->name('solution.save');
-
                 });
             });
 

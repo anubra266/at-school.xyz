@@ -13,7 +13,10 @@ const Home = ({ classroom }) => {
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
                         className="site-page-header"
-                        onBack={() => window.history.back()}
+                        onBack={
+                            window.history.length > 1 &&
+                            (() => window.history.back())
+                        }
                         title={classroom.name}
                         subTitle={classroom.environ.name}
                     ></PageHeader>

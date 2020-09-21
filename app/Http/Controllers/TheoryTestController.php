@@ -34,6 +34,11 @@ class TheoryTestController extends Controller
         $data = $this->theoryTestService->edit($classroom, $test);
         return Inertia::render('Workspace/tests/edu-theory/edit/', $data);
     }
+    public function mark(Classroom $classroom, TheoryTest $test)
+    {
+        $data = $this->theoryTestService->mark($classroom, $test);
+        return Inertia::render('Workspace/tests/mark/', $data);
+    }
     public function update(Classroom $classroom, TheoryTestRequest $request)
     {
         $result = $this->theoryTestService->update($classroom, $request);

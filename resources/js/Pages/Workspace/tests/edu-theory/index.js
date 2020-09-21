@@ -20,12 +20,18 @@ const Theory = ({ classroom, tests }) => {
 
     const testProps = { classroom, tests, showDrawer };
     return (
-        <Workspacelayout title={classroom.name} classroom={classroom}>
+        <Workspacelayout
+            title={`Theory Assessments - ${classroom.name}`}
+            classroom={classroom}
+        >
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
                     <PageHeader
                         ghost={false}
-                        onBack={() => window.history.back()}
+                        onBack={
+                            window.history.length > 1 &&
+                            (() => window.history.back())
+                        }
                         title="Theory Assessments"
                         subTitle={classroom.name}
                         extra={[

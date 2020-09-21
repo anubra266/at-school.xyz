@@ -31,7 +31,7 @@ const EditHeader = ({
         <div className="site-page-header-ghost-wrapper">
             <PageHeader
                 ghost={false}
-                onBack={() => window.history.back()}
+                onBack={window.history.length > 1 && (() => window.history.back())}
                 title={test.title}
                 subTitle={`Edit ${type} Assessment`}
                 extra={[
@@ -41,7 +41,7 @@ const EditHeader = ({
                         title={"Edit Test Settings"}
                         trigger="click"
                         content={<TestForm edit={test} classroom={classroom} />}
-                    > 
+                    >
                         <Button>Test Settings</Button>
                     </Popover>,
                     <Tooltip

@@ -39,7 +39,7 @@ const index = ({
     };
     return (
         <div ref={ref}>
-            <Layout>
+            <Layout style={{ minHeight: "100vh" }}>
                 <SideBar {...sidebarProps} />
                 <Layout className="site-layout" style={{ marginLeft: 100 }}>
                     <Header style={{ padding: 0 }}>
@@ -53,7 +53,13 @@ const index = ({
                             }}
                         ></PageHeader>
                     </Header>
-                    <Content style={{ margin: "0 6px", overflow: "initial" }}>
+                    <Content
+                        style={{
+                            margin: "0 6px",
+                            overflow: "initial",
+                            height: "100%"
+                        }}
+                    >
                         {children}
                     </Content>
                     <SiteFooter />

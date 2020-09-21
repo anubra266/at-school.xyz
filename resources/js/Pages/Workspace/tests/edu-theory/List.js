@@ -43,10 +43,12 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                             actions={
                                 role === "educator" && [
                                     <Tooltip title="Mark Test">
-                                        <CheckOutlined
-                                            style={{ color: "green" }}
-                                            key="mark"
-                                        />
+                                        <InertiaLink href={`mark/${test.id}`}>
+                                            <CheckOutlined
+                                                style={{ color: "green" }}
+                                                key="mark"
+                                            />
+                                        </InertiaLink>
                                     </Tooltip>,
 
                                     <Popover
