@@ -51,13 +51,17 @@ if (!function_exists('filter_time')) {
     /**
      *  Get tests by starttime and deadline
      */
-    function filter_time($tests)
+    function filter_test($tests)
     {
         $now = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->addHour())->format('Y-m-d H:i:s');
         // dd($now);
         return $tests
             ->where('deadline', ">", $now)
             ->where('start_time', "<=", $now)
+            ->whereDoesntHave('results', function ($q) {
+                $q->whereUser_id(authUser()->id);
+            })
+            ->latest()
             ->get();
     }
 }
