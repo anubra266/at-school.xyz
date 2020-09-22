@@ -8,9 +8,9 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Checkbox from "antd/lib/checkbox";
+import Input from "antd/lib/input";
 
 import { AutoComplete } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import Main from "@/Helpers/Main";
 
 const CheckboxGroup = Checkbox.Group;
@@ -18,6 +18,7 @@ const CheckboxGroup = Checkbox.Group;
 const MembersList = ({ members, classroom }) => {
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
+
     const filtersList = [
         "email",
         "gender",
@@ -54,7 +55,8 @@ const MembersList = ({ members, classroom }) => {
         return showFilter.includes(filter);
     };
     const [result, setResult] = useState(members);
-    const handleSearch = value => {
+    const handleSearch = e => {
+        const { value } = e.target;
         let res = [];
 
         members.forEach(student => {
@@ -73,35 +75,13 @@ const MembersList = ({ members, classroom }) => {
                         <React.Fragment>
                             <Row>
                                 <Col xs={20} md={12}>
-                                    <AutoComplete
-                                        onSearch={handleSearch}
+                                    <Input.Search
+                                        onChange={handleSearch}
                                         style={{
                                             width: "100%"
                                         }}
                                         placeholder="Search Members by Name or Email"
-                                    >
-                                        {result.slice(0, 3).map(member => {
-                                            return (
-                                                <AutoComplete.Option
-                                                    key={member.email}
-                                                    value={member.email}
-                                                >
-                                                    <div
-                                                        style={{
-                                                            display: "flex",
-                                                            justifyContent:
-                                                                "space-between"
-                                                        }}
-                                                    >
-                                                        {Main.name(member)}
-                                                        <span>
-                                                            <UserOutlined />
-                                                        </span>
-                                                    </div>
-                                                </AutoComplete.Option>
-                                            );
-                                        })}
-                                    </AutoComplete>
+                                    ></Input.Search>
                                 </Col>
                             </Row>
                             <br />

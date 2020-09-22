@@ -6,29 +6,31 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Contracts\Role;
 
-//?Index route
-Route::get('/', 'PublicController@landing')->name('landing');
-
 Auth::routes();
 
-//? Registration Routes...
-Route::get('register', 'MyAuthController@showRegistrationForm')->name('register');
+Route::group(['middleware' => ['guest']], function () {
+    //?Index route
+    Route::get('/', 'PublicController@landing')->name('landing');
+    Route::get('register', 'MyAuthController@showRegistrationForm')->name('register');
 
-//? login routes
-Route::get('login', 'MyAuthController@showLoginForm')->name('login');
-Route::group(['namespace' => 'Auth', 'middleware' => ['auth']], function () {
-    Route::get('logout', 'LoginController@logout')->name('logout');
+    //? Password Reset Routes...
+    Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');
+
+    //? Email Verification Routes...
+    Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+
+    Route::get('login', 'MyAuthController@showLoginForm')->name('login');
 });
 
-//? Password Reset Routes...
-Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');
 
-//? Email Verification Routes...
-Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 
 
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {
+
+    Route::group(['namespace' => 'Auth'], function () {
+        Route::get('logout', 'LoginController@logout')->name('logout');
+    });
 
     Route::get('home', 'PrivateController@home')->name('home');
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import Empty from "antd/lib/empty";
@@ -12,17 +12,21 @@ import Popover from "antd/lib/popover";
 import CheckOutlined from "@ant-design/icons/CheckOutlined";
 import EditOutlined from "@ant-design/icons/EditOutlined";
 import DeleteOutlined from "@ant-design/icons/DeleteOutlined";
+import BookOutlined from "@ant-design/icons/BookOutlined";
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
 import EduTheoryForm from "./EduTheoryForm";
 import PopConfirm from "antd/lib/popconfirm";
 import Switch from "antd/lib/switch";
 
+import Results from "@/Pages/Workspace/tests/shared/results";
+
 import Main from "@/Helpers/Main";
 
 const Educator = ({ tests, classroom, showDrawer }) => {
     const { role } = classroom;
-
+    const resultsRef = useRef();
     const [loading, setLoading] = useState(false);
+    const [currentTest, setCurrentTest] = useState({});
     const updateStatus = (checked, id) => {
         setLoading(true);
         const status = checked ? "open" : "closed";
@@ -42,11 +46,22 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                             style={{ width: "100%" }}
                             actions={
                                 role === "educator" && [
-                                    <Tooltip title="Mark Test">
+                                    <Tooltip
+                                        title="Test Results"
+                                        key={`results-${key}`}
+                                    >
+                                        <BookOutlined
+                                            onClick={() => {
+                                                setCurrentTest(test);
+                                                resultsRef.current.showResults();
+                                            }}
+                                            style={{ color: "#1890ff" }}
+                                        />
+                                    </Tooltip>,
+                                    <Tooltip title="Mark Test" key="mark">
                                         <InertiaLink href={`mark/${test.id}`}>
                                             <CheckOutlined
                                                 style={{ color: "green" }}
-                                                key="mark"
                                             />
                                         </InertiaLink>
                                     </Tooltip>,
@@ -55,6 +70,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         placement="bottom"
                                         title={"Edit Test Settings"}
                                         trigger="click"
+                                        key="setting"
                                         content={
                                             <EduTheoryForm
                                                 edit={test}
@@ -63,20 +79,23 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         }
                                     >
                                         <Tooltip title="Edit Test Settings">
-                                            <SettingOutlined key="setting" />
+                                            <SettingOutlined />
                                         </Tooltip>
                                     </Popover>,
-                                    <Tooltip title="Edit Test Questions">
+                                    <Tooltip
+                                        title="Edit Test Questions"
+                                        key="edit"
+                                    >
                                         <InertiaLink
                                             href={`edu-theory/${test.id}/edit`}
                                         >
                                             <EditOutlined
                                                 style={{ color: "orange" }}
-                                                key="edit"
                                             />
                                         </InertiaLink>
                                     </Tooltip>,
                                     <PopConfirm
+                                        key="delete"
                                         placement="top"
                                         title={`Delete ${test.title} Test ?`}
                                         onConfirm={() => {
@@ -94,7 +113,6 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                         <Tooltip title="Delete Test">
                                             <DeleteOutlined
                                                 style={{ color: "red" }}
-                                                key="delete"
                                             />
                                         </Tooltip>
                                     </PopConfirm>
@@ -156,6 +174,13 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                     </Empty>
                 </Card>
             )}
+            <Results
+                ref={resultsRef}
+                {...{
+                    test: currentTest,
+                    classroom
+                }}
+            />
         </React.Fragment>
     );
 };

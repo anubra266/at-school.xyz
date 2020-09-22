@@ -16,6 +16,7 @@ class TheoryTestService
     {
         $classroom = pop($classroom)->load('User');
         $tests = $classroom->theoryTests()->latest()->get();
+        $tests->load('results.User');
         return ['classroom' => $classroom, 'tests' => $tests];
     }
 

@@ -19,7 +19,7 @@ const OrganizationsList = ({ organizations }) => {
             route("organization.edit", {
                 organization: data.id
             }),
-            data 
+            data
         ).then(res => {
             setLoading(false);
         });
@@ -41,7 +41,7 @@ const OrganizationsList = ({ organizations }) => {
                         defaultPageSize: 3,
                         showQuickJumper: true,
                         showSizeChanger: true,
-                        showTotal: (total, range) => (
+                        showTotal: (total, range) => ( 
                             <a>
                                 {total} Organization{total !== 1 && "s"}
                             </a>

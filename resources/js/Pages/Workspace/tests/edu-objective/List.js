@@ -9,7 +9,7 @@ import Col from "antd/lib/col";
 import Row from "antd/lib/row";
 import Tooltip from "antd/lib/tooltip";
 import Popover from "antd/lib/popover";
-import CheckOutlined from "@ant-design/icons/CheckOutlined";
+import BookOutlined from "@ant-design/icons/BookOutlined";
 import EditOutlined from "@ant-design/icons/EditOutlined";
 import DeleteOutlined from "@ant-design/icons/DeleteOutlined";
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
@@ -17,10 +17,14 @@ import EduObjForm from "./EduObjForm";
 import PopConfirm from "antd/lib/popconfirm";
 import Switch from "antd/lib/switch";
 
+import Results from "@/Pages/Workspace/tests/shared/results";
+
 import Main from "@/Helpers/Main";
 
 const Educator = ({ tests, classroom, showDrawer }) => {
     const { role } = classroom;
+    const resultsRef = useRef();
+    const [currentTest, setCurrentTest] = useState({});
 
     const [loading, setLoading] = useState(false);
     const updateStatus = (checked, id) => {
@@ -45,10 +49,17 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                             style={{ width: "100%" }}
                             actions={
                                 role === "educator" && [
-                                    <Tooltip title="Mark Test">
-                                        <CheckOutlined
-                                            style={{ color: "green" }}
-                                            key="mark"
+                                    <Tooltip
+                                        title="Test Results"
+                                        key={`results-${key}`}
+                                    >
+                                        <BookOutlined
+                                            onClick={() => {
+                                                setCurrentTest(test);
+                                                resultsRef.current.showResults();
+                                            }}
+                                            style={{ color: "#1890ff" }}
+                                            key="results"
                                         />
                                     </Tooltip>,
 
@@ -153,6 +164,13 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                     </Empty>
                 </Card>
             )}
+            <Results
+                ref={resultsRef}
+                {...{
+                    test: currentTest,
+                    classroom
+                }}
+            />
         </React.Fragment>
     );
 };

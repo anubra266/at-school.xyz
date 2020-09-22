@@ -30,7 +30,8 @@ const Answer = ({ test, classroom, answer }, ref) => {
     };
     useExpose(ref, { toggleAnswer });
     return (
-        answer && (
+        answer &&
+        user && (
             <div>
                 <Drawer
                     title={`Submission for ${Main.name(user)}`}
@@ -99,12 +100,6 @@ const Answer = ({ test, classroom, answer }, ref) => {
                                             placeholder="Input Test Score"
                                         />
                                     </Form.Item>
-                                    <Form.Item name="user_id">
-                                        <Input type="hidden" />
-                                    </Form.Item>
-                                    <Form.Item name="id">
-                                        <Input type="hidden" />
-                                    </Form.Item>
                                     <Form.Item>
                                         <Button
                                             type="primary"
@@ -113,6 +108,12 @@ const Answer = ({ test, classroom, answer }, ref) => {
                                         >
                                             Save
                                         </Button>
+                                    </Form.Item>
+                                    <Form.Item name="user_id">
+                                        <Input name="user_id" type="hidden" />
+                                    </Form.Item>
+                                    <Form.Item name="id">
+                                        <Input name="id" type="hidden" />
                                     </Form.Item>
                                 </Form>
                             </Card>

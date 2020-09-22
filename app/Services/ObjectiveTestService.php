@@ -15,6 +15,7 @@ class ObjectiveTestService
     {
         $classroom = pop($classroom)->load('User');
         $tests = $classroom->objectiveTests()->latest()->get();
+        $tests->load('results.User');
         return ['classroom' => $classroom, 'tests' => $tests];
     }
 

@@ -3,17 +3,15 @@ import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
 import Empty from "antd/lib/empty";
-import Row from "antd/lib/row";
-import Col from "antd/lib/col";
+
 import Card from "antd/lib/card";
 import Popover from "antd/lib/popover";
 import Typography from "antd/lib/typography";
 import { usePage } from "@inertiajs/inertia-react";
 
-import DownloadOutlined from "@ant-design/icons/DownloadOutlined";
-import FileExcelOutlined from "@ant-design/icons/FileExcelOutlined";
-import FilePdfOutlined from "@ant-design/icons/FilePdfOutlined";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
+
+import Export from "@/Shared/export";
 import MembersList from "./MembersList";
 const { Content } = Layout;
 const members = ({ classroom, members }) => {
@@ -31,21 +29,8 @@ const members = ({ classroom, members }) => {
                         title="Members"
                         subTitle={classroom.name}
                         extra={[
-                            <React.Fragment>
-                                {auth.user.can.Classrooms && (
-                                    <Popover
-                                        key="2"
-                                        content={export_content}
-                                        title="Export Members"
-                                        trigger="click"
-                                        placement="leftBottom"
-                                    >
-                                        <Button>
-                                            <DownloadOutlined />
-                                            Export
-                                        </Button>
-                                    </Popover>
-                                )}
+                            <React.Fragment key="export">
+                                {auth.user.can.Classrooms && <Export />}
                             </React.Fragment>,
                             <Invite key="header" {...classroom} />
                         ]}
@@ -66,20 +51,6 @@ const members = ({ classroom, members }) => {
 };
 export default members;
 
-const export_content = (
-    <Row>
-        <Col span={8}>
-            <FileExcelOutlined style={{ fontSize: "40px" }} />
-            <br />
-            Excel
-        </Col>
-        <Col span={8} offset={8}>
-            <FilePdfOutlined style={{ fontSize: "40px" }} />
-            <br />
-            PDF
-        </Col>
-    </Row>
-);
 const Invite = classroom => {
     return (
         <Popover

@@ -54,7 +54,6 @@ class LoginController extends Controller
             ]);
     }
 
-
     /**
      * The user has logged out of the application.
      *
