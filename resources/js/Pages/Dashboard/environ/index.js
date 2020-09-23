@@ -14,7 +14,6 @@ import EnvironsList from "./EnvironsList";
 const Environ = ({ environs }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
-    const { flash } = usePage();
     const EnvForm = useRef(null);
     const showDrawer = () => {
         setVisible(true);

@@ -56,13 +56,13 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
             )}
 
             <Form.Item>
-                <Button
+                <Button 
                     type="primary"
                     htmlType="submit"
                     className="login-form-button"
                     loading={loading}
                 >
-                    Save
+                    Create
                 </Button>
             </Form.Item>
         </Form>

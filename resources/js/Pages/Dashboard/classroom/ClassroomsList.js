@@ -110,7 +110,7 @@ const ClassroomsList = ({ classrooms }) => {
                                         placement="leftTop"
                                         title={`Generate new ${record.name} code?`}
                                         onConfirm={() => {
-                                            setLoading(true); 
+                                            setLoading(true);
                                             Inertia.patch(
                                                 route("classroom.change_code", {
                                                     classroom: record.id

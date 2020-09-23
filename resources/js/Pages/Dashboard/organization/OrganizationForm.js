@@ -18,7 +18,7 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
                     id: edit.id
                 }
             }
-            layout="vertical" 
+            layout="vertical"
         >
             <Form.Item
                 label="Organization Name"
@@ -65,7 +65,7 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
                     className="login-form-button"
                     loading={loading}
                 >
-                    Save
+                    Create
                 </Button>
             </Form.Item>
         </Form>

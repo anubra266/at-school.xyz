@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { usePage } from "@inertiajs/inertia-react";
 import Layout from "@/Pages/Auth/Layout";
 import { InertiaLink } from "@inertiajs/inertia-react";
+import { Inertia } from "@inertiajs/inertia";
 
 const resetpassword = () => {
+    const [email, setEmail] = useState("");
+
+    const verify_email = e => {
+        e.preventDefault();
+        Inertia.post(route("password.email"), { email });
+    };
+    const handleChange = e => {
+        setEmail(e.target.value);
+    };
+    const { errors } = usePage();
     return (
         <Layout
             title="Reset Password at-school"
@@ -14,15 +26,24 @@ const resetpassword = () => {
                     Enter your Email and instructions will be sent to you!
                 </div>
 
-                <form className="form-horizontal m-t-30" action="index.html">
+                <form
+                    method="POST"
+                    className="form-horizontal m-t-30"
+                    onSubmit={verify_email}
+                >
                     <div className="form-group">
-                        <label for="useremail">Email</label>
+                        <label htmlFor="useremail">Email</label>
                         <input
                             type="email"
                             className="form-control"
                             id="useremail"
                             placeholder="Enter email"
+                            value={email}
+                            onChange={handleChange}
                         />
+                        {errors.email && (
+                            <div className="text-danger">{errors.email[0]}</div>
+                        )}
                     </div>
 
                     <div className="form-group row m-t-20 mb-0">

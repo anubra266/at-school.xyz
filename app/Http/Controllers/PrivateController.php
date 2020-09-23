@@ -12,4 +12,6 @@ class PrivateController extends Controller
     {
         return Inertia::render('Dashboard/home');
     }
+
+
 }

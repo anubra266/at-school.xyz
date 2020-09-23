@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffectOnce } from "react-use";
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 import Layout from "@/Pages/Auth/Layout";
 import LoadingButton from "@/Shared/LoadingButton";
@@ -19,14 +18,7 @@ const login = () => {
         e.preventDefault();
         Auth.handleSubmit("login", setChecking, data);
     };
-    const { errors, flash } = usePage();
-    useEffectOnce(() => {
-        flash.input &&
-            flash.input.email &&
-            handleChange({
-                target: { name: "email", value: flash.input.email }
-            });
-    });
+    const { errors } = usePage();
     return (
         <Layout
             title="Login at-school"

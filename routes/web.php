@@ -11,15 +11,20 @@ Auth::routes();
 Route::group(['middleware' => ['guest']], function () {
     //?Index route
     Route::get('/', 'PublicController@landing')->name('landing');
+
+    Route::get('login', 'MyAuthController@showLoginForm')->name('login');
+
     Route::get('register', 'MyAuthController@showRegistrationForm')->name('register');
 
     //? Password Reset Routes...
     Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');
 
-    //? Email Verification Routes...
-    Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+    // ?Password Reset Routes...
+    // Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    // Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+    // Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
-    Route::get('login', 'MyAuthController@showLoginForm')->name('login');
+
 });
 
 
@@ -32,123 +37,119 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('logout', 'LoginController@logout')->name('logout');
     });
 
-    Route::get('home', 'PrivateController@home')->name('home');
+    Route::get('/account/setup/{role}', 'RolesController@setRole')->name('account.setup');
+    Route::post('/account/setup/org', 'RolesController@createOrg')->name('account.org');
+    Route::post('/account/setup/env', 'RolesController@createEnv')->name('account.env');
+    Route::post('/account/setup/crm', 'RolesController@createCrm')->name('account.crm');
+    Route::post('/account/setup/cls', 'RolesController@joinCls')->name('account.cls');
+    Route::post('/account/setup/prc', 'RolesController@joinPrc')->name('account.prc');
 
-    //? Organization routes
-    Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
+    Route::group(['middleware' => ['setrole']], function () {
 
-        Route::get('/', 'OrganizationController@index')->name('organization.index');
-        Route::post('/', 'OrganizationController@store')->name('organization.create');
+        Route::get('home', 'PrivateController@home')->name('home');
 
-        Route::group(['middleware' => ['can:update,organization']], function () {
-            Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
-            Route::patch('/{organization}', 'OrganizationController@update')->name('organization.edit');
-        });
-    });
+        //? Organization routes
+        Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
 
-    //? Environ routes
-    Route::group(['prefix' => 'environ', 'middleware' => ['can:create_environs']], function () {
-        Route::get('/', 'EnvironController@index')->name('environ.index');
-        Route::post('/', 'EnvironController@store')->name('environ.create');
+            Route::get('/', 'OrganizationController@index')->name('organization.index');
+            Route::post('/', 'OrganizationController@store')->name('organization.create');
 
-        Route::group(['middleware' => ['can:update,environ']], function () {
-            Route::patch('/{environ}/newcode', 'EnvironController@ChangeCode')->name('environ.change_code');
-            Route::patch('/{environ}', 'EnvironController@update')->name('environ.edit');
-        });
-    });
-
-    //? Classroom Participation routes
-    Route::group(['prefix' => 'class'], function () {
-        Route::group(['middleware' => ['can:participate_classes']], function () {
-            Route::get('/', 'ClassController@index')->name('class.index');
-            Route::post('/join', 'ClassController@join')->name('class.join');
-            Route::patch('/{classroom}/leave', 'ClassController@leave')->name('class.leave');
-        });
-    });
-
-    //? Classroom routes
-    Route::group(['prefix' => 'classroom'], function () {
-        Route::group(['middleware' => ['can:create_classrooms']], function () {
-            Route::get('/', 'ClassroomController@index')->name('classroom.index');
-            Route::post('/', 'ClassroomController@store')->name('classroom.create');
-
-            Route::group(['middleware' => ['can:update,classroom']], function () {
-                Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
-                Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
+            Route::group(['middleware' => ['can:update,organization']], function () {
+                Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
+                Route::patch('/{organization}', 'OrganizationController@update')->name('organization.edit');
             });
         });
 
-        //? Classroom activities routes
-        Route::group(['middleware' => ['class.auth'], 'prefix' => '{classroom}'], function () {
-            Route::get('/', 'WorkspaceController@home')->name('classroom.home');
-            //? View Members
-            Route::get('/members', 'WorkspaceController@members')->name('classroom.members');
-            //? Educator Only Routes
-            Route::group(['middleware' => ['educator.only']], function () {
-                //? Assessments' routes
-                Route::group(['prefix' => 'assessments'], function () {
-                    //? View Theory Assessments
-                    Route::get('/edu-theory', 'TheoryTestController@index')->name('theory.index');
-                    Route::post('/edu-theory', 'TheoryTestController@store')->name('theory.create');
-                    Route::patch('/edu-theory-status', 'TheoryTestController@status')->name('theory.status');
+        //? Environ routes
+        Route::group(['prefix' => 'environ', 'middleware' => ['can:create_environs']], function () {
+            Route::get('/', 'EnvironController@index')->name('environ.index');
+            Route::post('/', 'EnvironController@store')->name('environ.create');
 
-                    //? Edit Theory Assessments
-                    Route::patch('/edu-theory', 'TheoryTestController@update')->name('theory.update');
-                    Route::delete('/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
-                    Route::get('/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
-                    Route::get('/mark/{test}/', 'TheoryTestController@mark')->name('theory.mark');
-                    Route::post('/score/{test}/', 'TheoryTestController@score')->name('theory.score');
+            Route::group(['middleware' => ['can:update,environ']], function () {
+                Route::patch('/{environ}/newcode', 'EnvironController@ChangeCode')->name('environ.change_code');
+                Route::patch('/{environ}', 'EnvironController@update')->name('environ.edit');
+            });
+        });
 
-                    //? View Objective Assessments
-                    Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
-                    Route::post('/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
-                    Route::patch('/edu-objective-status', 'ObjectiveTestController@status')->name('objective.status');
+        //? Classroom Participation routes
+        Route::group(['prefix' => 'class'], function () {
+            Route::group(['middleware' => ['can:participate_classes']], function () {
+                Route::get('/', 'ClassController@index')->name('class.index');
+                Route::post('/join', 'ClassController@join')->name('class.join');
+                Route::patch('/{classroom}/leave', 'ClassController@leave')->name('class.leave');
+            });
+        });
 
-                    //? Edit Objective Assessments
-                    Route::patch('/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
-                    Route::delete('/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
-                    Route::get('/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
+        //? Classroom routes
+        Route::group(['prefix' => 'classroom'], function () {
+            Route::group(['middleware' => ['can:create_classrooms']], function () {
+                Route::get('/', 'ClassroomController@index')->name('classroom.index');
+                Route::post('/', 'ClassroomController@store')->name('classroom.create');
 
-                    //? Questions
-                    Route::post('/question', 'QuestionController@store')->name('question.create');
-                    Route::patch('/question', 'QuestionController@update')->name('question.update');
-                    Route::post('/question/{question}', 'QuestionController@destroy')->name('question.delete');
-
-                    //? Options
-                    Route::post('/question/{question}/option', 'ObjectiveOptionController@store')->name('option.create');
-                    Route::post('/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('option.correct');
-                    Route::post('/option/{option}', 'ObjectiveOptionController@destroy')->name('option.destroy');
-
-                    //? Solution
-                    Route::post('/question/{question}/solution', 'SolutionController@save')->name('solution.save');
+                Route::group(['middleware' => ['can:update,classroom']], function () {
+                    Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
+                    Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
                 });
             });
 
-            Route::group(['prefix' => 'assessments'], function () {
-                Route::get('/stud-theory', 'TheoryTestController@list')->name('theory.list');
-                Route::get('/stud-objective', 'ObjectiveTestController@list')->name('objective.list');
-            });
-            //? take assesments
-            Route::get('/theass/{test}', 'TheoryTestController@take')->name('theory.take');
-            Route::get('/objeass/{test}', 'ObjectiveTestController@take')->name('objective.take');
+            //? Classroom activities routes
+            Route::group(['middleware' => ['class.auth'], 'prefix' => '{classroom}'], function () {
+                Route::get('/', 'WorkspaceController@home')->name('classroom.home');
+                //? View Members
+                Route::get('/members', 'WorkspaceController@members')->name('classroom.members');
+                //? Educator Only Routes
+                Route::group(['middleware' => ['educator.only']], function () {
+                    //? Assessments' routes
+                    Route::group(['prefix' => 'assessments'], function () {
+                        //? View Theory Assessments
+                        Route::get('/edu-theory', 'TheoryTestController@index')->name('theory.index');
+                        Route::post('/edu-theory', 'TheoryTestController@store')->name('theory.create');
+                        Route::patch('/edu-theory-status', 'TheoryTestController@status')->name('theory.status');
 
-            Route::post('/theory/answer/{test}', 'TestAnswerController@saveTheory')->name('theory.answer');
-            Route::post('/objective/answer/{test}', 'TestAnswerController@saveObjective')->name('objective.answer');
-            Route::get('/objereview/{test}', 'ObjectiveTestController@review')->name('objective.review');
+                        //? Edit Theory Assessments
+                        Route::patch('/edu-theory', 'TheoryTestController@update')->name('theory.update');
+                        Route::delete('/edu-theory/{test}', 'TheoryTestController@destroy')->name('theory.delete');
+                        Route::get('/edu-theory/{test}/edit', 'TheoryTestController@edit')->name('theory.edit');
+                        Route::get('/mark/{test}/', 'TheoryTestController@mark')->name('theory.mark');
+                        Route::post('/score/{test}/', 'TheoryTestController@score')->name('theory.score');
+
+                        //? View Objective Assessments
+                        Route::get('/edu-objective', 'ObjectiveTestController@index')->name('objective.view');
+                        Route::post('/edu-objective', 'ObjectiveTestController@store')->name('objective.create');
+                        Route::patch('/edu-objective-status', 'ObjectiveTestController@status')->name('objective.status');
+
+                        //? Edit Objective Assessments
+                        Route::patch('/edu-objective', 'ObjectiveTestController@update')->name('objective.update');
+                        Route::delete('/edu-objective/{test}', 'ObjectiveTestController@destroy')->name('objective.delete');
+                        Route::get('/edu-objective/{test}/edit', 'ObjectiveTestController@edit')->name('objective.edit');
+
+                        //? Questions
+                        Route::post('/question', 'QuestionController@store')->name('question.create');
+                        Route::patch('/question', 'QuestionController@update')->name('question.update');
+                        Route::post('/question/{question}', 'QuestionController@destroy')->name('question.delete');
+
+                        //? Options
+                        Route::post('/question/{question}/option', 'ObjectiveOptionController@store')->name('option.create');
+                        Route::post('/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('option.correct');
+                        Route::post('/option/{option}', 'ObjectiveOptionController@destroy')->name('option.destroy');
+
+                        //? Solution
+                        Route::post('/question/{question}/solution', 'SolutionController@save')->name('solution.save');
+                    });
+                });
+
+                Route::group(['prefix' => 'assessments'], function () {
+                    Route::get('/stud-theory', 'TheoryTestController@list')->name('theory.list');
+                    Route::get('/stud-objective', 'ObjectiveTestController@list')->name('objective.list');
+                });
+                //? take assesments
+                Route::get('/theass/{test}', 'TheoryTestController@take')->name('theory.take');
+                Route::get('/objeass/{test}', 'ObjectiveTestController@take')->name('objective.take');
+
+                Route::post('/theory/answer/{test}', 'TestAnswerController@saveTheory')->name('theory.answer');
+                Route::post('/objective/answer/{test}', 'TestAnswerController@saveObjective')->name('objective.answer');
+                Route::get('/objereview/{test}', 'ObjectiveTestController@review')->name('objective.review');
+            });
         });
     });
 });
-
-
-
-
-
-// ?Password Reset Routes...
-// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-// Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
-// ?Email Verification Routes...
-// Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
-// Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
-// Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');

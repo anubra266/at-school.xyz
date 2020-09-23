@@ -44,21 +44,11 @@ export default function AcademicInfo({ data, handleChange, errors }) {
                     required
                     className="custom-select"
                 >
-                    <optgroup label="Student">
-                        <option value="practicist">Personal Practice</option>
-                        <option value="student">Join a Classroom</option>
-                    </optgroup>
-                    <optgroup label="Educator - Join Organization">
-                        <option value="educator">Create Classroom</option>
-                        <option value="department_head">
-                            Create Environ / Department
-                        </option>
-                    </optgroup>
-                    <optgroup label="Organization Admin">
-                        <option value="organization_admin">
-                            Register Organization
-                        </option>
-                    </optgroup>
+                    <option value="student">Student</option>
+                    <option value="educator">Educator</option>
+                    <option value="organization_admin">
+                        Organization Admin
+                    </option>
                 </select>
                 {errors.initial_role && (
                     <div className="text-danger">{errors.initial_role[0]}</div>

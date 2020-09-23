@@ -62,7 +62,7 @@ const EnvironForm = ({ loading, onFinish, EnvForm, edit }) => {
                     className="login-form-button"
                     loading={loading}
                 >
-                    Save
+                    Create
                 </Button>
             </Form.Item>
         </Form>

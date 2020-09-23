@@ -25,7 +25,7 @@ const ClassForm = ({ loading, onFinish, ClsForm }) => {
                 validateStatus={errors.code && "error"}
                 help={errors.code && errors.code[0]}
             >
-                <Input placeholder="Classroom Code" />
+                <Input placeholder="Classroom Code" /> 
             </Form.Item>
 
             <Form.Item>
