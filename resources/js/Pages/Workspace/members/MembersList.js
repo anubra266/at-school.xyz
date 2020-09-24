@@ -10,35 +10,28 @@ import Button from "antd/lib/button";
 import Checkbox from "antd/lib/checkbox";
 import Input from "antd/lib/input";
 
-import { AutoComplete } from "antd";
 import Main from "@/Helpers/Main";
+import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 
-const CheckboxGroup = Checkbox.Group;
 
 const MembersList = ({ members, classroom }) => {
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
 
-    const filtersList = [
-        "email",
-        "gender",
-        "telephone",
-        "date_of_birth",
-        "school",
-        "school_town"
-    ];
-    var filterChecks = [
-        { label: "Email", value: "email" },
-        { label: "Gender", value: "gender" },
-        { label: "Telephone", value: "telephone" },
-        { label: "Date of birth", value: "date_of_birth" },
-        { label: "School", value: "school" },
-        { label: "Town", value: "school_town" }
-    ];
-    const defaultFilters = ["email", "school", "school_town"];
-    const [showFilter, setShowFilter] = useState(defaultFilters);
+
+
+    //? Handle Checkbox filters
+
     const [indeterminate, setIndeterminate] = useState(true);
     const [checkAll, setCheckAll] = useState(true);
+    const onFilterAll = e => {
+        setShowFilter(e.target.checked ? filtersList : []);
+        setIndeterminate(false);
+        setCheckAll(e.target.checked);
+    };
+
+    const [showFilter, setShowFilter] = useState(initial_filter);
+
     const onFilter = filtered => {
         setShowFilter(filtered);
         setIndeterminate(
@@ -46,14 +39,12 @@ const MembersList = ({ members, classroom }) => {
         );
         setCheckAll(filtered.length === filtersList.length);
     };
-    const onFilterAll = e => {
-        setShowFilter(e.target.checked ? filtersList : []);
-        setIndeterminate(false);
-        setCheckAll(e.target.checked);
-    };
+
     const show = filter => {
         return showFilter.includes(filter);
     };
+
+    //? Handle Search
     const [result, setResult] = useState(members);
     const handleSearch = e => {
         const { value } = e.target;
@@ -85,17 +76,16 @@ const MembersList = ({ members, classroom }) => {
                                 </Col>
                             </Row>
                             <br />
+
                             <Space>
-                                <div className="site-checkbox-all-wrapper">
-                                    <Checkbox
-                                        indeterminate={indeterminate}
-                                        onChange={onFilterAll}
-                                        checked={checkAll}
-                                    >
-                                        Check all
-                                    </Checkbox>
-                                </div>
-                                <CheckboxGroup
+                                <Checkbox
+                                    indeterminate={indeterminate}
+                                    onChange={onFilterAll}
+                                    checked={checkAll}
+                                >
+                                    Check all
+                                </Checkbox>
+                                <Checkbox.Group
                                     options={filterChecks}
                                     value={showFilter}
                                     onChange={onFilter}
@@ -162,6 +152,16 @@ const MembersList = ({ members, classroom }) => {
                         )}
                         {auth.user.can.Classrooms && (
                             <React.Fragment>
+                                {show("email") && (
+                                    <Table.Column
+                                        title="Email"
+                                        key="email"
+                                        dataIndex="email"
+                                        render={text => (
+                                            <a>{Main.fCap(text)}</a>
+                                        )}
+                                    />
+                                )}
                                 {show("telephone") && (
                                     <Table.Column
                                         title="Telephone"
