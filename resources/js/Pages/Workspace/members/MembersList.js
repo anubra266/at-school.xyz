@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import Table from "antd/lib/table";
@@ -9,17 +9,14 @@ import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Checkbox from "antd/lib/checkbox";
 import Input from "antd/lib/input";
+import Typography from "antd/lib/typography";
 
 import Main from "@/Helpers/Main";
 import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 
-
 const MembersList = ({ members, classroom }) => {
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
-
-
-
     //? Handle Checkbox filters
 
     const [indeterminate, setIndeterminate] = useState(true);
@@ -46,6 +43,9 @@ const MembersList = ({ members, classroom }) => {
 
     //? Handle Search
     const [result, setResult] = useState(members);
+    useEffect(() => {
+        setResult(members);
+    }, [members]);
     const handleSearch = e => {
         const { value } = e.target;
         let res = [];
@@ -57,6 +57,12 @@ const MembersList = ({ members, classroom }) => {
         });
 
         setResult(res);
+    };
+    const block_student = id => {
+        setLoading(true);
+        Inertia.post(
+            route("classroom.block", { classroom: classroom.hash, student: id })
+        ).then(() => setLoading(false));
     };
     return (
         <React.Fragment>
@@ -127,7 +133,11 @@ const MembersList = ({ members, classroom }) => {
                                 record.email == auth.user.email ? (
                                     <a href="#">{Main.name(record)}</a>
                                 ) : (
-                                    <a>{Main.name(record)}</a>
+                                    <Typography.Text
+                                        type={!record.status.active && "danger"}
+                                    >
+                                        {Main.name(record)}
+                                    </Typography.Text>
                                 )
                             }
                             sorter={(a, b) => Main.sort(a, b, "first_name")}
@@ -218,30 +228,38 @@ const MembersList = ({ members, classroom }) => {
                                             <Space>
                                                 <PopConfirm
                                                     placement="leftTop"
-                                                    title={`Leave ${record.name} Class?`}
+                                                    title={`${
+                                                        record.status.active
+                                                            ? "Block"
+                                                            : "Unblock"
+                                                    } ${Main.name(record)}?`}
                                                     onConfirm={() => {
-                                                        setLoading(true);
-                                                        Inertia.patch(
-                                                            route(
-                                                                "class.leave",
-                                                                {
-                                                                    classroom:
-                                                                        record.id
-                                                                }
-                                                            )
-                                                        ).then(() =>
-                                                            setLoading(false)
+                                                        block_student(
+                                                            record.id
                                                         );
                                                     }}
-                                                    okText="Leave"
-                                                    okType="danger"
+                                                    okText={
+                                                        record.status.active
+                                                            ? "Block"
+                                                            : "Unblock"
+                                                    }
+                                                    okType={
+                                                        record.status.active
+                                                            ? "danger"
+                                                            : "primary"
+                                                    }
                                                     trigger="click"
                                                 >
                                                     <Button
-                                                        disabled={true}
+                                                        type="primary"
+                                                        danger={
+                                                            record.status.active
+                                                        }
                                                         loading={loading}
                                                     >
-                                                        Block
+                                                        {record.status.active
+                                                            ? "Block"
+                                                            : "Unblock"}
                                                     </Button>
                                                 </PopConfirm>
                                             </Space>

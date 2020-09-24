@@ -19,8 +19,11 @@ class ClassroomAuthorization
         $user = $request->user();
         $role = checkClass($classroom, $user);
         if ($role) {
+            if ($classroom->blockedStudents()->find($user->id)) {
+                return redirect()->route('home')->with('error', "You've been blocked from $classroom->name!");
+            }
             return $next($request);
         }
-        return redirect()->route('home');
+        return redirect()->route('home')->with('error', "Invalid Operation!");
     }
 }

@@ -51,4 +51,15 @@ class ClassroomService
         $classroom = $classroom->update($new_code);
         return $classroom;
     }
+
+    public function block($classroom, $student)
+    {
+        $is_active = !$classroom->blockedStudents()->find($student);
+        if ($is_active) {
+            $classroom->students()->updateExistingPivot($student, ['active' => false]);
+            return 'blocked';
+        }
+        $classroom->students()->updateExistingPivot($student, ['active' => true]);
+        return 'unblocked';
+    }
 }

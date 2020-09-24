@@ -13,11 +13,15 @@ class Classroom extends Model
 
     protected $guarded = [];
 
-    protected $appends = ['url'];
+    protected $appends = ['url', 'hash'];
 
     protected function getUrlAttribute()
     {
         return $this->attributes['url'] = route('classroom.home', ['classroom' => $this->hashid()]);
+    }
+    protected function getHashAttribute()
+    {
+        return $this->attributes['hash'] = $this->hashid();
     }
 
     public function User()
@@ -32,7 +36,11 @@ class Classroom extends Model
 
     public function students()
     {
-        return $this->belongsToMany(User::class, 'classroom_student', 'classroom_id', 'student_id')->withTimestamps();
+        return $this->belongsToMany(User::class, 'classroom_student', 'classroom_id', 'student_id')->withTimestamps()->withPivot('active')->as('status');
+    }
+    public function blockedStudents()
+    {
+        return $this->belongsToMany(User::class, 'classroom_student', 'classroom_id', 'student_id')->wherePivot('active', 0)->withTimestamps();
     }
 
     public function theoryTests()

@@ -14,7 +14,7 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
             initialValues={
                 edit && {
                     name: edit.name,
-                    id: edit.id
+                    id: edit.hash
                 }
             }
             layout="vertical"
@@ -56,7 +56,7 @@ const ClassroomForm = ({ loading, onFinish, CrmForm, edit }) => {
             )}
 
             <Form.Item>
-                <Button 
+                <Button
                     type="primary"
                     htmlType="submit"
                     className="login-form-button"

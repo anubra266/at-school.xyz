@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Services\ClassroomService;
 use App\Http\Requests\ClassroomRequest;
+use App\User;
 
 class ClassroomController extends Controller
 {
@@ -26,6 +27,12 @@ class ClassroomController extends Controller
             return redirect()->back()->with('success', " Classroom saved successfully");
         }
         return redirect()->back()->with('error', "Invalid Environ / Department code!");
+    }
+
+    public function block(Classroom $classroom, $student)
+    {
+        $act = $this->classroomService->block($classroom, $student);
+        return redirect()->back()->with('success', " Student $act successfully");
     }
 
     public function update(ClassroomRequest $request, Classroom $classroom)

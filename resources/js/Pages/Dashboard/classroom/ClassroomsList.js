@@ -76,7 +76,7 @@ const ClassroomsList = ({ classrooms }) => {
                         key="students_count"
                         sorter={(a, b) =>
                             a.students_count === b.students_count
-                                ? 0 
+                                ? 0
                                 : a.students_count < b.students_count
                                 ? -1
                                 : 1
@@ -113,7 +113,7 @@ const ClassroomsList = ({ classrooms }) => {
                                             setLoading(true);
                                             Inertia.patch(
                                                 route("classroom.change_code", {
-                                                    classroom: record.id
+                                                    classroom: record.hash
                                                 })
                                             ).then(() => setLoading(false));
                                         }}

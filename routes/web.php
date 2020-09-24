@@ -89,6 +89,7 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::group(['middleware' => ['can:update,classroom']], function () {
                     Route::patch('/{classroom}/newcode', 'ClassroomController@ChangeCode')->name('classroom.change_code');
                     Route::patch('/{classroom}', 'ClassroomController@update')->name('classroom.edit');
+                    Route::post('block-student/{classroom}/{student}', 'ClassroomController@block')->name('classroom.block');
                 });
             });
 

@@ -6,7 +6,6 @@ if (!function_exists('pop')) {
      */
     function pop($classroom)
     {
-        $classroom->hash = $classroom->hashid();
         $classroom->role = checkClass($classroom, authUser());
         return $classroom;
     }

@@ -11,7 +11,7 @@ if (!function_exists('checkClass')) {
      * @return {string} role
      */
     function checkClass($classroom, $user)
-    { 
+    {
         $models = ['environs', 'organizations'];
         //* allow Educator
         if ($user->id === $classroom->user_id) {

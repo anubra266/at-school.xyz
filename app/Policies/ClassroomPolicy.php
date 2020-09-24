@@ -63,7 +63,7 @@ class ClassroomPolicy
      */
     public function update(User $user, Classroom $classroom)
     {
-        return $user->id === $classroom;
+        return $user->id === $classroom->user_id;
     }
 
     /**
