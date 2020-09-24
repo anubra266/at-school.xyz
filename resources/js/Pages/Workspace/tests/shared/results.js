@@ -20,7 +20,7 @@ import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 const Results = ({ test, classroom }, ref) => {
     const [visible, showResults] = useToggle(false);
     useExpose(ref, { showResults });
-    const [results, setResults] = useState(test.results);
+    const [results, setResults] = useState();
     useEffect(() => {
         setResults(test.results);
     }, [test.results]);
@@ -87,7 +87,7 @@ const Results = ({ test, classroom }, ref) => {
                 <Row gutter={[0, 14]}>
                     <Col xs={24}>
                         <Card>
-                            {results && results.length !== 0 ? (
+                            {test.results && test.results.length !== 0 ? (
                                 <React.Fragment>
                                     <Row>
                                         <Col xs={20} md={12}>
