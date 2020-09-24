@@ -76,7 +76,7 @@ const ClassroomsList = ({ classrooms }) => {
                         key="students_count"
                         sorter={(a, b) =>
                             a.students_count === b.students_count
-                                ? 0
+                                ? 0 
                                 : a.students_count < b.students_count
                                 ? -1
                                 : 1

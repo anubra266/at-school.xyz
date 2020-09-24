@@ -14,7 +14,6 @@ import ClassroomsList from "@/Pages/Dashboard/classroom/ClassroomsList";
 const EnvironsList = ({ environs }) => {
     const [loading, setLoading] = useState(false);
     const EnvForm = useRef(null);
-
     const onFinish = data => {
         setLoading(true);
         Inertia.patch(route("environ.edit", { environ: data.id }), data).then(

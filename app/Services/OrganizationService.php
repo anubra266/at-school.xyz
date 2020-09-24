@@ -16,7 +16,9 @@ class OrganizationService
     public function index()
     {
         $organizations = authUser()->organizations()->latest()->get();
-        $organizations->load('environs.classrooms');
+        $organizations->load(['environs.classrooms' => function ($q) {
+            $q->withCount('students');
+        }]);
         return $organizations;
     }
     public function store($request)

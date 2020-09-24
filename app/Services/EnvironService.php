@@ -16,13 +16,16 @@ class EnvironService
     public function index()
     {
         $environs = authUser()->environs()->latest()->get();
-        $environs->load('classrooms');
+        $environs->load(['classrooms' => function ($q) {
+            $q->withCount('students');
+        }]);
+
         return $environs;
     }
     public function store($request)
     {
         $environ = $request->validated();
-        // * get organization
+        // * get organizationMOSMMOUS
         $organization = Organization::whereCode($request->code)->first();
         if (!$organization) {
             return null;

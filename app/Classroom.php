@@ -13,12 +13,19 @@ class Classroom extends Model
 
     protected $guarded = [];
 
+    protected $appends = ['url'];
+
+    protected function getUrlAttribute()
+    {
+        return $this->attributes['url'] = route('classroom.home', ['classroom' => $this->hashid()]);
+    }
+
     public function User()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function Environ() 
+    public function Environ()
     {
         return $this->belongsTo(Environ::class);
     }
