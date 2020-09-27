@@ -46,7 +46,7 @@ const Objective = ({ classroom, tests }) => {
                 <Drawer
                     title="Create New Objective Assessment"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

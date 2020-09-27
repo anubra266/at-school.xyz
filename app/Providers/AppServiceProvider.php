@@ -69,7 +69,7 @@ class AppServiceProvider extends ServiceProvider
                 ];
             },
             // * User theme
-            'theme' => 'light',
+            'theme' => 'dark',
             //* Make errors available to react
             'errors' => function () {
                 return Session::get('errors')

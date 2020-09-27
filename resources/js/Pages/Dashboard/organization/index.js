@@ -50,7 +50,7 @@ const Organization = ({ organizations }) => {
                 <Drawer
                     title="Create New Organization"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

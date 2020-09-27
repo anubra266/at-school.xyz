@@ -10,7 +10,9 @@ import Button from "antd/lib/button";
 import Tag from "antd/lib/tag";
 import Drawer from "antd/lib/drawer";
 
-import EllipsisOutlined from "@ant-design/icons/EllipsisOutlined";
+import Bell from "@ant-design/icons/BellOutlined";
+import LogoutIcon from "@ant-design/icons/PoweroffOutlined";
+
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
 import { usePage } from "@inertiajs/inertia-react";
 import { trans_roles } from "@/Helpers/Translate.js";
@@ -18,7 +20,6 @@ import { trans_roles } from "@/Helpers/Translate.js";
 const { Header } = Layout;
 
 function Navbar(props) {
-    // TODO Logout
     const { auth } = usePage();
     const trans_role = trans_roles(auth.user.initial_role);
     const [visible, setVisible] = useState(false);
@@ -46,7 +47,7 @@ function Navbar(props) {
                     tags={
                         <Row>
                             <Col xs={0} md={12}>
-                                <Tag color="blue">
+                                <Tag color="purple">
                                     {trans_roles(auth.user.initial_role)[0]}
                                 </Tag>
                             </Col>
@@ -62,29 +63,17 @@ function Navbar(props) {
                                 <MenuOutlined />
                             </button>
                             <Drawer
-                                title="Basic Drawer"
+                                title="Activity"
                                 placement="right"
                                 closable={false}
                                 onClose={onClose}
                                 visible={visible}
                             >
                                 <p>
-                                    {" "}
-                                    <Button key="3">Operation</Button>
+                                    <Notifications />
                                 </p>
                                 <p>
-                                    {" "}
-                                    <Button key="2">Operation</Button>
-                                </p>
-                                <p>
-                                    {" "}
-                                    <Button key="1" type="primary">
-                                        Primary
-                                    </Button>
-                                </p>
-                                <p>
-                                    {" "}
-                                    <DropdownMenu key="more" />
+                                    <Logout />
                                 </p>
                             </Drawer>
                         </React.Fragment>
@@ -100,36 +89,18 @@ export default Navbar;
 const menu = (
     <Menu>
         <Menu.Item>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.alipay.com/"
-            >
-                1st menu item
-            </a>
+            <a>1st menu item</a>
         </Menu.Item>
         <Menu.Item>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.taobao.com/"
-            >
-                2nd menu item
-            </a>
+            <a>2nd menu item</a>
         </Menu.Item>
         <Menu.Item>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.tmall.com/"
-            >
-                3rd menu item
-            </a>
+            <a>3rd menu item</a>
         </Menu.Item>
     </Menu>
 );
 
-const DropdownMenu = () => {
+const Notifications = () => {
     return (
         <Dropdown key="more" overlay={menu}>
             <Button
@@ -138,13 +109,30 @@ const DropdownMenu = () => {
                     padding: 0
                 }}
             >
-                <EllipsisOutlined
+                <Bell
                     style={{
                         fontSize: 20,
                         verticalAlign: "top"
                     }}
                 />
+                Notifications
             </Button>
         </Dropdown>
+    );
+};
+
+const Logout = () => {
+    return (
+        <Button
+            style={{
+                border: "none",
+                padding: 0
+            }}
+            onClick={() => {
+                message.loading("Logging you out...");
+            }}
+        >
+            <LogoutIcon /> Logout
+        </Button>
     );
 };

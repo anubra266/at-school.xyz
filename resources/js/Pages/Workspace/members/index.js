@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
@@ -16,6 +16,7 @@ import MembersList from "./MembersList";
 const { Content } = Layout;
 const members = ({ classroom, members }) => {
     const { auth } = usePage();
+    const [prop, setProp] = useState({ result: [], model: [] });
     return (
         <Workspacelayout title={classroom.name} classroom={classroom}>
             <Content style={{ margin: "0 16px" }}>
@@ -30,14 +31,24 @@ const members = ({ classroom, members }) => {
                         subTitle={classroom.name}
                         extra={[
                             <React.Fragment key="export">
-                                {auth.user.can.Classrooms && <Export />}
+                                {auth.user.can.Classrooms && (
+                                    <Export
+                                        name={`${classroom.name}-members`}
+                                        list={prop.result}
+                                        model={prop.model}
+                                    />
+                                )}
                             </React.Fragment>,
                             <Invite key="header" {...classroom} />
                         ]}
                     ></PageHeader>
                 </div>
                 <Card>
-                    <MembersList members={members} classroom={classroom} />
+                    <MembersList
+                        setProp={setProp}
+                        members={members}
+                        classroom={classroom}
+                    />
 
                     {members.length === 0 && (
                         <Empty description={<span>No Students found!</span>}>

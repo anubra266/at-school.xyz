@@ -31,4 +31,17 @@ class QuestionService
     {
         $question->delete();
     }
+
+    public function import($request)
+    {
+        $testModel = $this->getTest($request);
+        $test = $testModel::find($request->test);
+        $rows = $request->questions;
+        $count = count($rows);
+        foreach ($rows as $row) {
+            $question = $test->questions()->create(["question" => $row['question']]);
+            $question->options()->createMany($row['options']);
+        }
+        return $request->mode === "some" ? "$count Valid" : "All $count";
+    }
 }

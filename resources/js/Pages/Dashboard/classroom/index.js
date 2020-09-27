@@ -10,7 +10,7 @@ import Drawer from "antd/lib/drawer";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import ClassroomForm from "./ClassroomForm";
 import ClassroomsList from "./ClassroomsList";
- 
+
 const Classroom = ({ classrooms }) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -48,7 +48,7 @@ const Classroom = ({ classrooms }) => {
                 <Drawer
                     title="Create New Classroom"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

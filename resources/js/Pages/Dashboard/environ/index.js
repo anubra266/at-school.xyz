@@ -48,7 +48,7 @@ const Environ = ({ environs }) => {
                 <Drawer
                     title="Create New Environ"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

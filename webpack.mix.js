@@ -24,4 +24,6 @@ mix.react("resources/js/app.js", "public/js")
         }
     })
     //* version the bundles
-    .version();
+    .version()
+    // .browserSync("at-school.dev")
+    .disableNotifications();

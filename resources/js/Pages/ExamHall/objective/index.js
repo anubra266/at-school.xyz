@@ -88,7 +88,7 @@ const Index = props => {
     };
 
     return (
-        <Halllayout {...layoutProps}>
+        <Halllayout {...layoutProps}> 
             <Content style={{ margin: "15px 16px", height: "100%" }}>
                 <Row gutter={[0, 16]}>
                     {questions.map((question, index) => {

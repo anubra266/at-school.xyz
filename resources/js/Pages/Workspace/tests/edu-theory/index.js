@@ -46,7 +46,7 @@ const Theory = ({ classroom, tests }) => {
                 <Drawer
                     title="Create New Theory Assessment"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

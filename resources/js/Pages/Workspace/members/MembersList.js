@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import Table from "antd/lib/table";
@@ -14,7 +14,7 @@ import Typography from "antd/lib/typography";
 import Main from "@/Helpers/Main";
 import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 
-const MembersList = ({ members, classroom }) => {
+const MembersList = ({ setProp, members, classroom }, ref) => {
     const { auth } = usePage();
     const [loading, setLoading] = useState(false);
     //? Handle Checkbox filters
@@ -64,6 +64,21 @@ const MembersList = ({ members, classroom }) => {
             route("classroom.block", { classroom: classroom.hash, student: id })
         ).then(() => setLoading(false));
     };
+    const exportModel = [{ label: "Name", value: "name" }].concat(
+        filterChecks.filter(item => showFilter.includes(item.value))
+    );
+    useEffect(() => {
+        setProp(v => {
+            return { 
+                result: result.reduce((acc, nxt) => {
+                    nxt.name = Main.name(nxt);
+                    acc.push(nxt);
+                    return acc;
+                }, []),
+                model: exportModel
+            };
+        });
+    }, [result, showFilter]);
     return (
         <React.Fragment>
             {members.length !== 0 && (

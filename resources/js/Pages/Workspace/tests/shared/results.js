@@ -13,7 +13,6 @@ import Checkbox from "antd/lib/checkbox";
 import { useToggle } from "react-use";
 import { useExpose } from "@/Helpers/useExpose";
 import Export from "@/Shared/export";
-
 import Main from "@/Helpers/Main";
 import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 
@@ -62,6 +61,31 @@ const Results = ({ test, classroom }, ref) => {
 
         setResults(res);
     };
+    const exportModelDef = filterChecks.filter(item =>
+        showFilter.includes(item.value)
+    );
+    const extraModel = [
+        {
+            label: "Score",
+            value: "score"
+        },
+        {
+            label: "Total",
+            value: "total"
+        }
+    ];
+    const exportModel = [{ label: "Name", value: "name" }].concat(
+        exportModelDef.concat(extraModel)
+    );
+    const res_users =
+        results &&
+        results.reduce((acc, nxt) => {
+            nxt.user.score = nxt.score;
+            nxt.user.total = nxt.total;
+            nxt.user.name = Main.name(nxt.user);
+            acc.push(nxt.user);
+            return acc;
+        }, []);
     return (
         <div>
             <Drawer
@@ -80,7 +104,12 @@ const Results = ({ test, classroom }, ref) => {
                     subTitle={test.title}
                     extra={[
                         results && results.length !== 0 && (
-                            <Export key="export" />
+                            <Export
+                                key="export"
+                                name={`${test.title}-results`}
+                                model={exportModel}
+                                list={res_users}
+                            />
                         )
                     ]}
                 ></PageHeader>

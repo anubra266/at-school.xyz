@@ -5,18 +5,18 @@ const useAssets = () => {
     const mode = theme;
     switch (mode) {
         case "light":
-            require("antd/dist/antd.css");
+            require("@/assets/antd/antd.css");
             break;
         case "dark":
-            require("antd/dist/antd.dark.css");
+            require("@/assets/antd/antd.dark.css");
             require("@/assets/general/css/ckeditor-dark.css");
             break;
         case "compact":
-            require("antd/dist/antd.compact.css");
+            require("@/assets/antd/antd.compact.css");
             break;
 
         default:
-            require("antd/dist/antd.css");
+            require("@/assets/antd/antd.css");
             break;
     }
     return mode;

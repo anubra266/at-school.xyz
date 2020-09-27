@@ -43,7 +43,7 @@ const DClass = ({ classes }) => {
                 <Drawer
                     title="Join New Classroom"
                     placement="right"
-                    closable={false}
+                    closable={true}
                     onClose={onClose}
                     visible={visible}
                 >

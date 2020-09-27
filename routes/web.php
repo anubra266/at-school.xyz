@@ -136,6 +136,9 @@ Route::group(['middleware' => ['auth']], function () {
 
                         //? Solution
                         Route::post('/question/{question}/solution', 'SolutionController@save')->name('solution.save');
+
+                        //? Import from Excel
+                        Route::post('/question', 'QuestionController@import')->name('question.import');
                     });
                 });
 

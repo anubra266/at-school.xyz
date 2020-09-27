@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Classroom;
 use App\Question;
+use App\Classroom;
+use Illuminate\Http\Request;
 use App\Services\QuestionService;
 use App\Http\Requests\QuestionRequest;
 
@@ -27,5 +28,11 @@ class QuestionController extends Controller
     {
         $this->QuestionService->destroy($question);
         return redirect()->back()->with('success', "Question Deleted successfully");
+    }
+
+    public function import(Classroom $classroom, Request $request)
+    {
+        $message = $this->QuestionService->import($request);
+        return redirect()->back()->with('success',  "$message Question(s) Imported successfully");
     }
 }
