@@ -14,12 +14,21 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
         document.title = `${title} - at-School`;
     }, [title]);
     const sidebarprops = { mode, routes, layout, classroom };
+    const style = {
+        height: 40,
+        width: 40,
+        lineHeight: "40px",
+        borderRadius: 4,
+        backgroundColor: "#1088e9",
+        color: "#fff",
+        textAlign: "center",
+        fontSize: 14
+    };
     return (
         <React.Fragment>
             <Helmet>
                 <meta name="theme-color" content="red" />
             </Helmet>
-            <BackTop />
             <Layout style={{ minHeight: "100vh" }}>
                 <Layout>
                     {noSidebar !== true && <Sidebar {...sidebarprops} />}
@@ -29,6 +38,9 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
                         <SiteFooter />
                     </Layout>
                 </Layout>
+                <BackTop>
+                    <div style={style}>UP</div>
+                </BackTop>
             </Layout>
         </React.Fragment>
     );

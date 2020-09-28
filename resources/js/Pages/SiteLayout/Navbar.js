@@ -14,6 +14,10 @@ import Bell from "@ant-design/icons/BellOutlined";
 import LogoutIcon from "@ant-design/icons/PoweroffOutlined";
 
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
+import SettingOutlined from "@ant-design/icons/SettingOutlined";
+import UserOutlined from "@ant-design/icons/UserOutlined";
+import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
+
 import { usePage } from "@inertiajs/inertia-react";
 import { trans_roles } from "@/Helpers/Translate.js";
 
@@ -73,6 +77,9 @@ function Navbar(props) {
                                     <Notifications />
                                 </p>
                                 <p>
+                                    <ProfileSetting />
+                                </p>
+                                <p>
                                     <Logout />
                                 </p>
                             </Drawer>
@@ -86,7 +93,7 @@ function Navbar(props) {
 
 export default Navbar;
 
-const menu = (
+const NotificationMenu = (
     <Menu>
         <Menu.Item>
             <a>1st menu item</a>
@@ -99,10 +106,24 @@ const menu = (
         </Menu.Item>
     </Menu>
 );
+const SettingsMenu = (
+    <Menu>
+        <Menu.Item>
+            <a>
+                <UserOutlined /> Profile Settings
+            </a>
+        </Menu.Item>
+        <Menu.Item>
+            <a>
+                <HighlightOutlined /> Theme Settings
+            </a>
+        </Menu.Item>
+    </Menu>
+);
 
 const Notifications = () => {
     return (
-        <Dropdown key="more" overlay={menu}>
+        <Dropdown key="more" overlay={NotificationMenu}>
             <Button
                 style={{
                     border: "none",
@@ -116,6 +137,27 @@ const Notifications = () => {
                     }}
                 />
                 Notifications
+            </Button>
+        </Dropdown>
+    );
+};
+
+const ProfileSetting = () => {
+    return (
+        <Dropdown key="settings" overlay={SettingsMenu}>
+            <Button
+                style={{
+                    border: "none",
+                    padding: 0
+                }}
+            >
+                <SettingOutlined
+                    style={{
+                        fontSize: 20,
+                        verticalAlign: "top"
+                    }}
+                />
+                Settings
             </Button>
         </Dropdown>
     );

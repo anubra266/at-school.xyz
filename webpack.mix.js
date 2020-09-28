@@ -21,7 +21,7 @@ mix.react("resources/js/app.js", "public/js")
                 //* for @ imports
                 "@": path.resolve("resources/js")
             }
-        }
+        },
     })
     //* version the bundles
     .version()

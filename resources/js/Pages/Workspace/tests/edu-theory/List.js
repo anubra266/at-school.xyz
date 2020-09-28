@@ -55,7 +55,7 @@ const Educator = ({ tests, classroom, showDrawer }) => {
                                                 setCurrentTest(test);
                                                 resultsRef.current.showResults();
                                             }}
-                                            style={{ color: "purple" }}
+                                            style={{ color: "#7971ea" }}
                                         />
                                     </Tooltip>,
                                     <Tooltip title="Mark Test" key="mark">

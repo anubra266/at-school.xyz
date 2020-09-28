@@ -8,6 +8,7 @@ const useAssets = () => {
             require("@/assets/antd/antd.css");
             break;
         case "dark":
+            // require("antd/dist/antd.dark.less");
             require("@/assets/antd/antd.dark.css");
             require("@/assets/general/css/ckeditor-dark.css");
             break;
