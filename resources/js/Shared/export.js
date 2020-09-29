@@ -56,7 +56,7 @@ const ExportContent = () => {
                 >
                     {({ blob, url, loading, error }) =>
                         loading ? (
-                            "Loading document..."
+                            "Wait..."
                         ) : (
                             <span>
                                 <FilePdfOutlined
@@ -97,36 +97,28 @@ const ExcelExport = ({ children }) => {
 const PdfDocument = props => {
     return (
         <Document>
-            <Page size="letter">
+            <Page size="A4">
                 <View style={styles.title}>
                     <Text>{props.name}</Text>
                 </View>
                 <View style={styles.table}>
-                    <View style={styles.cl}>
-                        <Text>Eddard Stark</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>Has a sword named Ice</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>No direwolf</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>Lord of Winterfell</Text>
-                    </View>
-
-                    <View style={styles.cl}>
-                        <Text>Jon Snow</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>Has a sword named Longclaw</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>Direwolf: Ghost</Text>
-                    </View>
-                    <View style={styles.cl}>
-                        <Text>Knows nothing</Text>
-                    </View>
+                    {props.list.map((item, sn) => {
+                        return (
+                            <View style={styles.tr}>
+                                <Text>{sn + 1}. </Text>
+                                {props.model.map((m, key) => {
+                                    return (
+                                        <View>
+                                            <Text style={styles.text}>
+                                                <Text>{m.label}</Text> -{" "}
+                                                {item[m.value]}
+                                            </Text>
+                                        </View>
+                                    );
+                                })}
+                            </View>
+                        );
+                    })}
                 </View>
             </Page>
         </Document>
@@ -137,22 +129,19 @@ const styles = StyleSheet.create({
     title: {
         textAlign: "center",
         marginTop: "20px",
-        fontWeight: 700
+        fontWeight: 200
     },
     table: {
-        display: "flex",
-        flexDirection: "column",
-        flexWrap: "wrap",
-        margin: "30px 30px",
-        padding: 0
+        margin: "30px 30px"
     },
-    cl: {
-        boxSizing: "border-box",
-        flexGrow: 1,
-        padding: "0.8em 1.2em",
-        overflow: "hidden",
-        listStyle: "none",
-        border: "solid 1px black",
-        width: "33.33%"
+    tr: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "start",
+        flexWrap: "wrap"
+    },
+    text: {
+        padding: "5px 5px",
+        fontSize: 12
     }
 });
