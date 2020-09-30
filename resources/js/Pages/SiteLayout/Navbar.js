@@ -18,8 +18,9 @@ import SettingOutlined from "@ant-design/icons/SettingOutlined";
 import UserOutlined from "@ant-design/icons/UserOutlined";
 import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
 
-import { usePage } from "@inertiajs/inertia-react";
+import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 import { trans_roles } from "@/Helpers/Translate.js";
+import routes from "../Dashboard/routes";
 
 const { Header } = Layout;
 
@@ -109,14 +110,14 @@ const NotificationMenu = (
 const SettingsMenu = (
     <Menu>
         <Menu.Item>
-            <a>
+            <InertiaLink href={route("settings.profile")}>
                 <UserOutlined /> Profile Settings
-            </a>
+            </InertiaLink>
         </Menu.Item>
         <Menu.Item>
-            <a>
-                <HighlightOutlined /> Theme Settings
-            </a>
+            <InertiaLink href={route("settings.general")}>
+                <HighlightOutlined /> General Settings
+            </InertiaLink>
         </Menu.Item>
     </Menu>
 );

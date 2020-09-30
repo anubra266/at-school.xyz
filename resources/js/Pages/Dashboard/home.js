@@ -28,7 +28,7 @@ const Home = () => {
                 </div>
 
                 <Row gutter={[16,16]}>
-                    <Col xs={24} md={12} lg={8}>
+                    <Col xs={24} md={12} lg={8}> 
                         <Card>
                             <Statistic title="Organizations" value={11} />
                         </Card>

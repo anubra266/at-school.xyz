@@ -50,8 +50,8 @@ export default [
                 icon: <UserOutlined />
             },
             {
-                name: "Theme Settings",
-                route: "/settings/theme",
+                name: "General Settings",
+                route: "/settings/general",
                 icon: <HighlightOutlined />
             }
         ]

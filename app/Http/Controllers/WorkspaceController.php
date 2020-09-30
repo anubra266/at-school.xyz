@@ -11,13 +11,12 @@ class WorkspaceController extends Controller
 
     public function home(Classroom $classroom)
     {
-        $classroom = pop($classroom)->load('Environ.Organization')->load('User');
+        $classroom = $classroom->load('Environ.Organization')->load('User');
         return Inertia::render('Workspace/home', ['classroom' => $classroom]);
     }
 
     public function members(Classroom $classroom)
     {
-        $classroom = pop($classroom);
         $members = $classroom->students()->get();
         return Inertia::render('Workspace/members/', ['classroom' => $classroom, 'members' => $members]);
     }

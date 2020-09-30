@@ -13,7 +13,7 @@ class Classroom extends Model
 
     protected $guarded = [];
 
-    protected $appends = ['url', 'hash'];
+    protected $appends = ['url', 'hash', 'role'];
 
     protected function getUrlAttribute()
     {
@@ -22,6 +22,10 @@ class Classroom extends Model
     protected function getHashAttribute()
     {
         return $this->attributes['hash'] = $this->hashid();
+    }
+    protected function getRoleAttribute()
+    {
+        return $this->attributes['role'] = checkClass($this, authUser());
     }
 
     public function User()

@@ -26,7 +26,7 @@ const Objective = ({ classroom, tests }) => {
         >
             <Content style={{ margin: "0 16px" }}>
                 <div className="site-page-header-ghost-wrapper">
-                    <PageHeader
+                    <PageHeader 
                         ghost={false}
                         onBack={
                             window.history.length > 1 &&

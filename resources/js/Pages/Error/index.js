@@ -1,7 +1,7 @@
 import React from "react";
 import Result from "antd/lib/result";
 import Button from "antd/lib/button";
-import { Inertia } from "@inertiajs/inertia";
+import { InertiaLink } from "@inertiajs/inertia-react";
 
 export default function ErrorPage({ status }) {
     const title = {
@@ -25,11 +25,8 @@ export default function ErrorPage({ status }) {
                 title={title}
                 subTitle={description}
                 extra={
-                    <Button
-                        type="primary"
-                        onClick={() => window.history.back()}
-                    >
-                        Back
+                    <Button type="primary">
+                        <InertiaLink href={route("home")}>Go Home</InertiaLink>
                     </Button>
                 }
             />

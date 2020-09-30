@@ -13,7 +13,7 @@ class ObjectiveTestService
 
     public function index($classroom)
     {
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         $tests = $classroom->objectiveTests()->latest()->get();
         $tests->load('results.User');
         return ['classroom' => $classroom, 'tests' => $tests];
@@ -27,7 +27,7 @@ class ObjectiveTestService
     public function edit($classroom, $test)
     {
         $test->load(['questions.options', 'questions.solution']);
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }
 
@@ -67,16 +67,16 @@ class ObjectiveTestService
 
     public function list($classroom)
     {
-        $classroom = pop($classroom)->load('User');
-        $tests = filter_test($classroom->objectiveTests()->whereStatus('open'));
-        return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'objective'];
+        $classroom = $classroom->load('User');
+        $tests = filter_test($classroom->objectiveTests()->whereStatus("open"));
+        return ["classroom" => $classroom, "tests" => $tests, "type" => "objective"];
     }
 
 
 
     public function take($classroom, $test)
     {
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         $test->load(['questions.options' => function ($q) {
             $q->exclude('is_correct');
         }]);
@@ -84,7 +84,7 @@ class ObjectiveTestService
     }
     public function review($classroom, $test)
     {
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         $test->load(['questions.options.answers' => function ($q) {
             $q->whereUser_id(authUser()->id);
         }]);

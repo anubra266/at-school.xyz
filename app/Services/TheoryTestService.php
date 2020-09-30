@@ -14,7 +14,7 @@ class TheoryTestService
 
     public function index($classroom)
     {
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         $tests = $classroom->theoryTests()->latest()->get();
         $tests->load('results.User');
         return ['classroom' => $classroom, 'tests' => $tests];
@@ -28,7 +28,7 @@ class TheoryTestService
     public function edit($classroom, $test)
     {
         $test->load('questions');
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }
     public function mark($classroom, $test)
@@ -36,7 +36,7 @@ class TheoryTestService
         $test->load(['questions', 'answers.User.theoryResults' => function ($q) use ($test) {
             $q->where('theory_test_id', $test->id);
         }, 'results']);
-        $classroom = pop($classroom)->load('User');
+        $classroom = $classroom->load('User');
         return ['classroom' => $classroom, 'test' => $test];
     }
 
@@ -84,19 +84,19 @@ class TheoryTestService
 
     public function list($classroom)
     {
-        $classroom = pop($classroom)->load('User');
-        $tests = filter_test($classroom->theoryTests()->whereStatus('open'));
-        return ['classroom' => $classroom, 'tests' => $tests, 'type' => 'theory'];
+        $classroom = $classroom->load('User');
+        $tests = filter_test($classroom->theoryTests()->whereStatus("open"));
+        return ["classroom" => $classroom, "tests" => $tests, "type" => "theory"];
     }
 
 
 
     public function take($classroom, $test)
     {
-        $classroom = pop($classroom)->load('User');
-        $test->load(['questions', 'answers' => function ($query) {
+        $classroom = $classroom->load("User");
+        $test->load(["questions", "answers" => function ($query) {
             return $query->whereUser_id(authUser()->id);
         }]);
-        return ['classroom' => $classroom, 'test' => $test];
+        return ["classroom" => $classroom, "test" => $test];
     }
 }

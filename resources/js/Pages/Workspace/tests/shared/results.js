@@ -31,7 +31,7 @@ const Results = ({ test, classroom }, ref) => {
     const onFilterAll = e => {
         setShowFilter(e.target.checked ? filtersList : []);
         setIndeterminate(false);
-        setCheckAll(e.target.checked);
+        setCheckAll(e.target.checked); 
     };
 
     const [showFilter, setShowFilter] = useState(initial_filter);

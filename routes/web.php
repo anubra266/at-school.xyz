@@ -48,6 +48,12 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('home', 'PrivateController@home')->name('home');
 
+        //? Settings routes
+        Route::group(['prefix' => 'settings'], function () {
+            Route::get('/profile', 'OrganizationController@index')->name('settings.profile');
+            Route::get('/general', 'OrganizationController@index')->name('settings.general');
+        });
+
         //? Organization routes
         Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
 
@@ -153,6 +159,11 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/theory/answer/{test}', 'TestAnswerController@saveTheory')->name('theory.answer');
                 Route::post('/objective/answer/{test}', 'TestAnswerController@saveObjective')->name('objective.answer');
                 Route::get('/objereview/{test}', 'ObjectiveTestController@review')->name('objective.review');
+
+                Route::group(['prefix' => 'results'], function () {
+                    Route::get('/edu-theory', 'ResultController@eduTheory')->name('results.edu.theory');
+                    Route::get('/edu-objective', 'ResultController@eduObjective')->name('results.edu.objective');
+                });
             });
         });
     });
