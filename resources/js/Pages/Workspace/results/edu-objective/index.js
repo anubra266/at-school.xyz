@@ -10,7 +10,7 @@ const Index = props => {
     const { classroom, tests } = props;
     return (
         <Workspacelayout
-            title={`Theory Results - ${classroom.name}`}
+            title={`Objective Results - ${classroom.name}`}
             classroom={classroom}
         >
             <Content style={{ margin: "0 16px" }}>
@@ -21,7 +21,7 @@ const Index = props => {
                             window.history.length > 1 &&
                             (() => window.history.back())
                         }
-                        title="Theory Results"
+                        title="Objective Results"
                         subTitle={classroom.name}
                     ></PageHeader>
                 </div>
