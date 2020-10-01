@@ -11,7 +11,7 @@ import Results from "@/Pages/Workspace/tests/shared/results";
 
 const list = ({ classroom, tests }) => {
     const [currentTest, setCurrentTest] = useState({});
-    const resultsRef = useRef();
+    const resultsRef = useRef(null);
     return (
         <div>
             <List
@@ -38,7 +38,8 @@ const list = ({ classroom, tests }) => {
                                             icon={FileTextOutlined}
                                             text={usePlural(
                                                 item.results,
-                                                "Result"
+                                                "Result",
+                                                "s"
                                             )}
                                             key="result"
                                         />
