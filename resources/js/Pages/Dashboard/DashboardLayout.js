@@ -1,6 +1,6 @@
 import React from "react";
 import SiteLayout from "@/Pages/SiteLayout";
-import routes from "./routes";
+import routes from "./dashboardRoutes";
 
 const DashboardLayout = ({ title, children }) => {
     return (

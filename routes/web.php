@@ -50,8 +50,8 @@ Route::group(['middleware' => ['auth']], function () {
 
         //? Settings routes
         Route::group(['prefix' => 'settings'], function () {
-            Route::get('/profile', 'OrganizationController@index')->name('settings.profile');
-            Route::get('/general', 'OrganizationController@index')->name('settings.general');
+            Route::get('/profile', 'SettingController@profile')->name('settings.profile');
+            Route::get('/general', 'SettingController@general')->name('settings.general');
         });
 
         //? Organization routes
@@ -60,7 +60,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/', 'OrganizationController@index')->name('organization.index');
             Route::post('/', 'OrganizationController@store')->name('organization.create');
 
-            Route::group(['middleware' => ['can:update,organization']], function () {
+            Route::group(['middleware' => ['can:update,organization']], function () { 
                 Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
                 Route::patch('/{organization}', 'OrganizationController@update')->name('organization.edit');
             });

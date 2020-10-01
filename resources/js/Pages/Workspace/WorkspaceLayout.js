@@ -1,6 +1,6 @@
 import React from "react";
 import SiteLayout from "@/Pages/SiteLayout";
-import Routes from "./Routes";
+import Routes from "./WorkspaceRoutes";
 const WorkspaceLayout = ({ title, classroom, children }) => {
     return (
         <SiteLayout
