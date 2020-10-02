@@ -48,11 +48,8 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('home', 'PrivateController@home')->name('home');
 
-        //? Settings routes
-        Route::group(['prefix' => 'settings'], function () {
-            Route::get('/profile', 'SettingController@profile')->name('settings.profile');
-            Route::get('/general', 'SettingController@general')->name('settings.general');
-        });
+        //? Settings route
+        Route::get('/settings', 'SettingController@general')->name('settings.general');
 
         //? Organization routes
         Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
@@ -60,7 +57,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/', 'OrganizationController@index')->name('organization.index');
             Route::post('/', 'OrganizationController@store')->name('organization.create');
 
-            Route::group(['middleware' => ['can:update,organization']], function () { 
+            Route::group(['middleware' => ['can:update,organization']], function () {
                 Route::patch('/{organization}/newcode', 'OrganizationController@ChangeCode')->name('organization.change_code');
                 Route::patch('/{organization}', 'OrganizationController@update')->name('organization.edit');
             });

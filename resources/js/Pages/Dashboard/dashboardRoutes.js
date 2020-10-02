@@ -42,18 +42,6 @@ export default [
     {
         name: "Settings",
         route: "/settings",
-        icon: <SettingOutlined />,
-        items: [
-            {
-                name: "Profile Settings",
-                route: "/settings/profile",
-                icon: <UserOutlined />
-            },
-            {
-                name: "General Settings",
-                route: "/settings/general",
-                icon: <HighlightOutlined />
-            }
-        ]
+        icon: <SettingOutlined />
     }
 ];
