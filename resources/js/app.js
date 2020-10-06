@@ -1,10 +1,13 @@
 import { InertiaApp } from "@inertiajs/inertia-react";
+import { InertiaProgress } from "@inertiajs/progress";
 import React from "react";
 import { render } from "react-dom";
 import CatchError from "@/Helpers/CatchError";
 import "@/assets/general/css/custom.css";
+import progressBar from "./progress.json";
 const app = document.getElementById("app");
 
+InertiaProgress.init(progressBar);
 
 render(
     <CatchError>

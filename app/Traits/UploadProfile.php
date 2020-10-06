@@ -9,7 +9,7 @@ trait UploadProfile
 {
     /**
      * Uploads user Profile Picture and returns the Image Name
-     * @param {string} image_64 base64 string for image file
+     * @param {string} image_64 base64 string for image file 
      */
     public function storeProfile($image_64)
     {

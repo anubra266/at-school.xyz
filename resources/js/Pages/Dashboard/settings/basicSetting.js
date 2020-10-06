@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import PageHeader from "antd/lib/page-header";
 import Row from "antd/lib/row";
@@ -9,6 +9,10 @@ import InputNumber from "antd/lib/input-number";
 import Select from "antd/lib/select";
 import DatePicker from "antd/lib/date-picker";
 import Button from "antd/lib/button";
+import Upload from "antd/lib/upload";
+import ImgCrop from "antd-img-crop";
+import message from "antd/lib/message";
+
 import moment from "moment";
 import Main from "@/Helpers/Main";
 import { Inertia } from "@inertiajs/inertia";
@@ -29,10 +33,69 @@ const basic = () => {
     };
     const [loading, setLoading] = useState(false);
     const saveInfo = data => {
+        setLoading(true);
         data.date_of_birth = Main.dbdate(data.date_of_birth._d);
         Inertia.patch(route("settings.basic"), data).then(() =>
-            console.log("wow")
+            setLoading(false)
         );
+    };
+    const [fileList, setFileList] = useState([]);
+    useEffect(() => {
+        setFileList([
+            {
+                uid: "-1",
+                name: user.profile_image,
+                status: "done",
+                url: `/profile/image/${user.profile_image}`
+            }
+        ]);
+    }, [user.profile_image]);
+    const upload = src => {
+        setLoading(true);
+        Inertia.patch(route("settings.dp"), { profile_image: src }).then(() =>
+            setLoading(false)
+        );
+    };
+    //TODO Refresh profile Image after updating it, with useEffect(setFileList)
+    const validateImage = file => {
+        const isJpgOrPng =
+            file.type === "image/jpeg" || file.type === "image/png";
+        if (!isJpgOrPng) {
+            message.error("You can only upload JPG/PNG file!");
+        }
+        const isLt2M = file.size / 1024 / 1024 < 5;
+        if (!isLt2M) {
+            message.error("Upload smaller than 5MB!");
+        }
+        return isJpgOrPng && isLt2M;
+    };
+    const onChange = async ({ file }) => {
+        if (validateImage(file)) {
+            let src = file.url;
+            if (!src) {
+                src = await new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file.originFileObj);
+                    reader.onload = () => resolve(reader.result);
+                });
+            }
+            upload(src);
+        }
+    };
+
+    const onPreview = async file => {
+        let src = file.url;
+        if (!src) {
+            src = await new Promise(resolve => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file.originFileObj);
+                reader.onload = () => resolve(readeImager.result);
+            });
+        }
+        const image = new Image();
+        image.src = src;
+        const imgWindow = window.open(src);
+        imgWindow.document.write(image.outerHTML);
     };
     return (
         <React.Fragment>
@@ -176,7 +239,19 @@ const basic = () => {
                         </Form.Item>
                     </Form>
                 </Col>
-                <Col>CD</Col>
+                <Col>
+                    <ImgCrop rotate shape="round" minZoom={-2}>
+                        <Upload
+                            action="#"
+                            listType="picture-card"
+                            fileList={fileList}
+                            onChange={onChange}
+                            onPreview={onPreview}
+                        >
+                            {fileList.length < 2 && "+ Update"}
+                        </Upload>
+                    </ImgCrop>
+                </Col>
             </Row>
         </React.Fragment>
     );

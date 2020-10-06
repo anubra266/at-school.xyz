@@ -34,7 +34,7 @@ const EditHeader = ({
     };
 
     const [fileList, updateFileList] = useState([]);
-    const uploadProps = {
+    const uploadProps = { 
         action: "#",
         fileList,
         beforeUpload: file => {
