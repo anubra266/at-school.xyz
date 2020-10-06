@@ -6,15 +6,8 @@ import Menu from "antd/lib/menu";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
-import Main from "@/Helpers/Main";
 
-import {
-    AppstoreOutlined,
-    MailOutlined,
-    SettingOutlined
-} from "@ant-design/icons";
 const { Content } = Layout;
-const { SubMenu } = Menu;
 
 const Template = props => {
     const [page, setPage] = useState("basic");
@@ -59,8 +52,10 @@ const Template = props => {
                                 </Menu.Item>
                             </Menu>
                         </Col>
-                        <Col>
-                            <SettingsPage page={page} {...props} />
+                        <Col flex="auto">
+                            <div scroll-region="true">
+                                <SettingsPage page={page} {...props} />
+                            </div>
                         </Col>
                     </Row>
                 </Card>
@@ -72,6 +67,6 @@ export default Template;
 
 const SettingsPage = props => {
     const { page } = props;
-    const Page = React.createFactory(require(`./${page}Setting`).default);
-    return <Page />;
+    var Component = require(`./${page}Setting`).default;
+    return <Component {...props} />;
 };

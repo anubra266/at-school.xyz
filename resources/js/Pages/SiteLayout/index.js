@@ -34,7 +34,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
                     {noSidebar !== true && <Sidebar {...sidebarprops} />}
                     <Layout className="site-layout">
                         <Navbar classroom={classroom} />
-                        {children}
+                        {children} 
                         <SiteFooter />
                     </Layout>
                 </Layout>

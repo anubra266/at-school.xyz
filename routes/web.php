@@ -50,6 +50,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         //? Settings route
         Route::get('/settings', 'SettingController@general')->name('settings.general');
+        Route::patch('/settings/basic', 'SettingController@basic')->name('settings.basic');
 
         //? Organization routes
         Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {

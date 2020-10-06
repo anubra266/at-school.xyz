@@ -1,6 +1,5 @@
 const mix = require("laravel-mix");
 const path = require("path");
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -21,7 +20,7 @@ mix.react("resources/js/app.js", "public/js")
                 //* for @ imports
                 "@": path.resolve("resources/js")
             }
-        },
+        }
     })
     //* version the bundles
     .version()

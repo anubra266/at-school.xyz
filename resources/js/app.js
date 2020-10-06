@@ -5,6 +5,7 @@ import CatchError from "@/Helpers/CatchError";
 import "@/assets/general/css/custom.css";
 const app = document.getElementById("app");
 
+
 render(
     <CatchError>
         <React.Fragment>
