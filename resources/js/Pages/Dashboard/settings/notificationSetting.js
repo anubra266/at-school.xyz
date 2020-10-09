@@ -6,17 +6,17 @@ import Col from "antd/lib/col";
 import message from "antd/lib/message";
 import { Inertia } from "@inertiajs/inertia";
 
-const Theme = () => {
+const Notification = () => {
     const { auth, errors } = usePage();
     const { user } = auth;
     return (
         <React.Fragment>
             <PageHeader
-                title="Theme Settings"
+                title="Notification Settings"
                 subTitle="Customize the Appearance"
             ></PageHeader>
         </React.Fragment>
     );
 };
 
-export default Theme;
+export default Notification;

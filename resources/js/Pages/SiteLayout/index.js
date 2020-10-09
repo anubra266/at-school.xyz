@@ -19,7 +19,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
         width: 40,
         lineHeight: "40px",
         borderRadius: 4,
-        backgroundColor: "#1088e9",
+        backgroundColor: "#7971ea",
         color: "#fff",
         textAlign: "center",
         fontSize: 14
@@ -34,7 +34,7 @@ function index({ title, noSidebar, children, routes, layout, classroom }) {
                     {noSidebar !== true && <Sidebar {...sidebarprops} />}
                     <Layout className="site-layout">
                         <Navbar classroom={classroom} />
-                        {children} 
+                        {children}
                         <SiteFooter />
                     </Layout>
                 </Layout>

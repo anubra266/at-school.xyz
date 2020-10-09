@@ -13,7 +13,6 @@ import Bell from "@ant-design/icons/BellOutlined";
 import LogoutIcon from "@ant-design/icons/PoweroffOutlined";
 
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
-import UserOutlined from "@ant-design/icons/UserOutlined";
 
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 import Main from "@/Helpers/Main.js";
@@ -38,11 +37,11 @@ function Navbar(props) {
                     style={{ height: "100%" }}
                     align="middle"
                 >
-                    <Col>
+                    {/*<Col>
                         <Badge count={5} overflowCount={10}>
                             <Notifications />
                         </Badge>
-                    </Col>
+                    </Col>*/}
                     <Col>
                         <UserMenu user={auth.user} />
                     </Col>
@@ -84,11 +83,6 @@ const Notifications = () => {
 
 const UserDropDown = (
     <Menu>
-        <Menu.Item>
-            <InertiaLink href={route("logout")}>
-                <UserOutlined /> Profile
-            </InertiaLink>
-        </Menu.Item>
         <Menu.Item>
             <InertiaLink href={route("settings.general")}>
                 <SettingOutlined /> Settings

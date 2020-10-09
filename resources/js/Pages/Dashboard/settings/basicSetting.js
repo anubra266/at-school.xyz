@@ -12,6 +12,7 @@ import Button from "antd/lib/button";
 import Upload from "antd/lib/upload";
 import ImgCrop from "antd-img-crop";
 import message from "antd/lib/message";
+import Modal from "antd/lib/modal";
 
 import moment from "moment";
 import Main from "@/Helpers/Main";
@@ -56,8 +57,7 @@ const basic = () => {
             setLoading(false)
         );
     };
-    //TODO Refresh profile Image after updating it, with useEffect(setFileList)
-    const validateImage = file => {
+    const beforeUpload = file => {
         const isJpgOrPng =
             file.type === "image/jpeg" || file.type === "image/png";
         if (!isJpgOrPng) {
@@ -65,22 +65,21 @@ const basic = () => {
         }
         const isLt2M = file.size / 1024 / 1024 < 5;
         if (!isLt2M) {
-            message.error("Upload smaller than 5MB!");
+            message.error("Upload image smaller than 5MB!");
         }
         return isJpgOrPng && isLt2M;
     };
     const onChange = async ({ file }) => {
-        if (validateImage(file)) {
-            let src = file.url;
-            if (!src) {
-                src = await new Promise(resolve => {
-                    const reader = new FileReader();
-                    reader.readAsDataURL(file.originFileObj);
-                    reader.onload = () => resolve(reader.result);
-                });
-            }
-            upload(src);
+        let src = file.url;
+        if (!src) {
+            src = await new Promise(resolve => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file.originFileObj);
+                reader.onload = () => resolve(reader.result);
+            });
         }
+        upload(src);
+        setFileList([{ ...file, status: "done" }]);
     };
 
     const onPreview = async file => {
@@ -92,10 +91,16 @@ const basic = () => {
                 reader.onload = () => resolve(readeImager.result);
             });
         }
-        const image = new Image();
-        image.src = src;
-        const imgWindow = window.open(src);
-        imgWindow.document.write(image.outerHTML);
+        Modal.info({
+            title: `Profile Image`,
+            content: <img style={{ width: "100%", margin: 16 }} src={src} />,
+            icon: null,
+            okText: "Close"
+        });
+    };
+    const onRemove = file => {
+        message.info("Update Instead!");
+        return false;
     };
     return (
         <React.Fragment>
@@ -242,11 +247,13 @@ const basic = () => {
                 <Col>
                     <ImgCrop rotate shape="round" minZoom={-2}>
                         <Upload
-                            action="#"
+                            action="/fakeupload"
                             listType="picture-card"
                             fileList={fileList}
                             onChange={onChange}
                             onPreview={onPreview}
+                            onRemove={onRemove}
+                            beforeUpload={beforeUpload}
                         >
                             {fileList.length < 2 && "+ Update"}
                         </Upload>

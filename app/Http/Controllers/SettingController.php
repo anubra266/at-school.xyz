@@ -27,4 +27,9 @@ class SettingController extends Controller
         authUser()->update(['profile_image' => $this->storeProfile($request->profile_image)]);
         return redirect()->back()->with('success', 'Profile picture updated Successfully');
     }
+
+    public function fakeUpload()
+    {
+        
+    }
 }
