@@ -5,7 +5,7 @@ Hey **{{$name}}**, {{-- use double space for line break --}}
 We're very excited to have you at at-School!
 
 Click below to get started right now
-@component('mail::button', ['url' => $link])
+@component('mail::button', ['url' => $link ?? ''])
 Get Started
 @endcomponent
 Happy Learning,

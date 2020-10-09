@@ -37,7 +37,7 @@ export default function AcademicInfo({ data, handleChange, errors }) {
                 )}
             </div>
             <div className="form-group">
-                <label htmlFor="school_town">Select your Classification</label>
+                <label htmlFor="initial_role">Select your Classification</label>
                 <select
                     name="initial_role"
                     onChange={handleChange}

@@ -24,7 +24,7 @@ const register = () => {
 
         school: "",
         school_town: "",
-        initial_role: "practicist",
+        initial_role: "student",
 
         password: "",
         password_confirmation: "",
@@ -65,7 +65,7 @@ const register = () => {
         errPages.length > 0 && setPage(errPages[0]);
     }, [errors]);
 
-    
+
     const lastPage = 4;
     var formprops = { data, handleChange, errors };
     var footerprops = { page, setPage, lastPage, checking };

@@ -91,7 +91,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'profile_image' => $this->storeProfile($data['profile_image'])
         ]);
-        Mail::send(new Welcome());
+        Mail::to($user->email)->send(new Welcome($user));
         return $user;
     }
 }

@@ -16,9 +16,9 @@ class Welcome extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -29,12 +29,12 @@ class Welcome extends Mailable
     public function build()
     {
         return $this
-            ->to(authUser()->email)
             ->subject('Welcome to at-School')
             ->markdown('mails.welcome.mail')
             ->with([
-                'name' => authUser()->first_name,
-                'link' => 'https://at-school.dev'
+                'name' => 'Abraham',
+                // 'name' => $this->user->first_name,
+                'link' => 'https://at-school.dev/home'
             ]);
     }
 }
