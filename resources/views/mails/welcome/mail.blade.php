@@ -1,13 +1,11 @@
 @component('mail::message')
-<h1>Welcome to at-School</h1>
+<h1>Welcome to {env('APP_NAME')}</h1>
 
 Hey **{{$name}}**, {{-- use double space for line break --}}
-We're very excited to have you at at-School!
+Your {env('APP_NAME')} registration was successful.
 
-Click below to get started right now
-@component('mail::button', ['url' => $link ?? ''])
-Get Started
-@endcomponent
+We're very excited to have you at {env('APP_NAME')}!
+
 Happy Learning,
 
 Abraham and the at-School team.

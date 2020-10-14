@@ -27,8 +27,8 @@ function Sidebar({ mode, routes, layout, classroom }) {
                     item.route === "/home"
                         ? "/home"
                         : `menu-${item.name}` == getRoute()[0][0]
-                        ? "#"
-                        : `${layout}${item.route}`
+                            ? "#"
+                            : `${layout}${item.route}`
                 }
             >
                 {item.name}
@@ -82,15 +82,15 @@ function Sidebar({ mode, routes, layout, classroom }) {
                                         })}
                                 </SubMenu>
                             ) : (
-                                <Menu.Item
-                                    key={`menu-${menu.name}`}
-                                    icon={menu.icon}
-                                >
-                                    {genroute(menu)}
-                                </Menu.Item>
-                            ))
+                                    <Menu.Item
+                                        key={`menu-${menu.name}`}
+                                        icon={menu.icon}
+                                    >
+                                        {genroute(menu)}
+                                    </Menu.Item>
+                                ))
                         );
-                    })} 
+                    })}
 
                     <Menu.Item
                         key="logout"
