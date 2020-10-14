@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import Layout from "@/Pages/Auth/Layout";
 import { InertiaLink } from "@inertiajs/inertia-react";
@@ -6,15 +6,21 @@ import { Inertia } from "@inertiajs/inertia";
 
 const resetpassword = () => {
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState("");
 
     const verify_email = e => {
         e.preventDefault();
-        Inertia.post(route("password.email"), { email });
+        setLoading(true)
+        Inertia.post(route("password.email"), { email }).then(() => { setLoading(false); setEmail("") });
     };
     const handleChange = e => {
         setEmail(e.target.value);
     };
-    const { errors } = usePage();
+    const { errors, flash } = usePage();
+    useEffect(() => {
+        flash.info && setStatus(flash.info)
+    })
     return (
         <Layout
             title="Reset Password at-school"
@@ -22,8 +28,8 @@ const resetpassword = () => {
             subheader=""
         >
             <div className="account-card-content">
-                <div className="alert alert-success m-t-30" role="alert">
-                    Enter your Email and instructions will be sent to you!
+                <div className={`alert alert-${flash.info ? "success" : "info"} m-t-30`} role="alert">
+                    {status || "Enter your Email and instructions will be sent to you!"}
                 </div>
 
                 <form
@@ -51,6 +57,7 @@ const resetpassword = () => {
                             <button
                                 className="btn btn-primary w-md waves-effect waves-light"
                                 type="submit"
+                                disabled={loading}
                             >
                                 Reset
                             </button>

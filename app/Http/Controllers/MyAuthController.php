@@ -21,4 +21,9 @@ class MyAuthController extends Controller
     {
         return Inertia::render('Auth/ForgotPassword/');
     }
+
+    public function showResetForm(Request $request, $token = null)
+    {
+        return Inertia::render('Auth/ResetPassword/', ['token' => $token, 'email' => $request->email]);
+    }
 }

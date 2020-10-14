@@ -50,6 +50,9 @@ const Template = props => {
                                 <Menu.Item key="notification">
                                     Notification Settings
                                 </Menu.Item>
+                                <Menu.Item key="advanced">
+                                    Advanced Settings
+                                </Menu.Item>
                             </Menu>
                         </Col>
                         <Col flex="auto">
