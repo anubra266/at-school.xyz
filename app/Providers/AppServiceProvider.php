@@ -68,8 +68,10 @@ class AppServiceProvider extends ServiceProvider
                     ] : null,
                 ];
             },
-            // * User theme
-            'theme' => 'light',
+            // * User settings
+            'settings' => function () {
+                return authUser()->settings()->first();
+            },
             //* Make errors available to react
             'errors' => function () {
                 return Session::get('errors')
@@ -82,7 +84,7 @@ class AppServiceProvider extends ServiceProvider
                     'success' => Session::get('success'),
                     'error' => Session::get('error'),
                     'info' => Session::get('info'),
-                    'warning' => Session::get('warning'), 
+                    'warning' => Session::get('warning'),
                 ];
             },
             'response' => function () {
