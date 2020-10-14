@@ -32,8 +32,7 @@ class Welcome extends Mailable
             ->subject('Welcome to at-School')
             ->markdown('mails.welcome.mail')
             ->with([
-                'name' => 'Abraham',
-                // 'name' => $this->user->first_name,
+                'name' => $this->user->first_name,
                 'link' => 'https://at-school.dev/home'
             ]);
     }
