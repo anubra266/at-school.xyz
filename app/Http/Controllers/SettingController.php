@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BasicSettingRequest;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Traits\UploadProfile;
-use Inertia\Inertia;
+use App\Http\Requests\BasicSettingRequest;
+use App\Http\Requests\ThemeSettingRequest;
 
 class SettingController extends Controller
 {
@@ -31,5 +32,10 @@ class SettingController extends Controller
     public function fakeUpload()
     {
         //? fake Upload Route
+    }
+    public function theme(ThemeSettingRequest $request)
+    {
+        authUser()->settings()->updateOrCreate(['user_id' => authUser()->id], ['preferences->theme' => $request->validated()['theme']]);
+        return redirect()->back()->with('success', 'Theme updated successfully');
     }
 }

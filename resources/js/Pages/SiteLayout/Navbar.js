@@ -20,12 +20,12 @@ import Main from "@/Helpers/Main.js";
 const { Header } = Layout;
 
 function Navbar(props) {
-    const { auth } = usePage();
-
+    const { auth, settings } = usePage();
+    const theme = (settings && settings.preferences && JSON.parse(settings.preferences).theme);
     return (
         <React.Fragment>
             <Header
-                className="site-layout-background"
+                className={theme !== 'dark' && `site-layout-background`}
                 style={{
                     padding: 0,
                     paddingRight: 20

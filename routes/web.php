@@ -47,6 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::patch('/settings/basic', 'SettingController@basic')->name('settings.basic');
         Route::patch('/settings/profile-image', 'SettingController@profile')->name('settings.dp');
         Route::patch('/fakeupload', 'SettingController@fakeUpload')->name('upload.fake');
+        Route::patch('/settings/theme', 'SettingController@theme')->name('settings.theme');
 
         //? Organization routes
         Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
