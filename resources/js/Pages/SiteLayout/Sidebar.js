@@ -18,7 +18,7 @@ function Sidebar({ mode, routes, layout, classroom }) {
     const [collapsed, setCollapsed] = useState(false);
     const onCollapse = collapsed => {
         setCollapsed(collapsed);
-    }; 
+    };
     const { auth } = usePage();
     const genroute = item => {
         return (
@@ -90,7 +90,7 @@ function Sidebar({ mode, routes, layout, classroom }) {
                                 </Menu.Item>
                             ))
                         );
-                    })}
+                    })} 
 
                     <Menu.Item
                         key="logout"
