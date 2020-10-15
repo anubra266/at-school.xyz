@@ -8,12 +8,16 @@ const login = () => {
     const [data, setData] = useState({
         email: "",
         password: "",
-        remember: false
     });
     const handleChange = e => {
         Auth.handleChange(e, setData);
     };
-
+    const handleRemember = e => {
+        setData((vals) => ({
+            ...vals,
+            remember: e.target.checked ? "on" : null
+        }))
+    }
     const handleSubmit = e => {
         e.preventDefault();
         Auth.handleSubmit("login", setChecking, data);
@@ -73,9 +77,7 @@ const login = () => {
                                     type="checkbox"
                                     className="custom-control-input"
                                     id="customControlInline"
-                                    value={true}
-                                    name="remember"
-                                    onChange={handleChange}
+                                    onChange={handleRemember}
                                 />
                                 <label
                                     className="custom-control-label"

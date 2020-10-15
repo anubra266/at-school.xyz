@@ -22,7 +22,7 @@ const resetpassword = (props) => {
         setData((values) => ({
             ...values,
             [key]: value
-        }));
+        })); 
     };
     const { errors } = usePage();
     return (

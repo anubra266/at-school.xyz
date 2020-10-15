@@ -70,7 +70,7 @@ class AppServiceProvider extends ServiceProvider
             },
             // * User settings
             'settings' => function () {
-                return authUser()->settings()->first();
+                return authUser() ? authUser()->settings()->first() : null;
             },
             //* Make errors available to react
             'errors' => function () {
