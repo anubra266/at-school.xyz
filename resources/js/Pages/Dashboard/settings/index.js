@@ -9,7 +9,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 
 const { Content } = Layout;
 
-const Template = props => {
+const Settings = props => { 
     const [page, setPage] = useState("basic");
 
     const handleMenu = ({ item, key }) => {
@@ -66,7 +66,7 @@ const Template = props => {
         </Dashboardlayout>
     );
 };
-export default Template;
+export default Settings;
 
 const SettingsPage = props => {
     const { page } = props;

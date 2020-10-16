@@ -19,6 +19,7 @@
         "laravel/ui": "^2.1",
         "mtvs/eloquent-hashids": "^2.0",
         "spatie/laravel-permission": "^3.13",
+        "stevebauman/location": "^5.2",
         "tightenco/ziggy": "^0.9.4",
         "vinkla/hashids": "^8.1"
     },

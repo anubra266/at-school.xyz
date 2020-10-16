@@ -166,11 +166,12 @@ return [
          * Package Service Providers...
          */
         getsolaris\LaravelCreateService\CreateServiceProvider::class,
+        Stevebauman\Location\LocationServiceProvider::class,
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
-        App\Providers\AtSchoolProvider::class, 
+        App\Providers\AtSchoolProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
@@ -211,6 +212,7 @@ return [
         'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
         'Http' => Illuminate\Support\Facades\Http::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
+        'Location' => Stevebauman\Location\LocationServiceProvider::class, 
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
