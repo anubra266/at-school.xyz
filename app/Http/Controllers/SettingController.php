@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
-use App\Mail\PasswordChange;
 use Illuminate\Http\Request;
 use App\Traits\UploadProfile;
 use Illuminate\Support\Facades\Mail;
@@ -11,6 +10,7 @@ use App\Http\Requests\PasswordRequest;
 use App\Http\Requests\BasicSettingRequest;
 use App\Http\Requests\ThemeSettingRequest;
 use Stevebauman\Location\Facades\Location;
+use App\Notifications\PasswordChange;
 
 class SettingController extends Controller
 {
@@ -45,9 +45,10 @@ class SettingController extends Controller
 
     public function password(PasswordRequest $request)
     {
-        $request = $request->validated();
+        $request = $request->validated(); 
         authUser()->update(['password' => bcrypt($request['new_password'])]);
-        Mail::to(authUser()->email)->send(new PasswordChange(authUser()));
+        authUser()->notify(new PasswordChange());
+        // Mail::to(authUser()->email)->send(new PasswordChange(authUser()));
         return redirect()->back()->with('success', 'Password updated successfully');
     }
 }

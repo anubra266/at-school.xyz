@@ -3,7 +3,7 @@
 <img height="50" src={{"$url/profile/image/$image"}}></img>
 Hi **{{$name}}**,
 
-Your password was changed {{Carbon\Carbon::parse(date('Y-m-d H:i:s'))->diffForHumans()}} at {{$location}}.
+Your password was changed {{date('D, d M Y H:i:s')}} at {{$location}}.
 
 If **{{"you did this"}}**, you can safely disregard this email.
 
