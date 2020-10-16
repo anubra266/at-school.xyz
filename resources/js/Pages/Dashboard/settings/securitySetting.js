@@ -23,7 +23,6 @@ const Security = () => {
             resetForm.current.resetFields()
         })
     }
-    //TODO send mail after password reset
     return (
         <React.Fragment>
             <PageHeader

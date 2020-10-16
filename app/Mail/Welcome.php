@@ -20,7 +20,20 @@ class Welcome extends Mailable
     {
         $this->user = $user;
     }
- 
+
+    public function whatNext()
+    {
+        $role = $this->user->initial_role;
+        $url = route('account.setup', ['role' => $role]);
+        if ($role === 'student') {
+            $action = "Join Classroom or Practice Questions";
+        } elseif ($role === 'educator') {
+            $action = "Join Organization";
+        } else {
+            $action = "Create Organization";
+        }
+        return [$url, $action];
+    }
     /**
      * Build the message.
      *
@@ -28,11 +41,14 @@ class Welcome extends Mailable
      */
     public function build()
     {
+        [$url, $action] = $this->whatNext();
         return $this
             ->subject('Welcome to at-School')
             ->markdown('mails.welcome.mail')
             ->with([
                 'name' => $this->user->first_name,
+                'url' => $url,
+                'action' => $action
             ]);
     }
 }
