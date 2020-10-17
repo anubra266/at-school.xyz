@@ -31,7 +31,7 @@ const Theme = () => {
                 title="Theme Settings"
                 subTitle="Customize the Appearance"
             ></PageHeader>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
+            <div style={{ margin: "0 20px" }}>
                 <List>
                     <List.Item>
                         <List.Item.Meta

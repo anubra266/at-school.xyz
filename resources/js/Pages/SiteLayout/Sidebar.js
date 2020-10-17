@@ -5,6 +5,7 @@ import { returnRoute } from "@/Helpers/PresentRoute";
 import Layout from "antd/lib/layout";
 import Menu from "antd/lib/menu";
 import Space from "antd/lib/space";
+import Typography from "antd/lib/typography";
 import message from "antd/lib/message";
 import PoweroffOutlined from "@ant-design/icons/PoweroffOutlined";
 
@@ -27,8 +28,8 @@ function Sidebar({ mode, routes, layout, classroom }) {
                     item.route === "/home"
                         ? "/home"
                         : `menu-${item.name}` == getRoute()[0][0]
-                            ? "#"
-                            : `${layout}${item.route}`
+                        ? "#"
+                        : `${layout}${item.route}`
                 }
             >
                 {item.name}
@@ -49,6 +50,11 @@ function Sidebar({ mode, routes, layout, classroom }) {
                         height={30}
                         src={require("@/assets/general/images/at-school.png")}
                     />
+                    {!collapsed && (
+                        <Typography.Title level={3} style={{ color: "white" }}>
+                            at-School
+                        </Typography.Title>
+                    )}
                 </Space>
                 <Menu
                     theme="dark"
@@ -82,13 +88,13 @@ function Sidebar({ mode, routes, layout, classroom }) {
                                         })}
                                 </SubMenu>
                             ) : (
-                                    <Menu.Item
-                                        key={`menu-${menu.name}`}
-                                        icon={menu.icon}
-                                    >
-                                        {genroute(menu)}
-                                    </Menu.Item>
-                                ))
+                                <Menu.Item
+                                    key={`menu-${menu.name}`}
+                                    icon={menu.icon}
+                                >
+                                    {genroute(menu)}
+                                </Menu.Item>
+                            ))
                         );
                     })}
 

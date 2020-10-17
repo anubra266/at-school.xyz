@@ -16,13 +16,15 @@ class RolesSeeder extends Seeder
         // Reset cached roles and permissions
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        $arrayOfPermissionNames = ['practice', 'participate_classes', 'create_classrooms', 'create_environs', 'create_organizations'];
+        $arrayOfPermissionNames = ['all', 'practice', 'participate_classes', 'create_classrooms', 'create_environs', 'create_organizations'];
 
         $permissions = collect($arrayOfPermissionNames)->map(function ($permission) {
             return ['name' => $permission, 'guard_name' => 'web'];
         });
 
         Permission::insert($permissions->toArray());
+
+        Role::create(['name' => 'admin']);
 
         Role::create(['name' => 'practicist'])->givePermissionTo(['practice']);
 

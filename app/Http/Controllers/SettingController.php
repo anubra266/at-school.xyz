@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Traits\UploadProfile;
 use Illuminate\Support\Facades\Mail;
+use App\Notifications\PasswordChange;
 use App\Http\Requests\PasswordRequest;
+use App\Notifications\ContributionPermit;
 use App\Http\Requests\BasicSettingRequest;
 use App\Http\Requests\ThemeSettingRequest;
-use Stevebauman\Location\Facades\Location;
-use App\Notifications\PasswordChange;
 
 class SettingController extends Controller
 {
@@ -49,5 +50,32 @@ class SettingController extends Controller
         authUser()->update(['password' => bcrypt($request['new_password'])]);
         authUser()->notify(new PasswordChange());
         return redirect()->back()->with('success', 'Password updated successfully');
+    }
+    public function pQuestions(Request $request)
+    {
+        $request->validate(['recipent' => 'required|email']);
+        $recipent = User::whereEmail($request->recipent)->first();
+
+        if ($recipent && $recipent->email === authUser()->email) {
+            return redirect()->back()->with('warning', "Come on! You can't permit yourself.");
+        }
+        $data = [
+            'preferences->add_practice_questions->permitted' => true,
+            'preferences->add_practice_questions->referrer' => authUser()->id
+        ];
+        $settings = $recipent->settings()->first();
+        if ($recipent && !($settings && $settings->preferences->add_practice_questions->permitted)) {
+            $recipent->settings()->updateOrCreate(['user_id' => authUser()->id], $data);
+        }
+        $recipent->notify(new ContributionPermit());
+        return redirect()->back()->with('success', 'User will be permitted if existing.');
+    }
+
+    public function pQuestionsStatus($toEnable)
+    {
+        $status = $toEnable === "true" ? true : false;
+        authUser()->settings()->updateOrCreate(["user_id" => authUser()->id], ["preferences->add_practice_questions->enabled" => $status]);
+        $action = $status ? "Enabled" : "Disabled";
+        return redirect()->back()->with("success", "Contribution $action successfully.");
     }
 }

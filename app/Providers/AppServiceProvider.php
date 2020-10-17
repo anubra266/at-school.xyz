@@ -63,6 +63,7 @@ class AppServiceProvider extends ServiceProvider
                             'Classes' => authUser()->can('participate_classes'),
                             'Practice' =>  authUser()->can('practice'),
                             'Settings' => true,
+                            'all' =>  authUser()->can('all'),
 
                         ]
                     ] : null,

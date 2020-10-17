@@ -4,6 +4,7 @@ import Calculator from "@/Shared/Calculator/";
 
 import Menu from "antd/lib/menu";
 import Layout from "antd/lib/layout";
+import Typography from "antd/lib/typography";
 import Space from "antd/lib/space";
 import Statistic from "antd/lib/statistic";
 
@@ -56,7 +57,7 @@ const sidebar = ({
                     overflow: "auto",
                     height: "100vh",
                     position: "fixed",
-                    left: 0,
+                    left: 0
                     // zIndex: 9000
                 }}
             >
@@ -65,6 +66,11 @@ const sidebar = ({
                         height={30}
                         src={require("@/assets/general/images/at-school.png")}
                     />
+                    {!collapsed && (
+                        <Typography.Title level={3} style={{ color: "white" }}>
+                            at-School
+                        </Typography.Title>
+                    )}
                 </Space>
                 <Menu
                     theme="dark"

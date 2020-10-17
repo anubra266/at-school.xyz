@@ -5,8 +5,7 @@ import ApartmentOutlined from "@ant-design/icons/ApartmentOutlined";
 import DeploymentUnitOutlined from "@ant-design/icons/DeploymentUnitOutlined";
 import TeamOutlined from "@ant-design/icons/TeamOutlined";
 import SettingOutlined from "@ant-design/icons/SettingOutlined";
-import UserOutlined from "@ant-design/icons/UserOutlined";
-import HighlightOutlined from "@ant-design/icons/HighlightOutlined";
+import EditOutlined from "@ant-design/icons/EditOutlined";
 
 export default [
     {
@@ -37,7 +36,7 @@ export default [
     {
         name: "Practice",
         route: "/practice",
-        icon: <TeamOutlined />
+        icon: <EditOutlined />
     },
     {
         name: "Settings",

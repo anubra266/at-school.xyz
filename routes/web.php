@@ -49,6 +49,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::patch('/fakeupload', 'SettingController@fakeUpload')->name('upload.fake');
         Route::patch('/settings/theme', 'SettingController@theme')->name('settings.theme');
         Route::patch('/settings/password', 'SettingController@password')->name('settings.password');
+        Route::patch('/settings/permit/pquestions', 'SettingController@pQuestions')->name('settings.permit.pquestions');
+        Route::patch('/settings/pquestions/status/{toEnable}', 'SettingController@pQuestionsStatus')->name('settings.pquestions.status');
 
         //? Organization routes
         Route::group(['prefix' => 'organization', 'middleware' => ['can:create_organizations']], function () {
