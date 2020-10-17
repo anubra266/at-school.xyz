@@ -8,6 +8,8 @@ import Dropdown from "antd/lib/dropdown";
 import Button from "antd/lib/button";
 import Badge from "antd/lib/badge";
 import Avatar from "antd/lib/avatar";
+import List from "antd/lib/list";
+import Popover from "antd/lib/popover";
 
 import Bell from "@ant-design/icons/BellOutlined";
 import LogoutIcon from "@ant-design/icons/PoweroffOutlined";
@@ -21,7 +23,7 @@ const { Header } = Layout;
 
 function Navbar(props) {
     const { auth, settings } = usePage();
-    const theme = (settings && settings.preferences && JSON.parse(settings.preferences).theme);
+    const theme = (settings && settings.preferences && settings.preferences.theme);
     return (
         <React.Fragment>
             <Header
@@ -37,11 +39,11 @@ function Navbar(props) {
                     style={{ height: "100%" }}
                     align="middle"
                 >
-                    {/*<Col>
+                    <Col>
                         <Badge count={5} overflowCount={10}>
                             <Notifications />
                         </Badge>
-                    </Col>*/}
+                    </Col>
                     <Col>
                         <UserMenu user={auth.user} />
                     </Col>
@@ -53,17 +55,27 @@ function Navbar(props) {
 
 export default Navbar;
 
-const NotificationMenu = (
-    <Menu>
-        <Menu.Item>
-            <a>1st menu item</a>
-        </Menu.Item>
-    </Menu>
-);
+
 
 const Notifications = () => {
+    const nots = [{ data: "You have a test coming up by 3PM" }, { data: "You missed mathematics test at 4" }]
+    const NotificationMenu = (
+        <List>
+            {nots.map((item, key) => {
+                return (
+                    <List.Item key={key}>
+                        <List.Item.Meta
+                            title={null}
+                            description={item.data}
+                        />
+                    </List.Item>
+                )
+            })}
+        </List>
+    );
+
     return (
-        <Dropdown key="more" overlay={NotificationMenu}>
+        <Popover placement="bottomRight" content={NotificationMenu} title={<span>Notifications</span>} trigger="click">
             <Button
                 style={{
                     border: "none",
@@ -77,7 +89,7 @@ const Notifications = () => {
                     }}
                 />
             </Button>
-        </Dropdown>
+        </Popover>
     );
 };
 

@@ -2,7 +2,7 @@ import { usePage } from "@inertiajs/inertia-react";
 
 const useAssets = () => {
     const { settings } = usePage();
-    const mode = (settings && settings.preferences && JSON.parse(settings.preferences).theme);
+    const mode = (settings && settings.preferences && settings.preferences.theme);
     switch (mode) {
         case "light":
             require("@/assets/antd/antd.css");

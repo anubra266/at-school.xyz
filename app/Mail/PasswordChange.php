@@ -40,10 +40,9 @@ class PasswordChange extends Mailable
         return $this->from('security@at-school.xyz', 'at-School')
             ->subject(env('APP_NAME') . ' Password Change')
             ->markdown('mails.passwordchange.mail')
-            ->with([ 
+            ->with([
                 'name' => $this->user->first_name,
                 'image' => $this->user->profile_image,
-                'ip' => $ip,
                 'location' => $location,
                 'url' => $url
             ]);

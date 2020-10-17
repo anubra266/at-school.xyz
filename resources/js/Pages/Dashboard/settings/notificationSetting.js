@@ -15,6 +15,12 @@ const Notification = () => {
                 title="Notification Settings"
                 subTitle="Customize the Appearance"
             ></PageHeader>
+            <div> 
+
+            Desktop Notifications
+            To-do Notification
+
+            </div>
         </React.Fragment>
     );
 };

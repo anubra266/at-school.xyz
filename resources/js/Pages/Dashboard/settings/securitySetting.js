@@ -7,7 +7,6 @@ import Typography from "antd/lib/typography";
 import Form from "antd/lib/form";
 import Button from "antd/lib/button";
 import Input from "antd/lib/input";
-import message from "antd/lib/message";
 import { Inertia } from "@inertiajs/inertia";
 import { useToggle } from "react-use";
 
@@ -23,18 +22,19 @@ const Security = () => {
             resetForm.current.resetFields()
         })
     }
+    //TODO Security Phone, Security Question, Backup Email
     return (
         <React.Fragment>
             <PageHeader
                 title="Security Settings"
                 subTitle="Customize the Appearance"
             ></PageHeader>
-            <div style={{ margin: 20 }}>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
                 <List>
                     <List.Item>
                         <List.Item.Meta
                             title="Account Password"
-                            description="***********"
+                            description="Set a strong password."
                         />
                         <Typography.Link onClick={toggleReset}>Modify</Typography.Link>
                         <Modal

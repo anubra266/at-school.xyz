@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 import Layout from "@/Pages/Auth/Layout";
 import LoadingButton from "@/Shared/LoadingButton";
@@ -12,10 +12,11 @@ const login = () => {
     const handleChange = e => {
         Auth.handleChange(e, setData);
     };
-    const handleRemember = e => {
+    const rememberRef = useRef()
+    const handleRemember = () => {
         setData((vals) => ({
             ...vals,
-            remember: e.target.checked ? "on" : null
+            remember: rememberRef.current.checked ? "on" : null
         }))
     }
     const handleSubmit = e => {
@@ -77,6 +78,7 @@ const login = () => {
                                     type="checkbox"
                                     className="custom-control-input"
                                     id="customControlInline"
+                                    ref={rememberRef}
                                     onChange={handleRemember}
                                 />
                                 <label

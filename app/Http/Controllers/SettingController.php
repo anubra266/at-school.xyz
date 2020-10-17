@@ -45,10 +45,9 @@ class SettingController extends Controller
 
     public function password(PasswordRequest $request)
     {
-        $request = $request->validated(); 
+        $request = $request->validated();
         authUser()->update(['password' => bcrypt($request['new_password'])]);
         authUser()->notify(new PasswordChange());
-        // Mail::to(authUser()->email)->send(new PasswordChange(authUser()));
         return redirect()->back()->with('success', 'Password updated successfully');
     }
 }
