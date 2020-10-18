@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['setrole']], function () {
 
         Route::get('home', 'PrivateController@home')->name('home');
+        Route::get('practice', 'PracticeController@index')->name('practice');
 
         //? Settings route
         Route::get('/settings', 'SettingController@general')->name('settings.general');

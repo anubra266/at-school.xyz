@@ -54,7 +54,7 @@ const Advanced = () => {
                                                     ? "Enabled"
                                                     : "Disabled"}
                                                 )
-                                            </b>{" "}
+                                            </b>
                                         </span>
                                     }
                                     description="Contribute questions for Students personal practice."

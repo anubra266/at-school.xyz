@@ -45,7 +45,12 @@ function Sidebar({ mode, routes, layout, classroom }) {
                 onCollapse={onCollapse}
                 theme="dark"
             >
-                <Space style={{ paddingLeft: 10, paddingTop: 10 }}>
+                <Space
+                    style={{
+                        paddingLeft: 10,
+                        paddingTop: 10,
+                    }}
+                >
                     <img
                         height={30}
                         src={require("@/assets/general/images/at-school.png")}
