@@ -41,7 +41,9 @@ const Advanced = () => {
             ></PageHeader>
             <div style={{ margin: "0 20px" }}>
                 <List>
-                    {(user.can.all || can_add_practice_questions.permitted) && (
+                    {(user.can.all ||
+                        (can_add_practice_questions &&
+                            can_add_practice_questions.permitted)) && (
                         <React.Fragment>
                             <List.Item>
                                 <List.Item.Meta
@@ -117,6 +119,9 @@ const Advanced = () => {
                             </List.Item>
                         </React.Fragment>
                     )}
+                    <List.Item>
+                        <b>Nothing here yet!</b>
+                    </List.Item>
                 </List>
             </div>
         </React.Fragment>
