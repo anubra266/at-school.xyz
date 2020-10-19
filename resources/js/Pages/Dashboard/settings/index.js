@@ -9,7 +9,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 
 const { Content } = Layout;
 
-const Settings = props => { 
+const Settings = props => {
     const [page, setPage] = useState("basic");
 
     const handleMenu = ({ item, key }) => {
@@ -46,9 +46,6 @@ const Settings = props => {
                                 </Menu.Item>
                                 <Menu.Item key="security">
                                     Security Settings
-                                </Menu.Item>
-                                <Menu.Item key="notification">
-                                    Notification Settings
                                 </Menu.Item>
                                 <Menu.Item key="advanced">
                                     Advanced Settings
