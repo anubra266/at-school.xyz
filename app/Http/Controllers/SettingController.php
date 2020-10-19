@@ -64,10 +64,10 @@ class SettingController extends Controller
             'preferences->add_practice_questions->referrer' => authUser()->id
         ];
         $settings = $recipent->settings()->first();
-        if ($recipent && !($settings && $settings->preferences->add_practice_questions->permitted)) {
-            $recipent->settings()->updateOrCreate(['user_id' => authUser()->id], $data);
+        if ($recipent && !($settings && property_exists($settings->preferences, 'add_practice_questions') && $settings->preferences->add_practice_questions->permitted)) {
+            $recipent->settings()->updateOrCreate(['user_id' => $recipent->id], $data);
+            $recipent->notify(new ContributionPermit());
         }
-        $recipent->notify(new ContributionPermit());
         return backward()->with('success', 'User will be permitted if existing.');
     }
 

@@ -42,7 +42,8 @@ class AppServiceProvider extends ServiceProvider
             //* Send user Information to all frontend views
             'auth' => function () {
                 $settings = authUser() ? authUser()->settings()->first() : null;
-                $can_practice = $settings ? $settings->preferences->add_practice_questions : null;
+                $preferences = $settings->preferences ?? null;
+                $can_practice = $preferences->add_practice_questions ?? null;
                 return [
                     'user' => Auth::user() ? [
                         'id' => Auth::user()->id,
@@ -63,7 +64,7 @@ class AppServiceProvider extends ServiceProvider
                             'Environs' => authUser()->can('create_environs'),
                             'Classrooms' => authUser()->can('create_classrooms'),
                             'Classes' => authUser()->can('participate_classes'),
-                            'Practice' => ((authUser()->can('practice')) && !(authUser()->hasRole('admin'))) || ($can_practice ? $can_practice->enabled : false),
+                            'Practice' => ((authUser()->can('practice')) && !(authUser()->hasRole('admin'))) || ($can_practice->enabled ?? false),
                             'Settings' => true,
                             'all' =>  authUser()->can('all'),
 
