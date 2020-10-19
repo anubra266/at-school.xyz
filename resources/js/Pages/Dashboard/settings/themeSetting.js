@@ -10,19 +10,18 @@ import Main from "@/Helpers/Main";
 
 const Theme = () => {
     const { settings } = usePage();
-    const initial_theme = (settings && settings.preferences && settings.preferences.theme)
-    const [theme, setTheme] = useState(initial_theme || 'light')
-    const [loading, setLoading] = useState(false)
+    const initial_theme =
+        settings && settings.preferences && settings.preferences.theme;
+    const [theme, setTheme] = useState(initial_theme || "light");
+    const [loading, setLoading] = useState(false);
     function handleChange(value) {
-        setTheme(value)
-        setLoading(true)
-        Inertia.patch(route('settings.theme'), { theme: value }).then(() => {
-            setLoading(false)
-            message.loading('Applying theme...')
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        })
+        setTheme(value);
+        setLoading(true);
+        message.loading("Applying theme...");
+        Inertia.patch(route("settings.theme"), { theme: value }).then(() => {
+            setLoading(false);
+            window.location.reload();
+        });
     }
 
     return (
@@ -38,10 +37,20 @@ const Theme = () => {
                             title={`Website Theme - (${Main.fCap(theme)})`}
                             description="Customize the look and feel of the site."
                         />
-                        <Select defaultValue={theme} loading={loading} disabled={loading} style={{ width: 200 }} onChange={handleChange}>
+                        <Select
+                            defaultValue={theme}
+                            loading={loading}
+                            disabled={loading}
+                            style={{ width: 200 }}
+                            onChange={handleChange}
+                        >
                             <Select.OptGroup label="Light">
-                                <Select.Option value="light">Comfortable</Select.Option>
-                                <Select.Option value="compact">Compact</Select.Option>
+                                <Select.Option value="light">
+                                    Comfortable
+                                </Select.Option>
+                                <Select.Option value="compact">
+                                    Compact
+                                </Select.Option>
                             </Select.OptGroup>
                             <Select.Option value="dark">Dark</Select.Option>
                         </Select>

@@ -16,8 +16,8 @@ const Template = () => {
                             window.history.length > 1 &&
                             (() => window.history.back())
                         }
-                        title="Title"
-                        subTitle="This is a subtitle"
+                        title="Practice Zone"
+                        subTitle="Contribute Questions"
                         extra={[
                             <Button key="3">Operation</Button>,
                             <Button key="2">Operation</Button>,

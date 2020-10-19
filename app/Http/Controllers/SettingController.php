@@ -25,13 +25,13 @@ class SettingController extends Controller
     public function basic(BasicSettingRequest $request)
     {
         authUser()->update($request->validated());
-        return redirect()->back()->with('success', 'Settings saved Successfully');
+        return backward()->with('success', 'Settings saved Successfully');
     }
 
     public function profile(Request $request)
     {
         authUser()->update(['profile_image' => $this->storeProfile($request->profile_image)]);
-        return redirect()->back()->with('success', 'Profile picture updated Successfully');
+        return backward()->with('success', 'Profile picture updated Successfully');
     }
 
     public function fakeUpload()
@@ -41,7 +41,7 @@ class SettingController extends Controller
     public function theme(ThemeSettingRequest $request)
     {
         authUser()->settings()->updateOrCreate(['user_id' => authUser()->id], ['preferences->theme' => $request->validated()['theme']]);
-        return redirect()->back()->with('success', 'Theme updated successfully');
+        return backward()->with('success', 'Theme updated successfully');
     }
 
     public function password(PasswordRequest $request)
@@ -49,7 +49,7 @@ class SettingController extends Controller
         $request = $request->validated();
         authUser()->update(['password' => bcrypt($request['new_password'])]);
         authUser()->notify(new PasswordChange());
-        return redirect()->back()->with('success', 'Password updated successfully');
+        return backward()->with('success', 'Password updated successfully');
     }
     public function pQuestions(Request $request)
     {
@@ -57,7 +57,7 @@ class SettingController extends Controller
         $recipent = User::whereEmail($request->recipent)->first();
 
         if ($recipent && $recipent->email === authUser()->email) {
-            return redirect()->back()->with('warning', "Come on! You can't permit yourself.");
+            return backward()->with('warning', "Come on! You can't permit yourself.");
         }
         $data = [
             'preferences->add_practice_questions->permitted' => true,
@@ -68,7 +68,7 @@ class SettingController extends Controller
             $recipent->settings()->updateOrCreate(['user_id' => authUser()->id], $data);
         }
         $recipent->notify(new ContributionPermit());
-        return redirect()->back()->with('success', 'User will be permitted if existing.');
+        return backward()->with('success', 'User will be permitted if existing.');
     }
 
     public function pQuestionsStatus($toEnable)
@@ -76,6 +76,6 @@ class SettingController extends Controller
         $status = $toEnable === "true" ? true : false;
         authUser()->settings()->updateOrCreate(["user_id" => authUser()->id], ["preferences->add_practice_questions->enabled" => $status]);
         $action = $status ? "Enabled" : "Disabled";
-        return redirect()->back()->with("success", "Contribution $action successfully.");
+        return backward()->with("success", "Contribution $action successfully.");
     }
 }
