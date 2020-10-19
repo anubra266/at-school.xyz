@@ -255,7 +255,7 @@ const basic = () => {
                             onRemove={onRemove}
                             beforeUpload={beforeUpload}
                         >
-                            {fileList.length < 2 && "+ Update"}
+                            {fileList.length < 2 && "Update"}
                         </Upload>
                     </ImgCrop>
                 </Col>

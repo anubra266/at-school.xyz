@@ -13,9 +13,6 @@ I've gone really far with Laravel, and Inertia. So I will be recreating that sit
 
  **Laravel - Inertia - React**. 
 
- I'm still deliberating if this should be a Private or Public Repo😃
-
-It's public for now, As you can see. That might change depending on ... .
 
 ## How do I set this up
 
@@ -41,6 +38,6 @@ php artisan db:seed --class=RolesSeeder
 
 php artisan storage:link
 ```
-**I'm not dumb, the above is all self explanatory.**
+**I suppose the above is all self explanatory.**
 
 Feel free to fork and make Pull requests.
