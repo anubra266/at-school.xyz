@@ -119,9 +119,6 @@ const Advanced = () => {
                             </List.Item>
                         </React.Fragment>
                     )}
-                    <List.Item>
-                        <b>Nothing here yet!</b>
-                    </List.Item>
                 </List>
             </div>
         </React.Fragment>

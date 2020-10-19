@@ -29,7 +29,7 @@ export default [
     },
     {
         name: "Assessments",
-        route: "/assessments",
+        route: "/assessments", 
         for: ["educator", "supervisor"],
         icon: <EditOutlined />,
         items: [
