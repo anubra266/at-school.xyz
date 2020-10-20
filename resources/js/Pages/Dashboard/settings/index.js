@@ -6,18 +6,12 @@ import Menu from "antd/lib/menu";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
+import { urlHash } from "@/Helpers/";
 
 const { Content } = Layout;
 
 const Settings = props => {
-    //TODO get the hash in url and use as page, if no hash, then basic is default
-    const getHash = () => {
-        const url = window.location.href;
-        const hash = url.split("#", 2)[1];
-        return hash;
-    };
-
-    const [page, setPage] = useState(getHash() || "basic");
+    const [page, setPage] = useState(urlHash() || "basic");
 
     const handleMenu = ({ item, key }) => {
         setPage(key);
