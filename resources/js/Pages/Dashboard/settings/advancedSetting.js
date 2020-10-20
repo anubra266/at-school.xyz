@@ -15,9 +15,10 @@ const Advanced = () => {
     const { user } = auth;
     const [loading, setLoading] = useState(false);
     const can_add_practice_questions =
-        settings &&
-        settings.preferences &&
-        settings.preferences.add_practice_questions;
+        (settings &&
+            settings.preferences &&
+            settings.preferences.add_practice_questions) ||
+        {};
     const permitForm = useRef();
     const changeStatus = toEnable => {
         setLoading(true);

@@ -10,7 +10,14 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 const { Content } = Layout;
 
 const Settings = props => {
-    const [page, setPage] = useState("basic");
+    //TODO get the hash in url and use as page, if no hash, then basic is default
+    const getHash = () => {
+        const url = window.location.href;
+        const hash = url.split("#", 2)[1];
+        return hash;
+    };
+
+    const [page, setPage] = useState(getHash() || "basic");
 
     const handleMenu = ({ item, key }) => {
         setPage(key);
@@ -39,16 +46,16 @@ const Settings = props => {
                                 mode="inline"
                             >
                                 <Menu.Item key="basic">
-                                    Basic Settings
+                                    <a href="#basic">Basic Settings</a>
                                 </Menu.Item>
                                 <Menu.Item key="theme">
-                                    Theme Settings
+                                    <a href="#theme">Theme Settings</a>
                                 </Menu.Item>
                                 <Menu.Item key="security">
-                                    Security Settings
+                                    <a href="#security">Security Settings</a>
                                 </Menu.Item>
                                 <Menu.Item key="advanced">
-                                    Advanced Settings
+                                    <a href="#advanced">Advanced Settings</a>
                                 </Menu.Item>
                             </Menu>
                         </Col>
