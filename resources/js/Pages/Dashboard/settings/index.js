@@ -12,7 +12,7 @@ const { Content } = Layout;
 
 const Settings = props => {
     const [page, setPage] = useState(urlHash() || "basic");
-
+ 
     const handleMenu = ({ item, key }) => {
         setPage(key);
     };
