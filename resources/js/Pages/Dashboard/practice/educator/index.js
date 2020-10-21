@@ -1,34 +1,56 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useToggle } from "react-use";
 import Layout from "antd/lib/layout";
-import PageHeader from "antd/lib/page-header";
+import Empty from "antd/lib/empty";
 import Button from "antd/lib/button";
+import Card from "antd/lib/card";
+import Drawer from "antd/lib/drawer";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
+import Header from "./header";
+import CategoriesList from "./categorieslist";
+import CategoryForm from "./CategoryForm";
 const { Content } = Layout;
 
-const Template = () => {
+const EducatorCategories = ({ categories }) => {
+    const [visible, toggleCat] = useToggle(false);
+    const [loading, toggleLoad] = useToggle(false);
+    const CatForm = useRef();
+    const createCat = data => {
+        console.log(data);
+    };
     return (
         <Dashboardlayout title="Practice Questions">
             <Content style={{ margin: "0 16px" }}>
-                <div className="site-page-header-ghost-wrapper">
-                    <PageHeader
-                        ghost={false}
-                        onBack={
-                            window.history.length > 1 &&
-                            (() => window.history.back())
-                        }
-                        title="Practice Zone"
-                        subTitle="Contribute Questions"
-                        extra={[
-                            <Button key="3">Operation</Button>,
-                            <Button key="2">Operation</Button>,
-                            <Button key="1" type="primary">
-                                Primary
-                            </Button>
-                        ]}
-                    ></PageHeader>
+                <Header toggleCat={toggleCat} />
+                <div>
+                    <Card title="Categories">
+                        <CategoriesList categories={categories} />
+                        {categories.length === 0 && (
+                            <Empty
+                                description={<span>No Categories found!</span>}
+                            >
+                                <Button
+                                    type="primary"
+                                    loading={loading}
+                                    onClick={toggleCat}
+                                >
+                                    Create Category
+                                </Button>
+                            </Empty>
+                        )}
+                    </Card>
                 </div>
+                <Drawer
+                    title="Create New Category"
+                    placement="right"
+                    closable={true}
+                    onClose={toggleCat}
+                    visible={visible}
+                >
+                    <CategoryForm {...{ loading, createCat, CatForm }} />
+                </Drawer>
             </Content>
         </Dashboardlayout>
     );
 };
-export default Template;
+export default EducatorCategories;
