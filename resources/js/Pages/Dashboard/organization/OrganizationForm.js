@@ -8,8 +8,6 @@ const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
     return (
         <Form
             ref={OrgForm}
-            name="normal_login"
-            className="login-form"
             onFinish={onFinish}
             initialValues={
                 edit && {
