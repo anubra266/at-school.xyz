@@ -25,33 +25,6 @@ const login = () => {
     };
     const { errors } = usePage();
 
-
-    const func = ()=>{
-        return new Promise(resolve=>{
-            console.log("starting slow promise");
-            setTimeout(function() {
-                resolve(20);
-                console.log("slow promise is done");
-              }, 2000);
-        })
-    }
-    const func2 = async ()=>{
-        const twenty = await func()
-        return twenty
-    }
-
-    // func().then(message=>console.log(message))
-    func2().then(message=>console.log(message))
-
-
-
-
-
-
-
-
-
-
     return (
         <Layout
             title="Login at-school"
