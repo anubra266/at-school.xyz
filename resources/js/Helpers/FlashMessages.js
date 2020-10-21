@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import message from "antd/lib/message";
 
-const FlashMessage = () => {
+const useFlashMessage = () => {
     const { flash, errors } = usePage();
     message.config({
         duration: 5,
@@ -26,9 +26,4 @@ const FlashMessage = () => {
     }, [errors]);
 };
 
-/**
- * Display Flash Messages in Layout
- */
-export const useFlashMessage = () => {
-    return FlashMessage();
-};
+export default useFlashMessage;

@@ -7,23 +7,51 @@ const login = () => {
     const [checking, setChecking] = useState(false);
     const [data, setData] = useState({
         email: "",
-        password: "",
+        password: ""
     });
     const handleChange = e => {
         Auth.handleChange(e, setData);
     };
-    const rememberRef = useRef()
+    const rememberRef = useRef();
     const handleRemember = () => {
-        setData((vals) => ({
+        setData(vals => ({
             ...vals,
             remember: rememberRef.current.checked ? "on" : null
-        }))
-    }
+        }));
+    };
     const handleSubmit = e => {
         e.preventDefault();
-        Auth.handleSubmit("login", setChecking, data);
+        Auth.handleSubmit("login", setChecking, data, setData);
     };
     const { errors } = usePage();
+
+
+    const func = ()=>{
+        return new Promise(resolve=>{
+            console.log("starting slow promise");
+            setTimeout(function() {
+                resolve(20);
+                console.log("slow promise is done");
+              }, 2000);
+        })
+    }
+    const func2 = async ()=>{
+        const twenty = await func()
+        return twenty
+    }
+
+    // func().then(message=>console.log(message))
+    func2().then(message=>console.log(message))
+
+
+
+
+
+
+
+
+
+
     return (
         <Layout
             title="Login at-school"

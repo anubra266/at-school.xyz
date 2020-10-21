@@ -19,10 +19,16 @@ class Auth {
      * @param {object} setChecking function to indicate request's status
      * @param {object} data Form data to be submitted
      */
-    handleSubmit(dest, setChecking, data) {
+    handleSubmit(dest, setChecking, data, setData = null) {
         setChecking(true);
         Inertia.post(route(dest), data).then(() => {
             setChecking(false);
+            if (setData) {
+                setData(vals => ({
+                    ...vals,
+                    password: ""
+                }));
+            }
         });
     }
 }
