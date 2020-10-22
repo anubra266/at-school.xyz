@@ -9,14 +9,21 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import Header from "./header";
 import CategoriesList from "./categorieslist";
 import CategoryForm from "./CategoryForm";
+import { Inertia } from "@inertiajs/inertia";
 const { Content } = Layout;
+import { usePage } from "@inertiajs/inertia-react";
 
 const EducatorCategories = ({ categories }) => {
+    const { errors } = usePage();
     const [visible, toggleCat] = useToggle(false);
     const [loading, toggleLoad] = useToggle(false);
     const CatForm = useRef();
     const createCat = data => {
-        console.log(data);
+        Inertia.post(route("practice.categories.store"), data).then(() => {
+            if (!errors) {
+                CatForm.current.resetFields();
+            }
+        });
     };
     return (
         <Dashboardlayout title="Practice Questions">
