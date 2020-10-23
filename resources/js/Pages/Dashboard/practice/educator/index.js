@@ -10,8 +10,8 @@ import Header from "./header";
 import CategoriesList from "./categorieslist";
 import CategoryForm from "./CategoryForm";
 import { Inertia } from "@inertiajs/inertia";
-const { Content } = Layout;
 import { usePage } from "@inertiajs/inertia-react";
+const { Content } = Layout;
 
 const EducatorCategories = ({ categories }) => {
     const { errors } = usePage();

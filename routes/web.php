@@ -29,6 +29,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('home', 'PrivateController@home')->name('home');
         Route::get('practice', 'PracticeController@index')->name('practice');
         Route::post('practice/categories', 'PracticeCategoryController@store')->name('practice.categories.store');
+        Route::resource('categories.courses', 'PracticeCourseController');
+        Route::get('practice/course/{course}', 'PracticeController@showCourse')->name('practice.course');
 
 
         //? Settings route

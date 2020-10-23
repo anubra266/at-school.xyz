@@ -3,23 +3,28 @@ import { usePage } from "@inertiajs/inertia-react";
 import Button from "antd/lib/button";
 import { Form, Input } from "antd";
 
-const CategoryForm = ({ loading, createCat, CatForm }) => {
+const CourseForm = ({ loading, createCourse, courseRef, category }) => {
     const { errors } = usePage();
     return (
-        <Form ref={CatForm} onFinish={createCat} layout="vertical">
+        <Form
+            ref={courseRef}
+            onFinish={createCourse}
+            layout="vertical"
+            initialValues={{ category }}
+        >
             <Form.Item
-                label="Category Name"
+                label="Course Name"
                 name="name"
                 rules={[
                     {
                         required: true,
-                        message: "Please input Category Name!"
+                        message: "Please input Course Name!"
                     }
                 ]}
                 validateStatus={errors.name && "error"}
                 help={errors.name && errors.name[0]}
             >
-                <Input placeholder="NECO" />
+                <Input placeholder="Biology" />
             </Form.Item>
             <Form.Item
                 label="Description"
@@ -27,7 +32,7 @@ const CategoryForm = ({ loading, createCat, CatForm }) => {
                 rules={[
                     {
                         required: true,
-                        message: "Please input Category Description!"
+                        message: "Please input Course Description!"
                     }
                 ]}
                 validateStatus={errors.description && "error"}
@@ -36,10 +41,12 @@ const CategoryForm = ({ loading, createCat, CatForm }) => {
                 <Input.TextArea
                     allowClear
                     rows={2}
-                    placeholder="National Examination Council"
+                    placeholder="Study of Living things"
                 />
             </Form.Item>
-
+            <Form.Item name="category">
+                <Input type="hidden" />
+            </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" loading={loading}>
                     Create
@@ -49,4 +56,4 @@ const CategoryForm = ({ loading, createCat, CatForm }) => {
     );
 };
 
-export default CategoryForm;
+export default CourseForm;

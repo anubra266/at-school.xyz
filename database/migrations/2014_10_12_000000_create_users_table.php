@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->date('date_of_birth');
             $table->string('school');
             $table->string('school_town');
-            $table->string('initial_role');
+            $table->string('initial_role')->default('student');
             $table->string('password');
             $table->string('profile_image');
             $table->rememberToken();
