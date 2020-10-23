@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -54,6 +55,11 @@ class LoginController extends Controller
             ]);
     }
 
+    public function showLoginForm()
+    {
+        return Inertia::render('Auth/Login/');
+    }
+
     /**
      * The user has logged out of the application.
      *
@@ -62,6 +68,7 @@ class LoginController extends Controller
      */
     protected function loggedOut(Request $request)
     {
-        return redirect()->route('login');
+        //! Confirm how this works and apply to Template also
+        return Inertia::location(route('login'));
     }
 }

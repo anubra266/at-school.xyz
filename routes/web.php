@@ -11,18 +11,7 @@ Auth::routes();
 Route::group(['middleware' => ['guest']], function () {
     //?Index route
     Route::get('/', 'PublicController@landing')->name('landing');
-
-    Route::get('login', 'MyAuthController@showLoginForm')->name('login');
-
-    Route::get('register', 'MyAuthController@showRegistrationForm')->name('register');
-
-    //? Password Reset Routes...
-    Route::get('password/reset', 'MyAuthController@showLinkRequestForm')->name('password.request');
-    Route::get('password/reset/{token}', 'MyAuthController@showResetForm')->name('password.reset');
 });
-
-
-
 
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {

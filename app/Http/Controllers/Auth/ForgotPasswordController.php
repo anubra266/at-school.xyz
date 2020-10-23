@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
@@ -34,5 +35,10 @@ class ForgotPasswordController extends Controller
         return $request->wantsJson()
             ? new JsonResponse(['message' => trans($response)], 200)
             : back()->with('info', trans($response));
+    }
+
+    public function showLinkRequestForm()
+    {
+        return Inertia::render('Auth/ForgotPassword/');
     }
 }

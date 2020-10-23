@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Notifications\RegistrationSuccessful;
-use App\Providers\RouteServiceProvider;
-use App\Traits\UploadProfile;
 use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Inertia\Inertia;
+use App\Traits\UploadProfile;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use App\Notifications\RegistrationSuccessful;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -92,5 +93,10 @@ class RegisterController extends Controller
         ]);
         $user->notify(new RegistrationSuccessful());
         return $user;
+    }
+
+    public function showRegistrationForm()
+    {
+        return Inertia::render('Auth/Register/');
     }
 }
