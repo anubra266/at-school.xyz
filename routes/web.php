@@ -1,10 +1,7 @@
 <?php
 
-use Inertia\Inertia;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Spatie\Permission\Contracts\Role;
 
 Auth::routes();
 
