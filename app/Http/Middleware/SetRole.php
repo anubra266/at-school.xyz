@@ -15,9 +15,9 @@ class SetRole
      */
     public function handle($request, Closure $next)
     {
-        $is_new_user = authUser()->roles()->count() === 0;
+        $a_new_user = authUser()->roles()->count() === 0;
         $potential_role = authUser()->initial_role;
-        if ($is_new_user) {
+        if ($a_new_user) {
             return redirect()->route('account.setup', ['role' => $potential_role]);
         }
         return $next($request);
