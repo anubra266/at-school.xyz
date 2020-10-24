@@ -60,6 +60,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'class.auth' => \App\Http\Middleware\ClassroomAuthorization::class,
         'educator.only' => \App\Http\Middleware\EducatorOnly::class,
+        'prq.contribute' => \App\Http\Middleware\PracticeQuestionsContribute::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'setrole' => \App\Http\Middleware\SetRole::class,
