@@ -13,10 +13,6 @@ Route::group(['middleware' => ['guest']], function () {
 //? Only Users authenticated and with finished registration
 Route::group(['middleware' => ['auth']], function () {
 
-    Route::group(['namespace' => 'Auth'], function () {
-        Route::get('logout', 'LoginController@logout')->name('logout');
-    });
-
     Route::get('/account/setup/{role}', 'RolesController@setRole')->name('account.setup');
     Route::post('/account/setup/org', 'RolesController@createOrg')->name('account.org');
     Route::post('/account/setup/env', 'RolesController@createEnv')->name('account.env');

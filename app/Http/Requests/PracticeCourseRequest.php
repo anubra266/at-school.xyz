@@ -13,12 +13,7 @@ class PracticeCourseRequest extends FormRequest
      */
     public function authorize()
     {
-        $settings = authUser()->settings()->first();
-        $allow = false;
-        if ($settings && $settings->preferences->add_practice_questions->enabled) {
-            $allow = true;
-        }
-        return $allow;
+        return true;
     }
 
     /**

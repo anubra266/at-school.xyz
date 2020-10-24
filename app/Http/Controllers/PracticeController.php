@@ -9,6 +9,22 @@ use Illuminate\Http\Request;
 
 class PracticeController extends Controller
 {
+    /**
+     * Instantiate a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            $settings = authUser()->settings()->first();
+            if ($settings && $settings->preferences->add_practice_questions->enabled) {
+                return $next($request);
+            }
+            return backward();
+        });
+    }
+
     public function index()
     {
         $settings = authUser()->settings()->first();
@@ -23,6 +39,7 @@ class PracticeController extends Controller
 
     public function showCourse(PracticeCourse $course)
     {
-        dd($course);
+        $course->load('years');
+        return Inertia::render("Dashboard/practice/courses/", ["course" => $course]);
     }
 }
