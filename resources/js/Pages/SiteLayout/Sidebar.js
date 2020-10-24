@@ -48,7 +48,7 @@ function Sidebar({ mode, routes, layout, classroom }) {
                 <Space
                     style={{
                         paddingLeft: 10,
-                        paddingTop: 10,
+                        paddingTop: 10
                     }}
                 >
                     <img
@@ -110,9 +110,9 @@ function Sidebar({ mode, routes, layout, classroom }) {
                             message.loading("Logging you out...");
                         }}
                     >
-                        <a href={route("logout")}>
+                        <InertiaLink method="post" href={route("logout")}>
                             <span>Logout</span>
-                        </a>
+                        </InertiaLink>
                     </Menu.Item>
                 </Menu>
             </Sider>

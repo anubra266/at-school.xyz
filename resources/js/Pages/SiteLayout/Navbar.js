@@ -23,11 +23,12 @@ const { Header } = Layout;
 
 function Navbar(props) {
     const { auth, settings } = usePage();
-    const theme = (settings && settings.preferences && settings.preferences.theme);
+    const theme =
+        settings && settings.preferences && settings.preferences.theme;
     return (
         <React.Fragment>
             <Header
-                className={theme !== 'dark' && `site-layout-background`}
+                className={theme !== "dark" && `site-layout-background`}
                 style={{
                     padding: 0,
                     paddingRight: 20
@@ -55,27 +56,30 @@ function Navbar(props) {
 
 export default Navbar;
 
-
-
 const Notifications = () => {
-    const nots = [{ data: "You have a test coming up by 3PM" }, { data: "You missed mathematics test at 4" }]
+    const nots = [
+        { data: "You have a test coming up by 3PM" },
+        { data: "You missed mathematics test at 4" }
+    ];
     const NotificationMenu = (
         <List>
             {nots.map((item, key) => {
                 return (
                     <List.Item key={key}>
-                        <List.Item.Meta
-                            title={null}
-                            description={item.data}
-                        />
+                        <List.Item.Meta title={null} description={item.data} />
                     </List.Item>
-                )
+                );
             })}
         </List>
     );
 
     return (
-        <Popover placement="bottomRight" content={NotificationMenu} title={<span>Notifications</span>} trigger="click">
+        <Popover
+            placement="bottomRight"
+            content={NotificationMenu}
+            title={<span>Notifications</span>}
+            trigger="click"
+        >
             <Button
                 style={{
                     border: "none",
@@ -102,7 +106,7 @@ const UserDropDown = (
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
-            <InertiaLink href={route("logout")}>
+            <InertiaLink method="post" href={route("logout")}>
                 <span
                     onClick={() => {
                         message.loading("Logging you out...");

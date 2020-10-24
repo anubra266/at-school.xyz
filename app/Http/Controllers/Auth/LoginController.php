@@ -68,7 +68,6 @@ class LoginController extends Controller
      */
     protected function loggedOut(Request $request)
     {
-        //! Confirm how this works and apply to Template also
-        return Inertia::location(route('login'));
+        return redirect()->route('login');
     }
 }
