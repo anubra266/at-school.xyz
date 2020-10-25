@@ -15,6 +15,7 @@ const CategoriesList = ({ categories }) => {
     const [loading, toggleLoad] = useToggle(false);
     const courseRef = useRef();
     const createCourse = data => {
+        toggleLoad();
         Inertia.post(
             route("categories.courses.store", { category: data.category }),
             data
@@ -22,6 +23,7 @@ const CategoriesList = ({ categories }) => {
             if (!errors || Object.keys(errors).length === 0) {
                 courseRef.current.resetFields();
             }
+            toggleLoad();
         });
     };
     return (
@@ -95,6 +97,19 @@ const CategoriesList = ({ categories }) => {
                         title="Description"
                         dataIndex="description"
                         key="description"
+                    />
+                    <Table.Column
+                        title="Courses"
+                        dataIndex="name"
+                        key="courses"
+                        render={(a, b) => <a>{b.courses.length}</a>}
+                        sorter={(a, b) =>
+                            a.courses.length === b.courses.length
+                                ? 0
+                                : a.courses.length < b.courses.length
+                                ? -1
+                                : 1
+                        }
                     />
                 </Table>
             )}

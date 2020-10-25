@@ -50,7 +50,6 @@ const sidebar = ({
         <React.Fragment>
             <Sider
                 collapsible
-                onCollapse={toggleCollapse}
                 collapsed={collapsed}
                 theme="dark"
                 style={{

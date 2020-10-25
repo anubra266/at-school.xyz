@@ -13,7 +13,7 @@ class ObjectiveTest extends Model
         return $this->belongsTo(Classroom::class);
     }
 
-    public function questions()
+    public function questions() 
     {
         return $this->hasMany(Question::class, 'obj_test_id');
     }

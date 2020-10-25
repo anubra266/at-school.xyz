@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use App\PracticeYear;
 use App\PracticeCourse;
 use App\PracticeCategory;
 use Illuminate\Http\Request;
+use App\Services\QuestionService;
 
 class PracticeController extends Controller
 {
@@ -14,15 +16,9 @@ class PracticeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(QuestionService $QuestionService)
     {
-        $this->middleware(function ($request, $next) {
-            $settings = authUser()->settings()->first();
-            if ($settings && $settings->preferences->add_practice_questions->enabled) {
-                return $next($request);
-            }
-            return backward();
-        });
+        $this->QuestionService = $QuestionService;
     }
 
     public function index()
@@ -39,7 +35,14 @@ class PracticeController extends Controller
 
     public function showCourse(PracticeCourse $course)
     {
-        $course->load('years');
+        $course->load(['years' => fn ($q) => $q->orderBy('year', 'asc')->withCount('questions')]);
         return Inertia::render("Dashboard/practice/courses/", ["course" => $course]);
+    }
+
+    public function showYear(PracticeCourse $course, PracticeYear $year)
+    {
+        $year->load(['questions.options', 'questions.solution']);
+        $data =  ['course' => $course, 'year' => $year];
+        return Inertia::render("Dashboard/practice/upload/index/", $data);
     }
 }

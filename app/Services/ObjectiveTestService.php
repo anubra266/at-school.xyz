@@ -77,15 +77,16 @@ class ObjectiveTestService
     public function take($classroom, $test)
     {
         $classroom = $classroom->load('User');
-        $test->load(['questions.options' => function ($q) {
-            $q->exclude('is_correct');
-        }]);
-        return ['classroom' => $classroom, 'test' => $test];
+        $test->load([
+            "questions" => fn ($q) => $q->inRandomOrder(),
+            "questions.options" => fn ($q) => $q->inRandomOrder()->exclude('is_correct')
+        ]);
+        return ["classroom" => $classroom, "test" => $test];
     }
     public function review($classroom, $test)
     {
         $classroom = $classroom->load('User');
-        $test->load(['questions.options.answers' => function ($q) {
+        $test->load(["questions.options.answers" => function ($q) {
             $q->whereUser_id(authUser()->id);
         }]);
         $test->noCountdown = true;

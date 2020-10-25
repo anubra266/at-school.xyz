@@ -18,8 +18,10 @@ class CreateQuestionsTable extends Migration
             $table->longText('question');
             $table->unsignedBigInteger('obj_test_id')->nullable();
             $table->unsignedBigInteger('theory_test_id')->nullable();
+            $table->unsignedBigInteger('practice_year_id')->nullable();
             $table->foreign('obj_test_id')->references('id')->on('objective_tests',)->onDelete('cascade');
             $table->foreign('theory_test_id')->references('id')->on('theory_tests')->onDelete('cascade');
+            $table->foreign('practice_year_id')->references('id')->on('practice_years')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class PracticeYear extends Model
 {
     protected $guarded = [];
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class, 'practice_year_id');
+    }
 }

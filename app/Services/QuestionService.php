@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Question;
 use App\TheoryTest;
 use App\ObjectiveTest;
+use App\PracticeYear;
 
 class QuestionService
 {
@@ -15,7 +16,17 @@ class QuestionService
     }
     public function getTest($request)
     {
-        return $request->type === 'objective' ? ObjectiveTest::class : TheoryTest::class;
+        switch ($request->type) {
+            case 'objective':
+                return ObjectiveTest::class;
+                break;
+            case 'theory':
+                return TheoryTest::class;
+                break;
+            default:
+                return PracticeYear::class;
+                break;
+        }
     }
     public function store($request)
     {

@@ -32,9 +32,7 @@ php artisan key:generate
 
 php artisan ziggy:generate
 
-php artisan migrate
-
-php artisan db:seed --class=RolesSeeder
+php artisan migrate --seed
 
 php artisan storage:link
 ```

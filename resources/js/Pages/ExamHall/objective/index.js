@@ -25,13 +25,7 @@ const Index = props => {
     const [revisit, setRevisit] = useState({});
 
     const { classroom, test } = props;
-    const [questions, setQuestions] = useState([]);
-    useEffect(() => {
-        setQuestions(() => {
-            test.questions.forEach(question => useShuffle(question.options));
-            return useShuffle(test.questions);
-        });
-    }, []);
+    const { questions } = test;
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
     const [drawer, drawerSwitch] = useToggle(false);
@@ -88,7 +82,7 @@ const Index = props => {
     };
 
     return (
-        <Halllayout {...layoutProps}> 
+        <Halllayout {...layoutProps}>
             <Content style={{ margin: "15px 16px", height: "100%" }}>
                 <Row gutter={[0, 16]}>
                     {questions.map((question, index) => {
