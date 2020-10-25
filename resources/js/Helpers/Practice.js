@@ -11,13 +11,13 @@ class PTest {
         if (is_new) {
             data.id = test.id;
             //? if it's a new question then create
-            Inertia.post(route(`question.create`), data).then(() =>
+            Inertia.post(route(`practice.question.create`), data).then(() =>
                 this.setLoading(false)
             );
         } else {
             //? if not update the previous question
             data.id = this.question.id;
-            Inertia.patch(route(`question.update`), data).then(() =>
+            Inertia.patch(route(`practice.question.update`), data).then(() =>
                 this.setLoading(false)
             );
         }
@@ -26,7 +26,7 @@ class PTest {
     deletequestion() {
         this.setLoading(true);
         Inertia.post(
-            route(`question.delete`, {
+            route(`practice.question.delete`, {
                 question: this.question.id
             })
         ).then(() => this.setLoading(false));
@@ -45,7 +45,7 @@ class PTest {
     add_option(data) {
         this.setLoading(true);
         Inertia.post(
-            route(`option.create`, {
+            route(`practice.option.create`, {
                 question: this.question.id
             }),
             data
@@ -54,7 +54,7 @@ class PTest {
     setCorrectOption(option) {
         this.setLoading(true);
         Inertia.post(
-            route(`option.correct`, {
+            route(`practice.option.correct`, {
                 question: this.question.id,
                 option: option
             })
@@ -63,7 +63,7 @@ class PTest {
     delete_option(option) {
         this.setLoading(true);
         Inertia.post(
-            route(`option.destroy`, {
+            route(`practice.option.destroy`, {
                 option: option
             })
         ).then(() => this.setLoading(false));
@@ -74,7 +74,7 @@ class PTest {
         data.id = old_solution ? old_solution.id : null;
         this.setLoading(true);
         Inertia.post(
-            route(`solution.save`, {
+            route(`practice.solution.save`, {
                 question: this.question.id
             }),
             data

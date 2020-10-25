@@ -6,7 +6,7 @@ import { Inertia } from "@inertiajs/inertia";
 
 const min_options = 2;
 
-export const uploadQuestions = (questions, file, test, classroom) => {
+export const uploadQuestions = (questions, file, course, year) => {
     questions = questions.slice(1).reduce((acc, nxt) => {
         const question = nxt[0];
         const options = nxt.filter((option, i) => i !== 0 && !!option);
@@ -99,13 +99,13 @@ export const uploadQuestions = (questions, file, test, classroom) => {
                         )}
                     </p>
                     <p>
-                        <strong>What to do?</strong>
+                        <strong>You have two options?</strong>
                     </p>
                     <p>
-                        ✴️ <strong>Cancel Upload</strong> and correct the
-                        invalid questions.
+                        ✴️ You can <strong>Cancel Upload</strong> and correct
+                        the invalid questions.
                         <br />
-                        ✴️ We've extracted the errors for you,{" "}
+                        ✴️ But, we've extracted the errors for you, you can{" "}
                         <strong>upload the correct questions,</strong> then
                         download the extract for correction.
                     </p>
@@ -114,7 +114,7 @@ export const uploadQuestions = (questions, file, test, classroom) => {
             centered: true,
             okText: (
                 <Workbook
-                    filename={`Invalid Questions for ${test.title}.xlsx`}
+                    filename={`Invalid Questions for year ${year.year}, ${course.name}.xlsx`}
                     element={"Upload Correct😄"}
                 >
                     <Workbook.Sheet data={qDownload} name="Errors">
@@ -148,18 +148,18 @@ export const uploadQuestions = (questions, file, test, classroom) => {
                 </Workbook>
             ),
             onOk() {
-                insertQuestions(validQuestions, "some", classroom, test);
+                insertQuestions(validQuestions, "some", year);
             },
             okType: "primary",
             cancelText: "Cancel"
         });
     } else {
         //? upload all questions
-        insertQuestions(questions, "all", classroom, test);
+        insertQuestions(questions, "all", year);
     }
 };
 
-const insertQuestions = (questions, type, classroom, test) => {
+const insertQuestions = (questions, type, year) => {
     questions = questions.reduce((acc, nxt) => {
         const options = nxt.options.reduce((acc, nxt, i) => {
             const option = {};
@@ -172,10 +172,9 @@ const insertQuestions = (questions, type, classroom, test) => {
         return acc;
     }, []);
 
-    Inertia.post(route("question.import", { classroom: classroom.hash }), {
+    Inertia.post(route("practice.question.import"), {
         questions,
-        test: test.id,
-        type: "objective",
+        test: year.id,
         mode: type
     });
 };

@@ -15,14 +15,14 @@ import { uploadQuestions } from "./import";
 const EditHeader = ({ course, year, question, is_new, PTesti, loading }) => {
     const [visible, setVisible] = useState(false);
 
-    // const solutionProps = {
-    //     question,
-    //     is_new,
-    //     PTesti,
-    //     visible,
-    //     setVisible,
-    //     loading
-    // };
+    const solutionProps = {
+        question,
+        is_new,
+        PTesti,
+        visible,
+        setVisible,
+        loading
+    };
 
     const [fileList, updateFileList] = useState([]);
     const uploadProps = {
@@ -42,7 +42,7 @@ const EditHeader = ({ course, year, question, is_new, PTesti, loading }) => {
                         return false;
                     } else {
                         const questions = resp.rows;
-                        // uploadQuestions(questions, file, test, classroom);
+                        uploadQuestions(questions, file, course, year);
                     }
                 });
             }
@@ -79,8 +79,8 @@ const EditHeader = ({ course, year, question, is_new, PTesti, loading }) => {
                         >
                             Add Solution
                         </Button>
-                    </Tooltip>
-                    // <Solution key="soleditor" {...solutionProps} />
+                    </Tooltip>,
+                    <Solution key="soleditor" {...solutionProps} />
                 ]}
             >
                 <Descriptions size="small">

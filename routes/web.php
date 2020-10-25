@@ -33,19 +33,19 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('practice/{course}/{year}', 'PracticeController@showYear')->name('practice.course.year');
 
             Route::post('practice/question', 'PracticeController@storeQuestion')->name('practice.question.create');
-            Route::patch('practice/question', 'QuestionController@update')->name('practice.question.update');
-            Route::post('practice/question/{question}', 'QuestionController@destroy')->name('practice.question.delete');
+            Route::patch('practice/question', 'PracticeController@updateQuestion')->name('practice.question.update');
+            Route::post('practice/question/{question}', 'PracticeController@destroyQuestion')->name('practice.question.delete');
 
             //? Options
-            Route::post('practice/question/{question}/option', 'ObjectiveOptionController@store')->name('practice.option.create');
-            Route::post('practice/question/{question}/correct/{option}', 'ObjectiveOptionController@correctOption')->name('practice.option.correct');
-            Route::post('practice/option/{option}', 'ObjectiveOptionController@destroy')->name('practice.option.destroy');
+            Route::post('practice/question/{question}/option', 'PracticeController@storeOption')->name('practice.option.create');
+            Route::post('practice/question/{question}/correct/{option}', 'PracticeController@correctOption')->name('practice.option.correct');
+            Route::post('practice/option/{option}', 'PracticeController@destroyOption')->name('practice.option.destroy');
 
             //? Solution
-            Route::post('practice/question/{question}/solution', 'SolutionController@save')->name('practice.solution.save');
+            Route::post('practice/question/{question}/solution', 'PracticeController@saveSolution')->name('practice.solution.save');
 
             //? Import from Excel
-            Route::post('practice/questionimp', 'QuestionController@import')->name('practice.question.import');
+            Route::post('practice/questionimp', 'PracticeController@importQuestion')->name('practice.question.import');
         });
 
 
