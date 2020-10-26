@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "antd/lib/layout";
+import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 import Header from "./edit-header";
 import PTest from "@/Helpers/Practice";
@@ -34,15 +35,12 @@ const Edit = ({ course, year, Test }) => {
         loading
     };
     return (
-        <Workspacelayout
-            title={`Edit year ${year.year}, ${course.name}`}
-            classroom={course}
-        >
+        <Dashboardlayout title={`Edit year ${year.year}, ${course.name}`}>
             <Layout.Content style={{ margin: "0 16px" }}>
                 <Header {...headerProps} />
                 <Test {...testProps} />
             </Layout.Content>
-        </Workspacelayout>
+        </Dashboardlayout>
     );
 };
 export default Edit;

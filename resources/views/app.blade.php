@@ -29,35 +29,35 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <!--include assets required for Inertia app here -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"">
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+    <link href=" {{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <!-- End assets call-->
-    <title>at-School</title>
+        <title>at-School</title>
     <!--backend routes -->
     @routes
-    <!-- ------------- -->
+        <!-- ------------- -->
 </head>
 
 <body>
     <!-- App -->
     @inertia
-    <!-- --- -->
-    <script src="/landing/jquery-3.3.1.min.js"></script>
-    <script src="/landing/jquery-migrate-3.0.1.min.js"></script>
-    <script src="/landing/jquery-ui.js"></script>
-    <script src="/landing/popper.min.js"></script>
-    <script src="/landing/bootstrap.min.js"></script>
-    <script src="/landing/owl.carousel.min.js"></script>
-    <script src="/landing/jquery.stellar.min.js"></script>
-    <script src="/landing/jquery.countdown.min.js"></script>
-    <script src="/landing/bootstrap-datepicker.min.js"></script>
-    <script src="/landing/jquery.easing.1.3.js"></script>
-    <script src="/landing/aos.js"></script>
-    <script src="/landing/jquery.fancybox.min.js"></script>
-    <script src="/landing/jquery.sticky.js"></script>
+        <!-- --- -->
+        <script src="/landing/jquery-3.3.1.min.js"></script>
+        <script src="/landing/jquery-migrate-3.0.1.min.js"></script>
+        <script src="/landing/jquery-ui.js"></script>
+        <script src="/landing/popper.min.js"></script>
+        <script src="/landing/bootstrap.min.js"></script>
+        <script src="/landing/owl.carousel.min.js"></script>
+        <script src="/landing/jquery.stellar.min.js"></script>
+        <script src="/landing/jquery.countdown.min.js"></script>
+        <script src="/landing/bootstrap-datepicker.min.js"></script>
+        <script src="/landing/jquery.easing.1.3.js"></script>
+        <script src="/landing/aos.js"></script>
+        <script src="/landing/jquery.fancybox.min.js"></script>
+        <script src="/landing/jquery.sticky.js"></script>
 
 
-    <script src="/landing/main.js"></script>
+        <script src="/landing/main.js"></script>
 </body>
 
 </html>
