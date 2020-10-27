@@ -173,7 +173,7 @@ const Practice = ({ categories }) => {
                         <Form.Item
                             noStyle
                             shouldUpdate={(prevValues, currentValues) =>
-                                prevValues.year !== currentValues.year
+                                prevValues.questions !== currentValues.questions
                             }
                         >
                             {({ getFieldValue, setFieldsValue }) => {
@@ -216,8 +216,8 @@ const Practice = ({ categories }) => {
                                             type="primary"
                                             htmlType="submit"
                                         >
-                                            Go
-                                        </Button>
+                                            Start Test
+                                        </Button>{" "}
                                     </Form.Item>
                                 ) : null;
                             }}

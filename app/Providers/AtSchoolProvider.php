@@ -36,5 +36,15 @@ class AtSchoolProvider extends ServiceProvider
             $code = CreateCode([$this, $prefix, $faker]);
             return $code;
         });
+
+        Builder::macro('isEligible', function () {
+            return $this->has('options')
+                ->whereHas(
+                    'options',
+                    fn ($q) => $q->where('is_correct', true),
+                    '=',
+                    1
+                );;
+        });
     }
 }

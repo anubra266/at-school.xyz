@@ -34,7 +34,7 @@ class PracticeController extends Controller
         $settings = authUser()->settings()->first();
         $user_role = authUser()->initial_role;
         $path = $user_role === "student" ? 'student' : 'educator';
-        $categories = PracticeCategory::all()->load(['courses.years.questions']);
+        $categories = PracticeCategory::all()->load(['courses.years.questions' => fn ($q) => $q->isEligible()]);
         if ($path === 'student' || ($settings && $settings->preferences->add_practice_questions->enabled)) {
             return Inertia::render("Dashboard/practice/$path/", ["categories" => $categories]);
         }
@@ -102,7 +102,7 @@ class PracticeController extends Controller
     public function practice(Request $request)
     {
         $year = PracticeYear::findOrFail($request->year);
-        $questions = $year->questions()->count();
+        $questions = $year->questions()->isEligible()->count();
         $request = $request->validate([
             'questions' => "required|integer|max:$questions",
             'time' => "required|integer|min:1",
@@ -118,7 +118,8 @@ class PracticeController extends Controller
     {
         $year->load([
             'course',
-            "questions" => fn ($q) => $q->inRandomOrder(),
+            "questions" => fn ($q) => $q->isEligible()
+                ->inRandomOrder()->take($questions),
             "questions.options" => fn ($q) => $q->inRandomOrder()->exclude('is_correct')
         ]);
         $data = [
