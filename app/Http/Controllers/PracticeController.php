@@ -34,7 +34,7 @@ class PracticeController extends Controller
         $settings = authUser()->settings()->first();
         $user_role = authUser()->initial_role;
         $path = $user_role === "student" ? 'student' : 'educator';
-        $categories = PracticeCategory::all()->load('courses');
+        $categories = PracticeCategory::all()->load(['courses.years.questions']);
         if ($path === 'student' || ($settings && $settings->preferences->add_practice_questions->enabled)) {
             return Inertia::render("Dashboard/practice/$path/", ["categories" => $categories]);
         }
@@ -97,5 +97,34 @@ class PracticeController extends Controller
     {
         $this->solutionService->save($question, $request);
         return redirect()->back()->with('success', "Solution Saved Successfully");
+    }
+
+    public function practice(Request $request)
+    {
+        $year = PracticeYear::findOrFail($request->year);
+        $questions = $year->questions()->count();
+        $request = $request->validate([
+            'questions' => "required|integer|max:$questions",
+            'time' => "required|integer|min:1",
+        ]);
+        return visit(['practice.year.take', [
+            'year' => $year,
+            "questions" => $request['questions'],
+            "time" => $request['time'],
+        ]]);
+    }
+
+    public function goPractice(PracticeYear $year, $questions, $time)
+    {
+        $year->load([
+            'course',
+            "questions" => fn ($q) => $q->inRandomOrder(),
+            "questions.options" => fn ($q) => $q->inRandomOrder()->exclude('is_correct')
+        ]);
+        $data = [
+            "year" => $year,
+            "time" => $time,
+        ];
+        return Inertia::render("Dashboard/practice/hall/objective/", $data);
     }
 }

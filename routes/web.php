@@ -47,6 +47,9 @@ Route::group(['middleware' => ['auth']], function () {
             //? Import from Excel
             Route::post('practice/questionimp', 'PracticeController@importQuestion')->name('practice.question.import');
         });
+        Route::post('practice/year', 'PracticeController@practice')->name('practice.year');
+        Route::get('practice/year/{year}/{questions}/{time}', 'PracticeController@goPractice')->name('practice.year.take');
+        Route::post('practice/submit', 'PracticeAnswerController@goPractice')->name('practice.submit');
 
 
         //? Settings route
