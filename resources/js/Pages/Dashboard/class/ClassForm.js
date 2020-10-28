@@ -1,7 +1,8 @@
 import React from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import Button from "antd/lib/button";
-import { Form, Input } from "antd";
+import Form from "antd/lib/form";
+import Input from "antd/lib/input";
 
 const ClassForm = ({ loading, onFinish, ClsForm }) => {
     const { errors } = usePage();
@@ -25,7 +26,7 @@ const ClassForm = ({ loading, onFinish, ClsForm }) => {
                 validateStatus={errors.code && "error"}
                 help={errors.code && errors.code[0]}
             >
-                <Input placeholder="Classroom Code" /> 
+                <Input placeholder="Classroom Code" />
             </Form.Item>
 
             <Form.Item>

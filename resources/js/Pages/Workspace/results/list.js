@@ -2,7 +2,9 @@ import React, { useState, useRef } from "react";
 import Card from "antd/lib/card";
 import Space from "antd/lib/space";
 import Tooltip from "antd/lib/tooltip";
-import { List, Avatar } from "antd";
+
+import List from "antd/lib/list";
+import Avatar from "antd/lib/avatar";
 import FileTextOutlined from "@ant-design/icons/FileTextOutlined";
 
 import { usePlural } from "@/Helpers/usePlural";

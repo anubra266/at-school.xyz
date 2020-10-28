@@ -5,21 +5,14 @@ import Card from "antd/lib/card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 
-import Halllayout from "@/Pages/ExamHall/HallLayout/";
+import Halllayout from "@/Pages/Dashboard/practice/hall/HallLayout";
 import { ROption } from "./roption.jsx";
 
 const { Content } = Layout;
-import { useShuffle } from "./handler";
 const parse = require("html-react-parser");
 const Review = props => {
-    const { test } = props;
-    const [questions, setQuestions] = useState([]);
-    useEffect(() => {
-        setQuestions(() => {
-            test.questions.forEach(question => useShuffle(question.options));
-            return useShuffle(test.questions);
-        });
-    }, []);
+    const { test, year } = props;
+    const { questions } = year;
     const layoutProps = { ...props };
     return (
         <Halllayout {...layoutProps}>

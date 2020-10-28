@@ -1,7 +1,8 @@
 import React from "react";
 import { usePage } from "@inertiajs/inertia-react";
 import Button from "antd/lib/button";
-import { Form, Input } from "antd";
+import Form from "antd/lib/form";
+import Input from "antd/lib/input";
 
 const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
     const { errors } = usePage();

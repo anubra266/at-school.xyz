@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+//TODO make practice selects searchable
 Route::group(['middleware' => ['guest']], function () {
     //?Index route
     Route::get('/', 'PublicController@landing')->name('landing');
@@ -48,8 +49,9 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('practice/questionimp', 'PracticeController@importQuestion')->name('practice.question.import');
         });
         Route::post('practice/year', 'PracticeController@practice')->name('practice.year');
-        Route::get('practice/year/{year}/{questions}/{time}', 'PracticeController@goPractice')->name('practice.year.take');
-        Route::post('practice/submit', 'PracticeAnswerController@goPractice')->name('practice.submit');
+        Route::get('practice/year/{year}/{test}/{questions}/{time}', 'PracticeController@goPractice')->name('practice.year.take');
+        Route::post('practice/submit/{test}/{year}', 'PracticeAnswerController@saveTest')->name('practice.submit');
+        Route::get('practice/review/{test}/{year}', 'PracticeAnswerController@reviewTest')->name('practice.review');
 
 
         //? Settings route

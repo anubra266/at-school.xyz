@@ -2,10 +2,10 @@
 
 namespace App;
 
+use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -69,6 +69,16 @@ class User extends Authenticatable
     public function objectiveResults()
     {
         return $this->hasMany(ObjectiveResult::class);
+    }
+
+    public function practiceAnswers()
+    {
+        return $this->hasMany(PracticeAnswer::class);
+    }
+
+    public function practiceResults()
+    {
+        return $this->hasMany(PracticeResult::class);
     }
     public function theoryResults()
     {

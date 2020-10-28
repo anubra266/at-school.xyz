@@ -24,24 +24,29 @@ const sidebar = ({
     drawerSwitch,
     confirm_submit,
     year,
-    time
+    time,
+    test,
+    response
 }) => {
     const [showCalculator, toggleCalculator] = useToggle(false);
     const [collapsed, toggleCollapse] = useToggle(true);
     const [startDate, setStartDate] = useState(Date.now());
+    const showCal = !test.noCountdown && !response
     const countdown = (prefix = "", style, main) => {
         return (
-            <Statistic.Countdown
-                value={startDate + time * 60000}
-                format="HH:mm:ss"
-                prefix={prefix}
-                valueStyle={style}
-                onFinish={() => main && submitTest()}
-            />
+            showCal && (
+                <Statistic.Countdown
+                    value={startDate + time * 60000}
+                    format="HH:mm:ss"
+                    prefix={prefix}
+                    valueStyle={style}
+                    onFinish={() => main && submitTest()}
+                />
+            )
         );
     };
     const leave = () => {
-        Inertia.visit(route("home"));
+        Inertia.visit(route("practice"));
     };
     return (
         <React.Fragment>
@@ -125,7 +130,7 @@ const sidebar = ({
                 </div>
             )}
 
-            {!showCalculator && (
+            {!showCalculator && showCal && (
                 <div className="fixedCountdown">
                     {countdown("", { color: "white" }, "main")}
                 </div>

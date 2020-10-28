@@ -12,4 +12,9 @@ class PracticeCourse extends Model
     {
         return $this->hasMany(PracticeYear::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(PracticeCategory::class, 'practice_category_id');
+    }
 }

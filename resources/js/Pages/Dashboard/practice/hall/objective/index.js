@@ -24,7 +24,7 @@ const Index = props => {
     const { response } = usePage();
     const [revisit, setRevisit] = useState({});
 
-    const { year } = props;
+    const { year, test } = props;
     const { course, questions } = year;
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
@@ -49,18 +49,18 @@ const Index = props => {
         });
     };
     const submitTest = resolve => {
-        // setLoading(true);
-        // const formParams = { classroom: classroom.hash, test: test.id };
-        // const formData = { answers: data };
-        // Inertia.post(route("objective.answer", formParams), formData).then(
-        //     () => {
-        //         setLoading(false);
-        //         resolve && resolve();
-        //     }
-        // );
+        setLoading(true);
+        const formData = { answers: data, total: questions.length };
+        Inertia.post(
+            route("practice.submit", { year: year, test: test }),
+            formData
+        ).then(() => {
+            setLoading(false);
+            resolve && resolve();
+        });
     };
     const handleChange = e => {
-        let ind = change(e, setData);
+        let ind = change(e, setData, test);
         revisit[ind] && toggleVisit(ind, false);
     };
     const toggleVisit = (i, status = true) => {
@@ -70,7 +70,7 @@ const Index = props => {
         }));
     };
     const questionRefs = useDynamicRefs(questions);
-    const layoutProps = { ...props, submitTest, confirm_submit, drawerSwitch };
+    const layoutProps = { ...props, submitTest, confirm_submit, drawerSwitch,response };
     const drawerProps = {
         drawer,
         drawerSwitch,

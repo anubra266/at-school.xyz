@@ -9,7 +9,7 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import Header from "./Header";
 import { usePage } from "@inertiajs/inertia-react";
 import { Inertia } from "@inertiajs/inertia";
-const Practice = ({ categories }) => {
+const Practice = ({ categories, results }) => {
     const [loading, setLoading] = useState(false);
     const practice = data => {
         setLoading(true);
@@ -22,11 +22,14 @@ const Practice = ({ categories }) => {
     return (
         <Dashboardlayout title="Personal Practice">
             <Layout.Content style={{ margin: "0 16px" }}>
-                <Header />
+                <Header results={results} />
                 <Card>
                     <Form layout="vertical" onFinish={practice}>
                         <Form.Item name="category" label="Category">
-                            <Select placeholder="Select Category" size="large">
+                            <Select
+                                placeholder="What are you preparing for?"
+                                size="large"
+                            >
                                 {categories.map(category => (
                                     <Select.Option
                                         key={category.id}

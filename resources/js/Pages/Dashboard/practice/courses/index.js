@@ -10,7 +10,8 @@ import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 import Header from "./header";
 import { Inertia } from "@inertiajs/inertia";
 import { usePage, InertiaLink } from "@inertiajs/inertia-react";
-import { Form, Input } from "antd";
+import Form from "antd/lib/form";
+import Input from "antd/lib/input";
 import route from "ziggy-js";
 const { Content } = Layout;
 

@@ -17,4 +17,9 @@ class Question extends Model
     {
         return $this->hasOne(Solution::class);
     }
+
+    public function practiceAnswers()
+    {
+        return $this->hasMany(PracticeAnswer::class);
+    }
 }

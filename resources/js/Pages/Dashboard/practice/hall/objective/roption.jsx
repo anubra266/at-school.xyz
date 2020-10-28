@@ -6,7 +6,7 @@ import { radioStyle } from "./handler";
 export const ROption = ({ question, index }) => {
     const { options } = question;
     const userAnswer = options.reduce((acc, nxt) => {
-        if (nxt.answers.length > 0) {
+        if (nxt.practice_answers.length > 0) {
             acc = nxt.id;
         }
         return acc;

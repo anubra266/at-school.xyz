@@ -1,9 +1,10 @@
-export const change = (e, setData) => {
+export const change = (e, setData, test) => {
     const [index, question_id] = e.target.name;
     const objective_option_id = e.target.value;
     setData(values => {
         var newData = [...values];
         newData[index] = {
+            practice_test_id: test.id,
             question_id,
             objective_option_id
         };

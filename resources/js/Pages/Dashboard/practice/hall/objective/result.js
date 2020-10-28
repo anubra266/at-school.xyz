@@ -5,12 +5,12 @@ import Button from "antd/lib/button";
 import { Inertia } from "@inertiajs/inertia";
 
 const result = ({ response, props }) => {
-    const { year } = props;
+    const { year, test } = props;
     const reviewTest = () => {
-        Inertia.visit(route("objective.review"));
+        Inertia.visit(route("practice.review", { year, test }));
     };
     const leave = () => {
-        Inertia.visit(route("classroom.home"));
+        Inertia.visit(route("practice"));
     };
     return (
         <div>

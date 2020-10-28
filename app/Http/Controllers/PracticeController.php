@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Services\QuestionService;
 use App\Http\Requests\QuestionRequest;
 use App\Http\Requests\SolutionRequest;
+use App\PracticeTest;
 use App\Services\ObjectiveOptionService;
 use App\Services\SolutionService;
 
@@ -36,7 +37,15 @@ class PracticeController extends Controller
         $path = $user_role === "student" ? 'student' : 'educator';
         $categories = PracticeCategory::all()->load(['courses.years.questions' => fn ($q) => $q->isEligible()]);
         if ($path === 'student' || ($settings && $settings->preferences->add_practice_questions->enabled)) {
-            return Inertia::render("Dashboard/practice/$path/", ["categories" => $categories]);
+            $results = authUser()->practiceResults()->get();
+            $results->load('test.year.course.category');
+            return Inertia::render(
+                "Dashboard/practice/$path/",
+                [
+                    "categories" => $categories,
+                    "results" => $results
+                ]
+            );
         }
         return redirect()->route('home');
     }
@@ -107,14 +116,16 @@ class PracticeController extends Controller
             'questions' => "required|integer|max:$questions",
             'time' => "required|integer|min:1",
         ]);
+        $test = $year->tests()->create(['user_id' => authUser()->id]);
         return visit(['practice.year.take', [
             'year' => $year,
+            'test' => $test,
             "questions" => $request['questions'],
             "time" => $request['time'],
         ]]);
     }
 
-    public function goPractice(PracticeYear $year, $questions, $time)
+    public function goPractice(PracticeYear $year, PracticeTest $test, $questions, $time)
     {
         $year->load([
             'course',
@@ -125,6 +136,7 @@ class PracticeController extends Controller
         $data = [
             "year" => $year,
             "time" => $time,
+            "test" => $test,
         ];
         return Inertia::render("Dashboard/practice/hall/objective/", $data);
     }

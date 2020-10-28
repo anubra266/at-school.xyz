@@ -19,4 +19,9 @@ class ObjectiveOption extends Model
     {
         return $this->hasMany(ObjectiveAnswer::class);
     }
+
+    public function practiceAnswers()
+    {
+        return $this->hasMany(PracticeAnswer::class);
+    }
 }

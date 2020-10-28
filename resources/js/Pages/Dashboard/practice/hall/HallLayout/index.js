@@ -17,7 +17,9 @@ const index = ({
     confirm_submit,
     children,
     year,
-    time
+    time,
+    test,
+    response
 }) => {
     document.title = `${year.course.name}, ${year.year} - Personal Practice`;
     useFlashMessage();
@@ -35,7 +37,9 @@ const index = ({
         drawerSwitch,
         confirm_submit,
         year,
-        time
+        time,
+        test,
+        response
     };
     return (
         <div ref={ref}>
