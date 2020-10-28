@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
     }
 
     public function registerInertia()
@@ -95,7 +96,7 @@ class AppServiceProvider extends ServiceProvider
                 return Session::get('response');
             },
             'notifications' => function () {
-                return authUser() ? authUser()->unreadNotifications : null;
+                return authUser() ? authUser()->unreadNotifications()->latest()->take(3)->get() : null;
             },
         ]);
     }
