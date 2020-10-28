@@ -13,9 +13,9 @@ class RolesService
         $organization = $request->validated();
         //*generate random code with faker
         $organization['code'] = Organization::generateCode('ORG');
+        authUser()->assignRole('organization_admin');
         //*create organization
         $organization = authUser()->organizations()->create($organization);
-        authUser()->assignRole('organization_admin');
         return $organization;
     }
     public function createEnv($request)
@@ -30,9 +30,9 @@ class RolesService
         $environ['organization_id'] = $organization->id;
         //*generate random code with faker
         $environ['code'] = Environ::generateCode('ENV');
+        authUser()->assignRole('department_head');
         //*create environ
         $environ = authUser()->environs()->create($environ);
-        authUser()->assignRole('department_head');
         return $environ;
     }
 
@@ -48,9 +48,9 @@ class RolesService
         $classroom['environ_id'] = $environ->id;
         //*generate random code with faker
         $classroom['code'] = Classroom::generateCode('CRM');
+        authUser()->assignRole('educator');
         //*create environ
         $classroom = authUser()->classrooms()->create($classroom);
-        authUser()->assignRole('educator');
         return $environ;
     }
 
@@ -58,6 +58,7 @@ class RolesService
     {
         $classroom_code = $request->validated();
         $classroom = Classroom::whereCode($classroom_code)->first();
+        authUser()->assignRole('student');
         if (!$classroom) {
             return [null, 'Invalid Classroom code!'];
         } elseif ($classroom->user_id === authUser()->id) {
@@ -66,7 +67,6 @@ class RolesService
             return [null, 'You\'re already a member of this Class!'];
         }
         $classroom->students()->attach(authUser()->id);
-        authUser()->assignRole('student');
         return [$classroom, false];
     }
 
