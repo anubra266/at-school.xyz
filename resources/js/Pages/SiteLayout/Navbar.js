@@ -22,9 +22,10 @@ import Main from "@/Helpers/Main.js";
 const { Header } = Layout;
 
 function Navbar(props) {
-    const { auth, settings } = usePage();
+    const { auth, settings, notifications } = usePage();
     const theme =
         settings && settings.preferences && settings.preferences.theme;
+
     return (
         <React.Fragment>
             <Header
@@ -41,7 +42,7 @@ function Navbar(props) {
                     align="middle"
                 >
                     <Col>
-                        <Badge count={5} overflowCount={10}>
+                        <Badge count={notifications.length} overflowCount={10}>
                             <Notifications />
                         </Badge>
                     </Col>
@@ -57,16 +58,21 @@ function Navbar(props) {
 export default Navbar;
 
 const Notifications = () => {
+    const { notifications } = usePage();
+
     const nots = [
         { data: "You have a test coming up by 3PM" },
         { data: "You missed mathematics test at 4" }
     ];
     const NotificationMenu = (
         <List>
-            {nots.map((item, key) => {
+            {notifications.map((item, key) => {
                 return (
                     <List.Item key={key}>
-                        <List.Item.Meta title={null} description={item.data} />
+                        <List.Item.Meta
+                            title={null}
+                            description={item.data.body}
+                        />
                     </List.Item>
                 );
             })}

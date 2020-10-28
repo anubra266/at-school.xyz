@@ -94,6 +94,9 @@ class AppServiceProvider extends ServiceProvider
             'response' => function () {
                 return Session::get('response');
             },
+            'notifications' => function () {
+                return authUser() ? authUser()->unreadNotifications : null;
+            },
         ]);
     }
 }
