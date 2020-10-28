@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//TODO make practice selects searchable
+//TODO Sync Settings
 Route::group(['middleware' => ['guest']], function () {
     //?Index route
     Route::get('/', 'PublicController@landing')->name('landing');

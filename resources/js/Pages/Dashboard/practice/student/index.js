@@ -29,6 +29,12 @@ const Practice = ({ categories, results }) => {
                             <Select
                                 placeholder="What are you preparing for?"
                                 size="large"
+                                showSearch
+                                optionFilterProp="children"
+                                filterOption
+                                notFoundContent={
+                                    <a>That Category is not uploaded yet. 🥺</a>
+                                }
                             >
                                 {categories.map(category => (
                                     <Select.Option
@@ -56,6 +62,15 @@ const Practice = ({ categories, results }) => {
                                         <Select
                                             placeholder="Select Course"
                                             size="large"
+                                            showSearch
+                                            optionFilterProp="children"
+                                            filterOption
+                                            notFoundContent={
+                                                <a>
+                                                    That Course is not uploaded
+                                                    yet. 🥺
+                                                </a>
+                                            }
                                         >
                                             {category.courses.map(course => (
                                                 <Select.Option
@@ -99,6 +114,15 @@ const Practice = ({ categories, results }) => {
                                         <Select
                                             placeholder="Select Year"
                                             size="large"
+                                            showSearch
+                                            optionFilterProp="children"
+                                            filterOption
+                                            notFoundContent={
+                                                <a>
+                                                    That Year is not uploaded
+                                                    yet. 🥺
+                                                </a>
+                                            }
                                         >
                                             {course.years.map(year => (
                                                 <Select.Option
