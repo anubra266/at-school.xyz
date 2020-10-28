@@ -7,6 +7,7 @@
 /public/mix-manifest.json
 /public/storage
 /public/profile
+/resources/assets/js/ziggy.js
 /storage/*.key
 /vendor
 .env
