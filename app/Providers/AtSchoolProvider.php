@@ -41,7 +41,9 @@ class AtSchoolProvider extends ServiceProvider
             return $this->has('options')
                 ->whereHas(
                     'options',
-                    fn ($q) => $q->where('is_correct', true),
+                    function ($q) {
+                        return $q->where('is_correct', true);
+                    },
                     '=',
                     1
                 );;

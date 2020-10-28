@@ -35,7 +35,9 @@ class PracticeController extends Controller
         $settings = authUser()->settings()->first();
         $user_role = authUser()->initial_role;
         $path = $user_role === "student" ? 'student' : 'educator';
-        $categories = PracticeCategory::all()->load(['courses.years.questions' => fn ($q) => $q->isEligible()]);
+        $categories = PracticeCategory::all()->load(['courses.years.questions' => function ($q) {
+            return $q->isEligible();
+        }]);
         if ($path === 'student' || ($settings && $settings->preferences->add_practice_questions->enabled)) {
             $results = authUser()->practiceResults()->get();
             $results->load('test.year.course.category');
@@ -52,7 +54,9 @@ class PracticeController extends Controller
 
     public function showCourse(PracticeCourse $course)
     {
-        $course->load(['years' => fn ($q) => $q->orderBy('year', 'asc')->withCount('questions')]);
+        $course->load(['years' => function ($q) {
+            return $q->orderBy('year', 'asc')->withCount('questions');
+        }]);
         return Inertia::render("Dashboard/practice/courses/", ["course" => $course]);
     }
 
@@ -129,9 +133,13 @@ class PracticeController extends Controller
     {
         $year->load([
             'course',
-            "questions" => fn ($q) => $q->isEligible()
-                ->inRandomOrder()->take($questions),
-            "questions.options" => fn ($q) => $q->inRandomOrder()->exclude('is_correct')
+            "questions" => function ($q) use ($questions) {
+                return $q->isEligible()
+                    ->inRandomOrder()->take($questions);
+            },
+            "questions.options" => function ($q) {
+                return $q->inRandomOrder()->exclude('is_correct');
+            }
         ]);
         $data = [
             "year" => $year,

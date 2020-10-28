@@ -78,13 +78,17 @@ class ObjectiveTestService
     {
         $classroom = $classroom->load('User');
         $test->load([
-            "questions" => fn ($q) => $q->inRandomOrder(),
-            "questions.options" => fn ($q) => $q->inRandomOrder()->exclude('is_correct')
+            "questions" => function ($q) {
+                return $q->inRandomOrder();
+            },
+            "questions.options" => function ($q) {
+                return $q->inRandomOrder()->exclude('is_correct');
+            }
         ]);
         return ["classroom" => $classroom, "test" => $test];
     }
     public function review($classroom, $test)
-    { 
+    {
         $classroom = $classroom->load('User');
         $test->load(["questions.options.answers" => function ($q) {
             $q->whereUser_id(authUser()->id);

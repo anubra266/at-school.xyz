@@ -28,15 +28,21 @@ class PracticeAnswerController extends Controller
     {
         $year->load([
             "course",
-            "questions" => fn ($q) => $q->isEligible()
-                ->whereHas(
-                    'practiceAnswers',
-                    fn ($q) => $q
-                        ->whereUser_id(authUser()->id)
-                        ->wherePractice_test_id($test->id)
-                )
-                ->inRandomOrder(),
-            "questions.options" => fn ($q) => $q->inRandomOrder(),
+            "questions" => function ($q) use ($test) {
+                return $q->isEligible()
+                    ->whereHas(
+                        'practiceAnswers',
+                        function ($q) use ($test) {
+                            return $q
+                                ->whereUser_id(authUser()->id)
+                                ->wherePractice_test_id($test->id);
+                        }
+                    )
+                    ->inRandomOrder();
+            },
+            "questions.options" => function ($q) {
+                return $q->inRandomOrder();
+            },
             "questions.options.practiceAnswers"
         ]);
         $test->noCountdown = true;
