@@ -17,9 +17,11 @@ const Theme = () => {
     function handleChange(value) {
         setTheme(value);
         setLoading(true);
-        message.loading("Applying theme...");
+        message.loading({ key: 1, content: "Applying theme..." });
         Inertia.patch(route("settings.theme"), { theme: value }).then(() => {
             setLoading(false);
+            message.destroy(1);
+            window.location.hash = "theme";
             window.location.reload();
         });
     }

@@ -2,12 +2,10 @@ import React from "react";
 import Layout from "antd/lib/layout";
 import PageHeader from "antd/lib/page-header";
 import Button from "antd/lib/button";
-import Statistic from "antd/lib/statistic";
 import Card from "antd/lib/card";
-import Row from "antd/lib/row";
 import Col from "antd/lib/col";
-import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
-
+import Row from "antd/lib/row";
+import Stats from "./stats"
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 const { Content } = Layout;
 
@@ -28,21 +26,24 @@ const Home = () => {
                 </div>
 
                 <Row gutter={[16, 16]}>
-                    <Col xs={24} md={12} lg={8}>
+                    <Col xs={24}>
                         <Card>
-                            <Statistic title="Organizations" value={11} />
+                            <h3>Welcome to at-School!</h3>
+                            <p>
+                                If you are seeing this, then you recently setup
+                                your at-School account.
+                            </p>
+                            <p>
+                                As you progress, all your activities will be
+                                summarised here, so you can always have a quick
+                                look at your stats
+                                <span aria-label="welcome smile" role="img">
+                                    😁
+                                </span>
+                            </p>
                         </Card>
                     </Col>
-                    <Col xs={24} md={12} lg={8}>
-                        <Card>
-                            <Statistic title="Environs" value={9} />
-                        </Card>
-                    </Col>
-                    <Col xs={24} md={12} lg={8}>
-                        <Card>
-                            <Statistic title="Classrooms" value={9} />
-                        </Card>
-                    </Col>
+                    <Stats />
                 </Row>
             </Content>
         </Dashboardlayout>
