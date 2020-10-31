@@ -6,48 +6,62 @@ import BankOutlined from "@ant-design/icons/BankOutlined";
 import ApartmentOutlined from "@ant-design/icons/ApartmentOutlined";
 import DeploymentUnitOutlined from "@ant-design/icons/DeploymentUnitOutlined";
 import TeamOutlined from "@ant-design/icons/TeamOutlined";
-import SettingOutlined from "@ant-design/icons/SettingOutlined";
+import BookOutlined from "@ant-design/icons/BookOutlined";
+import OrderedListOutlined from "@ant-design/icons/OrderedListOutlined";
 import EditOutlined from "@ant-design/icons/EditOutlined";
 
-const Stats = () => {
+const Stats = ({ user }) => {
+    console.log("user", user);
+    const stats = [
+        {
+            title: "Organizations",
+            key: "organizations",
+            icon: <BankOutlined />
+        },
+        {
+            title: "Environs",
+            key: "environs",
+            icon: <ApartmentOutlined />
+        },
+        {
+            title: "Classrooms Created",
+            key: "classrooms",
+            icon: <DeploymentUnitOutlined />
+        },
+        {
+            title: "Classes Joined",
+            key: "classes",
+            icon: <TeamOutlined />
+        },
+        {
+            title: "Theory Tests",
+            key: "theory_results",
+            icon: <BookOutlined />
+        },
+        {
+            title: "Objective Tests",
+            key: "objective_results",
+            icon: <OrderedListOutlined />
+        },
+        {
+            title: "Practice Tests",
+            key: "practice_results",
+            icon: <EditOutlined />
+        }
+    ];
     return (
         <React.Fragment>
-            <Col xs={24} md={12} lg={8}>
-                <Card>
-                    <Statistic
-                        title="Organizations"
-                        value={11}
-                        prefix={<BankOutlined />}
-                    />
-                </Card>
-            </Col>
-            <Col xs={24} md={12} lg={8}>
-                <Card>
-                    <Statistic
-                        title="Environs"
-                        value={9}
-                        prefix={<ApartmentOutlined />}
-                    />
-                </Card>
-            </Col>
-            <Col xs={24} md={12} lg={8}>
-                <Card>
-                    <Statistic
-                        title="Classrooms"
-                        value={9}
-                        prefix={<DeploymentUnitOutlined />}
-                    />
-                </Card>
-            </Col>{" "}
-            <Col xs={24} md={12} lg={8}>
-                <Card>
-                    <Statistic
-                        title="Classes"
-                        value={9}
-                        prefix={<TeamOutlined />}
-                    />
-                </Card>
-            </Col>
+            {stats.map(stat => (
+                <Col key={stat.key} xs={24} md={12} lg={8}>
+                    <Card>
+                        <Statistic
+                            title={stat.title}
+                            value={user[`${stat.key}_count`]}
+                            prefix={stat.icon}
+                        />
+                    </Card>
+                </Col>
+            ))}
         </React.Fragment>
     );
 };

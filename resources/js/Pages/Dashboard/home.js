@@ -5,11 +5,11 @@ import Button from "antd/lib/button";
 import Card from "antd/lib/card";
 import Col from "antd/lib/col";
 import Row from "antd/lib/row";
-import Stats from "./stats"
+import Stats from "./stats";
 import Dashboardlayout from "@/Pages/Dashboard/DashboardLayout";
 const { Content } = Layout;
 
-const Home = () => {
+const Home = ({ user }) => { 
     return (
         <Dashboardlayout title="Dashboard">
             <Content style={{ margin: "0 16px" }}>
@@ -43,7 +43,7 @@ const Home = () => {
                             </p>
                         </Card>
                     </Col>
-                    <Stats />
+                    <Stats user={user} />
                 </Row>
             </Content>
         </Dashboardlayout>
