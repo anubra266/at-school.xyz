@@ -23,8 +23,9 @@ class ObjectiveTestController extends Controller
 
     public function store(Classroom $classroom, ObjectiveTestRequest $request)
     {
-        $this->objectiveTestService->store($classroom, $request);
-        return redirect()->back()->with('success', "Assessment Created Successfully");
+        $test = $this->objectiveTestService->store($classroom, $request);
+        return redirect()->route('objective.edit', ["test" => $test, "classroom" => $test->Classroom()->first()])
+            ->with('success', "$test->title Assessment Created Successfully");
     }
 
     public function edit(Classroom $classroom, ObjectiveTest $test)

@@ -28,7 +28,7 @@ class Classroom extends Model
         return $this->attributes['role'] = checkClass($this, authUser());
     }
 
-    public function User()
+    public function User() 
     {
         return $this->belongsTo(User::class);
     }

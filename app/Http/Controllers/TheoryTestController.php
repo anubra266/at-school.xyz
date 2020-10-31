@@ -25,8 +25,10 @@ class TheoryTestController extends Controller
 
     public function store(Classroom $classroom, TheoryTestRequest $request)
     {
-        $this->theoryTestService->store($classroom, $request);
-        return redirect()->back()->with('success', "Assessment Created Successfully");
+        $test = $this->theoryTestService->store($classroom, $request);
+        return redirect()
+            ->route('theory.edit', ["test" => $test, "classroom" => $test->Classroom()->first()])
+            ->with('success', "$test->title Assessment Created Successfully");
     }
 
     public function edit(Classroom $classroom, TheoryTest $test)
