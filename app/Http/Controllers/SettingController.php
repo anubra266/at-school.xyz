@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PasswordHasBeenChanged;
 use App\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
@@ -49,6 +50,10 @@ class SettingController extends Controller
         $request = $request->validated();
         authUser()->update(['password' => bcrypt($request['new_password'])]);
         authUser()->notify(new PasswordChange());
+
+
+        // PasswordHasBeenChanged::dispatch();
+
         return backward()->with('success', 'Password updated successfully');
     }
     public function pQuestions(Request $request)

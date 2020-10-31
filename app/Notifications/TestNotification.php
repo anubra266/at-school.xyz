@@ -2,13 +2,12 @@
 
 namespace App\Notifications;
 
-use App\Mail\PasswordChange as MailPasswordChange;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class PasswordChange extends Notification implements ShouldQueue
+class TestNotification extends Notification
 {
     use Queueable;
 
@@ -30,7 +29,7 @@ class PasswordChange extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail', 'database'];
+        return ['mail'];
     }
 
     /**
@@ -41,14 +40,22 @@ class PasswordChange extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailPasswordChange($notifiable))->to($notifiable->email);
+        return (new MailMessage)
+                    ->line('The introduction to the notification.')
+                    ->action('Notification Action', url('/'))
+                    ->line('Thank you for using our application!');
     }
 
-
-    public function toDatabase($notifiable)
+    /**
+     * Get the array representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return array
+     */
+    public function toArray($notifiable)
     {
         return [
-            'body' => "You changed your password, " . date('D, d M Y H:i:s')
+            //
         ];
     }
 }

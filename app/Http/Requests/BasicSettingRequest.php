@@ -23,6 +23,7 @@ class BasicSettingRequest extends FormRequest
      */
     public function rules()
     {
+        $user = authUser()->id;
         return [
             'first_name' => 'required|string',
             'middle_name' => 'required|string',
@@ -30,7 +31,7 @@ class BasicSettingRequest extends FormRequest
             'gender' => 'required|string',
             'date_of_birth' => 'required|date|before_or_equal:today',
             'gender' => 'required|string',
-            'email' => "required|email|unique:users,email,{$this->id}",
+            'email' => "required|email|unique:users,email,{$user}",
             'telephone' => 'required|numeric',
             'school' => 'required|string',
             'school_town' => 'required|string',

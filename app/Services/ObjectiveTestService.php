@@ -21,7 +21,6 @@ class ObjectiveTestService
 
     public function store($classroom, $request)
     {
-        return $classroom->objectiveTests()->create($request->validated());
     }
 
     public function edit($classroom, $test)

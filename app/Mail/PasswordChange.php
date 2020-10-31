@@ -29,22 +29,26 @@ class PasswordChange extends Mailable
      */
     public function build()
     {
-        $ip = request()->getClientIp();
-        $location_obj = Location::get($ip);
-        $location = $location_obj ? "$location_obj->cityName, $location_obj->regionCode, $location_obj->countryCode" : "Unknown Location";
-        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-            $url = "https://";
-        else
-            $url = "http://";
-        $url .= $_SERVER['HTTP_HOST'];
+        // $ip = request()->getClientIp();
+        // $location_obj = Location::get($ip);
+        // $location = $location_obj ? "$location_obj->cityName, $location_obj->regionCode, $location_obj->countryCode" : "Unknown Location";
+        // if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        //     $url = "https://";
+        // else
+        //     $url = "http://";
+        // if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
+        //     $url .= $_SERVER['HTTP_HOST'];
+        // } else {
+        //     $url .= "at-school.xyz";
+        // }
         return $this->from('security@at-school.xyz', 'at-School')
             ->subject(env('APP_NAME') . ' Password Change')
             ->markdown('mails.passwordchange.mail')
             ->with([
                 'name' => $this->user->first_name,
                 'image' => $this->user->profile_image,
-                'location' => $location,
-                'url' => $url
+                'location' => '$location',
+                'url' => '$url'
             ]);
     }
 }
