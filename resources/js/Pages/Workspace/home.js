@@ -1,10 +1,12 @@
 import React from "react";
 import Layout from "antd/lib/layout";
 import Row from "antd/lib/row";
+import Col from "antd/lib/col";
 import PageHeader from "antd/lib/page-header";
 import Descriptions from "antd/lib/descriptions";
 import Workspacelayout from "@/Pages/Workspace/WorkspaceLayout";
 const { Content } = Layout;
+import Stats from "./stats";
 
 const Home = ({ classroom }) => {
     return (
@@ -21,6 +23,9 @@ const Home = ({ classroom }) => {
                         subTitle={classroom.environ.name}
                     ></PageHeader>
                 </div>
+                <Row gutter={[16, 16]}>
+                    <Stats classroom={classroom} />
+                </Row>
             </Content>
         </Workspacelayout>
     );

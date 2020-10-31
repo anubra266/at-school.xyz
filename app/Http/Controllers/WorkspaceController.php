@@ -11,7 +11,9 @@ class WorkspaceController extends Controller
 
     public function home(Classroom $classroom)
     {
-        $classroom = $classroom->load('Environ.Organization')->load('User');
+        $classroom = $classroom->load([
+            'Environ.Organization', 'User', 'theoryTests', 'objectiveTests', 'students'
+        ]);
         return Inertia::render('Workspace/home', ['classroom' => $classroom]);
     }
 
