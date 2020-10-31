@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Statistic from "antd/lib/statistic";
 import Card from "antd/lib/card";
 import Col from "antd/lib/col";
@@ -10,8 +10,7 @@ import BookOutlined from "@ant-design/icons/BookOutlined";
 import OrderedListOutlined from "@ant-design/icons/OrderedListOutlined";
 import EditOutlined from "@ant-design/icons/EditOutlined";
 
-const Stats = ({ user }) => {
-    console.log("user", user);
+const Stats = ({ user, recent }) => {
     const stats = [
         {
             title: "Organizations",
@@ -49,19 +48,28 @@ const Stats = ({ user }) => {
             icon: <EditOutlined />
         }
     ];
+    useEffect(() => {
+        const score = stats.reduce((acc, stat) => {
+            acc += user[`${stat.key}_count`];
+            return acc;
+        }, 0);
+        recent(score < 2);
+    }, []);
     return (
         <React.Fragment>
-            {stats.map(stat => (
-                <Col key={stat.key} xs={24} md={12} lg={8}>
-                    <Card>
-                        <Statistic
-                            title={stat.title}
-                            value={user[`${stat.key}_count`]}
-                            prefix={stat.icon}
-                        />
-                    </Card>
-                </Col>
-            ))}
+            {stats
+                .filter(stat => user[`${stat.key}_count`] > 0)
+                .map(stat => (
+                    <Col key={stat.key} xs={24} md={12} lg={8}>
+                        <Card>
+                            <Statistic
+                                title={stat.title}
+                                value={user[`${stat.key}_count`]}
+                                prefix={stat.icon}
+                            />
+                        </Card>
+                    </Col>
+                ))}
         </React.Fragment>
     );
 };
