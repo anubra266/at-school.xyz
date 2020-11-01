@@ -12,7 +12,7 @@ const Solution = ({
     loading
 }) => {
     const [editor, setEditor] = useState(null);
-    const data = !is_new && question.solution && question.solution.solution;
+    const data = (!is_new && question.solution && question.solution.solution)||'';
     const editorProps = {
         data,
         setEditor
