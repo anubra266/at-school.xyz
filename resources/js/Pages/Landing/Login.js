@@ -25,7 +25,7 @@ function Login() {
             setChecking(false);
         });
     };
-    const { errors } = usePage();
+    const { errors } = usePage().props;
 
     return (
         <form

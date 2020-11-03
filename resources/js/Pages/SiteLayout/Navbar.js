@@ -22,7 +22,7 @@ import Main from "@/Helpers/Main.js";
 const { Header } = Layout;
 
 function Navbar(props) {
-    const { auth, settings, notifications } = usePage();
+    const { auth, settings, notifications } = usePage().props;
     const theme =
         settings && settings.preferences && settings.preferences.theme;
 
@@ -58,7 +58,7 @@ function Navbar(props) {
 export default Navbar;
 
 const Notifications = () => {
-    const { notifications } = usePage();
+    const { notifications } = usePage().props;
 
     const nots = [
         { data: "You have a test coming up by 3PM" },

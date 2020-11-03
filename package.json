@@ -37,8 +37,8 @@
     "dependencies": {
         "@ckeditor/ckeditor5-react": "^2.1.0",
         "@diasraphael/ck-editor5-base64uploadadapter": "^2.0.2",
-        "@inertiajs/inertia": "^0.1.9",
-        "@inertiajs/inertia-react": "^0.1.6",
+        "@inertiajs/inertia": "^0.5.0",
+        "@inertiajs/inertia-react": "^0.4.1",
         "@react-pdf/renderer": "^1.6.11",
         "ant-design-pro": "^2.3.2",
         "antd": "^4.5.4",

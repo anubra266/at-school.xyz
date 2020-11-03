@@ -9,7 +9,7 @@ import PasswordInfo from "./PasswordInfo";
 import ProfileImageInfo from "./ProfileImageInfo";
 import Footer from "./Footer";
 const register = () => {
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     const [page, setPage] = useState(0);
     const [checking, setChecking] = useState(false);
     const [data, setData] = useState({

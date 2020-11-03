@@ -67,7 +67,7 @@ const ClassroomsList = ({ classes }) => {
                                         setLoading(true);
                                         Inertia.patch(
                                             route("class.leave", {
-                                                classroom: record.id
+                                                classroom: record.hash
                                             })
                                         ).then(() => setLoading(false));
                                     }}

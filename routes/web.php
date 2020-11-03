@@ -25,7 +25,10 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('home', 'PrivateController@home')->name('home');
         Route::get('practice', 'PracticeController@index')->name('practice');
-
+        Route::post('/sendd', function () {
+            // authUser()->notify(new \App\Notifications\PasswordChange());
+            return backward('success', 'Done');
+        })->name('send');
         Route::group(['middleware' => ['prq.contribute']], function () {
             Route::post('practice/categories', 'PracticeCategoryController@store')->name('practice.categories.store');
             Route::resource('categories.courses', 'PracticeCourseController');
@@ -180,4 +183,3 @@ Route::group(['middleware' => ['auth']], function () {
         });
     });
 });
-

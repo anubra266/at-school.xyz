@@ -10,7 +10,7 @@ import CourseForm from "./CourseForm";
 import CoursesList from "./CoursesList";
 
 const CategoriesList = ({ categories }) => {
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     const [visible, toggleCourse] = useToggle(false);
     const [loading, toggleLoad] = useToggle(false);
     const courseRef = useRef();

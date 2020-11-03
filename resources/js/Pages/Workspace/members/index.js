@@ -15,7 +15,7 @@ import Export from "@/Shared/export";
 import MembersList from "./MembersList";
 const { Content } = Layout;
 const members = ({ classroom, members }) => {
-    const { auth } = usePage();
+    const { auth } = usePage().props;
     const [prop, setProp] = useState({ result: [], model: [] });
     return (
         <Workspacelayout title={classroom.name} classroom={classroom}>

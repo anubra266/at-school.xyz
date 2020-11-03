@@ -83,7 +83,7 @@ const EditHeader = ({ course, year, question, is_new, PTesti, loading }) => {
                     <Solution key="soleditor" {...solutionProps} />
                 ]}
             >
-                <Descriptions size="small">
+                <Descriptions>
                     <Descriptions.Item label="Questions">
                         {year.questions.length}
                     </Descriptions.Item>

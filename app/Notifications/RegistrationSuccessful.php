@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class RegistrationSuccessful extends Notification
+class RegistrationSuccessful extends Notification implements ShouldQueue
 {
     use Queueable;
 

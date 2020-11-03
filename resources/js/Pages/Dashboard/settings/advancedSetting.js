@@ -11,7 +11,7 @@ import Switch from "antd/lib/switch";
 import { Inertia } from "@inertiajs/inertia";
 
 const Advanced = () => {
-    const { auth, errors, settings } = usePage();
+    const { auth, errors, settings } = usePage().props;
     const { user } = auth;
     const [loading, setLoading] = useState(false);
     const can_add_practice_questions =

@@ -23,7 +23,7 @@ const login = () => {
         e.preventDefault();
         Auth.handleSubmit("login", setChecking, data, setData);
     };
-    const { errors } = usePage();
+    const { errors } = usePage().props;
 
     return (
         <Layout

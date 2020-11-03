@@ -17,7 +17,7 @@ const { Content } = Layout;
 
 const Course = ({ course }) => {
     const [loading, toggleLoad] = useToggle(false);
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     const [visible, toggleYear] = useToggle(false);
     const { years } = course;
     const YearForm = useRef();
@@ -27,7 +27,7 @@ const Course = ({ course }) => {
             route("courses.years.store", { course: course.id }),
             data
         ).then(() => {
-            if (!errors) {
+            if (_.isEmpty(errors)) {
                 YearForm.current.resetFields();
             }
             toggleLoad();

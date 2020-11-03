@@ -21,7 +21,7 @@ const { Content } = Layout;
 import { change, useDynamicRefs } from "./handler";
 const parse = require("html-react-parser");
 const Index = props => {
-    const { response } = usePage();
+    const { response } = usePage().props;
     const [revisit, setRevisit] = useState({});
 
     const { year, test } = props;

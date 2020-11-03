@@ -1,7 +1,7 @@
 import { usePage } from "@inertiajs/inertia-react";
 
 const useAssets = () => {
-    const { settings } = usePage();
+    const { settings } = usePage().props;
     const mode = (settings && settings.preferences && settings.preferences.theme);
     switch (mode) {
         case "light":

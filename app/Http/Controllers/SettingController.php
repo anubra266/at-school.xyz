@@ -51,9 +51,6 @@ class SettingController extends Controller
         authUser()->update(['password' => bcrypt($request['new_password'])]);
         authUser()->notify(new PasswordChange());
 
-
-        // PasswordHasBeenChanged::dispatch();
-
         return backward()->with('success', 'Password updated successfully');
     }
     public function pQuestions(Request $request)

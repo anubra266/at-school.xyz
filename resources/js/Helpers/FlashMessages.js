@@ -3,7 +3,7 @@ import { usePage } from "@inertiajs/inertia-react";
 import message from "antd/lib/message";
 
 const useFlashMessage = () => {
-    const { flash, errors } = usePage();
+    const { flash, errors } = usePage().props;
     message.config({
         duration: 5,
         maxCount: 1

@@ -22,9 +22,9 @@ const resetpassword = (props) => {
         setData((values) => ({
             ...values,
             [key]: value
-        })); 
+        }));
     };
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     return (
         <Layout
             title="Reset Password at-school"

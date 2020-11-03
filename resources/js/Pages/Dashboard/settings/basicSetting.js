@@ -19,7 +19,7 @@ import Main from "@/Helpers/Main";
 import { Inertia } from "@inertiajs/inertia";
 
 const basic = () => {
-    const { auth, errors } = usePage();
+    const { auth, errors } = usePage().props;
     const { user } = auth;
     const names = {
         first_name: "First Name",

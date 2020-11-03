@@ -10,18 +10,23 @@ import Header from "./header";
 import CategoriesList from "./categorieslist";
 import CategoryForm from "./CategoryForm";
 import { Inertia } from "@inertiajs/inertia";
-import { usePage } from "@inertiajs/inertia-react";
 const { Content } = Layout;
 
 const EducatorCategories = ({ categories }) => {
-    const { errors } = usePage();
     const [visible, toggleCat] = useToggle(false);
     const [loading, toggleLoad] = useToggle(false);
     const CatForm = useRef();
     const createCat = data => {
-        Inertia.post(route("practice.categories.store"), data).then(() => {
-            if (!errors) {
-                CatForm.current.resetFields();
+        Inertia.post(route("practice.categories.store"), data, {
+            preserveScroll: true,
+            onStart: () => toggleLoad(),
+            onFinish: () => toggleLoad(),
+            onSuccess: page => {
+                const errors = page.props.errors;
+                if (_.isEmpty(errors)) {
+                    CatForm.current.resetFields();
+                    toggleCat();
+                }
             }
         });
     };

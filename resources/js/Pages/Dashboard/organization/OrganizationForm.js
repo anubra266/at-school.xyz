@@ -5,7 +5,7 @@ import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 
 const OrganizationForm = ({ loading, onFinish, OrgForm, edit }) => {
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     return (
         <Form
             ref={OrgForm}

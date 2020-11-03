@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { usePage } from "@inertiajs/inertia-react";
+import { usePage, InertiaLink } from "@inertiajs/inertia-react";
 import PageHeader from "antd/lib/page-header";
 import List from "antd/lib/list";
 import Modal from "antd/lib/modal";
@@ -9,19 +9,21 @@ import Button from "antd/lib/button";
 import Input from "antd/lib/input";
 import { Inertia } from "@inertiajs/inertia";
 import { useToggle } from "react-use";
+import route from "ziggy-js";
 
 const Security = () => {
-    const { auth, errors } = usePage();
-    const [reset, toggleReset] = useToggle(false)
-    const [loading, toggleLoad] = useToggle(false)
-    const resetForm = useRef()
+    const { auth, errors } = usePage().props;
+    const [reset, toggleReset] = useToggle(false);
+    const [loading, toggleLoad] = useToggle(false);
+    const resetForm = useRef();
     const resetPassword = data => {
-        toggleLoad()
-        Inertia.patch(route('settings.password'), data).then(() => {
-            toggleLoad()
-            resetForm.current.resetFields()
-        })
-    }
+        toggleLoad();
+        Inertia.patch(route("settings.password"), data).then(() => {
+            toggleLoad();
+            resetForm.current.resetFields();
+            toggleReset()
+        });
+    };
     //TODO Security Phone, Security Question, Backup Email
     return (
         <React.Fragment>
@@ -33,10 +35,23 @@ const Security = () => {
                 <List>
                     <List.Item>
                         <List.Item.Meta
+                            title="Send Mail"
+                            description="Send Mail."
+                        />
+                        <Button>
+                            <InertiaLink method="POST" href={route("send")}>
+                                Send{" "}
+                            </InertiaLink>
+                        </Button>
+                    </List.Item>
+                    <List.Item>
+                        <List.Item.Meta
                             title="Account Password"
                             description="Set a strong password."
                         />
-                        <Typography.Link onClick={toggleReset}>Modify</Typography.Link>
+                        <Typography.Link onClick={toggleReset}>
+                            Modify
+                        </Typography.Link>
                         <Modal
                             centered
                             title="Reset Password"
@@ -44,7 +59,11 @@ const Security = () => {
                             onCancel={toggleReset}
                             footer={null}
                         >
-                            <Form ref={resetForm} layout="vertical" onFinish={resetPassword}>
+                            <Form
+                                ref={resetForm}
+                                layout="vertical"
+                                onFinish={resetPassword}
+                            >
                                 <Form.Item
                                     label="Current Password"
                                     name="current_password"
@@ -54,10 +73,18 @@ const Security = () => {
                                             message: `Please input current password!`
                                         }
                                     ]}
-                                    validateStatus={errors.current_password && "error"}
-                                    help={errors.current_password && errors.current_password[0]}
+                                    validateStatus={
+                                        errors.current_password && "error"
+                                    }
+                                    help={
+                                        errors.current_password &&
+                                        errors.current_password[0]
+                                    }
                                 >
-                                    <Input type="password" placeholder="Current Password" />
+                                    <Input
+                                        type="password"
+                                        placeholder="Current Password"
+                                    />
                                 </Form.Item>
 
                                 <Form.Item
@@ -69,10 +96,18 @@ const Security = () => {
                                             message: `Please input new password!`
                                         }
                                     ]}
-                                    validateStatus={errors.new_password && "error"}
-                                    help={errors.new_password && errors.new_password[0]}
+                                    validateStatus={
+                                        errors.new_password && "error"
+                                    }
+                                    help={
+                                        errors.new_password &&
+                                        errors.new_password[0]
+                                    }
                                 >
-                                    <Input type="password" placeholder="New Password" />
+                                    <Input
+                                        type="password"
+                                        placeholder="New Password"
+                                    />
                                 </Form.Item>
 
                                 <Form.Item
@@ -84,10 +119,18 @@ const Security = () => {
                                             message: `Please confirm new password!`
                                         }
                                     ]}
-                                    validateStatus={errors.confirm_new_password && "error"}
-                                    help={errors.confirm_new_password && errors.confirm_new_password[0]}
+                                    validateStatus={
+                                        errors.confirm_new_password && "error"
+                                    }
+                                    help={
+                                        errors.confirm_new_password &&
+                                        errors.confirm_new_password[0]
+                                    }
                                 >
-                                    <Input type="password" placeholder="Confirm New Password" />
+                                    <Input
+                                        type="password"
+                                        placeholder="Confirm New Password"
+                                    />
                                 </Form.Item>
 
                                 <Form.Item>
@@ -97,7 +140,7 @@ const Security = () => {
                                         type="primary"
                                     >
                                         Update
-                                </Button>
+                                    </Button>
                                 </Form.Item>
                             </Form>
                         </Modal>

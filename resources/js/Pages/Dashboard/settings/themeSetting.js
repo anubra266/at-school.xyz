@@ -9,7 +9,7 @@ import { Inertia } from "@inertiajs/inertia";
 import Main from "@/Helpers/Main";
 
 const Theme = () => {
-    const { settings } = usePage();
+    const { settings } = usePage().props;
     const initial_theme =
         settings && settings.preferences && settings.preferences.theme;
     const [theme, setTheme] = useState(initial_theme || "light");

@@ -5,7 +5,7 @@ import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 
 const ClassForm = ({ loading, onFinish, ClsForm }) => {
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     return (
         <Form
             ref={ClsForm}

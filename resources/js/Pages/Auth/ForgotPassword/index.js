@@ -17,7 +17,7 @@ const resetpassword = () => {
     const handleChange = e => {
         setEmail(e.target.value);
     };
-    const { errors, flash } = usePage();
+    const { errors, flash } = usePage().props;
     useEffect(() => {
         flash.info && setStatus(flash.info)
     })

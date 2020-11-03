@@ -5,7 +5,7 @@ import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 
 const CategoryForm = ({ loading, createCat, CatForm }) => {
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     return (
         <Form ref={CatForm} onFinish={createCat} layout="vertical">
             <Form.Item

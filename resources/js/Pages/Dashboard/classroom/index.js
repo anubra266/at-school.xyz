@@ -21,7 +21,7 @@ const Classroom = ({ classrooms }) => {
     const onClose = () => {
         setVisible(false);
     };
-    const { flash } = usePage();
+    const { flash } = usePage().props;
     const onFinish = data => {
         setLoading(true);
         Inertia.post(route("classroom.create"), data).then(res => {

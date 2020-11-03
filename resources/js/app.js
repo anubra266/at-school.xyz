@@ -11,7 +11,7 @@ InertiaProgress.init(progressBar);
 
 render(
     <CatchError>
-        <React.Fragment>
+        <React.Fragment> 
             <InertiaApp
                 initialPage={JSON.parse(app.dataset.page)}
                 resolveComponent={name =>

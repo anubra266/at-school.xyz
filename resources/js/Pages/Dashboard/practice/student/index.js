@@ -18,7 +18,7 @@ const Practice = ({ categories, results }) => {
         });
     };
     const empty = list => list && list.length === 0;
-    const { errors } = usePage();
+    const { errors } = usePage().props;
     return (
         <Dashboardlayout title="Personal Practice">
             <Layout.Content style={{ margin: "0 16px" }}>

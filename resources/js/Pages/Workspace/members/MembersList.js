@@ -15,7 +15,7 @@ import Main from "@/Helpers/Main";
 import { filterChecks, initial_filter, filtersList } from "@/Helpers/Filter";
 
 const MembersList = ({ setProp, members, classroom }, ref) => {
-    const { auth } = usePage();
+    const { auth } = usePage().props;
     const [loading, setLoading] = useState(false);
     //? Handle Checkbox filters
 
@@ -69,7 +69,7 @@ const MembersList = ({ setProp, members, classroom }, ref) => {
     );
     useEffect(() => {
         setProp(v => {
-            return { 
+            return {
                 result: result.reduce((acc, nxt) => {
                     nxt.name = Main.name(nxt);
                     acc.push(nxt);

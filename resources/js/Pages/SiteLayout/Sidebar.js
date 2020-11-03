@@ -20,7 +20,7 @@ function Sidebar({ mode, routes, layout, classroom }) {
     const onCollapse = collapsed => {
         setCollapsed(collapsed);
     };
-    const { auth } = usePage();
+    const { auth } = usePage().props;
     const genroute = item => {
         return (
             <InertiaLink

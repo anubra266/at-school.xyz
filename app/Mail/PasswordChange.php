@@ -29,9 +29,9 @@ class PasswordChange extends Mailable
      */
     public function build()
     {
-        // $ip = request()->getClientIp();
-        // $location_obj = Location::get($ip);
-        // $location = $location_obj ? "$location_obj->cityName, $location_obj->regionCode, $location_obj->countryCode" : "Unknown Location";
+        $ip = request()->getClientIp();
+        $location_obj = Location::get($ip);
+        $location = $location_obj ? "$location_obj->cityName, $location_obj->regionCode, $location_obj->countryCode" : "Unknown Location";
         // if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
         //     $url = "https://";
         // else
@@ -47,7 +47,7 @@ class PasswordChange extends Mailable
             ->with([
                 'name' => $this->user->first_name,
                 'image' => $this->user->profile_image,
-                'location' => '$location',
+                'location' => $location,
                 'url' => '$url'
             ]);
     }
