@@ -89,7 +89,7 @@ const Index = props => {
                         return (
                             <Col xs={24} key={index} ref={questionRefs[index]}>
                                 <Card>
-                                    <strong>
+                                    <strong> 
                                         Question {index + 1} {"  "}
                                         <Badge
                                             count={

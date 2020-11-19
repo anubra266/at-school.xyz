@@ -150,8 +150,8 @@ const Results = ({ showResults, results, visible }) => {
                                             render={(text, record) =>
                                                 `${text}/${
                                                     record.total
-                                                } -${(text / record.total) *
-                                                    100}%`
+                                                } -${((text / record.total) *
+                                                    100).toFixed(2)}%`
                                             }
                                             sorter={(a, b) =>
                                                 Main.sort(a, b, "score")

@@ -24,9 +24,9 @@ const result = ({ response, props }) => {
                     <Result
                         icon={null}
                         status="success"
-                        title={`${response[0]}/${response[1]} - ${(100 *
+                        title={`${response[0]}/${response[1]} - ${((100 *
                             response[0]) /
-                            response[1]}%`}
+                            response[1]).toFixed(2)}%`}
                         subTitle={`${year.course.name}, ${year.year}`}
                         extra={[
                             <Button
