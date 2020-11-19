@@ -27,7 +27,10 @@ const Answer = (option, index, userAnswer) => {
     return (
         <Radio key={`opt${index}`} style={radioStyle} value={option.id}>
             <Typography.Text
-                style={{ color: isCorrect && "green" }}
+                style={{
+                    color: isCorrect && "green",
+                    fontWeight: isCorrect && 700
+                }}
                 type={
                     isUserAnswer
                         ? isCorrect

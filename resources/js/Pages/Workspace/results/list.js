@@ -35,6 +35,7 @@ const list = ({ classroom, tests }) => {
                                             setCurrentTest(item);
                                             resultsRef.current.showResults();
                                         }}
+                                        style={{ cursor: "pointer" }}
                                     >
                                         <IconText
                                             icon={FileTextOutlined}
