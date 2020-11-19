@@ -24,7 +24,8 @@ class TestAnswerController extends Controller
             return redirect()->back()->with('error', "That test cannot be retaken");
         }
         $this->testAnswerService->saveTheory($test, $request);
-        return redirect()->back()->with('success', "Solution Submitted Successfully");
+        return redirect()->route('theory.list', ["classroom" => $classroom])
+            ->with('success', "Solution Submitted Successfully");
     }
 
     public function saveObjective(Classroom $classroom, ObjectiveTest $test, Request $request)

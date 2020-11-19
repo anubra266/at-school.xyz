@@ -138,7 +138,7 @@ class PracticeController extends Controller
                     ->inRandomOrder()->take($questions);
             },
             "questions.options" => function ($q) {
-                return $q->inRandomOrder()->exclude('is_correct');
+                return $q->inRandomOrder()->exclude('iss_correct');
             }
         ]);
         $data = [
@@ -146,6 +146,7 @@ class PracticeController extends Controller
             "time" => $time,
             "test" => $test,
         ];
+
         return Inertia::render("Dashboard/practice/hall/objective/", $data);
     }
 }
