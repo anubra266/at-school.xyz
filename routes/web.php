@@ -176,8 +176,10 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/objereview/{test}', 'ObjectiveTestController@review')->name('objective.review');
 
                 Route::group(['prefix' => 'results'], function () {
-                    Route::get('/edu-theory', 'ResultController@eduTheory')->name('results.edu.theory');
-                    Route::get('/edu-objective', 'ResultController@eduObjective')->name('results.edu.objective');
+                    Route::group(['middleware' => ['educator.only']], function () {
+                        Route::get('/edu-theory', 'ResultController@eduTheory')->name('results.edu.theory');
+                        Route::get('/edu-objective', 'ResultController@eduObjective')->name('results.edu.objective');
+                    });
                 });
             });
         });
